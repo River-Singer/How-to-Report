@@ -1,0 +1,4 @@
+box_id,scanned,metadata_entered,qc_checked,qc_passed,qc_needs_fix
+A,100,100,100,92,8
+B,80,60,40,36,4
+C,60,20,0,0,0

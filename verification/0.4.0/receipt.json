@@ -1,0 +1,21 @@
+{
+  "release": "0.4.0",
+  "summary_kind": "derived_public_engineering_summary_not_raw_log",
+  "captured_at_utc": "2026-10-28T09:44:36.828215+00:00",
+  "status": "engineering_checks_passed",
+  "model_execution": false,
+  "formal_v1_release": "not_verified",
+  "environment": {"python": "3.14.4","platform": "Windows-11-10.0.26300-SP0","browser": "Chromium 145.0.7632.6","python310_actual_runtime": "not_run"},
+  "unittest": {"run": 184,"passed": 183,"skipped": 1,"failed": 0,"errors": 0,"reported_seconds": 74.601,"skip": "test_dangling_destination_link_is_rejected_when_links_are_available: Windows WinError 1314 symbolic-link privilege unavailable"},
+  "initial_full_run": {"run": 184,"passed": 182,"failed": 1,"skipped": 1,"status": "fixed_and_rerun","cause": "test fixture copied pre-existing source report_html.pyc; CLI no-cache assertion detected copied cache","fix": "test_report_versions setUp ignores __pycache__/pyc like package builder; checks no cache before and after isolated CLI; source cache retained","historical_evidence": "original failure, targeted pass and final full pass retained in development records"},
+  "checks": {"package": "pass","skill_formats": {"how-to-report": "pass","report-audit": "pass"},"offline_sources": {"status": "pass","count": 18,"network_used": false},"evaluation_input_integrity": {"status": "pass","cases": 39,"model_execution": false},"independent_decimal_oracle": "pass; synthetic arithmetic only","compile": {"passed": true,"source_count": 21,"python310_grammar": "passed; not runtime compatibility certification"},"lint": "not_configured","typecheck": "not_configured"},
+  "browser": {"canvases": [[1600,900],[1600,1000]],"viewports": [[1600,1000],[1280,720],[1024,768],[390,844]],"page_count_per_plan": 6,"unexpected_requests": 0,"console_errors": 0,"script_errors": 0,"scope": "actual DOM/typed identity/navigation/read-all/print/overflow and named screenshot/PDF inspection; no business-semantic pass"},
+  "browser_checks": ["typed values, units, refs and limits","line null gaps and known points","signed/null heatmap cells","complete hierarchy labels","SVG internal geometry","navigation/hash/read-all/print state restoration","hostile text","real long-body and long-label overflow","mobile scrolled point/period table mapping"],
+  "mobile_line_regression": {"status": "fixed_and_rechecked","svg_and_table_min_width_css_px": 540,"maximum_observed_center_error_css_px_less_than": 0.033},
+  "print": {"actual_pdf_count": 2,"pages_each": 6,"default_height_pt_observed": 675.12,"default_height_pt_nominal": 675,"visual_scope": "all six default screen pages; mobile read-all/scrolled line; long-label negative; PDF pages 5-6 for both canvases"},
+  "packages": {"version": "0.4.0","manifest_sha256": {"how-to-report": "8a5f0e4a4d05ace1c5053dbc055528a142b5b7fa665b9842801a2c7195252ac8","report-audit": "985f1e7699faa0da312818174fe36c486f45c58f4a79d63ace8f7028c28cd5f9"},"payload_counts": {"how-to-report": 77,"report-audit": 65},"browser02_source_byte_identity": true,"matched_source_files": 9},
+  "preservation": {"historical_case_files": 971,"changed_or_missing": 0},
+  "public_artifacts": {"identities_ref": "artifact-identities.json","identities_sha256": "228b7cd3affb7e7932b191474609ccd7804385f7700d14d9bea0da38323f4d41","byte_hashes_verified": true},
+  "not_verified": ["real user/model behavior for newly implemented methods","native host install/discovery and cloud persistence","B0/B1/B2/holdout formal release evaluation","all browsers/printers/OS versions","generic full analytic engines, automatic profile updates, all 12 Visual-Lab charts"],
+  "provenance": {"kind": "summary of actual final engineering records; raw logs retained in development archive, not published here","source_receipt_sha256": "e6155e80f8d12bc85687a94d61807086ed3413c91210243d695c39a8c394d85e","source_review_sha256": "0ec2b916d4f004958af608f1d3fde3c813a04f6d67cc564c16c1643c1aaa34b3"}
+}

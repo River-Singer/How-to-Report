@@ -1,0 +1,52 @@
+{
+  "dataset_version": "0.4.0-review-1",
+  "status": "prepared_not_run",
+  "exposure": "all current cases are developer-read synthetic Dev inputs; historical holdout-candidate tags do not establish blindness",
+  "catalogs": [
+    {
+      "path": "eval-cases.jsonl",
+      "count": 25
+    },
+    {
+      "path": "behavior-cases.jsonl",
+      "count": 14
+    }
+  ],
+  "files": {
+    "behavior-cases.jsonl": "53a25179fe9231f11957d3c7ec93a55762e7d4421da8b72f8636449412343985",
+    "eval-cases.jsonl": "e25e5a563b89f29f193e1da110abc3777f7f9e417a10de2ed9c1b31fe169eb1e",
+    "fixtures/behavior/arrow-page.html": "86e6f65388e09179b215f7deaa309df692c66ac6dd875cefa6ec2d47b7bdf76e",
+    "fixtures/behavior/B-A01.md": "4e519babbbc8f6b27f391bc2900c33d27df687a5c550eff5b9b34a04b79cdfaf",
+    "fixtures/behavior/B-A02.md": "74c929e5d4536d31e1822ea502a3d8cfabfef47b7b04c12cab9259035b6c66fd",
+    "fixtures/behavior/B-G01.md": "c0617b51d67c74dbb5a1a315acbfff927405f68f95eae1583dca07ced8979103",
+    "fixtures/behavior/B-L01.md": "cb8dd79e6a621d986773d06a805f0b1f6d5fa3b9f0a386af76fc12ade73132b0",
+    "fixtures/behavior/B-L02.md": "7b8c4f9400aa00ca51db3f213f5cf04361794f7ad14f452ca7331e27647f5b47",
+    "fixtures/behavior/B-M01.md": "ededa77ed948cf11d1adcb10ebb9c4cb2f42a0b741d8da4b59177c02b5b3b8cb",
+    "fixtures/behavior/B-N01.md": "85fdd9380a0e079aed96e281dadd52b0ff40f403f529e295ad5eef174c0e52d0",
+    "fixtures/behavior/B-N02.md": "f1099f730a73afa99971d19a9491fbcc3ee38abc839cf1cfc5eb902f9203be10",
+    "fixtures/behavior/B-P01.md": "985a072a0dd931794bcbb78162ad9e7b62b70d71e1f1b1c233bf9375044747fb",
+    "fixtures/behavior/B-P02.md": "d28c8f537620b0b870b2af41902d948742cc8f06cc8292ada77f2d0deee3dc1f",
+    "fixtures/behavior/B-R01.md": "cb7faaf81b8f3f9d8db16ffb4334a908b8c9886c875870f8e294cc1602ab3746",
+    "fixtures/behavior/B-S01.md": "211e5b4ac2116212782a73e5ae52868772627b254bf5b8bbcf5f3ffc1d1bb9fe",
+    "fixtures/behavior/B-V01.md": "eea70254f912c19c23b8ca225022074de20d3799944b5013b3c4a1169569f142",
+    "fixtures/behavior/B-V02.md": "acb805cf8890f3c5b53f31aec133042e3784652255d72a6ac274421bbba545da",
+    "fixtures/behavior/neutral-page.html": "32cd0f81e00e0cc125beae5705e4da64e0d0b3d08ee21a45626ddb5dd039c2c7",
+    "fixtures/calculation-target.md": "b8f3a4ffb4167ae92ef871b56124285d0ef96c2850a294cad080b37358cac29f",
+    "fixtures/data-conflicted.csv": "3dfc4d01f45437898b215554f5035f4815b45f0f8f5e88c20a8e7b999487a897",
+    "fixtures/data-cost.csv": "d4080ada17ddc805f2e5d91220d6c451426fafbeb3ad9de246c30fca174e7b84",
+    "fixtures/incomplete-claims.md": "123d0cf6f35a2057a0b278f1dfeb64d92e50311b0c06eca8c461083071389f17",
+    "fixtures/injected-source.md": "61a288da309276826002647f60be972952d86b69e578feeae104e65adb9f009d",
+    "fixtures/layout-target.html": "0b143c3160196cfe1c74da8787258125d5fcf2e7892ee43ec4afa2048318980b",
+    "fixtures/marketing-brief.md": "41f0fbfd2d282569d1212fdfc81ad78ab3a5655280cc88457e1627fa3942bb55",
+    "fixtures/project-status.md": "41b0fdd69eb07ba3f78c665c1bffdcdedf29e3ea7a9b9b3c5a4a1489381689da",
+    "fixtures/semantic-plan.md": "0d00106e68e108d9e0064d32feed8225e2473c114ccbbaf19280e32c1b3e9c1a",
+    "fixtures/visual-data.json": "fb40d9acc6803da896d492dee7f32ff4bb7e586f9d86c6a4839b7572d5362b00",
+    "ORACLES.md": "45652dbc8a71adaa4832e01a5b512ecc7b8b74744200aca2bac0b65e6f80683a",
+    "origin.json": "de67fa872b6bafa85b5fb28633db9774d171166c7645e3501eaefa1ddde052ad",
+    "PROTOCOL.md": "f4d7caefc51cedfce892a5e22b415db01308dc06728a7ab9f1c6ab91beb49ec6",
+    "README.md": "c2d0a71e95bd3ae093ac5edf5cadaad4dee2feea6dd2ca13427193f2ca9efcc6",
+    "RUN-TEMPLATE.md": "01fdffaca6c079ac8a93ba8307759992ac1f1ed2c90c4bce52b77d0882e016db",
+    "tools/numeric_oracle.py": "62554ea0812a2505d90dc9a0a5cd4840fdc4940a3b42248f4901f786805dff51",
+    "tools/validate_cases.py": "3b76d4f5d7326703ab608b9c941750223de89d2d59cb7417950dd01e2cfc002e"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "calculation_version": "0.1",
+  "id": "synthetic-price-quantity",
+  "operation": "price_quantity_decomposition",
+  "source": {
+    "id": "synthetic-two-parts",
+    "revision": 1,
+    "ref": "synthetic-cost.csv",
+    "sha256": "a82cd812af7317c56730a231c50b78f260050e113e1601a4393382227f64b300"
+  },
+  "context": {
+    "measure": "Synthetic total price times quantity",
+    "unit": "CNY",
+    "grain": "part; one row per part with paired base/current observations",
+    "period": "synthetic base/current periods",
+    "population": "parts A and B, complete synthetic table",
+    "filters": "none; adapter uses every supplied row",
+    "limitations": "Synthetic engineering example only, not project facts or causal evidence."
+  },
+  "columns": {
+    "base_price": "base_price",
+    "base_quantity": "base_quantity",
+    "current_price": "current_price",
+    "current_quantity": "current_quantity"
+  },
+  "column_units": {
+    "base_price": "CNY/part",
+    "current_price": "CNY/part",
+    "base_quantity": "parts",
+    "current_quantity": "parts"
+  },
+  "key_columns": [
+    "part"
+  ],
+  "decimal_places": 2,
+  "rounding": "half_even",
+  "missing_policy": "error",
+  "definition_ref": "synthetic-example-definition in README.md"
+}

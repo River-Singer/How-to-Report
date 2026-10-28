@@ -1,0 +1,10 @@
+{
+  "contract_version": "0.1",
+  "run_id": "REPLACE_WITH_RUN_ID",
+  "mode": "create",
+  "work_status": "in_progress",
+  "notes_ref": "run.md",
+  "sources": [],
+  "artifacts": [],
+  "checks": []
+}

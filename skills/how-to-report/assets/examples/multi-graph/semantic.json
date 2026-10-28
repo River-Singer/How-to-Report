@@ -1,0 +1,16 @@
+{
+  "contract_version": "0.1",
+  "run_id": "synthetic-pilot-example",
+  "nodes": [
+    {"id": "h-speed", "revision": 1, "kind": "hypothesis", "text": "Synthetic hypothesis: the pilot could improve processing speed.", "status": "proposed", "uses": [], "links": [{"type": "competes_with", "target": {"id": "h-scope", "revision": 1}}]},
+    {"id": "h-scope", "revision": 1, "kind": "hypothesis", "text": "Synthetic alternative: the trial may contain simpler requests.", "status": "proposed", "uses": [], "links": [{"type": "competes_with", "target": {"id": "h-speed", "revision": 1}}]},
+    {"id": "f-recorded", "revision": 1, "kind": "finding", "text": "The synthetic source records 12 requests in six hours; comparability is unresolved.", "status": "needs_evidence", "uses": [{"id": "s-pilot", "revision": 1}, {"id": "t-inspect", "revision": 1}], "links": [{"type": "relevant_to", "target": {"id": "h-speed", "revision": 1}}]},
+    {"id": "o-comparable", "revision": 1, "kind": "obligation", "text": "Obtain a baseline with aligned request complexity, time definition and observation window before claiming an improvement.", "status": "needs_evidence", "uses": [], "links": [{"type": "required_for", "target": {"id": "c-pilot", "revision": 1}}]},
+    {"id": "c-pilot", "revision": 1, "kind": "claim", "text": "The synthetic pilot supports further comparison, not an established efficiency improvement.", "status": "needs_evidence", "uses": [{"id": "f-recorded", "revision": 1}, {"id": "o-comparable", "revision": 1}], "links": [{"type": "supported_by", "target": {"id": "f-recorded", "revision": 1}}, {"type": "qualified_by", "target": {"id": "o-comparable", "revision": 1}}]},
+    {"id": "f-background", "revision": 1, "kind": "finding", "text": "The synthetic decision concerns a broader controlled trial of an internal service desk.", "uses": [{"id": "s-background", "revision": 1}], "links": [{"type": "context_for", "target": {"id": "c-pilot", "revision": 1}}]},
+    {"id": "u-main", "revision": 1, "kind": "content_unit", "text": "Keep the qualified pilot statement and missing-baseline requirement together.", "uses": [{"id": "c-pilot", "revision": 1}, {"id": "o-comparable", "revision": 1}]},
+    {"id": "m-summary", "revision": 1, "kind": "content_module", "text": "Decision summary with evidence and unresolved comparison.", "uses": [{"id": "u-main", "revision": 1}]},
+    {"id": "b-compare", "revision": 1, "kind": "presentation_beat", "text": "Move from observation to limitation to next evidence request.", "uses": [{"id": "m-summary", "revision": 1}]},
+    {"id": "p-overview", "revision": 1, "kind": "page_plan", "text": "One page: qualified headline, recorded values and visible baseline gap.", "uses": [{"id": "b-compare", "revision": 1}, {"id": "o-comparable", "revision": 1}]}
+  ]
+}

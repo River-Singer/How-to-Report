@@ -1,0 +1,5 @@
+__pycache__/
+*.py[cod]
+/skills/.package-build-*/
+/.runs/
+/.profiles/

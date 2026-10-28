@@ -1,0 +1,9 @@
+week,label_format,pickup_route,order_type,handoffs,recorded_mismatches
+W1,old_code,counter,single,100,1
+W1,old_code,counter,mixed,50,2
+W1,old_code,shelf,single,100,3
+W1,old_code,shelf,mixed,50,10
+W2,item_list,counter,single,100,1
+W2,item_list,counter,mixed,50,1
+W2,item_list,shelf,single,100,2
+W2,item_list,shelf,mixed,50,3

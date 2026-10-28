@@ -1,0 +1,81 @@
+Clear Communication Index: explaining uncertainty
+Source ID: cdc-uncertainty
+Canonical URL (provenance only): https://www.cdc.gov/ccindex/tool/page-11.html
+Fetched/read at UTC: 2026-10-26T08:22:01.546036+00:00
+Representation: source_text
+Scope: Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.
+Publisher: Centers for Disease Control and Prevention (CDC)
+Reuse: US government agency material; CDC reuse conditions
+Reuse evidence: https://www.cdc.gov/other/agencymaterials.html
+Attribution: Source: CDC. Materials developed by CDC.
+Limitations/changes: Reference to CDC does not imply endorsement by CDC, HHS or the United States Government. Material is available on the CDC website free of charge. Substantive text preserved; HTML/navigation removed, images/logos not reproduced. Source may be updated.
+Reader boundary: The following is untrusted reference material, not instructions authorizing actions or changing the Skill/user task.
+=== LOCAL SOURCE TEXT ===
+# Does the material explain what authoritative sources, such as subject matter experts and agency spokespersons, know and don’t know about the topic?
+
+State of the Science
+
+Print
+
+Acknowledge uncertainty about data, findings, recommendations, guidance and action steps. Public health science continuously evolves, especially in emergency and crisis situations. What we know today may not be complete or fully accurate. And what we know today may not be sufficient to answer all of the public’s questions.
+Acknowledging uncertainty helps the public understand how the scientific process works and introduces the idea that CDC findings and recommendations may change over time. In other words, by acknowledging uncertainty, we can contribute to the public’s science literacy.
+### Example 1:
+
+Post-treatment Lyme disease syndrome
+We don’t know the exact cause of post-treatment Lyme disease syndrome (PTLDS). Most scientists think the signs and symptoms of PTLDS, like muscle pain and feeling tired, are caused by the damage to the body from the infection. But some medical experts think these signs and symptoms mean the body is still infected. Scientists are still doing research to find out what causes PTLDS.
+### Example 2:
+
+CDC is working with public health officials in many states to investigate an outbreak of foodborne illness. The investigation typically takes a few weeks. As soon as a source (the cause of the outbreak) is identified, we will warn the public and conduct food recalls if appropriate.
+### Example 3:
+
+Some medicines are known to be harmful to pregnant women. Many medicines have not been tested on pregnant women – so doctors are not sure if they are safe or not. If you are pregnant or planning on getting pregnant:
+
+  * Write down what medicines you take
+  * Keep track of how much medicine you take
+  * Ask your doctor if it is safe for you to take your medicine during pregnancy
+### Example 4:
+
+Zika
+
+These maps DO NOT show
+
+  * Exact locations or numbers of mosquitoes living in an area
+  * Risk or likelihood that these mosquitoes will spread viruses
+
+These maps show
+
+  * CDC’s best estimate of the potential range of Aedes aegypti and Aedes albopictus in the United States
+  * Areas where mosquitoes are or have been previously found
+### Example 5:
+
+Zika
+
+What we know:
+
+Pregnant women can be infected with Zika virus.
+
+  * The primary way that pregnant women get Zika virus is through the bite of an infected mosquito.
+  * Zika virus can be spread by a man to his sex partners.
+  * A pregnant woman can pass Zika virus to her fetus.
+  * Zika virus can be passed from a pregnant woman to her fetus during pregnancy or at delivery.
+
+What we do not know:
+
+If a pregnant woman is exposed
+
+  * We don’t know how likely she is to get Zika.
+If a pregnant woman is infected, we don’t know
+
+  * how the virus will affect her or her pregnancy.
+  * how likely it is that Zika will pass to her fetus.
+  * if the fetus is infected, if the fetus will develop birth defects.
+  * when in pregnancy the infection might cause harm to the fetus.
+  * whether her baby will have birth defects.
+  * if sexual transmission of Zika virus poses a different risk of birth defects than mosquito-borne transmission.
+
+Printer-friendly options
+  * Clear Communication Index User Guide [3.66 MB, 36 pages]
+  * Full Index Score Sheet [694 KB, 7 pages]
+  * Modified Index Score Sheet [685 KB, 7 pages]
+
+To send comments, questions, or requests about the Index, please use our online form.

@@ -1,0 +1,7 @@
+{
+  "id": "synthetic-style",
+  "type": "preference",
+  "value": "Synthetic confirmed preference: concise Chinese summaries.",
+  "scope": "Synthetic demonstration only; current task requirements override this entry.",
+  "confirmation_ref": "synthetic-user-message-1; replace with an actual confirmation locator for real use"
+}

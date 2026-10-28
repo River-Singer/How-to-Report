@@ -1,0 +1,35 @@
+{
+  "scope": "exact synthetic engineering output/screenshots from final independent browser02; not model-generated quality evidence",
+  "files": [
+    {
+      "path": "sample/index.html",
+      "sha256": "ac14bc8751d84ce32f29d35f02a44d24387df6a834be30f9090aa02837c96932",
+      "bytes": 53290
+    },
+    {
+      "path": "sample/plan.json",
+      "sha256": "82444b55aa56a77f4e30f5e01e7e4321a3b7499aacafe45cb4cc90fa18685b71",
+      "bytes": 25843
+    },
+    {
+      "path": "sample/page-map.json",
+      "sha256": "6cc51af544a61e57c231d5546157a7804f7d24a63b861c2b36a5f508b74e116d",
+      "bytes": 50295
+    },
+    {
+      "path": "sample/render-receipt.json",
+      "sha256": "3f8b75f492a52f0f4adf50e1f422f8f71406e9059eebb563160ae4361a40c297",
+      "bytes": 584
+    },
+    {
+      "path": "page-5.png",
+      "sha256": "f933508014acecaf2a30b8accb51df5dc611f68cd19340288603c9d2ab4bbe5a",
+      "bytes": 161956
+    },
+    {
+      "path": "page-6.png",
+      "sha256": "91b12bbe0fd03a8ec945ad43640eef89382704515f61b734940a97aaf830dcc7",
+      "bytes": 160206
+    }
+  ]
+}

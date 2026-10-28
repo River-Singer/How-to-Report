@@ -1,0 +1,10 @@
+{
+  "contract_version": "0.1",
+  "run_id": "synthetic-foreign-audit",
+  "mode": "audit",
+  "work_status": "blocked",
+  "sources": [{"id": "s-foreign", "revision": 1, "ref": "inputs/external-report.md", "limitations": "Synthetic foreign report; raw source records are unavailable."}],
+  "artifacts": [{"id": "a-audit", "revision": 1, "ref": "audit-report.md", "uses": [{"id": "s-foreign", "revision": 1}]}],
+  "checks": [{"id": "check-baseline", "target": {"id": "s-foreign", "revision": 1, "locator": "claim paragraph"}, "status": "not_assessable", "detail_ref": "audit-report.md"}],
+  "audit": {"synthetic_example": true, "context_independence": "No actual independent execution is claimed by this sample.", "source_access": "Only the sample report is present.", "plan_exposure": "No generator plan supplied.", "calculation_recheck": "Not assessable without raw records."}
+}

@@ -1,0 +1,7 @@
+{
+  "contract_version": "0.1",
+  "profile_id": "synthetic-example-only",
+  "entries": [
+    {"id": "synthetic-language-preference", "revision": 1, "type": "preference", "value": "Synthetic example: concise Chinese decision summaries.", "scope": "Example profile only; current task instructions take precedence.", "confirmation_ref": "synthetic-example-user-confirmation-1"}
+  ]
+}

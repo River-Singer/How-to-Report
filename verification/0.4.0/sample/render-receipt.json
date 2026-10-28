@@ -1,0 +1,17 @@
+{
+  "renderer_contract_version": "0.1",
+  "plan_sha256": "82444b55aa56a77f4e30f5e01e7e4321a3b7499aacafe45cb4cc90fa18685b71",
+  "files": {
+    "index.html": "ac14bc8751d84ce32f29d35f02a44d24387df6a834be30f9090aa02837c96932",
+    "plan.json": "82444b55aa56a77f4e30f5e01e7e4321a3b7499aacafe45cb4cc90fa18685b71",
+    "page-map.json": "6cc51af544a61e57c231d5546157a7804f7d24a63b861c2b36a5f508b74e116d"
+  },
+  "page_count": 6,
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "browser_validation": "not_run",
+  "semantic_validation": "not_run",
+  "run_mutation": "not_performed"
+}

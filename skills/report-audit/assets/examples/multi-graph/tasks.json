@@ -1,0 +1,8 @@
+{
+  "contract_version": "0.1",
+  "run_id": "synthetic-pilot-example",
+  "tasks": [
+    {"id": "t-inspect", "revision": 1, "objective": "Inspect supplied pilot records for comparable evidence.", "completion": "Record the observed values and explicitly list missing comparison fields.", "status": "completed", "input_refs": [{"id": "s-pilot", "revision": 1}], "prerequisites": [], "result_refs": [{"id": "f-recorded", "revision": 1}]},
+    {"id": "t-baseline", "revision": 1, "objective": "Resolve the missing comparison obligation.", "completion": "Document a matched baseline and its definitions, or report why a defensible comparison remains unavailable.", "status": "blocked", "input_refs": [{"id": "s-pilot", "revision": 1}, {"id": "o-comparable", "revision": 1}], "prerequisites": [{"id": "t-inspect", "revision": 1}], "result_refs": []}
+  ]
+}

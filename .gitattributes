@@ -1,0 +1,3 @@
+# Preserve exact release-package and offline-archive bytes used by SHA-256 manifests.
+# Disable automatic EOL conversion; this does not disable text diffs.
+* -text

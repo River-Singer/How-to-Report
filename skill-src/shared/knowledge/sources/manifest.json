@@ -1,0 +1,646 @@
+{
+  "schema_version": "1",
+  "archive_version": "0.1.1",
+  "created_at_utc": "2026-10-26T08:22:01.546036+00:00",
+  "runtime_network_required": false,
+  "scope": "Every external source cited by the twelve Knowledge cards/index as of this archive version. Linked works inside those sources are not recursively archived.",
+  "card_sources": {
+    "bus-01-benefits-chain.md": [
+      "teal-19"
+    ],
+    "bus-02-options.md": [
+      "green-book-2026"
+    ],
+    "com-01-message-risk.md": [
+      "cdc-use",
+      "cdc-uncertainty"
+    ],
+    "data-01-comparability.md": [
+      "gov-data-quality",
+      "gov-completion-rate"
+    ],
+    "data-02-uncertainty-causality.md": [
+      "nist-experimental-design",
+      "nist-mean-confidence"
+    ],
+    "fin-01-time-capacity-cash.md": [
+      "teal-19"
+    ],
+    "fin-02-cost-benefit.md": [
+      "green-book-2026"
+    ],
+    "mkt-01-user-adoption.md": [
+      "gov-user-needs",
+      "gov-digital-takeup"
+    ],
+    "pm-01-delivery-status.md": [
+      "teal-18",
+      "teal-30"
+    ],
+    "pm-02-dependencies-risk.md": [
+      "teal-16",
+      "teal-20"
+    ],
+    "swe-01-delivery-productivity.md": [
+      "dora-metrics",
+      "space-abstract-summary"
+    ],
+    "swe-02-capability-reliability.md": [
+      "sre-service-objectives",
+      "sre-testing-reliability"
+    ]
+  },
+  "sources": [
+    {
+      "id": "teal-19",
+      "title": "Chapter 19: Benefits management",
+      "canonical_url": "https://projectdelivery.gov.uk/teal-book/home/part-e-planning-and-control/chapter-19-benefits-management/",
+      "local_path": "sources/teal-19.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "BUS-01",
+        "FIN-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "403 Forbidden; no login or access control bypass",
+        "coverage": "All reader line windows merged; main chapter text retained; site navigation/login/feedback omitted.",
+        "total_reader_lines": 369,
+        "main_body_line_range": [
+          55,
+          303
+        ],
+        "capture_sha256": [
+          "4e3b3d237a57363b3bfeb6eaba858c2fd85a7781d016de509c5bb41f0a300cbf",
+          "5299f1cab229ca613052c4c950201c7e34d420c94cf1276ff57a40399f531482"
+        ]
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://projectdelivery.gov.uk/crown-copyright/",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information published by Government Project Delivery and licensed under the Open Government Licence.",
+        "limitations": "Crown text only. Third-party images, illustrations and logos are not included. No endorsement. Source text converted from public web reader to UTF-8; links rendered as labels."
+      },
+      "publisher": "Government Project Delivery, UK Government",
+      "text_characters": 36467,
+      "sha256": "bfd00838126090873db6863e6de9b7b00e67f67e17d74e253e0abb57d033147c"
+    },
+    {
+      "id": "green-book-2026",
+      "title": "The Green Book 2026",
+      "canonical_url": "https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026",
+      "local_path": "sources/green-book-2026.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "BUS-02",
+        "FIN-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:04.869981+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "class": "gem-c-govspeak"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:04.869981+00:00",
+        "resolved_url": "https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026",
+        "response_sha256": "f875a594a7c6ddb49799354765a5e84b218833167a76f10c6f025fe242290ec5",
+        "response_bytes": 556535
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://www.gov.uk/government/publications/the-green-book--2/the-green-book-2026",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: UK Government, GOV.UK; Crown copyright.",
+        "limitations": "Except where otherwise stated; third-party images/logos are not included. No endorsement. HTML main body converted to UTF-8 plain text; layout/scripts omitted."
+      },
+      "publisher": "UK Government (GOV.UK)",
+      "text_characters": 189033,
+      "sha256": "b266b13699ac5da89882cb7e321f4bd1bb57966b92c6ddbaa8d7bb2e99c721f7"
+    },
+    {
+      "id": "cdc-use",
+      "title": "How to Use the Clear Communication Index",
+      "canonical_url": "https://www.cdc.gov/ccindex/tool/how-to-use.html",
+      "local_path": "sources/cdc-use.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "COM-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "HTTP access intermittent; public web reader used for stable text capture",
+        "coverage": "All public reader lines captured; article main text retained.",
+        "total_reader_lines": 106,
+        "main_body_line_range": [
+          17,
+          105
+        ],
+        "capture_sha256": [
+          "0da6653aed8f83197f35d77853bc7b9d02018df8415003523c8a0f6e0e607a58"
+        ]
+      },
+      "reuse": {
+        "license": "US government agency material; CDC reuse conditions",
+        "evidence_url": "https://www.cdc.gov/other/agencymaterials.html",
+        "attribution": "Source: CDC. Materials developed by CDC.",
+        "limitations": "Reference to CDC does not imply endorsement by CDC, HHS or the United States Government. Material is available on the CDC website free of charge. Substantive text preserved; HTML/navigation removed, images/logos not reproduced. Source may be updated."
+      },
+      "publisher": "Centers for Disease Control and Prevention (CDC)",
+      "text_characters": 10179,
+      "sha256": "1634c4983eb13edd732ffadfc240b4515f85587d5b4025093a4a0af200b70deb"
+    },
+    {
+      "id": "cdc-uncertainty",
+      "title": "Clear Communication Index: explaining uncertainty",
+      "canonical_url": "https://www.cdc.gov/ccindex/tool/page-11.html",
+      "local_path": "sources/cdc-uncertainty.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "COM-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "HTTP access intermittent; public web reader used for stable text capture",
+        "coverage": "All public reader lines captured; article main text retained.",
+        "total_reader_lines": 85,
+        "main_body_line_range": [
+          17,
+          84
+        ],
+        "capture_sha256": [
+          "183fe0ef316294b7f33a5bb9d4115c15bb473b3362ab189cc9b333a9ba45ce9f"
+        ]
+      },
+      "reuse": {
+        "license": "US government agency material; CDC reuse conditions",
+        "evidence_url": "https://www.cdc.gov/other/agencymaterials.html",
+        "attribution": "Source: CDC. Materials developed by CDC.",
+        "limitations": "Reference to CDC does not imply endorsement by CDC, HHS or the United States Government. Material is available on the CDC website free of charge. Substantive text preserved; HTML/navigation removed, images/logos not reproduced. Source may be updated."
+      },
+      "publisher": "Centers for Disease Control and Prevention (CDC)",
+      "text_characters": 3489,
+      "sha256": "45a9d9caa65d3b51bad74d27d6c01e3999f5d68b0f375a2731b5c29571050847"
+    },
+    {
+      "id": "gov-data-quality",
+      "title": "Government Data Quality Framework: guidance",
+      "canonical_url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework-guidance",
+      "local_path": "sources/gov-data-quality.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "DATA-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:02.974080+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "class": "gem-c-govspeak"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:02.974080+00:00",
+        "resolved_url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework-guidance",
+        "response_sha256": "effe5f9965d5d4db1c0513e41d9eb94f8098640e9c45ee43805155180c6dc9c1",
+        "response_bytes": 164918
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://www.gov.uk/government/publications/the-government-data-quality-framework/the-government-data-quality-framework-guidance",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: UK Government, GOV.UK; Crown copyright.",
+        "limitations": "Except where otherwise stated; third-party images/logos are not included. No endorsement. HTML main body converted to UTF-8 plain text; layout/scripts omitted."
+      },
+      "publisher": "UK Government (GOV.UK)",
+      "text_characters": 36033,
+      "sha256": "46f6cc5e39bcddd8aa7b3e0ccdf51187603cdf29f2a22e01604e41c3a8910537"
+    },
+    {
+      "id": "gov-completion-rate",
+      "title": "Measuring completion rate",
+      "canonical_url": "https://www.gov.uk/service-manual/measuring-success/measuring-completion-rate",
+      "local_path": "sources/gov-completion-rate.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "DATA-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:02.916236+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "class": "gem-c-govspeak"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:02.916236+00:00",
+        "resolved_url": "https://www.gov.uk/service-manual/measuring-success/measuring-completion-rate",
+        "response_sha256": "1c8bc423ab88d1e91939ebe9ab16ad97a96dc3fc4f8a5f775db468832c5c340c",
+        "response_bytes": 84374
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://www.gov.uk/service-manual/measuring-success/measuring-completion-rate",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: UK Government, GOV.UK; Crown copyright.",
+        "limitations": "Except where otherwise stated; third-party images/logos are not included. No endorsement. HTML main body converted to UTF-8 plain text; layout/scripts omitted."
+      },
+      "publisher": "UK Government (GOV.UK)",
+      "text_characters": 6831,
+      "sha256": "cd05f3f83417c79ac15a3a89e8f3c51e3807a913a4a2282489307559386ab577"
+    },
+    {
+      "id": "nist-experimental-design",
+      "title": "Experiments and Experimental Design",
+      "canonical_url": "https://www.itl.nist.gov/div898/handbook/ppc/section1/ppc136.htm",
+      "local_path": "sources/nist-experimental-design.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "DATA-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:02.879475+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "tag": "body"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:02.879475+00:00",
+        "resolved_url": "https://www.itl.nist.gov/div898/handbook/ppc/section1/ppc136.htm",
+        "response_sha256": "68b3910092637b3331b62e7a65d6fa2e92a763631e432283c2ca6464097becdc",
+        "response_bytes": 7483
+      },
+      "reuse": {
+        "license": "NIST non-SRD public work reuse terms",
+        "evidence_url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-software-and-technical-series-publications",
+        "attribution": "Source: NIST/SEMATECH e-Handbook of Statistical Methods. Republished courtesy of the National Institute of Standards and Technology.",
+        "limitations": "NIST employee works are not subject to copyright protection in the US and may be subject to foreign copyright; NIST grants worldwide reuse rights for these works. Provided AS IS without warranties, including accuracy, fitness or non-infringement. No endorsement. Changed on 2026-10-26 by conversion from HTML to plain text; images, rendering and executable examples excluded."
+      },
+      "publisher": "NIST/SEMATECH e-Handbook of Statistical Methods",
+      "text_characters": 2683,
+      "sha256": "745295f9ee44cbaabb8b9e41a7308db7c63987a59157fca19651adf3d781f8af"
+    },
+    {
+      "id": "nist-mean-confidence",
+      "title": "Confidence Limits for the Mean",
+      "canonical_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+      "local_path": "sources/nist-mean-confidence.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "DATA-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:04.473298+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "tag": "body"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:04.473298+00:00",
+        "resolved_url": "https://www.itl.nist.gov/div898/handbook/eda/section3/eda352.htm",
+        "response_sha256": "e377242bc458355842fd3d59f58ef83459fd2bf176b75e08a118f783c435949f",
+        "response_bytes": 15467
+      },
+      "reuse": {
+        "license": "NIST non-SRD public work reuse terms",
+        "evidence_url": "https://www.nist.gov/open/copyright-fair-use-and-licensing-statements-srd-software-and-technical-series-publications",
+        "attribution": "Source: NIST/SEMATECH e-Handbook of Statistical Methods. Republished courtesy of the National Institute of Standards and Technology.",
+        "limitations": "NIST employee works are not subject to copyright protection in the US and may be subject to foreign copyright; NIST grants worldwide reuse rights for these works. Provided AS IS without warranties, including accuracy, fitness or non-infringement. No endorsement. Changed on 2026-10-26 by conversion from HTML to plain text; images, rendering and executable examples excluded."
+      },
+      "publisher": "NIST/SEMATECH e-Handbook of Statistical Methods",
+      "text_characters": 5687,
+      "sha256": "2d967e89c9a329bf6888dc763313ebbb9f497d551b4ba748af539bb915dff398"
+    },
+    {
+      "id": "teal-18",
+      "title": "Chapter 18: Reporting",
+      "canonical_url": "https://projectdelivery.gov.uk/teal-book/home/part-e-planning-and-control/chapter-18-reporting/",
+      "local_path": "sources/teal-18.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "PM-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "403 Forbidden; no login or access control bypass",
+        "coverage": "All reader line windows merged; main chapter text retained; site navigation/login/feedback omitted.",
+        "total_reader_lines": 325,
+        "main_body_line_range": [
+          58,
+          264
+        ],
+        "capture_sha256": [
+          "043db40bbc91b29ed45b086cae51a7fee175e7a91961cd777547a99c9a5814dd"
+        ]
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://projectdelivery.gov.uk/crown-copyright/",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information published by Government Project Delivery and licensed under the Open Government Licence.",
+        "limitations": "Crown text only. Third-party images, illustrations and logos are not included. No endorsement. Source text converted from public web reader to UTF-8; links rendered as labels."
+      },
+      "publisher": "Government Project Delivery, UK Government",
+      "text_characters": 29362,
+      "sha256": "eeb9815ad3580385262eac518e642fe4b7789988886a5dabf268f464e70c8d29"
+    },
+    {
+      "id": "teal-30",
+      "title": "Chapter 30: Quality management",
+      "canonical_url": "https://projectdelivery.gov.uk/teal-book/home/part-f-solution-delivery/chapter-30-quality-management/",
+      "local_path": "sources/teal-30.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "PM-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "403 Forbidden; no login or access control bypass",
+        "coverage": "All reader line windows merged; main chapter text retained; site navigation/login/feedback omitted.",
+        "total_reader_lines": 254,
+        "main_body_line_range": [
+          56,
+          188
+        ],
+        "capture_sha256": [
+          "3b2267476b633c7de360e218ec037a2420601c57f5c14e7019687ea8d9ec2a69"
+        ]
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://projectdelivery.gov.uk/crown-copyright/",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information published by Government Project Delivery and licensed under the Open Government Licence.",
+        "limitations": "Crown text only. Third-party images, illustrations and logos are not included. No endorsement. Source text converted from public web reader to UTF-8; links rendered as labels."
+      },
+      "publisher": "Government Project Delivery, UK Government",
+      "text_characters": 18031,
+      "sha256": "d2cafd4b03454b1d7b7c676743d0c69f804ad23d39b98043efd0f2d613acb8ad"
+    },
+    {
+      "id": "teal-16",
+      "title": "Chapter 16: Planning",
+      "canonical_url": "https://projectdelivery.gov.uk/teal-book/home/part-e-planning-and-control/chapter-16-planning/",
+      "local_path": "sources/teal-16.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "PM-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "403 Forbidden; no login or access control bypass",
+        "coverage": "All reader line windows merged; main chapter text retained; site navigation/login/feedback omitted.",
+        "total_reader_lines": 349,
+        "main_body_line_range": [
+          55,
+          282
+        ],
+        "capture_sha256": [
+          "909ef05064f65f739519e94498302b7f3b03fb72599ba3684d43eefcabc48360",
+          "65443e24f62d2671167c63389a59fa7832447a9f3aa82aadc3a40e40cc433868"
+        ]
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://projectdelivery.gov.uk/crown-copyright/",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information published by Government Project Delivery and licensed under the Open Government Licence.",
+        "limitations": "Crown text only. Third-party images, illustrations and logos are not included. No endorsement. Source text converted from public web reader to UTF-8; links rendered as labels."
+      },
+      "publisher": "Government Project Delivery, UK Government",
+      "text_characters": 37547,
+      "sha256": "6374b90c7f4a9344924c20ceb11f861ee79fa496bd5f6180d47594cf91224365"
+    },
+    {
+      "id": "teal-20",
+      "title": "Chapter 20: Risk management",
+      "canonical_url": "https://projectdelivery.gov.uk/teal-book/home/part-e-planning-and-control/chapter-20-risk-management/",
+      "local_path": "sources/teal-20.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "PM-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "web_reader_line_merge",
+        "direct_http_result": "403 Forbidden; no login or access control bypass",
+        "coverage": "All reader line windows merged; main chapter text retained; site navigation/login/feedback omitted.",
+        "total_reader_lines": 416,
+        "main_body_line_range": [
+          55,
+          349
+        ],
+        "capture_sha256": [
+          "0be1e8284c65ffb66062adabfb3e73523416462f4a32ab0e61ffa04720013ecd",
+          "a421f4b287b3f0f21f0994e8489cb202353b2e69ed3ed5b9ffaa0e477c08ee27"
+        ]
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://projectdelivery.gov.uk/crown-copyright/",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information published by Government Project Delivery and licensed under the Open Government Licence.",
+        "limitations": "Crown text only. Third-party images, illustrations and logos are not included. No endorsement. Source text converted from public web reader to UTF-8; links rendered as labels."
+      },
+      "publisher": "Government Project Delivery, UK Government",
+      "text_characters": 34660,
+      "sha256": "963d7758f16b1e2fe09489dd6976c09ec277e4a4aff1ddeaf063630cc6fd562c"
+    },
+    {
+      "id": "dora-metrics",
+      "title": "DORA software delivery performance metrics",
+      "canonical_url": "https://dora.dev/guides/dora-metrics/",
+      "local_path": "sources/dora-metrics.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "SWE-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:03.933410+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "class": "guides-article"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:03.933410+00:00",
+        "resolved_url": "https://dora.dev/guides/dora-metrics/",
+        "response_sha256": "00f7a12f296db54df7006f19badcfe668819c30fc50d386c471fe55531bcdff1",
+        "response_bytes": 19454
+      },
+      "reuse": {
+        "license": "CC BY 4.0",
+        "evidence_url": "https://dora.dev/guides/dora-metrics/",
+        "license_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Source: DORA, a program run by Google Cloud; Google LLC. Article author: Nathen Harvey. Licensed under CC BY 4.0.",
+        "limitations": "Except where otherwise specified. HTML main body converted to UTF-8 plain text on 2026-10-26; images/navigation/scripts omitted, links rendered as labels. No endorsement."
+      },
+      "publisher": "Google LLC / DORA",
+      "text_characters": 9329,
+      "sha256": "ed378546d4ddb49b87819aec4f7a48e74472886162bd095e73a95f9d512de0cd"
+    },
+    {
+      "id": "space-abstract-summary",
+      "title": "The SPACE of Developer Productivity: abstract-based original summary",
+      "canonical_url": "https://www.microsoft.com/en-us/research/publication/the-space-of-developer-productivity-theres-more-to-it-than-you-think/",
+      "local_path": "sources/space-abstract-summary.txt",
+      "representation": "original_summary",
+      "card_ids": [
+        "SWE-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:01.546036+00:00",
+      "scope": "Original Chinese synthesis based ONLY on the author-institution abstract/bibliographic page, not a copy of the abstract and not the full paper.",
+      "retrieval": {
+        "method": "web_reader_then_original_synthesis",
+        "coverage": "Author abstract and bibliography read via public web tool; no full paper obtained or reproduced."
+      },
+      "reuse": {
+        "license": "Original project summary; source full-text redistribution not established",
+        "evidence_url": "https://www.microsoft.com/en-us/legal/terms-of-use",
+        "attribution": "Summary by How-to-Report. Underlying ideas attributed to Forsgren et al., The SPACE of Developer Productivity, ACM Queue 19(1), 2021.",
+        "limitations": "Microsoft terms do not provide unrestricted redistribution of the source page. No verbatim abstract or paper is bundled. This file must never be represented as the full source or a full-paper review."
+      },
+      "publisher": "Microsoft Research; original publication by Nicole Forsgren and coauthors, ACM Queue 19(1), 2021",
+      "text_characters": 444,
+      "sha256": "ba7e7fb5d578fb63031627296ab8137a4bc10936735d01b081a4b6e22d7b5237"
+    },
+    {
+      "id": "sre-service-objectives",
+      "title": "Site Reliability Engineering, Chapter 4: Service Level Objectives",
+      "canonical_url": "https://sre.google/sre-book/service-level-objectives/",
+      "local_path": "sources/sre-service-objectives.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "SWE-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:03.929968+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "id": "content"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:03.929968+00:00",
+        "resolved_url": "https://sre.google/sre-book/service-level-objectives/",
+        "response_sha256": "60851ff3487eef695bb59143b5123a79af081091ce8bf2909ad83ad924438365",
+        "response_bytes": 67930
+      },
+      "reuse": {
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://sre.google/sre-book/service-level-objectives/",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "attribution": "Copyright © 2017 Google, Inc. Published by O'Reilly Media, Inc. Licensed under CC BY-NC-ND 4.0. Chapter authors/editors are retained in the source text.",
+        "limitations": "NonCommercial and NoDerivatives restrictions apply to this original source text. Do not treat the repository/package license as overriding these terms. This is a format conversion of chapter text; no translation or substantive rewrite. Images/layout/scripts are not included. No endorsement."
+      },
+      "publisher": "Google, Inc.; published by O'Reilly Media, Inc.",
+      "text_characters": 23853,
+      "sha256": "c94e689ee70cbb2be1b50100b9be2a22867975934195ae36b7fce6c5679af0c4"
+    },
+    {
+      "id": "sre-testing-reliability",
+      "title": "Site Reliability Engineering, Chapter 17: Testing for Reliability",
+      "canonical_url": "https://sre.google/sre-book/testing-reliability/",
+      "local_path": "sources/sre-testing-reliability.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "SWE-02"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:05.175689+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "id": "content"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:05.175689+00:00",
+        "resolved_url": "https://sre.google/sre-book/testing-reliability/",
+        "response_sha256": "090d12e171de30b49c4228c54314af1f95e021c00270adcff0e5d5609c8e4c2e",
+        "response_bytes": 100430
+      },
+      "reuse": {
+        "license": "CC BY-NC-ND 4.0",
+        "evidence_url": "https://sre.google/sre-book/testing-reliability/",
+        "license_url": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "attribution": "Copyright © 2017 Google, Inc. Published by O'Reilly Media, Inc. Licensed under CC BY-NC-ND 4.0. Chapter authors/editors are retained in the source text.",
+        "limitations": "NonCommercial and NoDerivatives restrictions apply to this original source text. Do not treat the repository/package license as overriding these terms. This is a format conversion of chapter text; no translation or substantive rewrite. Images/layout/scripts are not included. No endorsement."
+      },
+      "publisher": "Google, Inc.; published by O'Reilly Media, Inc.",
+      "text_characters": 53805,
+      "sha256": "19f6057363c49c06d1253542429e297b8c9ac0bcc30a4bc44f32a918b42080e9"
+    },
+    {
+      "id": "gov-user-needs",
+      "title": "Start by learning user needs",
+      "canonical_url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+      "local_path": "sources/gov-user-needs.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "MKT-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:05.189765+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "class": "gem-c-govspeak"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:05.189765+00:00",
+        "resolved_url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+        "response_sha256": "3e2d035333f3e29a863e9600ebd0f610e76b7f89ab06e14fdcb84e95e8028ed0",
+        "response_bytes": 79594
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://www.gov.uk/service-manual/user-research/start-by-learning-user-needs",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: UK Government, GOV.UK; Crown copyright.",
+        "limitations": "Except where otherwise stated; third-party images/logos are not included. No endorsement. HTML main body converted to UTF-8 plain text; layout/scripts omitted."
+      },
+      "publisher": "UK Government (GOV.UK)",
+      "text_characters": 5595,
+      "sha256": "ccaad946c918af989f27c988e3a227506245ec457229f03022cdb99fe1cea920"
+    },
+    {
+      "id": "gov-digital-takeup",
+      "title": "Measuring digital take-up",
+      "canonical_url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up",
+      "local_path": "sources/gov-digital-takeup.txt",
+      "representation": "source_text",
+      "card_ids": [
+        "MKT-01"
+      ],
+      "fetched_at_utc": "2026-10-26T08:22:05.700807+00:00",
+      "scope": "Readable main-body text of the cited public HTML page, not images, layout, downloadable attachments or linked publications. Text acquisition is not a claim of full scientific review.",
+      "retrieval": {
+        "method": "https_html_body",
+        "selector": {
+          "class": "gem-c-govspeak"
+        },
+        "fetched_at_utc": "2026-10-26T08:22:05.700807+00:00",
+        "resolved_url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up",
+        "response_sha256": "1aef2b532c1a00d1d7793f6750c59ec4b7af26add39836bcdc62ca5c238470d0",
+        "response_bytes": 72140
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0",
+        "evidence_url": "https://www.gov.uk/service-manual/measuring-success/measuring-digital-take-up",
+        "license_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Contains public sector information licensed under the Open Government Licence v3.0. Source: UK Government, GOV.UK; Crown copyright.",
+        "limitations": "Except where otherwise stated; third-party images/logos are not included. No endorsement. HTML main body converted to UTF-8 plain text; layout/scripts omitted."
+      },
+      "publisher": "UK Government (GOV.UK)",
+      "text_characters": 3278,
+      "sha256": "82daa8dfb59d0c1fe02901fe4a6fd5afbc78ecd8c8f4337628bffa43f98cdad4"
+    }
+  ]
+}

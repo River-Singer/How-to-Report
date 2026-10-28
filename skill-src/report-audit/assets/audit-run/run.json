@@ -1,0 +1,34 @@
+{
+  "contract_version": "0.1",
+  "run_id": "REPLACE_WITH_RUN_ID",
+  "mode": "audit",
+  "work_status": "in_progress",
+  "notes_ref": "run.md",
+  "sources": [
+    {
+      "id": "audit-target",
+      "revision": 1,
+      "ref": "REPLACE_WITH_ACTUAL_LOCAL_REPORT_PATH",
+      "role": "audit_target",
+      "scope": "审计目标；登记与字节指纹不代表内容已阅读或已核验。",
+      "version_note": "revision是本Run登记的精确版本；默认1不推断原文档的业务版本。已知外部版本时另记真实说明。"
+    }
+  ],
+  "artifacts": [
+    {
+      "id": "audit-report",
+      "revision": 1,
+      "ref": "audit.md",
+      "scope": "初始化的审计工作稿；内容检查尚未执行。",
+      "uses": [{"id": "audit-target", "revision": 1}]
+    }
+  ],
+  "checks": [
+    {
+      "id": "content-audit",
+      "target": {"id": "audit-target", "revision": 1},
+      "status": "not_run",
+      "detail_ref": "audit.md"
+    }
+  ]
+}

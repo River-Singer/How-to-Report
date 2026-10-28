@@ -1,0 +1,7 @@
+session_id,date,period,capacity_person_visits,reserved_slots,reserved_arrivals,walkin_arrivals,walkins_served,walkins_not_served
+W01,2026-10-03,morning,12,12,9,6,3,3
+W02,2026-10-03,afternoon,12,12,7,1,1,0
+W03,2026-10-10,morning,12,12,8,7,4,3
+W04,2026-10-10,afternoon,12,12,7,2,2,0
+W05,2026-10-17,morning,12,12,9,5,3,2
+W06,2026-10-17,afternoon,12,12,6,2,2,0

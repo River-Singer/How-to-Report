@@ -1,0 +1,44 @@
+{
+  "synthetic": true,
+  "unit": "CNY/vehicle",
+  "scope": "same simulated assembly groups; current/base classifications unchanged",
+  "ranking": [
+    {
+      "assembly": "A",
+      "base": 120,
+      "current": 150
+    },
+    {
+      "assembly": "B",
+      "base": 90,
+      "current": 95
+    },
+    {
+      "assembly": "C",
+      "base": 80,
+      "current": 82
+    }
+  ],
+  "selected_assembly": "A",
+  "trend": [
+    {
+      "period": "P1",
+      "value": 120
+    },
+    {
+      "period": "P2",
+      "value": 130
+    },
+    {
+      "period": "P3",
+      "value": 140
+    },
+    {
+      "period": "P4",
+      "value": 150
+    }
+  ],
+  "limits": [
+    "Synthetic observations only; no proven cause or realized business benefit."
+  ]
+}

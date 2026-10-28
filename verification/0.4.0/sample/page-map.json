@@ -1,0 +1,1956 @@
+{
+  "page_plan_version": "0.1",
+  "plan_sha256": "82444b55aa56a77f4e30f5e01e7e4321a3b7499aacafe45cb4cc90fa18685b71",
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "scope": "declared_mapping_not_semantic_verification",
+  "elements": [
+    {
+      "page_id": "judgment",
+      "element_id": "scope",
+      "selector": "#element-scope",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "scope",
+        "title": "已实现的输出",
+        "body": "一个离线文件保留判断、证据定位与可见限制。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "judgment",
+      "element_id": "boundary",
+      "selector": "#element-boundary",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "boundary",
+        "title": "仍需实际复核",
+        "body": "布局检查只回答是否溢出；内容是否成立需回到原材料。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "judgment",
+      "selector": "#page-judgment",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "layout": "focus",
+        "question": "这个样例能验证什么？",
+        "title": "页面可以承接判断，但不能替代证据",
+        "takeaway": "此处只演示结构与显示机制；没有真实业务效果或模型质量结论。",
+        "limits": [
+          "全部数据与文字为合成工程输入；不作为项目成果。"
+        ]
+      }
+    },
+    {
+      "page_id": "comparison",
+      "element_id": "coobserve",
+      "selector": "#element-coobserve",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "coobserve",
+        "title": "共同观察",
+        "body": "当两个选项需要用同一标准衡量，让读者同时看见其依据和限制。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "comparison",
+      "element_id": "understand",
+      "selector": "#element-understand",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "understand",
+        "title": "逐步理解",
+        "body": "当后一步需要前一步的定义，用顺序解释降低理解负担。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "comparison",
+      "selector": "#page-comparison",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "layout": "compare",
+        "question": "两种展示方式分别解决什么问题？",
+        "title": "同屏比较保留差异，逐步解释保留顺序",
+        "takeaway": "布局选择应服从听众此刻要完成的判断。",
+        "limits": [
+          "并列不等于优劣排序；先后不自动意味着因果。"
+        ]
+      }
+    },
+    {
+      "page_id": "sequence",
+      "element_id": "content",
+      "selector": "#element-content",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "content",
+        "title": "形成内容",
+        "body": "写明关键判断、实际依据与未解决的问题。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "sequence",
+      "element_id": "page",
+      "selector": "#element-page",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "page",
+        "title": "选择表达",
+        "body": "说明什么要共同看见，什么需要逐步展开。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "sequence",
+      "element_id": "review",
+      "selector": "#element-review",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "review",
+        "title": "实际检查",
+        "body": "从最终页面核对可读内容、数值和限制，再回看计划。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "sequence",
+      "selector": "#page-sequence",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "layout": "sequence",
+        "question": "怎样从内容走到可以检查的页面？",
+        "title": "先形成内容，再选择页面，最后实际检查",
+        "takeaway": "三个动作承担不同责任；不把页面生成当作审计通过。",
+        "limits": [
+          "此顺序是工程说明，不是所有汇报必经的固定流程。"
+        ]
+      }
+    },
+    {
+      "page_id": "data",
+      "element_id": "positive",
+      "selector": "#element-positive",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "positive",
+        "title": "样本甲",
+        "body": "合成正变化量。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ],
+        "value": 12
+      }
+    },
+    {
+      "page_id": "data",
+      "element_id": "negative",
+      "selector": "#element-negative",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "negative",
+        "title": "样本乙",
+        "body": "合成负变化量。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ],
+        "value": -4
+      }
+    },
+    {
+      "page_id": "data",
+      "element_id": "zero",
+      "selector": "#element-zero",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "zero",
+        "title": "样本丙",
+        "body": "实际提供的零值。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ],
+        "value": 0
+      }
+    },
+    {
+      "page_id": "data",
+      "element_id": "missing",
+      "selector": "#element-missing",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "id": "missing",
+        "title": "样本丁",
+        "body": "没有可用观测值。",
+        "refs": [
+          {
+            "id": "synthetic-blueprint",
+            "revision": 1,
+            "locator": "engineering fixture; not project evidence"
+          }
+        ],
+        "value": null
+      }
+    },
+    {
+      "page_id": "data",
+      "selector": "#page-data",
+      "refs": [
+        {
+          "id": "synthetic-blueprint",
+          "revision": 1,
+          "locator": "engineering fixture; not project evidence"
+        }
+      ],
+      "displayed": {
+        "layout": "data",
+        "question": "负值、零值和缺失值是否被正确区分？",
+        "title": "缺失不是零，条形只表达已给出的数值",
+        "takeaway": "以下为同一合成口径的变化量，示范显式零基线与缺失标记。",
+        "limits": [
+          "工程合成数据；不表示现实业务收益或因果。"
+        ],
+        "unit": "合成单位"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "structure",
+      "datum_id": "level-claim",
+      "selector": "#datum-level-claim",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "level-claim",
+        "label": "候选判断",
+        "body": "交付实践是否值得进一步研究？",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "level": 1
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "structure",
+      "datum_id": "level-explanation",
+      "selector": "#datum-level-explanation",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "level-explanation",
+        "label": "阶段结果与解释",
+        "body": "区分已观察结果与待验证机制。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "level": 2
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "structure",
+      "datum_id": "level-records",
+      "selector": "#datum-level-records",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "level-records",
+        "label": "业务事实与过程记录",
+        "body": "先确认对象、范围和数据口径。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "level": 3
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "structure",
+      "selector": "#element-structure",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "structure",
+        "type": "hierarchy",
+        "role": "primary",
+        "title": "从记录到候选判断",
+        "body": "层级表示论证职责，不表示数量或已证实因果。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "层级宽度仅示意；判断仍需独立证据。"
+        ],
+        "levels": [
+          {
+            "id": "level-claim",
+            "label": "候选判断",
+            "body": "交付实践是否值得进一步研究？",
+            "refs": [
+              {
+                "id": "synthetic-composed",
+                "revision": 1,
+                "locator": "本文件合成值"
+              }
+            ]
+          },
+          {
+            "id": "level-explanation",
+            "label": "阶段结果与解释",
+            "body": "区分已观察结果与待验证机制。",
+            "refs": [
+              {
+                "id": "synthetic-composed",
+                "revision": 1,
+                "locator": "本文件合成值"
+              }
+            ]
+          },
+          {
+            "id": "level-records",
+            "label": "业务事实与过程记录",
+            "body": "先确认对象、范围和数据口径。",
+            "refs": [
+              {
+                "id": "synthetic-composed",
+                "revision": 1,
+                "locator": "本文件合成值"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "ranking",
+      "datum_id": "rank-a",
+      "selector": "#datum-rank-a",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "rank-a",
+        "value": 87,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "label": "样本甲",
+        "unit": "合成分"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "ranking",
+      "datum_id": "rank-b",
+      "selector": "#datum-rank-b",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "rank-b",
+        "value": 68,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "label": "样本乙",
+        "unit": "合成分"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "ranking",
+      "datum_id": "rank-c",
+      "selector": "#datum-rank-c",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "rank-c",
+        "value": 53,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "label": "样本丙",
+        "unit": "合成分"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "ranking",
+      "selector": "#element-ranking",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "ranking",
+        "type": "chart",
+        "role": "supporting",
+        "title": "样本比较：观察差异",
+        "body": "同一合成指标；按输入顺序展示。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "排序不代表实施优先级。"
+        ],
+        "chart": {
+          "kind": "bar",
+          "unit": "合成分",
+          "items": [
+            {
+              "id": "rank-a",
+              "value": 87,
+              "refs": [
+                {
+                  "id": "synthetic-composed",
+                  "revision": 1,
+                  "locator": "本文件合成值"
+                }
+              ],
+              "label": "样本甲"
+            },
+            {
+              "id": "rank-b",
+              "value": 68,
+              "refs": [
+                {
+                  "id": "synthetic-composed",
+                  "revision": 1,
+                  "locator": "本文件合成值"
+                }
+              ],
+              "label": "样本乙"
+            },
+            {
+              "id": "rank-c",
+              "value": 53,
+              "refs": [
+                {
+                  "id": "synthetic-composed",
+                  "revision": 1,
+                  "locator": "本文件合成值"
+                }
+              ],
+              "label": "样本丙"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-0",
+      "selector": "#datum-trend-a-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-0",
+        "value": 12,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第1期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-1",
+      "selector": "#datum-trend-a-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-1",
+        "value": null,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第2期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-2",
+      "selector": "#datum-trend-a-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-2",
+        "value": 24,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第3期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-3",
+      "selector": "#datum-trend-a-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-3",
+        "value": 32,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第4期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-0",
+      "selector": "#datum-trend-b-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-0",
+        "value": -4,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第1期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-1",
+      "selector": "#datum-trend-b-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-1",
+        "value": 0,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第2期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-2",
+      "selector": "#datum-trend-b-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-2",
+        "value": 9,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第3期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-3",
+      "selector": "#datum-trend-b-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-3",
+        "value": 15,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第4期"
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "element_id": "time-trend",
+      "selector": "#element-time-trend",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "time-trend",
+        "type": "chart",
+        "role": "supporting",
+        "title": "期间变化：保留缺失",
+        "body": "有序类别按等间距排布；不补造观测。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "未观测处断线；变化不证明机制。"
+        ],
+        "chart": {
+          "kind": "line",
+          "unit": "合成分",
+          "x_labels": [
+            "第1期",
+            "第2期",
+            "第3期",
+            "第4期"
+          ],
+          "series": [
+            {
+              "id": "trend-a",
+              "label": "甲",
+              "points": [
+                {
+                  "id": "trend-a-0",
+                  "value": 12,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-a-1",
+                  "value": null,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-a-2",
+                  "value": 24,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-a-3",
+                  "value": 32,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trend-b",
+              "label": "乙",
+              "points": [
+                {
+                  "id": "trend-b-0",
+                  "value": -4,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-b-1",
+                  "value": 0,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-b-2",
+                  "value": 9,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-b-3",
+                  "value": 15,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "multi-view",
+      "selector": "#page-multi-view",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "question": "不同视图怎样共同支持同一个问题？",
+        "title": "层级解释主张，比较与变化提供不同观察",
+        "takeaway": "先辨认论证职责，再看样本差异与期间变化；组合本身不增加证据强度。",
+        "limits": [
+          "全部为合成工程输入；不对应 MASTer 实际指标。"
+        ],
+        "tree": {
+          "type": "row",
+          "weights": [
+            0.95,
+            1.15
+          ],
+          "children": [
+            {
+              "element": "structure"
+            },
+            {
+              "type": "column",
+              "weights": [
+                1,
+                1.2
+              ],
+              "children": [
+                {
+                  "element": "ranking"
+                },
+                {
+                  "element": "time-trend"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-0-0",
+      "selector": "#datum-matrix-0-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-0-0",
+        "value": 48,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象甲",
+        "column": "维度一"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-0-1",
+      "selector": "#datum-matrix-0-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-0-1",
+        "value": 65,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象甲",
+        "column": "维度二"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-0-2",
+      "selector": "#datum-matrix-0-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-0-2",
+        "value": null,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象甲",
+        "column": "维度三"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-0-3",
+      "selector": "#datum-matrix-0-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-0-3",
+        "value": 41,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象甲",
+        "column": "维度四"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-1-0",
+      "selector": "#datum-matrix-1-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-1-0",
+        "value": 72,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象乙",
+        "column": "维度一"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-1-1",
+      "selector": "#datum-matrix-1-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-1-1",
+        "value": 0,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象乙",
+        "column": "维度二"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-1-2",
+      "selector": "#datum-matrix-1-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-1-2",
+        "value": 89,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象乙",
+        "column": "维度三"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-1-3",
+      "selector": "#datum-matrix-1-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-1-3",
+        "value": 58,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象乙",
+        "column": "维度四"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-2-0",
+      "selector": "#datum-matrix-2-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-2-0",
+        "value": 51,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丙",
+        "column": "维度一"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-2-1",
+      "selector": "#datum-matrix-2-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-2-1",
+        "value": 64,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丙",
+        "column": "维度二"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-2-2",
+      "selector": "#datum-matrix-2-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-2-2",
+        "value": -20,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丙",
+        "column": "维度三"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-2-3",
+      "selector": "#datum-matrix-2-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-2-3",
+        "value": 35,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丙",
+        "column": "维度四"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-3-0",
+      "selector": "#datum-matrix-3-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-3-0",
+        "value": 44,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丁",
+        "column": "维度一"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-3-1",
+      "selector": "#datum-matrix-3-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-3-1",
+        "value": 38,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丁",
+        "column": "维度二"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-3-2",
+      "selector": "#datum-matrix-3-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-3-2",
+        "value": 58,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丁",
+        "column": "维度三"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "datum_id": "matrix-3-3",
+      "selector": "#datum-matrix-3-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "matrix-3-3",
+        "value": 63,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成变化量",
+        "row": "对象丁",
+        "column": "维度四"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "evidence-matrix",
+      "selector": "#element-evidence-matrix",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "evidence-matrix",
+        "type": "chart",
+        "role": "primary",
+        "title": "主证据：对象与维度的交叉比较",
+        "body": "所有单元共享一个合成口径；每格保留原值。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "负数、零值和缺失分开显示；颜色不表示好坏。"
+        ],
+        "chart": {
+          "kind": "heatmap",
+          "unit": "合成变化量",
+          "rows": [
+            "对象甲",
+            "对象乙",
+            "对象丙",
+            "对象丁"
+          ],
+          "columns": [
+            "维度一",
+            "维度二",
+            "维度三",
+            "维度四"
+          ],
+          "cells": [
+            [
+              {
+                "id": "matrix-0-0",
+                "value": 48,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-0-1",
+                "value": 65,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-0-2",
+                "value": null,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-0-3",
+                "value": 41,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "id": "matrix-1-0",
+                "value": 72,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-1-1",
+                "value": 0,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-1-2",
+                "value": 89,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-1-3",
+                "value": 58,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "id": "matrix-2-0",
+                "value": 51,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-2-1",
+                "value": 64,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-2-2",
+                "value": -20,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-2-3",
+                "value": 35,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              }
+            ],
+            [
+              {
+                "id": "matrix-3-0",
+                "value": 44,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-3-1",
+                "value": 38,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-3-2",
+                "value": 58,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              },
+              {
+                "id": "matrix-3-3",
+                "value": 63,
+                "refs": [
+                  {
+                    "id": "synthetic-composed",
+                    "revision": 1,
+                    "locator": "本文件合成值"
+                  }
+                ]
+              }
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "support-contrast",
+      "datum_id": "contrast-a",
+      "selector": "#datum-contrast-a",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "contrast-a",
+        "value": 12,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "label": "记录甲",
+        "unit": "合成变化量"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "support-contrast",
+      "datum_id": "contrast-b",
+      "selector": "#datum-contrast-b",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "contrast-b",
+        "value": -4,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "label": "记录乙",
+        "unit": "合成变化量"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "support-contrast",
+      "datum_id": "contrast-c",
+      "selector": "#datum-contrast-c",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "contrast-c",
+        "value": 0,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "label": "记录丙",
+        "unit": "合成变化量"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "support-contrast",
+      "selector": "#element-support-contrast",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "support-contrast",
+        "type": "chart",
+        "role": "supporting",
+        "title": "辅助观察：单独的变化量",
+        "body": "与矩阵不同的合成样本，不作合计。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "不能跨图直接相加或推断因果。"
+        ],
+        "chart": {
+          "kind": "bar",
+          "unit": "合成变化量",
+          "items": [
+            {
+              "id": "contrast-a",
+              "value": 12,
+              "refs": [
+                {
+                  "id": "synthetic-composed",
+                  "revision": 1,
+                  "locator": "本文件合成值"
+                }
+              ],
+              "label": "记录甲"
+            },
+            {
+              "id": "contrast-b",
+              "value": -4,
+              "refs": [
+                {
+                  "id": "synthetic-composed",
+                  "revision": 1,
+                  "locator": "本文件合成值"
+                }
+              ],
+              "label": "记录乙"
+            },
+            {
+              "id": "contrast-c",
+              "value": 0,
+              "refs": [
+                {
+                  "id": "synthetic-composed",
+                  "revision": 1,
+                  "locator": "本文件合成值"
+                }
+              ],
+              "label": "记录丙"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "element_id": "coverage",
+      "selector": "#element-coverage",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "coverage",
+        "type": "metric",
+        "role": "context",
+        "title": "已给出矩阵观测",
+        "body": "16 个单元中有 15 个显式数值；零也计作观测。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "数量只描述样例完整性，不是业务质量结论。"
+        ],
+        "value": 15,
+        "unit": "个 / 共16个"
+      }
+    },
+    {
+      "page_id": "dense-evidence",
+      "selector": "#page-dense-evidence",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "question": "怎样共同看见主证据及其使用边界？",
+        "title": "让主矩阵占据主位，辅助观察保留各自口径",
+        "takeaway": "空间分配帮助阅读，不把不同对象的真实数值拼成同一个业务结论。",
+        "limits": [
+          "全部为合成工程输入；数据上下文一致性仍需人工语义审计。"
+        ],
+        "tree": {
+          "type": "row",
+          "weights": [
+            1.45,
+            1
+          ],
+          "children": [
+            {
+              "element": "evidence-matrix"
+            },
+            {
+              "type": "column",
+              "weights": [
+                1.15,
+                1
+              ],
+              "children": [
+                {
+                  "element": "support-contrast"
+                },
+                {
+                  "element": "coverage"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

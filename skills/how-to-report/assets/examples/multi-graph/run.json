@@ -1,0 +1,18 @@
+{
+  "contract_version": "0.1",
+  "run_id": "synthetic-pilot-example",
+  "mode": "analyze-first",
+  "work_status": "blocked",
+  "notes_ref": "run.md",
+  "semantic_ref": "semantic.json",
+  "tasks_ref": "tasks.json",
+  "events_ref": "events.jsonl",
+  "sources": [
+    {"id": "s-pilot", "revision": 1, "ref": "inputs/pilot.md", "limitations": "Synthetic records; no comparable historical baseline."},
+    {"id": "s-background", "revision": 1, "ref": "inputs/background.md", "limitations": "Synthetic independent scope description."}
+  ],
+  "artifacts": [
+    {"id": "a-blueprint", "revision": 1, "ref": "outputs/blueprint.md", "uses": [{"id": "u-main", "revision": 1}, {"id": "p-overview", "revision": 1}]}
+  ],
+  "checks": []
+}

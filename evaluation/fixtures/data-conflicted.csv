@@ -1,0 +1,6 @@
+part,period,unit_price,quantity,bom_version,currency
+A,base,100,2,V1,CNY
+B,base,50,3,V1,CNY
+A,current,110,2,V2,CNY
+B,current,55,4,V2,CNY
+B,current,55,4,V2,CNY

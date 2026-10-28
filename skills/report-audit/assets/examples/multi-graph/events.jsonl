@@ -1,0 +1,1 @@
+{"event_id":"synthetic-denial-1","sequence":1,"type":"consent_decision","decision":"deny","scope_id":"optional-domain-material","user_message_ref":"synthetic-example-user-message-1","note":"Fictional denial for contract demonstration; this is not a real user authorization."}

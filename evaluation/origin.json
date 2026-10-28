@@ -1,0 +1,44 @@
+{
+  "source": "Original development delivery reference/eval-cases.jsonl and seven synthetic fixtures, 2026-10-25; imported 2026-10-28",
+  "exposure": "all imported cases read during development; old holdout-candidate tags are historical suggestions, not blindness",
+  "changes": [
+    "V01 adds explicit synthetic chart data",
+    "V02 adds a real synthetic layout target",
+    "A02 adds a real synthetic calculation report",
+    "D01 oracle accepts equivalent declared decompositions instead of requiring one allocation convention"
+  ],
+  "original_files": [
+    {
+      "path": "eval-cases.jsonl",
+      "sha256": "253d74affdf70d605fee69de5e377f3c82b1a2904ccf9ca1c56838d0bba222f4"
+    },
+    {
+      "path": "fixtures/data-conflicted.csv",
+      "sha256": "3dfc4d01f45437898b215554f5035f4815b45f0f8f5e88c20a8e7b999487a897"
+    },
+    {
+      "path": "fixtures/data-cost.csv",
+      "sha256": "d4080ada17ddc805f2e5d91220d6c451426fafbeb3ad9de246c30fca174e7b84"
+    },
+    {
+      "path": "fixtures/incomplete-claims.md",
+      "sha256": "123d0cf6f35a2057a0b278f1dfeb64d92e50311b0c06eca8c461083071389f17"
+    },
+    {
+      "path": "fixtures/injected-source.md",
+      "sha256": "61a288da309276826002647f60be972952d86b69e578feeae104e65adb9f009d"
+    },
+    {
+      "path": "fixtures/marketing-brief.md",
+      "sha256": "41f0fbfd2d282569d1212fdfc81ad78ab3a5655280cc88457e1627fa3942bb55"
+    },
+    {
+      "path": "fixtures/project-status.md",
+      "sha256": "41b0fdd69eb07ba3f78c665c1bffdcdedf29e3ea7a9b9b3c5a4a1489381689da"
+    },
+    {
+      "path": "fixtures/semantic-plan.md",
+      "sha256": "0d00106e68e108d9e0064d32feed8225e2473c114ccbbaf19280e32c1b3e9c1a"
+    }
+  ]
+}
