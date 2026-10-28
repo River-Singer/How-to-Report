@@ -240,24 +240,61 @@ class Validator:
                     self.error(where + ".detail_ref", "pass needs nonempty supporting detail")
 
     def check_verifications(self):
+        """No scope inference from prose; every exact-target conflict is accounted for."""
         for key, node, where in self.nodes:
             refs = node.get("verification_refs", [])
             if not isinstance(refs, list):
                 continue
+            matching = {cid: check for cid, check in self.checks.items()
+                        if isinstance(check.get("target"), dict) and key
+                        and check["target"].get("id") == key[0]
+                        and type(check["target"].get("revision")) is int
+                        and check["target"]["revision"] == key[1]}
             matched = False
             for check_id in refs:
                 if not isinstance(check_id, str):
                     continue
-                check = self.checks.get(check_id)
-                if check is None:
+                if check_id not in self.checks:
                     self.error(where + ".verification_refs", f"unknown check {check_id}")
-                    continue
-                target = check.get("target")
-                same_target = isinstance(target, dict) and key and target.get("id") == key[0] and type(target.get("revision")) is int and target["revision"] == key[1]
-                if same_target and check.get("status") == "pass":
+                elif check_id in matching and matching[check_id].get("status") == "pass":
                     matched = True
-            if node.get("status") == "verified" and not matched:
-                self.error(where + ".status", "verified needs a matching pass check for this exact object version")
+            accounted = set()
+            dispositions = self.array(node.get("verification_dispositions", []), where + ".verification_dispositions")
+            for i, value in enumerate(dispositions):
+                loc = f"{where}.verification_dispositions[{i}]"
+                d = self.mapping(value, loc)
+                required = {"check_id", "disposition", "reason", "detail_ref"}
+                if not required <= d.keys() or d.keys() - required - {"resolving_check_id"}:
+                    self.error(loc, "expected check_id/disposition/reason/detail_ref and optional resolving_check_id")
+                cid = d.get("check_id")
+                if not isinstance(cid, str) or cid not in matching or cid in accounted:
+                    self.error(loc, "disposition must name a unique exact-target Check")
+                    continue
+                if matching[cid].get("status") == "pass":
+                    self.error(loc, "disposition applies only to a non-pass Check")
+                self.string(d.get("reason"), loc + ".reason")
+                detail = self.file_ref(d.get("detail_ref"), loc + ".detail_ref")
+                if detail and detail.stat().st_size == 0:
+                    self.error(loc, "disposition requires nonempty supporting detail")
+                action = d.get("disposition")
+                self.enum(action, {"resolved", "withdrawn", "different_scope"}, loc + ".disposition")
+                if action == "resolved":
+                    successor = d.get("resolving_check_id")
+                    if not isinstance(successor, str) or successor not in refs or matching.get(successor, {}).get("status") != "pass":
+                        self.error(loc, "resolved needs a referenced exact-target pass resolving_check_id")
+                elif "resolving_check_id" in d:
+                    self.error(loc, "resolving_check_id is only allowed for resolved")
+                if action == "different_scope":
+                    self.string(node.get("verification_scope"), where + ".verification_scope")
+                accounted.add(cid)
+            if "verification_scope" in node:
+                self.string(node["verification_scope"], where + ".verification_scope")
+            if node.get("status") == "verified":
+                if not matched:
+                    self.error(where + ".status", "verified needs a matching pass check for this exact object version")
+                conflicts = sorted(cid for cid, c in matching.items() if c.get("status") != "pass" and cid not in accounted)
+                if conflicts:
+                    self.error(where + ".status", "verified has unresolved exact-target checks: " + ", ".join(conflicts))
 
     def check_tasks(self):
         degree = {key: 0 for key in self.tasks}
@@ -340,6 +377,15 @@ class Validator:
         self.enum(run.get("work_status"), WORK_STATES, "run.json.work_status")
         self.read_assets(run, "sources")
         self.read_assets(run, "artifacts")
+        if "decision_context" in run:
+            context = self.mapping(run["decision_context"], "run.json.decision_context")
+            if set(context) != {"version", "target", "decision_id", "reason"} or context.get("version") != "0.1":
+                self.error("run.json.decision_context", "unsupported decision context shape/version")
+            self.string(context.get("decision_id"), "decision_context.decision_id")
+            self.string(context.get("reason"), "decision_context.reason")
+            context_key = self.reference(context.get("target"), "decision_context.target")
+            if context_key and self.kinds.get(context_key[0]) != "source":
+                self.error("decision_context.target", "decision context must reference an exact Source version")
         for field, reader in [("semantic_ref", self.read_semantic), ("tasks_ref", self.read_tasks)]:
             if field in run:
                 path = self.file_ref(run[field], "run.json." + field)

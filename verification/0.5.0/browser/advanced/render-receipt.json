@@ -1,0 +1,27 @@
+{
+  "renderer_contract_version": "0.2",
+  "plan_sha256": "2db7b4d731eeed123a87563fdbed3b7482f26190b337d62ff6cd907f56584ef8",
+  "files": {
+    "index.html": "2b05ab452a4cef8831f58f9ef71a25d857c46cdec98a62ca2f9d55ca7b80244a",
+    "plan.json": "2db7b4d731eeed123a87563fdbed3b7482f26190b337d62ff6cd907f56584ef8",
+    "page-map.json": "8e244c7a747cd76a6231e786a6b1b3823959001f4d78be43d9c77cf7db9a0663",
+    "media/9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa.png": "9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa"
+  },
+  "page_count": 5,
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "browser_validation": "not_run",
+  "semantic_validation": "not_run",
+  "run_mutation": "not_performed",
+  "implementation_sha256": {
+    "report_html.py": "9240880a02969aea3e536cc70d2061bbfb8c5e830b0b2be5e042bb470f1f45a6",
+    "presentation_components.py": "7f8f45177cc73bc1a51d0a83e75694ccbacd2719c8dfca23aa774524f9f672a6",
+    "deck.css": "143b36d5659fd87e078063ebdb77f223fc0f899677f0e84579dd020a168deebd",
+    "deck.js": "acf14390705dacd945dfcf14208410e3dd54018e3f4374c29070097cb1a1ec0c",
+    "schedule_core.py": "b7a2f19d86c1c36bab6a30756cc90ee1f3d6f44202f9170ea8f84dec65eb11e8",
+    "schedule_render.py": "3babd1cd61969551ebb8cbcf8931d3fec8a15723e764207b1b290e7fd980f4b1",
+    "schedule.css": "3616f6e6a443b77226ebc2c3a2758064480ffe70ecac0c80ec8dda2b0a5bff10"
+  }
+}

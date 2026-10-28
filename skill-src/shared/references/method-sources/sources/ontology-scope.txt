@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html
+
+Begin by stating the questions a representation must answer and the domain boundary. Define only the distinctions needed for those questions, then test and revise using cases. Different models may be reasonable for different purposes. For a progress report, distinguishing execution, acceptance, observation date and percentage basis may be sufficient; building a universal project ontology is unnecessary. Source: Natalya F. Noy and Deborah L. McGuinness, *Ontology Development 101*, https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html . Original summary; full-text redistribution permission not established.

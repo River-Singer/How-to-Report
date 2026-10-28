@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/592da1445a51e54a3987958b5831948f-Abstract-Conference.html
+
+Step-back prompting asks a more general conceptual question before returning to the concrete task. Reported experiments concerned selected STEM, knowledge and multi-hop reasoning tasks with specified models. This supports trying an abstraction-and-return operation, not claiming proven management-report improvements. For this product an abstraction must return to the supplied material and change a question, a distinction or an evidence obligation; otherwise stop. Source: *Take a Step Back: Evoking Reasoning via Abstraction in Large Language Models*, ICLR 2024, https://proceedings.iclr.cc/paper_files/paper/2024/hash/592da1445a51e54a3987958b5831948f-Abstract-Conference.html . Abstract-based original summary; no claim to full experiment review or reproduction.

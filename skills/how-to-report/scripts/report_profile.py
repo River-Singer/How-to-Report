@@ -13,13 +13,14 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from report_run import PACKAGE, resolve_path, require_local, local_path, nonempty
 from report_versions import sha, encoded, no_links, text
+from write_boundary import require_external_write
 from validate_run import unique_keys
 
 ENTRY_FIELDS = {"id", "revision", "type", "value", "scope", "confirmation_ref"}
 
 
 def private_path(path, new=False):
-    require_local(path)
+    path = require_external_write(path, (PACKAGE,))
     no_links(path)
     path = resolve_path(path, strict=not new)
     if path.is_relative_to(PACKAGE):

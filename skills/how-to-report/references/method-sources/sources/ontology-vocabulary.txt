@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://tomgruber.org/writing/ontolingua-kaj-1993/
+
+Explicitly defined terms and relations make knowledge easier to share across systems. In this product the useful translation is a small task-specific vocabulary whose meaning can be checked against material, not an assertion that every business term has one permanent universal meaning. Source: Thomas R. Gruber, *A Translation Approach to Portable Ontology Specifications* (1993), https://tomgruber.org/writing/ontolingua-kaj-1993/ . Original summary of author-hosted abstract; no full paper acquired. Author site reserves rights.

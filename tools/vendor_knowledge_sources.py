@@ -19,6 +19,7 @@ from urllib.parse import urlsplit
 import urllib.request
 
 DEFAULT_ROOT = Path(__file__).resolve().parents[1] / "skill-src/shared/knowledge"
+METHOD_ROOT = DEFAULT_ROOT.parent / "references/method-sources"
 STATUSES = {"source_text", "partial_source_text", "original_summary"}
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link", "meta", "param", "source", "track", "wbr"}
 BLOCK = {"article", "blockquote", "br", "div", "h1", "h2", "h3", "h4", "h5", "h6", "hr", "li", "p", "section", "table", "tr", "ul", "ol"}
@@ -234,6 +235,8 @@ def main(argv=None) -> int:
     args = parser.parse_args(argv)
     if args.command == "check":
         errors = check(args.root)
+        if args.root.resolve() == DEFAULT_ROOT.resolve():
+            errors.extend("core methods: " + error for error in check(METHOD_ROOT))
         print(json.dumps({"valid": not errors, "errors": errors, "network_used": False}, ensure_ascii=False))
         return int(bool(errors))
     if not args.source_id or not args.output:

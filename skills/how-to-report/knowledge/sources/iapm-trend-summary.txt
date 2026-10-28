@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://www.iapm.net/en/blog/milestone-trend-analysis/
+
+A milestone-trend view compares the predicted date for the same milestone at successive reporting dates. Preserve each dated observation and its reference baseline. Movement can reveal slippage or stabilization, but is not evidence by itself of why it happened. Missing reporting periods remain missing; the horizontal spacing should reflect actual dates rather than uniformly spaced labels. Source: IAPM, https://www.iapm.net/en/blog/milestone-trend-analysis/ . Original summary only; no permission for full article redistribution was established.

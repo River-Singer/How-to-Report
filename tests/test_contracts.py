@@ -60,6 +60,95 @@ class ContractTests(unittest.TestCase):
                 "scope_id": scope_id, "resource_ref": "synthetic-resource",
                 "consent_event_id": consent_event_id}
 
+    def seed_verified(self):
+        semantic = self.read("semantic.json")
+        node = semantic["nodes"][2]
+        node.pop("verification_dispositions", None)
+        node.pop("verification_scope", None)
+        node.update(status="verified", verification_refs=["check-observation"])
+        self.write("semantic.json", semantic)
+        run = self.read("run.json")
+        run["checks"] = [{"id":"check-observation", "target":ref(node["id"]), "status":"pass",
+                          "method":"Synthetic comparison", "scope":"Recorded observation",
+                          "detail_ref":"check-detail.md"}]
+        (self.run / "check-detail.md").write_text("Synthetic evidence only.", encoding="utf-8")
+        self.write("run.json", run)
+
+    def test_verified_checks_require_explicit_conflict_disposition(self):
+        self.seed_verified()
+        semantic = self.read("semantic.json")
+        node = next(n for n in semantic["nodes"] if n.get("status") == "verified")
+        data = self.read("run.json")
+        passing = next(c for c in data["checks"] if c["id"] in node["verification_refs"])
+        conflict = deepcopy(passing); conflict.update(id="conflict", status="fail", scope="a paraphrase of the same scope")
+        data["checks"].append(conflict); self.write("run.json", data)
+        self.invalid("unresolved exact-target")
+        data["checks"].reverse(); self.write("run.json", data)
+        self.invalid("unresolved exact-target")
+        node["verification_dispositions"] = [{"check_id":"conflict", "disposition":"resolved",
+            "reason":"new documented review resolves the earlier failure", "detail_ref":passing["detail_ref"],
+            "resolving_check_id":passing["id"]}]
+        self.write("semantic.json", semantic)
+        self.assertTrue(self.validate()["valid"], self.validate())
+        node["verification_dispositions"][0]["resolving_check_id"]="unknown"
+        self.write("semantic.json", semantic); self.invalid("resolving_check_id")
+
+    def test_different_scope_is_explicit_not_prose_similarity(self):
+        self.seed_verified()
+        semantic = self.read("semantic.json")
+        node = next(n for n in semantic["nodes"] if n.get("status") == "verified")
+        data = self.read("run.json")
+        passing = next(c for c in data["checks"] if c["id"] in node["verification_refs"])
+        data["checks"].append({**passing, "id":"other", "status":"not_assessable", "scope":"different stated scope"})
+        self.write("run.json", data); self.invalid("unresolved exact-target")
+        node["verification_dispositions"]=[{"check_id":"other","disposition":"different_scope",
+            "reason":"outside the declared verification scope","detail_ref":passing["detail_ref"]}]
+        self.write("semantic.json", semantic); self.invalid("verification_scope")
+        node["verification_scope"]="Only the bounded observation, not general benefits"
+        self.write("semantic.json", semantic); self.assertTrue(self.validate()["valid"], self.validate())
+        node["verification_dispositions"].append(node["verification_dispositions"][0])
+        self.write("semantic.json", semantic); self.invalid("unique exact-target")
+
+    def test_conflict_on_other_exact_revision_does_not_block_verified_node(self):
+        self.seed_verified()
+        semantic=self.read("semantic.json")
+        node=next(n for n in semantic["nodes"] if n.get("status")=="verified")
+        other=deepcopy(node); other.update(revision=2,status="disputed",verification_refs=[])
+        semantic["nodes"].append(other);self.write("semantic.json",semantic)
+        data=self.read("run.json");passing=next(c for c in data["checks"] if c["id"] in node["verification_refs"])
+        data["checks"].append({**passing,"id":"other-revision","status":"fail","target":ref(node["id"],2)})
+        self.write("run.json",data);self.assertTrue(self.validate()["valid"],self.validate())
+
+    def test_unfinished_check_requires_explicit_withdrawal_and_actual_detail(self):
+        self.seed_verified()
+        data = self.read("run.json")
+        data["checks"].append({**data["checks"][0], "id":"unfinished", "status":"not_run"})
+        self.write("run.json", data)
+        self.invalid("unresolved exact-target")
+        semantic = self.read("semantic.json")
+        node = semantic["nodes"][2]
+        node["verification_dispositions"] = [{"check_id":"unfinished", "disposition":"withdrawn",
+            "reason":"Duplicate review task cancelled; actual completed check retained", "detail_ref":"withdrawal.md"}]
+        self.write("semantic.json", semantic)
+        self.invalid("withdrawal.md")
+        (self.run / "withdrawal.md").write_text("", encoding="utf-8")
+        self.invalid("nonempty supporting detail")
+        (self.run / "withdrawal.md").write_text("Synthetic withdrawal justification", encoding="utf-8")
+        self.assertTrue(self.validate()["valid"], self.validate())
+
+    def test_malformed_dispositions_and_context_are_invalid_data(self):
+        self.seed_verified()
+        for value in (None, {}, [None], [{"check_id":[]}], [{"check_id":"check-observation", "disposition":[]} ]):
+            semantic = self.read("semantic.json")
+            semantic["nodes"][2]["verification_dispositions"] = value
+            self.write("semantic.json", semantic)
+            self.assertFalse(self.validate()["valid"])
+        self.seed_verified()
+        for value in (None, [], {"version":[],"target":[]},
+                      {"version":"0.1","target":ref("a-blueprint"),"decision_id":"id","reason":"reason"}):
+            data = self.read("run.json"); data["decision_context"] = value; self.write("run.json",data)
+            self.assertFalse(self.validate()["valid"])
+
     def test_shipped_examples_are_valid_without_inventing_verification(self):
         self.assertTrue(self.validate()["valid"])
         foreign = SHARED / "assets" / "examples" / "foreign-audit"

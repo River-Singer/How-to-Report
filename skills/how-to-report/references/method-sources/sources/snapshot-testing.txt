@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://playwright.dev/docs/test-snapshots
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+Screenshot comparison detects appearance changes under a specified environment. Browser, operating system and font differences can affect output. Stable pixels do not establish correct semantics, truth or actual audience understanding.

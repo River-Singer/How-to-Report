@@ -1,9 +1,9 @@
 {
   "schema_version": "1",
-  "archive_version": "0.1.1",
+  "archive_version": "0.2.0",
   "created_at_utc": "2026-10-26T08:22:01.546036+00:00",
   "runtime_network_required": false,
-  "scope": "Every external source cited by the twelve Knowledge cards/index as of this archive version. Linked works inside those sources are not recursively archived.",
+  "scope": "Fourteen optional Knowledge cards with 23 local representations (19 acquired source texts, 4 original summaries). Linked works are not recursively archived.",
   "card_sources": {
     "bus-01-benefits-chain.md": [
       "teal-19"
@@ -48,6 +48,16 @@
     "swe-02-capability-reliability.md": [
       "sre-service-objectives",
       "sre-testing-reliability"
+    ],
+    "pm-03-schedule-views.md": [
+      "gao-schedule-summary",
+      "ibcs-scenarios-summary",
+      "gantt-task-taxonomy",
+      "w3c-use-color"
+    ],
+    "pm-04-forecast-history.md": [
+      "iapm-trend-summary",
+      "gao-schedule-summary"
     ]
   },
   "sources": [
@@ -641,6 +651,136 @@
       "publisher": "UK Government (GOV.UK)",
       "text_characters": 3278,
       "sha256": "82daa8dfb59d0c1fe02901fe4a6fd5afbc78ecd8c8f4337628bffa43f98cdad4"
+    },
+    {
+      "id": "gao-schedule-summary",
+      "title": "GAO schedule guidance (official guide; selected sections read)",
+      "publisher": "U.S. Government Accountability Office",
+      "canonical_url": "https://www.gao.gov/products/gao-16-89g",
+      "local_path": "sources/gao-schedule-summary.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.505837+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "PM-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.gao.gov/products/gao-16-89g",
+        "attribution": "U.S. Government Accountability Office",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "469755650635fb22da7bfc71f71d561e226fbdef572aed3b7c8a35fa5d91fc30"
+    },
+    {
+      "id": "ibcs-scenarios-summary",
+      "title": "IBCS scenario notation (UN 3.2 and copyright notice read)",
+      "publisher": "IBCS Association",
+      "canonical_url": "https://www.ibcs.com/standards/page/2/",
+      "local_path": "sources/ibcs-scenarios-summary.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.505860+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "PM-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.ibcs.com/standards/page/2/",
+        "attribution": "IBCS Association",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "dbaa888181029f3094655686a82121bd2f2aef3006606d4a1f7f5c9c066c340a"
+    },
+    {
+      "id": "iapm-trend-summary",
+      "title": "Milestone trend analysis (article body read)",
+      "publisher": "IAPM",
+      "canonical_url": "https://www.iapm.net/en/blog/milestone-trend-analysis/",
+      "local_path": "sources/iapm-trend-summary.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.505865+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "PM-04"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.iapm.net/en/blog/milestone-trend-analysis/",
+        "attribution": "IAPM",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "893d2f608c76b3cb6b93b0bcf1ab578a313ab4420f482392e995c73972987de7"
+    },
+    {
+      "id": "gantt-task-taxonomy",
+      "title": "A Literature-based Visualization Task Taxonomy for Gantt Charts",
+      "publisher": "Sayef Azad Sakin and Katherine E. Isaacs",
+      "canonical_url": "https://arxiv.org/abs/2408.04050",
+      "local_path": "sources/gantt-task-taxonomy.txt",
+      "fetched_at_utc": "2026-10-28T13:55:22.747866+00:00",
+      "scope": "Acquired source text with extraction/coverage stated in header and retrieval receipt; no images or layout.",
+      "representation": "source_text",
+      "card_ids": [
+        "PM-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_text",
+        "coverage": {
+          "pages": 7,
+          "scope": "All PDF pages extracted as text. Images and visual layout not reproduced; extraction may omit visual-only information."
+        },
+        "raw_sha256": "0cf42a5954a1c8c73a046598cb4a3e7ddbba2037723087cf4beaac841b702044"
+      },
+      "reuse": {
+        "license": "CC0 1.0",
+        "evidence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+        "attribution": "Sayef Azad Sakin and Katherine E. Isaacs",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "81c4f78729bd6d5c422e3344d229f67aa796a1c68703484954e64b7801159fd1"
+    },
+    {
+      "id": "w3c-use-color",
+      "title": "Understanding SC 1.4.1 Use of Color",
+      "publisher": "World Wide Web Consortium (W3C)",
+      "canonical_url": "https://www.w3.org/WAI/WCAG22/Understanding/use-of-color.html",
+      "local_path": "sources/w3c-use-color.txt",
+      "fetched_at_utc": "2026-10-28T13:55:22.747866+00:00",
+      "scope": "Acquired source text with extraction/coverage stated in header and retrieval receipt; no images or layout.",
+      "representation": "source_text",
+      "card_ids": [
+        "PM-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_text",
+        "coverage": {
+          "scope": "HTML text excluding script/style; includes navigation and footer. Images/linked pages excluded."
+        },
+        "raw_sha256": "a9bab2b8f419ee379b1ab37985d70b03bd6568952251d2f8a55036198990c9e8"
+      },
+      "reuse": {
+        "license": "W3C Document License 2023",
+        "evidence_url": "https://www.w3.org/copyright/document-license-2023/",
+        "attribution": "World Wide Web Consortium (W3C)",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "6c08565692242312939f0f107e2c2b6e52a347f7656bd15e965e57f47eb84620"
     }
   ]
 }

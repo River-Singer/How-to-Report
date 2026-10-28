@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/viewBox
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+viewBox defines the coordinate rectangle mapped to a viewport. Keeping aspect ratio does not establish that labels, arrows, markers and shadows stay visible or readable. Inspect actual rendered content and its meaningful bounds.

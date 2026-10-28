@@ -26,6 +26,7 @@ class AuditRunTests(unittest.TestCase):
         (self.package / "scripts").mkdir(parents=True)
         shutil.copyfile(SOURCE / "scripts" / "audit_run.py", self.package / "scripts" / "audit_run.py")
         shutil.copyfile(VALIDATOR, self.package / "scripts" / "validate_run.py")
+        shutil.copyfile(VALIDATOR.with_name("write_boundary.py"), self.package / "scripts" / "write_boundary.py")
         shutil.copytree(SOURCE / "assets" / "audit-run", self.package / "assets" / "audit-run")
         self.cwd = self.root / "unrelated"
         self.cwd.mkdir()
@@ -47,6 +48,16 @@ class AuditRunTests(unittest.TestCase):
 
     def read(self):
         return json.loads((self.run / "run.json").read_text(encoding="utf-8"))
+
+    def test_other_installed_skill_marker_refuses_before_creating_run(self):
+        other = self.root / "other-installed-skill"
+        other.mkdir()
+        (other / "bundle-manifest.json").write_text("{}", encoding="utf-8")
+        output = other / "new-parent" / "audit"
+        before = self.snapshot(other)
+        self.command("init", output, "--target", self.target, "--run-id", "synthetic", expected=2)
+        self.assertEqual(before, self.snapshot(other))
+        self.assertFalse(output.parent.exists())
 
     def write(self, record):
         (self.run / "run.json").write_text(json.dumps(record, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

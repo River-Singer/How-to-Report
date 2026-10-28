@@ -98,7 +98,7 @@ class PackagingTests(unittest.TestCase):
             package = self.project / "skills" / skill
             manifest = json.loads((package / packager.MANIFEST).read_text())
             self.assertEqual(manifest["skill_name"], skill)
-            self.assertEqual(manifest["package_version"], "0.4.0")
+            self.assertEqual(manifest["package_version"], "0.5.0")
             self.assertEqual(manifest["supported_contract_version"], "0.1")
             self.assertNotIn(packager.MANIFEST, manifest["files"])
             for relative, digest in manifest["files"].items():
@@ -109,8 +109,9 @@ class PackagingTests(unittest.TestCase):
 
     def test_relocated_package_executes_real_audit_init_and_check(self) -> None:
         actual_source = SCRIPT.parents[1] / "skill-src"
-        shutil.copyfile(actual_source / "shared" / "scripts" / "validate_run.py",
-                        self.shared / "scripts" / "validate_run.py")
+        # Exercise the real shared runtime closure, including new helpers.
+        shutil.copytree(actual_source / "shared" / "scripts", self.shared / "scripts",
+                        dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         audit_source = self.source / "report-audit"
         (audit_source / "scripts").mkdir()
         shutil.copyfile(actual_source / "report-audit" / "scripts" / "audit_run.py",
@@ -148,8 +149,9 @@ class PackagingTests(unittest.TestCase):
 
     def test_relocated_package_executes_real_report_init_and_inspect(self) -> None:
         actual_source = SCRIPT.parents[1] / "skill-src"
-        shutil.copyfile(actual_source / "shared" / "scripts" / "validate_run.py",
-                        self.shared / "scripts" / "validate_run.py")
+        # Exercise the real shared runtime closure, including new helpers.
+        shutil.copytree(actual_source / "shared" / "scripts", self.shared / "scripts",
+                        dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         report_source = self.source / "how-to-report"
         (report_source / "scripts").mkdir()
         shutil.copyfile(actual_source / "how-to-report" / "scripts" / "report_run.py",
@@ -226,8 +228,9 @@ class PackagingTests(unittest.TestCase):
 
     def test_relocated_package_executes_real_version_change_and_acceptance(self) -> None:
         actual_source = SCRIPT.parents[1] / "skill-src"
-        shutil.copyfile(actual_source / "shared" / "scripts" / "validate_run.py",
-                        self.shared / "scripts" / "validate_run.py")
+        # Exercise the real shared runtime closure, including new helpers.
+        shutil.copytree(actual_source / "shared" / "scripts", self.shared / "scripts",
+                        dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         report_source = self.source / "how-to-report"
         shutil.copytree(actual_source / "how-to-report" / "scripts", report_source / "scripts",
                         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
@@ -325,8 +328,9 @@ class PackagingTests(unittest.TestCase):
 
     def test_relocated_package_renders_real_offline_html(self) -> None:
         actual_source = SCRIPT.parents[1] / "skill-src"
-        shutil.copyfile(actual_source / "shared" / "scripts" / "validate_run.py",
-                        self.shared / "scripts" / "validate_run.py")
+        # Exercise the real shared runtime closure, including new helpers.
+        shutil.copytree(actual_source / "shared" / "scripts", self.shared / "scripts",
+                        dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         report_source = self.source / "how-to-report"
         shutil.copytree(actual_source / "how-to-report" / "scripts", report_source / "scripts",
                         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
@@ -605,7 +609,7 @@ class PackagingTests(unittest.TestCase):
                     self.assertEqual((output / skill).stat().st_ino, identities[skill])
                     self.assertEqual(packager.tree(output / skill)[0], packages[skill])
                     manifest = json.loads((output / skill / packager.MANIFEST).read_bytes())
-                    self.assertEqual(manifest["package_version"], "0.4.0")
+                    self.assertEqual(manifest["package_version"], "0.5.0")
                     self.assertEqual(manifest["supported_contract_version"], "0.1")
                 self.assertFalse(list(output.glob(".package-build-*")))
                 self.assertEqual(unrelated.read_text(), "leave alone")

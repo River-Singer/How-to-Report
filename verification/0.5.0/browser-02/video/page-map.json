@@ -1,0 +1,159 @@
+{
+  "page_plan_version": "0.2",
+  "plan_sha256": "e62caa4578ca9a195bc98b1edd690dd278ac97c528786382d5648633b3b9f13e",
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "scope": "declared_mapping_not_semantic_verification",
+  "elements": [
+    {
+      "element_id": "e-media",
+      "selector": "#element-e-media .media-content",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "alt": "合成蓝色色块的1.2秒短片，仅用于离线播放工程检查。",
+        "resources": [
+          {
+            "sha256": "67563303905d53060015d3df00882cb2b1b2a3c67869cd71f484c934ae0cb591",
+            "snapshot": "media/67563303905d53060015d3df00882cb2b1b2a3c67869cd71f484c934ae0cb591.webm",
+            "source_path": "synthetic-video.webm",
+            "mime": "video/webm"
+          },
+          {
+            "sha256": "9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa",
+            "snapshot": "media/9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa.png",
+            "source_path": "synthetic-video-poster.png",
+            "mime": "image/png"
+          }
+        ],
+        "annotations": []
+      },
+      "page_id": "p-media"
+    },
+    {
+      "page_id": "p-media",
+      "element_id": "e-media",
+      "selector": "#element-e-media",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "id": "e-media",
+        "type": "media",
+        "role": "primary",
+        "title": "合成素材调用示例",
+        "body": "播放合成短片，随后翻页检查暂停；打印保留静态poster与说明。",
+        "refs": [
+          {
+            "id": "synthetic-presentation",
+            "revision": 1,
+            "locator": "本示例工程输入，不是业务实绩"
+          }
+        ],
+        "limits": [],
+        "media": {
+          "kind": "video",
+          "file": {
+            "path": "synthetic-video.webm",
+            "sha256": "67563303905d53060015d3df00882cb2b1b2a3c67869cd71f484c934ae0cb591"
+          },
+          "poster": {
+            "path": "synthetic-video-poster.png",
+            "sha256": "9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa"
+          },
+          "alt": "合成蓝色色块的1.2秒短片，仅用于离线播放工程检查。"
+        }
+      }
+    },
+    {
+      "page_id": "p-media",
+      "selector": "#page-p-media",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "title": "离线视频播放工程样例",
+        "limits": [
+          "仅为浏览器录制的合成色块；不代表产品能力。"
+        ],
+        "tree": {
+          "element": "e-media"
+        }
+      },
+      "semantic": {
+        "question": "本地视频、翻页暂停和打印替代是否正常？",
+        "takeaway": "这是工程录制色块，不是产品演示。"
+      },
+      "speaker_notes": null
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "e-overview",
+      "selector": "#element-e-overview",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "id": "e-overview",
+        "type": "text",
+        "role": "primary",
+        "title": "先让关键关系可见",
+        "body": "正文交代问题与必要条件。讲稿用于讲述安排，备查页用于展开依据；不能将决定性条件藏到其中。",
+        "refs": [
+          {
+            "id": "synthetic-presentation",
+            "revision": 1,
+            "locator": "本示例工程输入，不是业务实绩"
+          }
+        ],
+        "limits": []
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "selector": "#page-p-overview",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "title": "一个主标题，让内容承担说明责任",
+        "limits": [
+          "合成工程示例；不代表用户项目状态。"
+        ],
+        "tree": {
+          "element": "e-overview"
+        }
+      },
+      "semantic": {
+        "question": "本页的内容关系是什么？",
+        "takeaway": "通过可核对内容表达关系，不升级主张。"
+      },
+      "speaker_notes": "先说明本示例是工程演示。不要把示意内容当作用户项目事实。需要展开时进入备查页，再返回当前位置。"
+    }
+  ]
+}

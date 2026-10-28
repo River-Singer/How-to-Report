@@ -1,5 +1,5 @@
 {
-  "dataset_version": "0.4.0-review-1",
+  "dataset_version": "0.5.0-review-1",
   "status": "prepared_not_run",
   "exposure": "all current cases are developer-read synthetic Dev inputs; historical holdout-candidate tags do not establish blindness",
   "catalogs": [
@@ -10,6 +10,10 @@
     {
       "path": "behavior-cases.jsonl",
       "count": 14
+    },
+    {
+      "path": "release05-cases.jsonl",
+      "count": 12
     }
   ],
   "files": {
@@ -44,9 +48,23 @@
     "ORACLES.md": "45652dbc8a71adaa4832e01a5b512ecc7b8b74744200aca2bac0b65e6f80683a",
     "origin.json": "de67fa872b6bafa85b5fb28633db9774d171166c7645e3501eaefa1ddde052ad",
     "PROTOCOL.md": "f4d7caefc51cedfce892a5e22b415db01308dc06728a7ab9f1c6ab91beb49ec6",
-    "README.md": "c2d0a71e95bd3ae093ac5edf5cadaad4dee2feea6dd2ca13427193f2ca9efcc6",
+    "README.md": "c410312d6aed586aac2af6f713f3a53e6eadf968e6947cf8062344a70816db8f",
     "RUN-TEMPLATE.md": "01fdffaca6c079ac8a93ba8307759992ac1f1ed2c90c4bce52b77d0882e016db",
     "tools/numeric_oracle.py": "62554ea0812a2505d90dc9a0a5cd4840fdc4940a3b42248f4901f786805dff51",
-    "tools/validate_cases.py": "3b76d4f5d7326703ab608b9c941750223de89d2d59cb7417950dd01e2cfc002e"
+    "tools/validate_cases.py": "3b76d4f5d7326703ab608b9c941750223de89d2d59cb7417950dd01e2cfc002e",
+    "release05-cases.jsonl": "41ef698ee0e4597b00ac045eb8b7359ba05537f4f33934011885ec1295d2e9a9",
+    "fixtures/release05/V05-ACCEPT.md": "857a8de7b97e76d07b96e7e5e5186ba996c48ad2b79f89e8a64eb066c23747ab",
+    "fixtures/release05/V05-BACKUP.md": "10167065295c24d32ab34bf564f8ead8d8bab46488ab58c043851fbcca3ab699",
+    "fixtures/release05/V05-BASE.md": "a120e0657855c6dbf1d95d684fdb372cc9efd03511ff0af2d2f21d326963c095",
+    "fixtures/release05/V05-CONTEXT.md": "7528d4ffc6aaf702610af4c195049d6fe604cc425e7542e719f6f5e5769366a8",
+    "fixtures/release05/V05-EXPERIENCE.md": "3eb301231036e84202eaa5d037fbbd10d33868e9e5ac7a12ee3b67474ba1261b",
+    "fixtures/release05/V05-GOAL.md": "f258f131becea058422bfcb505a466e8ce27297a14cc124044943413c5c06d51",
+    "fixtures/release05/V05-MEDIA.md": "50c29d6856ab36a43cb0e8603cae29e881f5f7bb48671905993134b7ada8fff5",
+    "fixtures/release05/V05-SCOPE.md": "ef63895424368fd88ef819766d2d6b116b91e8a5190c963db1d86d9b00ff0f91",
+    "fixtures/release05/V05-TIME.md": "33baf512ec203d11bd420a33c06bccb2de18752cd2c2554d4e43b4b5aa323590",
+    "fixtures/release05/V05-TITLE.md": "5d4b7cdfb4ac2ee9a34d28f685214ce0b4e93a0b2656cb2a97610e3bb446a57d",
+    "fixtures/release05/V05-VALUE.md": "d525bf6e8855d15ceea51048901da59d1ae9b5a09db2a3c6177cc6467ccab7d1",
+    "fixtures/release05/V05-VIEWS.md": "9e905e1d886df1ae8e6cd1da98cccb47a0e013c34e0f2899f884bf43d7b624e0",
+    "fixtures/release05/spacing-target.html": "5c957851261c2557d266ba86ed459bdf370ca91e2aaf49937af669a2767a7ac9"
   }
 }

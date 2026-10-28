@@ -2,16 +2,17 @@
 
 当同一 Run 持续修订、需要说明本次采用哪份材料及哪些结果仍适用时，使用本包 [版本助手](../scripts/report_versions.py)。它保存公开决定和实际文件指纹；内容分析、计算、复核及 Check 的真实执行仍由宿主完成。简单汇报不必增加图或此扩展。
 
-## 四个动作分开
+## 操作职责分开
 
 | 操作 | 保存或检查什么 | 不代表什么 |
 |---|---|---|
 | `register` | 新 Source/Artifact 的真实本地快照、明确 ID/版本、依赖及理由 | 不选择现行版本，不完成复核 |
 | `select` | 对一个已登记精确版本的明确选择及决定历史 | 不证明来源真实，不改旧图或旧检查 |
+| `set-context` | 绑定已选中、有哈希的决策上下文 Source 快照 | 不迁移旧接纳，不执行新复核 |
 | `accept` | 对已选中产物，保存已有实际检查与相关材料的接纳声明和指纹 | 不执行检查，不制造 pass，不保证语义或独立性 |
 | `inspect` | 基础结构、可选扩展、选版适用性与接纳是否仍匹配 | 不续作、不重算、不自动发布 |
 
-使用 Python3.10+，从任意当前目录调用实际安装包；支持 `python -I`。Run 须位于包外。所有写操作都要传入刚检查得到的 `run_record_sha256`；每次成功写入返回新值，下一步使用新值。不要把下列占位值当真实哈希：
+使用 Python3.10+，从任意当前目录调用实际安装包；支持 `python -I`。Run 须位于自身及其它已识别安装包之外，按 [共享写入边界](workspace-contract.md) 在创建锁或历史前预检。所有写操作都要传入刚检查得到的 `run_record_sha256`；每次成功写入返回新值，下一步使用新值。不要把下列占位值当真实哈希：
 
 ```text
 python "<本Skill目录>/scripts/report_versions.py" inspect "<Run目录>"
@@ -44,12 +45,28 @@ python "<本Skill目录>/scripts/report_versions.py" inspect "<Run目录>"
 
 `--check` 可重复。接纳与 `work_status=completed`、独立审计结论分别记录；此命令不自动把工作或事实标为完成/verified。当前目标存在任何 `fail/not_run/not_assessable` Check 时，本版的保守策略拒绝接纳。不能删除旧失败记录来绕过：解决后的新稿采用新 revision 和真实新 Check，历史保留。
 
+## 决策上下文与普通日志分开
+
+默认旧规则仍将 `notes_ref` 纳入接纳指纹。持续修订的任务可将**已确认目标、受众、范围、指标口径、关键条件及取舍**写成独立的自由文本文件，作为决策上下文，不需要增加一组业务字段。先登记真实快照并选版，再显式绑定：
+
+```text
+python "<本Skill目录>/scripts/report_versions.py" register "<Run目录>" --kind source --id decision-context --revision 1 --file "<已保存的决策上下文.md>" --reason "保存本次已确认目标与范围" --expect-run-sha256 <当前哈希>
+python "<本Skill目录>/scripts/report_versions.py" select "<Run目录>" --target decision-context@1 --reason "采用本次已确认上下文" --expect-run-sha256 <新哈希>
+python "<本Skill目录>/scripts/report_versions.py" set-context "<Run目录>" --target decision-context@1 --reason "区分决策上下文与进度记录" --expect-run-sha256 <新哈希>
+```
+
+`set-context` 仅接受已选中的 Source 精确版本、实际本地非空字节及 SHA-256；同一绑定重复操作会拒绝。它复用锁、旧记录历史及原子替换机制，不改变旧接纳、不制造 pass。此后新接纳带 `context_mode=decision_context_v1`：上下文及其依赖成为全局接纳依据，`run.md` 可记录“已完成排版/等待材料”等普通进度而不使这类接纳失效。
+
+实质目标、范围、口径或关键限定改变时，必须生成新版上下文，依次 `register/select/set-context`，保留历史。其字节、版本、绑定或所选版本变化会阻止沿用旧接纳，需要真实新复核。不能把实质变更仅写进普通日志以逃避复核，程序不会自动读懂遗漏的语义变化。
+
+未带 `context_mode` 的旧接纳仍按 `legacy_notes` 解释，即使后来已绑定上下文；不要重写它的模式/指纹。迁移到新规则必须另做真实检查、用新 Check ID 新接纳。`inspect` 的 `new_acceptance_context_mode` 表示今后采用的规则，各历史接纳分别显示自己的 `context_mode`，历史 current 标签不等于已按新范围复核。
+
 ## 读取结果，保留边界
 
 - `structure_valid` 是基础 Run 校验，`lifecycle_valid` 是可选扩展一致性；`valid` 综合二者。基础 `validate_run.py` 不检查此扩展。`report_run.py inspect` 在存在扩展时也展示生命周期结果。
 - `selections` 展示每个 ID 的最新明确决定，而非最大 revision。Artifact 的 `currentness.state` 为 `current|pending`，`reasons` 说明未选择、选择不匹配或待复核状态；其 `acceptance_status` 为 `current|stale|absent`。待复核产物可以存在于结构合法的 Run 中。
 - 传递范围只沿 `uses` 和 Task `input_refs`，不沿语义 `links`、Task 前置或结果归属。实际用到的节点/任务也需明确选版；`stale/invalidated` 证据、未完成或失败的任务输入不能用于此工具的接纳。其他证据标签仍须结合正文判断，程序不判断陈述真假。
-- 接纳绑定实际本地材料、对象声明、相关选版决定、Check 及详情，包括依赖节点明确引用的校核依据，并绑定公开范围说明 `notes_ref`。相关内容或说明变化会使旧接纳失配；无关独立分支的选版不使它失配。选版切走再切回来也不会复活旧接纳。
+- 接纳绑定实际本地材料、对象声明、相关选版决定、Check 及详情，包括依赖节点明确引用的校核依据、非 pass 冲突及实际处置详情。上下文按每条接纳的模式绑定旧 `notes_ref` 或新版决策上下文。相关依据变化会使旧接纳失配；无关独立分支的选版不使它失配。选版切走再切回来也不会复活旧接纳。
 - 同一个 Check ID 已用于接纳后，相关上下文或证据变化时不能再次借其旧 pass 接纳；须真实重查并使用新 Check。首次接纳不能证明检查发生时间；指纹采集不是历史执行凭证。
 - 仅远程定位、空/不可读证据不能取得本地接纳。遗漏依赖、错误方法和失实检查声明仍是人工/独立审计责任。合法的旧新版对照可能同时使用同 ID 多个版本；本版自动接纳要求依赖都匹配单一现行选择，因此不支持这种混合历史闭包。这是工具限制，不是稿件缺陷，仍可用普通 Run 保存并人工审查。
 

@@ -15,6 +15,7 @@ sys.dont_write_bytecode = True
 SCRIPT_DIRECTORY = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIRECTORY))
 from validate_run import CONTRACT_VERSION, unique_keys, validate_run
+from write_boundary import require_external_write
 
 PACKAGE = SCRIPT_DIRECTORY.parent
 TEMPLATES = PACKAGE / "assets" / "report-run"
@@ -128,7 +129,7 @@ def initialize(directory, run_id, mode, sources=(), target=None):
         raise ValueError("revise requires --target")
     if mode != "revise" and target is not None:
         raise ValueError("--target is only valid for revise")
-    require_local(directory)
+    directory = require_external_write(directory, (PACKAGE,))
     if os.path.lexists(directory):
         raise ValueError("Run destination already exists; inspect it or choose a new directory")
     directory = resolve_path(directory)

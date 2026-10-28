@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://agentskills.io/specification
+
+A skill bundles a concise entrypoint with optional scripts, references and assets. Load detailed resources when the task needs them. Develop guidance from real domain material and inspect actual execution, including false positives and wasted steps. Format validation checks packaging rules, not the skill's substantive quality. Sources: https://agentskills.io/specification and https://github.com/agentskills/agentskills/blob/main/docs/skill-creation/best-practices.mdx . Original summary of the cited format/progressive-disclosure/practices sections; no code copied.

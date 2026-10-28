@@ -32,7 +32,8 @@ class EvaluationTests(unittest.TestCase):
                   for p in EVALUATION.rglob("*") if p.is_file()}
         cases, issues = CHECK.validate(EVALUATION)
         self.assertEqual(issues, [])
-        self.assertEqual(len(cases), 39)
+        self.assertEqual(len(cases), 39 + 12)
+        self.assertEqual(sum(case["id"].startswith("V05-") for case in cases), 12)
         for tool in ("validate_cases.py", "numeric_oracle.py"):
             result = subprocess.run([sys.executable, "-B", "-I", str(EVALUATION / "tools" / tool)],
                                     cwd=EVALUATION.parent, capture_output=True, text=True, encoding="utf-8")

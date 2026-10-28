@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://designsystem.digital.gov/design-tokens/
+
+A constrained set of named visual choices can keep typography, spacing and color coherent. Tokens should express a chosen design system and remain compatible with real content. They are not evidence for a universal minimum font or a requirement to make every page identical. Source: U.S. Web Design System, https://designsystem.digital.gov/design-tokens/ . Original summary. The site's public-domain software-code notice was read; it was not assumed to license all article prose.

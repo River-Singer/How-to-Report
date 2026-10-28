@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html
+
+The study investigates correction without external feedback and finds that models do not reliably improve reasoning merely by being asked to reconsider; some settings deteriorate. It does not show that every kind of checking is useless. Separate arithmetic execution, source comparison, independent review and human feedback from repeated model self-assurance. Source: *Large Language Models Cannot Self-Correct Reasoning Yet*, ICLR 2024, https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html . Abstract-based original summary; full experiment details not reviewed here.

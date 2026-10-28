@@ -54,6 +54,13 @@ class OfflineSourcesTest(unittest.TestCase):
         (self.root / "sources/example.txt").write_text("tampered", encoding="utf-8")
         self.assertTrue(any("hash mismatch" in error for error in vendor.check(self.root)))
 
+    def test_core_method_archive_checks_offline_and_labels_summaries(self):
+        with patch.object(socket, "socket", side_effect=AssertionError("network forbidden")):
+            self.assertEqual(vendor.check(vendor.METHOD_ROOT), [])
+        data = json.loads((vendor.METHOD_ROOT / "sources/manifest.json").read_text(encoding="utf-8"))
+        self.assertTrue(data["sources"])
+        self.assertTrue(all(s["representation"] == "original_summary" for s in data["sources"]))
+
     def test_missing_and_unregistered_text_are_detected(self):
         (self.root / "sources/example.txt").unlink()
         (self.root / "sources/unregistered.txt").write_text("unexpected", encoding="utf-8")

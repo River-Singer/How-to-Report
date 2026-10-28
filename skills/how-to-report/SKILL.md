@@ -33,6 +33,10 @@ description: 从真实材料与沟通情境发现汇报目标、探索和检验�
 | 明确采用哪一版、材料变化后复核并记录结果接纳 | [版本选择与结果接纳](references/version-lifecycle.md) |
 | 保存 Run、追溯关键内容、处理版本、许可或画像 | [工作区契约](references/workspace-contract.md) |
 | 要声明实际计算、渲染、持久保存或独立审计能力 | [宿主能力边界](references/host-capabilities.md) |
+| 概念、前提、条件或推理桥梁出现实质缺口 | [按需思维方法](references/reasoning-methods.md)，只调用适用卡 |
+| 会议质疑、短长版本或主线与Backup组织 | [会议表达](references/meeting-expression.md) |
+| 参考设计提炼、代表页粗排或整稿视觉编辑 | [视觉编辑](references/visual-editing.md) |
+| 用户明确要求记录、查看、检索或修正任务经验 | [显式私有经验](references/report-experience.md) |
 | 专业判断可能需要领域知识，先识别适用资源与读取范围 | [知识目录元信息](knowledge/index.md)，正文另按许可读取 |
 
 上述 references 是按需核心方法，knowledge 中的卡片是可选领域知识。目录元信息用于选择资源；不能在许可前批量读取卡片正文。按用户已确认的资源、用途、数据流向与 Run 范围读取；拒绝、未回应或撤销时停止相关读取，继续使用已授权材料。既有同范围许可不重复申请。

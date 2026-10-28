@@ -1,0 +1,26 @@
+{
+  "renderer_contract_version": "0.2",
+  "plan_sha256": "f7df500eead8c18fd3c11abb1a9984598266caf8876bd024c6ae656ceb04f13b",
+  "files": {
+    "index.html": "9b8c0282656a555e4e65b5527a6d7251950ec61ded4a549343b80a5972af437e",
+    "plan.json": "f7df500eead8c18fd3c11abb1a9984598266caf8876bd024c6ae656ceb04f13b",
+    "page-map.json": "9574d4c15417bac524b4924f6cc0ab0a606cf59b65af5d2e9cd59ee2df9f277d"
+  },
+  "page_count": 1,
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "browser_validation": "not_run",
+  "semantic_validation": "not_run",
+  "run_mutation": "not_performed",
+  "implementation_sha256": {
+    "report_html.py": "9240880a02969aea3e536cc70d2061bbfb8c5e830b0b2be5e042bb470f1f45a6",
+    "presentation_components.py": "7f8f45177cc73bc1a51d0a83e75694ccbacd2719c8dfca23aa774524f9f672a6",
+    "deck.css": "143b36d5659fd87e078063ebdb77f223fc0f899677f0e84579dd020a168deebd",
+    "deck.js": "acf14390705dacd945dfcf14208410e3dd54018e3f4374c29070097cb1a1ec0c",
+    "schedule_core.py": "b7a2f19d86c1c36bab6a30756cc90ee1f3d6f44202f9170ea8f84dec65eb11e8",
+    "schedule_render.py": "3babd1cd61969551ebb8cbcf8931d3fec8a15723e764207b1b290e7fd980f4b1",
+    "schedule.css": "3616f6e6a443b77226ebc2c3a2758064480ffe70ecac0c80ec8dda2b0a5bff10"
+  }
+}

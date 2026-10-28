@@ -1,0 +1,509 @@
+{
+  "schema_version": "1",
+  "archive_version": "0.1",
+  "runtime_network_required": false,
+  "scope": "20 concise original method-source summaries; no full-source acquisition claim. Core methods are self-contained.",
+  "card_sources": {},
+  "sources": [
+    {
+      "id": "ontology-scope",
+      "title": "Scoped concepts and ontology (Stanford sections 1–3 read)",
+      "publisher": "Natalya F. Noy and Deborah L. McGuinness",
+      "canonical_url": "https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html",
+      "local_path": "sources/ontology-scope.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515407+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://protege.stanford.edu/publications/ontology_development/ontology101-noy-mcguinness.html",
+        "attribution": "Natalya F. Noy and Deborah L. McGuinness",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "c05787ff44fb314230d4acb8e14bc5ab4ccb746b7ab3b8277eaaa86339306f7f"
+    },
+    {
+      "id": "ontology-vocabulary",
+      "title": "Shared vocabulary (author's abstract read)",
+      "publisher": "Thomas R. Gruber",
+      "canonical_url": "https://tomgruber.org/writing/ontolingua-kaj-1993/",
+      "local_path": "sources/ontology-vocabulary.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515420+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://tomgruber.org/writing/ontolingua-kaj-1993/",
+        "attribution": "Thomas R. Gruber",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "fdd7f6543a4918131ff497f6e2348077282ae94c06228f6c0780a055b5be1ae6"
+    },
+    {
+      "id": "critical-thinking",
+      "title": "Critical thinking (Facione article's definition/core-skills sections read)",
+      "publisher": "Peter A. Facione",
+      "canonical_url": "https://insightassessment.com/iaresource/critical-thinking-what-it-is-and-why-it-counts/",
+      "local_path": "sources/critical-thinking.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515423+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://insightassessment.com/iaresource/critical-thinking-what-it-is-and-why-it-counts/",
+        "attribution": "Peter A. Facione",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "4725a9ec7852c7fb49ab8a0a735d8bf9f578293160608b7513f5a71cfa0ec33f"
+    },
+    {
+      "id": "toulmin",
+      "title": "Claim–evidence bridge (Purdue method section read)",
+      "publisher": "Purdue OWL",
+      "canonical_url": "https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html",
+      "local_path": "sources/toulmin.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515426+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://owl.purdue.edu/owl/general_writing/academic_writing/historical_perspectives_on_argumentation/toulmin_argument.html",
+        "attribution": "Purdue OWL",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "d6d36731d0a42e749b49447fc48f382b1ec592e5f87de72b7346d5a62ae1eb7b"
+    },
+    {
+      "id": "critical-questions",
+      "title": "Critical questions (Springer abstract/introduction and license read)",
+      "publisher": "Shiyang Yu and Frank Zenker",
+      "canonical_url": "https://link.springer.com/article/10.1007/s10503-020-09512-4",
+      "local_path": "sources/critical-questions.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515428+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://link.springer.com/article/10.1007/s10503-020-09512-4",
+        "attribution": "Shiyang Yu and Frank Zenker",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "4b1406309bfe6dc4e38736f8f146d26d94b96fb21457f32ba669ef411dfa3953"
+    },
+    {
+      "id": "step-back",
+      "title": "Abstraction then return (ICLR official abstract read)",
+      "publisher": "ICLR 2024 authors",
+      "canonical_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/592da1445a51e54a3987958b5831948f-Abstract-Conference.html",
+      "local_path": "sources/step-back.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515430+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/592da1445a51e54a3987958b5831948f-Abstract-Conference.html",
+        "attribution": "ICLR 2024 authors",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "e924113b0ff9c9a36f7b3a0d5a8f7615c40621d3e27143fe281de99e7660fbd5"
+    },
+    {
+      "id": "self-correction",
+      "title": "Intrinsic self-correction boundary (ICLR official abstract read)",
+      "publisher": "ICLR 2024 authors",
+      "canonical_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html",
+      "local_path": "sources/self-correction.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515432+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://proceedings.iclr.cc/paper_files/paper/2024/hash/8b4add8b0aa8749d80a34ca5d941c355-Abstract-Conference.html",
+        "attribution": "ICLR 2024 authors",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "2361f32064be1296a12cf6d81e0add7b14b57112c7dfa39c57afc0859d6b540d"
+    },
+    {
+      "id": "conditions-background",
+      "title": "Conditions and interacting goals (historical background, not empirical validation)",
+      "publisher": "Mao Zedong; university reproduction",
+      "canonical_url": "https://www.htu.edu.cn/xsd/2021/0415/c14329a194041/page.htm",
+      "local_path": "sources/conditions-background.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515434+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.htu.edu.cn/xsd/2021/0415/c14329a194041/page.htm",
+        "attribution": "Mao Zedong; university reproduction",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "303a2e892942fda3d9ef786242c19a6f48ff9fe0bfc12c835348c5fe4338cb23"
+    },
+    {
+      "id": "design-tokens",
+      "title": "Design tokens (USWDS introductory documentation read)",
+      "publisher": "U.S. Web Design System",
+      "canonical_url": "https://designsystem.digital.gov/design-tokens/",
+      "local_path": "sources/design-tokens.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515436+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://designsystem.digital.gov/design-tokens/",
+        "attribution": "U.S. Web Design System",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "b25ad9f541cfd17ce09558f3d5ff268bb6d9696442f69818c528f7d8385efcef"
+    },
+    {
+      "id": "design-direction",
+      "title": "Concrete visual direction (vendor design article read)",
+      "publisher": "Anthropic / Claude",
+      "canonical_url": "https://claude.com/resources/articles/improving-frontend-design-through-skills",
+      "local_path": "sources/design-direction.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515439+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://claude.com/resources/articles/improving-frontend-design-through-skills",
+        "attribution": "Anthropic / Claude",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "3b94e57806e9c58284c15468ac2e4804e520a386fc6cef7ccd168f7eb77170ed"
+    },
+    {
+      "id": "evaluation-evidence",
+      "title": "Evaluation evidence (vendor evaluation article read)",
+      "publisher": "Anthropic",
+      "canonical_url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+      "local_path": "sources/evaluation-evidence.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515441+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.anthropic.com/research/demystifying-evals-for-ai-agents",
+        "attribution": "Anthropic",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "b68554e4d0a870cb23a213e8ef8dc7f173d440786feff5d2cf8af0ed47ff5835"
+    },
+    {
+      "id": "skill-practices",
+      "title": "Skill packaging and practical refinement (official format and practices read)",
+      "publisher": "Agent Skills maintainers",
+      "canonical_url": "https://agentskills.io/specification",
+      "local_path": "sources/skill-practices.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515443+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://agentskills.io/specification",
+        "attribution": "Agent Skills maintainers",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "9d4e80407138ec6ede70c7cdc984fdb2677db794c39648147929a50c38c2547e"
+    },
+    {
+      "id": "mit-story",
+      "title": "mit-story",
+      "publisher": "MIT Communication Lab",
+      "canonical_url": "https://mitcommlab.mit.edu/nse/commkit/structuring-a-slide-presentation/",
+      "local_path": "sources/mit-story.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515445+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://mitcommlab.mit.edu/nse/commkit/structuring-a-slide-presentation/",
+        "attribution": "MIT Communication Lab",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "7bbb99d820175b97686bc04e538cee9ed5705bc0e149094eb70ea506bcdcb433"
+    },
+    {
+      "id": "mit-slides",
+      "title": "mit-slides",
+      "publisher": "MIT Communication Lab",
+      "canonical_url": "https://mitcommlab.mit.edu/eecs/commkit/slideshow/",
+      "local_path": "sources/mit-slides.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515447+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://mitcommlab.mit.edu/eecs/commkit/slideshow/",
+        "attribution": "MIT Communication Lab",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "5055e5e6deb75032b606acaded291164d262efe57618bf5f5763668f46f7eb93"
+    },
+    {
+      "id": "chart-checklist",
+      "title": "chart-checklist",
+      "publisher": "UK Government Analysis Function",
+      "canonical_url": "https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/",
+      "local_path": "sources/chart-checklist.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515449+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/",
+        "attribution": "UK Government Analysis Function",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "0a3ba4b8d123dc64dbd6899ca6fdb99dc60d1bf2351e0a81b594bee51213dba3"
+    },
+    {
+      "id": "chart-choice",
+      "title": "chart-choice",
+      "publisher": "UK Government Analysis Function",
+      "canonical_url": "https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/data-visualisation-e-learning-module-2-choosing-the-right-data-visualisation/",
+      "local_path": "sources/chart-choice.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515451+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/data-visualisation-e-learning-module-2-choosing-the-right-data-visualisation/",
+        "attribution": "UK Government Analysis Function",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "f91a98f8ea4f5d5bc5dfa6c3547e257856670d463b7aa50c3e3ddde479b4287a"
+    },
+    {
+      "id": "echarts-container",
+      "title": "echarts-container",
+      "publisher": "Apache ECharts",
+      "canonical_url": "https://echarts.apache.org/handbook/en/concepts/chart-size/",
+      "local_path": "sources/echarts-container.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515453+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://echarts.apache.org/handbook/en/concepts/chart-size/",
+        "attribution": "Apache ECharts",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "d532e7f3ec79b62099220a3755dc0e36bc2f402b4ca0e7b4206b5306f5d23519"
+    },
+    {
+      "id": "svg-viewport",
+      "title": "svg-viewport",
+      "publisher": "MDN contributors",
+      "canonical_url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/viewBox",
+      "local_path": "sources/svg-viewport.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515455+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://developer.mozilla.org/en-US/docs/Web/SVG/Reference/Attribute/viewBox",
+        "attribution": "MDN contributors",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "5861530e0f22fe490ead4e00e16ae7f3ca78eda6d66d65906e3b187cccfbbdff"
+    },
+    {
+      "id": "complex-images",
+      "title": "complex-images",
+      "publisher": "World Wide Web Consortium (W3C)",
+      "canonical_url": "https://www.w3.org/WAI/tutorials/images/complex/",
+      "local_path": "sources/complex-images.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515457+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.w3.org/WAI/tutorials/images/complex/",
+        "attribution": "World Wide Web Consortium (W3C)",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "a6f76f0a6c5b9c17a2c181faf5a4d233779f07124ba1388ad480c325abdbcf2a"
+    },
+    {
+      "id": "snapshot-testing",
+      "title": "snapshot-testing",
+      "publisher": "Playwright contributors",
+      "canonical_url": "https://playwright.dev/docs/test-snapshots",
+      "local_path": "sources/snapshot-testing.txt",
+      "fetched_at_utc": "2026-10-28T14:32:22.515459+00:00",
+      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-VISUAL"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "See local text header; no recursive linked publication acquisition.",
+        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://playwright.dev/docs/test-snapshots",
+        "attribution": "Playwright contributors",
+        "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
+      },
+      "sha256": "8c50a908b18791c590e750e3b8f2e151c0f14aeb27448bedb7a1278d4f255ba1"
+    }
+  ]
+}

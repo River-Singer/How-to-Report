@@ -34,9 +34,9 @@ class ReportHTMLTests(unittest.TestCase):
         self.package = self.root / "standalone"
         scripts = self.package / "scripts"
         scripts.mkdir(parents=True)
-        for name in ("report_html.py", "report_run.py"):
-            shutil.copyfile(SOURCE / "scripts" / name, scripts / name)
-        shutil.copyfile(PROJECT / "skill-src/shared/scripts/validate_run.py", scripts / "validate_run.py")
+        for source in (SOURCE / "scripts", PROJECT / "skill-src/shared/scripts"):
+            for script in source.glob("*.py"):
+                shutil.copyfile(script, scripts / script.name)
         shutil.copytree(SOURCE / "assets/report-html", self.package / "assets/report-html")
         self.plan = json.loads((self.package / "assets/report-html/sample-plan.json").read_text(encoding="utf-8"))
         self.composed = deepcopy(self.plan)

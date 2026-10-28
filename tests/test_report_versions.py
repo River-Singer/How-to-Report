@@ -24,10 +24,11 @@ class VersionLifecycleTests(unittest.TestCase):
         shutil.copytree(SOURCE / "scripts", self.package / "scripts",
                         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         shutil.copyfile(PROJECT / "skill-src/shared/scripts/validate_run.py", self.package / "scripts/validate_run.py")
+        shutil.copyfile(PROJECT / "skill-src/shared/scripts/write_boundary.py", self.package / "scripts/write_boundary.py")
         shutil.copytree(SOURCE / "assets/report-run", self.package / "assets/report-run")
-        self.run = self.root / "Run #1 50% 版本"
+        self.run = self.root / "Run #1 50% 鐗堟湰"
         self.run.mkdir()
-        self.file = self.root / "source #1 80% 数据.txt"
+        self.file = self.root / "source #1 80% 鏁版嵁.txt"
         self.file.write_text("synthetic source bytes", encoding="utf-8")
         (self.run / "run.md").write_text("Synthetic scope: demonstrate mechanics, no factual claim.", encoding="utf-8")
         self.record = {"contract_version": "0.1", "run_id": "synthetic", "mode": "create", "work_status": "in_progress",
@@ -35,9 +36,10 @@ class VersionLifecycleTests(unittest.TestCase):
         self.write(self.record)
         spec = importlib.util.spec_from_file_location("versions_under_test", self.package / "scripts/report_versions.py")
         self.helper = importlib.util.module_from_spec(spec)
-        modules = {k: sys.modules.pop(k, None) for k in ("report_run", "validate_run")}
+        modules = {k: sys.modules.pop(k, None) for k in ("report_run", "validate_run", "write_boundary")}
         before, bytecode = sys.path[:], sys.dont_write_bytecode
         try:
+            sys.dont_write_bytecode = True
             spec.loader.exec_module(self.helper)
         finally:
             sys.path[:], sys.dont_write_bytecode = before, bytecode
@@ -407,6 +409,95 @@ class VersionLifecycleTests(unittest.TestCase):
         self.check(identity="unrelated",check_id="unrelated-check")
         (self.run/"unrelated-check.md").write_text("Changed unrelated review",encoding="utf-8")
         self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"],"current")
+
+    def test_conflict_disposition_details_are_bound_to_new_acceptance(self):
+        self.verified_fixture()
+        self.check(identity="claim", check_id="conflict", status="fail")
+        path = self.run / "semantic.json"
+        semantic = json.loads(path.read_text(encoding="utf-8"))
+        semantic["nodes"][0]["verification_dispositions"] = [{"check_id":"conflict", "disposition":"resolved",
+            "reason":"Synthetic reconsideration", "detail_ref":"resolution.md", "resolving_check_id":"claim-check"}]
+        (self.run / "resolution.md").write_text("Synthetic resolution review", encoding="utf-8")
+        path.write_text(json.dumps(semantic), encoding="utf-8")
+        self.check(check_id="new-check")
+        self.accept(acceptance_id="resolved-acceptance", check_ids=["new-check"])
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "current")
+        (self.run / "resolution.md").write_text("Changed resolution scope", encoding="utf-8")
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "stale")
+
+    def test_nested_managed_package_is_refused_before_lock_or_snapshot(self):
+        for relative in ("versions", "versions/files", "versions/history"):
+            for marker in ("SKILL.md", "bundle-manifest.json"):
+                with self.subTest(relative=relative, marker=marker):
+                    protected = self.run / relative
+                    protected.mkdir(parents=True, exist_ok=True)
+                    marker_path = protected / marker
+                    marker_path.write_bytes(b"recognized unrelated Skill")
+                    before = {p.relative_to(self.run): (p.read_bytes(), p.stat().st_mtime_ns)
+                              for p in self.run.rglob("*") if p.is_file()}
+                    with self.assertRaisesRegex(ValueError, "installed Skill"):
+                        self.register("s")
+                    self.assertFalse((self.run / self.helper.LOCK).exists())
+                    self.assertEqual(before, {p.relative_to(self.run): (p.read_bytes(), p.stat().st_mtime_ns)
+                                             for p in self.run.rglob("*") if p.is_file()})
+                    marker_path.unlink()
+
+    def test_cross_package_mutation_refuses_before_lock_or_history(self):
+        (self.root / "SKILL.md").write_text("another installed package", encoding="utf-8")
+        before = {str(p.relative_to(self.run)): p.read_bytes() for p in self.run.rglob("*") if p.is_file()}
+        with self.assertRaisesRegex(ValueError, "outside.*Skill"):
+            self.register("s")
+        self.assertEqual(before, {str(p.relative_to(self.run)): p.read_bytes() for p in self.run.rglob("*") if p.is_file()})
+
+    def test_decision_context_progress_log_and_scope_revision(self):
+        self.register("context")
+        self.choose("context")
+        self.mutate("set-context", target=("context", 1))
+        self.register("a", kind="artifact")
+        self.choose("a")
+        self.check()
+        self.accept()
+        self.assertEqual(self.read()["version_state"]["acceptances"][0]["context_mode"], "decision_context_v1")
+        (self.run / "run.md").write_text("Progress only: render began", encoding="utf-8")
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "current")
+        self.file.write_text("Changed communication objective", encoding="utf-8")
+        self.register("context", 2)
+        self.choose("context", 2)
+        self.mutate("set-context", target=("context", 2))
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "stale")
+        with self.assertRaisesRegex(ValueError, "fresh actual Check"):
+            self.accept(acceptance_id="again")
+
+    def test_legacy_acceptance_keeps_legacy_notes_rule_after_context_binding(self):
+        self.accepted()
+        self.register("context")
+        self.choose("context")
+        self.mutate("set-context", target=("context", 1))
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "current")
+        (self.run / "run.md").write_text("Legacy notes still bound", encoding="utf-8")
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "stale")
+
+    def test_context_requires_selected_hashed_source_and_no_noop(self):
+        self.register("context")
+        with self.assertRaisesRegex(ValueError, "select"):
+            self.mutate("set-context", target=("context", 1))
+        self.choose("context")
+        self.mutate("set-context", target=("context", 1))
+        with self.assertRaisesRegex(ValueError, "already bound"):
+            self.mutate("set-context", target=("context", 1))
+        self.register("a", kind="artifact")
+        with self.assertRaisesRegex(ValueError, "Source"):
+            self.mutate("set-context", target=("a", 1))
+
+    def test_context_cli_and_missing_bound_context_invalidates_new_acceptance(self):
+        self.register("context"); self.choose("context")
+        process = subprocess.run([sys.executable, "-I", str(self.package / "scripts/report_versions.py"),
+            "set-context", str(self.run), "--target", "context@1", "--reason", "explicit decision scope",
+            "--expect-run-sha256", self.digest()], capture_output=True, text=True, encoding="utf-8")
+        self.assertEqual(process.returncode, 0, process.stderr + process.stdout)
+        self.register("a", kind="artifact"); self.choose("a"); self.check(); self.accept()
+        data = self.read(); data.pop("decision_context"); self.write(data)
+        self.assertEqual(self.helper.inspect(self.run)["artifacts"][0]["acceptance_status"], "stale")
 
     def test_standalone_isolated_cli_and_report_inspect_integration(self):
         self.accepted()

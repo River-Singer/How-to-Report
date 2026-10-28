@@ -12,6 +12,8 @@ python "<本Skill目录>/scripts/audit_run.py" init "<新审计目录>" --target
 
 `init` 只接受现有本地报告和未存在的输出目录，输出目录的父目录须已存在，不覆盖旧 Run。它从随包模板建立 Run 0.1，记录目标文件的实际路径和 SHA-256；初始 `work_status=in_progress`、内容检查 `not_run`，不声明语义阅读、独立性或审计通过。`--target-id` 默认 `audit-target`，`--target-revision` 默认 `1`，表示本 Run 的登记版本；已知对应版本时显式传入，不从文件名推断业务版本。外部版本说明写入 `version_note`。
 
+输出路径在创建前按 [共享写入边界](workspace-contract.md) 预检：自身及祖先带安装标记的其它 Skill 包、链接/reparse、UNC/设备路径均拒绝；目标报告也不接受 UNC/设备路径。只检查目标祖先和已知安装根，不全盘扫描；原报告始终只读。
+
 按实际审查填写报告和来源，保持 `sources`、`artifacts`、`checks` 为数组。每项检查使用已登记对象的精确 `target` 和受支持的 `status`；详情指向本 Run 内实际文件。尚未执行用 `not_run`，无法评估用 `not_assessable`；只有实际完成且有方法、范围及支持详情时才用 `pass`。上下文继承、读取范围与复算方式由实际工作记录，工具不替你完成这些检查。计算原始输出与整理分析按 [数字与计算证据](numeric-evidence.md) 分开标识，不将整理后的表当作工具原样输出。
 
 完成记录后，校验**当前审计目录**：

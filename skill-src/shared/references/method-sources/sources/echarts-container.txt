@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://echarts.apache.org/handbook/en/concepts/chart-size/
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+An initialized chart needs valid container dimensions; container changes require an appropriate resize response. This principle motivates actual entry/resize checks, but ECharts is not a bundled runtime in this product.

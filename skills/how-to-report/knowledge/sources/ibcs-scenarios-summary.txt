@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://www.ibcs.com/standards/page/2/
+
+Different scenarios have different epistemic status: actual observations, previous periods, plans and forecasts should be visually distinguishable and named consistently. Adopt explicit labels and redundant line/fill encodings appropriate to the local deck. Do not let an attractive forecast bar look like a recorded completion. The accessed page contains mixed edition labels; this release does not claim IBCS/ISO compliance. Publisher: IBCS Association. Source: https://www.ibcs.com/standards/page/2/ . Standards notice says CC BY-SA 4.0, https://creativecommons.org/licenses/by-sa/4.0/ ; comments are separate user contributions and were not copied. This entry is an original summary of the selected scenario section, not the whole standard.

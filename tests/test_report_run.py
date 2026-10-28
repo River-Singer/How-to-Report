@@ -27,6 +27,7 @@ class ReportRunTests(unittest.TestCase):
         (self.package / "scripts").mkdir(parents=True)
         shutil.copyfile(SOURCE / "scripts" / "report_run.py", self.package / "scripts" / "report_run.py")
         shutil.copyfile(VALIDATOR, self.package / "scripts" / "validate_run.py")
+        shutil.copyfile(VALIDATOR.with_name("write_boundary.py"), self.package / "scripts" / "write_boundary.py")
         shutil.copytree(SOURCE / "assets" / "report-run", self.package / "assets" / "report-run")
         self.cwd = self.root / "unrelated"
         self.cwd.mkdir()
@@ -93,6 +94,16 @@ class ReportRunTests(unittest.TestCase):
                 else:
                     self.assertEqual(record["sources"], [])
                     self.assertEqual(set(path.name for path in self.run.iterdir()), {"run.json", "run.md"})
+
+    def test_other_installed_skill_marker_refuses_before_creating_run(self):
+        other = self.root / "other-installed-skill"
+        other.mkdir()
+        (other / "SKILL.md").write_text("Synthetic package marker", encoding="utf-8")
+        self.run = other / "new-parent" / "run"
+        before = self.snapshot(other)
+        self.initialize(expected=2)
+        self.assertEqual(before, self.snapshot(other))
+        self.assertFalse(self.run.parent.exists())
 
     def test_required_target_and_forbidden_other_mode_targets_preflight(self):
         self.initialize(mode="revise", expected=2)

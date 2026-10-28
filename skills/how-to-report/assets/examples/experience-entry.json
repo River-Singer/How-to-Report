@@ -1,0 +1,15 @@
+{
+  "id": "synthetic-delay-case",
+  "kind": "task_case",
+  "status": "active",
+  "context": "合成格式示例：资源协调会议，不代表真实用户反馈。",
+  "question": "怎样让需协调事项可定位？",
+  "action": "将请求与前置条件放在同页，补充按问题进入的备查入口。",
+  "observations": [{"status": "not_observed", "text": "尚无真实听众观察或效果记录。", "source_refs": []}],
+  "mechanism_hypothesis": "可能减少寻找条件的负担，未经验证。",
+  "applicability": "议程确需资源决策且请求与条件有依据。",
+  "exclusions": "只要求事实复盘、无决策权限或资料不足时不能照搬。",
+  "tags": ["delay", "coordination"],
+  "source_refs": [{"id": "synthetic-input", "revision": 1, "locator": "本文件合成格式示例"}],
+  "confirmation_ref": "合成声明；不构成实际用户授权，使用时须替换为真实确认定位。"
+}

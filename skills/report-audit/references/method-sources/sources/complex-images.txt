@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://www.w3.org/WAI/tutorials/images/complex/
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+Complex graphics need text that conveys their important information. A structured text alternative helps access and independent checking, but an available alternative does not excuse a misleading visible graphic.

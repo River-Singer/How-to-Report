@@ -16,6 +16,7 @@ sys.dont_write_bytecode = True
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from report_run import PACKAGE, local_path, resolve_path, require_local
 from report_versions import sha, encoded, no_links, key, text
+from write_boundary import require_external_write
 from validate_run import unique_keys
 
 OPERATIONS = {
@@ -156,9 +157,7 @@ def run(spec_path, directory):
               "source": {"id": spec["source"]["id"], "revision": spec["source"]["revision"], "sha256": sha(data)},
               "context": spec["context"], "column_units": spec["column_units"],
               "decimal_places": spec["decimal_places"], "rounding": spec["rounding"], **compute(rows, spec)}
-    require_local(directory)
-    no_links(directory)
-    directory = resolve_path(directory)
+    directory = require_external_write(directory, (PACKAGE,))
     if directory.is_relative_to(PACKAGE) or os.path.lexists(directory) or not directory.parent.is_dir():
         raise ValueError("output must be a new external directory with an existing parent")
     if spec_path.read_bytes() != raw or source_path.read_bytes() != data:

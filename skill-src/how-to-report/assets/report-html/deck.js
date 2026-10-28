@@ -15,10 +15,54 @@
   let active = 0;
   let reading = false;
   let frame = 0;
+  const directory = document.getElementById("contents-dialog");
+  const notesPanel = document.getElementById("notes-panel");
+  const notesToggle = document.getElementById("notes-toggle");
+  const more = document.getElementById("more-menu");
+  const moreToggle = document.getElementById("more-toggle");
+  const returnButton = document.getElementById("backup-return");
+  const route = DECK_ROUTE.map(id => slides.findIndex(slide => slide.dataset.pageId === id));
+  const history = [];
+  let notesOpen = false;
+  function routeStep(direction) {
+    const position = route.indexOf(active);
+    if (position < 0) return;
+    const target = position + direction;
+    if (target >= 0 && target < route.length) goTo(route[target]);
+  }
+  function setNotes(value) {
+    notesOpen = value && Boolean(notesToggle);
+    notesPanel.hidden = !notesOpen;
+    notesToggle?.setAttribute("aria-expanded", String(notesOpen));
+    document.body.classList.toggle("notes-open", notesOpen);
+    fit(); updateWarning();
+  }
+  function setMore(value) {
+    more.hidden = !value;
+    moreToggle.setAttribute("aria-expanded", String(value));
+  }
+  function jump(id, backup = false) {
+    const index = slides.findIndex(slide => slide.dataset.pageId === id);
+    if (index < 0) return false;
+    if (backup) history.push(active); else history.length = 0;
+    goTo(index); return true;
+  }
+  function returnFromBackup() {
+    goTo(history.length ? history.pop() : route[0]);
+  }
+  async function fullscreen() {
+    const status = document.getElementById("control-status");
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else if (document.documentElement.requestFullscreen) await document.documentElement.requestFullscreen();
+      else throw new Error("unavailable");
+      status.textContent = "";
+    } catch (_) { status.textContent = document.documentElement.lang === "zh-CN" ? "当前浏览器无法进入全屏。" : "Fullscreen is unavailable in this browser."; }
+  }
 
   function fit() {
     if (reading) return;
-    const scale = Math.max(0.01, Math.min((innerWidth - 24) / WIDTH, (innerHeight - 116) / HEIGHT));
+    const scale = Math.max(0.01, Math.min((innerWidth - (notesOpen && innerWidth > 850 ? 386 : 76)) / WIDTH, (innerHeight - 132) / HEIGHT));
     deck.style.transform = "scale(" + scale + ")";
     shell.style.width = WIDTH * scale + "px";
     shell.style.height = HEIGHT * scale + "px";
@@ -50,6 +94,9 @@
       const content = slide.querySelector(".page-content").getBoundingClientRect();
       const footer = slide.querySelector(".page-footer").getBoundingClientRect();
       for (const leaf of slide.querySelectorAll(".page-content h2, .page-content p, .page-content small, .page-content .value, .page-content caption, .page-content th, .page-content td, .chart-label, .chart-value, .hierarchy-levels li")) {
+        // Empty optional limits have display:none; they have no rendered box.
+        // Continue measuring actual visible text, including overfull content.
+        if (!leaf.getClientRects().length) continue;
         const r = leaf.getBoundingClientRect();
         if (r.bottom > footer.top + 1 || r.top < content.top - 1) add("text_outside_content", leaf.closest("[data-element-id]")?.dataset.elementId || leaf.tagName);
         const panel = leaf.closest(".composed-element");
@@ -80,6 +127,10 @@
         }
         page.charts.push(record);
       }
+      for (const svg of slide.querySelectorAll(".diagram-content svg, .schedule-content svg")) {
+        const box = svg.getBBox(), view = svg.viewBox.baseVal;
+        if (box.x < view.x-1 || box.y < view.y-1 || box.x+box.width > view.x+view.width+1 || box.y+box.height > view.y+view.height+1) add("svg_outside_viewbox", svg.closest("[data-element-id]")?.dataset.elementId);
+      }
       slide.classList.remove("measuring");
       result.pages.push(page);
     }
@@ -99,13 +150,19 @@
   }
   function goTo(index, updateHash = true) {
     if (!Number.isInteger(index)) return false;
+    slides[active].querySelectorAll("video").forEach(video => video.pause());
     active = Math.min(slides.length-1, Math.max(0, index));
     slides.forEach((slide, i) => {
       slide.classList.toggle("active", i === active);
       slide.setAttribute("aria-hidden", String(!reading && i !== active));
       slide.inert = !reading && i !== active;
     });
-    previous.disabled = active === 0; next.disabled = active === slides.length-1;
+    const routePosition = route.indexOf(active);
+    previous.disabled = routePosition <= 0; next.disabled = routePosition < 0 || routePosition >= route.length-1;
+    returnButton.hidden = !history.length && routePosition >= 0;
+    document.querySelectorAll(".page-dots [data-jump]").forEach(button => button.setAttribute("aria-current", String(button.dataset.jump === slides[active].dataset.pageId)));
+    const note = slides[active].querySelector(".speaker-notes");
+    document.getElementById("notes-text").textContent = note?.content.textContent || (document.documentElement.lang === "zh-CN" ? "本页未提供讲稿。" : "No speaker notes for this page.");
     counter.value = (active+1) + " / " + slides.length;
     if (updateHash && location.hash !== "#" + slides[active].dataset.pageId) location.hash = slides[active].dataset.pageId;
     updateWarning();
@@ -114,7 +171,8 @@
   function fromHash() {
     const id = location.hash.slice(1);
     const index = slides.findIndex(slide => slide.dataset.pageId === id);
-    goTo(index < 0 ? 0 : index, false);
+    if (index >= 0 && index !== active) history.length = 0;
+    goTo(index < 0 ? route[0] : index, false);
   }
   function setReading(value) {
     reading = value;
@@ -126,19 +184,41 @@
     else fit();
     goTo(active, false);
   }
-  previous.addEventListener("click", () => goTo(active-1));
-  next.addEventListener("click", () => goTo(active+1));
-  readAll.addEventListener("click", () => setReading(!reading));
+  previous.addEventListener("click", () => routeStep(-1));
+  next.addEventListener("click", () => routeStep(1));
+  readAll.addEventListener("click", () => { setReading(!reading); setMore(false); });
+  document.getElementById("contents-toggle").addEventListener("click", () => { directory.showModal(); setMore(false); });
+  document.getElementById("contents-close").addEventListener("click", () => directory.close());
+  directory.addEventListener("close", () => document.getElementById("contents-toggle").focus());
+  document.querySelectorAll("[data-jump]").forEach(button => button.addEventListener("click", () => { jump(button.dataset.jump); if (directory.open) directory.close(); }));
+  document.querySelectorAll("[data-backup-target]").forEach(button => button.addEventListener("click", () => jump(button.dataset.backupTarget, true)));
+  returnButton.addEventListener("click", returnFromBackup);
+  notesToggle?.addEventListener("click", () => setNotes(!notesOpen));
+  document.getElementById("notes-close").addEventListener("click", () => { setNotes(false); notesToggle?.focus(); });
+  moreToggle.addEventListener("click", () => setMore(more.hidden));
+  document.getElementById("fullscreen").addEventListener("click", fullscreen);
+  document.getElementById("print-deck").addEventListener("click", () => { setMore(false); window.print(); });
+  addEventListener("click", event => { if (!event.target.closest("#more-menu,#more-toggle")) setMore(false); });
+  addEventListener("fullscreenchange", () => { fit(); updateWarning(); });
   addEventListener("hashchange", fromHash);
   addEventListener("resize", () => { fit(); updateWarning(); });
   addEventListener("keydown", event => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest("input,textarea,select,[contenteditable]")) return;
-    if (reading) return;
-    const actions = {ArrowRight: active+1, PageDown: active+1, ArrowLeft: active-1, PageUp: active-1, Home: 0, End: slides.length-1};
-    if (Object.hasOwn(actions, event.key)) { event.preventDefault(); goTo(actions[event.key]); }
+    if (event.key === "Escape") { setMore(false); if (notesOpen) setNotes(false); return; }
+    if (directory.open || event.target.closest("video") || reading) return;
+    if (["ArrowRight", "PageDown", "ArrowLeft", "PageUp", "Home", "End", "f", "F", "n", "N"].includes(event.key)) {
+      event.preventDefault();
+      if (["ArrowRight", "PageDown"].includes(event.key)) routeStep(1);
+      else if (["ArrowLeft", "PageUp"].includes(event.key)) routeStep(-1);
+      else if (event.key === "Home") goTo(route[0]);
+      else if (event.key === "End") goTo(route[route.length-1]);
+      else if (event.key.toLowerCase() === "f") fullscreen();
+      else setNotes(!notesOpen);
+    }
   });
   // Print must expose all slides, including those inert during interactive navigation.
   addEventListener("beforeprint", () => {
+    slides.forEach(slide => slide.querySelectorAll("video").forEach(video => video.pause()));
     document.body.classList.remove("reading-mode");
     document.body.classList.add("deck-mode");
     slides.forEach(slide => { slide.inert = false; slide.setAttribute("aria-hidden", "false"); });
@@ -149,7 +229,7 @@
     goTo(active, false);
   });
   document.body.classList.add("scripted", "deck-mode");
-  window.reportDeck = {inspectLayout, goTo, next: () => goTo(active+1), previous: () => goTo(active-1)};
+  window.reportDeck = {inspectLayout, goTo, next: () => routeStep(1), previous: () => routeStep(-1), setReading, setNotes, jump, returnFromBackup};
   fit(); fromHash();
   document.fonts.ready.then(updateWarning);
 })();

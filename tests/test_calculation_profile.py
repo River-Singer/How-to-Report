@@ -24,6 +24,7 @@ class CalculationProfileTests(unittest.TestCase):
         for name in ("report_calculate.py", "report_profile.py", "report_run.py", "report_versions.py"):
             shutil.copyfile(SOURCE / "scripts" / name, scripts / name)
         shutil.copyfile(PROJECT / "skill-src/shared/scripts/validate_run.py", scripts / "validate_run.py")
+        shutil.copyfile(PROJECT / "skill-src/shared/scripts/write_boundary.py", scripts / "write_boundary.py")
         self.cwd = self.root / "unrelated"
         self.cwd.mkdir()
         self.data = self.root / "材料 #50%.csv"
@@ -287,6 +288,30 @@ with patch.object(Path, "lstat", simulated):
         for target in (run / "private.json", self.package / "private.json"):
             self.command("report_profile.py", "init", target, "--profile-id", "synthetic", expected=2)
             self.assertFalse(target.exists())
+
+    def test_all_outputs_refuse_other_package_ancestors(self):
+        self.init_profile()
+        other = self.root / "different-installed-skill"
+        other.mkdir()
+        (other / "SKILL.md").write_text("Synthetic package marker", encoding="utf-8")
+        self.out = other / "new-parent" / "calculation"
+        self.calc(expected=2)
+        self.command("report_profile.py", "init", other / "new-parent" / "profile.json",
+                     "--profile-id", "synthetic", expected=2)
+        self.revise(other / "new-parent" / "revision.json", expected=2)
+        self.assertEqual([p.name for p in other.iterdir()], ["SKILL.md"])
+
+    def test_profile_revision_refuses_existing_nested_package_without_side_effects(self):
+        self.init_profile()
+        request = self.entry()
+        protected = self.root / "private-storage" / "snapshots" / "unrelated-skill"
+        protected.mkdir(parents=True)
+        (protected / "bundle-manifest.json").write_bytes(b"{}")
+        before = {p.relative_to(self.root): (p.read_bytes(), p.stat().st_mtime_ns)
+                  for p in self.root.rglob("*") if p.is_file()}
+        self.revise(protected / "new.json", request, expected=2)
+        self.assertEqual(before, {p.relative_to(self.root): (p.read_bytes(), p.stat().st_mtime_ns)
+                                 for p in self.root.rglob("*") if p.is_file()})
 
     def test_profile_invalid_history_and_boolean_revision_rejected(self):
         self.init_profile()

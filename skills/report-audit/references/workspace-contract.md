@@ -65,6 +65,25 @@ Profile 使用引用、能力观察和审计独立性可作为附加字段记录
 
 `verification_refs` 是本 Run 内不重复的 Check ID 字符串列表，例如 `["check-1"]`，不是带 revision 的业务对象引用。`verified` 要有该列表指向本 Run `checks` 中该对象精确版本的 `pass` 记录。校验器只证明记录对应，不认可其方法或结论。任务 `completed` 不能替代这种记录。
 
+同一精确节点版本还有任何 `fail/not_run/not_assessable` Check 时，不能只选其中的 pass 就标为 `verified`。先保留冲突并实际核对；确已解决、撤回或范围不同，可在该节点追加可选 `verification_dispositions`：
+
+```json
+{
+  "verification_scope": "本次有依据的限定范围",
+  "verification_dispositions": [
+    {
+      "check_id": "earlier-failure",
+      "disposition": "resolved",
+      "reason": "说明实际复核如何解决原冲突",
+      "detail_ref": "checks/resolution.md",
+      "resolving_check_id": "actual-new-pass"
+    }
+  ]
+}
+```
+
+每个处置必须唯一对应这个精确版本的非 pass Check，带非空理由与实际非空详情。`resolved` 须引用本节点 `verification_refs` 中同精确版本的 pass；`withdrawn` 说明撤回依据；`different_scope` 说明为什么不属于节点声明的 `verification_scope`。后两种不带 `resolving_check_id`。不通过 scope 文本相等、Check 顺序或最新记录覆盖推断范围；不同范围也需明确说明。其他版本的失败不自动阻塞本版本。处置是可审计声明，不证明撤回正确或检查真实执行；不得删除历史失败来绕过。Artifact 接纳仍保留原有“所有精确目标 Check 都为 pass”的保守规则，不沿用语义节点的处置豁免。
+
 ## 检查记录
 
 Check 有 `id`、精确 `target`、`status`、Run 内 `detail_ref`。状态为 `not_run | pass | fail | not_assessable`。`pass` 还需非空 `method` 和 `scope`，详情文件必须实际存在且非空。
@@ -108,6 +127,18 @@ python <本Skill目录>/scripts/validate_run.py <Run目录> --changed s1@1
 基础 `validate_run.py` 不验证该扩展；只有基础结构通过不能证明选版或接纳当前有效。生成侧 `report_versions.py inspect` 检查扩展，`report_run.py inspect` 在扩展存在时展示其结果。依赖或选版决定变化后，旧接纳可能待复核；接纳当前也只表示记录仍匹配，不证明主张真实、依赖完整或审计独立。
 
 独立审计不依赖生成包存在：读取实际产物、来源、选版历史及所引用的Check详情，核对上下文和实际字节；可用生成侧只读结果作为待核材料，但不能照抄其接纳标签作结论。没有该扩展的外来文档仍可正常审计，audit-only不执行选版/接纳写命令。
+
+### 可选版本化决策上下文
+
+长期修订需要区分实质目标变化和普通进度日志时，生成侧可通过 `report_versions.py set-context` 绑定已登记、已选中、有实际哈希的 Source 快照。快照保留本次已确认目标、受众、范围、口径、关键限定和决定；内容仍为自由文本。命令在 `run.json` 保存 `decision_context={version:"0.1",target:{id,revision},decision_id,reason}`，不产生检查或新的通过结论。
+
+启用后的新接纳记录带 `context_mode:"decision_context_v1"`，将该 Source 的精确版本、依赖、字节和绑定决定纳入接纳指纹；普通 `notes_ref` 只作进度记录，其追加不再单独使此类接纳失效。目标、范围、口径或关键条件变化必须更新决策上下文快照并重新登记、选版、绑定，旧接纳据此失效；不能仅把实质变更藏在日志里。工具不从自然语言自动识别遗漏的语义变化。
+
+没有 `context_mode` 的旧接纳继续按原 notes 指纹解释，不因绑定新上下文而自动变成新规则接纳。迁移不能修改旧记录或借用旧 Check 伪造复核；完成真实新复核并记录新 Check 后才能新接纳。基础 `--changed` 仍仅传播显式 `uses/input_refs`，上下文的全局接纳影响须看版本助手 `inspect`，空的基础影响集合不证明上下文变更无影响。
+
+## 本地写入边界
+
+随包写入助手先调用共享 [路径预检](../scripts/write_boundary.py)，仅检查目标及祖先和已知安装根：拒绝自身包、任何祖先带 `SKILL.md` 或 `bundle-manifest.json` 的其它已识别包、UNC/设备路径、备用数据流、父级跳转和链接/reparse 组件。在创建输出目录、锁、快照前拒绝；仍分别执行新输出不可覆盖与受控 Run 修改规则。不会全盘搜索安装包；无标记、未显式提供的外部安装目录不能可靠识别。此预检不创建文件，不是操作系统隔离，也不防任意外部进程在预检后替换目录。
 
 ## 许可事件
 

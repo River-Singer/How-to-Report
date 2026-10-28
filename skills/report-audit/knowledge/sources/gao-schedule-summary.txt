@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://www.gao.gov/products/gao-16-89g
+
+A schedule is an integrated model of work and dependencies, not just a set of attractive bars. Distinguish the approved baseline from status-date observations and remaining-work forecasts. Update actual starts/finishes and remaining duration using evidence; preserve baseline and change history so variance remains interpretable. Dependencies, resources and risk affect whether a forecast is credible. A changed forecast is not automatically an approved baseline. Use this guidance as a semantic checklist; this release does not implement GAO schedule assessment, critical-path analysis, workday calendars or a scheduling engine. Guide: *Schedule Assessment Guide: Best Practices for Project Schedules*, U.S. GAO, GAO-16-89G, 2015. Local representation is a summary, not the 240-page guide.

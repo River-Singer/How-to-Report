@@ -1,15 +1,17 @@
 # GPT审计入口
 
-这是0.4.0首次公开审核候选，不是正式V1准出或模型质量提升声明。克隆此仓库即可读取要求、方法、实现与合成评测，不需要父目录的私有记录、历史用户输出或联网搜索。
+更新（2026-10-28）：当前候选为0.5.0，完整A/B增量与边界见[本版交付](complete-plan-release.md)，最终实际检查见[0.5.0验证](../verification/0.5.0/README.md)。下列0.4.0及更早数字/结果保持为对应版本历史证据，不转为新版通过。
+
+这是0.5.0完整计划审核候选，不是正式V1准出或模型质量提升声明。克隆此仓库即可读取要求、方法、实现与合成评测，不需要父目录的私有记录、历史用户输出或联网搜索。
 
 建议依次核对：
 
 1. [冻结需求](requirements-freeze.md)：逐项FR/NFR、最新认知及页面行为要求、范围边界。以该清单核对实际实现，不能用版本号或测试数量替代需求满足。
 2. [架构](architecture.md)与两个独立入口：[生成](../skills/how-to-report/SKILL.md)、[审计](../skills/report-audit/SKILL.md)。检查Graph各自职责、核心/Knowledge许可、目标确认与证据验证、创建/修改/审计边界是否一致。
 3. [叙事与页面行为](narrative-page-behavior.md)及生成侧核心方法：检查触发是否进入真实操作、失败是否回到相应层，是否只剩填表；检查候选结果、解释方向和成品反读是否尊重未知与用户取舍。
-4. 当前工具：`report_run.py`、`report_versions.py`、`report_html.py`、`report_calculate.py`、`report_profile.py`及独立`audit_run.py`。实现维护在`skill-src/`，发布包在`skills/`。重点审输入/路径/类型/哈希、不可覆盖、版本/接纳语义、递归布局与图表缺失、计算口径及画像声明边界。
-5. [评测目录](../evaluation/README.md)与[oracle说明](../evaluation/ORACLES.md)：25个原案例、7份原fixture及必要补件，14项分阶段变形设计。检查缺件、指标口径、阶段泄露和把已读Dev伪装Holdout的风险；不要把设计判据当模型输出。
-6. [实际验证记录](../verification/0.4.0/README.md)与[版本边界](html-runtime-release.md)：看最终源码/包指纹、真实命令与浏览器范围、跳过项及未做的模型检查。合成工程HTML和截图只演示机制，不代表MASTer或真实模型内容质量。
+4. 当前工具：`report_run.py`、`report_versions.py`、`report_html.py`、`report_calculate.py`、`report_profile.py`、`report_experience.py`、`report_schedule.py`及独立`audit_run.py`。实现维护在`skill-src/`，发布包在`skills/`。重点审输入/路径/类型/哈希、不可覆盖、版本/接纳语义、递归布局与图表缺失、计算口径及画像声明边界。
+5. [评测目录](../evaluation/README.md)与[oracle说明](../evaluation/ORACLES.md)：25个原案例、7份原fixture及必要补件，14项既有分阶段变形和12项V05新增两阶段输入，共51项设计。检查缺件、指标口径、阶段泄露和把已读Dev伪装Holdout的风险；不要把设计判据当模型输出。
+6. [实际验证记录](../verification/0.5.0/README.md)与[版本边界](complete-plan-release.md)：看最终源码/包指纹、真实命令与浏览器范围、跳过项及未做的模型检查。合成工程HTML和截图只演示机制，不代表MASTer或真实模型内容质量。
 
 可先做本地只读工程检查（仓库根目录）：
 

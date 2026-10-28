@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://mitcommlab.mit.edu/eecs/commkit/slideshow/
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+Slides support a speaker and should organize visual information around their main messages. A standalone reading artifact needs context that a live speaker might otherwise supply. The product must therefore distinguish presentation notes from indispensable visible conditions.

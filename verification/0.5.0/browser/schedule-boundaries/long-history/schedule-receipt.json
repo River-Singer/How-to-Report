@@ -1,0 +1,32 @@
+{
+  "schedule_version": "0.1",
+  "input_sha256": "4b9d7baa1316348699e3cf86cfcc362cf992281303323263d7ca3ffe16fca77f",
+  "views": [
+    "drift"
+  ],
+  "files": {
+    "index.html": "b3f838b7635702353b10dc7fefe347877c73e26fc31db12a618f6263c3ec5352",
+    "page-map.json": "bc7d79c3fd949ca535f7f5fe9d1ea97be68abd05a28b544c665ebbcf840cfc2e",
+    "plan.json": "640772e8d91f8bd918eb81468f5be7a25fb97ac5c6b3eeefb1d1657951406966",
+    "render-receipt.json": "8d3ad5a4fdeae10c8a86908c272c4ddeff941c9627aed77efac4b0676d95c453",
+    "schedule-input.json": "4b9d7baa1316348699e3cf86cfcc362cf992281303323263d7ca3ffe16fca77f"
+  },
+  "method_sha256": {
+    "report_schedule.py": "21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e",
+    "schedule_core.py": "b7a2f19d86c1c36bab6a30756cc90ee1f3d6f44202f9170ea8f84dec65eb11e8",
+    "schedule_render.py": "3babd1cd61969551ebb8cbcf8931d3fec8a15723e764207b1b290e7fd980f4b1"
+  },
+  "calendar": "natural_days_inclusive_finish_end_of_day",
+  "source_refs": [
+    {
+      "id": "synthetic-schedule",
+      "revision": 1,
+      "locator": "本文件：显式合成日期与状态"
+    }
+  ],
+  "warnings": [],
+  "scope": "declared_dates_and_deterministic_graphics_not_project_truth",
+  "browser_validation": "not_run",
+  "semantic_validation": "not_run",
+  "run_mutation": "not_performed"
+}

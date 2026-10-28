@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://mitcommlab.mit.edu/nse/commkit/structuring-a-slide-presentation/
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+Organize the important messages into a coherent story, then choose supporting evidence. Audience understanding and available time govern the presentation more usefully than a fixed page count. This is presentation guidance, not proof that fluent titles establish a valid argument.

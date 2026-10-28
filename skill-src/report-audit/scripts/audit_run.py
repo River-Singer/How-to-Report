@@ -21,6 +21,7 @@ sys.dont_write_bytecode = True
 # Python -I omits the script directory; select only this package's sibling.
 SCRIPT_DIRECTORY = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIRECTORY))
+from write_boundary import require_external_write
 from validate_run import CONTRACT_VERSION, unique_keys, validate_run
 
 
@@ -74,10 +75,12 @@ def check_audit(directory):
 
 def initialize(directory, target, run_id, target_id="audit-target", target_revision=1):
     """Create only a new workspace; retain partial files on an I/O failure."""
-    requested_directory = Path(directory)
+    requested_directory = require_external_write(directory, (PACKAGE,))
     if os.path.lexists(requested_directory):
         raise FileExistsError(f"refusing to overwrite existing audit workspace: {requested_directory}")
     directory = requested_directory.resolve()
+    if str(target).startswith(("\\\\", "//")):
+        raise ValueError("target must be a local file, not UNC or device path")
     target = Path(target).resolve(strict=True)
     if directory.is_relative_to(PACKAGE):
         raise ValueError("audit workspace must be outside the installed Skill directory")

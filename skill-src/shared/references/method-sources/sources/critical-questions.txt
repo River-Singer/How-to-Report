@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://link.springer.com/article/10.1007/s10503-020-09512-4
+
+Yu and Zenker examine how critical questions can evaluate the premises, the connection from premises to a conclusion, and the conclusion itself. Their proposed general framework is an argumentation-theory contribution; it does not guarantee that a report's evidence is exhaustive or true. Use targeted questions to expose the missing inference or condition and stop when the next useful step is obtaining facts. Source: Shiyang Yu and Frank Zenker, *Schemes, Critical Questions, and Complete Argument Evaluation*, Argumentation 34, 469–498 (2020), https://link.springer.com/article/10.1007/s10503-020-09512-4 . Article license CC BY 4.0 verified, https://creativecommons.org/licenses/by/4.0/ . Current local representation is this original summary, not the full 30-page paper.

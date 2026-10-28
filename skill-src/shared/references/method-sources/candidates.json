@@ -1,0 +1,47 @@
+{
+  "runtime_dependency": false,
+  "scope": "Research alternatives, not installed adapters; unavailable materials do not support runtime rules.",
+  "candidates": [
+    {
+      "name": "Frappe Gantt",
+      "urls": [
+        "https://github.com/frappe/gantt",
+        "https://frappe.io/gantt/docs/config"
+      ],
+      "status": "repository inspected; configuration page inaccessible"
+    },
+    {
+      "name": "Plotly",
+      "urls": [
+        "https://github.com/plotly/plotly.py",
+        "https://plotly.com/python/interactive-html-export/",
+        "https://plotly.com/python/gantt/"
+      ],
+      "status": "repository/export guidance inspected; timeline reference candidate only"
+    },
+    {
+      "name": "Mermaid",
+      "urls": [
+        "https://github.com/mermaid-js/mermaid",
+        "https://mermaid.js.org/syntax/gantt.html"
+      ],
+      "status": "repository/Gantt guidance inspected; no implementation adopted"
+    },
+    {
+      "name": "ECharts",
+      "urls": [
+        "https://github.com/apache/echarts",
+        "https://echarts.apache.org/handbook/en/how-to/custom-series/",
+        "https://echarts.apache.org/handbook/en/best-practices/canvas-vs-svg/"
+      ],
+      "status": "relevant guidance inspected; no library bundled"
+    },
+    {
+      "name": "think-cell",
+      "urls": [
+        "https://www.think-cell.com/en/resources/manual/gantt"
+      ],
+      "status": "redirected page inaccessible; not read or archived"
+    }
+  ]
+}

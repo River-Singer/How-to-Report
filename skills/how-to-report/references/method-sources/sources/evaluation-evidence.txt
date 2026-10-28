@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://www.anthropic.com/research/demystifying-evals-for-ai-agents
+
+Code checks, model judgments and human review answer different questions. Preserve the task, actual run trace and observed outcome; a task can execute successfully while its substantive goal is unmet. Select graders for the property being tested and record their limits. The article supplies engineering guidance, not independent proof that a given model auditor is reliable. Source: Anthropic, https://www.anthropic.com/research/demystifying-evals-for-ai-agents . Original summary; no full article included.

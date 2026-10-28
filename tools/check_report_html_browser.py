@@ -33,6 +33,13 @@ def render(renderer, plan, output):
     return {"argv": command, "exit_code": result.returncode, "stdout": result.stdout, "stderr": result.stderr}
 
 
+def toggle_read_all(page):
+    """The 0.2 shell puts this control in More; older decks expose it directly."""
+    if not page.locator("#read-all").is_visible():
+        page.locator("#more-toggle").click()
+    page.locator("#read-all").click()
+
+
 # Read rendered DOM, independently of the product's inspectLayout implementation.
 MEASURE = r"""() => {
  const rect = r => ({x:r.x,y:r.y,width:r.width,height:r.height,right:r.right,bottom:r.bottom});
@@ -251,7 +258,7 @@ def run_browser(browser, output, receipt, plan):
         require(all(math.isfinite(b["width"]) and b["width"]>=0 and math.isfinite(b["left"]) for b in bars), "nonfinite bar geometry")
         checks.append({"kind":"numeric_identity", "values":numeric,"bars":bars,"passed":True})
         saved_page = active()[0]
-        page.locator("#read-all").click(); settle()
+        toggle_read_all(page); settle()
         require(len(active()) == len(plan["pages"]), "read-all omits pages")
         require(page.locator("#read-all").get_attribute("aria-pressed") == "true", "read-all state not exposed")
         page.evaluate("() => window.reportDeck.inspectLayout()"); settle()
@@ -277,11 +284,11 @@ def run_browser(browser, output, receipt, plan):
             if definition["layout"] == "composed":
                 page.locator(f'#page-{definition["id"]}').scroll_into_view_if_needed()
                 page.screenshot(path=str(output / f'mobile-read-all-{definition["id"]}.png'))
-        page.locator("#read-all").click(); settle()
+        toggle_read_all(page); settle()
         require(active() == [saved_page], "read-all exit lost active page")
         page.set_viewport_size({"width":1280,"height":800}); settle()
         checks.append({"kind":"read_all_and_return", "pages":len(plan["pages"]),"restored_page":saved_page,"passed":True})
-        page.locator("#read-all").click(); settle()
+        toggle_read_all(page); settle()
         page.emulate_media(media="print"); settle()
         printed = page.evaluate(MEASURE)
         require(len(printed) == len(plan["pages"]), "print omits pages")
@@ -304,7 +311,7 @@ def run_browser(browser, output, receipt, plan):
         require(page.locator("#layout-warning").is_visible() and bool(page.locator("#layout-warning").inner_text().strip()), "dense warning is not visible")
         page.screenshot(path=str(output / "overflow.png"),full_page=True)
         checks.append({"kind":"overflow_negative_fixture", "runtime":dense,"passed":True})
-        page.locator("#read-all").click(); settle()
+        toggle_read_all(page); settle()
         full_body = page.locator(".page-element p").first.inner_text()
         require(full_body == "容量检查必须保留所有重要限制。" * 800, "read-all lost dense body text")
         require(page.evaluate("document.documentElement.scrollHeight > innerHeight"), "dense read-all cannot scroll")

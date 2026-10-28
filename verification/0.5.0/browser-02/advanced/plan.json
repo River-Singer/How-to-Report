@@ -1,0 +1,424 @@
+{
+  "page_plan_version": "0.2",
+  "title": "统一演示能力 · 工程示例",
+  "language": "zh-CN",
+  "pages": [
+    {
+      "id": "p-overview",
+      "layout": "composed",
+      "question": "本页的内容关系是什么？",
+      "title": "一个主标题，让内容承担说明责任",
+      "takeaway": "通过可核对内容表达关系，不升级主张。",
+      "limits": [
+        "合成工程示例；不代表用户项目状态。"
+      ],
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "elements": [
+        {
+          "id": "e-overview",
+          "type": "text",
+          "role": "primary",
+          "title": "先让关键关系可见",
+          "body": "正文交代问题与必要条件。讲稿用于讲述安排，备查页用于展开依据；不能将决定性条件藏到其中。",
+          "refs": [
+            {
+              "id": "synthetic-presentation",
+              "revision": 1,
+              "locator": "本示例工程输入，不是业务实绩"
+            }
+          ],
+          "limits": []
+        }
+      ],
+      "tree": {
+        "element": "e-overview"
+      },
+      "notes": "先说明本示例是工程演示。不要把示意内容当作用户项目事实。需要展开时进入备查页，再返回当前位置。",
+      "backup_links": [
+        {
+          "label": "展开状态对照",
+          "target": "p-backup"
+        }
+      ]
+    },
+    {
+      "id": "p-relations",
+      "layout": "composed",
+      "question": "本页的内容关系是什么？",
+      "title": "不同关系需要明确说明",
+      "takeaway": "通过可核对内容表达关系，不升级主张。",
+      "limits": [
+        "合成工程示例；不代表用户项目状态。"
+      ],
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "elements": [
+        {
+          "id": "e-relations",
+          "type": "diagram",
+          "role": "primary",
+          "title": "数据与判断",
+          "body": "连线编号对应下方明确关系，不由相邻位置推断因果。",
+          "refs": [
+            {
+              "id": "synthetic-presentation",
+              "revision": 1,
+              "locator": "本示例工程输入，不是业务实绩"
+            }
+          ],
+          "limits": [],
+          "diagram": {
+            "kind": "relation",
+            "nodes": [
+              {
+                "id": "r-input",
+                "label": "原始资料",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "r-check",
+                "label": "核对口径",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "r-decision",
+                "label": "有条件的判断",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              }
+            ],
+            "edges": [
+              {
+                "id": "rel1",
+                "from": "r-input",
+                "to": "r-check",
+                "relation": "data-flow",
+                "label": "提供待核对信息",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "rel2",
+                "from": "r-check",
+                "to": "r-decision",
+                "relation": "dependency",
+                "label": "判断需要适用的核对依据",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "tree": {
+        "element": "e-relations"
+      },
+      "backup_links": [
+        {
+          "label": "展开状态对照",
+          "target": "p-backup"
+        }
+      ]
+    },
+    {
+      "id": "p-lanes",
+      "layout": "composed",
+      "question": "本页的内容关系是什么？",
+      "title": "职责分工与前置条件共同决定推进",
+      "takeaway": "通过可核对内容表达关系，不升级主张。",
+      "limits": [
+        "合成工程示例；不代表用户项目状态。"
+      ],
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "elements": [
+        {
+          "id": "e-lanes",
+          "type": "diagram",
+          "role": "primary",
+          "title": "分工示意",
+          "body": "泳道表示职责，关系来自显式输入。",
+          "refs": [
+            {
+              "id": "synthetic-presentation",
+              "revision": 1,
+              "locator": "本示例工程输入，不是业务实绩"
+            }
+          ],
+          "limits": [],
+          "diagram": {
+            "kind": "swimlane",
+            "lanes": [
+              {
+                "id": "lane-tech",
+                "label": "技术团队"
+              },
+              {
+                "id": "lane-biz",
+                "label": "业务团队"
+              }
+            ],
+            "nodes": [
+              {
+                "id": "s-ready",
+                "label": "提供候选版本",
+                "lane": "lane-tech",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "s-test",
+                "label": "执行验证",
+                "lane": "lane-tech",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "s-review",
+                "label": "审核交付结果",
+                "lane": "lane-biz",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              }
+            ],
+            "edges": [
+              {
+                "id": "swim1",
+                "from": "s-ready",
+                "to": "s-test",
+                "relation": "sequence",
+                "label": "先交付候选，再验证",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "swim2",
+                "from": "s-test",
+                "to": "s-review",
+                "relation": "dependency",
+                "label": "提交验证结果供审核",
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "tree": {
+        "element": "e-lanes"
+      }
+    },
+    {
+      "id": "p-media",
+      "layout": "composed",
+      "question": "本页的内容关系是什么？",
+      "title": "用真实素材时，保留来源与原图关系",
+      "takeaway": "通过可核对内容表达关系，不升级主张。",
+      "limits": [
+        "合成工程示例；不代表用户项目状态。"
+      ],
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "elements": [
+        {
+          "id": "e-media",
+          "type": "media",
+          "role": "primary",
+          "title": "合成素材调用示例",
+          "body": "原图字节已哈希并随输出保存；这里只演示标注机制。",
+          "refs": [
+            {
+              "id": "synthetic-presentation",
+              "revision": 1,
+              "locator": "本示例工程输入，不是业务实绩"
+            }
+          ],
+          "limits": [],
+          "media": {
+            "kind": "image",
+            "file": {
+              "path": "sample-media.png",
+              "sha256": "9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa"
+            },
+            "alt": "合成界面构图：左侧对象区域，右侧两块内容；不是实际产品截图。",
+            "annotations": [
+              {
+                "id": "a-focus",
+                "label": "示例重点区域；标注不新增业务证据。",
+                "x": 38,
+                "y": 14,
+                "width": 55,
+                "height": 31,
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "tree": {
+        "element": "e-media"
+      }
+    },
+    {
+      "id": "p-backup",
+      "layout": "composed",
+      "question": "本页的内容关系是什么？",
+      "title": "执行状态与验收状态分别核对",
+      "takeaway": "通过可核对内容表达关系，不升级主张。",
+      "limits": [
+        "合成工程示例；不代表用户项目状态。"
+      ],
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "elements": [
+        {
+          "id": "e-table",
+          "type": "table",
+          "role": "primary",
+          "title": "状态对照",
+          "body": "未知保持未提供，不以完成替代验收。",
+          "refs": [
+            {
+              "id": "synthetic-presentation",
+              "revision": 1,
+              "locator": "本示例工程输入，不是业务实绩"
+            }
+          ],
+          "limits": [],
+          "table": {
+            "columns": [
+              "事项",
+              "执行状态",
+              "验收状态"
+            ],
+            "rows": [
+              {
+                "id": "t1",
+                "cells": [
+                  "候选版本",
+                  "已形成",
+                  "待审核"
+                ],
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              },
+              {
+                "id": "t2",
+                "cells": [
+                  "后续安排",
+                  "待确认",
+                  null
+                ],
+                "refs": [
+                  {
+                    "id": "synthetic-presentation",
+                    "revision": 1,
+                    "locator": "本示例工程输入，不是业务实绩"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ],
+      "tree": {
+        "element": "e-table"
+      }
+    }
+  ],
+  "main_path": [
+    "p-overview",
+    "p-relations",
+    "p-lanes",
+    "p-media"
+  ]
+}

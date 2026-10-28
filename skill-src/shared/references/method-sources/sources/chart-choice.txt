@@ -1,0 +1,6 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/data-visualisation-e-learning-module-2-choosing-the-right-data-visualisation/
+Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+
+Choose the visual from the information task: precise value lookup, comparison, composition or time change may need different displays. Tables and text remain valid candidates. Chart geometry must not imply a quantity, trend or decomposition unsupported by data.

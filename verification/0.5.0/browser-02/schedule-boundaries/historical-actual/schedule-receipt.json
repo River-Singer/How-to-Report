@@ -1,0 +1,53 @@
+{
+  "schedule_version": "0.1",
+  "input_sha256": "69343f190463dafa3ecf272754fac9cc4e8ac300413cd9e7d5147581b906c6aa",
+  "views": [
+    "drift"
+  ],
+  "files": {
+    "index.html": "e001fcdf729210fbaec40152890c43dbb6ee8388a3a41b71ddda7e36b387fa63",
+    "page-map.json": "62ec3c3c42ed9d67fc1b2acde89f0b33eb61b8fd90a9a6df7c732fee712df27f",
+    "plan.json": "b123ec26a8c69d8ae7311cf92ce0b76aa38b3f2bfb5a1a609c7e4cf18ffb17f2",
+    "render-receipt.json": "8f59c34a9b9d00cfc4ae386155d688dd85a1f537246d524d3affc244979e7ffd",
+    "schedule-input.json": "69343f190463dafa3ecf272754fac9cc4e8ac300413cd9e7d5147581b906c6aa"
+  },
+  "method_sha256": {
+    "report_schedule.py": "21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e",
+    "schedule_core.py": "43adc912f5840bbc944c42afcba1590eb877fbecb6439e84e128af54e59559bf",
+    "schedule_render.py": "10e839cecc5ac6c328450ab15b9dd13bddde1d77c3b599d3ddac76515ae2a538"
+  },
+  "calendar": "natural_days_inclusive_finish_end_of_day",
+  "source_refs": [
+    {
+      "id": "synthetic-schedule",
+      "revision": 1,
+      "locator": "本文件：显式合成日期与状态"
+    }
+  ],
+  "warnings": [
+    {
+      "code": "historical_forecast_after_actual",
+      "milestone_id": "launch",
+      "actual_date": "2026-10-27",
+      "reported_on": "2026-10-28",
+      "forecast_date": "2026-11-13",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "milestones.launch"
+        },
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "snapshot.1028"
+        }
+      ],
+      "detail": "旧预测保留；报告日晚于已记录发生日，需核对当时可得信息及来源适用性。"
+    }
+  ],
+  "scope": "declared_dates_and_deterministic_graphics_not_project_truth",
+  "browser_validation": "not_run",
+  "semantic_validation": "not_run",
+  "run_mutation": "not_performed"
+}

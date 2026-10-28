@@ -26,6 +26,10 @@ description: 独立审查既有汇报、内容蓝图或页面的事实依据、�
 | 审查假设、论证、任务、内容或页面之间的关系 | [多图模型](references/graph-model.md) |
 | 创建审计 Run、填写检查记录并在交付前自检 | [审计 Run 操作](references/audit-run.md)；字段细节见 [工作区契约](references/workspace-contract.md) |
 | 声明独立上下文、数值复算或真实渲染范围 | [宿主能力边界](references/host-capabilities.md) |
+| 概念、前提、条件或推理桥梁出现实质缺口 | [按需思维方法](references/reasoning-methods.md)，只调用适用卡 |
+| 会议质疑、短长版本或主线与Backup组织 | [会议表达](references/meeting-expression.md) |
+| 参考设计提炼、代表页粗排或整稿视觉编辑 | [视觉编辑](references/visual-editing.md) |
+| 用户明确要求记录、查看、检索或修正任务经验 | [显式私有经验](references/report-experience.md) |
 | 专业主张需选取适用领域知识 | [知识目录元信息](knowledge/index.md)，正文另按许可读取 |
 
 按需加载；不要先运行生成流程。references 是核心方法，knowledge 中的卡片是可选领域知识；目录元信息用于选择资源，不能在许可前批量读正文。既有同范围许可可复用；拒绝/未回应/撤销时不读取相关正文，并继续可执行的核心审计。

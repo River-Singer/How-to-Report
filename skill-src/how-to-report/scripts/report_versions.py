@@ -16,6 +16,7 @@ import uuid
 sys.dont_write_bytecode = True
 SCRIPT_DIRECTORY = Path(__file__).resolve().parent
 sys.path.insert(0, str(SCRIPT_DIRECTORY))
+from write_boundary import require_external_write
 from validate_run import Validator, unique_keys, parse_changed, CONTRACT_VERSION
 from report_run import MODES, PACKAGE, resolve_path, local_path, nonempty
 
@@ -136,7 +137,9 @@ class View:
             identities = set()
             for acceptance in state["acceptances"]:
                 required = {"id", "target", "check_ids", "reason", "context_sha256", "evidence_sha256"}
-                if not isinstance(acceptance, dict) or set(acceptance) != required:
+                if (not isinstance(acceptance, dict) or not required <= acceptance.keys()
+                        or acceptance.keys() - required - {"context_mode"}
+                        or ("context_mode" in acceptance and acceptance["context_mode"] != "decision_context_v1")):
                     raise ValueError("malformed acceptance record")
                 target = key(acceptance["target"])
                 checks = acceptance["check_ids"]
@@ -153,8 +156,13 @@ class View:
         except (ValueError, TypeError, KeyError) as exc:
             self.errors.append("version_state: " + str(exc))
 
-    def closure(self, target):
+    def context_mode(self):
+        return "decision_context_v1" if "decision_context" in self.record else "legacy_notes"
+
+    def closure(self, target, context_mode=None):
         visited, pending = set(), [target]
+        if (context_mode or self.context_mode()) == "decision_context_v1" and "decision_context" in self.record:
+            pending.append(key(self.record["decision_context"]["target"]))
         while pending:
             item = pending.pop()
             if item not in visited:
@@ -162,9 +170,9 @@ class View:
                 pending.extend(self.forward.get(item, ()))
         return sorted(visited)
 
-    def currentness(self, target):
+    def currentness(self, target, context_mode=None):
         reasons = []
-        for item in self.closure(target):
+        for item in self.closure(target, context_mode):
             choice = self.selected.get(item[0])
             if choice is None:
                 reasons.append({"target": ref(item), "reason": "unselected"})
@@ -187,13 +195,16 @@ class View:
             raise ValueError("acceptance evidence must be nonempty")
         return sha(data)
 
-    def evidence(self, target, check_ids):
-        if self.currentness(target)["state"] != "current":
+    def evidence(self, target, check_ids, context_mode=None):
+        context_mode = context_mode or self.context_mode()
+        if context_mode == "decision_context_v1" and "decision_context" not in self.record:
+            raise ValueError("acceptance decision context is missing")
+        if self.currentness(target, context_mode)["state"] != "current":
             raise ValueError("target or declared dependencies are pending; inspect version selections")
         if self.validator.kinds[target[0]] != "artifact":
             raise ValueError("only an Artifact can be accepted")
         objects = []
-        for item in self.closure(target):
+        for item in self.closure(target, context_mode):
             obj = self.validator.objects[item][0]
             entry = {"target": ref(item), "object": obj, "selection": self.selected[item[0]]}
             kind = self.validator.kinds[item[0]]
@@ -207,9 +218,22 @@ class View:
                      "detail_sha256": self.file_fingerprint(self.validator.checks[check_id]["detail_ref"], True)}
                     for check_id in sorted(obj["verification_refs"])
                 ]
+            if kind.startswith("semantic:") and (obj.get("verification_dispositions") or any(
+                    c.get("status") != "pass" and (c["target"].get("id"), c["target"].get("revision")) == item
+                    for c in self.validator.checks.values())):
+                # Include unreferenced conflicts and resolution detail, not only selected pass IDs.
+                entry["target_checks"] = [
+                    {"check": c, "detail_sha256": self.file_fingerprint(c["detail_ref"], True)}
+                    for c in sorted(self.validator.checks.values(), key=lambda c: c["id"])
+                    if (c["target"].get("id"), c["target"].get("revision")) == item]
+                entry["disposition_details"] = [
+                    {"disposition": d, "detail_sha256": self.file_fingerprint(d["detail_ref"], True)}
+                    for d in obj.get("verification_dispositions", [])]
             objects.append(entry)
         context = {"run_id": self.record["run_id"], "mode": self.record["mode"], "objects": objects}
-        if "notes_ref" in self.record:
+        if context_mode == "decision_context_v1":
+            context["decision_context"] = self.record["decision_context"]
+        elif "notes_ref" in self.record:
             context["notes"] = {"ref": self.record["notes_ref"],
                                 "sha256": self.file_fingerprint(self.record["notes_ref"], True)}
         matching = [c for c in self.validator.checks.values()
@@ -236,6 +260,7 @@ class View:
                   "scope": "declared_version_choices_and_recorded_acceptance_only",
                   "content_review": "not_performed_by_this_command", "dependency_completeness": "not_assessed",
                   "historical_check_timing": "not_independently_verified",
+                  "new_acceptance_context_mode": self.context_mode(),
                   "selections": [], "artifacts": [], "acceptances": []}
         if result["valid"]:
             result["selections"] = [deepcopy(self.selected[i]) for i in sorted(self.selected)]
@@ -243,14 +268,15 @@ class View:
             for acceptance in self.state["acceptances"]:
                 target = key(acceptance["target"])
                 try:
-                    context, evidence = self.evidence(target, acceptance["check_ids"])
+                    context, evidence = self.evidence(target, acceptance["check_ids"], acceptance.get("context_mode", "legacy_notes"))
                     current = (context == acceptance["context_sha256"] and evidence == acceptance["evidence_sha256"])
                     reason = None if current else "relevant_evidence_or_choice_changed"
                 except ValueError as exc:
                     current, reason = False, str(exc)
                 status = "current" if current else "stale"
                 result["acceptances"].append({"id": acceptance["id"], "target": ref(target),
-                                               "status": status, "reason": reason})
+                                               "status": status, "reason": reason,
+                                               "context_mode": acceptance.get("context_mode", "legacy_notes")})
                 states.setdefault(target, []).append(status)
             for artifact in self.record["artifacts"]:
                 target = (artifact["id"], artifact["revision"])
@@ -276,11 +302,16 @@ def mutate(directory, expected, command, *, reason, identity=None, revision=None
            file=None, uses=(), no_dependencies=False, target=None, acceptance_id=None, check_ids=()):
     if not text(reason) or not isinstance(expected, str) or not HEX.fullmatch(expected):
         raise ValueError("reason and expected lowercase run.json SHA-256 are required")
+    directory = require_external_write(directory, (PACKAGE,))
     no_links(directory)
     directory = resolve_path(directory, strict=True)
     if directory.is_relative_to(PACKAGE):
         raise ValueError("mutations must be outside the installed Skill")
     no_links(directory / "run.json")
+    # Existing managed descendants may themselves be another installed Skill.
+    # Preflight every directory we will write before creating even the lock.
+    parents = [require_external_write(directory / relative, (PACKAGE,))
+               for relative in ("versions", "versions/files", "versions/history")]
     if sha((directory / "run.json").read_bytes()) != expected:
         raise ValueError("stale expected run.json SHA-256; inspect before retry")
     lock_path = no_links(directory / LOCK)
@@ -330,6 +361,20 @@ def mutate(directory, expected, command, *, reason, identity=None, revision=None
                 raise ValueError("version already selected; no new decision recorded")
             state["selections"].append({"decision_id": operation_id, "target": ref(target), "reason": reason})
             record["work_status"] = "in_progress"
+        elif command == "set-context":
+            if target not in view.validator.objects or view.validator.kinds.get(target[0]) != "source":
+                raise ValueError("decision context must be a registered Source version")
+            if view.selected.get(target[0], {}).get("target") != ref(target):
+                raise ValueError("select the decision context Source version before binding it")
+            obj = view.validator.objects[target][0]
+            if not isinstance(obj.get("content_hash"), str) or not HEX.fullmatch(obj["content_hash"]):
+                raise ValueError("decision context Source must have its actual content_hash")
+            view.file_fingerprint(obj["ref"])
+            if record.get("decision_context", {}).get("target") == ref(target):
+                raise ValueError("decision context version already bound; register a new revision for changes")
+            record["decision_context"] = {"version": "0.1", "target": ref(target),
+                                          "decision_id": operation_id, "reason": reason}
+            record["work_status"] = "in_progress"
         elif command == "accept":
             if target not in view.validator.objects or not text(acceptance_id):
                 raise ValueError("acceptance needs an existing Artifact target and nonempty ID")
@@ -342,12 +387,14 @@ def mutate(directory, expected, command, *, reason, identity=None, revision=None
                     raise ValueError("changed acceptance evidence requires fresh actual Check IDs; old pass cannot be reused")
             state["acceptances"].append({"id": acceptance_id, "target": ref(target), "check_ids": list(check_ids),
                                          "reason": reason, "context_sha256": context, "evidence_sha256": evidence})
+            if view.context_mode() == "decision_context_v1":
+                state["acceptances"][-1]["context_mode"] = "decision_context_v1"
         else:
             raise ValueError("unknown mutation")
         record["version_state"] = state
         # All predictable state errors are rejected before immutable files are written.
         view.validator.stable()
-        parents = [no_links(directory / relative) for relative in ("versions", "versions/files", "versions/history")]
+        parents = [no_links(parent) for parent in parents]
         for parent in parents:
             if parent.exists() and not parent.is_dir():
                 raise ValueError("managed version path is not a directory")
@@ -379,7 +426,7 @@ def mutate(directory, expected, command, *, reason, identity=None, revision=None
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__)
     commands = parser.add_subparsers(dest="command", required=True)
-    for name in ("inspect", "register", "select", "accept"):
+    for name in ("inspect", "register", "select", "accept", "set-context"):
         sub = commands.add_parser(name)
         sub.add_argument("run_directory", type=Path)
         if name == "inspect":

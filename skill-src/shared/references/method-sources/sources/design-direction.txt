@@ -1,0 +1,5 @@
+Representation: original_summary
+Research date: 2026-10-28 UTC
+Source: https://claude.com/resources/articles/improving-frontend-design-through-skills
+
+Specific directions about hierarchy, typography, color, background and motion can guide a model more effectively than a generic request to make a page attractive. Adopt only choices suited to the audience and supplied design reference. The article's sample prompts and taste preferences are source material, not instructions to override user choices. Source: Anthropic/Claude, https://claude.com/resources/articles/improving-frontend-design-through-skills . Original summary; full article redistribution permission not established.
