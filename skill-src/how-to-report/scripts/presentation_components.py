@@ -9,6 +9,8 @@ from pathlib import Path
 import re
 import stat
 
+from diagram_layout import layout_diagram, wrap_label
+
 
 def require(ok, message):
     if not ok:
@@ -82,8 +84,11 @@ def validate_component(element, seen):
                 if cell is not None:
                     label(cell)
     else:
-        fields(data, ('kind', 'nodes', 'edges'), ('lanes',))
+        fields(data, ('kind', 'nodes', 'edges'), ('lanes', 'direction'))
         require(data['kind'] in ('relation', 'swimlane'), "diagram kind invalid")
+        if 'direction' in data:
+            require(data['direction'] in ('horizontal', 'vertical'), 'diagram direction must be horizontal or vertical')
+            require(data['kind'] != 'swimlane' or data['direction'] == 'horizontal', 'swimlane direction is horizontal')
         require(isinstance(data['nodes'], list) and 1 <= len(data['nodes']) <= 8, "diagram needs 1–8 nodes")
         require(isinstance(data['edges'], list) and len(data['edges']) <= 8, "diagram supports at most 8 explicit edges")
         lanes = data.get('lanes', [])
@@ -105,8 +110,13 @@ def validate_component(element, seen):
             require(sum(n.get('lane') == lane['id'] for n in data['nodes']) <= 4, 'at most 4 nodes per lane; split the diagram')
         node_ids = {x['id'] for x in data['nodes']}
         for edge in data['edges']:
-            fields(edge, ('id', 'from', 'to', 'relation', 'label', 'refs'))
+            fields(edge, ('id', 'from', 'to', 'relation', 'label', 'refs'), ('short_label',))
             identity(edge['id'], seen); label(edge['label']); reference(edge['refs'])
+            if 'short_label' in edge:
+                label(edge['short_label'])
+                require(len(edge['short_label']) <= 24, 'short_label must be at most 24 characters; retain the full label in details')
+            else:
+                require(len(edge['label']) <= 80, 'long edge labels require an explicit short_label and a review of essential visible conditions')
             require(isinstance(edge['from'], str) and isinstance(edge['to'], str) and edge['from'] in node_ids and edge['to'] in node_ids and edge['from'] != edge['to'], "edge endpoint invalid")
             require(edge['relation'] in ('sequence','dependency','data-flow','causal','association','feedback'), "edge relation must be explicit")
 
@@ -151,7 +161,7 @@ def prepare_media(plan, base):
     return payload, resources
 
 
-def render_component(element, language, resources):
+def render_component(element, language, resources, source_ref=None):
     kind = element['type']; data = element[kind]; eid = element['id']; mapping = []
     t = lambda value: escape(str(value), quote=True)
     missing = '未提供' if language == 'zh-CN' else 'Unavailable'
@@ -160,11 +170,21 @@ def render_component(element, language, resources):
         mapping.append({'element_id':eid,'datum_id':item['id'],'selector':selector,'refs':item['refs'],'displayed':item})
         return f'id="datum-{item["id"]}" data-datum-id="{item["id"]}" data-refs="{t(json.dumps(item["refs"],ensure_ascii=False))}"'
     def provenance(values):
+        if source_ref is not None:
+            return source_ref(values)
         return '; '.join(t(r['id'])+'@'+str(r['revision'])+(' · '+t(r['locator']) if 'locator' in r else '') for r in values) or missing
     if kind == 'table':
         heads = ''.join('<th scope="col">'+t(x)+'</th>' for x in data['columns'])
-        rows = ''.join('<tr '+attrs(row)+'>'+''.join('<td>'+t(cell if cell is not None else missing)+'</td>' for cell in row['cells'])+'<td class="cell-sources">'+provenance(row['refs'])+'</td></tr>' for row in data['rows'])
-        return '<div class="structured-table"><table><thead><tr>'+heads+'<th>来源 / Source</th></tr></thead><tbody>'+rows+'</tbody></table></div>', mapping
+        rows = []
+        for row in data['rows']:
+            cells = []
+            for index,cell in enumerate(row['cells']):
+                marker = provenance(row['refs']) if source_ref is not None and index == 0 else ''
+                cells.append('<td>'+t(cell if cell is not None else missing)+marker+'</td>')
+            extra = '<td class="cell-sources">'+provenance(row['refs'])+'</td>' if source_ref is None else ''
+            rows.append('<tr '+attrs(row)+'>'+''.join(cells)+extra+'</tr>')
+        extra_head = '<th>来源 / Source</th>' if source_ref is None else ''
+        return '<div class="structured-table"><table><thead><tr>'+heads+extra_head+'</tr></thead><tbody>'+''.join(rows)+'</tbody></table></div>', mapping
     if kind == 'media':
         resource = resources.get((eid, 'file'))
         require(resource is not None, "media must be preflighted from a plan file")
@@ -180,40 +200,42 @@ def render_component(element, language, resources):
             graphic = '<video controls preload="metadata" poster="'+poster+'" aria-label="'+t(data['alt'])+'"><source src="'+resource['url']+'" type="'+resource['mime']+'"></video><img class="video-print-poster" src="'+poster+'" alt="'+t(data['alt'])+'">'
         mapping.append({'element_id':eid,'selector':'#element-'+eid+' .media-content','refs':element['refs'],'displayed':{'alt':data['alt'],'resources':[{k:v for k,v in r.items() if k!='url'} for (rid,_),r in resources.items() if rid==eid], 'annotations':data.get('annotations',[])}})
         return '<figure class="media-content">'+graphic+'<figcaption>'+t(data['alt'])+'</figcaption></figure>', mapping
-    nodes = data['nodes']; lanes = data.get('lanes', [])
-    positions = {}
-    if lanes:
-        for li,lane in enumerate(lanes):
-            members = [n for n in nodes if n['lane'] == lane['id']]
-            for ni,node in enumerate(members):
-                positions[node['id']] = (190+(ni+.5)*740/max(1,len(members)), 35+li*100)
-    else:
-        for ni,node in enumerate(nodes):
-            positions[node['id']] = (130+(ni%4)*245, 45+(ni//4)*140)
-    # Nodes extend 56 units below their anchor (76px box starting at y-20).
-    # Include the actual final box/lane and breathing room for strokes/markers.
-    height = max(max(y+56 for _,y in positions.values()), len(lanes)*100) + 24
+    nodes = data['nodes']
+    layout = layout_diagram(data)
     marker_id = 'direction-' + eid
-    vectors=[f'<defs><marker id="{marker_id}" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="#64869c"/></marker></defs>']
-    for li,lane in enumerate(lanes):
-        chunks=[lane['label'][i:i+8] for i in range(0,len(lane['label']),8)]
-        texts=''.join(f'<tspan x="12" dy="{20 if i else 0}">{t(s)}</tspan>' for i,s in enumerate(chunks))
-        vectors.append(f'<rect x="0" y="{li*100}" width="1000" height="96" fill="#eff6fa"/><text x="12" y="{li*100+38}" font-size="16">{texts}</text>')
-    for i,edge in enumerate(data['edges']):
-        x1,y1=positions[edge['from']]; x2,y2=positions[edge['to']]
-        dx,dy=x2-x1,y2-y1
-        half_width=80 if lanes else 105
-        edge_fraction=min(half_width/abs(dx) if dx else float('inf'), 38/abs(dy) if dy else float('inf'))
-        arrow='' if edge['relation']=='association' else f' marker-end="url(#{marker_id})"'
-        vectors.append(f'<line x1="{x1+dx*edge_fraction}" y1="{y1+18+dy*edge_fraction}" x2="{x2-dx*edge_fraction}" y2="{y2+18-dy*edge_fraction}" stroke="#64869c" stroke-width="2"{arrow}/><text x="{(x1+x2)/2}" y="{(y1+y2)/2+12}" font-size="14">{i+1}</text>')
+    title_id = 'diagram-title-' + eid
+    title = element.get('title') or ('关系图' if language == 'zh-CN' else 'Relationships')
+    vectors = [f'<title id="{title_id}">{t(title)}</title>', f'<defs><marker id="{marker_id}" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth"><path d="M0,0 L8,4 L0,8 Z" fill="#64869c"/></marker></defs>']
+    for lane in layout['lanes']:
+        texts = ''.join(f'<tspan x="24" dy="{24 if i else 0}">{t(line)}</tspan>' for i,line in enumerate(wrap_label(lane['label'],7)))
+        vectors.append(f'<rect x="12" y="{lane["y"]}" width="{layout["width"]-24}" height="{lane["height"]}" rx="12" fill="#eff6fa"/><text x="24" y="{lane["y"]+34}" font-size="20">{texts}</text>')
+    for index,edge in enumerate(data['edges'],1):
+        points = layout['edges'][edge['id']]
+        path = ' '.join(('M' if i==0 else 'L')+f'{x:g},{y:g}' for i,(x,y) in enumerate(points))
+        arrow = '' if edge['relation']=='association' else f' marker-end="url(#{marker_id})"'
+        dash = ' stroke-dasharray="7 5"' if edge['relation']=='association' else ''
+        x,y,w,h = layout['labels'][edge['id']]['rect']
+        lines = layout['labels'][edge['id']]['lines']
+        text = ''.join(f'<tspan x="{x+w/2:g}" dy="{22 if i else 0}">{t(line)}</tspan>' for i,line in enumerate(lines))
+        key = ''
+        if layout['labels'][edge['id']]['keyed']:
+            kx,ky = layout['labels'][edge['id']]['key_point']
+            key = f'<circle cx="{kx:g}" cy="{ky:g}" r="14" fill="#f6fafc" stroke="#64869c"/><text x="{kx:g}" y="{ky+6:g}" font-size="18" text-anchor="middle">{index}</text><text x="{x-22:g}" y="{y+23:g}" font-size="18">{index}.</text>'
+        vectors.append(f'<g {attrs(edge)} data-edge-from="{t(edge["from"])}" data-edge-to="{t(edge["to"])}" data-relation="{edge["relation"]}"><path class="diagram-edge" d="{path}" fill="none" stroke="#64869c" stroke-width="2.5"{dash}{arrow}/><title>{t(edge["label"])}</title><rect class="edge-label-background" x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" rx="4" fill="#f6fafc"/><text class="edge-label" x="{x+w/2:g}" y="{y+23:g}" text-anchor="middle" font-size="20">{text}</text>{key}</g>')
     for node in nodes:
-        x,y=positions[node['id']]
-        wrap = 8 if lanes else 12
-        width = 160 if lanes else 210
-        chunks=[node['label'][i:i+wrap] for i in range(0,len(node['label']),wrap)]
-        texts=''.join(f'<tspan x="{x}" dy="{18 if i else 0}">{t(s)}</tspan>' for i,s in enumerate(chunks))
-        vectors.append(f'<g {attrs(node)}><rect x="{x-width/2}" y="{y-20}" width="{width}" height="76" rx="8" fill="#e1f1fb" stroke="#86bbd9"/><text text-anchor="middle" x="{x}" y="{y}" font-size="16">{texts}</text></g>')
-    names={n['id']:n['label'] for n in nodes}
-    edges=''.join('<li '+attrs(edge)+'>'+str(i+1)+'. '+t(names[edge['from']])+(' — ' if edge['relation']=='association' else ' → ')+t(names[edge['to']])+' · '+t(edge['relation'])+'：'+t(edge['label'])+' <small>'+provenance(edge['refs'])+'</small></li>' for i,edge in enumerate(data['edges']))
-    node_text='; '.join(t(node['label'])+' ['+provenance(node['refs'])+']' for node in nodes)
-    return f'<div class="diagram-content"><svg viewBox="0 0 1000 {height}" role="img" aria-label="{t(element["title"])}">{"".join(vectors)}</svg><p class="diagram-nodes">{node_text}</p><ol class="relation-key">{edges}</ol></div>',mapping
+        x,y,w,h = layout['nodes'][node['id']]
+        lines = wrap_label(node['label'])
+        first_y = y+h/2-(len(lines)-1)*12.5+7
+        texts = ''.join(f'<tspan x="{x+w/2:g}" dy="{25 if i else 0}">{t(line)}</tspan>' for i,line in enumerate(lines))
+        vectors.append(f'<g {attrs(node)}><rect x="{x:g}" y="{y:g}" width="{w:g}" height="{h:g}" rx="12" fill="#e1f1fb" stroke="#86bbd9"/><text text-anchor="middle" x="{x+w/2:g}" y="{first_y:g}" font-size="22">{texts}</text></g>')
+    names = {n['id']:n['label'] for n in nodes}
+    edges = ''.join('<li>'+t(names[e['from']])+(' — ' if e['relation']=='association' else ' → ')+t(names[e['to']])+' · '+t(e['relation'])+'：'+t(e['label'])+' '+provenance(e['refs'])+'</li>' for e in data['edges'])
+    node_text = ''.join('<li>'+t(n['label'])+' '+provenance(n['refs'])+'</li>' for n in nodes)
+    detail = '<ul class="diagram-nodes">'+node_text+'</ul><ol class="relation-key">'+edges+'</ol>'
+    detail_label = '关系详情' if language == 'zh-CN' else 'Relationship details'
+    if source_ref is not None and hasattr(source_ref,'add_detail'):
+        source_ref.add_detail(eid, detail_label, detail)
+        detail = ''
+    else:
+        detail = '<details class="diagram-details"><summary>'+detail_label+'</summary>'+detail+'</details>'
+    return f'<div class="diagram-content" data-diagram-direction="{layout["direction"]}"><svg viewBox="0 0 {layout["width"]} {layout["height"]}" role="img" aria-labelledby="{title_id}" preserveAspectRatio="xMidYMid meet">{"".join(vectors)}</svg>{detail}</div>', mapping

@@ -26,3 +26,13 @@
 .schedule-actions li{margin:4px 0}.schedule-actions small{font-size:14px;color:#516e7b}
 .reading-mode .schedule-content{overflow-x:auto}.reading-mode .schedule-data{min-width:850px}
 @media print{.schedule-content{overflow:visible}.schedule-data{min-width:0!important}}
+
+/* Sparse progress views give dates and comparisons useful stage space. */
+.single-title .type-schedule:only-child .schedule-content{display:flex;flex-direction:column;flex:1;min-height:0}
+.single-title .type-schedule:only-child .schedule-data{margin-top:auto;margin-bottom:auto}
+.schedule-time-plot{height:58px}.schedule-content thead svg{height:40px}
+.schedule-content svg text{font-size:20px}
+.schedule-drift{height:auto;min-height:180px;flex:none}.schedule-drift text{font-size:22px}
+.schedule-data{font-size:21px}.schedule-data small{font-size:16px;line-height:1.4}.schedule-data thead th{font-size:18px}
+.schedule-content .schedule-context{font-size:18px}.schedule-actions{font-size:20px}
+@media(max-width:850px){.reading-mode .type-schedule:only-child .schedule-content{display:block}.reading-mode .schedule-drift{min-width:850px}.reading-mode .schedule-content svg{flex:none}}

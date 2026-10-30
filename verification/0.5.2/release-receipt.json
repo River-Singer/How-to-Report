@@ -1,0 +1,66 @@
+{
+  "release": "0.5.2",
+  "scope": "method_and_package_change_checks_only",
+  "python": "3.14.4",
+  "model_execution": false,
+  "semantic_model_quality": "not_assessed",
+  "human_understanding": "not_assessed",
+  "new_tests": {
+    "packaging": {
+      "run": 30,
+      "passed": 30,
+      "seconds": 26.012
+    },
+    "evaluation": {
+      "run": 8,
+      "passed": 8,
+      "seconds": 2.924
+    },
+    "total": 38,
+    "skipped": 0
+  },
+  "full_279_test_suite_rerun": false,
+  "browser_12_page_regression_rerun": false,
+  "historical_runtime_evidence": "../0.5.1/README.md",
+  "runtime_files_unchanged": 64,
+  "package_build_check": "passed",
+  "evaluation_input_integrity": {
+    "cases": 67,
+    "valid": true,
+    "model_execution": false
+  },
+  "offline_source_integrity": "passed_no_network",
+  "skill_format": "both_passed_utf8",
+  "compile_modified_python": "passed",
+  "lint": "not_configured",
+  "typecheck": "not_configured",
+  "whitespace": "passed_with_existing_crlf",
+  "shared_method_and_notice_identical": true,
+  "upstream_skill_sha256": "95627fd4437d886f98032ccc62d79136e6310f1fc04e354bb86431795ff206df",
+  "mit_permission_text_retained": true,
+  "private_case_contents_copied_into_product": false,
+  "packages": {
+    "how-to-report": {
+      "current_manifest_sha256": "8f0798e69faea289afe2065faefd16fdfef93c2bb5f90fba7023bd57361f23e8",
+      "baseline_manifest_sha256": "e06070be6db0cbada008547dd4e3f2d5b6db5509dfbd6d1342cd17d8e6ffe273",
+      "changed_or_added_payload": [
+        "SKILL.md",
+        "THIRD_PARTY_NOTICES.md",
+        "references/audience-copy.md",
+        "references/reporting-method.md"
+      ],
+      "removed_payload": []
+    },
+    "report-audit": {
+      "current_manifest_sha256": "d58e507e89e74ef40156c0f96cb9c27d659b61efb16e41f798e71e5a37530adb",
+      "baseline_manifest_sha256": "89172f9b315fd39e7814e85090fb87483df19ca498546b53b6497c0a2f9babc0",
+      "changed_or_added_payload": [
+        "SKILL.md",
+        "THIRD_PARTY_NOTICES.md",
+        "references/audience-copy.md",
+        "references/audit-method.md"
+      ],
+      "removed_payload": []
+    }
+  }
+}

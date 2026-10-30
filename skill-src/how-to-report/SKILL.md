@@ -22,6 +22,7 @@ description: 从真实材料与沟通情境发现汇报目标、探索和检验�
 | 目标含糊、有新沟通机会，或目标/受众/要求的前提改变 | [目标发现](references/goal-discovery.md) |
 | 材料只有罗列、解释重复或缺少区分，需抽象、探索和收敛 | [解释探索](references/insight-discovery.md) |
 | 需要证据反推、形成内容或限定修改 | [生成与修订方法](references/reporting-method.md) |
+| 正文生硬、过度概括、只有主题词，或混入制作/审计说明 | [观众成稿编辑](references/audience-copy.md)，写清实际对象与动作，通读后核对事实再装配 |
 | 数量、比较、估时或阈值会影响判断，需计算或复核口径 | [数值声明与复算](references/numeric-evidence.md) |
 | 已确认口径需可重复的本地CSV计算、实际结果和凭证 | [显式计算](references/report-calculation.md) |
 | 用户启用并确认长期偏好/经历，需私有保存、查看或修正 | [画像操作](references/report-profile.md) |

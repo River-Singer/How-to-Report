@@ -1,0 +1,353 @@
+{
+  "scope": "deterministic_helpers_and_assets_only",
+  "baseline": "retained master-v6 0.5.1 frozen packages",
+  "current_version": "0.5.2",
+  "identical_runtime_path_sets": true,
+  "files_compared": 64,
+  "files": [
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/experience-entry.json",
+      "sha256": "2f9df97f5b41cf90461fe7a92972a403fdec0921b919f91bf07eba94cff91d98"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/foreign-audit/audit-report.md",
+      "sha256": "ec652b0f9bce095a6ce709694c1d624c57448e90ef0c05c2aa05cd73294e9e27"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/foreign-audit/inputs/external-report.md",
+      "sha256": "da8eed368f98ee8673f0fa65e508e4925f443e7e3fc715ee624ff4592f5dacac"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/foreign-audit/run.json",
+      "sha256": "201f41c4c311b3f80a769d5f5047e7c373a88be5d3f3d704a1a6888e0b773db5"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/events.jsonl",
+      "sha256": "0adf2541c5eb9de02fd87bef82ffbc8938094420c149d27264202df3e83f7791"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/inputs/background.md",
+      "sha256": "0c649796eb600fcec46d1c2cdb9ed0cf6d71542d9f4ff306042d55599741e961"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/inputs/pilot.md",
+      "sha256": "a73eefc0544d8dc92a9f07526e3ef4f7e1662acb6ea7af77f5dbda04714c630e"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/outputs/blueprint.md",
+      "sha256": "3458c46cebc3cb8b621f60fd8656219e056ac33d51304e836bf71dc44c14b3b0"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/run.json",
+      "sha256": "8c5fb980f82b64989c8562c81c39875dd6917fd33011ca498c3677a12e938596"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/run.md",
+      "sha256": "83755c4a715915b2a0130bbc61c1905514a32235d87b2065682865789263593a"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/semantic.json",
+      "sha256": "eb1d800b78b78421f94ca21ac3e95723ed7aa67bf1e81540eedea6b5db93c84c"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/multi-graph/tasks.json",
+      "sha256": "4b5b4e4d7f5282e79747be9e3843e442c95ab5b01a7ef3a15d803b4d73837565"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/examples/profile.json",
+      "sha256": "644a651e1b63b6c631cc71a45cc3a8976b654b8cc2b882c84597daf364df155f"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-calculation/README.md",
+      "sha256": "b8db71ce2ea062e59b2b6aad6a46af54e6354c6a6974d3a8539c9a98b0409224"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-calculation/spec.json",
+      "sha256": "ac7fb82d0b969d490df76069d995e9439e2c6f0b251afd50f7a4cd7ec21e6bdf"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-calculation/synthetic-cost.csv",
+      "sha256": "a82cd812af7317c56730a231c50b78f260050e113e1601a4393382227f64b300"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/deck.css",
+      "sha256": "83e263acde55d33bf21333e574be9cdde95e8de39bdb672e255953116b573f52"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/deck.js",
+      "sha256": "01e27b4f2169c5b71a7d69afe5886887965afe0a909832ff5969df6fcfc7e665"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/sample-advanced.json",
+      "sha256": "967a7a314fb4f3c47d8d4d7d442d50899388e40ff6f7cc8ce7a386fe4087dd81"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/sample-media.png",
+      "sha256": "9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/sample-plan.json",
+      "sha256": "82444b55aa56a77f4e30f5e01e7e4321a3b7499aacafe45cb4cc90fa18685b71"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/sample-schedule.json",
+      "sha256": "faabca80b97f427352b8852f233fd25bc41f12559c614dbd4c1f81bda7acf28b"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/schedule.css",
+      "sha256": "e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-html/schedule.schema.json",
+      "sha256": "79956602f84300e07f2ea42833b836e082a9c48be75777ac0643b186252da5e8"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-profile/confirmed-entry.json",
+      "sha256": "7e09c86b96fb282296f3edee7a7dd77fe030b1e848ae0445031249d451eda71f"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-run/run.json",
+      "sha256": "a5935e42fbe2bcae5096de5b4c7077fc11be9b5e412e5e797815ea4493398cce"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/report-run/run.md",
+      "sha256": "b92cb4ac83d9155ff20fc43c9d9da2947a885e8becb714c1b4e6dc0d8b654703"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/review/calculation-note.md",
+      "sha256": "6e59aa31088c39f659844d365aba12b59394d7c973ddd8861f4d1ec682e19839"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "assets/review/evidence-inventory.md",
+      "sha256": "84c3fb142e0b65f8fc55aa8c2196e467ec04623ad82ee09dfb1146de471b883b"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/diagram_layout.py",
+      "sha256": "92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/presentation_components.py",
+      "sha256": "423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_calculate.py",
+      "sha256": "9553346153c37e8f90dceedb0a3b15215d128282e12e292e63e632c56f70261f"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_experience.py",
+      "sha256": "4a7dc4e7b869525cf0911812f66d81780e84658a7dc1f3e068562b1d92ac67a0"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_html.py",
+      "sha256": "358839d9a0547a1df15777d7b4ba805f0967cd713911137e3dbd29c3e8bcd5e5"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_profile.py",
+      "sha256": "c36c05e6a3e93e5b1ea2026519aac365a2750a1a0d905cbea65e5edf757318b9"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_run.py",
+      "sha256": "3f5d2dd92a06eebac0a463c0578c04d4bbbcde2160e7c0382eb939ab9a303f70"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_schedule.py",
+      "sha256": "21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/report_versions.py",
+      "sha256": "e896c7e920fb9c6af2e261da10725a61b8d3e694e96601b6dcf10be17b2852de"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/schedule_core.py",
+      "sha256": "43adc912f5840bbc944c42afcba1590eb877fbecb6439e84e128af54e59559bf"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/schedule_render.py",
+      "sha256": "464427368a0eae125c90497bad140e8680c47623940d360769eb1b763b2005b7"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/validate_run.py",
+      "sha256": "77cb6b27e93609d2d0a2fc834b9fb87e0830d878e801876f9dc1dcf67a548be9"
+    },
+    {
+      "skill": "how-to-report",
+      "path": "scripts/write_boundary.py",
+      "sha256": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/audit-run/audit.md",
+      "sha256": "47c7a46b6cc45ac8f3d4ff5d37cb948cfd80791090ff5f2e260e06c92e895206"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/audit-run/run.json",
+      "sha256": "e9c794a10c2e1b885a1c40626b39df5639ad6ebd38f4c5eb215851cdddf4fbe1"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/audit-run/run.md",
+      "sha256": "a5f33d2b2be0600c19d358c13b1f69b475d15d64c13fb409934141cab62792d9"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/experience-entry.json",
+      "sha256": "2f9df97f5b41cf90461fe7a92972a403fdec0921b919f91bf07eba94cff91d98"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/foreign-audit/audit-report.md",
+      "sha256": "ec652b0f9bce095a6ce709694c1d624c57448e90ef0c05c2aa05cd73294e9e27"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/foreign-audit/inputs/external-report.md",
+      "sha256": "da8eed368f98ee8673f0fa65e508e4925f443e7e3fc715ee624ff4592f5dacac"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/foreign-audit/run.json",
+      "sha256": "201f41c4c311b3f80a769d5f5047e7c373a88be5d3f3d704a1a6888e0b773db5"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/events.jsonl",
+      "sha256": "0adf2541c5eb9de02fd87bef82ffbc8938094420c149d27264202df3e83f7791"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/inputs/background.md",
+      "sha256": "0c649796eb600fcec46d1c2cdb9ed0cf6d71542d9f4ff306042d55599741e961"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/inputs/pilot.md",
+      "sha256": "a73eefc0544d8dc92a9f07526e3ef4f7e1662acb6ea7af77f5dbda04714c630e"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/outputs/blueprint.md",
+      "sha256": "3458c46cebc3cb8b621f60fd8656219e056ac33d51304e836bf71dc44c14b3b0"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/run.json",
+      "sha256": "8c5fb980f82b64989c8562c81c39875dd6917fd33011ca498c3677a12e938596"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/run.md",
+      "sha256": "83755c4a715915b2a0130bbc61c1905514a32235d87b2065682865789263593a"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/semantic.json",
+      "sha256": "eb1d800b78b78421f94ca21ac3e95723ed7aa67bf1e81540eedea6b5db93c84c"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/multi-graph/tasks.json",
+      "sha256": "4b5b4e4d7f5282e79747be9e3843e442c95ab5b01a7ef3a15d803b4d73837565"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/examples/profile.json",
+      "sha256": "644a651e1b63b6c631cc71a45cc3a8976b654b8cc2b882c84597daf364df155f"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/review/calculation-note.md",
+      "sha256": "6e59aa31088c39f659844d365aba12b59394d7c973ddd8861f4d1ec682e19839"
+    },
+    {
+      "skill": "report-audit",
+      "path": "assets/review/evidence-inventory.md",
+      "sha256": "84c3fb142e0b65f8fc55aa8c2196e467ec04623ad82ee09dfb1146de471b883b"
+    },
+    {
+      "skill": "report-audit",
+      "path": "scripts/audit_run.py",
+      "sha256": "f9ee80383370caf996f554687ebfe761966fe4d9ab81e3cb0cc367912dff3b36"
+    },
+    {
+      "skill": "report-audit",
+      "path": "scripts/report_experience.py",
+      "sha256": "4a7dc4e7b869525cf0911812f66d81780e84658a7dc1f3e068562b1d92ac67a0"
+    },
+    {
+      "skill": "report-audit",
+      "path": "scripts/validate_run.py",
+      "sha256": "77cb6b27e93609d2d0a2fc834b9fb87e0830d878e801876f9dc1dcf67a548be9"
+    },
+    {
+      "skill": "report-audit",
+      "path": "scripts/write_boundary.py",
+      "sha256": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
+    }
+  ],
+  "packages": {
+    "how-to-report": {
+      "current_manifest_sha256": "8f0798e69faea289afe2065faefd16fdfef93c2bb5f90fba7023bd57361f23e8",
+      "baseline_manifest_sha256": "e06070be6db0cbada008547dd4e3f2d5b6db5509dfbd6d1342cd17d8e6ffe273",
+      "changed_or_added_payload": [
+        "SKILL.md",
+        "THIRD_PARTY_NOTICES.md",
+        "references/audience-copy.md",
+        "references/reporting-method.md"
+      ],
+      "removed_payload": []
+    },
+    "report-audit": {
+      "current_manifest_sha256": "d58e507e89e74ef40156c0f96cb9c27d659b61efb16e41f798e71e5a37530adb",
+      "baseline_manifest_sha256": "89172f9b315fd39e7814e85090fb87483df19ca498546b53b6497c0a2f9babc0",
+      "changed_or_added_payload": [
+        "SKILL.md",
+        "THIRD_PARTY_NOTICES.md",
+        "references/audience-copy.md",
+        "references/audit-method.md"
+      ],
+      "removed_payload": []
+    }
+  }
+}

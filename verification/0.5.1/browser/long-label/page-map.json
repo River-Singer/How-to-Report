@@ -1,0 +1,418 @@
+{
+  "page_plan_version": "0.2",
+  "plan_sha256": "016c51771c85be6b3b3fc28bc0c138d7b68eb5237e4c41884dd48f080ab3bd8c",
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "scope": "declared_mapping_not_semantic_verification",
+  "elements": [
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-0",
+      "selector": "#datum-trend-a-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-0",
+        "value": 12,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-1",
+      "selector": "#datum-trend-a-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-1",
+        "value": null,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第2期"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-2",
+      "selector": "#datum-trend-a-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-2",
+        "value": 24,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第3期"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-a-3",
+      "selector": "#datum-trend-a-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-a-3",
+        "value": 32,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-a",
+        "series_label": "甲",
+        "x_label": "第4期"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-0",
+      "selector": "#datum-trend-b-0",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-0",
+        "value": -4,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-1",
+      "selector": "#datum-trend-b-1",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-1",
+        "value": 0,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第2期"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-2",
+      "selector": "#datum-trend-b-2",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-2",
+        "value": 9,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第3期"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "datum_id": "trend-b-3",
+      "selector": "#datum-trend-b-3",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "trend-b-3",
+        "value": 15,
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "unit": "合成分",
+        "series_id": "trend-b",
+        "series_label": "乙",
+        "x_label": "第4期"
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "element_id": "time-trend",
+      "selector": "#element-time-trend",
+      "refs": [
+        {
+          "id": "synthetic-composed",
+          "revision": 1,
+          "locator": "本文件合成值"
+        }
+      ],
+      "displayed": {
+        "id": "time-trend",
+        "type": "chart",
+        "role": "supporting",
+        "title": "期间变化：保留缺失",
+        "body": "有序类别按等间距排布；不补造观测。",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          }
+        ],
+        "limits": [
+          "未观测处断线；变化不证明机制。"
+        ],
+        "chart": {
+          "kind": "line",
+          "unit": "合成分",
+          "x_labels": [
+            "不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签不可截掉的真实长中文分类标签",
+            "第2期",
+            "第3期",
+            "第4期"
+          ],
+          "series": [
+            {
+              "id": "trend-a",
+              "label": "甲",
+              "points": [
+                {
+                  "id": "trend-a-0",
+                  "value": 12,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-a-1",
+                  "value": null,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-a-2",
+                  "value": 24,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-a-3",
+                  "value": 32,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "trend-b",
+              "label": "乙",
+              "points": [
+                {
+                  "id": "trend-b-0",
+                  "value": -4,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-b-1",
+                  "value": 0,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-b-2",
+                  "value": 9,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                },
+                {
+                  "id": "trend-b-3",
+                  "value": 15,
+                  "refs": [
+                    {
+                      "id": "synthetic-composed",
+                      "revision": 1,
+                      "locator": "本文件合成值"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "p-overview",
+      "selector": "#page-p-overview",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "title": "合成图表：缺失保留与窄屏对应",
+        "limits": [
+          "合成工程示例；不代表用户项目状态。"
+        ],
+        "tree": {
+          "element": "time-trend"
+        }
+      },
+      "semantic": {
+        "question": "本页的内容关系是什么？",
+        "takeaway": "通过可核对内容表达关系，不升级主张。"
+      },
+      "speaker_notes": null,
+      "source_details": {
+        "selector": "#sources-p-overview",
+        "refs": [
+          {
+            "id": "synthetic-composed",
+            "revision": 1,
+            "locator": "本文件合成值"
+          },
+          {
+            "id": "synthetic-presentation",
+            "revision": 1,
+            "locator": "本示例工程输入，不是业务实绩"
+          }
+        ],
+        "detail_elements": []
+      }
+    }
+  ]
+}

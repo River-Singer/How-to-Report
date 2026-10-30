@@ -16,6 +16,22 @@
   let reading = false;
   let frame = 0;
   const directory = document.getElementById("contents-dialog");
+  const sourceDialog = document.getElementById("source-dialog");
+  let sourceOpener = null;
+  function openSources(id, opener) {
+    const details = document.getElementById("sources-" + id);
+    if (!details) return;
+    if (reading) {
+      details.open = true;
+      details.scrollIntoView({block: "start"});
+      details.querySelector("summary").focus();
+      return;
+    }
+    sourceOpener = opener;
+    document.getElementById("source-heading").textContent = details.querySelector("summary").textContent;
+    document.getElementById("source-dialog-content").replaceChildren(details.querySelector(".source-detail-body").cloneNode(true));
+    if (!sourceDialog.open) sourceDialog.showModal();
+  }
   const notesPanel = document.getElementById("notes-panel");
   const notesToggle = document.getElementById("notes-toggle");
   const more = document.getElementById("more-menu");
@@ -79,7 +95,7 @@
       if (!slide.classList.contains("active")) slide.classList.add("measuring");
       const bounds = slide.getBoundingClientRect();
       const scale = bounds.width / WIDTH;
-      const page = {id: slide.dataset.pageId, width: bounds.width, height: bounds.height, issues: [], elements: [], bars: [], charts: []};
+      const page = {id: slide.dataset.pageId, width: bounds.width, height: bounds.height, issues: [], elements: [], bars: [], charts: [], svgText: []};
       const add = (kind, id) => {
         const issue = {kind, id, pageId: page.id};
         page.issues.push(issue); result.issues.push(issue);
@@ -130,6 +146,18 @@
       for (const svg of slide.querySelectorAll(".diagram-content svg, .schedule-content svg")) {
         const box = svg.getBBox(), view = svg.viewBox.baseVal;
         if (box.x < view.x-1 || box.y < view.y-1 || box.x+box.width > view.x+view.width+1 || box.y+box.height > view.y+view.height+1) add("svg_outside_viewbox", svg.closest("[data-element-id]")?.dataset.elementId);
+        for (const label of svg.querySelectorAll("text")) {
+          const transform = label.getScreenCTM();
+          if (!transform) continue;
+          const font = parseFloat(getComputedStyle(label).fontSize);
+          const screenFontPx = font * Math.hypot(transform.c, transform.d);
+          const record = {elementId: svg.closest("[data-element-id]")?.dataset.elementId,
+            text: label.textContent, screenFontPx, canvasFontPx: screenFontPx / scale};
+          page.svgText.push(record);
+          // Detect a collapsed graphic, not certify legibility in every room.
+          // Actual screen sizes stay available for screenshot/design review.
+          if (!Number.isFinite(screenFontPx) || record.canvasFontPx < 8) add("collapsed_svg_text", record.elementId);
+        }
       }
       slide.classList.remove("measuring");
       result.pages.push(page);
@@ -189,6 +217,16 @@
   readAll.addEventListener("click", () => { setReading(!reading); setMore(false); });
   document.getElementById("contents-toggle").addEventListener("click", () => { directory.showModal(); setMore(false); });
   document.getElementById("contents-close").addEventListener("click", () => directory.close());
+  document.getElementById("source-close").addEventListener("click", () => sourceDialog.close());
+  sourceDialog.addEventListener("close", () => sourceOpener?.focus());
+  document.addEventListener("click", event => {
+    const link = event.target.closest("[data-source-page]");
+    if (!link) return;
+    event.preventDefault();
+    if (!sourceDialog.contains(link)) openSources(link.dataset.sourcePage, link);
+    const area = sourceDialog.open ? sourceDialog : document.getElementById("sources-" + link.dataset.sourcePage);
+    if (link.dataset.sourceNumber) area?.querySelector('.source-index li[value="' + link.dataset.sourceNumber + '"]')?.scrollIntoView({block: "nearest"});
+  });
   directory.addEventListener("close", () => document.getElementById("contents-toggle").focus());
   document.querySelectorAll("[data-jump]").forEach(button => button.addEventListener("click", () => { jump(button.dataset.jump); if (directory.open) directory.close(); }));
   document.querySelectorAll("[data-backup-target]").forEach(button => button.addEventListener("click", () => jump(button.dataset.backupTarget, true)));
@@ -197,7 +235,13 @@
   document.getElementById("notes-close").addEventListener("click", () => { setNotes(false); notesToggle?.focus(); });
   moreToggle.addEventListener("click", () => setMore(more.hidden));
   document.getElementById("fullscreen").addEventListener("click", fullscreen);
-  document.getElementById("print-deck").addEventListener("click", () => { setMore(false); window.print(); });
+  function printDeck(withSources) {
+    setMore(false);
+    document.body.classList.toggle("print-with-sources", withSources);
+    window.print();
+  }
+  document.getElementById("print-deck").addEventListener("click", () => printDeck(false));
+  document.getElementById("print-sources").addEventListener("click", () => printDeck(true));
   addEventListener("click", event => { if (!event.target.closest("#more-menu,#more-toggle")) setMore(false); });
   addEventListener("fullscreenchange", () => { fit(); updateWarning(); });
   addEventListener("hashchange", fromHash);
@@ -205,7 +249,7 @@
   addEventListener("keydown", event => {
     if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest("input,textarea,select,[contenteditable]")) return;
     if (event.key === "Escape") { setMore(false); if (notesOpen) setNotes(false); return; }
-    if (directory.open || event.target.closest("video") || reading) return;
+    if (directory.open || sourceDialog.open || event.target.closest("video") || reading) return;
     if (["ArrowRight", "PageDown", "ArrowLeft", "PageUp", "Home", "End", "f", "F", "n", "N"].includes(event.key)) {
       event.preventDefault();
       if (["ArrowRight", "PageDown"].includes(event.key)) routeStep(1);
@@ -218,12 +262,18 @@
   });
   // Print must expose all slides, including those inert during interactive navigation.
   addEventListener("beforeprint", () => {
+    document.querySelectorAll(".page-source-details").forEach(details => {
+      details.dataset.wasOpen = String(details.open);
+      if (document.body.classList.contains("print-with-sources")) details.open = true;
+    });
     slides.forEach(slide => slide.querySelectorAll("video").forEach(video => video.pause()));
     document.body.classList.remove("reading-mode");
     document.body.classList.add("deck-mode");
     slides.forEach(slide => { slide.inert = false; slide.setAttribute("aria-hidden", "false"); });
   });
   addEventListener("afterprint", () => {
+    document.body.classList.remove("print-with-sources");
+    document.querySelectorAll(".page-source-details").forEach(details => { details.open = details.dataset.wasOpen === "true"; });
     document.body.classList.toggle("reading-mode", reading);
     document.body.classList.toggle("deck-mode", !reading);
     goTo(active, false);

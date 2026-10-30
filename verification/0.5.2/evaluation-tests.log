@@ -1,0 +1,13 @@
+test_corrupt_input_types_duplicates_and_escape_fail_cleanly (test_evaluation.EvaluationTests.test_corrupt_input_types_duplicates_and_escape_fail_cleanly) ... ok
+test_current_inputs_and_commands_are_read_only (test_evaluation.EvaluationTests.test_current_inputs_and_commands_are_read_only) ... ok
+test_hash_drift_is_not_silently_repaired (test_evaluation.EvaluationTests.test_hash_drift_is_not_silently_repaired) ... ok
+test_independent_cost_oracle_accepts_declared_decompositions (test_evaluation.EvaluationTests.test_independent_cost_oracle_accepts_declared_decompositions) ... ok
+test_stage_display_does_not_leak_oracle_or_future_input (test_evaluation.EvaluationTests.test_stage_display_does_not_leak_oracle_or_future_input) ... ok
+test_new_cases_have_real_inputs_and_staged_change (test_release05_evaluation.Release05EvaluationTests.test_new_cases_have_real_inputs_and_staged_change) ... ok
+test_previous_catalog_bytes_preserved (test_release05_evaluation.Release05EvaluationTests.test_previous_catalog_bytes_preserved) ... ok
+test_spacing_case_has_actual_editable_target (test_release05_evaluation.Release05EvaluationTests.test_spacing_case_has_actual_editable_target) ... ok
+
+----------------------------------------------------------------------
+Ran 8 tests in 2.924s
+
+OK

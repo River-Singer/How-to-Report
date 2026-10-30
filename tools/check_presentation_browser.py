@@ -27,7 +27,9 @@ SVG_BOUNDS = r"""() => [...document.querySelectorAll('.slide.active svg')].map(s
  return {element:svg.closest('[data-element-id]').dataset.elementId,
  view:{x:view.x,y:view.y,width:view.width,height:view.height},
  box:{x:box.x,y:box.y,width:box.width,height:box.height},outside:outside(box),
- text:[...svg.querySelectorAll('text')].map(t=>({text:t.textContent,outside:outside(t.getBBox())}))};
+ text:[...svg.querySelectorAll('text')].map(t=>{const ctm=t.getScreenCTM(),font=parseFloat(getComputedStyle(t).fontSize);
+ return {text:t.textContent,outside:outside(t.getBBox()),cssFontPx:font,
+ screenFontPx:ctm?font*Math.hypot(ctm.c,ctm.d):null};})};
 })"""
 
 
@@ -50,6 +52,50 @@ def more_action(page, action):
     page.locator('#more-toggle').click()
     page.locator(action).click()
     settle(page)
+
+
+def check_source_details(page, plan, folder):
+    """Resolve every declared reference, then exercise the actual keyboard UI."""
+    entries = json.loads((folder/'page-map.json').read_text(encoding='utf-8'))['elements']
+    records = []
+    def collect_refs(value):
+        found = []
+        if isinstance(value, dict):
+            found.extend(value.get('refs', []))
+            for key, item in value.items():
+                if key != 'refs': found.extend(collect_refs(item))
+        elif isinstance(value, list):
+            for item in value: found.extend(collect_refs(item))
+        return found
+    for i, definition in enumerate(plan['pages']):
+        pid = definition['id']
+        page.evaluate('(i)=>reportDeck.goTo(i)', i); settle(page)
+        mapped = next(e for e in entries if e['selector'] == '#page-'+pid)['source_details']
+        declared = []
+        for entry in entries:
+            if entry['page_id'] == pid:
+                for ref in entry['refs']:
+                    if ref not in declared: declared.append(ref)
+        # Schedule context/baseline refs are visible provenance even though they
+        # are not separate mapped datum objects. Verify both directions against
+        # the complete page input, without inventing a one-index-per-datum rule.
+        supplied = collect_refs(definition)
+        require(all(r in mapped['refs'] for r in declared) and all(r in supplied for r in mapped['refs']), 'source index lost or invented an exact declared reference')
+        expected = [f"{r['id']}@{r['revision']}" + (' · '+r['locator'] if 'locator' in r else '') for r in mapped['refs']]
+        actual = page.locator(mapped['selector']+' .source-index li').all_text_contents()
+        require(actual == expected, 'source index text differs from exact reference versions/locators')
+        numbers = page.locator('.slide.active .source-marker').all_text_contents()
+        require(all(1 <= int(n) <= len(expected) for marker in numbers for n in marker.strip('[]').split(',')), 'unresolved source marker')
+        opener = page.locator('.slide.active .source-details-link')
+        opener.focus(); page.keyboard.press('Enter'); settle(page)
+        require(page.locator('#source-dialog').is_visible(), 'keyboard source inspector did not open')
+        require(page.locator('#source-dialog .source-index li').all_text_contents() == expected, 'source dialog lost indexed text')
+        before = active(page); page.keyboard.press('ArrowRight')
+        require(active(page) == before, 'source dialog leaked deck navigation')
+        page.keyboard.press('Escape'); settle(page)
+        require(not page.locator('#source-dialog').is_visible() and opener.evaluate('(e)=>e===document.activeElement'), 'source close did not restore keyboard focus')
+        records.append({'page':pid, 'reference_count':len(expected), 'exact_index_and_markers':True, 'keyboard_and_focus':True})
+    return records
 
 
 def source_snapshot(source, destination):
@@ -162,8 +208,9 @@ def inspect_deck(browser, name, folder, receipt, navigation=False, video=False):
                 geometry = page.evaluate('reportDeck.inspectLayout()')
                 svg = page.evaluate(SVG_BOUNDS)
                 own_issues = [e for s in dom for e in s['elements'] if e['outsideSlide'] or e['textOutsideSlide']]
-                current['pages'].append({'id':definition['id'], 'dom':dom, 'svg':svg, 'geometry_issues':geometry['issues'], 'independent_issues':own_issues})
-                if geometry['issues'] or own_issues or any(s['outside'] or any(t['outside'] for t in s['text']) for s in svg):
+                page_issues = [issue for issue in geometry['issues'] if issue['pageId'] == definition['id']]
+                current['pages'].append({'id':definition['id'], 'dom':dom, 'svg':svg, 'geometry_issues':page_issues, 'independent_issues':own_issues})
+                if page_issues or own_issues or any(s['outside'] or any(t['outside'] for t in s['text']) for s in svg):
                     receipt['errors'].append(f'{name}/{viewport["width"]}/{definition["id"]}: geometry or SVG overflow (see measurements)')
                 require(active(page) == definition['id'], 'page activation')
                 box = dom[0]['rect']
@@ -188,6 +235,8 @@ def inspect_deck(browser, name, folder, receipt, navigation=False, video=False):
                         require(all(abs(expected[k]-actual[k]) < .1 for k in ('x','y','width','height')), 'annotation changed source-relative position')
                     annotations.append(bounds)
         record['images'], record['annotations'] = images, annotations
+        if plan['page_plan_version'] == '0.2':
+            record['source_details'] = check_source_details(page, plan, folder)
         if navigation:
             record['navigation'] = check_navigation(page, plan, folder)
         if video:
@@ -201,6 +250,10 @@ def inspect_deck(browser, name, folder, receipt, navigation=False, video=False):
         page.set_viewport_size({'width':390,'height':844}); settle(page)
         more_action(page, '#read-all')
         require(page.locator('.slide:visible').count() == len(plan['pages']), 'read-all missing pages')
+        if plan['page_plan_version'] == '0.2':
+            page.locator('.slide .source-details-link').first.click(); settle(page)
+            first_details = page.locator('#sources-'+plan['pages'][0]['id'])
+            require(first_details.is_visible() and first_details.get_attribute('open') is not None, 'read-all source appendix did not open')
         require(page.evaluate('document.documentElement.scrollWidth <= innerWidth+1'), 'read-all causes document-wide horizontal overflow')
         scrolling = page.locator('.chart-content,.structured-table,.diagram-content,.schedule-content').evaluate_all('''els=>els.map(e=>{const previous=e.scrollLeft;e.scrollLeft=e.scrollWidth;const r={kind:e.className,width:e.clientWidth,scrollWidth:e.scrollWidth,maximum:e.scrollLeft};e.scrollLeft=previous;return r})''')
         require(all(e['scrollWidth'] <= e['width']+1 or e['maximum'] > 0 for e in scrolling), 'wide contents cannot be horizontally reached')
@@ -228,6 +281,20 @@ def inspect_deck(browser, name, folder, receipt, navigation=False, video=False):
             require(not page.locator('video').is_visible() and page.locator('.video-print-poster').is_visible(), 'print video poster absent')
             require(bool(pdf.pages[0].images), 'PDF contains no embedded poster image')
         record['pdf'] = {'pages':len(pdf.pages), 'sha256':digest(folder/'deck.pdf'), 'media_box_points':[float(pdf.pages[0].mediabox.width),float(pdf.pages[0].mediabox.height)], 'poster_verified':video}
+        if plan['page_plan_version'] == '0.2':
+            page.emulate_media(media='screen'); settle(page)
+            # Run the actual print control, replacing only the native dialog;
+            # Chromium PDF then executes the real before/afterprint handlers.
+            page.evaluate('window.print=()=>{}')
+            more_action(page, '#print-sources')
+            page.emulate_media(media='null')
+            page.pdf(path=str(folder/'deck-with-sources.pdf'), print_background=True, prefer_css_page_size=True)
+            with_sources = PdfReader(folder/'deck-with-sources.pdf')
+            require(len(with_sources.pages) > len(pdf.pages), 'print with sources omitted source appendices')
+            require(not page.locator('body').evaluate('(e)=>e.classList.contains("print-with-sources")'), 'print-with-sources state not restored')
+            require(page.locator('#read-all').get_attribute('aria-pressed') == 'true', 'source print did not restore reading mode')
+            record['pdf']['with_sources_pages'] = len(with_sources.pages)
+            record['pdf']['with_sources_sha256'] = digest(folder/'deck-with-sources.pdf')
         require(not errors and not requests, 'script errors or network requests')
     except Exception as exc:
         receipt['errors'].append(f'{name}: {type(exc).__name__}: {exc}')

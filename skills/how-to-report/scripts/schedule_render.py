@@ -8,7 +8,7 @@ import json
 from schedule_core import day, delta, finish, validate_component, warnings
 
 
-def render_component(element, language):
+def render_component(element, language, source_ref=None):
     validate_component(element, set())
     cfg = element["schedule"]; spec = cfg["spec"]; view = cfg["view"]; eid = element["id"]
     zh = language == "zh-CN"
@@ -19,6 +19,8 @@ def render_component(element, language):
     refs_used, mappings = [], []
 
     def reference_marks(refs):
+        if source_ref is not None:
+            return source_ref(refs)
         marks = []
         for ref in refs:
             if ref not in refs_used: refs_used.append(ref)
@@ -102,11 +104,15 @@ def render_component(element, language):
             points.append((day(snap["reported_on"]), (day(prediction["date"]) - day(mark["baseline_date"])).days, prediction, n))
         low, high = min([0] + [p[1] for p in points]), max([0] + [p[1] for p in points])
         dx = (points[-1][0] - points[0][0]).days
-        xy = [(60 + (d-points[0][0]).days/dx*1080, 160 - (v-low)/(high-low or 1)*130) for d,v,_,_ in points]
+        # Reserve actual glyph space above the largest deviation. The label
+        # baseline is ten units above the point; the 22px presentation font
+        # extends above that baseline and must remain inside the viewBox.
+        plot_bottom, plot_height = 160, 115
+        xy = [(60 + (d-points[0][0]).days/dx*1080, plot_bottom - (v-low)/(high-low or 1)*plot_height) for d,v,_,_ in points]
         path = "M" + " L".join(f"{px:.4f},{py:.4f}" for px,py in xy)
         dots = ''.join(f'<circle cx="{px:.4f}" cy="{py:.4f}" r="4"/><text x="{px:.4f}" y="{py-10:.4f}" text-anchor="middle">{v:+d}</text><text x="{px:.4f}" y="190" text-anchor="middle">{d.isoformat()}</text>' for (px,py),(d,v,_,_) in zip(xy,points))
         content.append(f'<p>{e(mark["label"])} · {"基线日期" if zh else "Baseline date"}: {e(mark["baseline_date"])}{reference_marks(mark["refs"])}</p>')
-        zero_y = 160 - (0-low)/(high-low or 1)*130
+        zero_y = plot_bottom - (0-low)/(high-low or 1)*plot_height
         readable_plot = len(points) <= 4 and all(b[0]-a[0] >= 130 for a,b in zip(xy,xy[1:]))
         if readable_plot:
             content.append(f'<svg class="schedule-drift" viewBox="0 0 1200 200" role="img" aria-label="{"横轴为实际报告日期间距，纵轴为相对基线偏移自然日" if zh else "Actual reporting-day spacing; vertical baseline deviation in natural days"}"><line class="schedule-baseline" x1="60" x2="1140" y1="{zero_y:.4f}" y2="{zero_y:.4f}"/><path d="{path}" fill="none"/>{dots}</svg>')
@@ -174,5 +180,6 @@ def render_component(element, language):
     if view == "gantt":
         content.append('<p class="schedule-legend"><span class="legend-baseline">'+('细灰线：批准基线' if zh else 'Thin gray: baseline')+'</span><span class="legend-actual">'+('实线：实际经过' if zh else 'Solid: actual elapsed')+'</span><span class="legend-forecast">'+('虚线：预测' if zh else 'Dashed: forecast')+'</span> · '+('经过区间不等于工作量；点仅表示已知日期。' if zh else 'Elapsed time is not work completed; dots indicate a single known date.')+'</p>')
     sources=' · '.join(f'[{n+1}] {r["id"]}@{r["revision"]}'+(' · '+r["locator"] if r.get("locator") else '') for n,r in enumerate(refs_used))
-    content.append('<p class="schedule-provenance">'+e(sources)+'</p>')
+    if source_ref is None:
+        content.append('<p class="schedule-provenance">'+e(sources)+'</p>')
     return '<div class="schedule-content" data-schedule-view="'+view+'">'+''.join(content)+'</div>', mappings

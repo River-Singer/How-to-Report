@@ -1,0 +1,168 @@
+{
+  "page_plan_version": "0.2",
+  "plan_sha256": "598fc238855f6e605e84b6d75ada1c5d7c7a7f21ebfe5e74a489c479dce97049",
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "scope": "declared_mapping_not_semantic_verification",
+  "elements": [
+    {
+      "element_id": "e-media",
+      "datum_id": "a-focus",
+      "selector": "#datum-a-focus",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "id": "a-focus",
+        "label": "示例重点区域；标注不新增业务证据。",
+        "x": 38,
+        "y": 14,
+        "width": 55,
+        "height": 31,
+        "refs": [
+          {
+            "id": "synthetic-presentation",
+            "revision": 1,
+            "locator": "本示例工程输入，不是业务实绩"
+          }
+        ]
+      },
+      "page_id": "p-media"
+    },
+    {
+      "element_id": "e-media",
+      "selector": "#element-e-media .media-content",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "alt": "合成界面构图：左侧对象区域，右侧两块内容；不是实际产品截图。",
+        "resources": [
+          {
+            "sha256": "e991823553fabe4a3a76e2e2afc5d688280eafc0d4a1bf3aa8d86d5f34fac482",
+            "snapshot": "media/e991823553fabe4a3a76e2e2afc5d688280eafc0d4a1bf3aa8d86d5f34fac482.png",
+            "source_path": "header-only.png",
+            "mime": "image/png"
+          }
+        ],
+        "annotations": [
+          {
+            "id": "a-focus",
+            "label": "示例重点区域；标注不新增业务证据。",
+            "x": 38,
+            "y": 14,
+            "width": 55,
+            "height": 31,
+            "refs": [
+              {
+                "id": "synthetic-presentation",
+                "revision": 1,
+                "locator": "本示例工程输入，不是业务实绩"
+              }
+            ]
+          }
+        ]
+      },
+      "page_id": "p-media"
+    },
+    {
+      "page_id": "p-media",
+      "element_id": "e-media",
+      "selector": "#element-e-media",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "id": "e-media",
+        "type": "media",
+        "role": "primary",
+        "title": "合成素材调用示例",
+        "body": "原图字节已哈希并随输出保存；这里只演示标注机制。",
+        "refs": [
+          {
+            "id": "synthetic-presentation",
+            "revision": 1,
+            "locator": "本示例工程输入，不是业务实绩"
+          }
+        ],
+        "limits": [],
+        "media": {
+          "kind": "image",
+          "file": {
+            "path": "header-only.png",
+            "sha256": "e991823553fabe4a3a76e2e2afc5d688280eafc0d4a1bf3aa8d86d5f34fac482"
+          },
+          "alt": "合成界面构图：左侧对象区域，右侧两块内容；不是实际产品截图。",
+          "annotations": [
+            {
+              "id": "a-focus",
+              "label": "示例重点区域；标注不新增业务证据。",
+              "x": 38,
+              "y": 14,
+              "width": 55,
+              "height": 31,
+              "refs": [
+                {
+                  "id": "synthetic-presentation",
+                  "revision": 1,
+                  "locator": "本示例工程输入，不是业务实绩"
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "page_id": "p-media",
+      "selector": "#page-p-media",
+      "refs": [
+        {
+          "id": "synthetic-presentation",
+          "revision": 1,
+          "locator": "本示例工程输入，不是业务实绩"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "title": "用真实素材时，保留来源与原图关系",
+        "limits": [
+          "合成工程示例；不代表用户项目状态。"
+        ],
+        "tree": {
+          "element": "e-media"
+        }
+      },
+      "semantic": {
+        "question": "本页的内容关系是什么？",
+        "takeaway": "通过可核对内容表达关系，不升级主张。"
+      },
+      "speaker_notes": null,
+      "source_details": {
+        "selector": "#sources-p-media",
+        "refs": [
+          {
+            "id": "synthetic-presentation",
+            "revision": 1,
+            "locator": "本示例工程输入，不是业务实绩"
+          }
+        ],
+        "detail_elements": []
+      }
+    }
+  ]
+}

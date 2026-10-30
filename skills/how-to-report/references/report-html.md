@@ -1,5 +1,9 @@
 # 从内容蓝图到可运行页面
 
+> avoid unnecessary secondary labels and descriptions. Let the layout do the explanation
+
+先按[观众成稿编辑](audience-copy.md)写可直接阅读的标题、正文、图注与必要条件，再填计划。避免把分析记录、制作指令和内部ID放进可见文字；渲染器不会替作者重写或自动删除已有文案。一个主标题之外的说明只在确有新增职责时使用，让分组、比例、位置与关系承担解释。
+
 需要 HTML 汇报时，按 [叙事与页面行为](narrative-page-behavior.md) 执行适用的P01–P03、V01–V02、S01、M01、L01–L02、A01检查；先做真实选择/核对/修复，再记录证据。先按 [生成与修订方法](reporting-method.md) 形成 Content Blueprint，再选择页面必须让听众理解的问题、判断、证据和限制。页面不是内容单元的固定一对一投影；不为凑齐布局而拆页、补数据或强化主张。
 
 ## 从内容关系选择同屏组合
@@ -25,7 +29,9 @@
 
 **组合计划：** 页用 `layout:"composed"`，另有 `tree`，允许1–12个元素。布局叶为 `{element:"元素ID"}`；容器为 `{type:"row"|"column", weights:[正有限数字], children:[节点]}`。每容器2–6个子节点，weights逐项对应，用相对权重表达主辅空间；最多5层、31节点。每元素恰出现一次，所有叶须全覆盖元素，按树深度优先读取的叶序必须等于elements数组顺序。不能重复放置同一元素来制造多份独立证据，不能把空间树当因果/业务关系图。
 
-组合元素公共字段为 `id/type/role/title/body/refs/limits`；`role`为 `primary|supporting|context`；0.2 的 `limits`允许空数组，0.1 仍要求至少一条。类型及额外字段如下：
+组合元素公共字段为 `id/type/role/refs/limits`；`role`为 `primary|supporting|context`。0.2 中 `title/body`可省略，提供时须为非空纯文本；`text`至少有title或body，`metric`必须有title说明数值对象，其他类型可依靠已有标签完成说明。提供的文案仍显示，工具不自动判其多余。0.1 中title/body仍必填。0.2 的 `limits`允许空数组，0.1 仍要求至少一条。类型及额外字段如下：
+
+0.2 组合元素还可选 `surface:"plain"|"panel"`，默认panel保持兼容。plain去掉卡片底色、边框与阴影，用空白和对齐组织内容；不改变正文、数值或证据含义。不要求每页所有元素都做白卡，也不因为用了plain就认为主次已明确。
 
 | type | 额外字段与边界 |
 |---|---|
@@ -42,7 +48,11 @@
 
 全部数值是有限JSON数字、范围±1e12或 `null`；布尔值不能当数值，value字段不得省略。null明确表示不可得；不能补零、插值或跨缺口连线。折线的x_labels按序等距排布，不自动解析日期或不等时间间隔，不能据不适合的间距推断变化速度。层级label、条形label、各线的label、x_labels及矩阵各轴标签在所属集合中忽略首尾空白/大小写后须可区分。内嵌level/series/point/cell/item的ID也全局唯一。
 
-每个level/item/point/cell有其精确refs；series以其points承载引用，metric使用元素本身refs。页面与元素限制必须跟相关显示可见。元素引用索引提供阅读定位，DOM与page-map保留各数据项的精确引用；仅编号一致或映射闭合不证明来源支持内容。
+每个level/item/point/cell有其精确refs；series以其points承载引用，metric使用元素本身refs。页面与元素限制必须跟相关显示可见。0.2 使用页内共享短编号连接离线来源详情，完整id/revision/locator及图形文本替代保存在画布外的该页附录；演示时打开来源对话框，连续阅读可展开详情，更多菜单可打印含来源的版本。普通幻灯片打印保留原页数。DOM与page-map保留各数据项精确引用，`source_details`定位附录；0.1保留原有显示方式。编号一致不证明来源支持内容，详情也不代替关键限定在主面可见。
+
+引用详情随HTML一起交付，并非私有存储或访问控制。生成前核准哪些引用定位允许外发，私有原文和制作记录保留在工作区；工具不执行自动脱敏或自动发布裁剪。
+
+0.2 的空refs不再在各处重复显示缺引用标签，详情会标明未提供引用的对象，映射仍为[]。这种显示简化不能把未引用/未核验内容变成事实；影响判断的证据不足仍由作者以必要限定表达。
 
 ```text
 python "<本Skill目录>/scripts/report_html.py" render "<实际page-plan.json>" --output "<新的HTML输出目录>"
@@ -75,7 +85,7 @@ V01先判断文字/表格是否足够；V02核定量数据适配；SVG按S01检�
 | type | 额外字段 |
 |---|---|
 | `media` | `media:{kind,file,alt,poster?,annotations?}`；kind是image或video |
-| `diagram` | `diagram:{kind,nodes,edges,lanes?}`；kind是relation或swimlane |
+| `diagram` | `diagram:{kind,nodes,edges,lanes?,direction?}`；kind是relation或swimlane |
 | `table` | `table:{columns,rows}`；行级引用及可见缺失标识 |
 | `schedule` | `schedule`对象；遵循[项目进度工具](../scripts/report_schedule.py)的独立ScheduleSpec校验和视图合同 |
 
@@ -83,9 +93,11 @@ V01先判断文字/表格是否足够；V02核定量数据适配；SVG按S01检�
 
 `alt`是可见的图片/视频说明和文本替代，应说明版本、范围和表达任务；来源用元素refs/limits，真实截图不得被称作完整能力证明。视频有原生播放控制，无自动播放，翻页会暂停；打印显示poster与说明。图片可有最多8个局部框选：`annotations:[{id,label,x,y,width,height,refs}]`，坐标/尺寸为原图百分比，框必须完全在图内、宽高大于零。框选不修改原图，**不是遮盖或脱敏**；发布前必须先准备已脱敏的输入文件。
 
-**显式关系。** nodes为1–8个 `{id,label,refs,lane?}`；edges最多8个 `{id,from,to,relation,label,refs}`，端点必须存在且不同。relation只支持 `sequence|dependency|data-flow|causal|association|feedback`；必须声明并有对应依据，不从相邻推断。association显示无方向连接，其余显示箭头；边号对应完整可见关系说明，节点及边均保留精确引用与文字替代。节点等大仅为排布，不编码数量/权重。仅传入这次要解释的选择性关系；不能将局部图称为完整依赖网络。relation节点短名最多36字符；swimlane节点短名最多24字符，另需1–4个 `{id,label}` lanes、每lane最多4节点，lane标签最多16字符。短名必须仍可追溯原对象；详细解释放正文或备查。工具按输入顺序排布，复杂交叉/长说明应拆分并重新检查，不宣称自动图优化。
+**显式关系。** nodes为1–8个 `{id,label,refs,lane?}`；edges最多8个 `{id,from,to,relation,label,refs,short_label?}`，端点必须存在且不同。relation只支持 `sequence|dependency|data-flow|causal|association|feedback`；必须声明并有对应依据，不从相邻推断。association显示无方向虚线，其余显示箭头。可选 `short_label`为最多24字符的非空可见简称，完整label仍保留在详情；没有简称就显示完整label（最多80字符），不自动截断；超过时要求作者明确编写short_label并检查关键条件。简称仍须表达决定性关系，不能把“获批准后”压成“已完成”。
 
-**结构化表格。** columns为1–6个不同列名，rows为1–10行 `{id,cells,refs}`，cells逐列对应，只接受文字或null，null显示“未提供”。逐行显示来源列，并保留精确映射；大表显式分页，不能删掉必要行伪装适配。数字可作为已核定的文本展示；要做数量编码仍用受约束的chart，而非按文本猜数值。
+工具从显式有向关系分层排列，同起点分支在共同层级展开；反馈不参与前向层级计算，但仍保留并绕行连接。可选 `direction:"horizontal"|"vertical"`选择主轴；relation省略时不超过4层用横向、更多层用纵向，swimlane只支持horizontal；方向不证明业务层级或因果。节点等大不编码数量/权重。仅传入这次要解释的关系，局部图不代表完整依赖网络。relation节点短名最多36字符；swimlane节点短名最多24字符，另需1–4个 `{id,label}` lanes、每lane最多4节点，lane标签最多16字符。节点/边精确引用和完整文字替代可在详情查看，不再强制铺满主画面。复杂环/交叉/长标签仍须浏览器与语义反读，必要时调整轴向、空间或拆成有职责的局部图；不宣称任意图都自动美观。
+
+**结构化表格。** columns为1–6个不同列名，rows为1–10行 `{id,cells,refs}`，cells逐列对应，只接受文字或null，null显示“未提供”。逐行保留来源短编号与精确映射，完整定位进入来源详情；大表显式分页，不能删掉必要行伪装适配。数字可作为已核定的文本展示；要做数量编码仍用受约束的chart，而非按文本猜数值。
 
 page-map将实际展示的 `displayed`、页面意图 `semantic`及 `speaker_notes`分开；媒体映射保留实际源路径、哈希、MIME及快照名。回执记录计划、输出及实际实现文件哈希。追溯闭合不等于真实性或视觉验收通过。
 

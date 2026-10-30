@@ -1,6 +1,7 @@
 {
   "files": {
-    "SKILL.md": "6bb8cb68643ad1deb01b8c8a4d6c2b2c4c18070b9d6be660187d0a38a8a72d52",
+    "SKILL.md": "97666bd911edd561b8de4388310af78d38a37f46307a0fe415acb2e4a224d922",
+    "THIRD_PARTY_NOTICES.md": "269f959153038e85f9be87d01a589c9fd00516d9e6dd75711c4e81cc0d7b0c1d",
     "assets/audit-run/audit.md": "47c7a46b6cc45ac8f3d4ff5d37cb948cfd80791090ff5f2e260e06c92e895206",
     "assets/audit-run/run.json": "e9c794a10c2e1b885a1c40626b39df5639ad6ebd38f4c5eb215851cdddf4fbe1",
     "assets/audit-run/run.md": "a5f33d2b2be0600c19d358c13b1f69b475d15d64c13fb409934141cab62792d9",
@@ -59,8 +60,9 @@
     "knowledge/sources/w3c-use-color.txt": "6c08565692242312939f0f107e2c2b6e52a347f7656bd15e965e57f47eb84620",
     "knowledge/swe-01-delivery-productivity.md": "4e172ad858682d5d24a31e04f08d8a776050488f4a4a24dd8e6ec085f65351c3",
     "knowledge/swe-02-capability-reliability.md": "aae2769d106bc3609a180cb600c139ab9103dafdc957abfe54ef12ef1cda82d2",
+    "references/audience-copy.md": "6070d51eb5e06510895020fb70988d84fb2f4d70e4a1640042052875b24fe401",
     "references/audit-judgment.md": "e44b0d3e7acf312bd90baa3942f920c82dffda453b6582fd3406ac294e821550",
-    "references/audit-method.md": "dd4fb146bbb1ffef83ffd9557d490d78312089e236cf20aaa0c70a32259822e5",
+    "references/audit-method.md": "106e411ef4479c05c39e9357571b0a98491c17b2366987d4675ba7f31f91e14a",
     "references/audit-run.md": "85e5fb346dc7606b44181f21c25ffb1e520b3ca5517cf9dfc08da6516dcb94f8",
     "references/evidence-handoff.md": "5b6e47d7e8650f29d230bf8ecf18b17c6b44df0ab2e5ff8cecfdd3a812b05095",
     "references/goal-discovery.md": "a47e2c65fbeec9b282d11bbeefcb9f7d67e00500aa1402c03dbc3f86aaeb0438",
@@ -95,12 +97,12 @@
     "references/method-sources/sources/step-back.txt": "e924113b0ff9c9a36f7b3a0d5a8f7615c40621d3e27143fe281de99e7660fbd5",
     "references/method-sources/sources/svg-viewport.txt": "5861530e0f22fe490ead4e00e16ae7f3ca78eda6d66d65906e3b187cccfbbdff",
     "references/method-sources/sources/toulmin.txt": "d6d36731d0a42e749b49447fc48f382b1ec592e5f87de72b7346d5a62ae1eb7b",
-    "references/narrative-page-behavior.md": "ee72c5474d47fe69b73a5e230b271f952511cc4aa0fbb65b724f864bef054e0f",
+    "references/narrative-page-behavior.md": "3be55c950cbd30ce480891fbc226aacd8fa25e908effbb5515b58fac4e108ae4",
     "references/numeric-evidence.md": "6480b67b39bd74cadb36776637f5be65e29cf4eb74514cb78fe7a8e44313f9c2",
-    "references/page-audit.md": "e7dcec7a798cd5f1b502fdfd2e3ab76945879a6fdd9e58df656794cfc8db15c3",
+    "references/page-audit.md": "51301c7f977a7fbac7726bbf8cb04e805660a1c0c1e7a4e4585056e19b390441",
     "references/reasoning-methods.md": "fa46a64dedbe71f0255da928e2e4d6d8ca6f6448c986a72102aed2669af94f74",
     "references/report-experience.md": "33d3d6b4fdd88148ffb9d58c39c8094f7a75402e93e455f48d5814291705f447",
-    "references/visual-editing.md": "7496dd2fc1a6cad61cb614be242934a35ad9a6b2e30f6c89d5632a44075bd30c",
+    "references/visual-editing.md": "3f21b2ad1cda0cbcbde6a8aa23fb6212ffd1d6f94a37b0757091f29ad664f0f2",
     "references/workspace-contract.md": "b2fab8da9b1a97985e58d8d27030a70e49b42f7377542ada41bf79d2166fe561",
     "scripts/audit_run.py": "f9ee80383370caf996f554687ebfe761966fe4d9ab81e3cb0cc367912dff3b36",
     "scripts/report_experience.py": "4a7dc4e7b869525cf0911812f66d81780e84658a7dc1f3e068562b1d92ac67a0",
@@ -108,7 +110,7 @@
     "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
   },
   "generated_by": "tools/package_skills.py",
-  "package_version": "0.5.0",
+  "package_version": "0.5.2",
   "skill_name": "report-audit",
   "supported_contract_version": "0.1"
 }

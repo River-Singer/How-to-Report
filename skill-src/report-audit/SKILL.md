@@ -18,6 +18,7 @@ description: 独立审查既有汇报、内容蓝图或页面的事实依据、�
 | 重建判断、查证据与遗漏、形成问题和结论 | [独立审计方法](references/audit-method.md) |
 | 审查路线、逐页内容、图表选择、表达增量或范围内修改 | [叙事与页面行为](references/narrative-page-behavior.md)，独立核对实际动作与证据 |
 | HTML/页面需要视觉反读、真实浏览器与表达含义检查 | [实际页面审计](references/page-audit.md) |
+| 核对分组、生硬表达、过度概括、文案保真及制作说明是否泄漏 | [观众成稿编辑](references/audience-copy.md)，指出具体理解障碍与信息损失，不能继承生成者自评 |
 | 将观察定为缺陷，或复核有争议的审计意见 | [审计判断与反证](references/audit-judgment.md) |
 | 核对数值、复现口径、舍入或阈值 | [数字与计算证据](references/numeric-evidence.md) |
 | 判断附件缺失、来源覆盖或修订历史是否可核 | [最小证据交接](references/evidence-handoff.md) |

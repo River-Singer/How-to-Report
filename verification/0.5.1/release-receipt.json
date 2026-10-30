@@ -1,0 +1,63 @@
+{
+  "release": "0.5.1",
+  "scope": "deterministic_engineering_only",
+  "model_execution": false,
+  "semantic_quality": "not_assessed",
+  "python": "3.14.4",
+  "unit_tests": {
+    "run": 279,
+    "passed": 278,
+    "skipped": 1,
+    "seconds": 99.717
+  },
+  "package_build_check": "passed",
+  "offline_knowledge_check": "passed",
+  "evaluation_input_count": 67,
+  "numeric_oracle": "passed_synthetic_only",
+  "skill_format": "both_passed_utf8",
+  "compileall": "passed",
+  "python310_grammar": {
+    "files": 20,
+    "passed": true,
+    "actual_python310_runtime": false
+  },
+  "lint": "not_configured",
+  "typecheck": "not_configured",
+  "whitespace_command": "git -c core.whitespace=cr-at-eol diff --check",
+  "package_manifest_sha256": {
+    "how-to-report": "e06070be6db0cbada008547dd4e3f2d5b6db5509dfbd6d1342cd17d8e6ffe273",
+    "report-audit": "89172f9b315fd39e7814e85090fb87483df19ca498546b53b6497c0a2f9babc0"
+  },
+  "browser_receipt_sha256": "542c01f032a5ab15aad61cb664485f2d7ce91d5b44a1c8cbbf73c7a7711a9dc8",
+  "browser_evidence_files_verified": 144,
+  "implementation_stable_during_browser": true,
+  "browser_decks": [
+    {
+      "name": "advanced",
+      "pages": 5,
+      "viewports": 3,
+      "pdf_pages": 5,
+      "with_sources_pages": 7
+    },
+    {
+      "name": "line",
+      "pages": 1,
+      "viewports": 3,
+      "pdf_pages": 1,
+      "with_sources_pages": 2
+    },
+    {
+      "name": "schedule",
+      "pages": 6,
+      "viewports": 3,
+      "pdf_pages": 6,
+      "with_sources_pages": 9
+    }
+  ],
+  "not_claimed": [
+    "model_case_execution",
+    "human_reader_validation",
+    "private_original_plans_all_fit",
+    "video_playback_rerun"
+  ]
+}

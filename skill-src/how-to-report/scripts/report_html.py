@@ -102,16 +102,23 @@ def composition(page, seen, where, modern=False):
     """Semantic blocks and their data are independent from a spatial-only tree."""
     require("unit" not in page and "tree" in page, where + ": composed requires tree, not page unit")
     require(1 <= len(page["elements"]) <= 12, where + ": composed requires 1–12 elements")
-    common = ("id", "type", "role", "title", "body", "refs", "limits")
+    common = ("id", "type", "role", "refs", "limits") + (() if modern else ("title", "body"))
     for element in page["elements"]:
         require(isinstance(element, dict), where + ": expected typed element")
         kind = element.get("type")
         require(isinstance(kind, str) and kind in (("text", "metric", "hierarchy", "chart", "media", "diagram", "table", "schedule") if modern else ("text", "metric", "hierarchy", "chart")), where + ": unknown element type")
         extra = {"text": (), "metric": ("unit", "value"), "hierarchy": ("levels",), "chart": ("chart",), "media": ("media",), "diagram": ("diagram",), "table": ("table",), "schedule": ("schedule",)}[kind]
-        fields(element, common + extra, (), where)
+        fields(element, common + extra, ("title", "body", "surface") if modern else (), where)
+        if 'surface' in element:
+            require(element['surface'] in ('plain', 'panel'), where + ': surface must be plain or panel')
         identifier(element["id"], seen, where)
         for key in ("title", "body"):
-            string(element[key], where + "." + key)
+            if key in element:
+                string(element[key], where + "." + key)
+        if kind == "text":
+            require("title" in element or "body" in element, where + ": text needs a title or body")
+        if kind == "metric":
+            require("title" in element, where + ": metric needs a visible title identifying the value")
         require(element["role"] in ("primary", "supporting", "context"), where + ": invalid visual role")
         refs(element["refs"], where)
         limitations(element["limits"], where, modern)
@@ -273,7 +280,42 @@ def reference_text(values, language):
     return "; ".join(f'{v["id"]}@{v["revision"]}' + (" · " + v["locator"] if "locator" in v else "") for v in values)
 
 
-def composed_body(page, plan, mapping, resources=None):
+class PageSources:
+    """One exact reference index per page, outside the presentation canvas."""
+    def __init__(self, page, language):
+        self.page = page
+        self.language = language
+        self.references = []
+        self.details = []
+        self.has_missing_refs = False
+
+    def __call__(self, refs):
+        if not refs:
+            self.has_missing_refs = True
+            return ''
+        codes = []
+        for ref in refs:
+            if ref not in self.references:
+                self.references.append(ref)
+            codes.append(str(self.references.index(ref) + 1))
+        label = ",".join(codes) if codes else ("无引用" if self.language == "zh-CN" else "no ref")
+        return f'<a class="source-marker" href="#sources-{self.page["id"]}" data-source-page="{self.page["id"]}" data-source-number="{codes[0]}" aria-label="{text(("查看来源 " if self.language == "zh-CN" else "View sources ") + label)}">[{label}]</a>'
+
+    def add_detail(self, element_id, label, html):
+        # html is produced only by controlled renderers, never supplied raw text.
+        self.details.append((element_id, label, html))
+
+    def render(self):
+        items = ''.join(f'<li value="{i+1}">{text(reference_text([ref], self.language))}</li>' for i, ref in enumerate(self.references))
+        body = '<ol class="source-index">' + items + '</ol>' if items else '<p>' + text(reference_text([], self.language)) + '</p>'
+        if self.has_missing_refs and items:
+            body += '<p>' + ('部分内容未提供引用；完整对象映射保留空引用，不能据此视为已核验。' if self.language == 'zh-CN' else 'Some items have no reference supplied; their empty references remain in the object mapping and do not establish verification.') + '</p>'
+        body += ''.join(f'<section data-detail-element="{text(eid)}"><h3>{text(label)}</h3>{html}</section>' for eid, label, html in self.details)
+        heading = ("来源与详情 · " if self.language == "zh-CN" else "Sources and details · ") + self.page['title']
+        return f'<details class="page-source-details" id="sources-{self.page["id"]}"><summary>{text(heading)}</summary><div class="source-detail-body">{body}</div></details>'
+
+
+def composed_body(page, plan, mapping, resources=None, source_index=None):
     zh = plan["language"] == "zh-CN"
     missing = "缺失" if zh else "Unavailable"
     unit_label = "单位" if zh else "Unit"
@@ -282,6 +324,8 @@ def composed_body(page, plan, mapping, resources=None):
         eid, kind = element["id"], element["type"]
         declared = []
         def markers(values):
+            if source_index is not None:
+                return source_index(values)
             codes = []
             for ref in values:
                 if ref not in declared:
@@ -303,9 +347,9 @@ def composed_body(page, plan, mapping, resources=None):
         if kind in ("media", "diagram", "table", "schedule"):
             if kind == "schedule":
                 from schedule_render import render_component
-                main, extra_mapping = render_component(element, plan["language"])
+                main, extra_mapping = render_component(element, plan["language"], source_ref=source_index)
             else:
-                main, extra_mapping = presentation_components.render_component(element, plan["language"], resources or {})
+                main, extra_mapping = presentation_components.render_component(element, plan["language"], resources or {}, source_ref=source_index)
             mapping.extend({**entry, "page_id": page["id"]} for entry in extra_mapping)
         elif kind == "text":
             main = '<div class="text-space" aria-hidden="true"></div>'
@@ -361,7 +405,7 @@ def composed_body(page, plan, mapping, resources=None):
                     rows.append(f'<tr data-series-id="{series["id"]}"><th scope="row"><span class="series-key series-{si}" aria-hidden="true"></span>{text(series["label"])} <span class="series-style">{pattern}</span></th>{"".join(cells)}</tr>')
                 zero_y = 108 - (0 - low) / span * 96
                 heads = "".join(f'<th scope="col">{text(label)}</th>' for label in chart["x_labels"])
-                main = f'<div class="chart-unit">{unit_label}: {text(unit)} · {"纵轴" if zh else "Y scale"} {text(low)} — {text(high)}</div><svg class="line-plot" viewBox="0 0 800 120" preserveAspectRatio="none" role="img" aria-label="{text(element["title"])}"><line class="line-zero" x1="168" x2="800" y1="{zero_y:.8f}" y2="{zero_y:.8f}"></line>{"".join(vectors)}</svg><table class="line-values"><thead><tr><th scope="col">{"序列 / 时间" if zh else "Series / time"}</th>{heads}</tr></thead><tbody>{"".join(rows)}</tbody></table>'
+                main = f'<div class="chart-unit">{unit_label}: {text(unit)} · {"纵轴" if zh else "Y scale"} {text(low)} — {text(high)}</div><svg class="line-plot" viewBox="0 0 800 120" preserveAspectRatio="none" role="img" aria-label="{text(element.get("title", page["title"]))}"><line class="line-zero" x1="168" x2="800" y1="{zero_y:.8f}" y2="{zero_y:.8f}"></line>{"".join(vectors)}</svg><table class="line-values"><thead><tr><th scope="col">{"序列 / 时间" if zh else "Series / time"}</th>{heads}</tr></thead><tbody>{"".join(rows)}</tbody></table>'
             else:
                 values = [v["value"] for row in chart["cells"] for v in row if v["value"] is not None]
                 maximum = max([abs(v) for v in values] + [0])
@@ -385,17 +429,22 @@ def composed_body(page, plan, mapping, resources=None):
         # and every legacy 0.1 header without silently migrating content.
         deduplicated = {}
         if plan["page_plan_version"] == "0.2" and kind == "schedule" and len(page["elements"]) == 1:
-            if element["title"] == page["title"]:
+            if element.get("title") == page["title"]:
                 deduplicated["title"] = f"#page-{page['id']} h1"
-            if element["body"] == f'状态日 {element["schedule"]["spec"]["as_of"]} · 自然日 · 日终快照':
+            if element.get("body") == f'状态日 {element["schedule"]["spec"]["as_of"]} · 自然日 · 日终快照':
                 deduplicated["body"] = f"#element-{eid} .schedule-context"
         header_parts = []
-        if "title" not in deduplicated:
+        if "title" in element and "title" not in deduplicated:
             header_parts.append(f'<h2>{text(element["title"])}{sources}</h2>')
-        if "body" not in deduplicated:
+        if "body" in element and "body" not in deduplicated:
             header_parts.append(f'<p>{text(element["body"])}</p>')
         header = '<header class="element-header">' + ''.join(header_parts) + '</header>' if header_parts else ''
-        blocks[eid] = f'<section class="page-element composed-element role-{element["role"]} type-{kind}" id="element-{eid}" data-element-id="{eid}" data-element-type="{kind}" data-refs="{text(json.dumps(element["refs"], ensure_ascii=False))}">{header}{main}<footer class="element-footer"><p class="element-limits">{text(limits)}</p><small class="references">{text(legend)}</small></footer></section>'
+        reference_block = sources if source_index is not None and not header_parts else ''
+        if source_index is None:
+            reference_block = f'<small class="references">{text(legend)}</small>'
+        elif "title" not in element or "title" in deduplicated:
+            reference_block = sources
+        blocks[eid] = f'<section class="page-element composed-element role-{element["role"]} type-{kind} surface-{element.get("surface", "panel")}" id="element-{eid}" data-element-id="{eid}" data-element-type="{kind}" data-refs="{text(json.dumps(element["refs"], ensure_ascii=False))}">{header}{main}<footer class="element-footer"><p class="element-limits">{text(limits)}</p>{reference_block}</footer></section>'
         entry = {"page_id": page["id"], "element_id": eid, "selector": f"#element-{eid}", "refs": element["refs"], "displayed": {k: v for k, v in element.items() if k not in deduplicated}}
         if deduplicated:
             entry["shared_display"] = deduplicated
@@ -412,8 +461,11 @@ def composed_body(page, plan, mapping, resources=None):
 def render_document(plan, resources=None):
     zh = plan["language"] == "zh-CN"
     pages = []
+    appendices = []
     mapping = []
     for index, page in enumerate(plan["pages"]):
+        modern = plan["page_plan_version"] == VERSION
+        source_index = PageSources(page, plan['language']) if modern else None
         layout = page["layout"]
         blocks = []
         values = [e["value"] for e in page["elements"] if layout == "data" and e["value"] is not None]
@@ -423,7 +475,7 @@ def render_document(plan, resources=None):
         for n, element in enumerate(page["elements"] if layout != "composed" else []):
             identity = element["id"]
             attr = text(json.dumps(element["refs"], ensure_ascii=False))
-            reference = text(reference_text(element["refs"], plan["language"]))
+            reference = source_index(element['refs']) if modern else text(reference_text(element["refs"], plan["language"]))
             if layout == "data":
                 value = element["value"]
                 label = ("缺失" if zh else "Unavailable") if value is None else str(value)
@@ -434,7 +486,7 @@ def render_document(plan, resources=None):
                 blocks.append(f'<section id="element-{identity}" class="page-element" data-element-id="{identity}" data-refs="{attr}">{number}<h2>{text(element["title"])}</h2><p>{text(element["body"])}</p><small class="references">{reference}</small></section>')
             mapping.append({"page_id": page["id"], "element_id": identity, "selector": f"#element-{identity}", "refs": element["refs"], "displayed": element})
         if layout == "composed":
-            body = composed_body(page, plan, mapping, resources)
+            body = composed_body(page, plan, mapping, resources, source_index)
         elif layout == "data":
             body = f'<table><caption>{"单位" if zh else "Unit"}: {text(page["unit"])}</caption><thead><tr><th>{"项目" if zh else "Item"}</th><th>{"数值" if zh else "Value"}</th><th>{"解释与依据" if zh else "Meaning and evidence"}</th></tr></thead><tbody>{"".join(blocks)}</tbody></table>'
         else:
@@ -449,8 +501,15 @@ def render_document(plan, resources=None):
         limit_block = f'<div class="limitations"><strong>{"范围与限制" if zh else "Scope and limits"}</strong><ul>{limits}</ul></div>' if limits else '<div></div>'
         backup = ''.join(f'<button class="backup-link" data-backup-target="{text(link["target"])}" type="button">{text(link["label"])}</button>' for link in page.get('backup_links', []))
         notes = f'<template class="speaker-notes">{text(page.get("notes", ""))}</template>'
-        pages.append(f'<article class="slide layout-{layout} {"single-title" if modern else "legacy-header"}" id="page-{page["id"]}" data-page-id="{page["id"]}" data-layout="{layout}" aria-labelledby="title-{page["id"]}"><header class="page-header">{heading}</header><div class="page-content">{body}</div><footer class="page-footer">{limit_block}<div><p class="page-references">{text(reference_text(page["refs"], plan["language"]))}</p><div class="backup-links">{backup}</div></div></footer>{notes}</article>')
+        page_refs = source_index(page['refs']) if modern else text(reference_text(page["refs"], plan["language"]))
+        if modern:
+            page_refs = f'<a class="source-details-link" href="#sources-{page["id"]}" data-source-page="{page["id"]}">{"来源与详情" if zh else "Sources and details"}</a> ' + page_refs
+            appendices.append(source_index.render())
+        pages.append(f'<article class="slide layout-{layout} {"single-title" if modern else "legacy-header"}" id="page-{page["id"]}" data-page-id="{page["id"]}" data-layout="{layout}" aria-labelledby="title-{page["id"]}"><header class="page-header">{heading}</header><div class="page-content">{body}</div><footer class="page-footer">{limit_block}<div><p class="page-references">{page_refs}</p><div class="backup-links">{backup}</div></div></footer>{notes}</article>')
         mapping.append({"page_id": page["id"], "selector": f"#page-{page['id']}", "refs": page["refs"], "displayed": {k: page[k] for k in (("layout", "title", "limits", "unit", "tree", "subtitle", "backup_links") if modern else ("layout", "question", "title", "takeaway", "limits", "unit", "tree")) if k in page}, "semantic": {"question": page["question"], "takeaway": page["takeaway"]}, "speaker_notes": page.get("notes")})
+        if modern:
+            mapping[-1]['source_details'] = {'selector': '#sources-' + page['id'], 'refs': source_index.references,
+                                           'detail_elements': [item[0] for item in source_index.details]}
     css = (ASSETS / "deck.css").read_text(encoding="utf-8")
     for name in ("schedule.css",):
         if (ASSETS / name).is_file():
@@ -470,11 +529,13 @@ def render_document(plan, resources=None):
     document = f'''<!doctype html>
 <html lang="{plan['language']}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; media-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'"><title>{text(plan['title'])}</title><style>{css}</style></head><body>
 <div class="deck-shell"><main id="deck" aria-label="{text(plan['title'])}">{''.join(pages)}</main></div>
+<section id="source-appendices" aria-label="{'来源与详情' if zh else 'Sources and details'}">{''.join(appendices)}</section>
+<dialog id="source-dialog" aria-labelledby="source-heading"><header><h2 id="source-heading">{'来源与详情' if zh else 'Sources and details'}</h2><button id="source-close" type="button">{names['close']}</button></header><div id="source-dialog-content"></div></dialog>
 <nav class="toolbar" aria-label="{'页面导航' if zh else 'Page navigation'}"><button id="previous" type="button" aria-label="{labels['previous']}">←</button><output id="page-number" aria-live="polite"></output><button id="next" type="button" aria-label="{labels['next']}">→</button><span class="toolbar-divider"></span><button id="contents-toggle" type="button" aria-haspopup="dialog">{names['contents']}</button>{notes_button}<button id="fullscreen" type="button">{names['fullscreen']}</button><button id="more-toggle" type="button" aria-expanded="false">{names['more']}</button><button id="backup-return" type="button" hidden>{names['return']}</button></nav>
 <aside class="page-dots" aria-label="{'跳转页面' if zh else 'Jump to page'}">{dots}</aside>
 <dialog id="contents-dialog" aria-labelledby="contents-heading"><header><h2 id="contents-heading">{names['contents']}</h2><button id="contents-close" type="button">{names['close']}</button></header><div class="contents-grid">{contents}</div></dialog>
 <aside id="notes-panel" hidden aria-label="{names['notes']}"><header><h2>{names['notes']}</h2><button id="notes-close" type="button">{names['close']}</button></header><p id="notes-text"></p></aside>
-<div id="more-menu" hidden><button id="read-all" type="button" aria-pressed="false">{labels['all']}</button><button id="print-deck" type="button">{names['print']}</button></div><p id="layout-warning" role="status" hidden>{labels['warning']}</p><p id="control-status" role="status" aria-live="polite"></p>
+<div id="more-menu" hidden><button id="read-all" type="button" aria-pressed="false">{labels['all']}</button><button id="print-deck" type="button">{names['print']}</button><button id="print-sources" type="button">{'打印含来源' if zh else 'Print with sources'}</button></div><p id="layout-warning" role="status" hidden>{labels['warning']}</p><p id="control-status" role="status" aria-live="polite"></p>
 <noscript>{'脚本未运行，以下保留全部页面；未执行布局检查。' if zh else 'Scripts unavailable: all pages remain visible; layout unchecked.'}</noscript><script>const DECK_LABELS={labels_json};const DECK_ROUTE={route_json};\n{js}</script></body></html>'''
     return document.encode("utf-8"), mapping
 
@@ -506,7 +567,7 @@ def render(plan_path, directory):
     payload = {"index.html": html, "plan.json": raw, "page-map.json": encode({"page_plan_version": plan["page_plan_version"], "plan_sha256": digest(raw), "canvas": canvas, "scope": "declared_mapping_not_semantic_verification", "elements": mapping})}
     payload.update(media_payload)
     receipt = {"renderer_contract_version": VERSION, "plan_sha256": digest(raw), "files": {name: digest(data) for name, data in payload.items()}, "page_count": len(plan["pages"]), "canvas": canvas, "browser_validation": "not_run", "semantic_validation": "not_run", "run_mutation": "not_performed"}
-    implementation = [Path(__file__), Path(__file__).with_name("presentation_components.py"), ASSETS / "deck.css", ASSETS / "deck.js"]
+    implementation = [Path(__file__), Path(__file__).with_name("presentation_components.py"), Path(__file__).with_name("diagram_layout.py"), ASSETS / "deck.css", ASSETS / "deck.js"]
     implementation += [p for p in (Path(__file__).with_name("schedule_core.py"), Path(__file__).with_name("schedule_render.py"), ASSETS / "schedule.css") if p.is_file()]
     receipt["implementation_sha256"] = {p.name: digest(p.read_bytes()) for p in implementation}
     payload["render-receipt.json"] = encode(receipt)

@@ -1,0 +1,42 @@
+test_bad_static_resource_links_preserve_previous_packages (test_packaging.PackagingTests.test_bad_static_resource_links_preserve_previous_packages) ... ok
+test_check_is_read_only_and_detects_modified_extra_and_missing_files (test_packaging.PackagingTests.test_check_is_read_only_and_detects_modified_extra_and_missing_files) ... ok
+test_clean_rebuild_removes_deleted_source_payload (test_packaging.PackagingTests.test_clean_rebuild_removes_deleted_source_payload) ... ok
+test_cross_source_case_collision_is_rejected (test_packaging.PackagingTests.test_cross_source_case_collision_is_rejected) ... ok
+test_directory_fallback_failed_rollback_retains_both_backups (test_packaging.PackagingTests.test_directory_fallback_failed_rollback_retains_both_backups) ... Package build: Windows directory rename unavailable; preserving managed roots.
+ok
+test_directory_fallback_finishes_all_backups_before_any_mutation (test_packaging.PackagingTests.test_directory_fallback_finishes_all_backups_before_any_mutation) ... Package build: Windows directory rename unavailable; preserving managed roots.
+ok
+test_directory_fallback_partial_install_restores_both_exact_trees (test_packaging.PackagingTests.test_directory_fallback_partial_install_restores_both_exact_trees) ... Package build: Windows directory rename unavailable; preserving managed roots.
+ok
+test_directory_fallback_rechecks_links_before_backup_or_mutation (test_packaging.PackagingTests.test_directory_fallback_rechecks_links_before_backup_or_mutation) ... Package build: Windows directory rename unavailable; preserving managed roots.
+ok
+test_directory_fallback_rollback_removes_only_new_empty_package_root (test_packaging.PackagingTests.test_directory_fallback_rollback_removes_only_new_empty_package_root) ... Package build: Windows directory rename unavailable; preserving managed roots.
+ok
+test_external_links_code_examples_and_reference_definition (test_packaging.PackagingTests.test_external_links_code_examples_and_reference_definition) ... ok
+test_failed_rollback_retains_previous_package_for_recovery (test_packaging.PackagingTests.test_failed_rollback_retains_previous_package_for_recovery) ... ok
+test_failed_second_replacement_rolls_back_both_packages (test_packaging.PackagingTests.test_failed_second_replacement_rolls_back_both_packages) ... ok
+test_file_directory_collision_is_rejected (test_packaging.PackagingTests.test_file_directory_collision_is_rejected) ... ok
+test_first_windows_backup_rename_preserves_roots_and_exact_payload (test_packaging.PackagingTests.test_first_windows_backup_rename_preserves_roots_and_exact_payload) ... Package build: Windows directory rename unavailable; preserving managed roots.
+Package build: Windows directory rename unavailable; preserving managed roots.
+ok
+test_first_windows_stage_install_error_does_not_use_fallback (test_packaging.PackagingTests.test_first_windows_stage_install_error_does_not_use_fallback) ... ok
+test_interpreter_caches_do_not_become_source_payload (test_packaging.PackagingTests.test_interpreter_caches_do_not_become_source_payload) ... ok
+test_later_windows_backup_error_uses_normal_rollback (test_packaging.PackagingTests.test_later_windows_backup_error_uses_normal_rollback) ... ok
+test_linked_output_is_never_replaced_or_traversed (test_packaging.PackagingTests.test_linked_output_is_never_replaced_or_traversed) ... ok
+test_manifest_and_shared_bytes_are_complete (test_packaging.PackagingTests.test_manifest_and_shared_bytes_are_complete) ... ok
+test_missing_core_reference_and_mismatched_name_rejected (test_packaging.PackagingTests.test_missing_core_reference_and_mismatched_name_rejected) ... ok
+test_other_first_backup_errors_do_not_use_directory_fallback (test_packaging.PackagingTests.test_other_first_backup_errors_do_not_use_directory_fallback) ... ok
+test_relocated_package_executes_real_audit_init_and_check (test_packaging.PackagingTests.test_relocated_package_executes_real_audit_init_and_check) ... ok
+test_relocated_package_executes_real_report_init_and_inspect (test_packaging.PackagingTests.test_relocated_package_executes_real_report_init_and_inspect) ... ok
+test_relocated_package_executes_real_version_change_and_acceptance (test_packaging.PackagingTests.test_relocated_package_executes_real_version_change_and_acceptance) ... ok
+test_relocated_package_renders_real_offline_html (test_packaging.PackagingTests.test_relocated_package_renders_real_offline_html) ... ok
+test_relocation_executes_helper_without_checkout_or_sibling (test_packaging.PackagingTests.test_relocation_executes_helper_without_checkout_or_sibling) ... ok
+test_shared_collision_preserves_both_previous_packages (test_packaging.PackagingTests.test_shared_collision_preserves_both_previous_packages) ... ok
+test_source_directory_link_is_rejected (test_packaging.PackagingTests.test_source_directory_link_is_rejected) ... ok
+test_unknown_output_directory_never_overwritten (test_packaging.PackagingTests.test_unknown_output_directory_never_overwritten) ... ok
+test_unrelated_output_directory_is_untouched (test_packaging.PackagingTests.test_unrelated_output_directory_is_untouched) ... ok
+
+----------------------------------------------------------------------
+Ran 30 tests in 26.012s
+
+OK
