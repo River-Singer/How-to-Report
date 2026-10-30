@@ -12,6 +12,7 @@ def render_component(element, language, source_ref=None):
     validate_component(element, set())
     cfg = element["schedule"]; spec = cfg["spec"]; view = cfg["view"]; eid = element["id"]
     zh = language == "zh-CN"
+    audience = bool(getattr(source_ref, "audience", False))
     e = lambda value: escape(str(value), quote=True)
     states = {"not_started": "未开始", "active": "进行中", "blocked": "受阻", "done": "已完成"} if zh else {k: k.replace("_", " ") for k in ("not_started", "active", "blocked", "done")}
     acceptance = {"not_submitted": "未提交", "pending": "待审核", "accepted": "已接受", "rejected": "未通过", "unknown": "记录缺失 / 待核"} if zh else {"not_submitted": "not submitted", "pending": "pending review", "accepted": "accepted", "rejected": "rejected", "unknown": "unknown / no record"}
@@ -27,19 +28,28 @@ def render_component(element, language, source_ref=None):
             marks.append(str(refs_used.index(ref) + 1))
         return '<sup class="schedule-source">[' + ",".join(marks) + ']</sup>' if marks else ""
 
-    def attrs(key, value, refs):
+    def attrs(key, value, refs, date_details=None):
         identity = eid + "-" + key
         selector = "#schedule-" + identity
         mappings.append({"element_id": eid, "datum_id": identity, "selector": selector, "refs": refs,
                          "displayed": value})
+        if date_details:
+            mappings[-1]["date_details"] = date_details
         return f'id="schedule-{e(identity)}" data-datum-id="{e(identity)}" data-refs="{e(json.dumps(refs, ensure_ascii=False))}"'
 
     def deviation(value):
         return unknown if value is None else (f"{value:+d} " + ("自然日" if zh else "days"))
 
+    def finish_text(task):
+        value = finish(task)
+        if not value or not audience:
+            return value or unknown
+        label = ("实际" if zh else "Actual") if task.get("actual", {}).get("finish") else ("预计" if zh else "Expected")
+        return f"{label} {value}"
+
     def dates_text(task):
         parts = []
-        for key, label in (("baseline", "基线" if zh else "Baseline"), ("actual", "实际" if zh else "Actual"), ("forecast", "预测" if zh else "Forecast")):
+        for key, label in (("baseline", "基线" if zh else "Baseline"), ("actual", "实际" if zh else "Actual"), ("forecast", ("预计" if audience else "预测") if zh else "Forecast")):
             value = task.get(key, {})
             parts.append(f'{label}: {value.get("start", unknown)} → {value.get("finish", unknown)}')
         return " · ".join(parts)
@@ -85,6 +95,9 @@ def render_component(element, language, source_ref=None):
         context += reference_marks(b["refs"])
     else:
         context += ' · ' + ("无批准基线；仅呈现现状，不判断延期" if zh else "No approved baseline; current schedule only, no lateness conclusion")
+    if audience:
+        source_ref.add_detail(eid + "-context", "排期口径" if zh else "Schedule context", '<p>' + context + '</p>')
+        context = ("截至 " if zh else "As of ") + e(spec["as_of"])
     content.append('<p class="schedule-context">' + context + '</p>')
     notices = warnings(spec)
     if any(w["code"] == "same_day_fs_order_unknown" for w in notices):
@@ -134,7 +147,7 @@ def render_component(element, language, source_ref=None):
             for kind, field, y in (("baseline","baseline_date",13),("actual","actual_date",29),("forecast","forecast_date",29)):
                 if field in mark:
                     px=x(day(mark[field])); glyphs.append(f'<path class="schedule-{kind}" d="M{px:.4f},{y-5} l5,5 l-5,5 l-5,-5 Z"/>')
-            dates = ' · '.join(f'{label}: {mark.get(field,unknown)}' for field,label in (("baseline_date","基线" if zh else "Baseline"),("actual_date","实际" if zh else "Actual"),("forecast_date","预测" if zh else "Forecast")))
+            dates = ' · '.join(f'{label}: {mark.get(field,unknown)}' for field,label in (("baseline_date","基线" if zh else "Baseline"),("actual_date","实际" if zh else "Actual"),("forecast_date",("预计" if audience else "预测") if zh else "Forecast")))
             graphic='<svg viewBox="0 0 800 45" preserveAspectRatio="none" role="img" aria-label="'+e(dates)+'">'+''.join(glyphs)+'</svg>'
             rows.append(f'<tr {attrs(key,{**mark,"deviation_days":delta(mark,True)},mark["refs"])}><th>{e(mark["label"])}{reference_marks(mark["refs"])}</th><td>{graphic}<small>{e(dates)}</small></td><td>{deviation(delta(mark,True))}<small>{e(mark.get("condition",""))}</small></td></tr>')
         content.append('<table class="schedule-data schedule-timeline"><colgroup><col class="schedule-label-col"><col class="schedule-time-col"><col></colgroup><thead><tr><th>'+('里程碑' if zh else 'Milestone')+'</th><th>'+axis+'</th><th>'+('日期偏差 / 条件' if zh else 'Deviation / condition')+'</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table>')
@@ -147,7 +160,7 @@ def render_component(element, language, source_ref=None):
         for key in cfg["item_ids"]:
             task=tasks[key]; task_refs=list(task["refs"])
             if view=="summary":
-                rows.append(f'<tr {attrs(key,{**task,"deviation_days":delta(task)},task_refs)}><th>{e(task["label"])}{reference_marks(task_refs)}<small>{e(task.get("owner",unknown))}</small></th><td>{e(states[task["state"]])}</td><td>{e(finish(task) or unknown)}<small>{deviation(delta(task))}</small></td><td>{e(task.get("condition",unknown))}</td></tr>')
+                rows.append(f'<tr {attrs(key,{**task,"deviation_days":delta(task)},task_refs)}><th>{e(task["label"])}{reference_marks(task_refs)}<small>{e(task.get("owner",unknown))}</small></th><td>{e(states[task["state"]])}</td><td>{e(finish_text(task))}<small>{deviation(delta(task))}</small></td><td>{e(task.get("condition",unknown))}</td></tr>')
             elif view=="outcomes":
                 acc=task.get("acceptance",{"status":"unknown"}); task_refs += [r for r in acc.get("refs",[]) if r not in task_refs]
                 details='<strong>'+e(acc.get("result",unknown))+'</strong><small>'+e(("标准: " if zh else "Criteria: ")+acc.get("criteria",unknown))+'</small><small>'+e(("范围: " if zh else "Scope: ")+acc.get("scope",unknown))+'</small>'
@@ -155,19 +168,32 @@ def render_component(element, language, source_ref=None):
             else:
                 progress=task.get("progress"); ptext=unknown if not progress else f'{progress["value"]}% · {progress["basis"]}'
                 if progress: task_refs += [r for r in progress["refs"] if r not in task_refs]
-                label=f'<strong>{e(task["label"])}</strong>{reference_marks(task_refs)}<small>{e(task.get("owner",unknown))} · {e(states[task["state"]])}</small><small>{e(ptext)}</small>'
-                result=f'<strong>{e(finish(task) or unknown)}</strong><span>{deviation(delta(task))}</span><small>{e(task.get("condition",""))}</small>'
-                rows.append(f'<tr {attrs(key,{**task,"deviation_days":delta(task)},task_refs)}><th>{label}</th><td>{interval_svg(task)}<small class="schedule-date-text">{e(dates_text(task))}</small></td><td>{result}</td></tr>')
+                progress_text = '' if audience and not progress else f'<small>{e(ptext)}</small>'
+                label=f'<strong>{e(task["label"])}</strong>{reference_marks(task_refs)}<small>{e(task.get("owner",unknown))} · {e(states[task["state"]])}</small>{progress_text}'
+                result=f'<strong>{e(finish_text(task))}</strong><span>{deviation(delta(task))}</span><small>{e(task.get("condition",""))}</small>'
+                dates = dates_text(task)
+                date_markup = f'<small class="schedule-date-text">{e(dates)}</small>'
+                date_details = None
+                if audience:
+                    detail_id = eid + '-dates-' + key
+                    source_ref.add_detail(detail_id, task['label'] + (' · 日期明细' if zh else ' · Date details'),
+                                          f'<p class="schedule-date-text">{e(dates)}</p>')
+                    date_details = {"selector": f'#sources-{source_ref.page["id"]} [data-detail-element="{detail_id}"]', "text": dates}
+                    date_markup = ''
+                rows.append(f'<tr {attrs(key,{**task,"deviation_days":delta(task)},task_refs,date_details)}><th>{label}</th><td>{interval_svg(task)}{date_markup}</td><td>{result}</td></tr>')
         if view=="summary":
             for key in cfg.get("milestone_ids",[]):
                 mark=next(m for m in spec["milestones"] if m["id"]==key)
                 state=("已发生" if "actual_date" in mark else "当前预测" if "forecast_date" in mark else "未知") if zh else ("actual" if "actual_date" in mark else "forecast" if "forecast_date" in mark else "unknown")
+                if audience and zh:
+                    state = "实际" if "actual_date" in mark else "预计" if "forecast_date" in mark else "未知"
                 rows.append(f'<tr {attrs(key,{**mark,"deviation_days":delta(mark,True)},mark["refs"])}><th>{e(mark["label"])}{reference_marks(mark["refs"])}</th><td>{state}</td><td>{e(mark.get("actual_date") or mark.get("forecast_date") or unknown)}<small>{deviation(delta(mark,True))}</small></td><td>{e(mark.get("condition",unknown))}</td></tr>')
             content.append('<table class="schedule-data schedule-summary"><thead><tr><th>'+('事项 / 节点</th><th>状态</th><th>当前日期 / 偏差</th><th>关键条件' if zh else 'Item / milestone</th><th>State</th><th>Current date / deviation</th><th>Condition')+'</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table>')
         elif view=="outcomes":
             content.append('<table class="schedule-data schedule-outcomes"><thead><tr><th>'+('事项</th><th>结果、标准与范围</th><th>执行</th><th>验收' if zh else 'Item</th><th>Result, criteria and scope</th><th>Execution</th><th>Acceptance')+'</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table>')
         else:
-            content.append('<table class="schedule-data schedule-timeline"><colgroup><col class="schedule-label-col"><col class="schedule-time-col"><col></colgroup><thead><tr><th>'+('事项 / 状态 / 进度口径' if zh else 'Item / state / progress basis')+'</th><th>'+axis+'</th><th>'+('当前完成日 / 偏差' if zh else 'Current finish / deviation')+'</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table>')
+            finish_heading = ('完成日期 / 较原计划' if zh else 'Finish date / vs original plan') if audience else ('当前完成日 / 偏差' if zh else 'Current finish / deviation')
+            content.append('<table class="schedule-data schedule-timeline"><colgroup><col class="schedule-label-col"><col class="schedule-time-col"><col></colgroup><thead><tr><th>'+('事项 / 状态 / 进度口径' if zh else 'Item / state / progress basis')+'</th><th>'+axis+'</th><th>'+finish_heading+'</th></tr></thead><tbody>'+''.join(rows)+'</tbody></table>')
         if cfg.get("action_ids"):
             actions={a["id"]:a for a in spec["actions"]}
             content.append('<ul class="schedule-actions">')
@@ -178,7 +204,15 @@ def render_component(element, language, source_ref=None):
     if view == "milestones":
         content.append('<p class="schedule-note">'+('灰色实心菱形：批准基线；蓝色实心菱形：已经发生；蓝色空心虚线菱形：当前预测。' if zh else 'Gray filled diamond: baseline; blue filled diamond: actual; blue hollow dashed diamond: forecast.')+'</p>')
     if view == "gantt":
-        content.append('<p class="schedule-legend"><span class="legend-baseline">'+('细灰线：批准基线' if zh else 'Thin gray: baseline')+'</span><span class="legend-actual">'+('实线：实际经过' if zh else 'Solid: actual elapsed')+'</span><span class="legend-forecast">'+('虚线：预测' if zh else 'Dashed: forecast')+'</span> · '+('经过区间不等于工作量；点仅表示已知日期。' if zh else 'Elapsed time is not work completed; dots indicate a single known date.')+'</p>')
+        note = '经过区间不等于工作量；点仅表示已知日期。' if zh else 'Elapsed time is not work completed; dots indicate a single known date.'
+        if audience:
+            source_ref.add_detail(eid + '-legend', '图例说明' if zh else 'Legend details', '<p>' + e(note) + '</p>')
+            labels = ('原计划', '实际', '预计') if zh else ('Original plan', 'Actual', 'Expected')
+            tail = ''
+        else:
+            labels = ('细灰线：批准基线', '实线：实际经过', '虚线：预测') if zh else ('Thin gray: baseline', 'Solid: actual elapsed', 'Dashed: forecast')
+            tail = ' · ' + e(note)
+        content.append('<p class="schedule-legend">' + ''.join(f'<span class="legend-{key}">{e(label)}</span>' for key,label in zip(('baseline','actual','forecast'), labels)) + tail + '</p>')
     sources=' · '.join(f'[{n+1}] {r["id"]}@{r["revision"]}'+(' · '+r["locator"] if r.get("locator") else '') for n,r in enumerate(refs_used))
     if source_ref is None:
         content.append('<p class="schedule-provenance">'+e(sources)+'</p>')

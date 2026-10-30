@@ -365,7 +365,7 @@ def to_plan(spec, views, canvas=None):
             pid = f"schedule-{view}-{n + 1}"
             config = {"spec": spec, "view": view, **group}
             element = {"id": pid + "-view", "type": "schedule", "role": "primary", "title": titles[view],
-                       "body": "状态日 " + spec["as_of"] + " · 自然日 · 日终快照", "refs": spec["refs"], "limits": [], "schedule": config}
+                       "refs": spec["refs"], "limits": [], "schedule": config}
             validate_component(element, set())
             title = titles[view] + (f"（{n + 1}/{len(groups)}）" if len(groups) > 1 else "")
             element["title"] = title
@@ -373,4 +373,4 @@ def to_plan(spec, views, canvas=None):
                           "takeaway": "按明确来源区分已经发生、尚未发生及尚未核实的内容。", "limits": spec.get("limits", []),
                           "refs": spec["refs"], "elements": [element], "tree": {"element": element["id"]}})
     need(len(pages) <= 100, "too many pages; split the reporting scope")
-    return {"page_plan_version": "0.2", "title": spec["title"], "language": "zh-CN", "canvas": canvas, "pages": pages}
+    return {"page_plan_version": "0.2", "display_mode": "audience", "title": spec["title"], "language": "zh-CN", "canvas": canvas, "pages": pages}

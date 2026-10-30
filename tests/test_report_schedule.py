@@ -27,6 +27,7 @@ class ScheduleTests(unittest.TestCase):
         self.assertEqual(core.delta(self.spec["tasks"][1]), 15)
         self.assertEqual(core.delta(self.spec["milestones"][0], True), 5)
         plan = core.to_plan(self.spec, list(core.VIEWS))
+        self.assertEqual(plan['display_mode'], 'audience')
         self.assertEqual(len(plan["pages"]), 6)
         self.assertEqual({p["elements"][0]["schedule"]["view"] for p in plan["pages"]}, set(core.VIEWS))
 

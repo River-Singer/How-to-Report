@@ -1,0 +1,522 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; media-src data:; connect-src 'none'; base-uri 'none'; form-action 'none'"><title>演练示例 · 设备试用安排</title><style>:root{color-scheme:light;--ink:#24282e;--muted:#56616d;--paper:#f8fbff;--accent:#087bc1;--line:#dce5ec}
+*{box-sizing:border-box}body{margin:0;background:#e7edee;color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif}
+.slide{width:var(--canvas-width);height:var(--canvas-height);padding:54px 64px 38px;background:var(--paper);display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:28px;position:relative;margin:24px auto;border-top:8px solid var(--accent)}
+.slide.audience-mode{grid-template-rows:auto minmax(0,1fr)}
+.slide.audience-mode.has-page-actions{grid-template-rows:auto minmax(0,1fr) auto}
+.reading-mode .slide.audience-mode{grid-template-rows:auto auto}
+.reading-mode .slide.audience-mode.has-page-actions{grid-template-rows:auto auto auto}
+.eyebrow{display:flex;justify-content:space-between;gap:24px;font-size:18px;letter-spacing:.04em;color:var(--muted);margin-bottom:22px}
+.eyebrow span:first-child{overflow-wrap:anywhere}.eyebrow span:last-child{white-space:nowrap}
+.question{font-size:22px;color:var(--accent);margin:0 0 10px;font-weight:600}
+h1{font-size:48px;line-height:1.22;letter-spacing:-.025em;margin:0;font-weight:700;overflow-wrap:anywhere}
+.takeaway{font-size:26px;line-height:1.48;margin:16px 0 0;max-width:1400px}
+.page-content{min-height:0;display:grid;gap:24px;align-content:stretch}
+.page-element{min-width:0;min-height:0;padding:28px;background:#f1f5f4;border:1px solid var(--line);border-radius:8px;overflow:visible}
+h2{font-size:29px;line-height:1.3;margin:0 0 14px;color:var(--ink);overflow-wrap:anywhere}
+.page-element p{font-size:25px;line-height:1.5;margin:0 0 18px;white-space:pre-wrap;overflow-wrap:anywhere}
+.references{display:block;color:var(--muted);font-size:17px;line-height:1.4;overflow-wrap:anywhere}
+.layout-focus .page-content{grid-auto-flow:row;grid-auto-rows:1fr}
+.layout-focus .page-element{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.9fr);column-gap:36px;border-left:8px solid var(--accent);align-content:center}
+.layout-focus .page-element h2{grid-row:1/3}.layout-focus .page-element p{margin-bottom:12px}
+.layout-compare .page-content{grid-template-columns:1fr 1fr}
+.layout-compare .page-element{padding:36px;display:flex;flex-direction:column;border-top:6px solid var(--accent)}
+.layout-compare .page-element:nth-child(2){background:#f8f2e7;border-top-color:#a16b34}
+.layout-compare h2{font-size:35px;margin-bottom:28px}.layout-compare .references{margin-top:auto}
+.layout-sequence .page-content{grid-template-columns:repeat(5,minmax(0,1fr));gap:18px}
+.layout-sequence .page-element{position:relative;padding:24px 20px;display:flex;flex-direction:column;border:none;background:#edf4f3}
+.layout-sequence .page-element:first-child:nth-last-child(2),.layout-sequence .page-element:first-child:nth-last-child(2)~.page-element{grid-column:span 1}
+.layout-sequence .page-content:has(.page-element:nth-child(2):last-child){grid-template-columns:repeat(2,minmax(0,1fr))}
+.layout-sequence .page-content:has(.page-element:nth-child(3):last-child){grid-template-columns:repeat(3,minmax(0,1fr))}
+.layout-sequence .page-content:has(.page-element:nth-child(4):last-child){grid-template-columns:repeat(4,minmax(0,1fr))}
+.step-number{font-size:48px;color:var(--accent);font-weight:300;line-height:1;margin-bottom:25px}
+.layout-sequence h2{font-size:28px}.layout-sequence p{font-size:23px}.layout-sequence .references{margin-top:auto}
+.page-footer{display:grid;grid-template-columns:minmax(0,2.2fr) minmax(0,1fr);gap:36px;border-top:1px solid var(--line);padding-top:18px;font-size:18px;color:var(--muted);line-height:1.45;min-width:0}
+.limitations{display:flex;gap:18px;align-items:flex-start}.limitations strong{color:#7b5327;white-space:nowrap}.limitations ul{margin:0;padding-left:20px;overflow-wrap:anywhere}
+.page-references{margin:0;overflow-wrap:anywhere}
+.layout-data .page-content{display:block}
+table{border-collapse:collapse;width:100%;table-layout:fixed;font-size:22px}
+caption{text-align:left;color:var(--accent);font-size:20px;margin-bottom:14px}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);vertical-align:middle;overflow-wrap:anywhere}
+thead th{font-size:18px;font-weight:600;color:var(--muted);background:#edf3f3}
+th:first-child{width:21%}th:nth-child(2){width:34%}
+.data-row{padding:0;background:transparent;border:0;border-radius:0}
+.measure{position:relative}.track{position:relative;display:inline-block;width:62%;height:26px;background:#e8eeed;vertical-align:middle}
+.zero{position:absolute;top:-4px;height:34px;border-left:1px solid var(--muted);z-index:1}
+.bar{position:absolute;top:3px;height:20px;background:var(--accent)}.bar.negative{background:#a16b34}
+.value{display:inline-block;max-width:35%;padding-left:18px;font-size:21px;font-variant-numeric:tabular-nums;vertical-align:middle;overflow-wrap:anywhere}
+.data-row .data-explanation p{font-size:20px;line-height:1.35;margin:0 0 5px}.data-row .references{font-size:15px}
+nav{display:none}#layout-warning{position:fixed;left:12px;right:12px;bottom:62px;background:#fff1cc;border:1px solid #b78124;color:#603e16;font-size:14px;padding:8px 14px;margin:0;z-index:5}
+.deck-mode{overflow:hidden}.deck-mode .deck-shell{position:absolute;left:50%;top:calc(50% - 38px);transform:translate(-50%,-50%)}
+.deck-mode #deck{width:var(--canvas-width);height:var(--canvas-height);transform-origin:top left}
+.deck-mode .slide{margin:0;position:absolute;inset:0;display:none;box-shadow:0 12px 48px #17313d18}
+.deck-mode .slide.active,.deck-mode .slide.measuring{display:grid}
+.deck-mode .slide.measuring{visibility:hidden;pointer-events:none}
+.scripted nav{position:fixed;display:flex;align-items:center;justify-content:center;gap:12px;bottom:0;left:0;right:0;height:58px;background:#17313d;color:white;z-index:10;padding:8px}
+button{font:inherit;font-size:14px;padding:8px 16px;background:transparent;color:inherit;border:1px solid #91adb6;border-radius:5px;cursor:pointer}
+button:hover:not(:disabled){background:#eaf3fa}button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}button:disabled{opacity:.4;cursor:default}output{min-width:58px;text-align:center;font-size:14px}
+.reading-mode{padding-bottom:64px;overflow:auto}.reading-mode #deck{transform:none!important}
+.reading-mode .slide{width:min(var(--canvas-width),calc(100vw - 32px));height:auto;min-height:720px;grid-template-rows:auto auto auto}
+.reading-mode .page-content{min-height:0}.reading-mode .page-element{min-height:180px}
+.layout-node{display:grid;gap:18px;min-width:0;min-height:0}
+.layout-composed{padding:30px 48px 20px;gap:18px}
+.layout-composed .eyebrow{margin-bottom:12px}
+.layout-composed .question{font-size:19px;margin-bottom:7px}
+.layout-composed h1{font-size:43px}
+.layout-composed .takeaway{font-size:23px;margin-top:12px}
+.layout-composed .page-footer{font-size:16px;padding-top:14px}
+.layout-composed .page-content{gap:0}
+.composed-element{background:white;border-radius:16px;padding:14px 18px;display:flex;flex-direction:column;gap:6px;box-shadow:0 8px 24px #274d6610}
+.composed-element>.element-header,.composed-element>.element-footer,.composed-element>.chart-content{flex-shrink:0}
+.composed-element.role-primary{border-color:#a8d5f1;background:#fbfdff}
+.composed-element.role-context{background:#f8fbfd}
+.composed-element h2{font-size:25px;line-height:1.3;margin:0 0 6px}
+.composed-element .element-header p{font-size:18px;line-height:1.4;margin:0;color:var(--muted)}
+.source-marker{font-size:12px;line-height:0;font-weight:400;color:#526b80;margin-left:3px;vertical-align:super}
+.composed-element .element-footer{margin-top:auto}
+.composed-element .element-limits{font-size:16px;line-height:1.35;color:#74552e;margin:0 0 4px}
+.composed-element .references{font-size:15px;line-height:1.35}
+.text-space{flex:1;min-height:0}
+.composed-element.type-text .element-header p{font-size:23px;line-height:1.55;margin-top:18px}
+.composed-element .metric-value{font-size:64px;font-weight:650;line-height:1.15;color:var(--accent);margin:auto 0;overflow-wrap:anywhere}
+.metric-unit{font-size:23px;font-weight:400;margin-left:12px}
+.hierarchy-levels{display:flex;flex-direction:column;justify-content:center;gap:8px;list-style:none;padding:0;margin:0;flex:0 0 auto}
+.hierarchy-levels li{background:#e8f3fa;border:1px solid #c7e1f1;align-self:center;padding:18px 20px;text-align:center;border-radius:7px;min-width:0;overflow-wrap:anywhere}
+.hierarchy-levels li:first-child{background:#d0eafb;border-color:#99ccec}
+.hierarchy-levels strong{font-size:26px;line-height:1.3}
+.hierarchy-levels li p{font-size:20px;line-height:1.4;margin:6px 0 0}
+.chart-content{min-width:0;min-height:0}
+.chart-unit{font-size:16px;line-height:1.3;color:var(--muted);margin-bottom:7px}
+.chart-bars{display:grid;gap:7px}
+.chart-bar-row{display:grid;grid-template-columns:minmax(90px,1fr) minmax(0,2.4fr) minmax(70px,.85fr);align-items:center;gap:12px;min-width:0;font-size:20px;line-height:1.3}
+.chart-label,.chart-value{overflow-wrap:anywhere;font-variant-numeric:tabular-nums}
+.chart-bar-row .track{width:100%;height:23px}.chart-bar-row .bar{height:17px}.chart-bar-row .zero{height:29px}
+.line-plot{display:block;width:100%;height:68px;overflow:visible}
+.line-segment{fill:none;stroke-width:2.5;vector-effect:non-scaling-stroke;stroke-linejoin:round}
+.series-0{stroke:#007fc4;fill:#007fc4;background:#007fc4}.series-1{stroke:#008578;fill:#008578;background:#008578}.series-2{stroke:#a75d25;fill:#a75d25;background:#a75d25}
+.line-segment.series-1{stroke-dasharray:8 4}.line-segment.series-2{stroke-dasharray:2 4}
+.line-segment{fill:none}.line-zero{stroke:#b3c8d5;stroke-width:1;vector-effect:non-scaling-stroke}
+.series-key{display:inline-block;width:18px;height:0;margin-right:5px;vertical-align:middle;background:transparent;border-top:2px solid #007fc4}
+.series-key.series-1{border-top:2px dashed #008578}.series-key.series-2{border-top:2px dotted #a75d25}
+.series-style{font-size:13px;font-weight:400;color:var(--muted)}
+.line-values{font-size:17px;margin-top:3px}
+.line-values th,.line-values td{padding:2px;text-align:center;border-bottom:1px solid #e1ebf1;font-size:17px;line-height:1.2}
+.line-values th:first-child{width:21%;text-align:left}.line-values th:nth-child(2){width:auto}
+.line-values thead th{background:transparent;font-size:15px}
+.line-values td{font-variant-numeric:tabular-nums}
+.heatmap{border-collapse:separate;border-spacing:5px;font-size:21px}
+.heatmap th,.heatmap td{padding:15px 5px;border:0;text-align:center;line-height:1.25}
+.heatmap th:first-child{width:22%;text-align:left}.heatmap th:nth-child(2){width:auto}
+.heatmap thead th{background:transparent;font-size:18px}
+.heat-cell{border-radius:4px;font-variant-numeric:tabular-nums;font-weight:600}
+.heatmap .missing-cell{outline:1px dashed #9fb7c7;outline-offset:-2px;font-weight:400;color:#627789}
+.composed-element .chart-legend{font-size:15px;line-height:1.4;margin:6px 0 0;color:var(--muted)}
+.reading-mode .layout-node{grid-template-rows:auto!important}
+.reading-mode .composed-element{min-height:220px}
+@media(max-width:850px){.reading-mode .layout-node{grid-template-columns:1fr!important;grid-template-rows:auto!important}.reading-mode .composed-element{display:flex}.reading-mode .chart-content{overflow-x:auto}.reading-mode .chart-content table,.reading-mode .chart-line .line-plot{min-width:540px}.reading-mode .hierarchy-levels li{padding:12px}.reading-mode .hierarchy-levels strong{font-size:22px}.reading-mode .hierarchy-levels li p{font-size:18px}}
+@media(max-width:850px){.reading-mode .slide{padding:24px;min-height:0}.reading-mode .eyebrow{font-size:13px}.reading-mode h1{font-size:30px}.reading-mode .question{font-size:18px}.reading-mode .takeaway{font-size:20px}.reading-mode .page-content{display:grid;grid-template-columns:1fr!important}.reading-mode .page-element{display:block;padding:18px}.reading-mode h2{font-size:24px}.reading-mode .page-element p{font-size:19px}.reading-mode .page-footer{grid-template-columns:1fr;font-size:16px}.reading-mode .layout-data .page-content{overflow-x:auto;display:block}.reading-mode table{min-width:750px}.reading-mode .references{font-size:14px}}
+@media print{html,body{width:var(--canvas-width);background:white;overflow:visible!important;padding:0!important}.deck-shell{position:static!important;transform:none!important;width:var(--canvas-width)!important;height:auto!important}#deck{transform:none!important;width:var(--canvas-width)!important;height:auto!important}.slide,.deck-mode .slide,.reading-mode .slide{display:grid!important;visibility:visible!important;position:relative!important;inset:auto!important;width:var(--canvas-width)!important;height:var(--canvas-height)!important;min-height:0!important;margin:0!important;padding:54px 64px 38px!important;box-shadow:none!important;break-after:page;page-break-after:always;print-color-adjust:exact;-webkit-print-color-adjust:exact}.layout-composed.slide{padding:30px 48px 20px!important}.slide:last-child{break-after:auto;page-break-after:auto}nav,#layout-warning,noscript{display:none!important}}
+
+/* 0.2: content owns the canvas; reusable controls occupy a reserved outer rail. */
+.single-title{padding-top:44px;gap:26px}.single-title .page-header{padding-bottom:4px}.single-title h1{font-size:46px;line-height:1.24}.subtitle{font-size:24px;line-height:1.4;margin:12px 0 0;color:var(--muted)}
+.single-title.layout-composed{padding-top:34px;gap:24px}.single-title .page-footer{font-size:16px}.single-title .element-limits:empty{display:none}
+.scripted nav.toolbar{left:50%;right:auto;bottom:18px;transform:translateX(-50%);height:58px;width:max-content;max-width:calc(100vw - 24px);padding:8px 14px;gap:8px;border:1px solid #d3e3ef;border-radius:40px;background:#ffffffed;color:var(--ink);box-shadow:0 8px 30px #244d6612}
+.toolbar button{font-size:16px;font-weight:600;border:0;white-space:nowrap;border-radius:24px;padding:10px 13px;color:var(--ink)}.toolbar button:hover:not(:disabled){background:#edf6fc}.toolbar button:focus-visible,.page-dots button:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.toolbar #next{background:var(--accent);color:white;font-size:25px;padding:4px 13px}.toolbar #previous{font-size:25px;padding:4px 10px}.toolbar output{font-size:15px;color:var(--muted);font-weight:600}.toolbar-divider{height:26px;border-left:1px solid var(--line);margin:0 3px}
+.deck-mode .deck-shell{top:calc(50% - 42px)}.deck-mode.notes-open .deck-shell{left:calc(50% - 165px)}
+.page-dots{display:none}.scripted.deck-mode .page-dots{display:flex;position:fixed;right:14px;top:50%;transform:translateY(-50%);flex-direction:column;background:#fffffff2;border:1px solid var(--line);border-radius:24px;padding:8px 2px;max-height:65vh;overflow-y:auto;z-index:9;box-shadow:0 8px 24px #274d6610}
+.page-dots button{position:relative;border:0;width:30px;height:28px;padding:0;background:transparent}.page-dots button::after{content:"";display:block;width:8px;height:8px;border:1px solid #aac5d8;border-radius:50%;margin:auto}.page-dots button[aria-current=true]::after{background:var(--accent);border-color:var(--accent);box-shadow:0 0 0 5px #dff0fc}.notes-open .page-dots{right:344px!important}
+[hidden]{display:none!important}dialog{max-width:min(900px,calc(100vw - 32px));max-height:85vh;border:1px solid var(--line);border-radius:20px;padding:24px;color:var(--ink);box-shadow:0 24px 80px #17313d30}dialog::backdrop{background:#17313d55}dialog header,#notes-panel header{display:flex;justify-content:space-between;gap:18px;align-items:center}dialog h2,#notes-panel h2{font-size:23px;margin:0}.contents-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:24px}.contents-grid button{text-align:left;border-color:var(--line);color:var(--ink);background:#f5faff;display:flex;gap:12px;font-size:18px;line-height:1.45}.contents-grid button:hover{background:#e4f3ff}.contents-grid span{color:var(--accent)}
+#notes-panel{position:fixed;top:16px;bottom:94px;right:12px;width:316px;z-index:12;padding:20px;background:white;border:1px solid var(--line);border-radius:18px;overflow:auto;box-shadow:0 8px 30px #244d6612}#notes-text{white-space:pre-wrap;overflow-wrap:anywhere;font-size:18px;line-height:1.7}#more-menu{position:fixed;bottom:86px;left:50%;transform:translateX(-50%);z-index:15;background:white;padding:12px;border:1px solid var(--line);border-radius:16px;box-shadow:0 10px 30px #17313d20}#more-menu button{color:var(--ink);border:0}#more-menu button:hover{background:#edf6fc}#control-status{position:fixed;top:8px;left:8px;z-index:30;font-size:14px;background:#fff8e5;margin:0;padding:0 8px}#control-status:empty{display:none}
+#layout-warning{bottom:86px;z-index:8}.backup-links{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}.backup-link{font-size:15px;border:1px solid #a8cce4;color:var(--accent);padding:5px 10px;border-radius:20px;background:#fff}.backup-link:hover{background:#e8f4fc!important}.reading-mode{padding-bottom:100px}
+.media-content{margin:0;min-height:0;flex:1;display:flex;flex-direction:column;justify-content:center;gap:8px}.image-frame{position:relative;margin:auto;max-width:100%;max-height:100%;line-height:0}.image-frame img{display:block;max-width:100%;max-height:400px;object-fit:contain;width:auto;height:auto}.media-content video{display:block;width:100%;max-height:380px;object-fit:contain}.media-content figcaption{font-size:16px;line-height:1.4;color:var(--muted)}.image-annotation{position:absolute;border:3px solid #e18b2f;box-shadow:0 0 0 1px white;color:#543113;font:700 18px/1.3 Arial;background:#ffe2af20;pointer-events:none}.annotation-notes{list-style:none;margin:4px 0;padding:0;font-size:16px;line-height:1.4}.annotation-notes small{font-size:13px;color:var(--muted)}.video-print-poster{display:none}.diagram-content{min-height:0;flex:1;display:flex;flex-direction:column;justify-content:center}.diagram-content svg{display:block;width:100%;max-height:340px;flex-shrink:1}.diagram-content .diagram-nodes{font-size:15px;line-height:1.35;color:var(--muted);margin:6px 0}.relation-key{list-style:none;margin:0;padding:0;font-size:17px;line-height:1.4}.relation-key small{font-size:13px;color:var(--muted)}.structured-table{min-width:0}.structured-table table{font-size:20px}.structured-table th,.structured-table td{padding:10px 12px}.structured-table th:first-child,.structured-table th:nth-child(2){width:auto}.structured-table .cell-sources{font-size:14px;color:var(--muted)}
+@media(max-width:850px){.scripted nav.toolbar{bottom:10px;height:52px;padding:6px;gap:2px}.toolbar button{font-size:13px;padding:9px 8px}.toolbar output{font-size:12px;min-width:48px}.toolbar-divider{margin:0}.toolbar #next,.toolbar #previous{font-size:21px;padding:4px 9px}.page-dots{right:3px!important}.notes-open .page-dots{right:3px!important}.deck-mode.notes-open .deck-shell{left:50%}#notes-panel{top:12px;left:12px;right:12px;width:auto;bottom:82px}.contents-grid{grid-template-columns:1fr}.reading-mode .single-title h1{font-size:30px}.reading-mode .structured-table{overflow:auto}.reading-mode .media-content img{max-height:none}.reading-mode .diagram-content{overflow:auto}.reading-mode .diagram-content svg{min-width:650px;flex-shrink:0}.reading-mode .image-frame{max-height:none}.reading-mode .type-media{display:flex}.reading-mode .media-content{flex:none}}
+@media(max-width:500px){.toolbar #fullscreen{display:none}.toolbar #backup-return{font-size:12px}.toolbar{gap:0!important}}
+@media print{nav.toolbar,.page-dots,dialog,#notes-panel,#more-menu,#control-status{display:none!important}.single-title .page-header{padding-bottom:4px}.media-content video{display:none}.video-print-poster{display:block;max-width:100%;max-height:380px;object-fit:contain}.backup-link{border:0;padding:0}.backup-links::before{content:"备查 / Backup: ";font-size:14px}.image-annotation{print-color-adjust:exact}}
+
+/* Restrained offline glass: opaque readable fallback first, enhancement second.
+   Decoration is surface-only; it never distorts text, charts or data geometry. */
+body{background:radial-gradient(ellipse at 10% 8%,#e9f4ff 0,transparent 52%),radial-gradient(ellipse at 88% 84%,#edf5ff 0,transparent 46%),#f5f7fa;font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif;font-weight:400}
+.slide{border-top:0;border:1px solid #dce7f0;border-radius:26px;background:radial-gradient(ellipse at 4% 0%,#eaf5ff9c 0,transparent 56%),linear-gradient(125deg,#ffffffa6,#ffffff16 68%),var(--paper)}
+.deck-mode .slide{box-shadow:0 16px 60px #233d5810,0 1px 3px #25395408}
+h1{color:var(--ink);font-weight:650;letter-spacing:-.025em}h2{font-weight:600}
+.page-element{background:#ffffffde;border-color:#dce6ee;border-radius:20px;box-shadow:0 6px 24px #314c6106}
+.composed-element{background:#ffffffdf;box-shadow:0 8px 28px #314c6108}
+.composed-element.role-primary{background:#ffffffeb;border-color:#cbdde9}
+.composed-element.role-context{background:#f7faffdf}
+.layout-focus .page-element{border-left-width:3px}
+.layout-compare .page-element{border-top-width:3px}
+.layout-compare .page-element:nth-child(2){background:#fcfaf5e8;border-top-color:#ac895f}
+.layout-sequence .page-element{background:#f6faffd9;border:1px solid var(--line)}
+.page-footer{border-top-color:#dce5ed;color:var(--muted)}
+.scripted nav.toolbar,.scripted.deck-mode .page-dots,#more-menu,#notes-panel{background:#fbfdfff2;border-color:#dce6ef;box-shadow:0 8px 32px #314c6110,0 1px 2px #fff inset}
+dialog{background:#fbfdfff7;border-color:#dce6ef;box-shadow:0 24px 80px #24405924}
+dialog::backdrop{background:#35496136;backdrop-filter:blur(3px)}
+@supports(backdrop-filter:blur(12px)){.scripted nav.toolbar,.scripted.deck-mode .page-dots,#more-menu{background:#ffffffc9;backdrop-filter:blur(18px) saturate(1.08)}#notes-panel{background:#ffffffed;backdrop-filter:blur(18px)}}
+@media print{.slide{border-radius:0;background:var(--paper);border-color:transparent}.page-element{background:white;box-shadow:none}.composed-element.role-primary{background:#fff}.composed-element.role-context{background:#f8fbfd}}
+
+/* Audience projection: evidence remains accessible outside the fixed stage. */
+.source-marker{text-decoration:none;white-space:nowrap;font-size:12px;line-height:1;font-weight:400;color:#526b80;margin-left:3px;vertical-align:super;display:inline-block;padding:3px}
+a.source-marker:hover,.source-details-link:hover{text-decoration:underline;background:#eaf4fc}a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.source-details-link{font-size:15px;color:var(--muted);text-decoration:none}
+#source-appendices{max-width:1120px;margin:32px auto;padding:0 24px 80px}.deck-mode #source-appendices{display:none}
+.page-source-details{border:1px solid var(--line);border-radius:14px;background:#fbfdff;padding:18px;margin:16px 0;scroll-margin-top:24px}
+.page-source-details summary{font-size:21px;cursor:pointer;line-height:1.4}.source-detail-body{font-size:17px;line-height:1.65;overflow-wrap:anywhere}.source-detail-body h3{font-size:21px;margin:24px 0 8px}.source-detail-body ol,.source-detail-body ul{padding-left:28px}
+#source-dialog{width:min(1000px,calc(100vw - 32px))}#source-dialog-content{margin-top:22px}.source-index li{padding:6px 0}.source-detail-body .relation-key{font-size:17px}
+.single-title .page-footer{grid-template-columns:minmax(0,1fr) auto;gap:24px}.single-title .page-references{text-align:right}
+.composed-element>.diagram-content,.composed-element>.hierarchy-levels,.composed-element>.structured-table{flex:0 0 auto}
+.diagram-content{justify-content:flex-start;gap:8px}.diagram-content svg{width:100%;height:auto;max-height:none;flex:none}
+.composed-element .element-footer{margin-top:10px}.composed-element.type-text .element-header p{white-space:pre-line}
+.composed-element.role-primary.type-text .element-header p{font-size:26px;line-height:1.48;color:var(--ink)}
+.composed-element.role-context .metric-value{font-size:40px;color:var(--ink);margin:18px 0}.composed-element.role-supporting .metric-value{font-size:48px}
+.composed-element.type-hierarchy{justify-content:safe center}.composed-element.type-hierarchy .element-header{margin-bottom:8px}
+.composed-element .element-limits{white-space:pre-line}
+@media(max-width:850px){.reading-mode .single-title .page-footer{grid-template-columns:1fr}.reading-mode .page-references{text-align:left}.reading-mode .composed-element.role-primary.type-text .element-header p{font-size:22px}.reading-mode .diagram-content svg{max-width:none;min-width:650px}#source-appendices{padding:0 16px 80px}.page-source-details summary{font-size:18px}}
+@media print{#source-appendices{display:none!important}.print-with-sources #source-appendices{display:block!important;max-width:none;margin:0;padding:48px;break-before:page}.print-with-sources .page-source-details{break-inside:auto;border:0;background:white;padding:0;margin:0 0 40px}.print-with-sources .page-source-details>summary{font-weight:600;list-style:none}.print-with-sources .page-source-details>.source-detail-body{display:block!important}.source-marker,.source-details-link{color:#405d72}}
+/* Authored grouping can use spacing instead of a mandatory card surface. */
+.composed-element.surface-plain{background:transparent;border-color:transparent;border-radius:0;box-shadow:none;padding:10px 6px}
+@media print{.composed-element.surface-plain{background:transparent;box-shadow:none}}
+
+.schedule-content{font-size:20px;min-width:0;line-height:1.35;color:var(--ink,#183744);flex-shrink:0}
+.schedule-content .schedule-context,.schedule-content .schedule-selection,.schedule-content .schedule-note{margin:0 0 9px;font-size:17px;line-height:1.35;color:#516e7b;white-space:normal}
+.schedule-data{width:100%;table-layout:fixed;border-collapse:collapse;font-size:19px}
+.schedule-data th,.schedule-data td{vertical-align:middle;text-align:left;padding:8px 10px;border-bottom:1px solid #dce9ed;overflow-wrap:anywhere}
+.schedule-data thead th{font-size:16px;font-weight:500;color:#52717f}
+.schedule-data small{display:block;font-size:14px;line-height:1.3;font-weight:400;margin-top:4px;color:#516e7b}
+.schedule-data strong,.schedule-data span{display:block}
+.schedule-label-col{width:23%}.schedule-time-col{width:57%}
+.schedule-timeline th:first-child{width:23%}.schedule-timeline th:nth-child(2){width:57%}.schedule-timeline th:nth-child(3){width:20%}
+.schedule-outcomes th:first-child{width:23%}.schedule-outcomes th:nth-child(2){width:47%}.schedule-outcomes th:nth-child(3),.schedule-outcomes th:nth-child(4){width:15%}
+.schedule-summary th:first-child{width:25%}.schedule-summary th:nth-child(2){width:15%}.schedule-summary th:nth-child(3){width:25%}.schedule-summary th:nth-child(4){width:35%}
+.schedule-content svg{display:block;width:100%;overflow:visible}
+.schedule-time-plot{height:38px}.schedule-content thead svg{height:30px}
+.schedule-content svg text{fill:#4c6775;font:15px sans-serif}
+.schedule-baseline{fill:#9aabb4;stroke:#9aabb4;stroke-width:1.5}
+.schedule-actual{fill:#087fae;stroke:#087fae;stroke-width:1.5}
+.schedule-forecast{fill:none;stroke:#087fae;stroke-width:1.5;stroke-dasharray:5 3}
+.schedule-status-line{stroke:#7897a4;stroke-dasharray:2 3;stroke-width:1}
+.schedule-drift{height:150px}.schedule-drift path{stroke:#087fae;stroke-width:2}.schedule-drift circle{fill:#087fae}.schedule-drift text{font-size:18px}
+.schedule-content .schedule-legend{display:flex;gap:16px;flex-wrap:wrap;font-size:15px;line-height:1.35;margin:10px 0 4px;color:#516e7b;white-space:normal}
+.schedule-legend span:before{content:"";display:inline-block;width:24px;height:0;border-top:3px solid #9aabb4;margin-right:6px;vertical-align:middle}
+.schedule-legend .legend-actual:before{border-color:#087fae}.schedule-legend .legend-forecast:before{border-color:#087fae;border-top-style:dashed}
+.schedule-content .schedule-provenance{margin:5px 0 0;font-size:14px;line-height:1.35;overflow-wrap:anywhere;color:#627985;white-space:normal}
+.schedule-source{font-size:12px;font-weight:400;color:#65808d}
+.schedule-actions{margin:10px 0;padding:9px 12px 9px 32px;background:#edf5f8;border-radius:8px;font-size:17px}
+.schedule-actions li{margin:4px 0}.schedule-actions small{font-size:14px;color:#516e7b}
+.reading-mode .schedule-content{overflow-x:auto}.reading-mode .schedule-data{min-width:850px}
+@media print{.schedule-content{overflow:visible}.schedule-data{min-width:0!important}}
+
+/* Sparse progress views give dates and comparisons useful stage space. */
+.single-title .type-schedule:only-child .schedule-content{display:flex;flex-direction:column;flex:1;min-height:0}
+.single-title .type-schedule:only-child .schedule-data{margin-top:auto;margin-bottom:auto}
+.schedule-time-plot{height:58px}.schedule-content thead svg{height:40px}
+.schedule-content svg text{font-size:20px}
+.schedule-drift{height:auto;min-height:180px;flex:none}.schedule-drift text{font-size:22px}
+.schedule-data{font-size:21px}.schedule-data small{font-size:16px;line-height:1.4}.schedule-data thead th{font-size:18px}
+.schedule-content .schedule-context{font-size:18px}.schedule-actions{font-size:20px}
+@media(max-width:850px){.reading-mode .type-schedule:only-child .schedule-content{display:block}.reading-mode .schedule-drift{min-width:850px}.reading-mode .schedule-content svg{flex:none}}
+
+:root{--canvas-width:1600px;--canvas-height:900px}
+@page{size:16.66666667in 9.37500000in;margin:0}
+</style></head><body>
+<div class="deck-shell"><main id="deck" aria-label="演练示例 · 设备试用安排"><article class="slide layout-composed single-title audience-mode has-page-actions" id="page-trial" data-page-id="trial" data-layout="composed" aria-labelledby="title-trial"><header class="page-header"><h1 id="title-trial">先试用两台设备，再决定是否扩大范围</h1></header><div class="page-content"><div class="layout-node layout-row" style="grid-template-columns:minmax(0,1.3fr) minmax(0,1fr)"><section class="page-element composed-element role-primary type-text surface-plain" id="element-trial-request" data-element-id="trial-request" data-element-type="text" data-refs="[{&quot;id&quot;: &quot;synthetic-trial-note&quot;, &quot;revision&quot;: 1, &quot;locator&quot;: &quot;Illustrative planning note; not a project record&quot;}]"><header class="element-header"><h2>确认试用人员</h2><p>先安排两台设备试用。参与人员确认后，才能确定开始时间。</p></header><div class="text-space" aria-hidden="true"></div></section><section class="page-element composed-element role-supporting type-text surface-plain" id="element-trial-review" data-element-id="trial-review" data-element-type="text" data-refs="[{&quot;id&quot;: &quot;synthetic-trial-note&quot;, &quot;revision&quot;: 1, &quot;locator&quot;: &quot;Illustrative planning note; not a project record&quot;}]"><header class="element-header"><h2>试用后再决定</h2><p>试用结束后，结合实际记录决定是否扩大范围。</p></header><div class="text-space" aria-hidden="true"></div></section></div></div><div class="page-actions backup-links"><button class="backup-link" data-backup-target="trial-record" type="button">查看试用安排</button></div><template class="speaker-notes">先安排两台设备试用，试用结束后再讨论是否扩大范围。具体开始时间还要等参与人员确认。</template></article><article class="slide layout-focus single-title audience-mode" id="page-trial-record" data-page-id="trial-record" data-layout="focus" aria-labelledby="title-trial-record"><header class="page-header"><h1 id="title-trial-record">把试用中遇到的问题记下来</h1></header><div class="page-content"><section id="element-trial-recording" class="page-element" data-element-id="trial-recording" data-refs="[]"><h2>记录实际情况</h2><p>记录每次使用遇到的问题，留到试用结束时一起讨论。</p></section></div><template class="speaker-notes"></template></article></main></div>
+<section id="source-appendices" aria-label="来源与详情"><details class="page-source-details" id="sources-trial"><summary>本页资料 · 先试用两台设备，再决定是否扩大范围</summary><div class="source-detail-body"><ol class="source-index"><li value="1">synthetic-trial-note@1 · Illustrative planning note; not a project record</li></ol><section data-annotation-owner="trial-request"><h3>确认试用人员</h3><ul><li>制作记录：人数尚未确定，不补写负责人。</li></ul></section><section data-annotation-owner="trial"><h3>先试用两台设备，再决定是否扩大范围</h3><ul><li>本文件为合成教学示例；资料备注供讲者查阅。</li><li>INTERNAL_NOTE_ONLY_053</li></ul></section></div></details><details class="page-source-details" id="sources-trial-record"><summary>本页资料 · 把试用中遇到的问题记下来</summary><div class="source-detail-body"><p>未提供引用</p><section data-annotation-owner="trial-record"><h3>把试用中遇到的问题记下来</h3><ul><li>此页没有外部引用，只有演练安排；资料入口仍应可访问。</li></ul></section></div></details></section>
+<dialog id="source-dialog" aria-labelledby="source-heading"><header><h2 id="source-heading">来源与详情</h2><button id="source-close" type="button">关闭</button></header><div id="source-dialog-content"></div></dialog>
+<nav class="toolbar" aria-label="页面导航"><button id="previous" type="button" aria-label="上一页">←</button><output id="page-number" aria-live="polite"></output><button id="next" type="button" aria-label="下一页">→</button><span class="toolbar-divider"></span><button id="contents-toggle" type="button" aria-haspopup="dialog">目录</button><button id="notes-toggle" type="button" aria-expanded="false">讲稿</button><button id="fullscreen" type="button">全屏</button><button id="more-toggle" type="button" aria-expanded="false">更多</button><button id="backup-return" type="button" hidden>返回主线</button></nav>
+<aside class="page-dots" aria-label="跳转页面"><button type="button" data-jump="trial" aria-label="1: 先试用两台设备，再决定是否扩大范围" title="先试用两台设备，再决定是否扩大范围"></button><button type="button" data-jump="trial-record" aria-label="2: 把试用中遇到的问题记下来" title="把试用中遇到的问题记下来"></button></aside>
+<dialog id="contents-dialog" aria-labelledby="contents-heading"><header><h2 id="contents-heading">目录</h2><button id="contents-close" type="button">关闭</button></header><div class="contents-grid"><button type="button" data-jump="trial"><span>01</span>先试用两台设备，再决定是否扩大范围</button><button type="button" data-jump="trial-record"><span>02</span>把试用中遇到的问题记下来</button></div></dialog>
+<aside id="notes-panel" hidden aria-label="讲稿"><header><h2>讲稿</h2><button id="notes-close" type="button">关闭</button></header><p id="notes-text"></p></aside>
+<div id="more-menu" hidden><button id="page-sources" type="button">本页资料</button><button id="read-all" type="button" aria-pressed="false">阅读全部</button><button id="print-deck" type="button">打印</button><button id="print-sources" type="button">打印含来源</button></div><p id="layout-warning" role="status" hidden>内容超出页面，请拆页；阅读全部可查看完整文本。</p><p id="control-status" role="status" aria-live="polite"></p>
+<noscript>脚本未运行，以下保留全部页面；未执行布局检查。</noscript><script>const DECK_LABELS={"previous": "\u4e0a\u4e00\u9875", "next": "\u4e0b\u4e00\u9875", "all": "\u9605\u8bfb\u5168\u90e8", "deck": "\u8fd4\u56de\u6f14\u793a", "warning": "\u5185\u5bb9\u8d85\u51fa\u9875\u9762\uff0c\u8bf7\u62c6\u9875\uff1b\u9605\u8bfb\u5168\u90e8\u53ef\u67e5\u770b\u5b8c\u6574\u6587\u672c\u3002"};const DECK_ROUTE=["trial"];
+(() => {
+  "use strict";
+  const slides = Array.from(document.querySelectorAll(".slide"));
+  const root = document.documentElement;
+  const deck = document.getElementById("deck");
+  const shell = document.querySelector(".deck-shell");
+  const previous = document.getElementById("previous");
+  const next = document.getElementById("next");
+  const readAll = document.getElementById("read-all");
+  const counter = document.getElementById("page-number");
+  const warning = document.getElementById("layout-warning");
+  const style = getComputedStyle(root);
+  const WIDTH = parseFloat(style.getPropertyValue("--canvas-width"));
+  const HEIGHT = parseFloat(style.getPropertyValue("--canvas-height"));
+  let active = 0;
+  let reading = false;
+  let frame = 0;
+  const directory = document.getElementById("contents-dialog");
+  const sourceDialog = document.getElementById("source-dialog");
+  let sourceOpener = null;
+  function openSources(id, opener) {
+    const details = document.getElementById("sources-" + id);
+    if (!details) return;
+    if (reading) {
+      details.open = true;
+      details.scrollIntoView({block: "start"});
+      details.querySelector("summary").focus();
+      return;
+    }
+    sourceOpener = opener;
+    document.getElementById("source-heading").textContent = details.querySelector("summary").textContent;
+    document.getElementById("source-dialog-content").replaceChildren(details.querySelector(".source-detail-body").cloneNode(true));
+    if (!sourceDialog.open) sourceDialog.showModal();
+  }
+  const notesPanel = document.getElementById("notes-panel");
+  const notesToggle = document.getElementById("notes-toggle");
+  const more = document.getElementById("more-menu");
+  const moreToggle = document.getElementById("more-toggle");
+  const returnButton = document.getElementById("backup-return");
+  const route = DECK_ROUTE.map(id => slides.findIndex(slide => slide.dataset.pageId === id));
+  const history = [];
+  let notesOpen = false;
+  function routeStep(direction) {
+    const position = route.indexOf(active);
+    if (position < 0) return;
+    const target = position + direction;
+    if (target >= 0 && target < route.length) goTo(route[target]);
+  }
+  function setNotes(value) {
+    notesOpen = value && Boolean(notesToggle);
+    notesPanel.hidden = !notesOpen;
+    notesToggle?.setAttribute("aria-expanded", String(notesOpen));
+    document.body.classList.toggle("notes-open", notesOpen);
+    fit(); updateWarning();
+  }
+  function setMore(value) {
+    more.hidden = !value;
+    moreToggle.setAttribute("aria-expanded", String(value));
+  }
+  function jump(id, backup = false) {
+    const index = slides.findIndex(slide => slide.dataset.pageId === id);
+    if (index < 0) return false;
+    if (backup) history.push(active); else history.length = 0;
+    goTo(index); return true;
+  }
+  function returnFromBackup() {
+    goTo(history.length ? history.pop() : route[0]);
+  }
+  async function fullscreen() {
+    const status = document.getElementById("control-status");
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else if (document.documentElement.requestFullscreen) await document.documentElement.requestFullscreen();
+      else throw new Error("unavailable");
+      status.textContent = "";
+    } catch (_) { status.textContent = document.documentElement.lang === "zh-CN" ? "当前浏览器无法进入全屏。" : "Fullscreen is unavailable in this browser."; }
+  }
+
+  function fit() {
+    if (reading) return;
+    const scale = Math.max(0.01, Math.min((innerWidth - (notesOpen && innerWidth > 850 ? 386 : 76)) / WIDTH, (innerHeight - 132) / HEIGHT));
+    deck.style.transform = "scale(" + scale + ")";
+    shell.style.width = WIDTH * scale + "px";
+    shell.style.height = HEIGHT * scale + "px";
+  }
+  function inspectLayout() {
+    const wasReading = reading;
+    if (wasReading) {
+      document.body.classList.replace("reading-mode", "deck-mode");
+      reading = false;
+      fit();
+    }
+    const result = {scope: "actual_dom_geometry_only", pageCount: slides.length, currentPageId: slides[active].dataset.pageId, canvas: {width: WIDTH, height: HEIGHT}, viewport: {width: innerWidth, height: innerHeight}, pages: [], issues: []};
+    for (const slide of slides) {
+      if (!slide.classList.contains("active")) slide.classList.add("measuring");
+      const bounds = slide.getBoundingClientRect();
+      const scale = bounds.width / WIDTH;
+      const page = {id: slide.dataset.pageId, width: bounds.width, height: bounds.height, issues: [], elements: [], bars: [], charts: [], svgText: []};
+      const add = (kind, id) => {
+        const issue = {kind, id, pageId: page.id};
+        page.issues.push(issue); result.issues.push(issue);
+      };
+      for (const element of slide.querySelectorAll(".page-element, .layout-node, .chart-content, .page-header, .page-content, .page-footer")) {
+        const r = element.getBoundingClientRect();
+        const id = element.dataset.elementId || element.className;
+        page.elements.push({id, x: r.x, y: r.y, width: r.width, height: r.height});
+        if (r.left < bounds.left - 1 || r.right > bounds.right + 1 || r.top < bounds.top - 1 || r.bottom > bounds.bottom + 1) add("outside_slide", id);
+        if (element.scrollHeight > element.clientHeight + 2 || element.scrollWidth > element.clientWidth + 2) add("content_overflow", id);
+      }
+      const content = slide.querySelector(".page-content").getBoundingClientRect();
+      const footer = slide.querySelector(".page-footer, .page-actions")?.getBoundingClientRect();
+      const contentBottom = footer ? footer.top : content.bottom;
+      for (const leaf of slide.querySelectorAll(".page-content h2, .page-content p, .page-content small, .page-content .value, .page-content caption, .page-content th, .page-content td, .chart-label, .chart-value, .hierarchy-levels li")) {
+        // Empty optional limits have display:none; they have no rendered box.
+        // Continue measuring actual visible text, including overfull content.
+        if (!leaf.getClientRects().length) continue;
+        const r = leaf.getBoundingClientRect();
+        if (r.bottom > contentBottom + 1 || r.top < content.top - 1) add("text_outside_content", leaf.closest("[data-element-id]")?.dataset.elementId || leaf.tagName);
+        const panel = leaf.closest(".composed-element");
+        if (panel) {
+          const panelRect = panel.getBoundingClientRect();
+          if (r.left < panelRect.left-1 || r.right > panelRect.right+1 || r.top < panelRect.top-1 || r.bottom > panelRect.bottom+1) add("text_outside_panel", panel.dataset.elementId);
+          const panelFooter = panel.querySelector(".element-footer");
+          if (panelFooter && !leaf.closest(".element-footer") && r.bottom > panelFooter.getBoundingClientRect().top+1) add("text_overlaps_panel_footer", panel.dataset.elementId);
+        }
+      }
+      for (const row of slide.querySelectorAll(".data-row, .chart-bar-row")) {
+        const bar = row.querySelector(".bar");
+        const track = row.querySelector(".track").getBoundingClientRect();
+        const r = bar?.getBoundingClientRect();
+        const id = row.dataset.elementId || row.dataset.datumId;
+        page.bars.push({id, value: row.dataset.value, label: row.querySelector(".value, .chart-value").textContent, left: r ? (r.left-track.left)/scale : null, width: r ? r.width/scale : null});
+        if (r && (!Number.isFinite(r.width) || r.width < 0 || r.left < track.left-1 || r.right > track.right+1)) add("invalid_bar_geometry", id);
+      }
+      for (const chart of slide.querySelectorAll("[data-chart-kind]")) {
+        const record = {elementId: chart.closest("[data-element-id]").dataset.elementId, kind: chart.dataset.chartKind, unit: chart.dataset.unit, data: [], segments: []};
+        for (const datum of chart.querySelectorAll("[data-datum-id]")) record.data.push({id: datum.dataset.datumId, value: datum.dataset.value, text: datum.textContent, refs: JSON.parse(datum.dataset.refs)});
+        for (const path of chart.querySelectorAll(".line-segment")) record.segments.push({seriesId: path.dataset.seriesId, pointCount: Number(path.dataset.pointCount), path: path.getAttribute("d")});
+        for (const geometry of chart.querySelectorAll("svg path, svg circle")) {
+          const r = geometry.getBoundingClientRect();
+          if (![r.x,r.y,r.width,r.height].every(Number.isFinite)) add("invalid_chart_geometry", record.elementId);
+          const box = geometry.getBBox();
+          const view = geometry.ownerSVGElement.viewBox.baseVal;
+          if (![box.x,box.y,box.width,box.height].every(Number.isFinite) || box.x < view.x-0.1 || box.y < view.y-0.1 || box.x+box.width > view.x+view.width+0.1 || box.y+box.height > view.y+view.height+0.1) add("svg_outside_viewbox", record.elementId);
+        }
+        page.charts.push(record);
+      }
+      for (const svg of slide.querySelectorAll(".diagram-content svg, .schedule-content svg")) {
+        const box = svg.getBBox(), view = svg.viewBox.baseVal;
+        if (box.x < view.x-1 || box.y < view.y-1 || box.x+box.width > view.x+view.width+1 || box.y+box.height > view.y+view.height+1) add("svg_outside_viewbox", svg.closest("[data-element-id]")?.dataset.elementId);
+        for (const label of svg.querySelectorAll("text")) {
+          const transform = label.getScreenCTM();
+          if (!transform) continue;
+          const font = parseFloat(getComputedStyle(label).fontSize);
+          const screenFontPx = font * Math.hypot(transform.c, transform.d);
+          const record = {elementId: svg.closest("[data-element-id]")?.dataset.elementId,
+            text: label.textContent, screenFontPx, canvasFontPx: screenFontPx / scale};
+          page.svgText.push(record);
+          // Detect a collapsed graphic, not certify legibility in every room.
+          // Actual screen sizes stay available for screenshot/design review.
+          if (!Number.isFinite(screenFontPx) || record.canvasFontPx < 8) add("collapsed_svg_text", record.elementId);
+        }
+      }
+      slide.classList.remove("measuring");
+      result.pages.push(page);
+    }
+    if (wasReading) {
+      reading = true;
+      document.body.classList.replace("deck-mode", "reading-mode");
+      shell.style.width = ""; shell.style.height = "";
+    }
+    return result;
+  }
+  function updateWarning() {
+    cancelAnimationFrame(frame);
+    frame = requestAnimationFrame(() => {
+      const check = inspectLayout();
+      warning.hidden = !check.issues.some(issue => issue.pageId === slides[active].dataset.pageId);
+    });
+  }
+  function goTo(index, updateHash = true) {
+    if (!Number.isInteger(index)) return false;
+    slides[active].querySelectorAll("video").forEach(video => video.pause());
+    active = Math.min(slides.length-1, Math.max(0, index));
+    slides.forEach((slide, i) => {
+      slide.classList.toggle("active", i === active);
+      slide.setAttribute("aria-hidden", String(!reading && i !== active));
+      slide.inert = !reading && i !== active;
+    });
+    const routePosition = route.indexOf(active);
+    previous.disabled = routePosition <= 0; next.disabled = routePosition < 0 || routePosition >= route.length-1;
+    returnButton.hidden = !history.length && routePosition >= 0;
+    document.querySelectorAll(".page-dots [data-jump]").forEach(button => button.setAttribute("aria-current", String(button.dataset.jump === slides[active].dataset.pageId)));
+    const note = slides[active].querySelector(".speaker-notes");
+    document.getElementById("notes-text").textContent = note?.content.textContent || (document.documentElement.lang === "zh-CN" ? "本页未提供讲稿。" : "No speaker notes for this page.");
+    counter.value = (active+1) + " / " + slides.length;
+    if (updateHash && location.hash !== "#" + slides[active].dataset.pageId) location.hash = slides[active].dataset.pageId;
+    updateWarning();
+    return true;
+  }
+  function fromHash() {
+    const id = location.hash.slice(1);
+    const index = slides.findIndex(slide => slide.dataset.pageId === id);
+    if (index >= 0 && index !== active) history.length = 0;
+    goTo(index < 0 ? route[0] : index, false);
+  }
+  function setReading(value) {
+    reading = value;
+    document.body.classList.toggle("reading-mode", reading);
+    document.body.classList.toggle("deck-mode", !reading);
+    readAll.textContent = reading ? DECK_LABELS.deck : DECK_LABELS.all;
+    readAll.setAttribute("aria-pressed", String(reading));
+    if (reading) { shell.style.width = ""; shell.style.height = ""; }
+    else fit();
+    goTo(active, false);
+  }
+  previous.addEventListener("click", () => routeStep(-1));
+  next.addEventListener("click", () => routeStep(1));
+  readAll.addEventListener("click", () => { setReading(!reading); setMore(false); });
+  document.getElementById("contents-toggle").addEventListener("click", () => { directory.showModal(); setMore(false); });
+  document.getElementById("contents-close").addEventListener("click", () => directory.close());
+  document.getElementById("source-close").addEventListener("click", () => sourceDialog.close());
+  sourceDialog.addEventListener("close", () => sourceOpener?.focus());
+  document.addEventListener("click", event => {
+    const link = event.target.closest("[data-source-page]");
+    if (!link) return;
+    event.preventDefault();
+    if (!sourceDialog.contains(link)) openSources(link.dataset.sourcePage, link);
+    const area = sourceDialog.open ? sourceDialog : document.getElementById("sources-" + link.dataset.sourcePage);
+    if (link.dataset.sourceNumber) area?.querySelector('.source-index li[value="' + link.dataset.sourceNumber + '"]')?.scrollIntoView({block: "nearest"});
+  });
+  directory.addEventListener("close", () => document.getElementById("contents-toggle").focus());
+  document.querySelectorAll("[data-jump]").forEach(button => button.addEventListener("click", () => { jump(button.dataset.jump); if (directory.open) directory.close(); }));
+  document.querySelectorAll("[data-backup-target]").forEach(button => button.addEventListener("click", () => jump(button.dataset.backupTarget, true)));
+  returnButton.addEventListener("click", returnFromBackup);
+  notesToggle?.addEventListener("click", () => setNotes(!notesOpen));
+  document.getElementById("notes-close").addEventListener("click", () => { setNotes(false); notesToggle?.focus(); });
+  moreToggle.addEventListener("click", () => setMore(more.hidden));
+  document.getElementById("page-sources")?.addEventListener("click", () => {
+    setMore(false);
+    openSources(slides[active].dataset.pageId, moreToggle);
+  });
+  document.getElementById("fullscreen").addEventListener("click", fullscreen);
+  function printDeck(withSources) {
+    setMore(false);
+    document.body.classList.toggle("print-with-sources", withSources);
+    window.print();
+  }
+  document.getElementById("print-deck").addEventListener("click", () => printDeck(false));
+  document.getElementById("print-sources").addEventListener("click", () => printDeck(true));
+  addEventListener("click", event => { if (!event.target.closest("#more-menu,#more-toggle")) setMore(false); });
+  addEventListener("fullscreenchange", () => { fit(); updateWarning(); });
+  addEventListener("hashchange", fromHash);
+  addEventListener("resize", () => { fit(); updateWarning(); });
+  addEventListener("keydown", event => {
+    if (event.altKey || event.ctrlKey || event.metaKey || event.target.closest("input,textarea,select,[contenteditable]")) return;
+    if (event.key === "Escape") { setMore(false); if (notesOpen) setNotes(false); return; }
+    if (directory.open || sourceDialog.open || event.target.closest("video") || reading) return;
+    if (["ArrowRight", "PageDown", "ArrowLeft", "PageUp", "Home", "End", "f", "F", "n", "N"].includes(event.key)) {
+      event.preventDefault();
+      if (["ArrowRight", "PageDown"].includes(event.key)) routeStep(1);
+      else if (["ArrowLeft", "PageUp"].includes(event.key)) routeStep(-1);
+      else if (event.key === "Home") goTo(route[0]);
+      else if (event.key === "End") goTo(route[route.length-1]);
+      else if (event.key.toLowerCase() === "f") fullscreen();
+      else setNotes(!notesOpen);
+    }
+  });
+  // Print must expose all slides, including those inert during interactive navigation.
+  addEventListener("beforeprint", () => {
+    document.querySelectorAll(".page-source-details").forEach(details => {
+      details.dataset.wasOpen = String(details.open);
+      if (document.body.classList.contains("print-with-sources")) details.open = true;
+    });
+    slides.forEach(slide => slide.querySelectorAll("video").forEach(video => video.pause()));
+    document.body.classList.remove("reading-mode");
+    document.body.classList.add("deck-mode");
+    slides.forEach(slide => { slide.inert = false; slide.setAttribute("aria-hidden", "false"); });
+  });
+  addEventListener("afterprint", () => {
+    document.body.classList.remove("print-with-sources");
+    document.querySelectorAll(".page-source-details").forEach(details => { details.open = details.dataset.wasOpen === "true"; });
+    document.body.classList.toggle("reading-mode", reading);
+    document.body.classList.toggle("deck-mode", !reading);
+    goTo(active, false);
+  });
+  document.body.classList.add("scripted", "deck-mode");
+  window.reportDeck = {inspectLayout, goTo, next: () => routeStep(1), previous: () => routeStep(-1), setReading, setNotes, jump, returnFromBackup};
+  fit(); fromHash();
+  document.fonts.ready.then(updateWarning);
+})();
+</script></body></html>

@@ -1,0 +1,1616 @@
+{
+  "scope": "0.5.3 audience/review projection and schedule browser checks",
+  "captured_at_utc": "2026-10-30T04:16:51.160087+00:00",
+  "model_execution": false,
+  "semantic_quality": "not_assessed",
+  "decks": [
+    {
+      "name": "audience",
+      "html_sha256": "f9937262626e2fcbe96b20a951d8dab7119a6e6865270196135a6630d0ee0cc9",
+      "checks": [
+        {
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "pages": [
+            {
+              "id": "trial",
+              "dom": [
+                {
+                  "id": "trial",
+                  "rect": {
+                    "x": 38,
+                    "y": 29.375,
+                    "width": 1524,
+                    "height": 857.25,
+                    "right": 1562,
+                    "bottom": 886.625
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-request",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 84.67250061035156,
+                        "y": 143.70477294921875,
+                        "width": 798.9391479492188,
+                        "height": 663.8627319335938,
+                        "right": 883.6116485595703,
+                        "bottom": 807.5675048828125
+                      },
+                      "scrollWidth": 837,
+                      "clientWidth": 837,
+                      "scrollHeight": 695,
+                      "clientHeight": 695,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    },
+                    {
+                      "id": "trial-review",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 900.7566528320312,
+                        "y": 143.70477294921875,
+                        "width": 614.5708618164062,
+                        "height": 663.8627319335938,
+                        "right": 1515.3275146484375,
+                        "bottom": 807.5675048828125
+                      },
+                      "scrollWidth": 643,
+                      "clientWidth": 643,
+                      "scrollHeight": 695,
+                      "clientHeight": 695,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员\n\n先安排两台设备试用。参与人员确认后，才能确定开始时间。\n\n试用后再决定\n\n试用结束后，结合实际记录决定是否扩大范围。\n\n查看试用安排"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "trial-record",
+              "dom": [
+                {
+                  "id": "trial-record",
+                  "rect": {
+                    "x": 38,
+                    "y": 29.375,
+                    "width": 1524,
+                    "height": 857.25,
+                    "right": 1562,
+                    "bottom": 886.625
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-recording",
+                      "refs": "[]",
+                      "rect": {
+                        "x": 99.9124984741211,
+                        "y": 155.134765625,
+                        "width": 1400.175048828125,
+                        "height": 694.3427124023438,
+                        "right": 1500.087547302246,
+                        "bottom": 849.4774780273438
+                      },
+                      "scrollWidth": 1466,
+                      "clientWidth": 1466,
+                      "scrollHeight": 727,
+                      "clientHeight": 727,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "把试用中遇到的问题记下来\n记录实际情况\n\n记录每次使用遇到的问题，留到试用结束时一起讨论。"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "pages": [
+            {
+              "id": "trial",
+              "dom": [
+                {
+                  "id": "trial",
+                  "rect": {
+                    "x": 46.2265625,
+                    "y": 24,
+                    "width": 1187.5555419921875,
+                    "height": 668,
+                    "right": 1233.7821044921875,
+                    "bottom": 692
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-request",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 82.59545135498047,
+                        "y": 113.0898666381836,
+                        "width": 622.5620727539062,
+                        "height": 517.3057250976562,
+                        "right": 705.1575241088867,
+                        "bottom": 630.3955917358398
+                      },
+                      "scrollWidth": 837,
+                      "clientWidth": 837,
+                      "scrollHeight": 695,
+                      "clientHeight": 695,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    },
+                    {
+                      "id": "trial-review",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 718.517578125,
+                        "y": 113.0898666381836,
+                        "width": 478.895751953125,
+                        "height": 517.3057250976562,
+                        "right": 1197.413330078125,
+                        "bottom": 630.3955917358398
+                      },
+                      "scrollWidth": 643,
+                      "clientWidth": 643,
+                      "scrollHeight": 695,
+                      "clientHeight": 695,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员\n\n先安排两台设备试用。参与人员确认后，才能确定开始时间。\n\n试用后再决定\n\n试用结束后，结合实际记录决定是否扩大范围。\n\n查看试用安排"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "trial-record",
+              "dom": [
+                {
+                  "id": "trial-record",
+                  "rect": {
+                    "x": 46.2265625,
+                    "y": 24,
+                    "width": 1187.5555419921875,
+                    "height": 668,
+                    "right": 1233.7821044921875,
+                    "bottom": 692
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-recording",
+                      "refs": "[]",
+                      "rect": {
+                        "x": 94.47100830078125,
+                        "y": 121.99652862548828,
+                        "width": 1091.066650390625,
+                        "height": 541.0568237304688,
+                        "right": 1185.5376586914062,
+                        "bottom": 663.053352355957
+                      },
+                      "scrollWidth": 1466,
+                      "clientWidth": 1466,
+                      "scrollHeight": 727,
+                      "clientHeight": 727,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "把试用中遇到的问题记下来\n记录实际情况\n\n记录每次使用遇到的问题，留到试用结束时一起讨论。"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "pages": [
+            {
+              "id": "trial",
+              "dom": [
+                {
+                  "id": "trial",
+                  "rect": {
+                    "x": 38,
+                    "y": 291.6875,
+                    "width": 314,
+                    "height": 176.625,
+                    "right": 352,
+                    "bottom": 468.3125
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-request",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 47.616249084472656,
+                        "y": 315.2436218261719,
+                        "width": 164.61083984375,
+                        "height": 136.78012084960938,
+                        "right": 212.22708892822266,
+                        "bottom": 452.02374267578125
+                      },
+                      "scrollWidth": 837,
+                      "clientWidth": 837,
+                      "scrollHeight": 695,
+                      "clientHeight": 695,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    },
+                    {
+                      "id": "trial-review",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 215.75958251953125,
+                        "y": 315.2436218261719,
+                        "width": 126.62417602539062,
+                        "height": 136.78012084960938,
+                        "right": 342.3837585449219,
+                        "bottom": 452.02374267578125
+                      },
+                      "scrollWidth": 643,
+                      "clientWidth": 643,
+                      "scrollHeight": 695,
+                      "clientHeight": 695,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员\n\n先安排两台设备试用。参与人员确认后，才能确定开始时间。\n\n试用后再决定\n\n试用结束后，结合实际记录决定是否扩大范围。\n\n查看试用安排"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "trial-record",
+              "dom": [
+                {
+                  "id": "trial-record",
+                  "rect": {
+                    "x": 38,
+                    "y": 291.6875,
+                    "width": 314,
+                    "height": 176.625,
+                    "right": 352,
+                    "bottom": 468.3125
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-recording",
+                      "refs": "[]",
+                      "rect": {
+                        "x": 50.756248474121094,
+                        "y": 317.5986328125,
+                        "width": 288.4875183105469,
+                        "height": 143.06011962890625,
+                        "right": 339.24376678466797,
+                        "bottom": 460.65875244140625
+                      },
+                      "scrollWidth": 1466,
+                      "clientWidth": 1466,
+                      "scrollHeight": 727,
+                      "clientHeight": 727,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "把试用中遇到的问题记下来\n记录实际情况\n\n记录每次使用遇到的问题，留到试用结束时一起讨论。"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        }
+      ],
+      "script_errors": [],
+      "network_requests": [],
+      "initial_state": {
+        "page": "trial",
+        "hash": "",
+        "mode": "scripted deck-mode",
+        "counter": "1 / 2"
+      },
+      "images": [],
+      "annotations": [],
+      "source_details": [
+        {
+          "page": "trial",
+          "reference_count": 1,
+          "exact_index_and_markers": true,
+          "keyboard_and_focus": true
+        },
+        {
+          "page": "trial-record",
+          "reference_count": 0,
+          "exact_index_and_markers": true,
+          "keyboard_and_focus": true
+        }
+      ],
+      "reading": {
+        "actual_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrolling": [],
+        "line_alignment": [],
+        "scaled_deck_readability": "not_asserted"
+      },
+      "pdf": {
+        "pages": 2,
+        "sha256": "19cc6785fa18f55b1c346f817d48fd98f8ff4c6252d6edb18dbe79039501a087",
+        "media_box_points": [
+          1200.0,
+          675.12
+        ],
+        "poster_verified": false,
+        "with_sources_pages": 3,
+        "with_sources_sha256": "0da69769da5253a4a12f8e026abc0f8a9aba917c261e6bfb077cd66446a8dd90"
+      }
+    },
+    {
+      "name": "review",
+      "html_sha256": "9189362403a9481b9c64ccc8c63f0d6b2d5afbd3e065a0da7c40396924007e81",
+      "checks": [
+        {
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "pages": [
+            {
+              "id": "trial",
+              "dom": [
+                {
+                  "id": "trial",
+                  "rect": {
+                    "x": 38,
+                    "y": 29.375,
+                    "width": 1524,
+                    "height": 857.25,
+                    "right": 1562,
+                    "bottom": 886.625
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-request",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 84.67250061035156,
+                        "y": 143.70477294921875,
+                        "width": 798.9391479492188,
+                        "height": 623.0689086914062,
+                        "right": 883.6116485595703,
+                        "bottom": 766.773681640625
+                      },
+                      "scrollWidth": 837,
+                      "clientWidth": 837,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    },
+                    {
+                      "id": "trial-review",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 900.7566528320312,
+                        "y": 143.70477294921875,
+                        "width": 614.5708618164062,
+                        "height": 623.0689086914062,
+                        "right": 1515.3275146484375,
+                        "bottom": 766.773681640625
+                      },
+                      "scrollWidth": 643,
+                      "clientWidth": 643,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员[1]\n\n先安排两台设备试用。参与人员确认后，才能确定开始时间。\n\n制作记录：人数尚未确定，不补写负责人。\n\n试用后再决定[1]\n\n试用结束后，结合实际记录决定是否扩大范围。\n\n范围与限制\n本文件为合成教学示例；资料备注供讲者查阅。\nINTERNAL_NOTE_ONLY_053\n\n来源与详情 [1]\n\n查看试用安排"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "trial-record",
+              "dom": [
+                {
+                  "id": "trial-record",
+                  "rect": {
+                    "x": 38,
+                    "y": 29.375,
+                    "width": 1524,
+                    "height": 857.25,
+                    "right": 1562,
+                    "bottom": 886.625
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-recording",
+                      "refs": "[]",
+                      "rect": {
+                        "x": 99.9124984741211,
+                        "y": 155.134765625,
+                        "width": 1400.175048828125,
+                        "height": 623.1433715820312,
+                        "right": 1500.087547302246,
+                        "bottom": 778.2781372070312
+                      },
+                      "scrollWidth": 1466,
+                      "clientWidth": 1466,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "把试用中遇到的问题记下来\n记录实际情况\n\n记录每次使用遇到的问题，留到试用结束时一起讨论。\n\n范围与限制\n此页没有外部引用，只有演练安排；资料入口仍应可访问。\n\n来源与详情"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "pages": [
+            {
+              "id": "trial",
+              "dom": [
+                {
+                  "id": "trial",
+                  "rect": {
+                    "x": 46.2265625,
+                    "y": 24,
+                    "width": 1187.5555419921875,
+                    "height": 668,
+                    "right": 1233.7821044921875,
+                    "bottom": 692
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-request",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 82.59545135498047,
+                        "y": 113.0898666381836,
+                        "width": 622.5620727539062,
+                        "height": 485.5177307128906,
+                        "right": 705.1575241088867,
+                        "bottom": 598.6075973510742
+                      },
+                      "scrollWidth": 837,
+                      "clientWidth": 837,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    },
+                    {
+                      "id": "trial-review",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 718.517578125,
+                        "y": 113.0898666381836,
+                        "width": 478.895751953125,
+                        "height": 485.5177307128906,
+                        "right": 1197.413330078125,
+                        "bottom": 598.6075973510742
+                      },
+                      "scrollWidth": 643,
+                      "clientWidth": 643,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员[1]\n\n先安排两台设备试用。参与人员确认后，才能确定开始时间。\n\n制作记录：人数尚未确定，不补写负责人。\n\n试用后再决定[1]\n\n试用结束后，结合实际记录决定是否扩大范围。\n\n范围与限制\n本文件为合成教学示例；资料备注供讲者查阅。\nINTERNAL_NOTE_ONLY_053\n\n来源与详情 [1]\n\n查看试用安排"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "trial-record",
+              "dom": [
+                {
+                  "id": "trial-record",
+                  "rect": {
+                    "x": 46.2265625,
+                    "y": 24,
+                    "width": 1187.5555419921875,
+                    "height": 668,
+                    "right": 1233.7821044921875,
+                    "bottom": 692
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-recording",
+                      "refs": "[]",
+                      "rect": {
+                        "x": 94.47100830078125,
+                        "y": 121.99652862548828,
+                        "width": 1091.066650390625,
+                        "height": 485.57574462890625,
+                        "right": 1185.5376586914062,
+                        "bottom": 607.5722732543945
+                      },
+                      "scrollWidth": 1466,
+                      "clientWidth": 1466,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "把试用中遇到的问题记下来\n记录实际情况\n\n记录每次使用遇到的问题，留到试用结束时一起讨论。\n\n范围与限制\n此页没有外部引用，只有演练安排；资料入口仍应可访问。\n\n来源与详情"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "pages": [
+            {
+              "id": "trial",
+              "dom": [
+                {
+                  "id": "trial",
+                  "rect": {
+                    "x": 38,
+                    "y": 291.6875,
+                    "width": 314,
+                    "height": 176.625,
+                    "right": 352,
+                    "bottom": 468.3125
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-request",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 47.616249084472656,
+                        "y": 315.2436218261719,
+                        "width": 164.61083984375,
+                        "height": 128.37509155273438,
+                        "right": 212.22708892822266,
+                        "bottom": 443.61871337890625
+                      },
+                      "scrollWidth": 837,
+                      "clientWidth": 837,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    },
+                    {
+                      "id": "trial-review",
+                      "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+                      "rect": {
+                        "x": 215.75958251953125,
+                        "y": 315.2436218261719,
+                        "width": 126.62417602539062,
+                        "height": 128.37509155273438,
+                        "right": 342.3837585449219,
+                        "bottom": 443.61871337890625
+                      },
+                      "scrollWidth": 643,
+                      "clientWidth": 643,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员[1]\n\n先安排两台设备试用。参与人员确认后，才能确定开始时间。\n\n制作记录：人数尚未确定，不补写负责人。\n\n试用后再决定[1]\n\n试用结束后，结合实际记录决定是否扩大范围。\n\n范围与限制\n本文件为合成教学示例；资料备注供讲者查阅。\nINTERNAL_NOTE_ONLY_053\n\n来源与详情 [1]\n\n查看试用安排"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "trial-record",
+              "dom": [
+                {
+                  "id": "trial-record",
+                  "rect": {
+                    "x": 38,
+                    "y": 291.6875,
+                    "width": 314,
+                    "height": 176.625,
+                    "right": 352,
+                    "bottom": 468.3125
+                  },
+                  "elements": [
+                    {
+                      "id": "trial-recording",
+                      "refs": "[]",
+                      "rect": {
+                        "x": 50.756248474121094,
+                        "y": 317.5986328125,
+                        "width": 288.4875183105469,
+                        "height": 128.39044189453125,
+                        "right": 339.24376678466797,
+                        "bottom": 445.98907470703125
+                      },
+                      "scrollWidth": 1466,
+                      "clientWidth": 1466,
+                      "scrollHeight": 652,
+                      "clientHeight": 652,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "把试用中遇到的问题记下来\n记录实际情况\n\n记录每次使用遇到的问题，留到试用结束时一起讨论。\n\n范围与限制\n此页没有外部引用，只有演练安排；资料入口仍应可访问。\n\n来源与详情"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        }
+      ],
+      "script_errors": [],
+      "network_requests": [],
+      "initial_state": {
+        "page": "trial",
+        "hash": "",
+        "mode": "scripted deck-mode",
+        "counter": "1 / 2"
+      },
+      "images": [],
+      "annotations": [],
+      "source_details": [
+        {
+          "page": "trial",
+          "reference_count": 1,
+          "exact_index_and_markers": true,
+          "keyboard_and_focus": true
+        },
+        {
+          "page": "trial-record",
+          "reference_count": 0,
+          "exact_index_and_markers": true,
+          "keyboard_and_focus": true
+        }
+      ],
+      "reading": {
+        "actual_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrolling": [],
+        "line_alignment": [],
+        "scaled_deck_readability": "not_asserted"
+      },
+      "pdf": {
+        "pages": 2,
+        "sha256": "71e5b522e1202bac014f71aec3dcb1f851e6ed2d6143967af9b880fdbb053a78",
+        "media_box_points": [
+          1200.0,
+          675.12
+        ],
+        "poster_verified": false,
+        "with_sources_pages": 3,
+        "with_sources_sha256": "70da485d0095a9bac42748596fe2949bec68cd202cefeccecbe3b4cc40e3595b"
+      }
+    },
+    {
+      "name": "schedule",
+      "html_sha256": "307933196d8acf0df06a3f90703d06a4b2403e123183960b33b5da43555262ce",
+      "checks": [
+        {
+          "viewport": {
+            "width": 1600,
+            "height": 1000
+          },
+          "pages": [
+            {
+              "id": "schedule-gantt-1",
+              "dom": [
+                {
+                  "id": "schedule-gantt-1",
+                  "rect": {
+                    "x": 38,
+                    "y": 29.375,
+                    "width": 1524,
+                    "height": 857.25,
+                    "right": 1562,
+                    "bottom": 886.625
+                  },
+                  "elements": [
+                    {
+                      "id": "schedule-gantt-1-view",
+                      "refs": "[{\"id\": \"synthetic-schedule\", \"revision\": 1, \"locator\": \"本文件：显式合成日期与状态\"}]",
+                      "rect": {
+                        "x": 84.67250061035156,
+                        "y": 143.70477294921875,
+                        "width": 1430.655029296875,
+                        "height": 722.917724609375,
+                        "right": 1515.3275299072266,
+                        "bottom": 866.6224975585938
+                      },
+                      "scrollWidth": 1500,
+                      "clientWidth": 1500,
+                      "scrollHeight": 757,
+                      "clientHeight": 757,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "计划、实际与预测对照\n\n截至 2026-10-28\n\n事项 / 状态 / 进度口径\t\n2026-10-01\n2026-10-12\n2026-10-23\n2026-11-03\n2026-11-14\n\t当前完成日 / 偏差\n\n范围与接口确认\n产品 · 已完成\n100% · 五项检查项均已确认\n\t\n基线: 2026-10-01 → 2026-10-05 · 实际: 2026-10-01 → 2026-10-06 · 预计: 未知 → 未知\n\t\n实际 2026-10-06\n+1 自然日\n\n\n系统联调\n交付 · 受阻\n60% · 12/20项约定用例通过；不是时间经过比例\n\t\n基线: 2026-10-07 → 2026-10-19 · 实际: 2026-10-07 → 未知 · 预计: 未知 → 2026-11-03\n\t\n预计 2026-11-03\n+15 自然日\n预测仍依赖外部接口环境及支持人落实\n\n\n业务验收\n业务 · 未开始\n未知\n\t\n基线: 2026-10-20 → 2026-10-30 · 实际: 未知 → 未知 · 预计: 2026-11-04 → 2026-11-10\n\t\n预计 2026-11-10\n+11 自然日\n验收窗口仍需业务确认\n\n细灰线：批准基线\n实线：实际经过\n虚线：预测\n· 经过区间不等于工作量；点仅表示已知日期。"
+                }
+              ],
+              "svg": [
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 35
+                  },
+                  "box": {
+                    "x": 20,
+                    "y": 0.6586610078811646,
+                    "width": 760.8776245117188,
+                    "height": 26.19164276123047
+                  },
+                  "outside": false,
+                  "text": [
+                    {
+                      "text": "2026-10-01",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 21.77142824445452
+                    },
+                    {
+                      "text": "2026-10-12",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 21.77142824445452
+                    },
+                    {
+                      "text": "2026-10-23",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 21.77142824445452
+                    },
+                    {
+                      "text": "2026-11-03",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 21.77142824445452
+                    },
+                    {
+                      "text": "2026-11-14",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 21.77142824445452
+                    }
+                  ]
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 20,
+                    "y": 0,
+                    "width": 483.63641357421875,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 123.63639831542969,
+                    "y": 0,
+                    "width": 483.63641357421875,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 348.1817932128906,
+                    "y": 0,
+                    "width": 380.0000305175781,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                }
+              ],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "schedule-outcomes-1",
+              "dom": [
+                {
+                  "id": "schedule-outcomes-1",
+                  "rect": {
+                    "x": 38,
+                    "y": 29.375,
+                    "width": 1524,
+                    "height": 857.25,
+                    "right": 1562,
+                    "bottom": 886.625
+                  },
+                  "elements": [
+                    {
+                      "id": "schedule-outcomes-1-view",
+                      "refs": "[{\"id\": \"synthetic-schedule\", \"revision\": 1, \"locator\": \"本文件：显式合成日期与状态\"}]",
+                      "rect": {
+                        "x": 84.67250061035156,
+                        "y": 143.70477294921875,
+                        "width": 1430.655029296875,
+                        "height": 722.917724609375,
+                        "right": 1515.3275299072266,
+                        "bottom": 866.6224975585938
+                      },
+                      "scrollWidth": 1500,
+                      "clientWidth": 1500,
+                      "scrollHeight": 757,
+                      "clientHeight": 757,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "交付结果与验收状态\n\n截至 2026-10-28\n\n事项\t结果、标准与范围\t执行\t验收\n范围与接口确认\t\n五项检查已确认\n标准: 范围及五项接口检查完成\n范围: 范围与接口文档，不代表项目整体验收\n\t已完成\t已接受\n系统联调\t\n12项通过，8项待处理\n标准: 约定联调用例通过\n范围: 联调范围\n\t受阻\t待审核\n业务验收\t\n未知\n标准: 核心业务流程按标准验证\n范围: 业务交付范围\n\t未开始\t未提交"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 1280,
+            "height": 800
+          },
+          "pages": [
+            {
+              "id": "schedule-gantt-1",
+              "dom": [
+                {
+                  "id": "schedule-gantt-1",
+                  "rect": {
+                    "x": 46.2265625,
+                    "y": 24,
+                    "width": 1187.5555419921875,
+                    "height": 668,
+                    "right": 1233.7821044921875,
+                    "bottom": 692
+                  },
+                  "elements": [
+                    {
+                      "id": "schedule-gantt-1-view",
+                      "refs": "[{\"id\": \"synthetic-schedule\", \"revision\": 1, \"locator\": \"本文件：显式合成日期与状态\"}]",
+                      "rect": {
+                        "x": 82.59545135498047,
+                        "y": 113.0898666381836,
+                        "width": 1114.81787109375,
+                        "height": 563.323486328125,
+                        "right": 1197.4133224487305,
+                        "bottom": 676.4133529663086
+                      },
+                      "scrollWidth": 1500,
+                      "clientWidth": 1500,
+                      "scrollHeight": 757,
+                      "clientHeight": 757,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "计划、实际与预测对照\n\n截至 2026-10-28\n\n事项 / 状态 / 进度口径\t\n2026-10-01\n2026-10-12\n2026-10-23\n2026-11-03\n2026-11-14\n\t当前完成日 / 偏差\n\n范围与接口确认\n产品 · 已完成\n100% · 五项检查项均已确认\n\t\n基线: 2026-10-01 → 2026-10-05 · 实际: 2026-10-01 → 2026-10-06 · 预计: 未知 → 未知\n\t\n实际 2026-10-06\n+1 自然日\n\n\n系统联调\n交付 · 受阻\n60% · 12/20项约定用例通过；不是时间经过比例\n\t\n基线: 2026-10-07 → 2026-10-19 · 实际: 2026-10-07 → 未知 · 预计: 未知 → 2026-11-03\n\t\n预计 2026-11-03\n+15 自然日\n预测仍依赖外部接口环境及支持人落实\n\n\n业务验收\n业务 · 未开始\n未知\n\t\n基线: 2026-10-20 → 2026-10-30 · 实际: 未知 → 未知 · 预计: 2026-11-04 → 2026-11-10\n\t\n预计 2026-11-10\n+11 自然日\n验收窗口仍需业务确认\n\n细灰线：批准基线\n实线：实际经过\n虚线：预测\n· 经过区间不等于工作量；点仅表示已知日期。"
+                }
+              ],
+              "svg": [
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 35
+                  },
+                  "box": {
+                    "x": 20,
+                    "y": 0.8369190096855164,
+                    "width": 760.7114868164062,
+                    "height": 26.142629623413086
+                  },
+                  "outside": false,
+                  "text": [
+                    {
+                      "text": "2026-10-01",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 16.96507998875209
+                    },
+                    {
+                      "text": "2026-10-12",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 16.96507998875209
+                    },
+                    {
+                      "text": "2026-10-23",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 16.96507998875209
+                    },
+                    {
+                      "text": "2026-11-03",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 16.96507998875209
+                    },
+                    {
+                      "text": "2026-11-14",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 16.96507998875209
+                    }
+                  ]
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 20,
+                    "y": 0,
+                    "width": 483.63641357421875,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 123.63639831542969,
+                    "y": 0,
+                    "width": 483.63641357421875,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 348.1817932128906,
+                    "y": 0,
+                    "width": 380.0000305175781,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                }
+              ],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "schedule-outcomes-1",
+              "dom": [
+                {
+                  "id": "schedule-outcomes-1",
+                  "rect": {
+                    "x": 46.2265625,
+                    "y": 24,
+                    "width": 1187.5555419921875,
+                    "height": 668,
+                    "right": 1233.7821044921875,
+                    "bottom": 692
+                  },
+                  "elements": [
+                    {
+                      "id": "schedule-outcomes-1-view",
+                      "refs": "[{\"id\": \"synthetic-schedule\", \"revision\": 1, \"locator\": \"本文件：显式合成日期与状态\"}]",
+                      "rect": {
+                        "x": 82.59545135498047,
+                        "y": 113.0898666381836,
+                        "width": 1114.81787109375,
+                        "height": 563.323486328125,
+                        "right": 1197.4133224487305,
+                        "bottom": 676.4133529663086
+                      },
+                      "scrollWidth": 1500,
+                      "clientWidth": 1500,
+                      "scrollHeight": 757,
+                      "clientHeight": 757,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "交付结果与验收状态\n\n截至 2026-10-28\n\n事项\t结果、标准与范围\t执行\t验收\n范围与接口确认\t\n五项检查已确认\n标准: 范围及五项接口检查完成\n范围: 范围与接口文档，不代表项目整体验收\n\t已完成\t已接受\n系统联调\t\n12项通过，8项待处理\n标准: 约定联调用例通过\n范围: 联调范围\n\t受阻\t待审核\n业务验收\t\n未知\n标准: 核心业务流程按标准验证\n范围: 业务交付范围\n\t未开始\t未提交"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        },
+        {
+          "viewport": {
+            "width": 390,
+            "height": 844
+          },
+          "pages": [
+            {
+              "id": "schedule-gantt-1",
+              "dom": [
+                {
+                  "id": "schedule-gantt-1",
+                  "rect": {
+                    "x": 38,
+                    "y": 291.6875,
+                    "width": 314,
+                    "height": 176.625,
+                    "right": 352,
+                    "bottom": 468.3125
+                  },
+                  "elements": [
+                    {
+                      "id": "schedule-gantt-1-view",
+                      "refs": "[{\"id\": \"synthetic-schedule\", \"revision\": 1, \"locator\": \"本文件：显式合成日期与状态\"}]",
+                      "rect": {
+                        "x": 47.616249084472656,
+                        "y": 315.2436218261719,
+                        "width": 294.76751708984375,
+                        "height": 148.9476318359375,
+                        "right": 342.3837661743164,
+                        "bottom": 464.1912536621094
+                      },
+                      "scrollWidth": 1500,
+                      "clientWidth": 1500,
+                      "scrollHeight": 757,
+                      "clientHeight": 757,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "计划、实际与预测对照\n\n截至 2026-10-28\n\n事项 / 状态 / 进度口径\t\n2026-10-01\n2026-10-12\n2026-10-23\n2026-11-03\n2026-11-14\n\t当前完成日 / 偏差\n\n范围与接口确认\n产品 · 已完成\n100% · 五项检查项均已确认\n\t\n基线: 2026-10-01 → 2026-10-05 · 实际: 2026-10-01 → 2026-10-06 · 预计: 未知 → 未知\n\t\n实际 2026-10-06\n+1 自然日\n\n\n系统联调\n交付 · 受阻\n60% · 12/20项约定用例通过；不是时间经过比例\n\t\n基线: 2026-10-07 → 2026-10-19 · 实际: 2026-10-07 → 未知 · 预计: 未知 → 2026-11-03\n\t\n预计 2026-11-03\n+15 自然日\n预测仍依赖外部接口环境及支持人落实\n\n\n业务验收\n业务 · 未开始\n未知\n\t\n基线: 2026-10-20 → 2026-10-30 · 实际: 未知 → 未知 · 预计: 2026-11-04 → 2026-11-10\n\t\n预计 2026-11-10\n+11 自然日\n验收窗口仍需业务确认\n\n细灰线：批准基线\n实线：实际经过\n虚线：预测\n· 经过区间不等于工作量；点仅表示已知日期。"
+                }
+              ],
+              "svg": [
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 35
+                  },
+                  "box": {
+                    "x": 15.291807174682617,
+                    "y": 3.1672279834747314,
+                    "width": 767.1146240234375,
+                    "height": 23.540964126586914
+                  },
+                  "outside": false,
+                  "text": [
+                    {
+                      "text": "2026-10-01",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 4.485714435577393
+                    },
+                    {
+                      "text": "2026-10-12",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 4.485714435577393
+                    },
+                    {
+                      "text": "2026-10-23",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 4.485714435577393
+                    },
+                    {
+                      "text": "2026-11-03",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 4.485714435577393
+                    },
+                    {
+                      "text": "2026-11-14",
+                      "outside": false,
+                      "cssFontPx": 20,
+                      "screenFontPx": 4.485714435577393
+                    }
+                  ]
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 20,
+                    "y": 0,
+                    "width": 483.63641357421875,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 123.63639831542969,
+                    "y": 0,
+                    "width": 483.63641357421875,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                },
+                {
+                  "element": "schedule-gantt-1-view",
+                  "view": {
+                    "x": 0,
+                    "y": 0,
+                    "width": 800,
+                    "height": 48
+                  },
+                  "box": {
+                    "x": 348.1817932128906,
+                    "y": 0,
+                    "width": 380.0000305175781,
+                    "height": 46
+                  },
+                  "outside": false,
+                  "text": []
+                }
+              ],
+              "geometry_issues": [],
+              "independent_issues": []
+            },
+            {
+              "id": "schedule-outcomes-1",
+              "dom": [
+                {
+                  "id": "schedule-outcomes-1",
+                  "rect": {
+                    "x": 38,
+                    "y": 291.6875,
+                    "width": 314,
+                    "height": 176.625,
+                    "right": 352,
+                    "bottom": 468.3125
+                  },
+                  "elements": [
+                    {
+                      "id": "schedule-outcomes-1-view",
+                      "refs": "[{\"id\": \"synthetic-schedule\", \"revision\": 1, \"locator\": \"本文件：显式合成日期与状态\"}]",
+                      "rect": {
+                        "x": 47.616249084472656,
+                        "y": 315.2436218261719,
+                        "width": 294.76751708984375,
+                        "height": 148.9476318359375,
+                        "right": 342.3837661743164,
+                        "bottom": 464.1912536621094
+                      },
+                      "scrollWidth": 1500,
+                      "clientWidth": 1500,
+                      "scrollHeight": 757,
+                      "clientHeight": 757,
+                      "outsideSlide": false,
+                      "textOutsideSlide": false
+                    }
+                  ],
+                  "text": "交付结果与验收状态\n\n截至 2026-10-28\n\n事项\t结果、标准与范围\t执行\t验收\n范围与接口确认\t\n五项检查已确认\n标准: 范围及五项接口检查完成\n范围: 范围与接口文档，不代表项目整体验收\n\t已完成\t已接受\n系统联调\t\n12项通过，8项待处理\n标准: 约定联调用例通过\n范围: 联调范围\n\t受阻\t待审核\n业务验收\t\n未知\n标准: 核心业务流程按标准验证\n范围: 业务交付范围\n\t未开始\t未提交"
+                }
+              ],
+              "svg": [],
+              "geometry_issues": [],
+              "independent_issues": []
+            }
+          ]
+        }
+      ],
+      "script_errors": [],
+      "network_requests": [],
+      "initial_state": {
+        "page": "schedule-gantt-1",
+        "hash": "",
+        "mode": "scripted deck-mode",
+        "counter": "1 / 2"
+      },
+      "images": [],
+      "annotations": [],
+      "source_details": [
+        {
+          "page": "schedule-gantt-1",
+          "reference_count": 7,
+          "exact_index_and_markers": true,
+          "keyboard_and_focus": true
+        },
+        {
+          "page": "schedule-outcomes-1",
+          "reference_count": 7,
+          "exact_index_and_markers": true,
+          "keyboard_and_focus": true
+        }
+      ],
+      "reading": {
+        "actual_viewport": {
+          "width": 390,
+          "height": 844
+        },
+        "scrolling": [
+          {
+            "kind": "schedule-content",
+            "width": 270,
+            "scrollWidth": 850,
+            "maximum": 580
+          },
+          {
+            "kind": "schedule-content",
+            "width": 270,
+            "scrollWidth": 850,
+            "maximum": 580
+          }
+        ],
+        "line_alignment": [],
+        "scaled_deck_readability": "not_asserted"
+      },
+      "pdf": {
+        "pages": 2,
+        "sha256": "147d17171a0679f52c1df20e8a286c1bfb2a5a0c0fa383b7865083e5e2d297fb",
+        "media_box_points": [
+          1200.0,
+          675.12
+        ],
+        "poster_verified": false,
+        "with_sources_pages": 4,
+        "with_sources_sha256": "1b51424451e30954668e3204fe41482d2847fc94b7c777c0231e6a68036b50e8"
+      }
+    }
+  ],
+  "errors": [],
+  "package_manifest_sha256": "318378a2233b39a1277434a033cb71d90c9930da74afd96e5d6f0ad243fdb5e9",
+  "implementation_before": {
+    "scripts/diagram_layout.py": "92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb",
+    "scripts/presentation_components.py": "423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc",
+    "scripts/report_calculate.py": "9553346153c37e8f90dceedb0a3b15215d128282e12e292e63e632c56f70261f",
+    "scripts/report_experience.py": "4a7dc4e7b869525cf0911812f66d81780e84658a7dc1f3e068562b1d92ac67a0",
+    "scripts/report_html.py": "e8c0b2b082bfa52eb6cbb051189cc1ae7e0731be2d29dc027f20a5240803b13c",
+    "scripts/report_profile.py": "c36c05e6a3e93e5b1ea2026519aac365a2750a1a0d905cbea65e5edf757318b9",
+    "scripts/report_run.py": "3f5d2dd92a06eebac0a463c0578c04d4bbbcde2160e7c0382eb939ab9a303f70",
+    "scripts/report_schedule.py": "21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e",
+    "scripts/report_versions.py": "e896c7e920fb9c6af2e261da10725a61b8d3e694e96601b6dcf10be17b2852de",
+    "scripts/schedule_core.py": "cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7",
+    "scripts/schedule_render.py": "2f19e493d8c7064aa57331cd2cde0722ebc91577ac26e305c208f55ac2e2d868",
+    "scripts/validate_run.py": "77cb6b27e93609d2d0a2fc834b9fb87e0830d878e801876f9dc1dcf67a548be9",
+    "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224",
+    "assets/report-html/deck.js": "176464e2fb2e5a0be74e72d316712a36fb0f23bd4340ae99c3b8f3fdc7db7d0d",
+    "assets/report-html/deck.css": "a676aabd389c95d2f6b7e53460d4c4d47a65b1bf28712a191204a67bfa2e09b1",
+    "assets/report-html/schedule.css": "e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72"
+  },
+  "audience_render": {
+    "argv": [
+      "C:\\Users\\Maoty Kase\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-I",
+      "D:\\Vscode Documents\\How-to-report\\project\\skills\\how-to-report\\scripts\\report_html.py",
+      "render",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\audience-input.json",
+      "--output",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\audience"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"valid\": true,\n  \"output_directory\": \"D:\\\\Vscode Documents\\\\How-to-report\\\\.trellis\\\\tasks\\\\10-25-how-to-report-skill-architecture\\\\validation\\\\audience-053-browser-01\\\\audience\",\n  \"renderer_contract_version\": \"0.2\",\n  \"plan_sha256\": \"f8d543872073d425b03f1241f70d1a74b38c6cc89154ad198577b5255fdda0dd\",\n  \"files\": {\n    \"index.html\": \"f9937262626e2fcbe96b20a951d8dab7119a6e6865270196135a6630d0ee0cc9\",\n    \"plan.json\": \"f8d543872073d425b03f1241f70d1a74b38c6cc89154ad198577b5255fdda0dd\",\n    \"page-map.json\": \"e034c5e0efa216fab5148f4034c2648acfb35b059e5bd229890824e5b3f8a94d\"\n  },\n  \"page_count\": 2,\n  \"canvas\": {\n    \"width\": 1600,\n    \"height\": 900\n  },\n  \"browser_validation\": \"not_run\",\n  \"semantic_validation\": \"not_run\",\n  \"run_mutation\": \"not_performed\",\n  \"implementation_sha256\": {\n    \"report_html.py\": \"e8c0b2b082bfa52eb6cbb051189cc1ae7e0731be2d29dc027f20a5240803b13c\",\n    \"presentation_components.py\": \"423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc\",\n    \"diagram_layout.py\": \"92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb\",\n    \"deck.css\": \"a676aabd389c95d2f6b7e53460d4c4d47a65b1bf28712a191204a67bfa2e09b1\",\n    \"deck.js\": \"176464e2fb2e5a0be74e72d316712a36fb0f23bd4340ae99c3b8f3fdc7db7d0d\",\n    \"schedule_core.py\": \"cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7\",\n    \"schedule_render.py\": \"2f19e493d8c7064aa57331cd2cde0722ebc91577ac26e305c208f55ac2e2d868\",\n    \"schedule.css\": \"e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72\"\n  }\n}\n",
+    "stderr": ""
+  },
+  "review_render": {
+    "argv": [
+      "C:\\Users\\Maoty Kase\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-I",
+      "D:\\Vscode Documents\\How-to-report\\project\\skills\\how-to-report\\scripts\\report_html.py",
+      "render",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\review-input.json",
+      "--output",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\review"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"valid\": true,\n  \"output_directory\": \"D:\\\\Vscode Documents\\\\How-to-report\\\\.trellis\\\\tasks\\\\10-25-how-to-report-skill-architecture\\\\validation\\\\audience-053-browser-01\\\\review\",\n  \"renderer_contract_version\": \"0.2\",\n  \"plan_sha256\": \"c47d01de5e707417b4685d26348a083b415a4d626f666ae416055baa826ff3b5\",\n  \"files\": {\n    \"index.html\": \"9189362403a9481b9c64ccc8c63f0d6b2d5afbd3e065a0da7c40396924007e81\",\n    \"plan.json\": \"c47d01de5e707417b4685d26348a083b415a4d626f666ae416055baa826ff3b5\",\n    \"page-map.json\": \"bff7037d2db1fc646a3dd4d5177bafcb0b3cae8504906521d99edf4fc0ca3aaa\"\n  },\n  \"page_count\": 2,\n  \"canvas\": {\n    \"width\": 1600,\n    \"height\": 900\n  },\n  \"browser_validation\": \"not_run\",\n  \"semantic_validation\": \"not_run\",\n  \"run_mutation\": \"not_performed\",\n  \"implementation_sha256\": {\n    \"report_html.py\": \"e8c0b2b082bfa52eb6cbb051189cc1ae7e0731be2d29dc027f20a5240803b13c\",\n    \"presentation_components.py\": \"423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc\",\n    \"diagram_layout.py\": \"92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb\",\n    \"deck.css\": \"a676aabd389c95d2f6b7e53460d4c4d47a65b1bf28712a191204a67bfa2e09b1\",\n    \"deck.js\": \"176464e2fb2e5a0be74e72d316712a36fb0f23bd4340ae99c3b8f3fdc7db7d0d\",\n    \"schedule_core.py\": \"cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7\",\n    \"schedule_render.py\": \"2f19e493d8c7064aa57331cd2cde0722ebc91577ac26e305c208f55ac2e2d868\",\n    \"schedule.css\": \"e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72\"\n  }\n}\n",
+    "stderr": ""
+  },
+  "schedule_render": {
+    "argv": [
+      "C:\\Users\\Maoty Kase\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-I",
+      "D:\\Vscode Documents\\How-to-report\\project\\skills\\how-to-report\\scripts\\report_schedule.py",
+      "render",
+      "D:\\Vscode Documents\\How-to-report\\project\\skills\\how-to-report\\assets\\report-html\\sample-schedule.json",
+      "--views",
+      "gantt,outcomes",
+      "--output",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\schedule"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"valid\": true,\n  \"output_directory\": \"D:\\\\Vscode Documents\\\\How-to-report\\\\.trellis\\\\tasks\\\\10-25-how-to-report-skill-architecture\\\\validation\\\\audience-053-browser-01\\\\schedule\",\n  \"page_count\": 2,\n  \"schedule_version\": \"0.1\",\n  \"input_sha256\": \"faabca80b97f427352b8852f233fd25bc41f12559c614dbd4c1f81bda7acf28b\",\n  \"views\": [\n    \"gantt\",\n    \"outcomes\"\n  ],\n  \"files\": {\n    \"index.html\": \"307933196d8acf0df06a3f90703d06a4b2403e123183960b33b5da43555262ce\",\n    \"page-map.json\": \"17feb031dccf8136f1144512293817c1b2c0b179a750da3b9e76808a39e828e3\",\n    \"plan.json\": \"33c614a1d625ed4cb9fb447be98d00381df2e41a14fb46ee26639cf667d4a7f5\",\n    \"render-receipt.json\": \"52faba1751910710de8af71971469c62eb65e633ad7329b3e29ce8bd3c03ff4b\",\n    \"schedule-input.json\": \"faabca80b97f427352b8852f233fd25bc41f12559c614dbd4c1f81bda7acf28b\"\n  },\n  \"method_sha256\": {\n    \"report_schedule.py\": \"21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e\",\n    \"schedule_core.py\": \"cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7\",\n    \"schedule_render.py\": \"2f19e493d8c7064aa57331cd2cde0722ebc91577ac26e305c208f55ac2e2d868\"\n  },\n  \"calendar\": \"natural_days_inclusive_finish_end_of_day\",\n  \"source_refs\": [\n    {\n      \"id\": \"synthetic-schedule\",\n      \"revision\": 1,\n      \"locator\": \"\\u672c\\u6587\\u4ef6\\uff1a\\u663e\\u5f0f\\u5408\\u6210\\u65e5\\u671f\\u4e0e\\u72b6\\u6001\"\n    }\n  ],\n  \"warnings\": [],\n  \"scope\": \"declared_dates_and_deterministic_graphics_not_project_truth\",\n  \"browser_validation\": \"not_run\",\n  \"semantic_validation\": \"not_run\",\n  \"run_mutation\": \"not_performed\"\n}\n",
+    "stderr": ""
+  },
+  "overflow_render": {
+    "argv": [
+      "C:\\Users\\Maoty Kase\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+      "-B",
+      "-I",
+      "D:\\Vscode Documents\\How-to-report\\project\\skills\\how-to-report\\scripts\\report_html.py",
+      "render",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\overflow-input.json",
+      "--output",
+      "D:\\Vscode Documents\\How-to-report\\.trellis\\tasks\\10-25-how-to-report-skill-architecture\\validation\\audience-053-browser-01\\overflow"
+    ],
+    "exit_code": 0,
+    "stdout": "{\n  \"valid\": true,\n  \"output_directory\": \"D:\\\\Vscode Documents\\\\How-to-report\\\\.trellis\\\\tasks\\\\10-25-how-to-report-skill-architecture\\\\validation\\\\audience-053-browser-01\\\\overflow\",\n  \"renderer_contract_version\": \"0.2\",\n  \"plan_sha256\": \"9f58c37776cb7e9e807cd67f8b31d18fc9e82faf68829846f738a4dc70d9c349\",\n  \"files\": {\n    \"index.html\": \"554b2fde18629ece6ce0f226566cb2d50ddf9dc9ba6a650ee5b68c561a67146e\",\n    \"plan.json\": \"9f58c37776cb7e9e807cd67f8b31d18fc9e82faf68829846f738a4dc70d9c349\",\n    \"page-map.json\": \"ec18460937ed68c8527c5a2e62f82bc21f218be26acf68cb053c25d6ccdea06f\"\n  },\n  \"page_count\": 1,\n  \"canvas\": {\n    \"width\": 1600,\n    \"height\": 900\n  },\n  \"browser_validation\": \"not_run\",\n  \"semantic_validation\": \"not_run\",\n  \"run_mutation\": \"not_performed\",\n  \"implementation_sha256\": {\n    \"report_html.py\": \"e8c0b2b082bfa52eb6cbb051189cc1ae7e0731be2d29dc027f20a5240803b13c\",\n    \"presentation_components.py\": \"423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc\",\n    \"diagram_layout.py\": \"92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb\",\n    \"deck.css\": \"a676aabd389c95d2f6b7e53460d4c4d47a65b1bf28712a191204a67bfa2e09b1\",\n    \"deck.js\": \"176464e2fb2e5a0be74e72d316712a36fb0f23bd4340ae99c3b8f3fdc7db7d0d\",\n    \"schedule_core.py\": \"cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7\",\n    \"schedule_render.py\": \"2f19e493d8c7064aa57331cd2cde0722ebc91577ac26e305c208f55ac2e2d868\",\n    \"schedule.css\": \"e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72\"\n  }\n}\n",
+    "stderr": ""
+  },
+  "browser": {
+    "name": "Chromium",
+    "version": "145.0.7632.6"
+  },
+  "audience_controls": {
+    "backup_return": true,
+    "directory_focus": true,
+    "speaker_notes": true,
+    "fullscreen": true
+  },
+  "pdf_projection": {
+    "audience_excludes_note": true,
+    "audience_appendix_retains_note": true,
+    "review_retains_note": true
+  },
+  "schedule_business_fields": {
+    "conditions_preserved": true,
+    "acceptance_result_criteria_scope_preserved": true
+  },
+  "overflow_negative": {
+    "issues": [
+      {
+        "kind": "content_overflow",
+        "id": "page-content",
+        "pageId": "trial"
+      },
+      {
+        "kind": "content_overflow",
+        "id": "layout-node layout-row",
+        "pageId": "trial"
+      },
+      {
+        "kind": "content_overflow",
+        "id": "trial-request",
+        "pageId": "trial"
+      },
+      {
+        "kind": "text_outside_content",
+        "id": "trial-request",
+        "pageId": "trial"
+      },
+      {
+        "kind": "text_outside_panel",
+        "id": "trial-request",
+        "pageId": "trial"
+      }
+    ],
+    "dom": [
+      {
+        "id": "trial",
+        "rect": {
+          "x": 38,
+          "y": 29.375,
+          "width": 1524,
+          "height": 857.25,
+          "right": 1562,
+          "bottom": 886.625
+        },
+        "elements": [
+          {
+            "id": "trial-request",
+            "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+            "rect": {
+              "x": 84.67250061035156,
+              "y": 143.70477294921875,
+              "width": 798.9391479492188,
+              "height": 722.917724609375,
+              "right": 883.6116485595703,
+              "bottom": 866.6224975585938
+            },
+            "scrollWidth": 837,
+            "clientWidth": 837,
+            "scrollHeight": 13909,
+            "clientHeight": 757,
+            "outsideSlide": false,
+            "textOutsideSlide": true
+          },
+          {
+            "id": "trial-review",
+            "refs": "[{\"id\": \"synthetic-trial-note\", \"revision\": 1, \"locator\": \"Illustrative planning note; not a project record\"}]",
+            "rect": {
+              "x": 900.7566528320312,
+              "y": 143.70477294921875,
+              "width": 614.5708618164062,
+              "height": 722.917724609375,
+              "right": 1515.3275146484375,
+              "bottom": 866.6224975585938
+            },
+            "scrollWidth": 643,
+            "clientWidth": 643,
+            "scrollHeight": 757,
+            "clientHeight": 757,
+            "outsideSlide": false,
+            "textOutsideSlide": false
+          }
+        ],
+        "text": "先试用两台设备，再决定是否扩大范围\n确认试用人员\n\nImportant authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete. Important authored condition must remain complete.\n\n试用后再决定\n\n试用结束后，结合实际记录决定是否扩大范围。"
+      }
+    ],
+    "full_text_preserved": true
+  },
+  "control_probe_script_errors": [],
+  "implementation_after": {
+    "scripts/diagram_layout.py": "92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb",
+    "scripts/presentation_components.py": "423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc",
+    "scripts/report_calculate.py": "9553346153c37e8f90dceedb0a3b15215d128282e12e292e63e632c56f70261f",
+    "scripts/report_experience.py": "4a7dc4e7b869525cf0911812f66d81780e84658a7dc1f3e068562b1d92ac67a0",
+    "scripts/report_html.py": "e8c0b2b082bfa52eb6cbb051189cc1ae7e0731be2d29dc027f20a5240803b13c",
+    "scripts/report_profile.py": "c36c05e6a3e93e5b1ea2026519aac365a2750a1a0d905cbea65e5edf757318b9",
+    "scripts/report_run.py": "3f5d2dd92a06eebac0a463c0578c04d4bbbcde2160e7c0382eb939ab9a303f70",
+    "scripts/report_schedule.py": "21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e",
+    "scripts/report_versions.py": "e896c7e920fb9c6af2e261da10725a61b8d3e694e96601b6dcf10be17b2852de",
+    "scripts/schedule_core.py": "cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7",
+    "scripts/schedule_render.py": "2f19e493d8c7064aa57331cd2cde0722ebc91577ac26e305c208f55ac2e2d868",
+    "scripts/validate_run.py": "77cb6b27e93609d2d0a2fc834b9fb87e0830d878e801876f9dc1dcf67a548be9",
+    "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224",
+    "assets/report-html/deck.js": "176464e2fb2e5a0be74e72d316712a36fb0f23bd4340ae99c3b8f3fdc7db7d0d",
+    "assets/report-html/deck.css": "a676aabd389c95d2f6b7e53460d4c4d47a65b1bf28712a191204a67bfa2e09b1",
+    "assets/report-html/schedule.css": "e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72"
+  },
+  "passed": true,
+  "evidence_files": {
+    "audience-input.json": "f8d543872073d425b03f1241f70d1a74b38c6cc89154ad198577b5255fdda0dd",
+    "overflow-input.json": "9f58c37776cb7e9e807cd67f8b31d18fc9e82faf68829846f738a4dc70d9c349",
+    "review-input.json": "c47d01de5e707417b4685d26348a083b415a4d626f666ae416055baa826ff3b5",
+    "audience/deck-with-sources.pdf": "0da69769da5253a4a12f8e026abc0f8a9aba917c261e6bfb077cd66446a8dd90",
+    "audience/deck.pdf": "19cc6785fa18f55b1c346f817d48fd98f8ff4c6252d6edb18dbe79039501a087",
+    "audience/index.html": "f9937262626e2fcbe96b20a951d8dab7119a6e6865270196135a6630d0ee0cc9",
+    "audience/mobile-trial-record.png": "127596c025fdb9b118f3fe8e613a9cbec6f6821ad80488c27ab02f4eb00a550d",
+    "audience/mobile-trial.png": "0fc66a8dee05209b3cb30065064cca4e89cb52f476be71bed8edbd88e447098f",
+    "audience/page-01.png": "a9e3d3350c15808d8cff6d44e99913e34a89d9bbccf5d8342e252e19f077c525",
+    "audience/page-02.png": "17b8c1743b20458ad5830799413a0d3e84d220b125905ef94f50a1faa3aef779",
+    "audience/page-map.json": "e034c5e0efa216fab5148f4034c2648acfb35b059e5bd229890824e5b3f8a94d",
+    "audience/plan.json": "f8d543872073d425b03f1241f70d1a74b38c6cc89154ad198577b5255fdda0dd",
+    "audience/render-receipt.json": "5859f83102da5cd51f6b6fce66d443fbbda4e84c28707ef04c2be41732d46614",
+    "overflow/detected.png": "5f7b2ed85a1d6627a3ff53dee1ff2b3ce477f6769b1ba7f169521fd2bca3093e",
+    "overflow/index.html": "554b2fde18629ece6ce0f226566cb2d50ddf9dc9ba6a650ee5b68c561a67146e",
+    "overflow/page-map.json": "ec18460937ed68c8527c5a2e62f82bc21f218be26acf68cb053c25d6ccdea06f",
+    "overflow/plan.json": "9f58c37776cb7e9e807cd67f8b31d18fc9e82faf68829846f738a4dc70d9c349",
+    "overflow/render-receipt.json": "7cb2c6c452af26e9541a7ae3e582d51a494ebe3c6bf11b1706e24c78666766cd",
+    "review/deck-with-sources.pdf": "70da485d0095a9bac42748596fe2949bec68cd202cefeccecbe3b4cc40e3595b",
+    "review/deck.pdf": "71e5b522e1202bac014f71aec3dcb1f851e6ed2d6143967af9b880fdbb053a78",
+    "review/index.html": "9189362403a9481b9c64ccc8c63f0d6b2d5afbd3e065a0da7c40396924007e81",
+    "review/mobile-trial-record.png": "ba3e33b1642d5ee9a2151175a7530229af2cf610801b5c61c9657e147056c2c7",
+    "review/mobile-trial.png": "a1aedc2f5b1515ae6e436b508b6819225c251de8149d6da253056b91423a6a36",
+    "review/page-01.png": "646b1bc32cb3fd9f06fa22363b8b839d89da6d1273fcc804c1807b26a3d51d99",
+    "review/page-02.png": "e5b46ee8f0b5e97a1290cffc3a20b7d2b5152e3f0d3800d597304f7cb8e58f10",
+    "review/page-map.json": "bff7037d2db1fc646a3dd4d5177bafcb0b3cae8504906521d99edf4fc0ca3aaa",
+    "review/plan.json": "c47d01de5e707417b4685d26348a083b415a4d626f666ae416055baa826ff3b5",
+    "review/render-receipt.json": "435302e8eb2d3c1e6fc0bb3180724c5ff040a6e7ce800b6969bb748b26797df1",
+    "schedule/deck-with-sources.pdf": "1b51424451e30954668e3204fe41482d2847fc94b7c777c0231e6a68036b50e8",
+    "schedule/deck.pdf": "147d17171a0679f52c1df20e8a286c1bfb2a5a0c0fa383b7865083e5e2d297fb",
+    "schedule/index.html": "307933196d8acf0df06a3f90703d06a4b2403e123183960b33b5da43555262ce",
+    "schedule/mobile-schedule-gantt-1.png": "a33a4824abd232dd0278ccbbf58e7f013660d9fd88e14a2547ba7d4fc5d18e49",
+    "schedule/mobile-schedule-outcomes-1.png": "43d7cc877dec19f1ea1c6744c094437ac5864e39b0fae5c21dca4d9d06616da0",
+    "schedule/page-01.png": "a755882e9be0c67d71fb73c60098102ec4b14c8cb3ea42cfc6a63d2d7f369342",
+    "schedule/page-02.png": "c600a0196e975fc0f01bd9d03dcfedaec1b5062320a2478a0a81265b4c31650b",
+    "schedule/page-map.json": "17feb031dccf8136f1144512293817c1b2c0b179a750da3b9e76808a39e828e3",
+    "schedule/plan.json": "33c614a1d625ed4cb9fb447be98d00381df2e41a14fb46ee26639cf667d4a7f5",
+    "schedule/render-receipt.json": "52faba1751910710de8af71971469c62eb65e633ad7329b3e29ce8bd3c03ff4b",
+    "schedule/schedule-input.json": "faabca80b97f427352b8852f233fd25bc41f12559c614dbd4c1f81bda7acf28b",
+    "schedule/schedule-receipt.json": "ba940702848744823fd4e3803eee2f7f772d7b09f7bae83ccfb0be1d5495db77"
+  }
+}

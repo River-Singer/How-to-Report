@@ -108,18 +108,20 @@
         if (element.scrollHeight > element.clientHeight + 2 || element.scrollWidth > element.clientWidth + 2) add("content_overflow", id);
       }
       const content = slide.querySelector(".page-content").getBoundingClientRect();
-      const footer = slide.querySelector(".page-footer").getBoundingClientRect();
+      const footer = slide.querySelector(".page-footer, .page-actions")?.getBoundingClientRect();
+      const contentBottom = footer ? footer.top : content.bottom;
       for (const leaf of slide.querySelectorAll(".page-content h2, .page-content p, .page-content small, .page-content .value, .page-content caption, .page-content th, .page-content td, .chart-label, .chart-value, .hierarchy-levels li")) {
         // Empty optional limits have display:none; they have no rendered box.
         // Continue measuring actual visible text, including overfull content.
         if (!leaf.getClientRects().length) continue;
         const r = leaf.getBoundingClientRect();
-        if (r.bottom > footer.top + 1 || r.top < content.top - 1) add("text_outside_content", leaf.closest("[data-element-id]")?.dataset.elementId || leaf.tagName);
+        if (r.bottom > contentBottom + 1 || r.top < content.top - 1) add("text_outside_content", leaf.closest("[data-element-id]")?.dataset.elementId || leaf.tagName);
         const panel = leaf.closest(".composed-element");
         if (panel) {
           const panelRect = panel.getBoundingClientRect();
           if (r.left < panelRect.left-1 || r.right > panelRect.right+1 || r.top < panelRect.top-1 || r.bottom > panelRect.bottom+1) add("text_outside_panel", panel.dataset.elementId);
-          if (!leaf.closest(".element-footer") && r.bottom > panel.querySelector(".element-footer").getBoundingClientRect().top+1) add("text_overlaps_panel_footer", panel.dataset.elementId);
+          const panelFooter = panel.querySelector(".element-footer");
+          if (panelFooter && !leaf.closest(".element-footer") && r.bottom > panelFooter.getBoundingClientRect().top+1) add("text_overlaps_panel_footer", panel.dataset.elementId);
         }
       }
       for (const row of slide.querySelectorAll(".data-row, .chart-bar-row")) {
@@ -234,6 +236,10 @@
   notesToggle?.addEventListener("click", () => setNotes(!notesOpen));
   document.getElementById("notes-close").addEventListener("click", () => { setNotes(false); notesToggle?.focus(); });
   moreToggle.addEventListener("click", () => setMore(more.hidden));
+  document.getElementById("page-sources")?.addEventListener("click", () => {
+    setMore(false);
+    openSources(slides[active].dataset.pageId, moreToggle);
+  });
   document.getElementById("fullscreen").addEventListener("click", fullscreen);
   function printDeck(withSources) {
     setMore(false);

@@ -1,0 +1,106 @@
+{
+  "page_plan_version": "0.2",
+  "display_mode": "audience",
+  "title": "演练示例 · 设备试用安排",
+  "language": "zh-CN",
+  "main_path": [
+    "trial"
+  ],
+  "pages": [
+    {
+      "id": "trial",
+      "layout": "composed",
+      "title": "先试用两台设备，再决定是否扩大范围",
+      "question": "本次需要决定什么？",
+      "takeaway": "试用需要人员确认，完成后再讨论扩大范围。",
+      "limits": [
+        "本文件为合成教学示例；资料备注供讲者查阅。",
+        "INTERNAL_NOTE_ONLY_053"
+      ],
+      "refs": [
+        {
+          "id": "synthetic-trial-note",
+          "revision": 1,
+          "locator": "Illustrative planning note; not a project record"
+        }
+      ],
+      "notes": "先安排两台设备试用，试用结束后再讨论是否扩大范围。具体开始时间还要等参与人员确认。",
+      "backup_links": [
+        {
+          "target": "trial-record",
+          "label": "查看试用安排"
+        }
+      ],
+      "elements": [
+        {
+          "id": "trial-request",
+          "type": "text",
+          "role": "primary",
+          "title": "确认试用人员",
+          "body": "先安排两台设备试用。参与人员确认后，才能确定开始时间。",
+          "refs": [
+            {
+              "id": "synthetic-trial-note",
+              "revision": 1,
+              "locator": "Illustrative planning note; not a project record"
+            }
+          ],
+          "limits": [
+            "制作记录：人数尚未确定，不补写负责人。"
+          ],
+          "surface": "plain"
+        },
+        {
+          "id": "trial-review",
+          "type": "text",
+          "role": "supporting",
+          "title": "试用后再决定",
+          "body": "试用结束后，结合实际记录决定是否扩大范围。",
+          "refs": [
+            {
+              "id": "synthetic-trial-note",
+              "revision": 1,
+              "locator": "Illustrative planning note; not a project record"
+            }
+          ],
+          "limits": [],
+          "surface": "plain"
+        }
+      ],
+      "tree": {
+        "type": "row",
+        "weights": [
+          1.3,
+          1
+        ],
+        "children": [
+          {
+            "element": "trial-request"
+          },
+          {
+            "element": "trial-review"
+          }
+        ]
+      }
+    },
+    {
+      "id": "trial-record",
+      "layout": "focus",
+      "title": "把试用中遇到的问题记下来",
+      "question": "如何保留试用记录？",
+      "takeaway": "按实际情况记录，尚未填写。",
+      "limits": [
+        "此页没有外部引用，只有演练安排；资料入口仍应可访问。"
+      ],
+      "refs": [],
+      "elements": [
+        {
+          "id": "trial-recording",
+          "title": "记录实际情况",
+          "body": "记录每次使用遇到的问题，留到试用结束时一起讨论。",
+          "refs": []
+        }
+      ]
+    }
+  ]
+}

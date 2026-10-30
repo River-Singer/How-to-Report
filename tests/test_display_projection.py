@@ -90,6 +90,150 @@ class DisplayProjectionTests(unittest.TestCase):
             with self.subTest(surface=surface), self.assertRaises(ValueError):
                 self.helper().validate(self.plan)
 
+    def test_audience_moves_annotations_but_preserves_authored_condition_and_sources(self):
+        self.plan['display_mode'] = 'audience'
+        page = self.plan['pages'][0]
+        page['limits'] = ['Author note <script>alert(1)</script> & provenance.']
+        page['elements'][0]['limits'] = ['Keep this exact note in details.']
+        self.write(); self.run_cli()
+        html = (self.output/'index.html').read_text(encoding='utf-8')
+        stage = html.split('<main id="deck"')[1].split('</main>')[0]
+        for marker in ('page-footer', 'element-footer', 'source-marker', 'Author note', 'Keep this exact note'):
+            self.assertNotIn(marker, stage)
+        self.assertIn('Confirm the responsible owner before committing a date.', stage)
+        self.assertIn('&lt;script&gt;alert(1)&lt;/script&gt; &amp; provenance.', html)
+        self.assertIn('Keep this exact note in details.', html)
+        self.assertIn('id="page-sources"', html)
+        mapping = json.loads((self.output/'page-map.json').read_text(encoding='utf-8'))
+        self.assertEqual(mapping['display_mode'], 'audience')
+        entries = mapping['elements']
+        for owner, original in (('decision', page), ('request', page['elements'][0])):
+            entry = next(e for e in entries if e['selector'] == ('#page-' if owner == 'decision' else '#element-')+owner)
+            self.assertNotIn('limits', entry['displayed'])
+            self.assertEqual(entry['annotations']['limits'], original['limits'])
+            self.assertEqual(entry['annotations']['selector'], f'#sources-decision [data-annotation-owner="{owner}"]')
+            self.assertEqual(entry['refs'], [self.ref])
+        self.assertEqual(next(e for e in entries if e['selector'] == '#page-decision')['source_details']['refs'], [self.ref])
+        self.assertEqual(json.loads((self.output/'plan.json').read_text(encoding='utf-8')), self.plan)
+
+    def test_audience_empty_sources_still_have_details_and_backup_actions(self):
+        self.plan['display_mode'] = 'audience'
+        page = self.plan['pages'][0]
+        page['refs'] = []; page['elements'][0]['refs'] = []
+        backup = deepcopy(page)
+        backup['id'] = 'backup'; backup['elements'][0]['id'] = 'backup-copy'
+        backup['tree'] = {'element': 'backup-copy'}
+        self.plan['pages'].append(backup)
+        self.plan['main_path'] = ['decision']
+        page['backup_links'] = [{'target': 'backup', 'label': 'Read the details'}]
+        self.write(); self.run_cli()
+        html = (self.output/'index.html').read_text(encoding='utf-8')
+        stage = html.split('<main id="deck"')[1].split('</main>')[0]
+        self.assertIn('class="page-actions backup-links"', stage)
+        self.assertIn('data-backup-target="backup"', stage)
+        self.assertNotIn('page-footer', stage)
+        self.assertIn('id="sources-decision"', html)
+        self.assertIn('id="sources-backup"', html)
+        self.assertIn('No approved date.', html)
+
+    def test_audience_reference_collection_does_not_emit_markers(self):
+        source = self.helper().PageSources(self.plan['pages'][0], 'en', audience=True)
+        self.assertEqual(source([self.ref]), '')
+        self.assertEqual(source([]), '')
+        self.assertEqual(source.references, [self.ref])
+        self.assertIn('original-record@2', source.render())
+
+    def test_review_is_identical_to_omitted_mode_and_rejects_invalid_modes(self):
+        helper = self.helper()
+        original_html, original_mapping = helper.render_document(self.plan)
+        review = deepcopy(self.plan); review['display_mode'] = 'review'
+        helper.validate(review)
+        self.assertEqual(helper.render_document(review), (original_html, original_mapping))
+        for invalid in (None, False, 1, {}, [], '', 'hide', 'AUDIENCE'):
+            bad = deepcopy(self.plan); bad['display_mode'] = invalid
+            with self.subTest(value=invalid), self.assertRaises(ValueError): helper.validate(bad)
+        for mode in ('audience', 'review'):
+            bad = deepcopy(self.plan); bad['page_plan_version'] = '0.1'; bad['display_mode'] = mode
+            with self.subTest(legacy=mode), self.assertRaises(ValueError): helper.validate(bad)
+
+    def test_audience_sample_runs_without_checkout_dependencies(self):
+        self.plan = json.loads((self.package/'assets/report-html/sample-audience.json').read_text(encoding='utf-8'))
+        self.write(); self.run_cli(isolated=True)
+        html = (self.output/'index.html').read_text(encoding='utf-8')
+        stage = html.split('<main id="deck"')[1].split('</main>')[0]
+        self.assertNotIn('class="page-footer"', stage)
+        self.assertNotIn('制作记录', stage)
+        self.assertIn('参与人员确认后，才能确定开始时间。', stage)
+
+    def test_schedule_context_moves_to_details_without_hiding_conditions_or_results(self):
+        from test_report_schedule import core
+        spec = json.loads((self.package/'assets/report-html/sample-schedule.json').read_text(encoding='utf-8'))
+        self.plan = core.to_plan(spec, ['gantt', 'outcomes', 'milestones'])
+        self.assertTrue(all('body' not in p['elements'][0] for p in self.plan['pages']))
+        self.write(); self.run_cli(isolated=True)
+        html = (self.output/'index.html').read_text(encoding='utf-8')
+        mapping = json.loads((self.output/'page-map.json').read_text(encoding='utf-8'))['elements']
+        stage = html.split('<main id="deck"')[1].split('</main>')[0]
+        for hidden in ('日终边界', 'B1@1', spec['limits'][0], 'source-marker'):
+            self.assertNotIn(hidden, stage)
+        self.assertIn('截至 2026-10-28', stage)
+        self.assertIn('实际 2026-10-06', stage)
+        self.assertIn('预计 2026-11-03', stage)
+        self.assertIn('预计: 2026-11-13', stage)
+        self.assertIn('完成日期 / 较原计划', stage)
+        self.assertNotIn('class="schedule-date-text"', stage)
+        legend = stage.split('<p class="schedule-legend">')[1].split('</p>')[0]
+        self.assertEqual(legend, '<span class="legend-baseline">原计划</span><span class="legend-actual">实际</span><span class="legend-forecast">预计</span>')
+        self.assertNotIn('经过区间不等于工作量', stage)
+        business_row = stage.split('id="schedule-schedule-gantt-1-view-business"')[1].split('</tr>')[0]
+        self.assertNotIn('<small>未知</small>', business_row.split('</th>')[0])
+        for task in spec['tasks']:
+            if task.get('condition'):
+                self.assertIn(task['condition'], stage)
+            if task.get('progress'):
+                self.assertIn(task['progress']['basis'], stage)
+            for field in ('result', 'criteria', 'scope'):
+                if field in task.get('acceptance', {}):
+                    self.assertIn(task['acceptance'][field], stage)
+        appendix = html.split('id="source-appendices"')[1].split('<dialog')[0]
+        self.assertIn('自然日，日终边界', appendix)
+        self.assertIn('批准基线: B1@1', appendix)
+        self.assertIn(spec['limits'][0], appendix)
+        self.assertIn('经过区间不等于工作量；点仅表示已知日期。', appendix)
+        for task in spec['tasks']:
+            entry = next(e for e in mapping if e.get('datum_id') == 'schedule-gantt-1-view-'+task['id'])
+            dates = ' · '.join(f'{label}: {task.get(key, {}).get("start", "未知")} → {task.get(key, {}).get("finish", "未知")}'
+                               for key, label in (('baseline', '基线'), ('actual', '实际'), ('forecast', '预计')))
+            self.assertEqual(entry['date_details']['text'], dates)
+            self.assertEqual(entry['date_details']['selector'], f'#sources-schedule-gantt-1 [data-detail-element="schedule-gantt-1-view-dates-{task["id"]}"]')
+            self.assertIn('aria-label="'+dates+'"', stage)
+            self.assertIn('<p class="schedule-date-text">'+dates+'</p>', appendix)
+            for field in ('baseline', 'actual', 'forecast'):
+                self.assertEqual(entry['displayed'].get(field), task.get(field))
+        for p in self.plan['pages']:
+            eid = p['elements'][0]['id']
+            entry = next(e for e in mapping if e['selector'] == '#element-'+eid)
+            self.assertNotIn('schedule', entry['displayed'])
+            self.assertEqual(entry['semantic']['schedule']['spec'], spec)
+            self.assertEqual(entry['displayed']['as_of'], spec['as_of'])
+            page = next(e for e in mapping if e['selector'] == '#page-'+p['id'])
+            self.assertIn(eid+'-context', page['source_details']['detail_elements'])
+        self.plan['display_mode'] = 'review'; self.output = self.root/'review'
+        self.write(); self.run_cli(isolated=True)
+        review_html = (self.output/'index.html').read_text(encoding='utf-8')
+        review_stage = review_html.split('<main id="deck"')[1].split('</main>')[0]
+        self.assertIn('自然日，日终边界', review_stage)
+        self.assertIn('批准基线: B1@1', review_stage)
+        self.assertIn(spec['limits'][0], review_stage)
+        self.assertEqual(review_stage.count('class="schedule-date-text"'), len(spec['tasks']))
+        self.assertIn('当前完成日 / 偏差', review_stage)
+        self.assertIn('经过区间不等于工作量；点仅表示已知日期。', review_stage)
+        business_row = review_stage.split('id="schedule-schedule-gantt-1-view-business"')[1].split('</tr>')[0]
+        self.assertIn('<small>未知</small>', business_row.split('</th>')[0])
+        self.plan.pop('display_mode'); self.output = self.root/'omitted'
+        self.write(); self.run_cli(isolated=True)
+        self.assertEqual((self.output/'index.html').read_text(encoding='utf-8'), review_html)
+
 
 if __name__ == '__main__':
     unittest.main()

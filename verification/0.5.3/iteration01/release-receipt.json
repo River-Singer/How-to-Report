@@ -1,0 +1,66 @@
+{
+  "release": "0.5.3",
+  "scope": "deterministic_engineering_checks_only",
+  "python": "3.14.4",
+  "model_execution": false,
+  "semantic_model_quality": "not_assessed",
+  "human_understanding": "not_assessed",
+  "new_full_suite": {
+    "run": 285,
+    "passed": 284,
+    "skipped": 1,
+    "seconds": 103.26
+  },
+  "package_build_check": "passed",
+  "offline_source_integrity": "passed_no_network",
+  "evaluation_input_integrity": {
+    "cases": 67,
+    "valid": true
+  },
+  "skill_format": "both_passed_utf8",
+  "python310_grammar": {
+    "files": 20,
+    "passed": true,
+    "actual_python310_runtime": false
+  },
+  "compileall": "passed",
+  "lint": "not_configured",
+  "typecheck": "not_configured",
+  "whitespace_command": "git -c core.whitespace=cr-at-eol diff --check",
+  "package_manifest_sha256": {
+    "how-to-report": "318378a2233b39a1277434a033cb71d90c9930da74afd96e5d6f0ad243fdb5e9",
+    "report-audit": "18ede7b948cab8e841a8e7d75cbba7ee36fca36c84c0d59296ba4d30fbf9d11c"
+  },
+  "third_party_notice_sha256": "269f959153038e85f9be87d01a589c9fd00516d9e6dd75711c4e81cc0d7b0c1d",
+  "browser_receipt_sha256": "b9da69f069a2ace1fa81f8984201a407575b37f2efacdff3d5f9f2ffd3a9e246",
+  "browser_evidence_files_verified": 40,
+  "browser_pages": 6,
+  "viewports_per_page": 3,
+  "implementation_stable_during_browser": true,
+  "pdf_pages": [
+    {
+      "name": "audience",
+      "ordinary": 2,
+      "with_sources": 3
+    },
+    {
+      "name": "review",
+      "ordinary": 2,
+      "with_sources": 3
+    },
+    {
+      "name": "schedule",
+      "ordinary": 2,
+      "with_sources": 4
+    }
+  ],
+  "negative_capacity_probe": "actual_overflow_detected_full_text_preserved",
+  "direct_screenshot_review": [
+    "browser/audience/page-01.png",
+    "browser/schedule/page-01.png"
+  ],
+  "private_case_contents_copied": false,
+  "historical_test_results_relabelled": false,
+  "historical_12_page_browser_rerun": false,
+  "video_playback_rerun": false
+}

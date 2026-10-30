@@ -27,7 +27,7 @@ description: 从真实材料与沟通情境发现汇报目标、探索和检验�
 | 已确认口径需可重复的本地CSV计算、实际结果和凭证 | [显式计算](references/report-calculation.md) |
 | 用户启用并确认长期偏好/经历，需私有保存、查看或修正 | [画像操作](references/report-profile.md) |
 | 建立叙事路线、页面内容或修订成品，需可观察的语义与表达检查 | [叙事与页面行为](references/narrative-page-behavior.md) |
-| 需要可运行HTML、递归组合、页面映射及真实浏览器检查 | [内容到HTML](references/report-html.md) |
+| 需要可运行HTML、递归组合、页面映射及真实浏览器检查 | [内容到HTML](references/report-html.md)，新演示稿选择0.2观众展示方式 |
 | 交付或补充材料，需要明确本次依据与缺口 | [最小证据交接](references/evidence-handoff.md) |
 | 多个候选、证明义务、工作依赖或内容关系需要保持区分 | [多图模型](references/graph-model.md) |
 | 为生成、分析或修订建立文件记录，或续接已有 Run | [生成 Run 的建立与续接](references/report-run.md) |

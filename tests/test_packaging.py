@@ -98,7 +98,7 @@ class PackagingTests(unittest.TestCase):
             package = self.project / "skills" / skill
             manifest = json.loads((package / packager.MANIFEST).read_text())
             self.assertEqual(manifest["skill_name"], skill)
-            self.assertEqual(manifest["package_version"], "0.5.2")
+            self.assertEqual(manifest["package_version"], "0.5.3")
             self.assertEqual(manifest["supported_contract_version"], "0.1")
             self.assertNotIn(packager.MANIFEST, manifest["files"])
             for relative, digest in manifest["files"].items():
@@ -609,7 +609,7 @@ class PackagingTests(unittest.TestCase):
                     self.assertEqual((output / skill).stat().st_ino, identities[skill])
                     self.assertEqual(packager.tree(output / skill)[0], packages[skill])
                     manifest = json.loads((output / skill / packager.MANIFEST).read_bytes())
-                    self.assertEqual(manifest["package_version"], "0.5.2")
+                    self.assertEqual(manifest["package_version"], "0.5.3")
                     self.assertEqual(manifest["supported_contract_version"], "0.1")
                 self.assertFalse(list(output.glob(".package-build-*")))
                 self.assertEqual(unrelated.read_text(), "leave alone")

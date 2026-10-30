@@ -86,8 +86,20 @@ def check_source_details(page, plan, folder):
         require(actual == expected, 'source index text differs from exact reference versions/locators')
         numbers = page.locator('.slide.active .source-marker').all_text_contents()
         require(all(1 <= int(n) <= len(expected) for marker in numbers for n in marker.strip('[]').split(',')), 'unresolved source marker')
-        opener = page.locator('.slide.active .source-details-link')
-        opener.focus(); page.keyboard.press('Enter'); settle(page)
+        audience = plan.get('display_mode') == 'audience'
+        if audience:
+            require(not numbers and page.locator('.slide.active .page-footer,.slide.active .element-footer').count() == 0, 'audience canvas contains automatic notes or source markers')
+            for entry in entries:
+                if entry['page_id'] == pid and entry.get('annotations'):
+                    note = entry['annotations']
+                    require('limits' not in entry['displayed'], 'detail-only notes are declared displayed')
+                    require(page.locator(note['selector']+' li').all_text_contents() == note['limits'], 'annotation details lost or changed')
+            opener = page.locator('#more-toggle')
+            opener.focus(); page.keyboard.press('Enter')
+            page.locator('#page-sources').focus(); page.keyboard.press('Enter'); settle(page)
+        else:
+            opener = page.locator('.slide.active .source-details-link')
+            opener.focus(); page.keyboard.press('Enter'); settle(page)
         require(page.locator('#source-dialog').is_visible(), 'keyboard source inspector did not open')
         require(page.locator('#source-dialog .source-index li').all_text_contents() == expected, 'source dialog lost indexed text')
         before = active(page); page.keyboard.press('ArrowRight')
@@ -237,6 +249,14 @@ def inspect_deck(browser, name, folder, receipt, navigation=False, video=False):
         record['images'], record['annotations'] = images, annotations
         if plan['page_plan_version'] == '0.2':
             record['source_details'] = check_source_details(page, plan, folder)
+        if plan.get('display_mode') == 'audience':
+            for i, definition in enumerate(plan['pages']):
+                for link in definition.get('backup_links', []):
+                    page.evaluate('(i)=>reportDeck.goTo(i)', i); settle(page)
+                    page.locator('.slide.active [data-backup-target="'+link['target']+'"]').click(); settle(page)
+                    require(active(page) == link['target'], 'audience backup action missing')
+                    page.locator('#backup-return').click(); settle(page)
+                    require(active(page) == definition['id'], 'audience backup return missing')
         if navigation:
             record['navigation'] = check_navigation(page, plan, folder)
         if video:
@@ -251,7 +271,10 @@ def inspect_deck(browser, name, folder, receipt, navigation=False, video=False):
         more_action(page, '#read-all')
         require(page.locator('.slide:visible').count() == len(plan['pages']), 'read-all missing pages')
         if plan['page_plan_version'] == '0.2':
-            page.locator('.slide .source-details-link').first.click(); settle(page)
+            if plan.get('display_mode') == 'audience':
+                page.evaluate('reportDeck.goTo(0)'); more_action(page, '#page-sources')
+            else:
+                page.locator('.slide .source-details-link').first.click(); settle(page)
             first_details = page.locator('#sources-'+plan['pages'][0]['id'])
             require(first_details.is_visible() and first_details.get_attribute('open') is not None, 'read-all source appendix did not open')
         require(page.evaluate('document.documentElement.scrollWidth <= innerWidth+1'), 'read-all causes document-wide horizontal overflow')
@@ -333,6 +356,9 @@ def main(argv=None):
         write_json(output/'advanced-input/plan.json', advanced)
         receipt['advanced_render'] = render(renderer, output/'advanced-input/plan.json', output/'advanced')
         plans = [('advanced', True, False)]
+        copy_plan(assets/'sample-audience.json', output/'audience-input')
+        receipt['audience_render'] = render(renderer, output/'audience-input/plan.json', output/'audience')
+        plans.append(('audience', False, False))
         sample = json.loads((assets/'sample-plan.json').read_text(encoding='utf-8-sig'))
         chart = next(deepcopy(e) for p in sample['pages'] for e in p['elements'] if e.get('type')=='chart' and e['chart']['kind']=='line')
         chart_plan = deepcopy(advanced); chart_plan.pop('main_path')

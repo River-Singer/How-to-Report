@@ -1,0 +1,1185 @@
+{
+  "page_plan_version": "0.2",
+  "plan_sha256": "33c614a1d625ed4cb9fb447be98d00381df2e41a14fb46ee26639cf667d4a7f5",
+  "canvas": {
+    "width": 1600,
+    "height": 900
+  },
+  "display_mode": "audience",
+  "scope": "declared_mapping_not_semantic_verification",
+  "elements": [
+    {
+      "element_id": "schedule-gantt-1-view",
+      "datum_id": "schedule-gantt-1-view-requirements",
+      "selector": "#schedule-schedule-gantt-1-view-requirements",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "tasks.requirements"
+        },
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "checks"
+        }
+      ],
+      "displayed": {
+        "id": "requirements",
+        "label": "范围与接口确认",
+        "owner": "产品",
+        "state": "done",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.requirements"
+          }
+        ],
+        "baseline": {
+          "start": "2026-10-01",
+          "finish": "2026-10-05"
+        },
+        "actual": {
+          "start": "2026-10-01",
+          "finish": "2026-10-06"
+        },
+        "progress": {
+          "value": 100,
+          "basis": "五项检查项均已确认",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "checks"
+            }
+          ]
+        },
+        "acceptance": {
+          "status": "accepted",
+          "criteria": "范围及五项接口检查完成",
+          "result": "五项检查已确认",
+          "scope": "范围与接口文档，不代表项目整体验收",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "acceptance.requirements"
+            }
+          ]
+        },
+        "deviation_days": 1
+      },
+      "page_id": "schedule-gantt-1"
+    },
+    {
+      "element_id": "schedule-gantt-1-view",
+      "datum_id": "schedule-gantt-1-view-integration",
+      "selector": "#schedule-schedule-gantt-1-view-integration",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "tasks.integration"
+        },
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "cases"
+        }
+      ],
+      "displayed": {
+        "id": "integration",
+        "label": "系统联调",
+        "owner": "交付",
+        "state": "blocked",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.integration"
+          }
+        ],
+        "baseline": {
+          "start": "2026-10-07",
+          "finish": "2026-10-19"
+        },
+        "actual": {
+          "start": "2026-10-07"
+        },
+        "forecast": {
+          "finish": "2026-11-03"
+        },
+        "progress": {
+          "value": 60,
+          "basis": "12/20项约定用例通过；不是时间经过比例",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "cases"
+            }
+          ]
+        },
+        "condition": "预测仍依赖外部接口环境及支持人落实",
+        "acceptance": {
+          "status": "pending",
+          "criteria": "约定联调用例通过",
+          "result": "12项通过，8项待处理",
+          "scope": "联调范围",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "acceptance.integration"
+            }
+          ]
+        },
+        "deviation_days": 15
+      },
+      "page_id": "schedule-gantt-1"
+    },
+    {
+      "element_id": "schedule-gantt-1-view",
+      "datum_id": "schedule-gantt-1-view-business",
+      "selector": "#schedule-schedule-gantt-1-view-business",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "tasks.business"
+        }
+      ],
+      "displayed": {
+        "id": "business",
+        "label": "业务验收",
+        "owner": "业务",
+        "state": "not_started",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.business"
+          }
+        ],
+        "baseline": {
+          "start": "2026-10-20",
+          "finish": "2026-10-30"
+        },
+        "forecast": {
+          "start": "2026-11-04",
+          "finish": "2026-11-10"
+        },
+        "condition": "验收窗口仍需业务确认",
+        "acceptance": {
+          "status": "not_submitted",
+          "criteria": "核心业务流程按标准验证",
+          "scope": "业务交付范围"
+        },
+        "deviation_days": 11
+      },
+      "page_id": "schedule-gantt-1"
+    },
+    {
+      "page_id": "schedule-gantt-1",
+      "element_id": "schedule-gantt-1-view",
+      "selector": "#element-schedule-gantt-1-view",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "本文件：显式合成日期与状态"
+        }
+      ],
+      "displayed": {
+        "id": "schedule-gantt-1-view",
+        "type": "schedule",
+        "role": "primary",
+        "as_of": "2026-10-28"
+      },
+      "semantic": {
+        "schedule": {
+          "spec": {
+            "schedule_version": "0.1",
+            "title": "合成项目进度示例 · 非真实项目",
+            "as_of": "2026-10-28",
+            "calendar": "calendar_days",
+            "refs": [
+              {
+                "id": "synthetic-schedule",
+                "revision": 1,
+                "locator": "本文件：显式合成日期与状态"
+              }
+            ],
+            "baseline": {
+              "id": "B1",
+              "revision": 1,
+              "approved_on": "2026-10-01",
+              "refs": [
+                {
+                  "id": "synthetic-schedule",
+                  "revision": 1,
+                  "locator": "baseline"
+                }
+              ]
+            },
+            "tasks": [
+              {
+                "id": "requirements",
+                "label": "范围与接口确认",
+                "owner": "产品",
+                "state": "done",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "tasks.requirements"
+                  }
+                ],
+                "baseline": {
+                  "start": "2026-10-01",
+                  "finish": "2026-10-05"
+                },
+                "actual": {
+                  "start": "2026-10-01",
+                  "finish": "2026-10-06"
+                },
+                "progress": {
+                  "value": 100,
+                  "basis": "五项检查项均已确认",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "checks"
+                    }
+                  ]
+                },
+                "acceptance": {
+                  "status": "accepted",
+                  "criteria": "范围及五项接口检查完成",
+                  "result": "五项检查已确认",
+                  "scope": "范围与接口文档，不代表项目整体验收",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "acceptance.requirements"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "integration",
+                "label": "系统联调",
+                "owner": "交付",
+                "state": "blocked",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "tasks.integration"
+                  }
+                ],
+                "baseline": {
+                  "start": "2026-10-07",
+                  "finish": "2026-10-19"
+                },
+                "actual": {
+                  "start": "2026-10-07"
+                },
+                "forecast": {
+                  "finish": "2026-11-03"
+                },
+                "progress": {
+                  "value": 60,
+                  "basis": "12/20项约定用例通过；不是时间经过比例",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "cases"
+                    }
+                  ]
+                },
+                "condition": "预测仍依赖外部接口环境及支持人落实",
+                "acceptance": {
+                  "status": "pending",
+                  "criteria": "约定联调用例通过",
+                  "result": "12项通过，8项待处理",
+                  "scope": "联调范围",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "acceptance.integration"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "business",
+                "label": "业务验收",
+                "owner": "业务",
+                "state": "not_started",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "tasks.business"
+                  }
+                ],
+                "baseline": {
+                  "start": "2026-10-20",
+                  "finish": "2026-10-30"
+                },
+                "forecast": {
+                  "start": "2026-11-04",
+                  "finish": "2026-11-10"
+                },
+                "condition": "验收窗口仍需业务确认",
+                "acceptance": {
+                  "status": "not_submitted",
+                  "criteria": "核心业务流程按标准验证",
+                  "scope": "业务交付范围"
+                }
+              }
+            ],
+            "milestones": [
+              {
+                "id": "launch",
+                "label": "试点上线",
+                "baseline_date": "2026-11-08",
+                "forecast_date": "2026-11-13",
+                "condition": "需先完成联调与业务验收",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "milestones.launch"
+                  }
+                ]
+              }
+            ],
+            "dependencies": [
+              {
+                "from": "requirements",
+                "to": "integration",
+                "type": "FS",
+                "lag": 0,
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1
+                  }
+                ]
+              },
+              {
+                "from": "integration",
+                "to": "business",
+                "type": "FS",
+                "lag": 0,
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1
+                  }
+                ]
+              }
+            ],
+            "snapshots": [
+              {
+                "reported_on": "2026-10-07",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-08",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1007"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "reported_on": "2026-10-14",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-09",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1014"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "reported_on": "2026-10-21",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-11",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1021"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "reported_on": "2026-10-28",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-13",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1028"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "summary": {
+              "task_ids": [
+                "requirements",
+                "integration",
+                "business"
+              ],
+              "milestone_ids": [
+                "launch"
+              ],
+              "reason": "覆盖当前三个工作包及试点节点，保留受阻事项与验收条件"
+            },
+            "actions": [
+              {
+                "id": "support",
+                "text": "确认接口环境及支持人",
+                "owner": "协调负责人",
+                "due": "2026-10-30",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "actions.support"
+                  }
+                ]
+              },
+              {
+                "id": "window",
+                "text": "确认业务验收窗口",
+                "owner": "业务负责人",
+                "due": "2026-11-02",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "actions.window"
+                  }
+                ]
+              }
+            ],
+            "limits": [
+              "全部日期、状态和结果为合成输入；不对应MASTer实际指标。"
+            ]
+          },
+          "view": "gantt",
+          "item_ids": [
+            "requirements",
+            "integration",
+            "business"
+          ]
+        }
+      },
+      "shared_display": {
+        "title": "#page-schedule-gantt-1 h1"
+      }
+    },
+    {
+      "page_id": "schedule-gantt-1",
+      "selector": "#page-schedule-gantt-1",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "本文件：显式合成日期与状态"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "title": "计划、实际与预测对照",
+        "tree": {
+          "element": "schedule-gantt-1-view"
+        }
+      },
+      "semantic": {
+        "question": "计划、实际与预测对照",
+        "takeaway": "按明确来源区分已经发生、尚未发生及尚未核实的内容。"
+      },
+      "speaker_notes": null,
+      "annotations": {
+        "selector": "#sources-schedule-gantt-1 [data-annotation-owner=\"schedule-gantt-1\"]",
+        "limits": [
+          "全部日期、状态和结果为合成输入；不对应MASTer实际指标。"
+        ]
+      },
+      "source_details": {
+        "selector": "#sources-schedule-gantt-1",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "本文件：显式合成日期与状态"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "baseline"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.requirements"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "checks"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.integration"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "cases"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.business"
+          }
+        ],
+        "detail_elements": [
+          "schedule-gantt-1-view-context"
+        ]
+      }
+    },
+    {
+      "element_id": "schedule-outcomes-1-view",
+      "datum_id": "schedule-outcomes-1-view-requirements",
+      "selector": "#schedule-schedule-outcomes-1-view-requirements",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "tasks.requirements"
+        },
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "acceptance.requirements"
+        }
+      ],
+      "displayed": {
+        "id": "requirements",
+        "label": "范围与接口确认",
+        "owner": "产品",
+        "state": "done",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.requirements"
+          }
+        ],
+        "baseline": {
+          "start": "2026-10-01",
+          "finish": "2026-10-05"
+        },
+        "actual": {
+          "start": "2026-10-01",
+          "finish": "2026-10-06"
+        },
+        "progress": {
+          "value": 100,
+          "basis": "五项检查项均已确认",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "checks"
+            }
+          ]
+        },
+        "acceptance": {
+          "status": "accepted",
+          "criteria": "范围及五项接口检查完成",
+          "result": "五项检查已确认",
+          "scope": "范围与接口文档，不代表项目整体验收",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "acceptance.requirements"
+            }
+          ]
+        }
+      },
+      "page_id": "schedule-outcomes-1"
+    },
+    {
+      "element_id": "schedule-outcomes-1-view",
+      "datum_id": "schedule-outcomes-1-view-integration",
+      "selector": "#schedule-schedule-outcomes-1-view-integration",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "tasks.integration"
+        },
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "acceptance.integration"
+        }
+      ],
+      "displayed": {
+        "id": "integration",
+        "label": "系统联调",
+        "owner": "交付",
+        "state": "blocked",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.integration"
+          }
+        ],
+        "baseline": {
+          "start": "2026-10-07",
+          "finish": "2026-10-19"
+        },
+        "actual": {
+          "start": "2026-10-07"
+        },
+        "forecast": {
+          "finish": "2026-11-03"
+        },
+        "progress": {
+          "value": 60,
+          "basis": "12/20项约定用例通过；不是时间经过比例",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "cases"
+            }
+          ]
+        },
+        "condition": "预测仍依赖外部接口环境及支持人落实",
+        "acceptance": {
+          "status": "pending",
+          "criteria": "约定联调用例通过",
+          "result": "12项通过，8项待处理",
+          "scope": "联调范围",
+          "refs": [
+            {
+              "id": "synthetic-schedule",
+              "revision": 1,
+              "locator": "acceptance.integration"
+            }
+          ]
+        }
+      },
+      "page_id": "schedule-outcomes-1"
+    },
+    {
+      "element_id": "schedule-outcomes-1-view",
+      "datum_id": "schedule-outcomes-1-view-business",
+      "selector": "#schedule-schedule-outcomes-1-view-business",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "tasks.business"
+        }
+      ],
+      "displayed": {
+        "id": "business",
+        "label": "业务验收",
+        "owner": "业务",
+        "state": "not_started",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.business"
+          }
+        ],
+        "baseline": {
+          "start": "2026-10-20",
+          "finish": "2026-10-30"
+        },
+        "forecast": {
+          "start": "2026-11-04",
+          "finish": "2026-11-10"
+        },
+        "condition": "验收窗口仍需业务确认",
+        "acceptance": {
+          "status": "not_submitted",
+          "criteria": "核心业务流程按标准验证",
+          "scope": "业务交付范围"
+        }
+      },
+      "page_id": "schedule-outcomes-1"
+    },
+    {
+      "page_id": "schedule-outcomes-1",
+      "element_id": "schedule-outcomes-1-view",
+      "selector": "#element-schedule-outcomes-1-view",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "本文件：显式合成日期与状态"
+        }
+      ],
+      "displayed": {
+        "id": "schedule-outcomes-1-view",
+        "type": "schedule",
+        "role": "primary",
+        "as_of": "2026-10-28"
+      },
+      "semantic": {
+        "schedule": {
+          "spec": {
+            "schedule_version": "0.1",
+            "title": "合成项目进度示例 · 非真实项目",
+            "as_of": "2026-10-28",
+            "calendar": "calendar_days",
+            "refs": [
+              {
+                "id": "synthetic-schedule",
+                "revision": 1,
+                "locator": "本文件：显式合成日期与状态"
+              }
+            ],
+            "baseline": {
+              "id": "B1",
+              "revision": 1,
+              "approved_on": "2026-10-01",
+              "refs": [
+                {
+                  "id": "synthetic-schedule",
+                  "revision": 1,
+                  "locator": "baseline"
+                }
+              ]
+            },
+            "tasks": [
+              {
+                "id": "requirements",
+                "label": "范围与接口确认",
+                "owner": "产品",
+                "state": "done",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "tasks.requirements"
+                  }
+                ],
+                "baseline": {
+                  "start": "2026-10-01",
+                  "finish": "2026-10-05"
+                },
+                "actual": {
+                  "start": "2026-10-01",
+                  "finish": "2026-10-06"
+                },
+                "progress": {
+                  "value": 100,
+                  "basis": "五项检查项均已确认",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "checks"
+                    }
+                  ]
+                },
+                "acceptance": {
+                  "status": "accepted",
+                  "criteria": "范围及五项接口检查完成",
+                  "result": "五项检查已确认",
+                  "scope": "范围与接口文档，不代表项目整体验收",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "acceptance.requirements"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "integration",
+                "label": "系统联调",
+                "owner": "交付",
+                "state": "blocked",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "tasks.integration"
+                  }
+                ],
+                "baseline": {
+                  "start": "2026-10-07",
+                  "finish": "2026-10-19"
+                },
+                "actual": {
+                  "start": "2026-10-07"
+                },
+                "forecast": {
+                  "finish": "2026-11-03"
+                },
+                "progress": {
+                  "value": 60,
+                  "basis": "12/20项约定用例通过；不是时间经过比例",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "cases"
+                    }
+                  ]
+                },
+                "condition": "预测仍依赖外部接口环境及支持人落实",
+                "acceptance": {
+                  "status": "pending",
+                  "criteria": "约定联调用例通过",
+                  "result": "12项通过，8项待处理",
+                  "scope": "联调范围",
+                  "refs": [
+                    {
+                      "id": "synthetic-schedule",
+                      "revision": 1,
+                      "locator": "acceptance.integration"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "business",
+                "label": "业务验收",
+                "owner": "业务",
+                "state": "not_started",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "tasks.business"
+                  }
+                ],
+                "baseline": {
+                  "start": "2026-10-20",
+                  "finish": "2026-10-30"
+                },
+                "forecast": {
+                  "start": "2026-11-04",
+                  "finish": "2026-11-10"
+                },
+                "condition": "验收窗口仍需业务确认",
+                "acceptance": {
+                  "status": "not_submitted",
+                  "criteria": "核心业务流程按标准验证",
+                  "scope": "业务交付范围"
+                }
+              }
+            ],
+            "milestones": [
+              {
+                "id": "launch",
+                "label": "试点上线",
+                "baseline_date": "2026-11-08",
+                "forecast_date": "2026-11-13",
+                "condition": "需先完成联调与业务验收",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "milestones.launch"
+                  }
+                ]
+              }
+            ],
+            "dependencies": [
+              {
+                "from": "requirements",
+                "to": "integration",
+                "type": "FS",
+                "lag": 0,
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1
+                  }
+                ]
+              },
+              {
+                "from": "integration",
+                "to": "business",
+                "type": "FS",
+                "lag": 0,
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1
+                  }
+                ]
+              }
+            ],
+            "snapshots": [
+              {
+                "reported_on": "2026-10-07",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-08",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1007"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "reported_on": "2026-10-14",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-09",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1014"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "reported_on": "2026-10-21",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-11",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1021"
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "reported_on": "2026-10-28",
+                "baseline_ref": {
+                  "id": "B1",
+                  "revision": 1
+                },
+                "forecasts": [
+                  {
+                    "milestone_id": "launch",
+                    "date": "2026-11-13",
+                    "refs": [
+                      {
+                        "id": "synthetic-schedule",
+                        "revision": 1,
+                        "locator": "snapshot.1028"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ],
+            "summary": {
+              "task_ids": [
+                "requirements",
+                "integration",
+                "business"
+              ],
+              "milestone_ids": [
+                "launch"
+              ],
+              "reason": "覆盖当前三个工作包及试点节点，保留受阻事项与验收条件"
+            },
+            "actions": [
+              {
+                "id": "support",
+                "text": "确认接口环境及支持人",
+                "owner": "协调负责人",
+                "due": "2026-10-30",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "actions.support"
+                  }
+                ]
+              },
+              {
+                "id": "window",
+                "text": "确认业务验收窗口",
+                "owner": "业务负责人",
+                "due": "2026-11-02",
+                "refs": [
+                  {
+                    "id": "synthetic-schedule",
+                    "revision": 1,
+                    "locator": "actions.window"
+                  }
+                ]
+              }
+            ],
+            "limits": [
+              "全部日期、状态和结果为合成输入；不对应MASTer实际指标。"
+            ]
+          },
+          "view": "outcomes",
+          "item_ids": [
+            "requirements",
+            "integration",
+            "business"
+          ]
+        }
+      },
+      "shared_display": {
+        "title": "#page-schedule-outcomes-1 h1"
+      }
+    },
+    {
+      "page_id": "schedule-outcomes-1",
+      "selector": "#page-schedule-outcomes-1",
+      "refs": [
+        {
+          "id": "synthetic-schedule",
+          "revision": 1,
+          "locator": "本文件：显式合成日期与状态"
+        }
+      ],
+      "displayed": {
+        "layout": "composed",
+        "title": "交付结果与验收状态",
+        "tree": {
+          "element": "schedule-outcomes-1-view"
+        }
+      },
+      "semantic": {
+        "question": "交付结果与验收状态",
+        "takeaway": "按明确来源区分已经发生、尚未发生及尚未核实的内容。"
+      },
+      "speaker_notes": null,
+      "annotations": {
+        "selector": "#sources-schedule-outcomes-1 [data-annotation-owner=\"schedule-outcomes-1\"]",
+        "limits": [
+          "全部日期、状态和结果为合成输入；不对应MASTer实际指标。"
+        ]
+      },
+      "source_details": {
+        "selector": "#sources-schedule-outcomes-1",
+        "refs": [
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "本文件：显式合成日期与状态"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "baseline"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.requirements"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "acceptance.requirements"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.integration"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "acceptance.integration"
+          },
+          {
+            "id": "synthetic-schedule",
+            "revision": 1,
+            "locator": "tasks.business"
+          }
+        ],
+        "detail_elements": [
+          "schedule-outcomes-1-view-context"
+        ]
+      }
+    }
+  ]
+}

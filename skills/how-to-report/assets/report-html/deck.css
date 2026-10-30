@@ -1,6 +1,10 @@
 :root{color-scheme:light;--ink:#24282e;--muted:#56616d;--paper:#f8fbff;--accent:#087bc1;--line:#dce5ec}
 *{box-sizing:border-box}body{margin:0;background:#e7edee;color:var(--ink);font-family:"Segoe UI","Microsoft YaHei",Arial,sans-serif}
 .slide{width:var(--canvas-width);height:var(--canvas-height);padding:54px 64px 38px;background:var(--paper);display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:28px;position:relative;margin:24px auto;border-top:8px solid var(--accent)}
+.slide.audience-mode{grid-template-rows:auto minmax(0,1fr)}
+.slide.audience-mode.has-page-actions{grid-template-rows:auto minmax(0,1fr) auto}
+.reading-mode .slide.audience-mode{grid-template-rows:auto auto}
+.reading-mode .slide.audience-mode.has-page-actions{grid-template-rows:auto auto auto}
 .eyebrow{display:flex;justify-content:space-between;gap:24px;font-size:18px;letter-spacing:.04em;color:var(--muted);margin-bottom:22px}
 .eyebrow span:first-child{overflow-wrap:anywhere}.eyebrow span:last-child{white-space:nowrap}
 .question{font-size:22px;color:var(--accent);margin:0 0 10px;font-weight:600}
