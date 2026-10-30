@@ -1,3 +1,7 @@
+> 历史链接说明：本文的视觉方法与工具已退出0.6.0默认包；相关链接现指向[0.5.3字节归档](../legacy/visual-0.5.3/README.md)。各版执行结果仍属于原版本，当前范围见[内容思考与Markdown交付](content-scope.md)。
+
+> 历史说明：本文记录0.5.x及更早范围。2026-10-30起当前范围改为[内容思考与Markdown交付](content-scope.md)，HTML/视觉门槛不再适用；使用当前版本请看[使用说明](usage.md)。下文保留历史事实，不作为新版本通过记录。
+
 # 当前需求冻结与实施追踪
 
 更新（2026-10-28）：当前候选为0.5.0，完整A/B增量与边界见[本版交付](complete-plan-release.md)，最终实际检查见[0.5.0验证](../verification/0.5.0/README.md)。下列0.4.0及更早数字/结果保持为对应版本历史证据，不转为新版通过。
@@ -42,9 +46,9 @@
 | FR-07 P0 | 关键 Source→Finding/Claim→Content→Visual 稳定版本引用与状态 | 工作区契约、[校验器](../skill-src/shared/scripts/validate_run.py)、[多图样例](../skill-src/shared/assets/examples/multi-graph/run.json)、HTML page-map | 记录/结构/依赖查询已实现；引用存在不证明真伪或依赖完整，实际正文对应仍需审查 |
 | FR-08 P0 | Blueprint 有问题、完整判断、依据、限制、模块关系、主线/备份/待证；叙事不以过渡词补证 | 生成方法、[叙事页面行为](../skill-src/shared/references/narrative-page-behavior.md)、多图 Blueprint 样例 | 核心方法和N01–N03检查已集成；路线效果待用户验证 |
 | FR-09 P0 | 按需真实计算、业务确认口径、输入版本、方法/参数/原始结果/校核/限制；无工具降级 | 数值方法、[计算说明模板](../skill-src/shared/assets/review/calculation-note.md)、[证据交接](../skill-src/shared/references/evidence-handoff.md) | **已实现** [计算器](../skill-src/how-to-report/scripts/report_calculate.py)、[操作合同](../skill-src/how-to-report/references/report-calculation.md)、[可运行例](../skill-src/how-to-report/assets/report-calculation/README.md)及[正常/失败/换版测试](../tests/test_calculation_profile.py)。白名单计算与凭证不认证业务定义或因果；历史宿主计算证据仍保留 |
-| FR-10 P0 | Page Semantic Plan 与 Chart Spec 明确问题、判断、共现/先后、引用、单位/缺失/限制；内容与空间分离 | [HTML 方法](../skill-src/how-to-report/references/report-html.md)、report_html.py、叙事页面行为 | 简单计划、有界递归树、typed elements与图表数据均已实现；[渲染测试](../tests/test_report_html.py)及新浏览器证据覆盖，语义适用性仍由实际材料审查 |
-| FR-11 P0 | 真实离线 HTML、默认16:9、缩放/导航/页码/键盘、有效图表尺寸、安全文本、可见来源限制 | [report_html.py](../skill-src/how-to-report/scripts/report_html.py)、[deck.js](../skill-src/how-to-report/assets/report-html/deck.js)、[deck.css](../skill-src/how-to-report/assets/report-html/deck.css) | 组合、bar/line/heatmap、可配置画布已实现；本轮新浏览器分别检查默认1600×900和1600×1000，旧证据不复用为新版通过 |
-| FR-12 P0 | 真内容粗排、真实浏览器逐页/支持状态、DOM+截图；失败重排/拆页，不隐藏/删限制/无限缩字 | HTML runtime `inspectLayout()`；[浏览器 probe](../tools/check_report_html_browser.py)、[页面审计](../skill-src/report-audit/references/page-audit.md)、L01/L02 | 新版6页、两画布、4窗口、typed数字/内部标签/SVG边界、长标签负例、read-all及实际PDF已独立实测。语义可读性不是自动几何结论 |
+| FR-10 P0 | Page Semantic Plan 与 Chart Spec 明确问题、判断、共现/先后、引用、单位/缺失/限制；内容与空间分离 | [HTML 方法](../legacy/visual-0.5.3/skill-src/how-to-report/references/report-html.md)、report_html.py、叙事页面行为 | 简单计划、有界递归树、typed elements与图表数据均已实现；[渲染测试](../legacy/visual-0.5.3/tests/test_report_html.py)及新浏览器证据覆盖，语义适用性仍由实际材料审查 |
+| FR-11 P0 | 真实离线 HTML、默认16:9、缩放/导航/页码/键盘、有效图表尺寸、安全文本、可见来源限制 | [report_html.py](../legacy/visual-0.5.3/skill-src/how-to-report/scripts/report_html.py)、[deck.js](../legacy/visual-0.5.3/skill-src/how-to-report/assets/report-html/deck.js)、[deck.css](../legacy/visual-0.5.3/skill-src/how-to-report/assets/report-html/deck.css) | 组合、bar/line/heatmap、可配置画布已实现；本轮新浏览器分别检查默认1600×900和1600×1000，旧证据不复用为新版通过 |
+| FR-12 P0 | 真内容粗排、真实浏览器逐页/支持状态、DOM+截图；失败重排/拆页，不隐藏/删限制/无限缩字 | HTML runtime `inspectLayout()`；[浏览器 probe](../legacy/visual-0.5.3/tools/check_report_html_browser.py)、[页面审计](../legacy/visual-0.5.3/skill-src/report-audit/references/page-audit.md)、L01/L02 | 新版6页、两画布、4窗口、typed数字/内部标签/SVG边界、长标签负例、read-all及实际PDF已独立实测。语义可读性不是自动几何结论 |
 | FR-13 P0 | 独立 report-audit，从原资料/实际成果重建；分级、范围/独立性、结论与分层修复 | 审计入口/方法、[审计判定](../skill-src/report-audit/references/audit-judgment.md)、页面审计、[审计模板](../skill-src/report-audit/assets/audit-run/audit.md) | 已实现并集成A01/A02；实际模型反读效果待用户验证，先看计划不能冒称独立 |
 | FR-14 P0 | 权限/敏感材料/真实执行；工具缺失不得伪造通过/保存/后台工作 | 宿主能力、工作区契约、初始化/版本/渲染工具、知识许可方法 | 已实现的本地工具有安全边界测试；自然语言约束不是宿主隔离器，真实工具授权仍由宿主执行 |
 | FR-15 P0 | 可运行配套用例/正常与失败输入、程序 oracle、回归与 P0 硬门槛 | [tests](../tests/)、[开发计划](development-plan.md)及历史结果文档 | **评测准备已实现**：[evaluation](../evaluation/README.md)含25原用例+14行为用例、原7fixtures及缺件补充、协议/独立oracle/阶段显示/完整性验证与[测试](../tests/test_evaluation.py)。全部已读题为Dev；B0/B1/B2和未见集结果另待用户执行 |

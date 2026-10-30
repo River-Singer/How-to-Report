@@ -1,12 +1,14 @@
-"""Bounded natural-day schedule contract; business tasks are not Agent tasks."""
+"""Optional offline date/state validation; no presentation or scheduling engine.
+
+Collection limits bound local processing resources, not report length or layout.
+"""
 from __future__ import annotations
 
-from datetime import date, timedelta
+from datetime import date
 import math
 import re
 
 VERSION = "0.1"
-VIEWS = ("summary", "gantt", "milestones", "outcomes", "drift")
 ID = re.compile(r"[A-Za-z][A-Za-z0-9_-]{0,31}\Z")
 STATES = {"not_started", "active", "blocked", "done"}
 ACCEPTANCE = {"not_submitted", "pending", "accepted", "rejected", "unknown"}
@@ -58,7 +60,7 @@ def refs(value, where):
 
 
 def collection(value, maximum, where):
-    need(isinstance(value, list) and len(value) <= maximum, where + ": list exceeds supported capacity")
+    need(isinstance(value, list) and len(value) <= maximum, where + ": list exceeds local validation resource limit")
 
 
 def interval(value, where, actual=False, as_of=None):
@@ -76,14 +78,14 @@ def validate(spec):
     fields(spec, ("schedule_version", "title", "as_of", "calendar", "refs", "tasks"),
            ("baseline", "milestones", "dependencies", "snapshots", "summary", "actions", "limits"))
     need(spec["schedule_version"] == VERSION, "unsupported schedule version")
-    text(spec["title"], "title", 160)
+    text(spec["title"], "title", 10000)
     as_of = day(spec["as_of"], "as_of")
     need(spec["calendar"] == "calendar_days", "only natural days / end-of-day snapshots are supported")
     refs(spec["refs"], "refs")
     if "limits" in spec:
         collection(spec["limits"], 20, "limits")
         for limit in spec["limits"]:
-            text(limit, "limit", 300)
+            text(limit, "limit", 10000)
     baseline = spec.get("baseline")
     if baseline is not None:
         fields(baseline, ("id", "revision", "approved_on", "refs"), (), "baseline")
@@ -100,12 +102,12 @@ def validate(spec):
         ident(task["id"], "task.id")
         need(task["id"] not in ids, "duplicate business object ID")
         ids.add(task["id"]); tasks[task["id"]] = task
-        text(task["label"], "task.label", 180)
+        text(task["label"], "task.label", 10000)
         need(isinstance(task["state"], str) and task["state"] in STATES, "invalid execution state")
         refs(task["refs"], "task.refs")
         for key in ("owner", "condition"):
             if key in task:
-                text(task[key], key, 300)
+                text(task[key], key, 10000)
         for key in ("baseline", "actual", "forecast"):
             if key in task:
                 interval(task[key], "task." + key, key == "actual", as_of)
@@ -129,14 +131,14 @@ def validate(spec):
             fields(progress, ("value", "basis", "refs"), (), "progress")
             v = progress["value"]
             need(type(v) in (int, float) and 0 <= v <= 100 and math.isfinite(v), "progress must be finite 0–100")
-            text(progress["basis"], "progress.basis", 300); refs(progress["refs"], "progress.refs")
+            text(progress["basis"], "progress.basis", 10000); refs(progress["refs"], "progress.refs")
         if "acceptance" in task:
             acc = task["acceptance"]
             fields(acc, ("status",), ("criteria", "result", "scope", "refs"), "acceptance")
             need(isinstance(acc["status"], str) and acc["status"] in ACCEPTANCE, "invalid acceptance state")
             for key in ("criteria", "result", "scope"):
                 if key in acc:
-                    text(acc[key], "acceptance." + key, 600)
+                    text(acc[key], "acceptance." + key, 10000)
             if "refs" in acc:
                 refs(acc["refs"], "acceptance.refs")
             if acc["status"] in ("accepted", "rejected"):
@@ -147,7 +149,7 @@ def validate(spec):
     for mark in milestones:
         fields(mark, ("id", "label", "refs"), ("baseline_date", "actual_date", "forecast_date", "condition"), "milestone")
         ident(mark["id"], "milestone.id"); need(mark["id"] not in ids, "duplicate business object ID"); ids.add(mark["id"])
-        text(mark["label"], "milestone.label", 180); refs(mark["refs"], "milestone.refs")
+        text(mark["label"], "milestone.label", 10000); refs(mark["refs"], "milestone.refs")
         for key in ("baseline_date", "actual_date", "forecast_date"):
             if key in mark:
                 day(mark[key], key)
@@ -158,7 +160,7 @@ def validate(spec):
         if "forecast_date" in mark:
             need(day(mark["forecast_date"]) > as_of, "milestone forecast must follow status date")
         if "condition" in mark:
-            text(mark["condition"], "milestone.condition", 300)
+            text(mark["condition"], "milestone.condition", 10000)
     edges = spec.get("dependencies", [])
     collection(edges, 2000, "dependencies")
     graph, indegree, pairs = {k: [] for k in tasks}, {k: 0 for k in tasks}, set()
@@ -198,7 +200,7 @@ def validate(spec):
         ident(snap["baseline_ref"]["id"], "snapshot.baseline_ref.id")
         need(type(snap["baseline_ref"]["revision"]) is int and snap["baseline_ref"]["revision"] > 0, "snapshot baseline revision must be a positive integer")
         need(baseline is not None and snap["baseline_ref"] == {"id": baseline["id"], "revision": baseline["revision"]},
-             "mixed/historical baseline not supported in one drift series; split by baseline")
+             "mixed/historical baseline not supported in one comparison group; split by baseline")
         need(reporting >= day(baseline["approved_on"]), "snapshot predates baseline approval")
         collection(snap["forecasts"], 200, "forecasts"); seen_marks = set()
         for prediction in snap["forecasts"]:
@@ -214,19 +216,17 @@ def validate(spec):
     if "summary" in spec:
         fields(spec["summary"], ("task_ids", "reason"), ("milestone_ids",), "summary")
         selected(spec["summary"]["task_ids"], tasks, "summary task_ids")
-        text(spec["summary"]["reason"], "summary.reason", 600)
+        text(spec["summary"]["reason"], "summary.reason", 10000)
         if spec["summary"].get("milestone_ids"):
             selected(spec["summary"]["milestone_ids"], marks, "summary milestone_ids")
         else:
             need(isinstance(spec["summary"].get("milestone_ids", []), list), "summary milestone_ids must be a list")
-        need(all(t["id"] in spec["summary"]["task_ids"] for t in spec["tasks"] if t["state"] == "blocked"),
-             "summary omits blocked tasks; include them and paginate")
     actions = spec.get("actions", []); collection(actions, 200, "actions")
     for action in actions:
         fields(action, ("id", "text", "refs"), ("owner", "due"), "action")
         ident(action["id"], "action.id"); need(action["id"] not in ids, "duplicate business object ID"); ids.add(action["id"])
-        text(action["text"], "action.text", 600); refs(action["refs"], "action.refs")
-        if "owner" in action: text(action["owner"], "action.owner", 120)
+        text(action["text"], "action.text", 10000); refs(action["refs"], "action.refs")
+        if "owner" in action: text(action["owner"], "action.owner", 10000)
         if "due" in action: day(action["due"])
     return spec
 
@@ -274,103 +274,3 @@ def delta(item, milestone=False):
     base = item.get("baseline_date") if milestone else item.get("baseline", {}).get("finish")
     current = item.get("actual_date") or item.get("forecast_date") if milestone else finish(item)
     return (day(current) - day(base)).days if current and base else None
-
-
-def validate_component(element, seen):
-    config = element["schedule"]
-    fields(config, ("spec", "view"), ("item_ids", "action_ids", "milestone_id", "milestone_ids", "snapshot_indices"), "schedule component")
-    spec = validate(config["spec"]); view = config["view"]
-    need(isinstance(view, str) and view in VIEWS, "unsupported schedule view")
-    used = []
-    if view in ("summary", "gantt", "outcomes", "milestones"):
-        available = spec.get("milestones", []) if view == "milestones" else spec["tasks"]
-        if view == "summary" and config.get("milestone_ids") and config.get("item_ids") == []:
-            pass
-        else:
-            selected(config.get("item_ids"), {v["id"] for v in available}, "component item_ids")
-        need(len(config["item_ids"]) <= 8, "component capacity exceeded; paginate")
-        used.extend(config["item_ids"])
-        need(not {"milestone_id", "snapshot_indices"}.intersection(config), "milestone_id/snapshot_indices only for drift")
-        if view == "summary":
-            need("summary" in spec, "summary selection/reason required")
-            need(all(k in spec["summary"]["task_ids"] for k in config["item_ids"]), "summary contains unselected item")
-        if "milestone_ids" in config:
-            need(view == "summary", "milestone_ids only for summary")
-            selected(config["milestone_ids"], spec.get("summary", {}).get("milestone_ids", []), "summary milestone_ids")
-            need(len(config["milestone_ids"]) <= 4, "summary milestone capacity exceeded")
-            used.extend(config["milestone_ids"])
-        if "action_ids" in config:
-            need(view == "summary", "actions only in summary")
-            selected(config["action_ids"], {a["id"] for a in spec.get("actions", [])}, "action_ids")
-            need(len(config["action_ids"]) <= 3, "action capacity exceeded; paginate")
-            used.extend(config["action_ids"])
-    else:
-        need(not {"item_ids", "action_ids", "milestone_ids"}.intersection(config), "drift accepts milestone_id only")
-        mid = config.get("milestone_id"); marks = {m["id"]: m for m in spec.get("milestones", [])}
-        need(isinstance(mid, str) and mid in marks, "drift needs known milestone")
-        need("baseline_date" in marks[mid], "drift requires approved baseline date")
-        need(len(spec.get("snapshots", [])) >= 2, "drift requires at least two recorded snapshots")
-        need(len(spec["snapshots"]) <= 12, "drift capacity exceeded; select explicit history window")
-        indices = config.get("snapshot_indices", list(range(len(spec["snapshots"]))))
-        need(isinstance(indices, list) and indices and all(type(n) is int and 0 <= n < len(spec["snapshots"]) for n in indices), "invalid snapshot_indices")
-        need(indices == sorted(set(indices)) and len(indices) <= 4, "drift page capacity exceeded; paginate chronological snapshots")
-        for n, snapshot in enumerate(spec["snapshots"]):
-            need(any(p["milestone_id"] == mid for p in snapshot["forecasts"]), "missing historical forecast; do not interpolate")
-            if n in indices:
-                used.append("snapshot-" + str(n))
-    for key in used:
-        identity = element["id"] + "-" + key
-        need(identity not in seen, "duplicate schedule datum identity")
-        seen.add(identity)
-    return config
-
-
-def to_plan(spec, views, canvas=None):
-    validate(spec)
-    need(isinstance(views, list) and views and len(set(views)) == len(views) and all(v in VIEWS for v in views), "choose unique supported views")
-    canvas = canvas or {"width": 1600, "height": 900}
-    fields(canvas, ("width", "height"), (), "canvas")
-    need(type(canvas["width"]) is int and type(canvas["height"]) is int and
-         1200 <= canvas["width"] <= 2400 and 675 <= canvas["height"] <= 1600 and
-         1.2 <= canvas["width"] / canvas["height"] <= 2.4, "unsupported canvas")
-    # Conservative initial capacity; final DOM inspection remains required.
-    capacity = max(1, min(6, int((canvas["height"] - 350) / 85)))
-    titles = {"summary": "项目进度与需要支持的事项", "gantt": "计划、实际与预测对照", "milestones": "里程碑日期对照", "outcomes": "交付结果与验收状态", "drift": "同一基线下的历史预测变化"}
-    pages = []
-    for view in views:
-        if view == "drift":
-            groups = [{"milestone_id": m["id"], "snapshot_indices": list(range(i, min(i+4, len(spec.get("snapshots",[])))))} for m in spec.get("milestones", []) if "baseline_date" in m for i in range(0, len(spec.get("snapshots",[])), 4)]
-            need(groups, "drift requires milestones with baseline dates")
-        else:
-            if view == "summary":
-                need("summary" in spec, "summary requires explicit task selection and reason")
-                values = spec["summary"]["task_ids"]
-            else:
-                values = [x["id"] for x in (spec.get("milestones", []) if view == "milestones" else spec["tasks"])]
-            need(values, view + ": no eligible records")
-            view_capacity = min(capacity, 3) if view == "summary" and spec.get("actions") else capacity
-            groups = [{"item_ids": values[i:i + view_capacity]} for i in range(0, len(values), view_capacity)]
-            if view == "summary":
-                mids = spec["summary"].get("milestone_ids", [])
-                groups += [{"item_ids": [], "milestone_ids": mids[i:i + min(3,capacity)]} for i in range(0, len(mids), min(3,capacity))]
-            if view == "summary" and spec.get("actions"):
-                action_ids = [a["id"] for a in spec["actions"]]
-                # Repeat selected context explicitly when action pages outnumber task pages.
-                while len(groups) < math.ceil(len(action_ids) / 3):
-                    groups.append({"item_ids": values[:min(2, capacity)]})
-                for i, group in enumerate(groups):
-                    subset = action_ids[i * 3:(i + 1) * 3]
-                    if subset: group["action_ids"] = subset
-        for n, group in enumerate(groups):
-            pid = f"schedule-{view}-{n + 1}"
-            config = {"spec": spec, "view": view, **group}
-            element = {"id": pid + "-view", "type": "schedule", "role": "primary", "title": titles[view],
-                       "refs": spec["refs"], "limits": [], "schedule": config}
-            validate_component(element, set())
-            title = titles[view] + (f"（{n + 1}/{len(groups)}）" if len(groups) > 1 else "")
-            element["title"] = title
-            pages.append({"id": pid, "layout": "composed", "title": title, "question": titles[view],
-                          "takeaway": "按明确来源区分已经发生、尚未发生及尚未核实的内容。", "limits": spec.get("limits", []),
-                          "refs": spec["refs"], "elements": [element], "tree": {"element": element["id"]}})
-    need(len(pages) <= 100, "too many pages; split the reporting scope")
-    return {"page_plan_version": "0.2", "display_mode": "audience", "title": spec["title"], "language": "zh-CN", "canvas": canvas, "pages": pages}

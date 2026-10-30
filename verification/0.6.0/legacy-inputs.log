@@ -1,0 +1,8 @@
+{
+  "valid": true,
+  "scope": "evaluation_input_integrity_only",
+  "cases": 67,
+  "model_execution": false,
+  "quality": "not_assessed",
+  "writes": "none"
+}

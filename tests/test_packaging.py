@@ -98,7 +98,7 @@ class PackagingTests(unittest.TestCase):
             package = self.project / "skills" / skill
             manifest = json.loads((package / packager.MANIFEST).read_text())
             self.assertEqual(manifest["skill_name"], skill)
-            self.assertEqual(manifest["package_version"], "0.5.3")
+            self.assertEqual(manifest["package_version"], "0.6.0")
             self.assertEqual(manifest["supported_contract_version"], "0.1")
             self.assertNotIn(packager.MANIFEST, manifest["files"])
             for relative, digest in manifest["files"].items():
@@ -326,90 +326,41 @@ class PackagingTests(unittest.TestCase):
         self.assertEqual(package_before, {path.relative_to(destination): path.read_bytes()
                                          for path in destination.rglob("*") if path.is_file()})
 
-    def test_relocated_package_renders_real_offline_html(self) -> None:
+    def test_relocated_package_validates_schedule_without_visual_dependencies(self) -> None:
         actual_source = SCRIPT.parents[1] / "skill-src"
-        # Exercise the real shared runtime closure, including new helpers.
         shutil.copytree(actual_source / "shared" / "scripts", self.shared / "scripts",
                         dirs_exist_ok=True, ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
         report_source = self.source / "how-to-report"
         shutil.copytree(actual_source / "how-to-report" / "scripts", report_source / "scripts",
                         ignore=shutil.ignore_patterns("__pycache__", "*.pyc"))
-        shutil.copytree(actual_source / "how-to-report" / "assets" / "report-html",
-                        report_source / "assets" / "report-html")
+        shutil.copytree(actual_source / "how-to-report" / "assets" / "schedule",
+                        report_source / "assets" / "schedule")
         self.command("build")
         self.command("check")
-        destination = self.base / "standalone-html-report"
+        destination = self.base / "standalone-content-report"
         shutil.copytree(self.project / "skills" / "how-to-report", destination)
         package_before = {path.relative_to(destination): path.read_bytes()
                           for path in destination.rglob("*") if path.is_file()}
         self.assertEqual(self.project.resolve().parent, self.base.resolve())
         shutil.rmtree(self.project)
-        original = self.base / "计划 #1 50%.json"
-        shutil.copyfile(destination / "assets" / "report-html" / "sample-plan.json", original)
+        original = self.base / "日期 #1 50%.json"
+        shutil.copyfile(destination / "assets" / "schedule" / "sample-schedule.json", original)
         captured = original.read_bytes()
-        plan = json.loads(captured)
-        output = self.base / "rendered #2 汇报"
-        command = [sys.executable, "-I", "-B", "-X", "utf8",
-                   str(destination / "scripts" / "report_html.py"), "render", str(original),
-                   "--output", str(output)]
-        result = subprocess.run(command, cwd=self.cwd, capture_output=True, text=True, encoding="utf-8")
+        result = subprocess.run([sys.executable, "-I", "-B", "-X", "utf8",
+                                 str(destination / "scripts" / "report_schedule.py"), "validate", str(original)],
+                                cwd=self.cwd, capture_output=True, text=True, encoding="utf-8")
         self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
         receipt = json.loads(result.stdout)
         self.assertTrue(receipt["valid"])
-        self.assertEqual(receipt["browser_validation"], "not_run")
         self.assertEqual(receipt["semantic_validation"], "not_run")
+        self.assertEqual(receipt["input_sha256"], hashlib.sha256(captured).hexdigest())
         self.assertEqual(receipt["run_mutation"], "not_performed")
-        self.assertEqual(receipt["page_count"], len(plan["pages"]))
-        self.assertEqual((output / "plan.json").read_bytes(), captured)
-        self.assertEqual(receipt["plan_sha256"], hashlib.sha256(captured).hexdigest())
-        for relative, expected in receipt["files"].items():
-            self.assertEqual(hashlib.sha256((output / relative).read_bytes()).hexdigest(), expected)
-        mapping = json.loads((output / "page-map.json").read_text(encoding="utf-8"))
-        html = (output / "index.html").read_text(encoding="utf-8")
-        self.assertEqual(receipt["canvas"], plan.get("canvas", {"width": 1600, "height": 900}))
-        self.assertEqual(mapping["canvas"], receipt["canvas"])
-        chart_kinds = set()
-        datum_ids = set()
-        for page in plan["pages"]:
-            self.assertIn('data-layout="' + page["layout"] + '"', html)
-            if page["layout"] == "composed":
-                mapped_page = next(row for row in mapping["elements"]
-                                   if row["page_id"] == page["id"] and "element_id" not in row)
-                self.assertEqual(mapped_page["displayed"]["tree"], page["tree"])
-            for element in page["elements"]:
-                item = next(row for row in mapping["elements"]
-                            if row.get("element_id") == element["id"] and "datum_id" not in row)
-                self.assertEqual(item["refs"], element["refs"])
-                self.assertEqual(item["displayed"], element)
-                data = element.get("levels", [])
-                chart = element.get("chart")
-                if chart:
-                    chart_kinds.add(chart["kind"])
-                    if chart["kind"] == "bar":
-                        data = chart["items"]
-                    elif chart["kind"] == "line":
-                        data = [point for series in chart["series"] for point in series["points"]]
-                    else:
-                        data = [cell for row in chart["cells"] for cell in row]
-                for datum in data:
-                    datum_ids.add(datum["id"])
-                    mapped = next(row for row in mapping["elements"] if row.get("datum_id") == datum["id"])
-                    self.assertEqual(mapped["element_id"], element["id"])
-                    self.assertEqual(mapped["refs"], datum["refs"])
-                    for key, value in datum.items():
-                        self.assertEqual(mapped["displayed"][key], value)
-                    self.assertIn('data-datum-id="' + datum["id"] + '"', html)
-        self.assertEqual(chart_kinds, {"bar", "line", "heatmap"})
-        self.assertEqual({row["datum_id"] for row in mapping["elements"] if "datum_id" in row}, datum_ids)
-        self.assertIn("<style>", html)
-        self.assertIn("<script>", html)
-        self.assertNotIn('<script src=', html)
-        before = {path.relative_to(output): path.read_bytes() for path in output.iterdir()}
-        again = subprocess.run(command, cwd=self.cwd, capture_output=True, text=True, encoding="utf-8")
-        self.assertNotEqual(again.returncode, 0)
-        self.assertEqual(before, {path.relative_to(output): path.read_bytes() for path in output.iterdir()})
-        original.unlink()
-        self.assertEqual((output / "plan.json").read_bytes(), captured)
+        row = next(row for row in receipt["date_comparisons"] if row["id"] == "integration")
+        self.assertEqual(row["deviation_calendar_days"], 15)
+        self.assertEqual(original.read_bytes(), captured)
+        for name in ("report_html.py", "presentation_components.py", "diagram_layout.py", "schedule_render.py"):
+            self.assertFalse((destination / "scripts" / name).exists())
+        self.assertFalse((destination / "assets" / "report-html").exists())
         self.assertEqual(package_before, {path.relative_to(destination): path.read_bytes()
                                          for path in destination.rglob("*") if path.is_file()})
 
@@ -609,7 +560,7 @@ class PackagingTests(unittest.TestCase):
                     self.assertEqual((output / skill).stat().st_ino, identities[skill])
                     self.assertEqual(packager.tree(output / skill)[0], packages[skill])
                     manifest = json.loads((output / skill / packager.MANIFEST).read_bytes())
-                    self.assertEqual(manifest["package_version"], "0.5.3")
+                    self.assertEqual(manifest["package_version"], "0.6.0")
                     self.assertEqual(manifest["supported_contract_version"], "0.1")
                 self.assertFalse(list(output.glob(".package-build-*")))
                 self.assertEqual(unrelated.read_text(), "leave alone")

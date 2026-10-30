@@ -1,0 +1,45 @@
+{
+  "verified_at_utc": "2026-10-30T06:40:33.641266+00:00",
+  "python": "3.14.4 (tags/v3.14.4:23116f9, Apr  7 2026, 14:10:54) [MSC v.1944 64 bit (AMD64)]",
+  "archive": {
+    "original_commit": "071592ad59ea2bbe62ef9ea9e728d3dea4e38181",
+    "files": 27,
+    "byte_identity_errors": []
+  },
+  "historical_identity": {
+    "evaluation": {
+      "files_compared": 67,
+      "changed": []
+    },
+    "verification": {
+      "files_compared": 560,
+      "changed": []
+    }
+  },
+  "packages": {
+    "how-to-report": {
+      "manifest": "skills/how-to-report/bundle-manifest.json",
+      "manifest_sha256": "413fbd7ee9715006c5d384b7453305a633a1f621894c4e3d490ad5708ffbde05",
+      "version": "0.6.0",
+      "payload_files": 121,
+      "visual_runtime_payloads": []
+    },
+    "report-audit": {
+      "manifest": "skills/report-audit/bundle-manifest.json",
+      "manifest_sha256": "6c5dc6fcdf0dabd94f214b46ce4ea36c78ab11b54a12248bffb7f51325951058",
+      "version": "0.6.0",
+      "payload_files": 108,
+      "visual_runtime_payloads": []
+    }
+  },
+  "syntax": {
+    "python_grammar": "3.10",
+    "compile": "in_memory_builtin_compile",
+    "files": 28,
+    "errors": []
+  },
+  "lint_typecheck_configuration_files": [],
+  "network_used": false,
+  "model_execution": false,
+  "browser_execution": false
+}

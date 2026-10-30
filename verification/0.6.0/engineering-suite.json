@@ -1,0 +1,17 @@
+{
+  "command": [
+    "C:\\Users\\Maoty Kase\\AppData\\Local\\Python\\pythoncore-3.14-64\\python.exe",
+    "-X",
+    "utf8",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_seconds": 84.221,
+  "completed_at_utc": "2026-10-30T06:38:46.488251+00:00"
+}

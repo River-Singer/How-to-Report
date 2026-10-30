@@ -1,0 +1,54 @@
+[
+  {
+    "name": "package",
+    "arguments": [
+      "tools/package_skills.py",
+      "check"
+    ],
+    "exit_code": 0,
+    "output": "Package check passed: how-to-report, report-audit (0.6.0; contract 0.1)\n"
+  },
+  {
+    "name": "offline-sources",
+    "arguments": [
+      "tools/vendor_knowledge_sources.py",
+      "check"
+    ],
+    "exit_code": 0,
+    "output": "{\"valid\": true, \"errors\": [], \"network_used\": false}\n"
+  },
+  {
+    "name": "content-inputs",
+    "arguments": [
+      "evaluation/tools/validate_content_cases.py"
+    ],
+    "exit_code": 0,
+    "output": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}\n"
+  },
+  {
+    "name": "legacy-inputs",
+    "arguments": [
+      "evaluation/tools/validate_cases.py"
+    ],
+    "exit_code": 0,
+    "output": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 67,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}\n"
+  },
+  {
+    "name": "format-how-to-report",
+    "arguments": [
+      "C:/Users/Maoty Kase/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "skills/how-to-report"
+    ],
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  },
+  {
+    "name": "format-report-audit",
+    "arguments": [
+      "C:/Users/Maoty Kase/.codex/skills/.system/skill-creator/scripts/quick_validate.py",
+      "skills/report-audit"
+    ],
+    "exit_code": 0,
+    "output": "Skill is valid!\n"
+  }
+]

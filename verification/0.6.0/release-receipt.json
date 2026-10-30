@@ -1,0 +1,70 @@
+{
+  "completed_at_utc": "2026-10-30T06:43:52.132635+00:00",
+  "version": "0.6.0",
+  "scope": "deterministic_engineering_and_source_review_only",
+  "packages": {
+    "how-to-report": {
+      "manifest": "skills/how-to-report/bundle-manifest.json",
+      "manifest_sha256": "413fbd7ee9715006c5d384b7453305a633a1f621894c4e3d490ad5708ffbde05",
+      "version": "0.6.0",
+      "payload_files": 121,
+      "visual_runtime_payloads": []
+    },
+    "report-audit": {
+      "manifest": "skills/report-audit/bundle-manifest.json",
+      "manifest_sha256": "6c5dc6fcdf0dabd94f214b46ce4ea36c78ab11b54a12248bffb7f51325951058",
+      "version": "0.6.0",
+      "payload_files": 108,
+      "visual_runtime_payloads": []
+    }
+  },
+  "unit_tests": {
+    "ran": 220,
+    "passed": 219,
+    "skipped": 1,
+    "unittest_seconds": 83.73,
+    "skip": "Windows real symlink creation unavailable, WinError1314"
+  },
+  "final_package_check": {
+    "exit_code": 0,
+    "output": "Package check passed: how-to-report, report-audit (0.6.0; contract 0.1)\n"
+  },
+  "markdown_links": {
+    "files": 34,
+    "local_targets_checked": 285,
+    "errors": [],
+    "scope": "README, docs and current verification; bounded markdown scanner, existence not anchor or semantic proof"
+  },
+  "whitespace": {
+    "command": [
+      "git",
+      "-c",
+      "core.whitespace=cr-at-eol",
+      "diff",
+      "--check"
+    ],
+    "exit_code": 0,
+    "output": ""
+  },
+  "lint": "not_configured",
+  "type_check": "not_configured",
+  "model_execution": false,
+  "browser_execution": false,
+  "network_used": false,
+  "public_evidence": "synthetic inputs and engineering receipts only",
+  "evidence_sha256": {
+    "checks.json": "b4d725f527187189112fda070865e0bfc1f7cafb455d4afc1d09d9f7c2f4c7f1",
+    "content-inputs.log": "e7581169e2dfa5d4a41e93a031b38f46bbdeb91a53eb3362570e5ce327b700d4",
+    "engineering-suite.json": "7879efa8d15dca847db971d3a6bc6f821d056095a6fbdf14e907a97daf5c16eb",
+    "engineering-suite.log": "03d83ac4c0136de167ad277027287c2ac4f02f7877e155ba0daf3a95b67d55f5",
+    "format-how-to-report.log": "6cf9e7f0d34ccd36dbd28f270cd28dd04277b2e1516bd4333ce7bb501d7b18d4",
+    "format-report-audit.log": "6cf9e7f0d34ccd36dbd28f270cd28dd04277b2e1516bd4333ce7bb501d7b18d4",
+    "legacy-inputs.log": "48f5ca21f81df99382d03e0fca5f3e382aeb81e474c9b63d7816f218f3787ea5",
+    "offline-sources.log": "efef731ef6cb6e638d9d4644f0c30e0a9c438ab5dd6d216c9a0382d236a9429c",
+    "package-final.log": "adc31d78903de0161018f7e94d9a36ce0e103aa4d8da53b12ba5f8ffe15506b7",
+    "package.log": "adc31d78903de0161018f7e94d9a36ce0e103aa4d8da53b12ba5f8ffe15506b7",
+    "README.md": "28a140a30867c0c42464fa0cdfcda990666d470287cf396048fe74e36e3ca16b",
+    "static-receipt.json": "a343dd4dabac11e8f8a1bffac4881c951b183bc550a75e466fd9ba4190677070",
+    "whitespace.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

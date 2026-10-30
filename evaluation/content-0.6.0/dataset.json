@@ -1,0 +1,23 @@
+{
+  "dataset_version": "0.6.0",
+  "status": "prepared_not_run",
+  "purpose": "current_content_behavior_dev_inputs",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 4
+    }
+  ],
+  "files": {
+    "cases.jsonl": "f973a706bc0d6618a284b7ae39626873c3a620b10cab163b23c88d4ce6b69b80",
+    "fixtures/goal.md": "82b248bdbbb716b1c235a430e1545e90f398039d97352fa2e07052d2bacf94a5",
+    "fixtures/local.md": "58fac7cab097080f3789caa0ccfe2c48d1fe27eb38154849e617bdca9b695c92",
+    "fixtures/value.md": "2dd5d7805a064d7c1fd2e0592677b7e6a6c5e5593e0619ac2068328fa81d8bf5",
+    "fixtures/value-update.md": "bec53ec4382fa3e3abb2c748afa91f7ca47f15dc2514cfb790a1e1d38640a439",
+    "fixtures/voice.md": "4918bdaca7b5cb0c6d6cf123ffdba4fd9a5bd85ea509ded007d71d93b7476d64",
+    "README.md": "cefe8c34f19f0e311d2c1d4c35dc792ef4c447cc0a2eebc724a9ace3ee8b2cd3",
+    "PROTOCOL.md": "01a5e1003dbd3b49fc269c069a5bc80ff506133140e69d0a086d9443902ce53b",
+    "RUN-TEMPLATE.md": "98f1f88754c540561652df82559545aae080f8daeccf850e79667e14bec95485"
+  }
+}

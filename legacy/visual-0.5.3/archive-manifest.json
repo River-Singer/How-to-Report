@@ -1,0 +1,33 @@
+{
+  "version": "0.5.3",
+  "original_commit": "071592ad59ea2bbe62ef9ea9e728d3dea4e38181",
+  "files": {
+    "skill-src/how-to-report/scripts/schedule_core.py": "cb6ab923f0aa550dd73ca1cf3e5b0db23d281981a557fb062dfb700b559154c7",
+    "skill-src/how-to-report/scripts/report_schedule.py": "21fae9c5e525ab7d5fd8a96b1f3f4b7acd6ed6fb9fafc1f4edf31eb28fc35a2e",
+    "tests/test_report_schedule.py": "0acaafa6fb011bca070e27598193275dfbd6bdc5edb662a894162cf26eb9df01",
+    "tests/test_packaging.py": "a511431c152fa63768700369a124277e9c5310c555b84a182743e780cdfc2f0f",
+    "skill-src/how-to-report/references/project-progress.md": "d8f218c733762085c6e77bdac5d9850484253f9086a04a4241045bb3228fc71d",
+    "skill-src/how-to-report/scripts/report_html.py": "e8c0b2b082bfa52eb6cbb051189cc1ae7e0731be2d29dc027f20a5240803b13c",
+    "skill-src/how-to-report/scripts/presentation_components.py": "423728e2a38d55131d75746fd9f574d496bf5eca32388f78efdd9090029d62fc",
+    "skill-src/how-to-report/scripts/diagram_layout.py": "92f79b2f4b3c856a9a3bf5cf8465dced1f4861ba82f5f5cd0a99176e9e5b0ceb",
+    "skill-src/how-to-report/scripts/schedule_render.py": "efe2835e5c89cc9453599a828cff134dbd94e838eb3fcbfe5980cd70da6d722d",
+    "skill-src/how-to-report/assets/report-html/deck.css": "a676aabd389c95d2f6b7e53460d4c4d47a65b1bf28712a191204a67bfa2e09b1",
+    "skill-src/how-to-report/assets/report-html/deck.js": "176464e2fb2e5a0be74e72d316712a36fb0f23bd4340ae99c3b8f3fdc7db7d0d",
+    "skill-src/how-to-report/assets/report-html/sample-advanced.json": "967a7a314fb4f3c47d8d4d7d442d50899388e40ff6f7cc8ce7a386fe4087dd81",
+    "skill-src/how-to-report/assets/report-html/sample-audience.json": "09d54aab7105503902bfe05dc4ca04ce91b8fdc459ee3cdf3f57d09b23b95e0f",
+    "skill-src/how-to-report/assets/report-html/sample-media.png": "9346a272b2be51cc03f88daa25724f8f5beae290d47305b2e2ee4f3e649a06fa",
+    "skill-src/how-to-report/assets/report-html/sample-plan.json": "82444b55aa56a77f4e30f5e01e7e4321a3b7499aacafe45cb4cc90fa18685b71",
+    "skill-src/how-to-report/assets/report-html/sample-schedule.json": "faabca80b97f427352b8852f233fd25bc41f12559c614dbd4c1f81bda7acf28b",
+    "skill-src/how-to-report/assets/report-html/schedule.css": "e1cb2d40d71c4118998d651be72dcfcdf097428013d71251373596c61196ed72",
+    "skill-src/how-to-report/assets/report-html/schedule.schema.json": "79956602f84300e07f2ea42833b836e082a9c48be75777ac0643b186252da5e8",
+    "skill-src/how-to-report/references/report-html.md": "6de1d41d6376907082daea89af42316cc4b65185c48e1881cad98deb17ef1f21",
+    "skill-src/shared/references/visual-editing.md": "79cf2ad8745f43aa6cd242807f9a3ec8cd7ff4da25337e02298579a84dc4de9f",
+    "skill-src/report-audit/references/page-audit.md": "766b0a848693eb87a50e139e717490ab902444ae844ddb70384d15735ebb9f9c",
+    "tools/check_report_html_browser.py": "1c124a8d9d1ff22c9e54a0601b89e35a9fb3388ba75d830fe08bb1a720f0700c",
+    "tools/check_presentation_browser.py": "50971250c807e10d4c5330f1fcab63d41490029f2ed246dd7ee78e359113bd81",
+    "tests/test_report_html.py": "71651a19213928c1396510e7c34167baf704de7e962c862daac24d148a3d8e3a",
+    "tests/test_presentation.py": "76655050e3deb0ecf41f134e6b7bcb0044ad57f0122d1b51ef89972e7ffe4e40",
+    "tests/test_diagram_layout.py": "8b4807e4ff4b09b5b97e687c23f69be0b0d486ed80bed5678ce99c0efe3f5eb2",
+    "tests/test_display_projection.py": "aeddd1f9d9a2df88515bcbfe2cf743be2e1146a3a22b218a23fe04000f95cbc6"
+  }
+}
