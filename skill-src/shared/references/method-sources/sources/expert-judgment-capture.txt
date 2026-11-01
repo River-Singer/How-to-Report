@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-01
+Source: Laura G. Militello & Robert J. B. Hutton (1998), Applied cognitive task analysis (ACTA): a practitioner's toolkit for understanding cognitive task demands. Ergonomics 41(11), 1618–1641. DOI: 10.1080/001401398186108.
+URL: https://web.mit.edu/16.459/www/Militello98.pdf
+Read scope: all 12 scanned double pages, printed pages 1618–1641, visually read in the recorded research; includes methods, evaluation and limitations. No study reproduction. Original summary, not scans or a full translation.
+Rights: underlying article copyright Taylor & Francis; no open redistribution license found. No verbatim quotation.
+
+ACTA 从具体任务中困难的判断入手，用经历追问当时注意到的线索、采用的策略以及新手可能误判之处。仅列操作步骤，容易漏掉专家怎样识别问题和作取舍。多个受访者可揭示共性，也可能留下需要核对的分歧。
+
+用于积累汇报经验时，可在获得明确许可后，将初始要求、当时资料、初稿、专家修改与修改理由联系起来：哪一项事实使其改变重点，排除了什么解释，什么新情况会使其改变建议。成稿本身通常不能提供这些信息。只保存用户同意的内容与范围，沿用现有显式经验记录操作，不自动采集或写入通用规则。
+
+论文的消防与电子战领域评估样本有限，部分评分一致性和领域表述准确性存在问题。专家回忆需要与当时记录核对；这些结果不证明 LLM 能可靠采访、读心或提高汇报质量。没有专家材料时，不伪造专家修订历史。

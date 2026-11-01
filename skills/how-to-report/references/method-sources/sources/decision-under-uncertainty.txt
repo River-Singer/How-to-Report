@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-01
+Source: NASA Systems Engineering Handbook, SP-2016-6105 Rev2, section 6.8 Decision Analysis; web page updated 2023-07-26.
+URL: https://www.nasa.gov/reference/6-8-decision-analysis/
+Read scope: full section 6.8 web narrative, including 6.8.1.1–6.8.1.3 and 6.8.2. Linked Expanded Guidance was not read; linked figures were not individually visually verified. Original summary compiled from the project's recorded reading, not a handbook reproduction.
+Rights: no blanket redistribution license asserted for all underlying content; no verbatim quotation.
+
+分析服务于决策者在当前知识下作选择。先明确需要决定什么、想取得什么结果，再比较相关选项和判断标准。补充信息的价值取决于它是否可能改变选择，以及取得它的时间和成本。重要未知可能改变优劣时，应保留相近选项，并说明建议依赖哪些假设。
+
+迁移到汇报：信息不全时仍可排除不作用于阻碍的措施、提出可撤回的下一步，或指出最值得先核实的事实。例如缺实物试验结果时，可以建议先取得样机和试验条件；增加人手是否有用仍需看实际工作。条件落实只支持进入下一步，并不自动证明结果或完成日期。
+
+这是工程决策指南，未检验本 Skill 的效果。无需为简短状态汇报创建矩阵、量化所有标准或给出唯一建议；不能用方法名代替当前依据。高影响且不可逆的选择可能需要更多资料，不能将“可以作有限判断”理解为无依据作承诺。

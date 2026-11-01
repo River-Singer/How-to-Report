@@ -1,6 +1,19 @@
 # 离线方法来源
 
-本目录为核心通用方法的背景，不含可选领域卡。20份均为原创短摘要，记录真实阅读范围；不是全文下载，也不证明本产品的模型表现。按当前方法需要读取，网址仅溯源。完整元信息和哈希见[清单](sources/manifest.json)。
+本目录为核心通用方法的背景，不含可选领域卡。26份均为原创短摘要，记录实际阅读范围；不是全文下载，也不证明本产品的模型表现。只读当前疑点所需的条目，无需把目录全部装入上下文。网址仅溯源，离线即可使用；完整元信息和哈希见[清单](sources/manifest.json)。
+
+## 从目标到内容：按疑点选择
+
+- 对方是否已经知道这些背景：[共同理解](sources/grounding.txt)。AI与委托者的共同背景不能直接代替听众背景。
+- 要不要继续问用户：[澄清的帮助与成本](sources/clarification-value.txt)。目标歧义、事实缺口、知识不足分别处理。
+- 信息还不全能否给出建议：[当前知识下的决策](sources/decision-under-uncertainty.txt)。先看哪些未知会改变选择。
+- 怎样分析试点的借鉴范围：[情境、机制与迁移](sources/mechanism-and-transfer.txt)。保留条件判断，不编普适门槛或收益。
+- 讲述顺序是否改坏了关系：[文本关系](sources/text-relations.txt)。叙事作用与业务事实分别核对。
+- 需要取得专家修改背后的经验：[具体判断访谈](sources/expert-judgment-capture.txt)。仅在用户同意后做经验采集，不能只凭成稿猜历史。
+
+落实到实际取舍可读[合成教学对照](../content-decisions.md)。下面保留既有来源；视觉技术条目是历史参考，不恢复 HTML 生成责任，也不是当前内容任务的必读项。
+
+## 既有方法背景
 
 - [Scoped concepts and ontology (Stanford sections 1–3 read)](sources/ontology-scope.txt) — 原创摘要；范围及限制见文本。
 - [Shared vocabulary (author's abstract read)](sources/ontology-vocabulary.txt) — 原创摘要；范围及限制见文本。

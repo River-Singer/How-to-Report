@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-01
+Source: Michael J. Q. Zhang & Eunsol Choi (2025), Clarify When Necessary: Resolving Ambiguity Through Interaction with LMs.
+URL: https://aclanthology.org/2025.findings-naacl.306/
+Read scope: paper PDF pages 1–9 main text, including task definitions, data, oracle clarification construction, tables 1–4 and limitations. Appendices were not fully read; no code was run. Original summary compiled from the project's recorded reading.
+Rights: underlying publication rights retained; this file contains no source-text copy or verbatim quotation.
+
+有多种解释不等于每次都值得提问。研究把澄清对最终任务的帮助与交互成本一起考虑，并区分意图歧义和知识不足。实验中的澄清不总改善表现，有些翻译设置还会下降。
+
+用于当前任务时，先检查两种合理解释是否真的改变证据、重点或结尾；有这种差异才考虑一个能区分它们的问题。用户已经确认的会议目的无需重问。接口是否批准是事实问题，专业机制不懂是知识问题，都不能靠继续询问“你真正想要什么”解决。
+
+这是产品设计借鉴，不是实验给出的通用访谈算法。研究主要在 QA、翻译与自然语言推断中使用预设解释和 oracle 问答，模型为 GPT-3 与 LLaMA-2；没有验证开放式管理汇报访谈，也不保证当前模型能主动处理歧义。没有强制候选数、问答轮数或有效性阈值。

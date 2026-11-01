@@ -1,8 +1,8 @@
 {
   "schema_version": "1",
-  "archive_version": "0.1",
+  "archive_version": "0.2",
   "runtime_network_required": false,
-  "scope": "20 concise original method-source summaries; no full-source acquisition claim. Core methods are self-contained.",
+  "scope": "26 concise original method-source summaries; 6 new contextual content-method sources and same-URL MIT update in 0.6.1. Read by need; no full-source acquisition or product-effectiveness claim.",
   "card_sources": {},
   "sources": [
     {
@@ -311,24 +311,24 @@
       "publisher": "MIT Communication Lab",
       "canonical_url": "https://mitcommlab.mit.edu/nse/commkit/structuring-a-slide-presentation/",
       "local_path": "sources/mit-story.txt",
-      "fetched_at_utc": "2026-10-28T14:32:22.515445+00:00",
-      "scope": "Original concise source summary; reading scope and full-text limitations stated in local text.",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "All body sections 1-4 and quick tips read on 2026-11-01; linked material/video not reviewed. Original summary, not source full text.",
       "representation": "original_summary",
       "card_ids": [
         "CORE-VISUAL"
       ],
       "retrieval": {
         "method": "reviewed_original_summary",
-        "coverage": "See local text header; no recursive linked publication acquisition.",
-        "timestamp_semantics": "local summary compiled at this time; source reviewed on 2026-10-28; exact source retrieval timestamp not retained in this summary record"
+        "coverage": "All body sections 1-4 and quick tips read on 2026-11-01; linked material/video not reviewed. Original summary, not source full text.",
+        "timestamp_semantics": "Local summary updated at this timestamp from recorded 2026-11-01 reading of the same URL; original source fetch timestamp not asserted."
       },
       "reuse": {
-        "license": "Original project summary; underlying source rights retained",
+        "license": "Original project summary; underlying CommKit content CC BY-NC 4.0",
         "evidence_url": "https://mitcommlab.mit.edu/nse/commkit/structuring-a-slide-presentation/",
         "attribution": "MIT Communication Lab",
         "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
       },
-      "sha256": "7bbb99d820175b97686bc04e538cee9ed5705bc0e149094eb70ea506bcdcb433"
+      "sha256": "bd7661b9da95a200d07930b6246bd44c32a74a2d1bb8213a13d624109253b66c"
     },
     {
       "id": "mit-slides",
@@ -504,6 +504,156 @@
         "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
       },
       "sha256": "8c50a908b18791c590e750e3b8f2e151c0f14aeb27448bedb7a1278d4f255ba1"
+    },
+    {
+      "id": "grounding",
+      "title": "Grounding in Communication",
+      "publisher": "Herbert H. Clark and Susan E. Brennan",
+      "canonical_url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+      "local_path": "sources/grounding.txt",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "PDF pages 1-10 extracted text; page 11 not read; page 12 references not read. Original project summary, not source full text or full translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "PDF pages 1-10 extracted text; page 11 not read; page 12 references not read.",
+        "timestamp_semantics": "Local summary compiled at this timestamp from recorded source reading on 2026-11-01; not a claimed exact original fetch timestamp."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf",
+        "attribution": "Herbert H. Clark and Susan E. Brennan",
+        "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
+      },
+      "sha256": "dac66959a850dd342a130bc40cf634829ea3ef5735a49facf6b68aec29fb4621"
+    },
+    {
+      "id": "clarification-value",
+      "title": "Clarify When Necessary: Resolving Ambiguity Through Interaction with LMs",
+      "publisher": "Michael J. Q. Zhang and Eunsol Choi",
+      "canonical_url": "https://aclanthology.org/2025.findings-naacl.306/",
+      "local_path": "sources/clarification-value.txt",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "PDF pages 1-9 main text; appendices not fully read; no code execution. Original project summary, not source full text or full translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "PDF pages 1-9 main text; appendices not fully read; no code execution.",
+        "timestamp_semantics": "Local summary compiled at this timestamp from recorded source reading on 2026-11-01; not a claimed exact original fetch timestamp."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://aclanthology.org/2025.findings-naacl.306/",
+        "attribution": "Michael J. Q. Zhang and Eunsol Choi",
+        "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
+      },
+      "sha256": "07201fd6887a5e07e45bf7bea9b207f264a7fa90dc638be032962ed9dc194844"
+    },
+    {
+      "id": "decision-under-uncertainty",
+      "title": "NASA Systems Engineering Handbook section 6.8 Decision Analysis",
+      "publisher": "NASA",
+      "canonical_url": "https://www.nasa.gov/reference/6-8-decision-analysis/",
+      "local_path": "sources/decision-under-uncertainty.txt",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "Full section 6.8 web narrative; linked Expanded Guidance not read; linked figures not individually visually verified. Original project summary, not source full text or full translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Full section 6.8 web narrative; linked Expanded Guidance not read; linked figures not individually visually verified.",
+        "timestamp_semantics": "Local summary compiled at this timestamp from recorded source reading on 2026-11-01; not a claimed exact original fetch timestamp."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.nasa.gov/reference/6-8-decision-analysis/",
+        "attribution": "NASA",
+        "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
+      },
+      "sha256": "919b6155d291f0e01e96fab68eb45c60913a488b18a2a4bc206920096eec4a5d"
+    },
+    {
+      "id": "expert-judgment-capture",
+      "title": "Applied cognitive task analysis (ACTA)",
+      "publisher": "Laura G. Militello and Robert J. B. Hutton",
+      "canonical_url": "https://web.mit.edu/16.459/www/Militello98.pdf",
+      "local_path": "sources/expert-judgment-capture.txt",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "All 12 scanned double pages, printed pages 1618-1641, visually read in recorded research. Original project summary, not source full text or full translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "All 12 scanned double pages, printed pages 1618-1641, visually read in recorded research.",
+        "timestamp_semantics": "Local summary compiled at this timestamp from recorded source reading on 2026-11-01; not a claimed exact original fetch timestamp."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://web.mit.edu/16.459/www/Militello98.pdf",
+        "attribution": "Laura G. Militello and Robert J. B. Hutton",
+        "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
+      },
+      "sha256": "4d85a3a6716b468fb013da3f8e79fd9ca10ed0e9f6d8dd1153a87c6a5d3bde9c"
+    },
+    {
+      "id": "mechanism-and-transfer",
+      "title": "Magenta Book Annex A: analytical methods for use within an evaluation",
+      "publisher": "HM Treasury / Evaluation Task Force",
+      "canonical_url": "https://www.gov.uk/government/publications/the-magenta-book/magenta-book-annex-a-analytical-methods-for-use-within-an-evaluation-html",
+      "local_path": "sources/mechanism-and-transfer.txt",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "A1 introduction and A1.1-A1.9; A2 introduction and A2.1. Later A2 and A3-A5 not fully read. Original project summary, not source full text or full translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "A1 introduction and A1.1-A1.9; A2 introduction and A2.1. Later A2 and A3-A5 not fully read.",
+        "timestamp_semantics": "Local summary compiled at this timestamp from recorded source reading on 2026-11-01; not a claimed exact original fetch timestamp."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying Crown copyright 2026, OGL v3.0 except third-party content",
+        "evidence_url": "https://www.gov.uk/government/publications/the-magenta-book/magenta-book-annex-a-analytical-methods-for-use-within-an-evaluation-html",
+        "attribution": "HM Treasury / Evaluation Task Force",
+        "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
+      },
+      "sha256": "d198415dcbd1706365f4126d49842822a47a46f0845deb679694e5c8b16fe218"
+    },
+    {
+      "id": "text-relations",
+      "title": "Rhetorical Structure Theory: Introduction and Relation Definitions",
+      "publisher": "William C. Mann / Maite Taboada, SFU",
+      "canonical_url": "https://www.sfu.ca/rst/01intro/intro.html",
+      "local_path": "sources/text-relations.txt",
+      "fetched_at_utc": "2026-11-01T14:02:51.792924+00:00",
+      "scope": "Full HTML introduction and definitions tables/examples at https://www.sfu.ca/rst/01intro/definitions.html; 1988 paper not counted as read. Original project summary, not source full text or full translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Full HTML introduction and definitions tables/examples at https://www.sfu.ca/rst/01intro/definitions.html; 1988 paper not counted as read.",
+        "timestamp_semantics": "Local summary compiled at this timestamp from recorded source reading on 2026-11-01; not a claimed exact original fetch timestamp."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.sfu.ca/rst/01intro/intro.html",
+        "attribution": "William C. Mann / Maite Taboada, SFU",
+        "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
+      },
+      "sha256": "4d4fbe8d7bb3cfeac2b6e231319c475dae6135460d739df42f72761aa8ce7c1c"
     }
   ]
 }

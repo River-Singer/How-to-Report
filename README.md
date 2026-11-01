@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再组织成适合听众与场合的正文。
 
-**当前版本 0.6.0，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.6.1，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
 
 ## 设计哲学
 
@@ -121,7 +121,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 
 ## 交付什么
 
-成稿任务通常交付一份 `汇报方案.md`：必要时先简短说明采用的方向与取舍，随后给出正式正文，再附需要确认的事项和简明来源。短任务可以只有一段正文；复杂汇报按实际需要组织内容。
+成稿任务通常交付一份 `汇报方案.md`，先给可直接使用的正文，有助于使用时再附简短取舍、需要确认的事项和来源。短任务可以只有一句替换文字；复杂汇报按实际需要组织内容。
 
 正文应当像这样可以直接使用。以下摘自[完整合成示例](skills/how-to-report/assets/examples/report-proposal.md)：
 
@@ -129,7 +129,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 >
 > 目前工具已经能够导入台账，并定位到原始记录。开发组完成了本地功能检查，接下来需要业务同事核实：工具取到的数，是否符合实际使用的口径。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容评测设计](evaluation/content-0.6.0/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[六案评测设计](evaluation/content-0.6.1/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -150,8 +150,8 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-0.6.0 的[工程复核记录](verification/0.6.0/README.md)包含 219 项通过、1 项因 Windows 符号链接权限跳过的单元测试，以及包一致性、离线来源和评测输入检查。
+0.6.1 的[工程复核记录](verification/0.6.1/README.md)包含 223 项通过、1 项因 Windows 符号链接权限跳过的单元测试，以及包一致性、离线来源和评测输入检查。旧 [0.6.0 记录](verification/0.6.0/README.md)保留供历史核对。
 
-工程检查不代表成稿质量已经通过。当前四项内容案例尚未运行模型；批量模型生成、独立审计及修订由用户运行，后续根据实际产物评价方法的收益与成本。详见[开发与验证计划](docs/development-plan.md)。
+工程检查不代表成稿质量已经通过。0.6.1 准备了六项自然输入与条件变化案例，尚未运行模型；可在相同条件下比较普通提示、0.6.0 与 0.6.1。批量模型生成、独立审计及修订由用户运行，后续根据实际产物评价方法的收益与成本。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

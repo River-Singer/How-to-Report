@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-01
+Source: HM Treasury / Evaluation Task Force, Magenta Book Annex A: analytical methods for use within an evaluation, updated 2026-05-15.
+URL: https://www.gov.uk/government/publications/the-magenta-book/magenta-book-annex-a-analytical-methods-for-use-within-an-evaluation-html
+Read scope: A1 introduction and A1.1–A1.9; A2 introduction and A2.1. Focus on realist evaluation, process tracing and contribution analysis. Later A2 and A3–A5 not fully read. Original summary compiled from the project's recorded reading.
+Rights: Crown copyright 2026, Open Government Licence v3.0 except third-party material. This file is still a short original summary, not a full copy. No verbatim quotation.
+
+变化是否发生、怎样产生、换个情境是否仍可能发生，是不同问题。情境和机制可以帮助理解试点，也提示需要什么观察来区分竞争解释。贡献分析能形成有依据的解释，但不自动提供确定因果或精确效果量。
+
+用于讨论借鉴时，可说明本次实际具备哪些条件、它们可能怎样起作用，再比较新场景的重要差异。只有一个样本或缺少收益台账，仍可作有条件的用途说明和后续核实建议；不能宣称已验证普适效果，也不必把暂时观察到的条件写成通用硬门槛。能区分不同解释的资料，比重复已知成功故事更值得优先补充。
+
+上述是对官方评价方法的有限迁移，不等于已经执行因果评估。写得通顺的机制解释仍可能错误；方法需要领域知识和资源，本 Skill 的建议需经实际案例验证。没有统一最低样本数、ROI 或推广合格阈值。

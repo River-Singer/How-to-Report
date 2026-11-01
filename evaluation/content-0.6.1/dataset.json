@@ -1,0 +1,30 @@
+{
+  "dataset_version": "0.6.1",
+  "status": "prepared_not_run",
+  "purpose": "natural_content_condition_change_dev_inputs",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 6
+    }
+  ],
+  "files": {
+    "cases.jsonl": "8f047373ee885a5015b4b2e8015d19a3f30052287986a9d581a87473f21ab62e",
+    "fixtures/audit-author-notes.md": "1b4972f1e3296c881513ff6fe6135eb67853149c40247eff62543d41ad8f6fef",
+    "fixtures/audit-draft.md": "1cd931db5cd23f8f79ed6dcfe62007f428ba1c0e704090ad89619487f665c165",
+    "fixtures/audit-prior.md": "5646c6d1fe96c90f53e82d2a2693705212f5bb9296cc71fd6a85d2f321b48389",
+    "fixtures/audit-request.md": "2413c9466202ca799e38fc0d47775f696205c5c347f8fda5895c893af32462a9",
+    "fixtures/audit-source.md": "9683713beb1c227f0799c4df6b1b6c0d0536644e03eb851b40015bee7ff37caf",
+    "fixtures/collaboration.md": "7776e3682fa99c2d0f1858e9b24d48c157d78794c481992372e6e4df747a20ba",
+    "fixtures/coordination.md": "7fa9d64f40ad56ba078e2ae893a37cf42aa1f973d79dc0e40a705f04d1a0468f",
+    "fixtures/judgment-update.md": "e9c977c14e1af57745802ec60e7b023a880e5a5be1ad12bfe3387240f8698465",
+    "fixtures/judgment.md": "913a07a899a97f08f3e80827a395bf4816537ea8f895fe593835316b5edd3cfa",
+    "fixtures/local.md": "a1f9908703fd56ebf9f411acfa9188181a4062f900a6bfa7e0655a67ceba501f",
+    "fixtures/pilot-update.md": "c8eabc452bdf255ebd7889b089054083c59176f7a7180289025fca7759fdb016",
+    "fixtures/pilot.md": "502d273ad0175c9e1550b8f72237e05abb6b049a842371d445ace0f74fc981e7",
+    "PROTOCOL.md": "dccb56840e946194e9700daa67949ff98b3147e13291a451acc12eb2493cd9dd",
+    "README.md": "429f744d6c9743fc203bdff2df6d0a8a0eb65b5b39f52d0b53ed89de64118a41",
+    "RUN-TEMPLATE.md": "f8796ef05eb43c2ae59a01f3ab4b8d0609264744eb960d656c0bc1d8e5713c8c"
+  }
+}

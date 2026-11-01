@@ -1,0 +1,22 @@
+{
+  "timestamp_utc": "2026-11-01T14:13:16.480782+00:00",
+  "local_markdown_file_links": {
+    "files": 45,
+    "file_links_checked": 218,
+    "anchor_only_links_not_checked": 4,
+    "fragments_not_validated": true,
+    "missing": [],
+    "scope": "Changed and new Markdown outside skill-src; source links are resolved after shared materialization by package check. Fenced code removed; ordinary Markdown file links only."
+  },
+  "whitespace": {
+    "command": "git -c core.whitespace=trailing-space,space-before-tab,cr-at-eol diff --check",
+    "exit_code": 0,
+    "log": "whitespace.log"
+  },
+  "evaluation_inputs": {
+    "fixture_count": 12,
+    "registered_files": 16
+  },
+  "method_sources": 26,
+  "model_execution": false
+}

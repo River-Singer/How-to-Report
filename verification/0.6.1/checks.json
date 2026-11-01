@@ -1,0 +1,89 @@
+[
+  {
+    "id": "build",
+    "command": "python -X utf8 -B tools/package_skills.py build",
+    "timestamp_utc": "2026-11-01T14:07:56.151738+00:00",
+    "exit_code": 0,
+    "seconds": 1.367,
+    "stdout_log": "build.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "package",
+    "command": "python -X utf8 -B tools/package_skills.py check",
+    "timestamp_utc": "2026-11-01T14:08:17.529520+00:00",
+    "exit_code": 0,
+    "seconds": 1.002,
+    "stdout_log": "package.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "offline-sources",
+    "command": "python -X utf8 -B tools/vendor_knowledge_sources.py check",
+    "timestamp_utc": "2026-11-01T14:08:17.529790+00:00",
+    "exit_code": 0,
+    "seconds": 0.386,
+    "stdout_log": "offline-sources.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "content-inputs",
+    "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py",
+    "timestamp_utc": "2026-11-01T14:08:17.530266+00:00",
+    "exit_code": 0,
+    "seconds": 0.243,
+    "stdout_log": "content-inputs.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "previous-content-inputs",
+    "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.0",
+    "timestamp_utc": "2026-11-01T14:08:17.530461+00:00",
+    "exit_code": 0,
+    "seconds": 0.231,
+    "stdout_log": "previous-content-inputs.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "historical-inputs",
+    "command": "python -X utf8 -B evaluation/tools/validate_cases.py",
+    "timestamp_utc": "2026-11-01T14:08:17.530716+00:00",
+    "exit_code": 0,
+    "seconds": 0.72,
+    "stdout_log": "historical-inputs.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "engineering-suite",
+    "command": "python -X utf8 -B -m unittest discover -s tests -v",
+    "timestamp_utc": "2026-11-01T14:08:17.531013+00:00",
+    "exit_code": 0,
+    "seconds": 88.616,
+    "stdout_log": "engineering-suite.log",
+    "stderr_combined_after_stdout": true,
+    "log_redaction": {
+      "kind": "host_temp_directory_prefix",
+      "replacement": "<TEMP>/",
+      "occurrences": 2,
+      "original_full_log_preserved_privately": true
+    }
+  },
+  {
+    "id": "format-how-to-report",
+    "command": "python -X utf8 -B <skill-creator>/scripts/quick_validate.py skills/how-to-report",
+    "timestamp_utc": "2026-11-01T14:08:17.762281+00:00",
+    "exit_code": 0,
+    "seconds": 0.206,
+    "stdout_log": "format-how-to-report.log",
+    "stderr_combined_after_stdout": true
+  },
+  {
+    "id": "format-report-audit",
+    "command": "python -X utf8 -B <skill-creator>/scripts/quick_validate.py skills/report-audit",
+    "timestamp_utc": "2026-11-01T14:08:17.773713+00:00",
+    "exit_code": 0,
+    "seconds": 0.2,
+    "stdout_log": "format-report-audit.log",
+    "stderr_combined_after_stdout": true
+  }
+]

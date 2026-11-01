@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-01
+Source: Clark, H. H. & Brennan, S. E. (1991), Grounding in Communication.
+URL: https://web.stanford.edu/~clark/1990s/Clark%2C%20H.H.%20_%20Brennan%2C%20S.E.%20_Grounding%20in%20communication_%201991.pdf
+Read scope: PDF pages 1–10, printed pages 127–145, extracted text. Page 11 had no extracted text and was not claimed read; page 12 references were not read. This is an original summary compiled from the project's recorded reading, not a full translation or source reproduction.
+Rights: underlying chapter rights retained; no full-text redistribution permission asserted. No verbatim quotation.
+
+沟通需要形成足够支持当前目的的共同理解。对方的纠正、复述或适当回应可以提供理解的线索；付出多少澄清成本取决于事情和媒介。文件已提供不证明听众已懂，沉默也不自动等于赞同。
+
+用于汇报准备时，可先查清实际听众已经知道什么，再补他形成判断所需的背景。AI 和委托者谈明白的技术细节，不等于听众也已知。资料足以支持继续写作时不必逐句确认；真正影响内容的不同理解才值得处理。
+
+这是从双向人际沟通理论借鉴的产品用法。原章明确不以书报广播等单向媒介为讨论范围；一次成稿、模型复述或作者自评不能据此证明真实听众理解，更不能证明模型能读出隐秘动机。

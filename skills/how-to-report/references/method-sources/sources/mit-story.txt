@@ -1,6 +1,10 @@
 Representation: original_summary
-Research date: 2026-10-28 UTC
+Research date: 2026-11-01; extends the 2026-10-28 summary of the same source.
 Source: https://mitcommlab.mit.edu/nse/commkit/structuring-a-slide-presentation/
-Read scope: previously retrieved official guidance; relevant sections only. No full-text redistribution or experiment reproduction claimed.
+Read scope: all body sections 1–4 and quick tips, including goals, audience, supported messages and ordering. Other linked material/video not reviewed; figures were not treated as empirical data. Original summary compiled from recorded reading; no full-text redistribution or experiment reproduction claimed. Underlying CommKit content is CC BY-NC 4.0; this file is an original summary, with no verbatim quotation.
 
 Organize the important messages into a coherent story, then choose supporting evidence. Audience understanding and available time govern the presentation more usefully than a fixed page count. This is presentation guidance, not proof that fluent titles establish a valid argument.
+
+先从已有结果支持哪些判断着手，按共同支持的意思分组；缺少依据时调整主张。准备时从结果往回追，讲述时则按听众所需背景和疑问安排。信息串读只是组织手段，还要核对每个判断的支持。
+
+这是技术演讲指导，未验证本 Skill。沙漏结构、结果分组数和中心句不是所有企业汇报的硬规则；任何资助或认可示例也不能替当前用户设定隐藏诉求。可以用于 Markdown 叙事，无需恢复视觉生成或页面数量约束。

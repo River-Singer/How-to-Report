@@ -1,0 +1,83 @@
+{
+  "timestamp_utc": "2026-11-01T14:10:29.702486+00:00",
+  "packages": {
+    "how-to-report": {
+      "manifest_sha256": "21101bccd1afea4641c5cd6a680037b0253ada7ee4726bf66b4f09c5a2bd5604",
+      "package_version": "0.6.1",
+      "supported_contract_version": "0.1",
+      "payloads": 128
+    },
+    "report-audit": {
+      "manifest_sha256": "13d41bd1210c2ad991b95c663adef949ed4129b80686b4db124e73313bc29174",
+      "package_version": "0.6.1",
+      "supported_contract_version": "0.1",
+      "payloads": 115
+    }
+  },
+  "python": {
+    "version": "3.14.4",
+    "files": 28,
+    "files_checked": [
+      "evaluation/tools/numeric_oracle.py",
+      "evaluation/tools/validate_cases.py",
+      "evaluation/tools/validate_content_cases.py",
+      "skill-src/how-to-report/scripts/report_calculate.py",
+      "skill-src/how-to-report/scripts/report_profile.py",
+      "skill-src/how-to-report/scripts/report_run.py",
+      "skill-src/how-to-report/scripts/report_schedule.py",
+      "skill-src/how-to-report/scripts/report_versions.py",
+      "skill-src/how-to-report/scripts/schedule_core.py",
+      "skill-src/report-audit/scripts/audit_run.py",
+      "skill-src/shared/scripts/report_experience.py",
+      "skill-src/shared/scripts/validate_run.py",
+      "skill-src/shared/scripts/write_boundary.py",
+      "tests/test_audit_run.py",
+      "tests/test_calculation_profile.py",
+      "tests/test_content_evaluation.py",
+      "tests/test_contracts.py",
+      "tests/test_evaluation.py",
+      "tests/test_knowledge_sources.py",
+      "tests/test_packaging.py",
+      "tests/test_release05_evaluation.py",
+      "tests/test_report_experience.py",
+      "tests/test_report_run.py",
+      "tests/test_report_schedule.py",
+      "tests/test_report_versions.py",
+      "tests/test_write_boundary.py",
+      "tools/package_skills.py",
+      "tools/vendor_knowledge_sources.py"
+    ],
+    "python_310_parse": true,
+    "in_memory_compile": true,
+    "lint": "not_configured",
+    "typecheck": "not_configured"
+  },
+  "historical_bytes": {
+    "files_checked": 896,
+    "groups": {
+      "project/legacy": 29,
+      "project/verification": 575,
+      "project/evaluation": 10,
+      "case-handoff/thinking-v1": 282
+    },
+    "changed": []
+  },
+  "private_path_scan": {
+    "scope": [
+      "skills",
+      "skill-src",
+      "evaluation/content-0.6.1"
+    ],
+    "matches": [],
+    "limitation": "Targeted path scan and manual changed-content review, not a general sensitive-data detector.",
+    "pattern_categories": [
+      "local workspace absolute paths",
+      "private handoff locations",
+      "dated research locations",
+      "task locations",
+      "local user profile paths"
+    ]
+  },
+  "model_execution": false,
+  "browser_execution": false
+}

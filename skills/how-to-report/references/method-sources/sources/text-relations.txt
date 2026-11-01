@@ -1,0 +1,13 @@
+Representation: original_summary
+Research date: 2026-11-01
+Source: Rhetorical Structure Theory website, William C. Mann / Maite Taboada, SFU, Introduction and Relation Definitions.
+URL: https://www.sfu.ca/rst/01intro/intro.html
+Related page actually read: https://www.sfu.ca/rst/01intro/definitions.html
+Read scope: full HTML introduction and all relation-definition tables/examples. The 1988 scanned paper was not counted as read; current website includes later relation extensions. Original summary compiled from recorded reading.
+Rights: underlying website rights retained; no full-text redistribution permission asserted. No verbatim quotation.
+
+背景、证据、解释和促成行动的内容，可以对读者承担不同作用；对照、列表、序列也可包含多个核心。RST 描述文本组织与作者意图的一种合理解释，不是生成算法。关系名本身不说明关系为何成立，分析也可能有多种解释。
+
+安排汇报时，可先看某段解决听众的哪个问题：尚未理解背景、尚未相信判断，还是不知下一步怎样行动。再决定它放在哪里、需要什么支持。业务中的并行、反馈与条件不能因为顺着讲述而被改成单向接力；内容关系与讲述顺序应分别检查。
+
+这些是产品迁移建议。修辞上的“证据”不证明业务事实正确，文本结构也不能当成真实因果图。不要求每段标注关系、套完整分类或建唯一父节点树；短任务可直接写。理论与作者侧定义没有验证本 Skill 成稿质量。
