@@ -1,47 +1,43 @@
 ---
 name: how-to-report
-description: 从用户处境与真实材料探查汇报意图、确认沟通目标、发现重要区别并组织论证和叙事，交付可直接使用的 Markdown 汇报方案；支持先分析与范围内修订。
+description: 从真实处境和材料澄清汇报目标、提炼信息、形成有依据的判断，组织叙事并交付明确页数与逐页内容的 Markdown 汇报方案；支持先分析和多轮局部修订。
 ---
 
 # How to Report
 
-帮助用户想清楚这次汇报希望改变什么、对方需要理解什么、哪些判断有依据，以及怎样把它们讲清楚。最终交付 Markdown 内容，不生成 HTML、SVG、PPTX、页面代码或固定布局，不承担视觉制作与浏览器验收。
+帮助用户把事情想清楚，再形成听众能够使用的汇报材料。默认完整交付是《汇报方案.md》：简短安排、具体页数和页序、每页可直接使用的标题与内容。到内容交付即停止，不生成 HTML、SVG、PPTX、固定版式或视觉验收记录。
 
-## 从用户当前需要开始
+## 先进入生成与修订主线
 
-- `create`：利用已给情境和资料，形成适合本次沟通的方向、叙事与可直接使用的正文。
-- `analyze-first`：先解决目标、解释或方案取舍，交付可讨论的方向与必要补件；用户尚未决定时不强行成稿。
-- `revise`：确定待修改版本与范围，直接修需要的内容。仅改一句话不重做整套目标分析。
+以[生成与修订方法](references/reporting-method.md)作为唯一主工作流：弄清本次要讲什么，归纳材料并判断能支持什么回答，按听众理解顺序形成逐页内容，核对实际成稿。已经解决的部分沿用，不要求每次走完全部工作或读取全部专题。
 
-用户是委托者，不自动等于实际汇报者或最终受众。正文由真实汇报者向听众说话；给用户的取舍说明与正文分开。材料已回答、目标已确认就沿用，不为流程反复提问。
+- `create`：利用已给目标、情境和资料，从尚未解决的问题开始，交付可制作的完整材料方案。
+- `analyze-first`：解决当前目标、解释或方案取舍，达到可讨论程度即可；不强行成稿。
+- `revise`：继承当前版本和仍适用的约定，仅调整受影响内容。只改一句话或一个标题时，直接交一个替换结果；用户要备选时才增加。
 
-从已知目标找听众需要回答的问题，再用材料形成有依据的判断和正文。目标歧义才澄清意图；事实缺口查材料，知识不足补相应知识，不用反复问目标代替取证。不把个人表现或资源争取当作默认动机。方法、Graph与工作记录按需使用，不要求固定步骤、维度数或每图一个文件。
+委托者、实际汇报者和听众可能不同。材料已经回答、目标已经确认就沿用；目标歧义、事实缺口和专业知识不足分别处理。用户否认的诉求不继续优化。正文由实际汇报者向听众表达，作者安排与正文分开。
 
-## 按当前疑点读取
+## 难点出现时再读专题
 
-| 需要解决的问题 | 方法 |
+| 当前难点 | 资源 |
 |---|---|
-| 主题明确但沟通结果不明，或出现值得考虑的新目标 | [目标发现](references/goal-discovery.md) |
-| 材料只有罗列、解释重复、抽象后丢失重要区别 | [解释探索](references/insight-discovery.md)；具体概念、前提、条件与推理缺口用[按需思维方法](references/reasoning-methods.md) |
-| 选择汇报方式，组织论证、叙事和直接正文 | [生成与修订方法](references/reporting-method.md)，按需用[会议表达](references/meeting-expression.md)和[叙事与内容检查](references/narrative-page-behavior.md) |
-| 长句、零散记录或分组中关系不清 | [语义组织](references/semantic-structuring.md) |
-| 表达生硬、过度概括、角色混乱或混入制作旁白 | [观众成稿编辑](references/audience-copy.md) |
-| 日期、数值、比较或计算关系影响判断 | [数值声明与复算](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；定义已明确的CSV计算用[显式计算](references/report-calculation.md) |
-| 来源缺口、材料交接或复杂工作需要追溯 | [最小证据交接](references/evidence-handoff.md)、[多图模型](references/graph-model.md)、[工作区契约](references/workspace-contract.md) |
-| 需要持久工作记录、续接或版本影响查询 | [生成 Run](references/report-run.md)、[版本操作](references/version-lifecycle.md)、[宿主能力](references/host-capabilities.md) |
-| 用户明确使用已确认偏好或保存任务经验 | [画像操作](references/report-profile.md)、[私有经验](references/report-experience.md) |
-| 专业判断需要适用领域知识 | [知识目录元信息](knowledge/index.md)，正文按已授权范围读取 |
+| 合理目标解释会改变主线，或材料出现新机会 | [目标发现](references/goal-discovery.md) |
+| 零散记录难以归并，概括或关系可能失真 | [材料提炼与含义保真](references/semantic-structuring.md) |
+| 现有解释漏掉会改变判断的重要区别 | [解释探索](references/insight-discovery.md)；具体概念、前提、条件、论证问题用[思维方法](references/reasoning-methods.md) |
+| 听众、媒介、路线、详略或时间需要调整 | [叙事与会议表达](references/meeting-expression.md) |
+| 句子抽象生硬、角色混乱或混入制作旁白 | [观众成稿编辑](references/audience-copy.md) |
+| 需要看材料如何成为概括和逐页内容 | [连续合成教学](references/content-decisions.md)、[完整材料示例](assets/examples/report-proposal.md) |
+| 数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；定义明确的CSV用[显式计算](references/report-calculation.md) |
+| 材料交接、续接或版本追溯 | [最小证据](references/evidence-handoff.md)、[生成Run](references/report-run.md)、[版本操作](references/version-lifecycle.md) |
+| 明确复用或保存已确认偏好/经验 | [画像](references/report-profile.md)、[私有经验](references/report-experience.md) |
+| 专业关系需要领域知识 | [知识目录元信息](knowledge/index.md)，正文按已有授权范围读取 |
 
-核心方法自足且按需加载。领域知识与本地来源文字随包提供，网址仅供溯源；已有同范围许可不重复申请，拒绝、未回应或撤销的可选正文不读取。知识不能代替本项目事实，摘要不能冒充原文。缺少资料时说明具体缺口，不假称已检索或核验。
+核心方法和本地来源离线可用，网址只供溯源。可选领域正文遵守实际授权，已有同范围许可不重复申请，拒绝、未回应或撤销的正文不读。知识不能替代项目事实，摘要不冒充完整原文。
 
-## 交付能使用的内容
+## 交付与可靠性边界
 
-通常保存一份 `汇报方案.md`，给出听众可直接阅读或讲述的正文；只在影响使用时附简短取舍、待确认事项和来源。幻灯片任务可建议页数和逐页内容，独立阅读材料按问题组织。一句话修改直接交替换文字，不例行附自检说明。模板、Blueprint或JSON不是必填交付；[合成示例](assets/examples/report-proposal.md)仅供需要分区时参考。
+完整材料必须有具体总页数和全部逐页内容，不能只交长讲稿或空页纲。用户明确只要口头稿、阅读稿、分析或局部修改时按其范围交付。下游可自由选择图形、插画和布局，事实、关系与重要条件仍应保留。
 
-可说明需要比较什么、解释哪些依赖、保留什么条件；下游自行选择图形、插画与版式。本 Skill 到内容交付即停止，不规定图类型、坐标、配色、组件或渲染器。
+普通任务不要求建Run、Graph或Blueprint。复杂关系和留存按需使用[多图视图](references/graph-model.md)、[工作区契约](references/workspace-contract.md)与[宿主能力](references/host-capabilities.md)；记录可审阅的决定，不输出私有推理过程。文件能力存在不等于每次都要初始化目录。
 
-成稿前串读主要判断与结尾，检查支持和遗漏；以听众视角读正文，再核数字、日期、状态、归因、条件和请求。假设、用户选择、计算执行与事实成立互不替代。重要数据用实际工具复核，保留本次必要的定义与结果；未执行的检查不写通过。
-
-只在实际需要追溯、续接或版本管理时建立外置 Run；文件能力存在不意味着每次都要初始化目录。结构工具不证明内容正确，也不要求模型展示私有推理过程。
-
-重要成稿交实际可用的 `report-audit` 或独立上下文核对，提供原要求、原资料和产物，不只交生成者自评。无法独立审查时可交工作稿，说明相关自查范围；未解决的重要错误不能称已通过。审计请求不自动改写原件。
+重要成稿交实际可用的 `report-audit` 或独立上下文审查，提供原要求、原资料和实际产物，不能只交生成者自评。生成自查、结构检查和独立审计分别说明；未做的检查不写通过，已知重要错误不能因任务结束而通过。无法独立审查时如实交代工作稿的核验范围，不阻断可完成的内容工作。

@@ -44,7 +44,7 @@
 | FR-05 P0 | 事实、候选解释、主张、已实现/计划/收益分开 | [解释探索](../skill-src/shared/references/insight-discovery.md)、生成/审计方法、多图模型 | 方法与状态契约已实现；陌生任务的遗漏/越界仍需行为验证 |
 | FR-06 P0 | 重大提效/收益/因果等反推最小证据，缺证给可执行请求与较弱表述 | 生成方法“论证与证据反推”；[数值方法](../skill-src/shared/references/numeric-evidence.md) | 已实现；不能以固定 KPI 表或无数据造数代替。新增场景待用户验证 |
 | FR-07 P0 | 关键 Source→Finding/Claim→Content→Visual 稳定版本引用与状态 | 工作区契约、[校验器](../skill-src/shared/scripts/validate_run.py)、[多图样例](../skill-src/shared/assets/examples/multi-graph/run.json)、HTML page-map | 记录/结构/依赖查询已实现；引用存在不证明真伪或依赖完整，实际正文对应仍需审查 |
-| FR-08 P0 | Blueprint 有问题、完整判断、依据、限制、模块关系、主线/备份/待证；叙事不以过渡词补证 | 生成方法、[叙事页面行为](../skill-src/shared/references/narrative-page-behavior.md)、多图 Blueprint 样例 | 核心方法和N01–N03检查已集成；路线效果待用户验证 |
+| FR-08 P0 | Blueprint 有问题、完整判断、依据、限制、模块关系、主线/备份/待证；叙事不以过渡词补证 | 生成方法、[叙事页面行为](https://github.com/River-Singer/How-to-Report/blob/071592ad59ea2bbe62ef9ea9e728d3dea4e38181/skill-src/shared/references/narrative-page-behavior.md)、多图 Blueprint 样例 | 核心方法和N01–N03检查已集成；路线效果待用户验证 |
 | FR-09 P0 | 按需真实计算、业务确认口径、输入版本、方法/参数/原始结果/校核/限制；无工具降级 | 数值方法、[计算说明模板](../skill-src/shared/assets/review/calculation-note.md)、[证据交接](../skill-src/shared/references/evidence-handoff.md) | **已实现** [计算器](../skill-src/how-to-report/scripts/report_calculate.py)、[操作合同](../skill-src/how-to-report/references/report-calculation.md)、[可运行例](../skill-src/how-to-report/assets/report-calculation/README.md)及[正常/失败/换版测试](../tests/test_calculation_profile.py)。白名单计算与凭证不认证业务定义或因果；历史宿主计算证据仍保留 |
 | FR-10 P0 | Page Semantic Plan 与 Chart Spec 明确问题、判断、共现/先后、引用、单位/缺失/限制；内容与空间分离 | [HTML 方法](../legacy/visual-0.5.3/skill-src/how-to-report/references/report-html.md)、report_html.py、叙事页面行为 | 简单计划、有界递归树、typed elements与图表数据均已实现；[渲染测试](../legacy/visual-0.5.3/tests/test_report_html.py)及新浏览器证据覆盖，语义适用性仍由实际材料审查 |
 | FR-11 P0 | 真实离线 HTML、默认16:9、缩放/导航/页码/键盘、有效图表尺寸、安全文本、可见来源限制 | [report_html.py](../legacy/visual-0.5.3/skill-src/how-to-report/scripts/report_html.py)、[deck.js](../legacy/visual-0.5.3/skill-src/how-to-report/assets/report-html/deck.js)、[deck.css](../legacy/visual-0.5.3/skill-src/how-to-report/assets/report-html/deck.css) | 组合、bar/line/heatmap、可配置画布已实现；本轮新浏览器分别检查默认1600×900和1600×1000，旧证据不复用为新版通过 |
@@ -74,7 +74,7 @@
 
 ### 增补二：叙事、逐页与表达行为检查
 
-统一实现位置：[narrative-page-behavior.md](../skill-src/shared/references/narrative-page-behavior.md)，由生成方法、HTML方法和审计方法按需路由。该方法已从生成/审计入口、内容方法和HTML方法接入；模板保持可选，14项行为评测输入已准备。不是新的强制流程，也不是机械新增15个机器字段。
+统一实现位置：[narrative-page-behavior.md](https://github.com/River-Singer/How-to-Report/blob/071592ad59ea2bbe62ef9ea9e728d3dea4e38181/skill-src/shared/references/narrative-page-behavior.md)，由生成方法、HTML方法和审计方法按需路由。该方法已从生成/审计入口、内容方法和HTML方法接入；模板保持可选，14项行为评测输入已准备。不是新的强制流程，也不是机械新增15个机器字段。
 
 | 编号 | 触发与最小可观察产物 | 失败后的动作 |
 |---|---|---|

@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-02
+Sources: Brown & Day (1983), Technical Report 270; Kintsch & van Dijk (1978), Psychological Review 85(5).
+URLs: https://files.eric.ed.gov/fulltext/ED225136.pdf ; https://www.cl.cam.ac.uk/teaching/1516/R216/Towards.pdf
+Read scope: reused recorded research. Brown/Day report introduction, rules, three experiments' methods/results and start of discussion, not all 39 PDF pages. Kintsch/van Dijk PDF first six pages (journal 363–368), not remaining 26 pages. This integration did not retrieve or reread the original PDFs.
+Rights: original project summary, no quotations or source-text copies; underlying rights retained.
+
+Brown/Day观察到熟练摘要者会跨段组合信息并形成统摄句，而较不熟练者更常按原顺序删抄。专家实验只有两位精选、具有相关教学经验的研究生，材料是人为改写的短说明文，不可直接推广为中文职场汇报规律。
+
+Kintsch/van Dijk的理论区分局部命题与整体主旨，讨论在目标控制下删除、概括、建构信息。不能删掉理解后文所必需的前提。论文涉及知识与推断，不提供可直接运行的LLM摘要算法；本次没有核全部实验。
+
+本产品据此设计的动作是：先确定共同回答的问题，跨来源归并，再写能由记录支持的统摄句；保留会改变判断的状态、例外和条件。建构整体意思不等于增加事实，形成概括也不等于推论已获证明。这是编辑设计借鉴，尚非Skill或真实听众效果证据。

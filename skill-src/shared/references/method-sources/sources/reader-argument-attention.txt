@@ -1,0 +1,12 @@
+Representation: original_summary
+Research date: 2026-11-02
+Sources: David Hitchcock (2003), Toulmin's Warrants; Nelson Cowan (2010), The Magical Mystery Four.
+URLs: https://www.humanities.mcmaster.ca/~hitchckd/Toulminswarrants.pdf ; https://pmc.ncbi.nlm.nih.gov/articles/PMC2864034/
+Read scope: reused recorded research. Hitchcock sections 1, 2.1, 3.4–4, beginning of 2.2 and latter 3.3, not full paper. Cowan abstract, introduction and Understanding Central Capacity Limits up to before Figure 1; further access was blocked. No rereading, experiment or audience test in this integration.
+Rights: original project summary without quotations; underlying rights retained.
+
+Hitchcock区分支撑主张的事实和允许推断的理由。评估时可以探索可能理由，但复述原文时不能把补出的依据写成作者已经陈述的事实。由此借鉴：检查事实到结论的连接，而不只检查出现了来源；推断和叙事顺序分开，流畅的过渡不能补出证据。
+
+Cowan综述同时保持和处理信息的限制，容量取决于任务以及是否控制分组、复述等策略。本产品借鉴的是及时解释相互关系、减少未解释对象长时间悬置，不将研究数字变成所有汇报固定三点、四项、页数或字数。
+
+两类研究的证据性质不同：前者是论证分析，后者为认知研究综述。上述写作动作是产品迁移建议，不是原文验证的中文汇报方法；模型反读和规则齐全不能证明听众实际理解。

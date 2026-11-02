@@ -2,7 +2,7 @@
   "schema_version": "1",
   "archive_version": "0.2",
   "runtime_network_required": false,
-  "scope": "26 concise original method-source summaries; 6 new contextual content-method sources and same-URL MIT update in 0.6.1. Read by need; no full-source acquisition or product-effectiveness claim.",
+  "scope": "28 concise original method-source summaries, including 2 selective-reading syntheses added for the 0.7.0 workflow. Read only by need; no full-source or product-effectiveness claim.",
   "card_sources": {},
   "sources": [
     {
@@ -654,6 +654,56 @@
         "limitations": "No verbatim source quotation or full-text redistribution. Actual reading scope and transfer limitations are preserved in local text; no product-effectiveness claim."
       },
       "sha256": "4d4fbe8d7bb3cfeac2b6e231319c475dae6135460d739df42f72761aa8ce7c1c"
+    },
+    {
+      "id": "reading-synthesis",
+      "title": "Reading and cross-record synthesis",
+      "publisher": "Brown & Day; Kintsch & van Dijk",
+      "canonical_url": "https://files.eric.ed.gov/fulltext/ED225136.pdf",
+      "local_path": "sources/reading-synthesis.txt",
+      "fetched_at_utc": "2026-11-02T08:41:04.093753+00:00",
+      "scope": "Original synthesis of recorded 2026-11-02 selective reading; exact source/read boundaries and secondary URLs are in local text; no full-text or effectiveness claim.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "compiled_from_recorded_research",
+        "coverage": "See local text for source-specific reading ranges; no new remote retrieval in this integration.",
+        "timestamp_semantics": "Local compilation time, not original source fetch time."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://files.eric.ed.gov/fulltext/ED225136.pdf",
+        "attribution": "Brown & Day; Kintsch & van Dijk",
+        "limitations": "No quoted source text, endorsement, full-reading, replicated-experiment or product-quality claim."
+      },
+      "sha256": "be969cb451444adf75c0f78ac7ffafa010cc36c5ee2477d21f50ec7fd41e1559"
+    },
+    {
+      "id": "reader-argument-attention",
+      "title": "Inference support and audience information integration",
+      "publisher": "David Hitchcock; Nelson Cowan",
+      "canonical_url": "https://www.humanities.mcmaster.ca/~hitchckd/Toulminswarrants.pdf",
+      "local_path": "sources/reader-argument-attention.txt",
+      "fetched_at_utc": "2026-11-02T08:41:04.100708+00:00",
+      "scope": "Original synthesis of recorded 2026-11-02 selective reading; exact source/read boundaries and secondary URLs are in local text; no full-text or effectiveness claim.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "compiled_from_recorded_research",
+        "coverage": "See local text for source-specific reading ranges; no new remote retrieval in this integration.",
+        "timestamp_semantics": "Local compilation time, not original source fetch time."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.humanities.mcmaster.ca/~hitchckd/Toulminswarrants.pdf",
+        "attribution": "David Hitchcock; Nelson Cowan",
+        "limitations": "No quoted source text, endorsement, full-reading, replicated-experiment or product-quality claim."
+      },
+      "sha256": "12f6ee6b210b97006868aab28bace5de14ba8e3c3858c5579a2ca453c4934bb3"
     }
   ]
 }

@@ -1,0 +1,77 @@
+{
+  "date": "2026-11-02",
+  "package_version": "0.7.0",
+  "supported_contract_version": "0.1",
+  "commands": [
+    {
+      "command": "python -X utf8 -B tools/package_skills.py build",
+      "result": "pass; both packages0.7.0, contract0.1"
+    },
+    {
+      "command": "python -X utf8 -B tools/package_skills.py check",
+      "result": "pass; generated payloads match canonical sources"
+    },
+    {
+      "command": "python -X utf8 -B tools/vendor_knowledge_sources.py check",
+      "result": "pass; no network used"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py",
+      "result": "pass;4 current input cases; no models"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.1",
+      "result": "pass;6 historical input cases"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.0",
+      "result": "pass;4 historical input cases"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_cases.py",
+      "result": "pass;67 historical input cases"
+    },
+    {
+      "command": "python -X utf8 -B -m unittest discover -s tests -v",
+      "result": "223 passed,1 skipped,224 total;85.980 seconds"
+    },
+    {
+      "command": "skill-creator quick_validate.py on each generated Skill directory",
+      "result": "both valid; external validator supplied by host"
+    },
+    {
+      "command": "git -c core.whitespace=trailing-space,space-before-tab,cr-at-eol diff --check",
+      "result": "pass"
+    }
+  ],
+  "unit_tests": {
+    "run": 224,
+    "passed": 223,
+    "skipped": 1,
+    "elapsed_seconds": 85.98,
+    "skip_reason": "Windows WinError1314: real symlink creation privilege unavailable"
+  },
+  "package_manifest_sha256": {
+    "how-to-report": "f4885c828023edaec42e612b3646baeeb7d98e43484d9039bf02d5955e524167",
+    "report-audit": "b900db5be25e6a85b4d5758830a1bfa7f8ecb2fe6aa9511a42909a7c6ed3e023"
+  },
+  "independent_link_check": {
+    "documents": 59,
+    "local_links": 324,
+    "missing": 0
+  },
+  "historical_integrity": {
+    "files_checked": 4857,
+    "changed": 0,
+    "missing": 0,
+    "scope": "pre-existing archives, verification records, evaluation inputs and private handoffs/results; private file inventory is not published"
+  },
+  "private_handoff_engineering": {
+    "run": 12,
+    "passed": 11,
+    "skipped": 1,
+    "model_execution": false
+  },
+  "model_execution": false,
+  "quality": "not_assessed_by_engineering_checks"
+}

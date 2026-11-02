@@ -1,0 +1,26 @@
+{
+  "dataset_version": "0.7.0",
+  "status": "prepared_not_run",
+  "purpose": "unified_workflow_staged_development_inputs",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 4
+    }
+  ],
+  "files": {
+    "cases.jsonl": "40a0b201443004ea293c991c4a974172bbfb5d34cbc4335952bbe0b3af6eecb7",
+    "PROTOCOL.md": "5b0d096e22d6b004dd66570123272055eeb75e9b0d50c904373164c656b89b1f",
+    "README.md": "846ded55b0328990b6370ed5b0ae69f74498af01ce3bc86dfe87ca288bd8b626",
+    "fixtures/audit-author-notes.md": "7b27069bb14aefaff2409a2ce135d5fc3e0323e3f4f8e9593c8a320af8c91b3c",
+    "fixtures/audit-draft.md": "ffed9feea9a18bab91542a9808d6e5208c141651a44be90044e78b8be5214fd4",
+    "fixtures/audit-prior.md": "8403bab08f8e3343465907dedcf96b4af82afe65c23e4c7fd12c0f975b43c55e",
+    "fixtures/audit-source.md": "3630fd571c1f023b28e664e43918335db71f4178612056acc99b4002dff12274",
+    "fixtures/coordination-update.md": "5b14a60d30b2044f0009d4d8abdb51b8eb85bcfe184cfe80045464a8156d0538",
+    "fixtures/coordination.md": "0fc9d0fcf8b28c764ecf433e991fc30f11283524bc4714b30390aeac30bd0342",
+    "fixtures/local.md": "5b841514380e590523d4974ae4326d7a51007a173d04f197322191bf8f86956b",
+    "fixtures/practice-update.md": "1df4a51da4a8ee987343f9f8a52d0d92618ad361489637e8bfb394381275d56d",
+    "fixtures/practice.md": "50c936d9ea7695fd7cceac1568481038a77911cc2dc577053451039868468141"
+  }
+}
