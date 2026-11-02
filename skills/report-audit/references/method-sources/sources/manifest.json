@@ -1,8 +1,8 @@
 {
   "schema_version": "1",
-  "archive_version": "0.2",
+  "archive_version": "0.3",
   "runtime_network_required": false,
-  "scope": "28 concise original method-source summaries, including 2 selective-reading syntheses added for the 0.7.0 workflow. Read only by need; no full-source or product-effectiveness claim.",
+  "scope": "29 concise original method-source summaries, including one selective synthesis on editing support added for 0.7.2. Read only by need; no full-source or product-effectiveness claim.",
   "card_sources": {},
   "sources": [
     {
@@ -704,6 +704,31 @@
         "limitations": "No quoted source text, endorsement, full-reading, replicated-experiment or product-quality claim."
       },
       "sha256": "12f6ee6b210b97006868aab28bace5de14ba8e3c3858c5579a2ca453c4934bb3"
+    },
+    {
+      "id": "revision-coaching",
+      "title": "Worked editing, actionable feedback and withdrawing support",
+      "publisher": "Collins, Brown & Holum; Valerie J. Shute; Anke Wischgoll",
+      "canonical_url": "https://www.aft.org/ae/winter1991/collins_brown_holum",
+      "local_path": "sources/revision-coaching.txt",
+      "fetched_at_utc": "2026-11-02T14:42:49.020901+00:00",
+      "scope": "Original synthesis of recorded 2026-11-02 selective reading; source-specific ranges, URLs and transfer limitations are in local text. Not full text or translation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "compiled_from_recorded_research",
+        "coverage": "See local text for three source-specific reading ranges; no new remote retrieval in this integration.",
+        "timestamp_semantics": "Local compilation time, not original source fetch time."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.aft.org/ae/winter1991/collins_brown_holum",
+        "attribution": "Collins, Brown & Holum (1991); Shute (2008); Wischgoll (2017)",
+        "limitations": "No source quotations or original full-text redistribution. Source 3 CC BY 4.0; no open redistribution licence verified for Sources 1-2. No endorsement, model-learning or product-effectiveness claim."
+      },
+      "sha256": "1a61b14864ff7419957c110e3c9dc8a308812a830a064b145c8ce1923044b941"
     }
   ]
 }

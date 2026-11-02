@@ -1,0 +1,23 @@
+Representation: original_summary
+Research date: 2026-11-02
+Integration: reuses recorded source reading; this integration did not retrieve the remote originals again. This is an original project synthesis, not a full text or translation.
+
+Source 1: Collins, Brown & Holum (1991), Cognitive Apprenticeship: Making Thinking Visible.
+URL: https://www.aft.org/ae/winter1991/collins_brown_holum
+Read scope: opening, Writing, Content, Method, Sequencing, Conclusion; mathematics demonstration skimmed. Author guidance, not an intervention study of Chinese reporting or LLMs.
+
+Source 2: Shute (2008), Focus on Formative Feedback.
+URL: https://myweb.fsu.edu/vshute/pdf/shute%202008_b.pdf
+Read scope: opening, feedback complexity/types pp.159–160, discussion and Tables 2–5 pp.175–180. Review, not a new experiment; cited primary studies not all traced.
+
+Source 3: Wischgoll (2017), Improving Undergraduates' and Postgraduates' Academic Writing Skills with Strategy Training and Feedback.
+URL: https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2017.00033/full
+Read scope: abstract, participants, procedure, measures, main results, discussion, limitations, conclusion and licence; not all references. Short academic-summary experiment with 212 German-speaking university learners, not business reporting or LLM evaluation.
+
+Rights: original project summary; no source quotations. Underlying rights retained. No open redistribution licence verified for Sources 1–2; Source 3 is CC BY 4.0 (https://creativecommons.org/licenses/by/4.0/). This file does not redistribute any original full text or claim endorsement.
+
+教学启发：Collins等提出示范、尝试、针对性帮助和逐步撤除支持，不是适用于一切任务的配方。Shute强调反馈围绕任务、具体且能采取行动；复杂度和时机等会影响效果。
+
+必须保留的限制：Wischgoll的实验中，指导性反馈对本科生最终摘要质量有利，但反馈总体主效应不显著，结构策略与指导反馈的预设组合优势未得到支持。不能由此推出方法或反馈越多越好，也不能将人类训练收益直接移植给LLM。
+
+本产品的设计推论：实际稿出现理解缺口时，指向缺口与原句，按需看一份带取舍理由的改稿，再处理当前内容；换内容或用途时检验是否仍能合理取舍。够用即停止支持，缺事实回资料，不套示范句型或要求交完整思考过程。这里提供的是可观察编辑动作的依据与边界，不是本Skill效果已经验证。

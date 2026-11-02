@@ -1,0 +1,103 @@
+{
+  "date": "2026-11-02",
+  "package_version": "0.7.2",
+  "supported_contract_version": "0.1",
+  "unit_tests": {
+    "run": 224,
+    "passed": 223,
+    "skipped": 1,
+    "unittest_seconds": 85.279,
+    "runner_elapsed_seconds": 85.74,
+    "skip_reason": "Windows real symbolic link creation unavailable: WinError1314"
+  },
+  "private_handoff_engineering": {
+    "run": 10,
+    "passed": 10,
+    "skipped": 0,
+    "unittest_seconds": 4.612,
+    "returncode": 0,
+    "model_execution": false
+  },
+  "package_manifest_sha256": {
+    "how-to-report": "acfec6c13ed122b7cb12371ae89fc21ddbe8ac9c7a192b06077d21ccd1c03bcb",
+    "report-audit": "01d3c7fa88a4e0d0bcba500987f84fe6df3b1616d8cdf691844e72d84af9e8dc"
+  },
+  "model_execution": false,
+  "content_quality": "not_assessed_by_engineering_checks",
+  "lint": "not_configured; diff whitespace check passed",
+  "type_check": "not_configured",
+  "link_check": {
+    "documents": 122,
+    "local_links": 532,
+    "fragment_links": 32,
+    "errors": [],
+    "scope": "Current changed public Markdown, current public inputs, and complete generated packages. Canonical source composition is checked by package build/check; unmerged skill-specific directories are not installations."
+  },
+  "protected_history": {
+    "files": 5698,
+    "missing": 0,
+    "changed": 0
+  },
+  "commands": [
+    {
+      "command": "python -X utf8 -B tools/package_skills.py check",
+      "returncode": 0,
+      "result": "Package check passed: how-to-report, report-audit (0.7.2; contract 0.1)"
+    },
+    {
+      "command": "python -X utf8 -B tools/vendor_knowledge_sources.py check",
+      "returncode": 0,
+      "result": "{\"valid\": true, \"errors\": [], \"network_used\": false}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.7.1",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.7.0",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.1",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 6,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.0",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_cases.py",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 67,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B <host-skill-creator>/quick_validate.py skills/how-to-report",
+      "returncode": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "command": "python -X utf8 -B <host-skill-creator>/quick_validate.py skills/report-audit",
+      "returncode": 0,
+      "result": "Skill is valid!"
+    }
+  ],
+  "recording": "Summary of actual checker results; raw logs retained in private workspace. Model behavior remains untested for this package.",
+  "private_handoff_freeze": {
+    "groups": 4,
+    "turns": 12,
+    "frozen_files": 287,
+    "outputs_empty_at_freeze": true,
+    "model_execution": false,
+    "integrity_check": "pass",
+    "content_quality": "not_assessed_by_this_check"
+  }
+}

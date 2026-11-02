@@ -12,7 +12,7 @@ import unittest
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 EVAL = ROOT / "evaluation"
-CURRENT = EVAL / "content-0.7.1"
+CURRENT = EVAL / "content-0.7.2"
 spec = importlib.util.spec_from_file_location("content_case_check", EVAL / "tools/validate_cases.py")
 CHECK = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(CHECK)
@@ -27,14 +27,14 @@ class ContentEvaluationTests(unittest.TestCase):
             cases, errors = CHECK.validate(moved)
             self.assertFalse(errors)
             self.assertEqual(len(cases), 4)
-            self.assertEqual(sorted(len(c["turns"]) for c in cases), [2, 3, 3, 3])
+            self.assertEqual(sorted(len(c["turns"]) for c in cases), [3, 3, 3, 3])
             after = {p.relative_to(moved): p.read_bytes() for p in moved.rglob("*") if p.is_file()}
             self.assertEqual(before, after)
 
     def test_new_evidence_is_not_visible_in_first_turn(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C071-MATERIAL")
+        case = next(c for c in cases if c["id"] == "C072-MATERIAL")
         first = CHECK.visible_turn(case, 1)
         second = CHECK.visible_turn(case, 2)
         self.assertNotIn("fixtures/coordination-update.md", first["fixtures"])
@@ -42,7 +42,7 @@ class ContentEvaluationTests(unittest.TestCase):
         self.assertFalse({"must", "must_not", "turns", "scored_dimensions"} & first.keys())
 
     def test_cli_default_current_and_explicit_historical_scope(self):
-        for arguments, expected in [([], 4), (["--root", str(EVAL / "content-0.7.0")], 4), (["--root", str(EVAL / "content-0.6.1")], 6), (["--root", str(EVAL / "content-0.6.0")], 4), (["--root", str(EVAL)], 67)]:
+        for arguments, expected in [([], 4), (["--root", str(EVAL / "content-0.7.1")], 4), (["--root", str(EVAL / "content-0.7.0")], 4), (["--root", str(EVAL / "content-0.6.1")], 6), (["--root", str(EVAL / "content-0.6.0")], 4), (["--root", str(EVAL)], 67)]:
             with self.subTest(arguments=arguments):
                 result = subprocess.run([sys.executable, "-B", "-I", str(EVAL / "tools/validate_content_cases.py"), *arguments], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
@@ -65,7 +65,7 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_audit_exposes_body_before_sources_and_author_notes(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C071-AUDIT")
+        case = next(c for c in cases if c["id"] == "C072-AUDIT")
         first, second, third = [CHECK.visible_turn(case, n) for n in (1, 2, 3)]
         self.assertEqual(first["fixtures"], ["fixtures/audit-draft.md"])
         self.assertIn("fixtures/audit-source.md", second["fixtures"])

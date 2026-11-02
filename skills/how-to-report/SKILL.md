@@ -26,7 +26,7 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 | 现有解释漏掉会改变判断的重要区别 | [解释探索](references/insight-discovery.md)；具体概念、前提、条件、论证问题用[思维方法](references/reasoning-methods.md) |
 | 听众、媒介、路线、详略或时间需要调整 | [叙事与会议表达](references/meeting-expression.md) |
 | 句子抽象生硬、角色混乱或混入制作旁白 | [观众成稿编辑](references/audience-copy.md) |
-| 需要看材料如何成为概括和逐页内容 | [连续合成教学](references/content-decisions.md)、[完整材料示例](assets/examples/report-proposal.md) |
+| 改了措辞仍只剩分类，或新回复使旧请求被整句替换 | 定向用[内容重组示范](references/content-decisions.md#读者仍需自己拼接)或[部分更新示范](references/content-decisions.md#新回复只完成部分请求)，再改当前片段；交付形式看[完整材料示例](assets/examples/report-proposal.md) |
 | 数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；定义明确的CSV用[显式计算](references/report-calculation.md) |
 | 材料交接、续接或版本追溯 | [最小证据](references/evidence-handoff.md)、[生成Run](references/report-run.md)、[版本操作](references/version-lifecycle.md) |
 | 明确复用或保存已确认偏好/经验 | [画像](references/report-profile.md)、[私有经验](references/report-experience.md) |

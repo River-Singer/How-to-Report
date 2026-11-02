@@ -1,6 +1,6 @@
 # 把已有意思写成听众能用的语言
 
-用于对象不清、抽象词堆积、语域不合或混入制作旁白的文字。先定位具体理解障碍，不从“像AI”推断作者身份；不新增强制Agent、禁词表或二次调用。来源概括与含义标准见[材料提炼](semantic-structuring.md)，叙事和详略见[会议表达](meeting-expression.md)。
+用于对象不清、抽象词堆积、语域不合或混入制作旁白的文字。先定位具体理解障碍：关系尚未讲明回[材料提炼](semantic-structuring.md)，主次顺序有问题用[会议表达](meeting-expression.md)，已有意思清楚才润色措辞。不从“像AI”推断作者身份，也不新增强制Agent、禁词表或二次调用。
 
 > avoid unnecessary secondary labels and descriptions. Let the layout do the explanation
 

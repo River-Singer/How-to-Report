@@ -1,0 +1,27 @@
+{
+  "dataset_version": "0.7.2",
+  "status": "prepared_not_run",
+  "purpose": "targeted_regression_and_transfer_probe",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 4
+    }
+  ],
+  "files": {
+    "cases.jsonl": "8914404188d1636e7a52225f51eff3897857d4c5b43f90c1f64e727a7461613f",
+    "fixtures/audit-author-notes.md": "7b27069bb14aefaff2409a2ce135d5fc3e0323e3f4f8e9593c8a320af8c91b3c",
+    "fixtures/audit-draft.md": "ffed9feea9a18bab91542a9808d6e5208c141651a44be90044e78b8be5214fd4",
+    "fixtures/audit-prior.md": "f72d66a5b7f81a6ab82921aa73a68566161d57cb69b3a51d0f373b573c3637f6",
+    "fixtures/audit-source.md": "3630fd571c1f023b28e664e43918335db71f4178612056acc99b4002dff12274",
+    "fixtures/coordination-update.md": "5b14a60d30b2044f0009d4d8abdb51b8eb85bcfe184cfe80045464a8156d0538",
+    "fixtures/coordination.md": "0fc9d0fcf8b28c764ecf433e991fc30f11283524bc4714b30390aeac30bd0342",
+    "fixtures/practice-update.md": "1df4a51da4a8ee987343f9f8a52d0d92618ad361489637e8bfb394381275d56d",
+    "fixtures/practice.md": "50c936d9ea7695fd7cceac1568481038a77911cc2dc577053451039868468141",
+    "fixtures/training-options.md": "c95bc055798bd606f626c620b2c0189532c6148ca47f4225da7cf60688b5229e",
+    "fixtures/training-purpose-update.md": "96848dfa1059b39f633a79a4891c70cc1b891807db589d2877570ca507ad1f61",
+    "PROTOCOL.md": "aef273dc7c2515a1e3a531bcf6123ea195d2a849956202eb1376ee1321fd48d4",
+    "README.md": "a58718c28deea01c0f046a132f261cd691a6e3154ef8f6351e283411bfd2eee6"
+  }
+}
