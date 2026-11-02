@@ -1,0 +1,98 @@
+{
+  "date": "2026-11-02",
+  "package_version": "0.7.1",
+  "supported_contract_version": "0.1",
+  "unit_tests": {
+    "run": 224,
+    "passed": 223,
+    "skipped": 1,
+    "elapsed_seconds": 80.702,
+    "skip_reason": "real dangling symlink unavailable on Windows: WinError1314"
+  },
+  "private_handoff_engineering": {
+    "run": 10,
+    "passed": 10,
+    "skipped": 0,
+    "elapsed_seconds": 3.906,
+    "model_execution": false
+  },
+  "package_manifest_sha256": {
+    "how-to-report": "93b83b5a22e299a3fb37a4ab8a2ca8f551c829f34b020e223f470d7f1abcab56",
+    "report-audit": "8a7afe5ea39f33a9d379440c290bdf3cdde78662628b93fa5ed3469b6da18705"
+  },
+  "model_execution": false,
+  "content_quality": "not_assessed_by_engineering_checks",
+  "lint": "not_configured; whitespace check passed",
+  "type_check": "not_configured",
+  "commands": [
+    {
+      "command": "python -X utf8 -B -m unittest discover -s tests -v",
+      "result": "pass; 224 total,223 passed,1 skipped; 80.702s"
+    },
+    {
+      "command": "python -X utf8 -B tools/package_skills.py check",
+      "result": "pass; both packages0.7.1, contract0.1, source/payload consistency"
+    },
+    {
+      "command": "python -X utf8 -B tools/vendor_knowledge_sources.py check",
+      "result": "pass; no network"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py",
+      "result": "pass; 4 current cases; inputs only"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.7.0",
+      "result": "pass; 4 historical cases"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.1",
+      "result": "pass; 6 historical cases"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.0",
+      "result": "pass; 4 historical cases"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_cases.py",
+      "result": "pass; 67 historical cases"
+    },
+    {
+      "command": "host skill-creator quick_validate.py skills/how-to-report",
+      "result": "pass; Skill is valid"
+    },
+    {
+      "command": "host skill-creator quick_validate.py skills/report-audit",
+      "result": "pass; Skill is valid"
+    },
+    {
+      "command": "git -c core.whitespace=trailing-space,space-before-tab,cr-at-eol diff --check",
+      "result": "pass"
+    }
+  ],
+  "historical_integrity": {
+    "files_checked": 5497,
+    "changed": 0,
+    "missing": 0
+  },
+  "independent_link_check": {
+    "documents": 30,
+    "local_links": 103,
+    "missing": 0
+  },
+  "private_handoff": {
+    "status": "frozen_integrity_pass",
+    "groups": 4,
+    "turns": 11,
+    "frozen_files": 283,
+    "outputs_empty": true,
+    "model_execution": false
+  },
+  "scope": "Engineering checks and frozen regression inputs only; user owns model runs; private inventory and source materials are not published.",
+  "final_document_link_check": {
+    "documents": 5,
+    "local_links": 35,
+    "missing": [],
+    "scope": "release record and final current-doc status links after independent check"
+  }
+}

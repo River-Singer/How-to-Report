@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.7.0，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.7.1，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
 
 ## 设计哲学
 
@@ -145,7 +145,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 
 明确只要口头稿、独立阅读稿或先讨论思路时，按该形式交付；一句话修改直接给替换文字。后续可以继续修改某一页、补充事实或调整时长。增删、合并页面时，同步总页数、页序及相关内容；不因局部改动重做全部分析。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[四案工作流评测](evaluation/content-0.7.0/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[四案工作流评测](evaluation/content-0.7.1/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -166,6 +166,6 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-[0.7.0工程记录](verification/0.7.0/README.md)已保存实际检查结果：224项单元测试223通过、1项权限限制跳过，两包及离线/输入检查通过。工程验证与模型效果分别记录。当前四个基础案例覆盖材料归并、目标与听众变化、持续修订和独立审计；前两案用冻结0.6.1与0.7.0同条件对照，后两案只跑新版，共六组。批量模型生成和审计由用户运行，未取得结果前不宣称0.7.0改善了内容质量。旧[0.6.1工程记录](verification/0.6.1/README.md)与其测试结果仍属于旧版本。详见[开发与验证计划](docs/development-plan.md)。
+0.7.0 已交案例暴露了业务信息堆叠、新事实未充分改变安排、审计修复加入新事实等问题；不能据此认定新版整体优于旧版。0.7.1 对这些转换动作和示例作定向修订。[当前四案](evaluation/content-0.7.1/README.md)共11轮，仅候选版，由用户运行；输入已经见过，结果不代表未见泛化或总体版本效应。[0.7.1工程记录](verification/0.7.1/README.md)已保存本轮检查与包身份：223项通过、1项权限限制跳过；内容效果待回归验证。旧[0.7.0工程记录](verification/0.7.0/README.md)只属于旧包。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

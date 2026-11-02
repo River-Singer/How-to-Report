@@ -1,0 +1,26 @@
+{
+  "dataset_version": "0.7.1",
+  "status": "prepared_not_run",
+  "purpose": "targeted_known_input_regression",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 4
+    }
+  ],
+  "files": {
+    "cases.jsonl": "dac919f48de57a2bba14cabb8808518e30f8aca391d8e81364b625784d8ecf04",
+    "fixtures/audit-author-notes.md": "7b27069bb14aefaff2409a2ce135d5fc3e0323e3f4f8e9593c8a320af8c91b3c",
+    "fixtures/audit-draft.md": "ffed9feea9a18bab91542a9808d6e5208c141651a44be90044e78b8be5214fd4",
+    "fixtures/audit-prior.md": "8403bab08f8e3343465907dedcf96b4af82afe65c23e4c7fd12c0f975b43c55e",
+    "fixtures/audit-source.md": "3630fd571c1f023b28e664e43918335db71f4178612056acc99b4002dff12274",
+    "fixtures/coordination-update.md": "5b14a60d30b2044f0009d4d8abdb51b8eb85bcfe184cfe80045464a8156d0538",
+    "fixtures/coordination.md": "0fc9d0fcf8b28c764ecf433e991fc30f11283524bc4714b30390aeac30bd0342",
+    "fixtures/local.md": "5b841514380e590523d4974ae4326d7a51007a173d04f197322191bf8f86956b",
+    "fixtures/practice-update.md": "1df4a51da4a8ee987343f9f8a52d0d92618ad361489637e8bfb394381275d56d",
+    "fixtures/practice.md": "50c936d9ea7695fd7cceac1568481038a77911cc2dc577053451039868468141",
+    "PROTOCOL.md": "dfd4a322683cc5865d575b7302985afad1e731abbfd831d0a5667dd15b6d2cf5",
+    "README.md": "4b148d17b5475d31485b9cceb5e2822f0137490ca63e50895a09d9d4e335e007"
+  }
+}
