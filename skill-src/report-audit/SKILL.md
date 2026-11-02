@@ -17,7 +17,7 @@ description: 独立审查汇报方案和成稿是否回答本次问题，核对�
 
 ## 按需资源
 
-- 意见被反驳、条件句换了说法，或解释和修法加入了新的事实/先后关系时，用[审计判断与反证](references/audit-judgment.md)核对当前这一项；其中的连续修订示例帮助分清应撤回的指控与仍待补的依据。已能直接查清的意见不必读完整示例，其余专题见主工作流。
+- 意见被反驳、范围或条件句有争议，或解释和修法加入新断言时，用[审计判断与反证](references/audit-judgment.md)处理当前这一项。更正须让当前问题、理由和修法一致，不能留下仍可被采用的错误替换建议；具体动作由主工作流负责。已能直接查清的意见不必读完整示例，其余专题见主工作流。
 - 涉及数值或缺附件时，用[数值证据](references/numeric-evidence.md)和[最小证据交接](references/evidence-handoff.md)。未取得的材料不证明事情未发生。
 - 复杂关系和版本追溯才用[多图模型](references/graph-model.md)、[工作区契约](references/workspace-contract.md)和[审计Run](references/audit-run.md)；实际工具能力见[宿主边界](references/host-capabilities.md)。选择Run后校验自己的目录，结构通过不代替内容判断。
 - 明确要检索或记录已确认经验时用[私有经验](references/report-experience.md)；领域知识先看[目录元信息](knowledge/index.md)。可选正文按已有授权范围读取，拒绝、未回应或撤销时不读，同范围许可不重复申请。

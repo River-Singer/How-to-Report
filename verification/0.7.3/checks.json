@@ -1,0 +1,119 @@
+{
+  "version": "0.7.3",
+  "date": "2026-11-02",
+  "build": {
+    "returncode": 0,
+    "result": "Package build passed: how-to-report, report-audit (0.7.3; contract 0.1)"
+  },
+  "unit_tests": {
+    "command": "python -X utf8 -B -m unittest discover -s tests -v",
+    "returncode": 0,
+    "run": 224,
+    "skipped": 1,
+    "unittest_seconds": 84.026,
+    "elapsed_seconds": 84.652,
+    "model_execution": false,
+    "passed": 223
+  },
+  "private_handoff_tests": {
+    "run": 10,
+    "passed": 10,
+    "skipped": 0,
+    "elapsed_seconds_reported": 4.553,
+    "returncode": 0,
+    "model_execution": false
+  },
+  "package_manifest_sha256": {
+    "how-to-report": "33c49c2e958470ba1476e9ad32a6415175f9607ab850a202995d5447bf44b036",
+    "report-audit": "260b55943c70e1e0e822daa9c88801c26919f7c41ea3bffb71f6e5e99824efe8"
+  },
+  "model_execution": false,
+  "content_quality": "not_assessed_by_engineering_checks",
+  "lint": "not_configured; diff whitespace check passed",
+  "type_check": "not_configured",
+  "link_check": {
+    "documents": 123,
+    "local_links": 535,
+    "fragment_links": 32,
+    "errors": [],
+    "scope": "Current changed public Markdown and public inputs plus complete generated packages; fenced examples and external URLs excluded. Final new verification README included after its actual result write."
+  },
+  "protected_history": {
+    "files": 6006,
+    "missing": 0,
+    "changed": 0
+  },
+  "commands": [
+    {
+      "command": "python -X utf8 -B tools/package_skills.py check",
+      "returncode": 0,
+      "result": "Package check passed: how-to-report, report-audit (0.7.3; contract 0.1)"
+    },
+    {
+      "command": "python -X utf8 -B tools/vendor_knowledge_sources.py check",
+      "returncode": 0,
+      "result": "{\"valid\": true, \"errors\": [], \"network_used\": false}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.7.2",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.7.1",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.7.0",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.1",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 6,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_content_cases.py --root evaluation/content-0.6.0",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 4,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B evaluation/tools/validate_cases.py",
+      "returncode": 0,
+      "result": "{\n  \"valid\": true,\n  \"scope\": \"evaluation_input_integrity_only\",\n  \"cases\": 67,\n  \"model_execution\": false,\n  \"quality\": \"not_assessed\",\n  \"writes\": \"none\"\n}"
+    },
+    {
+      "command": "python -X utf8 -B <host-skill-creator>/quick_validate.py skills/how-to-report",
+      "returncode": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "command": "python -X utf8 -B <host-skill-creator>/quick_validate.py skills/report-audit",
+      "returncode": 0,
+      "result": "Skill is valid!"
+    },
+    {
+      "command": "git -c core.whitespace=trailing-space,space-before-tab,cr-at-eol diff --check",
+      "returncode": 0,
+      "result": ""
+    }
+  ],
+  "private_handoff_freeze": {
+    "groups": 4,
+    "turns": 10,
+    "frozen_files": 286,
+    "outputs_empty_at_freeze": true,
+    "model_execution": false,
+    "integrity_check": "pass",
+    "frozen_packages_equal_checked_current": true,
+    "content_quality": "not_assessed_by_this_check"
+  },
+  "recording": "Actual engineering checks; private source content and raw logs are outside this public repository. No model execution."
+}
