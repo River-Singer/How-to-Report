@@ -1,0 +1,27 @@
+{
+  "dataset_version": "0.7.4",
+  "status": "prepared_not_run",
+  "purpose": "targeted_regression_and_capability_retention",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 4
+    }
+  ],
+  "files": {
+    "cases.jsonl": "d2c59dc306fb00115781f75934d8498a573303454ff4da00b3b888c6eded0ece",
+    "fixtures/audit-author-notes.md": "7b27069bb14aefaff2409a2ce135d5fc3e0323e3f4f8e9593c8a320af8c91b3c",
+    "fixtures/audit-draft.md": "ffed9feea9a18bab91542a9808d6e5208c141651a44be90044e78b8be5214fd4",
+    "fixtures/audit-prior.md": "453a9b82ff661350e3ebbfbab634b0b0bea37f429861453bc82261a62280c00d",
+    "fixtures/audit-source.md": "3630fd571c1f023b28e664e43918335db71f4178612056acc99b4002dff12274",
+    "fixtures/coordination-update.md": "f869d882bcfc0dcc94e63fc81714ac7b4e079519664fb30a1dc4a1c240fb33d7",
+    "fixtures/coordination.md": "71bcc6e0a43877be4e89b76c8c6c39e8ac5ec6b0cb850e1d07a07f78628b0806",
+    "fixtures/practice-update.md": "1df4a51da4a8ee987343f9f8a52d0d92618ad361489637e8bfb394381275d56d",
+    "fixtures/practice.md": "50c936d9ea7695fd7cceac1568481038a77911cc2dc577053451039868468141",
+    "fixtures/training-options.md": "c95bc055798bd606f626c620b2c0189532c6148ca47f4225da7cf60688b5229e",
+    "fixtures/training-purpose-update.md": "96848dfa1059b39f633a79a4891c70cc1b891807db589d2877570ca507ad1f61",
+    "PROTOCOL.md": "3cd7ca79b2c6ec5d2621a83eea60ebfba30c7040fe6b9ebec9bb36b24a98f888",
+    "README.md": "5fa7da895cc81045d1affc0a91a1a1a099a14c3ed25c35f93448533943fd9670"
+  }
+}
