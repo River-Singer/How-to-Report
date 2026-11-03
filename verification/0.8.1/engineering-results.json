@@ -1,0 +1,153 @@
+{
+  "date_utc": "2026-11-03T07:47:14.744659+00:00",
+  "package_version": "0.8.1",
+  "run_contract": "0.1",
+  "model_execution": false,
+  "checks": [
+    {
+      "name": "package-check",
+      "exit_code": 0,
+      "seconds": 0.792
+    },
+    {
+      "name": "offline-sources",
+      "exit_code": 0,
+      "seconds": 0.328
+    },
+    {
+      "name": "current-inputs",
+      "exit_code": 0,
+      "seconds": 0.193
+    },
+    {
+      "name": "inputs-0.8.0",
+      "exit_code": 0,
+      "seconds": 0.193
+    },
+    {
+      "name": "inputs-0.7.5",
+      "exit_code": 0,
+      "seconds": 0.19
+    },
+    {
+      "name": "inputs-0.7.4",
+      "exit_code": 0,
+      "seconds": 0.178
+    },
+    {
+      "name": "inputs-0.7.3",
+      "exit_code": 0,
+      "seconds": 0.181
+    },
+    {
+      "name": "inputs-0.7.2",
+      "exit_code": 0,
+      "seconds": 0.188
+    },
+    {
+      "name": "inputs-0.7.1",
+      "exit_code": 0,
+      "seconds": 0.185
+    },
+    {
+      "name": "inputs-0.7.0",
+      "exit_code": 0,
+      "seconds": 0.184
+    },
+    {
+      "name": "inputs-0.6.1",
+      "exit_code": 0,
+      "seconds": 0.192
+    },
+    {
+      "name": "inputs-0.6.0",
+      "exit_code": 0,
+      "seconds": 0.183
+    },
+    {
+      "name": "historical-67-inputs",
+      "exit_code": 0,
+      "seconds": 0.278
+    },
+    {
+      "name": "format-how-to-report",
+      "exit_code": 0,
+      "seconds": 0.161
+    },
+    {
+      "name": "format-report-audit",
+      "exit_code": 0,
+      "seconds": 0.124
+    },
+    {
+      "name": "unit-tests",
+      "exit_code": 0,
+      "seconds": 87.979
+    },
+    {
+      "name": "diff-whitespace",
+      "exit_code": 0,
+      "seconds": 0.072
+    }
+  ],
+  "unit_tests": {
+    "total": 227,
+    "passed": 226,
+    "skipped": 1,
+    "skip_reason": "Windows could not create a symbolic link (WinError1314)."
+  },
+  "private_handoff_engineering_tests": {
+    "total": 17,
+    "passed": 17,
+    "model_execution": false
+  },
+  "pre_freeze_links": {
+    "documents": 159,
+    "local_links": 612,
+    "fragment_links": 37,
+    "errors": 0
+  },
+  "protected_history": {
+    "files": 7943,
+    "missing": 0,
+    "changed": 0
+  },
+  "frozen_status": "independent_frozen_integrity_pass",
+  "lint": "not_applicable_no_frontend_lint_command",
+  "typecheck": "not_applicable_no_typecheck_command",
+  "content_quality": "not_assessed_by_engineering_checks",
+  "freeze": {
+    "freeze_date_utc": "2026-11-03T07:49:28.686924+00:00",
+    "groups": 13,
+    "turns": 25,
+    "handoff_manifest_files": 312,
+    "prepared_input_files": 57,
+    "all_prepared_input_bytes_unchanged": true,
+    "outputs_files": 0,
+    "handoff_written_by_check": false
+  },
+  "packages": [
+    {
+      "skill": "how-to-report",
+      "version": "0.8.1",
+      "manifest_sha256": "fe818453d9eb6def1df64bab575a51af8294acf96ac01f032563f610661a7797",
+      "files": 133,
+      "byte_exact_to_tested_package": true
+    },
+    {
+      "skill": "report-audit",
+      "version": "0.8.1",
+      "manifest_sha256": "61c1e249ab95758a336af9ce82544eefa9a38d3272ee65b428f5db22b6fd5991",
+      "files": 120,
+      "byte_exact_to_tested_package": true
+    }
+  ],
+  "final_document_check": {
+    "date_utc": "2026-11-03T07:52:03.913295+00:00",
+    "documents": 160,
+    "local_links": 614,
+    "fragments": 37,
+    "diff_check_exit_code": 0,
+    "errors": 0
+  }
+}

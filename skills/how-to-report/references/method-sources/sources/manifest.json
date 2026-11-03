@@ -2,7 +2,7 @@
   "schema_version": "1",
   "archive_version": "0.3",
   "runtime_network_required": false,
-  "scope": "29 concise original method-source summaries, including one selective synthesis on editing support added for 0.7.2. Read only by need; no full-source or product-effectiveness claim.",
+  "scope": "31 concise original method-source summaries, including selective syntheses. Read only by need; no full-source or product-effectiveness claim.",
   "card_sources": {},
   "sources": [
     {
@@ -754,6 +754,31 @@
         "limitations": "No source quotations, original full-text redistribution, endorsement or model/product effectiveness claim."
       },
       "sha256": "559de1e969cb8335fcf89ab16e1b5670e055eddc8ac3783ce9f0d719c26ae0fc"
+    },
+    {
+      "id": "judgment-led-editing",
+      "title": "Judgment-led editing, support relations and faithful revision",
+      "publisher": "Flower & Hayes; Garner & Alley; Gao et al.; W3C",
+      "canonical_url": "https://aclanthology.org/2023.acl-long.910/",
+      "local_path": "sources/judgment-led-editing.txt",
+      "fetched_at_utc": "2026-11-03T07:36:04.832876+00:00",
+      "scope": "Original synthesis of four recorded selective readings on 2026-11-03. Source-specific URLs, page/section ranges and transfer limits are in local text. Not full text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "compiled_from_recorded_research",
+        "coverage": "See four source-specific reading ranges in local text; no claim of full-source reading or replication.",
+        "timestamp_semantics": "Local compilation time, not original source fetch time."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://aclanthology.org/2023.acl-long.910/",
+        "attribution": "Flower & Hayes (1981); Garner & Alley (2013); Gao et al. (2023); W3C PROV Primer (2013)",
+        "limitations": "No source quotations or full-text redistribution. No open redistribution licence verified for the first two sources. Reading ranges and transfer limits retained; no product-effectiveness claim."
+      },
+      "sha256": "dce9610225304bc3c7423fc8be2a021d451e5314411f96e2e46efd3e7f38aa89"
     }
   ]
 }

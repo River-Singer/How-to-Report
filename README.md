@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.8.0，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.8.1，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
 
 ## 设计哲学
 
@@ -152,11 +152,11 @@ git clone https://github.com/River-Singer/How-to-Report.git
 - **逐页内容**：每页有标题、可直接使用的正文，以及需要的数据、比较或关系。不是“第1页介绍背景”式空大纲。
 - **必要补充**：按需列真正影响使用的待确认事项与来源，不计作汇报页。
 
-例如，[完整合成示例](skills/how-to-report/assets/examples/report-proposal.md)交付三页：先解释工具用途，再用两组规则差异说明首轮样本选择，最后提出联系人请求；每页都有具体正文。三页是这个案例的选择，不是所有汇报的模板。
+例如，[完整合成示例](skills/how-to-report/assets/examples/report-proposal.md)交付两页：第一页用两组规则差异说明首轮样本选择及实际贡献，第二页提出联系人与可参与时间请求，并交代后续核对安排。主管已看过工具演示，因此已有能力不再各占一页；两页只适用于这组输入。
 
 明确只要口头稿、独立阅读稿或先讨论思路时，按该形式交付；一句话修改直接给替换文字。后续可以继续修改某一页、补充事实或调整时长。增删、合并页面时，同步总页数、页序及相关内容；不因局部改动重做全部分析。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十三场景评测](evaluation/content-0.8.0/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十三场景评测](evaluation/content-0.8.1/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -177,6 +177,6 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-0.7.5 的用户结果已复核：不同场景和多轮修改已有具体正确表现，主动发现有用新角度、当前行动的完整继承以及语义保真仍有不足。0.8.0 将价值、贡献、证据、探索和取舍接进同一工作流，并提供可选并行执行。新版[13场景25轮](evaluation/content-0.8.0/README.md)保留广泛场合，增加两轮条件变化；模型仍由用户运行，尚无本版效果结论。[0.8.0工程记录](verification/0.8.0/README.md)与[历史0.7.5记录](verification/0.7.5/README.md)分开，工程检查不替代内容验收。详见[开发与验证计划](docs/development-plan.md)。
+0.8.0 的用户结果已复核：目标探索和条件变化后的推荐有具体有效表现，实际正文取舍、贡献归属、无据理由与修订继承仍需改善。0.8.1围绕这些缺口重编现有方法和示例，并参考公开写作、理解与修订研究。[13场景25轮](evaluation/content-0.8.1/README.md)保留原任务与事实，模型由用户运行，尚无本版效果结论。本版两包工程检查及冻结完整性检查已通过，详见[0.8.1工程记录](verification/0.8.1/README.md)；[历史0.8.0记录](verification/0.8.0/README.md)独立保留，工程检查不替代内容验收。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

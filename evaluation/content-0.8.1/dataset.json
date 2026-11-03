@@ -1,0 +1,34 @@
+{
+  "dataset_version": "0.8.1",
+  "status": "prepared_not_run",
+  "purpose": "judgment_led_editing_and_faithful_revision_known_regression",
+  "scoring_protocol": "PROTOCOL.md",
+  "catalogs": [
+    {
+      "path": "cases.jsonl",
+      "count": 13
+    }
+  ],
+  "files": {
+    "cases.jsonl": "76defca47c62ab360891f27f3c6da555591bf46d3554b5ab71ba594068ce4187",
+    "coverage.md": "fc61f783841eca1592bcb152475e4b2bd2f2f3e91c87657722bc6bd9e5f1fad6",
+    "fixtures/audit-author-notes.md": "7b27069bb14aefaff2409a2ce135d5fc3e0323e3f4f8e9593c8a320af8c91b3c",
+    "fixtures/audit-draft.md": "ffed9feea9a18bab91542a9808d6e5208c141651a44be90044e78b8be5214fd4",
+    "fixtures/audit-prior.md": "453a9b82ff661350e3ebbfbab634b0b0bea37f429861453bc82261a62280c00d",
+    "fixtures/audit-source.md": "3630fd571c1f023b28e664e43918335db71f4178612056acc99b4002dff12274",
+    "fixtures/coordination-update.md": "f869d882bcfc0dcc94e63fc81714ac7b4e079519664fb30a1dc4a1c240fb33d7",
+    "fixtures/coordination.md": "5db73caa3d34b0b4eb389d01e4905f85d3aeb1fa598558429bf9953b33490d90",
+    "fixtures/library-practice.md": "42ce0348a42a6d27127919b34c50e47824da7539d90d281c530e5e1f3e5c49cd",
+    "fixtures/next-task-options.md": "b20129742ead7e541f0bf1bddfe0b007556c4f0cee107db24c2fa5f1e99b547d",
+    "fixtures/periodic-baseline.md": "b7e99c4d7c74a7354686065ad324b4d244142cb5be634c4ec0b6dc854cd23a75",
+    "fixtures/periodic-before-week.md": "88761040fb96fc00fae1eea5d3975e596a066288088e734e51f2ed6f48b77e2d",
+    "fixtures/periodic-month-close.md": "dd585b133c9f0715014c20f5aa039376c184f06b17e83b23d3ddafe0aad426ec",
+    "fixtures/periodic-week-correction.md": "43abc1c74f421ea18750a6bde85107e26e8d7f0f39faf47b96c4b61ec1c18959",
+    "fixtures/periodic-week.md": "05f81020d9f1e762d2517d5184da33b034fde100965b354f59ec40ab8b05f50d",
+    "fixtures/pilot-participation.md": "7abb30ce4847d831ce570bf03eeec28cc3d4f5a0de58cc21acaf153b4c9d5748",
+    "fixtures/training-options.md": "c95bc055798bd606f626c620b2c0189532c6148ca47f4225da7cf60688b5229e",
+    "fixtures/training-purpose-update.md": "96848dfa1059b39f633a79a4891c70cc1b891807db589d2877570ca507ad1f61",
+    "PROTOCOL.md": "67a7c8457007db7190678ed127b2103ddcb4a64e08403928b82957d2fb2724a9",
+    "README.md": "0b3cee9fe7412884ec6fce57410ffb0f2d3adb63d2de73494fa9249d6cc3f896"
+  }
+}
