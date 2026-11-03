@@ -1,0 +1,197 @@
+{
+  "date": "2026-11-03",
+  "version": "0.7.5",
+  "contract": "0.1",
+  "scope": "engineering_and_input_integrity_only",
+  "status": "pass_after_targeted_test_fix",
+  "model_execution": false,
+  "content_quality": "not_assessed",
+  "checks": [
+    {
+      "name": "build",
+      "exit_code": 0,
+      "seconds": 1.646
+    },
+    {
+      "name": "package-check",
+      "exit_code": 0,
+      "seconds": 0.88
+    },
+    {
+      "name": "offline-sources",
+      "exit_code": 0,
+      "seconds": 0.404
+    },
+    {
+      "name": "current-inputs",
+      "exit_code": 0,
+      "seconds": 0.195
+    },
+    {
+      "name": "inputs-0.7.4",
+      "exit_code": 0,
+      "seconds": 0.195
+    },
+    {
+      "name": "inputs-0.7.3",
+      "exit_code": 0,
+      "seconds": 0.185
+    },
+    {
+      "name": "inputs-0.7.2",
+      "exit_code": 0,
+      "seconds": 0.182
+    },
+    {
+      "name": "inputs-0.7.1",
+      "exit_code": 0,
+      "seconds": 0.175
+    },
+    {
+      "name": "inputs-0.7.0",
+      "exit_code": 0,
+      "seconds": 0.175
+    },
+    {
+      "name": "inputs-0.6.1",
+      "exit_code": 0,
+      "seconds": 0.18
+    },
+    {
+      "name": "inputs-0.6.0",
+      "exit_code": 0,
+      "seconds": 0.173
+    },
+    {
+      "name": "historical-67-inputs",
+      "exit_code": 0,
+      "seconds": 0.256
+    },
+    {
+      "name": "format-how-to-report",
+      "exit_code": 0,
+      "seconds": 0.163
+    },
+    {
+      "name": "format-report-audit",
+      "exit_code": 0,
+      "seconds": 0.128
+    }
+  ],
+  "unit_tests": {
+    "initial_full_run": {
+      "tests": 226,
+      "failing_test_methods": 2,
+      "failure_records": 3,
+      "skipped": 1,
+      "seconds": 85.556
+    },
+    "fix": "tests/test_packaging.py: two stale 0.7.4 manifest assertions use the canonical build version constant; actual package identity independently verified.",
+    "affected_module_retest": {
+      "module": "test_packaging.py",
+      "tests": 30,
+      "passed": 30,
+      "skipped": 0,
+      "seconds": 25.9
+    },
+    "combined_outcome": {
+      "passed": 225,
+      "skipped": 1,
+      "remaining_failures": 0,
+      "second_full_suite_run": false
+    },
+    "skip": "Windows symbolic link privilege unavailable (WinError 1314). Not counted as pass."
+  },
+  "private_handoff_tests": {
+    "tests": 16,
+    "passed": 16,
+    "skipped": 0,
+    "seconds": 12.088,
+    "payload": "temporary synthetic fixtures and packages",
+    "model_execution": false
+  },
+  "links": {
+    "documents": 154,
+    "local_links": 579,
+    "fragment_links": 33,
+    "errors": [],
+    "scope": "Changed public Markdown and current public inputs, generated packages, new private controller/prompts/RUN; fenced samples and external URLs excluded."
+  },
+  "protected_history": {
+    "files": 7054,
+    "missing": [],
+    "changed": []
+  },
+  "lint": {
+    "configured": false,
+    "diff_whitespace": "pass"
+  },
+  "typecheck": {
+    "configured": false,
+    "python_compile_files": 10,
+    "python_compile": "pass"
+  },
+  "package_identities": [
+    {
+      "skill": "how-to-report",
+      "version": "0.7.5",
+      "manifest_sha256": "51ee0bf0b8583639249cc62b87e7afb019b4d00df13d4951ccdd910ecb19e4ed"
+    },
+    {
+      "skill": "report-audit",
+      "version": "0.7.5",
+      "manifest_sha256": "5231cd331d19b96e7f90e77e9fb175dbb82635c307cbd01013aa1455467b104c"
+    }
+  ],
+  "prepared_handoff": {
+    "groups": 13,
+    "turns": 23,
+    "prompts": 23,
+    "input_provenance_records": 17,
+    "new_authored_records": 5,
+    "manifest_files": 53,
+    "manifest_sha256": "dcfbe4c86d0016a57b22cf37dd094107bcdf7b639af86481630df95f7b83c4c7",
+    "source_manifest_sha256": "c8ca6988ad6aaad5f6b589046177069746e8016fdefdac0091a735f8cb067ae3",
+    "current_turn_inputs_and_output_mapping_match_cases": true,
+    "outputs_files": 0,
+    "frozen": false,
+    "model_execution": false
+  },
+  "frozen_handoff": {
+    "status": "independent_frozen_integrity_pass",
+    "groups": 13,
+    "turns": 23,
+    "handoff_manifest_files": 304,
+    "prepared_input_files": 53,
+    "prepare_manifest_sha256": "dcfbe4c86d0016a57b22cf37dd094107bcdf7b639af86481630df95f7b83c4c7",
+    "handoff_manifest_sha256": "cb27ce93c558c8c2990173a9cc1864b37e365c8c1b0d7f03b9e32d4688bfd88a",
+    "freeze_receipt_sha256": "2ba1abd3988bf72f7f7bb36b1d934395a50fd1ef419dfa4549060a9870fae444",
+    "freeze_date_utc": "2026-11-03T02:43:56.675790+00:00",
+    "all_prepared_input_bytes_unchanged": true,
+    "package_snapshots": [
+      {
+        "skill": "how-to-report",
+        "version": "0.7.5",
+        "manifest_sha256": "51ee0bf0b8583639249cc62b87e7afb019b4d00df13d4951ccdd910ecb19e4ed",
+        "files": 131,
+        "byte_exact_to_tested_package": true
+      },
+      {
+        "skill": "report-audit",
+        "version": "0.7.5",
+        "manifest_sha256": "5231cd331d19b96e7f90e77e9fb175dbb82635c307cbd01013aa1455467b104c",
+        "files": 118,
+        "byte_exact_to_tested_package": true
+      }
+    ],
+    "outputs_files": 0,
+    "protected_history": {
+      "files": 7054,
+      "missing": [],
+      "changed": []
+    },
+    "handoff_written_by_check": false,
+    "model_execution": false,
+    "content_quality": "not_assessed_by_engineering_check"
+  }
+}
