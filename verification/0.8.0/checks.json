@@ -1,0 +1,162 @@
+{
+  "version": "0.8.0",
+  "run_contract": "0.1",
+  "date_utc": "2026-11-03T05:22:54.767938+00:00",
+  "engineering_status": "pass",
+  "model_execution": false,
+  "content_quality": "not_assessed_by_engineering_checks",
+  "unit_tests": {
+    "run": 227,
+    "passed": 226,
+    "skipped": 1,
+    "failures": 0,
+    "errors": 0,
+    "execution": "one complete suite",
+    "seconds": 84.629,
+    "skip_reason": "Windows symbolic-link privilege unavailable (WinError 1314)"
+  },
+  "checks": [
+    {
+      "name": "package-check",
+      "exit_code": 0,
+      "seconds": 0.355
+    },
+    {
+      "name": "offline-sources",
+      "exit_code": 0,
+      "seconds": 0.363
+    },
+    {
+      "name": "current-inputs",
+      "exit_code": 0,
+      "seconds": 0.195
+    },
+    {
+      "name": "inputs-0.7.5",
+      "exit_code": 0,
+      "seconds": 0.181
+    },
+    {
+      "name": "inputs-0.7.4",
+      "exit_code": 0,
+      "seconds": 0.174
+    },
+    {
+      "name": "inputs-0.7.3",
+      "exit_code": 0,
+      "seconds": 0.172
+    },
+    {
+      "name": "inputs-0.7.2",
+      "exit_code": 0,
+      "seconds": 0.168
+    },
+    {
+      "name": "inputs-0.7.1",
+      "exit_code": 0,
+      "seconds": 0.17
+    },
+    {
+      "name": "inputs-0.7.0",
+      "exit_code": 0,
+      "seconds": 0.167
+    },
+    {
+      "name": "inputs-0.6.1",
+      "exit_code": 0,
+      "seconds": 0.173
+    },
+    {
+      "name": "inputs-0.6.0",
+      "exit_code": 0,
+      "seconds": 0.166
+    },
+    {
+      "name": "historical-67-inputs",
+      "exit_code": 0,
+      "seconds": 0.243
+    },
+    {
+      "name": "format-how-to-report",
+      "exit_code": 0,
+      "seconds": 0.124
+    },
+    {
+      "name": "format-report-audit",
+      "exit_code": 0,
+      "seconds": 0.12
+    },
+    {
+      "name": "unit-tests",
+      "exit_code": 0,
+      "seconds": 85.12
+    },
+    {
+      "name": "diff-whitespace",
+      "exit_code": 0,
+      "seconds": 0.079
+    }
+  ],
+  "lint": {
+    "status": "not_configured",
+    "whitespace_diff": "pass"
+  },
+  "typecheck": {
+    "status": "not_configured",
+    "python_compile_files": 9,
+    "compile": "pass"
+  },
+  "links": {
+    "documents": 160,
+    "local_links": 599,
+    "fragment_links": 34,
+    "errors": [],
+    "scope": "Changed public Markdown and current public inputs, generated packages, new private controller/prompts/RUN; fenced samples and external URLs excluded."
+  },
+  "private_handoff_tool_tests": {
+    "run": 17,
+    "passed": 17,
+    "model_execution": false,
+    "scope": "temporary synthetic preparation/freeze/relocation/isolation checks"
+  },
+  "protected_history": {
+    "files": 7493,
+    "missing": [],
+    "changed": []
+  },
+  "frozen_handoff": {
+    "status": "independent_frozen_integrity_pass",
+    "groups": 13,
+    "turns": 25,
+    "manifest_files": 310,
+    "prepared_members": 57,
+    "outputs_files": 0,
+    "model_execution": false,
+    "freeze_date_utc": "2026-11-03T05:21:08.053550+00:00",
+    "packages": [
+      {
+        "skill": "how-to-report",
+        "version": "0.8.0",
+        "manifest_sha256": "058cbcea763937f710e76ec3bf0e6791d76735428a6968a44c111e5d7fec7e8d",
+        "files": 132,
+        "byte_exact_to_tested_package": true
+      },
+      {
+        "skill": "report-audit",
+        "version": "0.8.0",
+        "manifest_sha256": "b4aaf93266a4dc13111e5a318264498bbc6825da3fa4d93919eb0087df205bd8",
+        "files": 119,
+        "byte_exact_to_tested_package": true
+      }
+    ],
+    "package_files_include_bundle_manifest": true,
+    "handoff_manifest_sha256": "58d3cd2e25ee9a2759dc2bd42b3f5d32b5b221a584a64d8db41cd65b3bb6d4a4",
+    "read_only_check": true
+  },
+  "review": {
+    "workflow_and_examples": "reviewed",
+    "new_choice_rounds": "supplied-condition response, not proof of unprompted insight discovery",
+    "host_parallel_execution": "instructions supplied; actual model-host execution remains user-run",
+    "product_source_fixes_by_final_checker": []
+  }
+}

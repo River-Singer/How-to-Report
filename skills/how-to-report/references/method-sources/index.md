@@ -17,6 +17,8 @@
 
 落实到实际取舍可读[合成教学对照](../content-decisions.md)。下面保留既有来源；视觉技术条目是历史参考，不恢复 HTML 生成责任，也不是当前内容任务的必读项。
 
+- 怎样把事实与本场听众的任务、贡献和取舍连接：[听众价值与贡献](sources/audience-value-contribution.txt)。实验、摘要、回顾研究与机构实践的阅读范围分别保留；不是说服保证。
+
 ## 既有方法背景
 
 - [Scoped concepts and ontology (Stanford sections 1–3 read)](sources/ontology-scope.txt) — 原创摘要；范围及限制见文本。

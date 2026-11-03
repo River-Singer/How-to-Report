@@ -1,0 +1,30 @@
+听众价值、贡献与有依据的取舍（原创离线综合札记）
+编制日期：2026-11-03。根据当日已保存的定向研究记录整合；本次整合未重新抓取网页。非全文或译本，无原文引述。以下研究描述与本项目设计推论分开；原网址用于追溯，运行无需联网。
+
+1. Petty、Cacioppo、Goldman (1981), Personal Involvement as a Determinant of Argument-Based Persuasion, JPSP 41(5), 847–855.
+原始地址：https://doi.org/10.1037/0022-3514.41.5.847
+实读载体：https://www.uni-muenster.de/imperia/md/content/psyifp/aeechterhoff/wintersemester2011-12/attitudesandsocialjudgment/petty_cacioppo_goldman_1981_jpsp.pdf
+研究记录实读摘要、方法、主要结果及讨论，印刷847、849–854页；未重分析数据。145名大学生的2×2×2实验观察毕业考试提议的个人关联、论据质量、来源专业性。高关联条件中论据质量作用更强，低关联中来源专业性作用更强。这不是管理汇报实验，不证明突出利益就必然说服。
+
+2. VanEpps、Hart、Schweitzer, Dual-promotion: Bragging better by promoting peers, JPSP 126(4), 603–623 (2024；在线2023).
+地址：https://pubmed.ncbi.nlm.nih.gov/37561455/ ， DOI：https://doi.org/10.1037/pspi0000431
+实际仅终刊摘要/书目及早期版本摘要核对，终刊正文不可得。终刊摘要报告7项预注册研究、N=1,448；兼述自己与同伴的贡献，相比只讲自己，产生更好的温暖/能力印象。未取得各实验完整条件与量表，不能保证真实领导认可、批准或晋升；印象也不是客观能力。
+
+3. Dutton、Ashford、O'Neill、Lawrence (2001), Moves That Matter: Issue Selling and Organizational Change, AMJ 44(4), 716–736.
+地址：https://homepages.se.edu/cvonbergen/files/2013/01/Moves-that-Matter_Issue-Selling-and-Organizational-Change.pdf
+记录实读摘要、方法、议题关联、参与/时机、情境知识及局限：716–721、723、726–728、732–733页相关段落；未逐表核读。单一医院42名管理者回顾82次事件，归纳将议题联系已重视目标、理解关系/惯例/战略处境等做法。回顾和单组织资料不能确证这些做法导致成功。
+
+4. Amazon/Jeff Bezos, 1997 Letter to Shareholders.
+官方地址：https://www.aboutamazon.com/news/company-news/amazons-original-1997-letter-to-shareholders
+记录实读信件正文至Goals for 1998，非导航推荐。原信公开增长、短期利润、现金流等取舍及评估投入的方法，让股东判断是否认同。它是特定经营实践，不能证明某种汇报结构导致企业成功，也不表示所有组织都应采用其战略。
+
+5. McKinsey (2023-06-14), The economic potential of generative AI: The next productivity frontier.
+官方地址：https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/the-economic-potential-of-generative-ai-the-next-productivity-frontier
+记录实读Key insights、业务价值/方法说明、软件工程及劳动时间再配置条件，未通读68页PDF、未复算模型。报告以业务挑战和可观察结果组织用例，区分自动化潜力、采用和经济效果；生产率收益还取决于释放时间的有效使用。宏观估算不是具体项目实测。
+
+本项目采用的有限推论：
+让材料中的判断与本场听众承担的任务相连，讲清为什么值得注意、能帮助什么选择。把汇报者的真实判断/行动及伙伴的作用说具体；无须删掉个人作用，也不冒领共同成果。能力、业务用途、可能收益和已实现结果之间各有证据或条件，缺收益数字不妨碍解释有据用途。多个方向都有用途时，明确选择理由、代价及仍需核实的条件。
+
+这些是工作流设计启发，不是论文直接验证过的LLM能力。受众关注需由本次处境与资料支持，不从职级猜私人动机；不强制价值词、金钱指标、感谢段落或一套心理标签。研究文字不替代项目事实。效果需观察实际输出及必要的真人反馈。
+
+复用说明：本文为项目原创归纳；原论文与机构原件的权利保留，未取得者不宣称开放全文许可。无全文再分发、作者背书、金融建议或产品效果保证。

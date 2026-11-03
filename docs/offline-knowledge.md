@@ -47,3 +47,7 @@ python tools/vendor_knowledge_sources.py fetch --source-id <来源ID> --output <
 ## 0.7.0统一工作流的方法背景
 
 新增两份原创综合摘要：reading-synthesis（阅读理解与跨段归纳）和reader-argument-attention（理解顺序、论证与注意力）。读取范围逐项说明；出版社节选、论文摘要、选读页与全文不混称。主方法只采纳能改变具体动作的部分，不要求运行者先读全部论文，也不将理论存在当成产品已通过测试。核心方法归档现为28份，领域知识23份不变。
+
+## 0.8.0价值与贡献研究整合
+
+新增一份[离线综合札记](../skills/how-to-report/references/method-sources/sources/audience-value-contribution.txt)，归纳个人关联、共同贡献、组织议题推动及经营取舍/价值实现条件。五个来源分别注明实验、摘要、回顾资料或机构实践和真实阅读范围；全文未取得者不冒称全文下载。札记供需要时溯源，非强制加载，也不能代替用户项目证据或证明新版效果。

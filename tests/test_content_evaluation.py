@@ -12,7 +12,7 @@ import unittest
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 EVAL = ROOT / "evaluation"
-CURRENT = EVAL / "content-0.7.5"
+CURRENT = EVAL / "content-0.8.0"
 spec = importlib.util.spec_from_file_location("content_case_check", EVAL / "tools/validate_cases.py")
 CHECK = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(CHECK)
@@ -27,14 +27,14 @@ class ContentEvaluationTests(unittest.TestCase):
             cases, errors = CHECK.validate(moved)
             self.assertFalse(errors)
             self.assertEqual(len(cases), 13)
-            self.assertEqual([len(c["turns"]) for c in cases], [2, 1, 2, 1, 2, 1, 2, 1, 3, 2, 1, 2, 3])
+            self.assertEqual([len(c["turns"]) for c in cases], [2, 1, 2, 1, 2, 2, 3, 1, 3, 2, 1, 2, 3])
             after = {p.relative_to(moved): p.read_bytes() for p in moved.rglob("*") if p.is_file()}
             self.assertEqual(before, after)
 
     def test_new_evidence_is_not_visible_in_first_turn(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C075-MATERIAL")
+        case = next(c for c in cases if c["id"] == "C080-MATERIAL")
         first = CHECK.visible_turn(case, 1)
         second = CHECK.visible_turn(case, 2)
         third = CHECK.visible_turn(case, 3)
@@ -46,7 +46,7 @@ class ContentEvaluationTests(unittest.TestCase):
         self.assertFalse({"must", "must_not", "turns", "scored_dimensions"} & first.keys())
 
     def test_cli_default_current_and_explicit_historical_scope(self):
-        for arguments, expected in [([], 13), (["--root", str(EVAL / "content-0.7.4")], 4), (["--root", str(EVAL / "content-0.7.3")], 4), (["--root", str(EVAL / "content-0.7.2")], 4), (["--root", str(EVAL / "content-0.7.1")], 4), (["--root", str(EVAL / "content-0.7.0")], 4), (["--root", str(EVAL / "content-0.6.1")], 6), (["--root", str(EVAL / "content-0.6.0")], 4), (["--root", str(EVAL)], 67)]:
+        for arguments, expected in [([], 13), (["--root", str(EVAL / "content-0.7.5")], 13), (["--root", str(EVAL / "content-0.7.4")], 4), (["--root", str(EVAL / "content-0.7.3")], 4), (["--root", str(EVAL / "content-0.7.2")], 4), (["--root", str(EVAL / "content-0.7.1")], 4), (["--root", str(EVAL / "content-0.7.0")], 4), (["--root", str(EVAL / "content-0.6.1")], 6), (["--root", str(EVAL / "content-0.6.0")], 4), (["--root", str(EVAL)], 67)]:
             with self.subTest(arguments=arguments):
                 result = subprocess.run([sys.executable, "-B", "-I", str(EVAL / "tools/validate_content_cases.py"), *arguments], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)
@@ -69,7 +69,7 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_audit_exposes_body_before_sources_and_author_notes(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C075-AUDIT")
+        case = next(c for c in cases if c["id"] == "C080-AUDIT")
         first, second, third = [CHECK.visible_turn(case, n) for n in (1, 2, 3)]
         self.assertEqual(first["fixtures"], ["fixtures/audit-draft.md"])
         self.assertIn("fixtures/audit-source.md", second["fixtures"])
@@ -100,8 +100,8 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_periodic_correction_and_close_are_released_in_their_stages(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        weekly = next(c for c in cases if c["id"] == "C075-WEEKLY")
-        monthly = next(c for c in cases if c["id"] == "C075-MONTHLY")
+        weekly = next(c for c in cases if c["id"] == "C080-WEEKLY")
+        monthly = next(c for c in cases if c["id"] == "C080-MONTHLY")
         first = CHECK.visible_turn(weekly, 1)["fixtures"]
         corrected = CHECK.visible_turn(weekly, 2)["fixtures"]
         close = CHECK.visible_turn(monthly, 1)["fixtures"]
@@ -116,13 +116,25 @@ class ContentEvaluationTests(unittest.TestCase):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
         self.assertEqual({c["id"] for c in cases}, {
-            "C075-INTERNAL", "C075-EXTERNAL", "C075-BUSINESS-DIRECT",
-            "C075-BUSINESS-DEPARTMENT", "C075-TECHNICAL-DIRECT",
-            "C075-TECHNICAL-DEPARTMENT", "C075-GENERAL-MANAGER",
-            "C075-EXTERNAL-PEER", "C075-MATERIAL", "C075-WEEKLY",
-            "C075-MONTHLY", "C075-TRANSFER", "C075-AUDIT",
+            "C080-INTERNAL", "C080-EXTERNAL", "C080-BUSINESS-DIRECT",
+            "C080-BUSINESS-DEPARTMENT", "C080-TECHNICAL-DIRECT",
+            "C080-TECHNICAL-DEPARTMENT", "C080-GENERAL-MANAGER",
+            "C080-EXTERNAL-PEER", "C080-MATERIAL", "C080-WEEKLY",
+            "C080-MONTHLY", "C080-TRANSFER", "C080-AUDIT",
         })
-        self.assertEqual(sum(len(c["turns"]) for c in cases), 23)
+        self.assertEqual(sum(len(c["turns"]) for c in cases), 25)
+
+    def test_new_choice_conditions_are_not_exposed_early(self):
+        cases, errors = CHECK.validate(CURRENT)
+        self.assertFalse(errors)
+        for identity, filename, final_turn in [
+            ("C080-TECHNICAL-DEPARTMENT", "fixtures/next-task-options.md", 2),
+            ("C080-GENERAL-MANAGER", "fixtures/pilot-participation.md", 3),
+        ]:
+            case = next(c for c in cases if c["id"] == identity)
+            for turn in range(1, final_turn):
+                self.assertNotIn(filename, CHECK.visible_turn(case, turn)["fixtures"])
+            self.assertIn(filename, CHECK.visible_turn(case, final_turn)["fixtures"])
 
     def test_invalid_stage_cannot_use_undeclared_fixture(self):
         with tempfile.TemporaryDirectory() as temporary:

@@ -729,6 +729,31 @@
         "limitations": "No source quotations or original full-text redistribution. Source 3 CC BY 4.0; no open redistribution licence verified for Sources 1-2. No endorsement, model-learning or product-effectiveness claim."
       },
       "sha256": "1a61b14864ff7419957c110e3c9dc8a308812a830a064b145c8ce1923044b941"
+    },
+    {
+      "id": "audience-value-contribution",
+      "title": "Audience relevance, attributable contribution and warranted choices",
+      "publisher": "Petty, Cacioppo & Goldman; VanEpps, Hart & Schweitzer; Dutton et al.; Amazon; McKinsey",
+      "canonical_url": "https://doi.org/10.1037/0022-3514.41.5.847",
+      "local_path": "sources/audience-value-contribution.txt",
+      "fetched_at_utc": "2026-11-03T05:14:12.617444+00:00",
+      "scope": "Original synthesis of recorded 2026-11-03 research. Local text states source-specific abstract/selected/full-letter reading and transfer limits; not full text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "compiled_from_recorded_research",
+        "coverage": "See five source-specific read ranges and URLs in local text; no new remote retrieval.",
+        "timestamp_semantics": "Local compilation time, not original fetch time."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://doi.org/10.1037/0022-3514.41.5.847",
+        "attribution": "Five original works credited in local text",
+        "limitations": "No source quotations, original full-text redistribution, endorsement or model/product effectiveness claim."
+      },
+      "sha256": "559de1e969cb8335fcf89ab16e1b5670e055eddc8ac3783ce9f0d719c26ae0fc"
     }
   ]
 }
