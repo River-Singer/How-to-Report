@@ -1,0 +1,166 @@
+{
+  "date_utc": "2026-11-03T13:53:48.143264+00:00",
+  "version": "0.8.3",
+  "contract_version": "0.1",
+  "status": "engineering_pass_models_not_run",
+  "checks": [
+    {
+      "name": "package-check",
+      "exit_code": 0,
+      "seconds": 0.843
+    },
+    {
+      "name": "offline-sources",
+      "exit_code": 0,
+      "seconds": 0.342
+    },
+    {
+      "name": "current-inputs",
+      "exit_code": 0,
+      "seconds": 0.194
+    },
+    {
+      "name": "inputs-0.8.2",
+      "exit_code": 0,
+      "seconds": 0.204
+    },
+    {
+      "name": "inputs-0.8.1",
+      "exit_code": 0,
+      "seconds": 0.182
+    },
+    {
+      "name": "inputs-0.8.0",
+      "exit_code": 0,
+      "seconds": 0.181
+    },
+    {
+      "name": "inputs-0.7.5",
+      "exit_code": 0,
+      "seconds": 0.179
+    },
+    {
+      "name": "inputs-0.7.4",
+      "exit_code": 0,
+      "seconds": 0.168
+    },
+    {
+      "name": "inputs-0.7.3",
+      "exit_code": 0,
+      "seconds": 0.167
+    },
+    {
+      "name": "inputs-0.7.2",
+      "exit_code": 0,
+      "seconds": 0.169
+    },
+    {
+      "name": "inputs-0.7.1",
+      "exit_code": 0,
+      "seconds": 0.167
+    },
+    {
+      "name": "inputs-0.7.0",
+      "exit_code": 0,
+      "seconds": 0.166
+    },
+    {
+      "name": "inputs-0.6.1",
+      "exit_code": 0,
+      "seconds": 0.17
+    },
+    {
+      "name": "inputs-0.6.0",
+      "exit_code": 0,
+      "seconds": 0.162
+    },
+    {
+      "name": "historical-67-inputs",
+      "exit_code": 0,
+      "seconds": 0.245
+    },
+    {
+      "name": "format-how-to-report",
+      "exit_code": 0,
+      "seconds": 0.156
+    },
+    {
+      "name": "format-report-audit",
+      "exit_code": 0,
+      "seconds": 0.111
+    },
+    {
+      "name": "unit-tests",
+      "exit_code": 0,
+      "seconds": 80.701
+    },
+    {
+      "name": "diff-whitespace",
+      "exit_code": 0,
+      "seconds": 1.063
+    }
+  ],
+  "unit_tests": {
+    "total": 231,
+    "passed": 230,
+    "skipped": 1,
+    "failed": 0,
+    "skip_reason": "Windows symbolic-link privilege unavailable",
+    "full_suite_runs": 1
+  },
+  "preparation_tests": {
+    "passed": 21,
+    "failed": 0,
+    "runs": 2,
+    "rerun_reason": "New operator reference correction before freeze"
+  },
+  "public_targeted_tests": {
+    "passed": 15,
+    "failed": 0
+  },
+  "historical_unchanged_files": 8404,
+  "historical_current_selector": "One authorized version update checked exactly against original bytes",
+  "v10_preserved_files": 365,
+  "v11": {
+    "status": "frozen_integrity_pass",
+    "groups": 13,
+    "turns": 25,
+    "model_execution": false,
+    "content_quality": "not_assessed_by_this_check",
+    "frozen_members": 324,
+    "prepared_members": 62,
+    "outputs_empty": true,
+    "package_identical_to_tested": true,
+    "package_identities": [
+      {
+        "skill": "how-to-report",
+        "version": "0.8.3",
+        "manifest_sha256": "68442220d55fc9074ca5854f03e8d70b3d4184af7e80226d381709fdd09b2274"
+      },
+      {
+        "skill": "report-audit",
+        "version": "0.8.3",
+        "manifest_sha256": "3928165d8148d545410f1a2b340784d5dc1d363716deaecf217f24fbe237f20e"
+      }
+    ]
+  },
+  "model_execution": false,
+  "independent_review": {
+    "skill_source": "reviewed; no additional correction necessary",
+    "reference_corrections": [
+      "A confirmed availability window is not proven exclusive",
+      "Shared public/private review focus must follow each dataset rather than import a private date condition"
+    ]
+  },
+  "offline_sources": {
+    "core_original_summaries": 32,
+    "domain_texts": 23,
+    "total": 55
+  },
+  "local_links": {
+    "documents": 169,
+    "targets_checked": 642,
+    "fragments_checked": 48,
+    "errors": 0
+  }
+}

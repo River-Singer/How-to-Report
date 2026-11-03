@@ -9,7 +9,7 @@ description: 独立审查汇报方案和成稿是否回答本次问题，核对�
 
 ## 从这里开始
 
-按[独立审计主工作流](references/audit-method.md)进入本次请求：**仅初读或简述，直接交正文复述；要求审查，再核对来源并给有据问题及改法；复核旧意见，重交受影响项的当前问题、理由和改法。** 读取顺序、结论门槛和补证更正由主方法负责；专题只在具体疑点处使用。
+按[独立审计主工作流](references/audit-method.md)进入本次请求：**仅初读或简述，直接交正文复述；要求审查，将重要原句对回实际来源，查清差异再给改法；复核旧意见，重交受影响项的当前问题、理由和改法。** 读取顺序、结论门槛和补证更正由主方法负责；专题只在具体疑点处使用。
 
 取得实际待审版本。外来文档没有生成侧Run、Graph或Blueprint也可审查；局部审查按请求限定范围。Audit-only只写自己的结果，不改原稿；明确要求修复时另行标识修订版本与范围。
 
@@ -17,7 +17,7 @@ description: 独立审查汇报方案和成稿是否回答本次问题，核对�
 
 ## 按需资源
 
-- 意见被反驳、范围或条件句有争议，或解释和修法加入新断言时，用[审计判断与反证](references/audit-judgment.md)处理当前这一项。争议是“是否讲够、是否重复”时看其中的[具体对照](references/audit-judgment.md#解释是否足够)。更正从被撤断言查到仍依赖它的影响与建议，重写当前整项意见；具体动作由主工作流负责。已能直接查清的意见不必读完整示例，其余专题见主工作流。
+- 意见被反驳、范围或条件句有争议，或解释和修法加入新断言时，用[审计判断与反证](references/audit-judgment.md)处理当前这一项。争议是“是否讲够、是否重复”时看其中的[具体对照](references/audit-judgment.md#解释是否足够)。归属、版本或效果错接时看[具体改句](references/audit-judgment.md#把一句话对回实际记录)。更正须改到仍依赖旧断言的影响与建议，具体动作由主工作流负责。已能直接查清的意见不必读完整示例，其余专题见主工作流。
 - 涉及数值或缺附件时，用[数值证据](references/numeric-evidence.md)和[最小证据交接](references/evidence-handoff.md)。未取得的材料不证明事情未发生。
 - 复杂关系和版本追溯才用[多图模型](references/graph-model.md)、[工作区契约](references/workspace-contract.md)和[审计Run](references/audit-run.md)；实际工具能力见[宿主边界](references/host-capabilities.md)。选择Run后校验自己的目录，结构通过不代替内容判断。
 - 明确要检索或记录已确认经验时用[私有经验](references/report-experience.md)；领域知识先看[目录元信息](knowledge/index.md)。可选正文按已有授权范围读取，拒绝、未回应或撤销时不读，同范围许可不重复申请。

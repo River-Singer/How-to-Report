@@ -22,7 +22,7 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 | 当前难点 | 资源 |
 |---|---|
 | 合理目标解释会改变主线，或材料出现新机会 | [目标发现](references/goal-discovery.md) |
-| 零散记录难以归并，概括或关系可能失真 | [材料提炼与含义保真](references/semantic-structuring.md) |
+| 零散记录难以归并，换主体或润色后可能改义 | [材料提炼与含义保真](references/semantic-structuring.md)；需要具体改句时看[来源对读示范](references/content-decisions.md#来源不足时停在已知范围) |
 | 构思完整判断类材料，需主动检验遗漏区别或展开新线索 | [解释探索](references/insight-discovery.md)；具体概念、前提、条件、论证问题用[思维方法](references/reasoning-methods.md) |
 | 听众、媒介、路线、详略或时间需要调整 | [叙事与会议表达](references/meeting-expression.md) |
 | 句子抽象生硬、角色混乱或混入制作旁白 | [观众成稿编辑](references/audience-copy.md) |

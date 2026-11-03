@@ -1,6 +1,6 @@
 {
   "files": {
-    "SKILL.md": "425f24b5516cb2854d474dce0813fe7ef5c0af2569fe0790d08795afc9d1430d",
+    "SKILL.md": "bd7a010b89599a2ee95448baef499896f9253c5019bdd6a05ae529a2108ec8f4",
     "THIRD_PARTY_NOTICES.md": "269f959153038e85f9be87d01a589c9fd00516d9e6dd75711c4e81cc0d7b0c1d",
     "assets/audit-run/audit.md": "47c7a46b6cc45ac8f3d4ff5d37cb948cfd80791090ff5f2e260e06c92e895206",
     "assets/audit-run/run.json": "e9c794a10c2e1b885a1c40626b39df5639ad6ebd38f4c5eb215851cdddf4fbe1",
@@ -63,17 +63,17 @@
     "knowledge/sources/w3c-use-color.txt": "6c08565692242312939f0f107e2c2b6e52a347f7656bd15e965e57f47eb84620",
     "knowledge/swe-01-delivery-productivity.md": "4e172ad858682d5d24a31e04f08d8a776050488f4a4a24dd8e6ec085f65351c3",
     "knowledge/swe-02-capability-reliability.md": "aae2769d106bc3609a180cb600c139ab9103dafdc957abfe54ef12ef1cda82d2",
-    "references/audience-copy.md": "b6d4addcab2445b9b12dec33512b120ade9cf4cfd9a293a9a617f8c57bbeb402",
-    "references/audit-judgment.md": "98688d174126a4fae1a7a50039e93234a6717eeecfa80be2c1fa872a8a9f2f43",
-    "references/audit-method.md": "365bae879a12642bbb6462bde0dbd0bf04091b0280877e75284776e3acf2ba9a",
+    "references/audience-copy.md": "788dfe0714062ce3928c1f4b70d2703438db0ed8b4ec5016560f60844f0bd641",
+    "references/audit-judgment.md": "d5ac64f2d60b0bb9001b129eb8e13e99328847e6c15842e08bfd6db97b7071b4",
+    "references/audit-method.md": "6a6625e3943242f86ac6ccd381ff2e3b51948071ad91789b9ca18cc26173039c",
     "references/audit-run.md": "3cf4de52d5179999ce0f9fe2e846aba149e28e55405f40abd79be36cb3ec3ddf",
-    "references/content-decisions.md": "42ab6f369e392d326d26e94a058bc689de8a64edb16a3997d74b3a6f22e85ca7",
+    "references/content-decisions.md": "d1c7b68a185135736309d8852f080a3815e312b1ed5d42844a2c808c51ed8958",
     "references/evidence-handoff.md": "5b6e47d7e8650f29d230bf8ecf18b17c6b44df0ab2e5ff8cecfdd3a812b05095",
     "references/goal-discovery.md": "1f31027c0154f6f43cf95b8e5b91ce7fafeb1901ca6c6a2e2b474f9683ddfdde",
     "references/graph-model.md": "9a9983aa5a37a36a8e881d8b029dc8f214f71beb6a28b413e4d35588e3473d72",
     "references/host-capabilities.md": "92fffce55e8958a1a0abd0abe6981374c8e8520d95dd7ea42a6d45dba17087c1",
     "references/insight-discovery.md": "506ea07129d7b3873563e157c0e3515db4fb19a9807b2c7997fa1ef78035f109",
-    "references/meeting-expression.md": "7b7a2d973d79ec84c84e7ec33df9f5b73ca33f327d1d7363e5d40ac898a48a20",
+    "references/meeting-expression.md": "73a57d47d9ff76f11d02319657ad096f08e202c65a7ef9f25f5d3b7ea560223f",
     "references/method-argument.md": "aae39a01846cb6de73788163ccc1d7119aaf80b87fd9d186382d240893de2b8c",
     "references/method-concepts.md": "daeeb2f0ace032914d8630f58dca5abb850ae2a1a28ae2df9cd6df28545b16a7",
     "references/method-conditions.md": "cc02d26340707e5c38f94178042c034c8b209619a02b513658489605a7ebaf3d",
@@ -116,7 +116,7 @@
     "references/numeric-evidence.md": "bd69857427636bd98ac095b3c5c3299340ffda6e36924d4bf11cc0893f798ba1",
     "references/reasoning-methods.md": "5e2e2fdf307ac086e2f076861a4f54b84cfda747b1d051a31ebe9a394361ed2b",
     "references/report-experience.md": "ae2cf4ae6350037b8fb070ea47cf0b053485434ed5f7efcb9ec668f159325f4d",
-    "references/semantic-structuring.md": "171c60adfc46856bc88280bd0d8365871ba479263c7e809a87e5afea8c4da23a",
+    "references/semantic-structuring.md": "3bcc42b109d9e381307be2da9984db64641701ed1c85aaed6541b7cbd096749d",
     "references/workspace-contract.md": "b64e9f4256eff9394bc0f103ff8cebc7a55e82fe0419f2d7be9d2fb5f778d9df",
     "scripts/audit_run.py": "f9ee80383370caf996f554687ebfe761966fe4d9ab81e3cb0cc367912dff3b36",
     "scripts/report_experience.py": "4a7dc4e7b869525cf0911812f66d81780e84658a7dc1f3e068562b1d92ac67a0",
@@ -124,7 +124,7 @@
     "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
   },
   "generated_by": "tools/package_skills.py",
-  "package_version": "0.8.2",
+  "package_version": "0.8.3",
   "skill_name": "report-audit",
   "supported_contract_version": "0.1"
 }

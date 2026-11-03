@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.8.2，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.8.3，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
 
 ## 设计哲学
 
@@ -164,7 +164,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 
 明确只要口头稿、独立阅读稿或先讨论思路时，按该形式交付；一句话修改直接给替换文字。后续可以继续修改某一页、补充事实或调整时长。增删、合并页面时，同步总页数、页序及相关内容；不因局部改动重做全部分析。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十三场景评测](evaluation/content-0.8.2/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十三场景评测](evaluation/content-0.8.3/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -185,6 +185,6 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-0.8.0 的用户结果已复核，0.8.1 完成了编辑与修订方法改进，但尚未进行模型测试。0.8.2 接续研究汇报厚度和概要组织，并在原 V10 运行前更新[13场景25轮](evaluation/content-0.8.2/README.md)：保留回归，加入同源短稿与独立阅读、联合评审和外部同行的深入解释任务。模型仍由用户运行，尚无本版效果结论。工程状态以[0.8.2记录](verification/0.8.2/README.md)为准；[0.8.1记录](verification/0.8.1/README.md)独立保留。详见[开发与验证计划](docs/development-plan.md)。
+0.8.2 的 V10 已复核：复杂评审中出现了有据的解释展开，多轮改稿仍会发生归属错配、无据补强与行动遗漏。0.8.3 据此调整实际编辑与核查方式，保留原产物，并准备同源[13场景25轮](evaluation/content-0.8.3/README.md)的新 V11。模型仍由用户运行，尚无0.8.3效果结论。工程状态以[0.8.3记录](verification/0.8.3/README.md)为准；[0.8.2记录](verification/0.8.2/README.md)独立保留。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

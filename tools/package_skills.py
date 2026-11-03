@@ -22,7 +22,7 @@ from urllib.parse import unquote, urlsplit
 
 
 SKILLS = ("how-to-report", "report-audit")
-PACKAGE_VERSION = "0.8.2"
+PACKAGE_VERSION = "0.8.3"
 CONTRACT_VERSION = "0.1"
 MANIFEST = "bundle-manifest.json"
 GENERATOR = "tools/package_skills.py"
