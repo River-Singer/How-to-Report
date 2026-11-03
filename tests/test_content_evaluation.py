@@ -12,7 +12,7 @@ import unittest
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 EVAL = ROOT / "evaluation"
-CURRENT = EVAL / "content-0.8.1"
+CURRENT = EVAL / "content-0.8.2"
 spec = importlib.util.spec_from_file_location("content_case_check", EVAL / "tools/validate_cases.py")
 CHECK = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(CHECK)
@@ -31,10 +31,48 @@ class ContentEvaluationTests(unittest.TestCase):
             after = {p.relative_to(moved): p.read_bytes() for p in moved.rglob("*") if p.is_file()}
             self.assertEqual(before, after)
 
+    def test_depth_pair_and_joint_peer_share_complete_sources(self):
+        cases, errors = CHECK.validate(CURRENT)
+        self.assertFalse(errors)
+        selected = [c for c in cases if c["family"] in
+                    ("03-business-direct", "04-business-department", "08-external-peer")]
+        self.assertEqual(len(selected), 3)
+        expected = ["fixtures/cost-pilot-" + part + ".md"
+                    for part in ("records", "rules", "checks", "arrangements")]
+        for case in selected:
+            self.assertEqual(case["fixtures"], expected)
+            for turn in case["turn_fixtures"]:
+                self.assertEqual(turn, expected)
+
+    def test_unchanged_scenarios_keep_original_prompts_and_exposure(self):
+        prior = [json.loads(line) for line in
+                 (EVAL / "content-0.8.1/cases.jsonl").read_text(encoding="utf-8").splitlines()]
+        current, errors = CHECK.validate(CURRENT)
+        self.assertFalse(errors)
+        for n in set(range(13)) - {2, 3, 7}:
+            for field in ("turns", "fixtures", "turn_fixtures"):
+                self.assertEqual(current[n][field], prior[n][field])
+
+    def test_rich_cost_rows_reconcile_without_treating_pending_as_zero(self):
+        body = (CURRENT / "fixtures/cost-pilot-records.md").read_text(encoding="utf-8")
+        rows = [[cell.strip() for cell in line.strip().strip("|").split("|")]
+                for line in body.splitlines() if line.startswith("| R")]
+        self.assertEqual(len(rows), 6)
+        amounts = {}
+        for row in rows:
+            amounts[row[0]] = (int(row[4]) * (int(row[5]) + int(row[6]))
+                               if row[7] == "已确认" else None)
+        self.assertEqual(amounts, {"R1": 200, "R2": 50, "R3": 224,
+                                  "R4": 45, "R5": 216, "R6": None})
+        self.assertEqual(amounts["R1"] + amounts["R2"], 250)
+        self.assertEqual(amounts["R3"] + amounts["R4"], 269)
+        self.assertEqual((amounts["R3"] - amounts["R1"]) +
+                         (amounts["R4"] - amounts["R2"]), 19)
+
     def test_new_evidence_is_not_visible_in_first_turn(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C081-MATERIAL")
+        case = next(c for c in cases if c["id"] == "C082-MATERIAL")
         first = CHECK.visible_turn(case, 1)
         second = CHECK.visible_turn(case, 2)
         third = CHECK.visible_turn(case, 3)
@@ -69,7 +107,7 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_audit_exposes_body_before_sources_and_author_notes(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C081-AUDIT")
+        case = next(c for c in cases if c["id"] == "C082-AUDIT")
         first, second, third = [CHECK.visible_turn(case, n) for n in (1, 2, 3)]
         self.assertEqual(first["fixtures"], ["fixtures/audit-draft.md"])
         self.assertIn("fixtures/audit-source.md", second["fixtures"])
@@ -100,8 +138,8 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_periodic_correction_and_close_are_released_in_their_stages(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        weekly = next(c for c in cases if c["id"] == "C081-WEEKLY")
-        monthly = next(c for c in cases if c["id"] == "C081-MONTHLY")
+        weekly = next(c for c in cases if c["id"] == "C082-WEEKLY")
+        monthly = next(c for c in cases if c["id"] == "C082-MONTHLY")
         first = CHECK.visible_turn(weekly, 1)["fixtures"]
         corrected = CHECK.visible_turn(weekly, 2)["fixtures"]
         close = CHECK.visible_turn(monthly, 1)["fixtures"]
@@ -116,11 +154,11 @@ class ContentEvaluationTests(unittest.TestCase):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
         self.assertEqual({c["id"] for c in cases}, {
-            "C081-INTERNAL", "C081-EXTERNAL", "C081-BUSINESS-DIRECT",
-            "C081-BUSINESS-DEPARTMENT", "C081-TECHNICAL-DIRECT",
-            "C081-TECHNICAL-DEPARTMENT", "C081-GENERAL-MANAGER",
-            "C081-EXTERNAL-PEER", "C081-MATERIAL", "C081-WEEKLY",
-            "C081-MONTHLY", "C081-TRANSFER", "C081-AUDIT",
+            "C082-INTERNAL", "C082-EXTERNAL", "C082-BUSINESS-DIRECT",
+            "C082-BUSINESS-DEPARTMENT", "C082-TECHNICAL-DIRECT",
+            "C082-TECHNICAL-DEPARTMENT", "C082-GENERAL-MANAGER",
+            "C082-EXTERNAL-PEER", "C082-MATERIAL", "C082-WEEKLY",
+            "C082-MONTHLY", "C082-TRANSFER", "C082-AUDIT",
         })
         self.assertEqual(sum(len(c["turns"]) for c in cases), 25)
 
@@ -128,8 +166,8 @@ class ContentEvaluationTests(unittest.TestCase):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
         for identity, filename, final_turn in [
-            ("C081-TECHNICAL-DEPARTMENT", "fixtures/next-task-options.md", 2),
-            ("C081-GENERAL-MANAGER", "fixtures/pilot-participation.md", 3),
+            ("C082-TECHNICAL-DEPARTMENT", "fixtures/next-task-options.md", 2),
+            ("C082-GENERAL-MANAGER", "fixtures/pilot-participation.md", 3),
         ]:
             case = next(c for c in cases if c["id"] == identity)
             for turn in range(1, final_turn):

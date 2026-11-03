@@ -1,0 +1,167 @@
+{
+  "date_utc": "2026-11-03T09:52:06.171866+00:00",
+  "version": "0.8.2",
+  "contract_version": "0.1",
+  "status": "engineering_pass_models_not_run",
+  "checks": [
+    {
+      "name": "package-check",
+      "exit_code": 0,
+      "seconds": 0.844
+    },
+    {
+      "name": "offline-sources",
+      "exit_code": 0,
+      "seconds": 0.321
+    },
+    {
+      "name": "current-inputs",
+      "exit_code": 0,
+      "seconds": 0.206
+    },
+    {
+      "name": "inputs-0.8.1",
+      "exit_code": 0,
+      "seconds": 0.196
+    },
+    {
+      "name": "inputs-0.8.0",
+      "exit_code": 0,
+      "seconds": 0.184
+    },
+    {
+      "name": "inputs-0.7.5",
+      "exit_code": 0,
+      "seconds": 0.184
+    },
+    {
+      "name": "inputs-0.7.4",
+      "exit_code": 0,
+      "seconds": 0.175
+    },
+    {
+      "name": "inputs-0.7.3",
+      "exit_code": 0,
+      "seconds": 0.173
+    },
+    {
+      "name": "inputs-0.7.2",
+      "exit_code": 0,
+      "seconds": 0.173
+    },
+    {
+      "name": "inputs-0.7.1",
+      "exit_code": 0,
+      "seconds": 0.175
+    },
+    {
+      "name": "inputs-0.7.0",
+      "exit_code": 0,
+      "seconds": 0.173
+    },
+    {
+      "name": "inputs-0.6.1",
+      "exit_code": 0,
+      "seconds": 0.177
+    },
+    {
+      "name": "inputs-0.6.0",
+      "exit_code": 0,
+      "seconds": 0.171
+    },
+    {
+      "name": "historical-67-inputs",
+      "exit_code": 0,
+      "seconds": 0.249
+    },
+    {
+      "name": "format-how-to-report",
+      "exit_code": 0,
+      "seconds": 0.168
+    },
+    {
+      "name": "format-report-audit",
+      "exit_code": 0,
+      "seconds": 0.125
+    },
+    {
+      "name": "unit-tests",
+      "exit_code": 0,
+      "seconds": 84.921
+    },
+    {
+      "name": "diff-whitespace",
+      "exit_code": 0,
+      "seconds": 0.069
+    }
+  ],
+  "unit_tests": {
+    "run": 230,
+    "passed": 229,
+    "skipped": 1,
+    "skip_reason": "Windows symbolic-link privilege unavailable",
+    "full_suite_runs": 1
+  },
+  "private_preparation_tests": {
+    "run": 19,
+    "passed": 19,
+    "model_execution": false,
+    "receipt": "Compiled from actual tool output; raw stdout not separately saved. Not rerun during final suite."
+  },
+  "targeted_check_note": "An initial public-test invocation from the workspace root found no importable tests directory; corrected project-directory invocation passed14 tests before the full suite.",
+  "link_check_before_document_close": {
+    "documents": 168,
+    "local_links": 635,
+    "fragment_links": 42,
+    "errors": [],
+    "scope": "Changed/new public Markdown outside canonical skill-src (checked after shared files are materialized), both generated packages, current private RUN/controller/prompts. Fenced examples/external URLs excluded; no render or model claims."
+  },
+  "history": {
+    "protected_files": 7866,
+    "archived_original_v10_files": 314,
+    "status": "unchanged",
+    "exception": "User-authorized relocation of unused original V10; verified byte-identical archive"
+  },
+  "offline_sources": {
+    "core_original_summaries": 32,
+    "domain_texts": 23,
+    "total_text_representations": 55,
+    "prior_sources_unchanged": true
+  },
+  "handoff": {
+    "status": "pass",
+    "package_identities": [
+      {
+        "skill": "how-to-report",
+        "version": "0.8.2",
+        "manifest_sha256": "b9a695f8cf31ea67cda1e4002e72be71437282ce0d6e1c9ad14ec335e2c8bfb3"
+      },
+      {
+        "skill": "report-audit",
+        "version": "0.8.2",
+        "manifest_sha256": "ecfe103434901ec453fe2fe1a645fae880c1a259a2aea3c37c1c2c97c5083d86"
+      }
+    ],
+    "handoff_manifest_sha256": "0cc6dc2e0bdc91759576975bd5db80b252da7c1627d823e905aa0dc63ce5f7d5",
+    "freeze_receipt_sha256": "e8ff0672c788f7b423c352044bddc89453c8a6c16432f27edc589d82b8111537",
+    "handoff_files": 323,
+    "prepared_files": 62,
+    "groups": 13,
+    "turns": 25,
+    "outputs_files": 0,
+    "snapshots_equal_tested_packages": true,
+    "model_execution": false
+  },
+  "independent_semantic_review": {
+    "fixed": [
+      "Teaching example: recorded completion is not accepted repair",
+      "Teaching example: completion date is not submission date"
+    ],
+    "scope": "Source-guided editorial review; no model outcome or human comprehension test"
+  },
+  "limitations": [
+    "No bulk model tests run",
+    "No frontend renderer or generic lint/typecheck configured for this Skill package",
+    "Prepared scenarios are not a blind holdout or a matched version-effect experiment"
+  ]
+}

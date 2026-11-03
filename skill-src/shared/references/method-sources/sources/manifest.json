@@ -2,7 +2,7 @@
   "schema_version": "1",
   "archive_version": "0.3",
   "runtime_network_required": false,
-  "scope": "31 concise original method-source summaries, including selective syntheses. Read only by need; no full-source or product-effectiveness claim.",
+  "scope": "32 concise original method-source summaries, including selective syntheses. Read only by need; no full-source or product-effectiveness claim.",
   "card_sources": {},
   "sources": [
     {
@@ -779,6 +779,31 @@
         "limitations": "No source quotations or full-text redistribution. No open redistribution licence verified for the first two sources. Reading ranges and transfer limits retained; no product-effectiveness claim."
       },
       "sha256": "dce9610225304bc3c7423fc8be2a021d451e5314411f96e2e46efd3e7f38aa89"
+    },
+    {
+      "id": "explanation-depth",
+      "title": "Necessary explanation, topic signals and depth across report scales",
+      "publisher": "Craige Roberts; Google SRE; Lorch, Lemarié & Chen; MIT",
+      "canonical_url": "https://doi.org/10.5093/ed2013a11",
+      "local_path": "sources/explanation-depth.txt",
+      "fetched_at_utc": "2026-11-03T09:36:16.355250+00:00",
+      "scope": "Original synthesis of four recorded readings on 2026-11-03; source-specific selected passages/full web pages and transfer limits appear in local text. Not full text.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "compiled_from_recorded_research",
+        "coverage": "Original theory selections, engineering case sections, experimental methods/results and institutional web guidance; local text records ranges.",
+        "timestamp_semantics": "Local compilation time, not original source fetch time."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://doi.org/10.5093/ed2013a11",
+        "attribution": "Four original works credited in local text",
+        "limitations": "No quotations or original full-text redistribution. No universal heading effect, model effectiveness or endorsement claim."
+      },
+      "sha256": "42e7e95319801713e75c983b392f5db24c399c1a6ce06b10732a638e42c25d04"
     }
   ]
 }

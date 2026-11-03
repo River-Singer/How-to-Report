@@ -9,7 +9,7 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 
 ## 先进入生成与修订主线
 
-以[生成与修订方法](references/reporting-method.md)作为唯一主工作流：明确沟通结果，让候选价值判断、证据和遗漏区别相互校正，再由采用的回答决定内容去留、主次和逐页正文。已有目录不替代这次取舍；已经解决的部分沿用，不要求每次走完全部工作或读取全部专题。
+以[生成与修订方法](references/reporting-method.md)作为唯一主工作流：明确沟通结果，让候选价值判断、证据和遗漏区别相互校正，把重要回答展开到听众能够理解和核查，再组织主次与逐页正文。概要先让人抓住意思，解释补足必要关系；深浅由任务和听众已有理解决定。已有目录不替代这次取舍；已经解决的部分沿用，不要求每次走完全部工作或读取全部专题。
 
 - `create`：利用已给目标、情境和资料，从尚未解决的问题开始，交付可制作的完整材料方案。
 - `analyze-first`：解决当前目标、解释或方案取舍，达到可讨论程度即可；不强行成稿。
@@ -27,6 +27,7 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 | 听众、媒介、路线、详略或时间需要调整 | [叙事与会议表达](references/meeting-expression.md) |
 | 句子抽象生硬、角色混乱或混入制作旁白 | [观众成稿编辑](references/audience-copy.md) |
 | 有了判断却仍平均介绍全部主题，或新回复替掉原余项 | 定向用[内容删合示范](references/content-decisions.md#读者仍需自己拼接)或[部分更新示范](references/content-decisions.md#新回复只完成部分请求)，实际重写受影响内容；交付形式看[完整材料示例](assets/examples/report-proposal.md) |
+| 标题有要点，正文却只重复标签；复杂评审仍讲不清一件事 | 用[关系展开](references/semantic-structuring.md#把概括展开为可理解的关系)补本场必要解释，定向参考[同源短稿与完整评审](assets/examples/report-depth-proposals.md)；不照搬页数或逐层句式 |
 | 数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；定义明确的CSV用[显式计算](references/report-calculation.md) |
 | 材料交接、续接或版本追溯 | [最小证据](references/evidence-handoff.md)、[生成Run](references/report-run.md)、[版本操作](references/version-lifecycle.md) |
 | 明确复用或保存已确认偏好/经验 | [画像](references/report-profile.md)、[私有经验](references/report-experience.md) |

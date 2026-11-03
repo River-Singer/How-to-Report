@@ -1,0 +1,26 @@
+Representation: original_summary
+Research date: 2026-11-03
+Compilation: selected findings from the completed explanation-depth research; four source-specific reading ranges below. URLs are provenance, not runtime dependencies. No full-text redistribution, quoted text, model-effectiveness claim or universal formatting prescription.
+
+1. Craige Roberts (2012), Information structure in discourse: Towards an integrated formal theory of pragmatics. Semantics and Pragmatics 5(6), DOI 10.3765/sp.5.6.
+URL: https://semprag.org/index.php/sp/article/download/sp.5.6/pdf/5868
+Read scope: selected original §1 passages, printed pages 6:6–6:7, 6:12 and 6:16–6:21; not the whole paper. Formal pragmatics and language examples, not a corporate-report experiment.
+子问题应帮助回答上位问题，部分回答可以逐步推进共同探究；相关性取决于当前目标。已经解决或暂时无法回答的问题可以离开当前讨论。产品迁移：一个重要判断可展开为必要子问题，再用具体材料回答；不把每个子问题扩成一个新主题。暂缺证据与已经讲清是不同的停止原因。业务依赖不等于该理论的严格问句蕴涵，不要求问题栈、唯一树或私有思维过程。原PDF标CC BY-NC 3.0；此处仅原创摘要。
+
+2. Rogers et al., The Site Reliability Workbook, chapter 10, Postmortem Culture: Learning from Failure (2018), Google.
+URL: https://sre.google/workbook/postmortem-culture/
+Read scope: Case Study; bad postmortem and discussion; good postmortem overview/root cause/recovery/action tables 10-8–10-12; Clarity, Depth and creation/tracking guidance. Published engineering case/practice, not a randomized writing experiment.
+同一故障的对照稿将“自动化有漏洞”展开为空列表如何被当成无筛选条件，以及单次执行保护为何不能跨新实例生效；后续行动因而可以针对具体机制。部分名称虚构、敏感容量使用占位符，无法据公开文本独立复现全部事故。产品迁移：解释处理规则、条件与作用对象，让建议有具体落点；详细记录可供核查，但并非都该进入概要。一个清楚的机制说明不自动证明本项目效果；这个公开案例也不验证本Skill。
+
+3. Robert F. Lorch Jr., Julie Lemarié and Hung-Tao Chen (2013), Signaling topic structure via headings or preview sentences. Psicología Educativa 19(2), 59–66, DOI 10.5093/ed2013a11.
+URL: https://journals.copmadrid.org/psed/archivos/ed2013v19n2a2.pdf
+Read scope: original methods, results, discussion and Figure 1, especially pp.62–64; original publication checked, summary only.
+实验1有134名英语母语心理学课程志愿者，标题与主题含义相同的预告句对比；标题组子主题回忆更好，细节回忆无可靠差异，且没有无信号组。实验2有120名同类志愿者：两种组织信号的提纲主题覆盖均优于无信号，但两者之间及顺序对应没有可靠差异。标题条件同时改变粗体、大小写、缩进与语言实现，不是粗体单因素实验。产品迁移：概要帮助定位，正文另须完成解释；能记住标题不等于理解依据。研究没有验证中文汇报、决策正确性或整场/每页/每段统一结论先行。
+
+4. MIT online technical writing guide, Topic Sentences (§5.1.1) and Paragraph Development (§5.3).
+URLs: https://web.mit.edu/21.guide/topic-s.htm ; https://web.mit.edu/21.guide/para-dev.htm
+Read scope: full text and examples of both web pages; update date not established. Institutional writing guidance, not an experimental result.
+主题句呈现中心意思，相关信息与依据继续展开；主题句常在段首，也可以在其他位置。例子、过程、比较、定义、原因与分析可按需要组合。产品迁移：概要说清主要意思，正文补当前读者缺少的关系；不强制每段四字段，不让正文重复概要的形容词。不同尺度可以保持定位与展开的分工，未必采用同一句式或相同层数。已经自足的数字、事实或条目无需另配同义概要。
+
+Integrated design inference, not a source finding:
+先确定听众要理解、核查或采取行动所需的区别，再补具体对象、关系、例子和依据；组织成段、页或页组之后才按任务取舍。摘要与详细材料使用相同事实和结论强度，深浅随任务变化。概览与正文可重复同一判断而承担不同职责；纯粹同义扩写没有完成解释。必要条件保留在相关主张旁，不把作者审计说明铺满听众材料。现有材料用尽时请求具体缺件或收窄结论，时间用尽时调整本场范围，均不能假称已经解释或验证完成。
