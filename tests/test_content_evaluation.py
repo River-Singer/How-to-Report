@@ -12,7 +12,7 @@ import unittest
 sys.dont_write_bytecode = True
 ROOT = Path(__file__).resolve().parents[1]
 EVAL = ROOT / "evaluation"
-CURRENT = EVAL / "content-0.8.3"
+CURRENT = EVAL / "content-0.8.4"
 spec = importlib.util.spec_from_file_location("content_case_check", EVAL / "tools/validate_cases.py")
 CHECK = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(CHECK)
@@ -27,7 +27,7 @@ class ContentEvaluationTests(unittest.TestCase):
             cases, errors = CHECK.validate(moved)
             self.assertFalse(errors)
             self.assertEqual(len(cases), 13)
-            self.assertEqual([len(c["turns"]) for c in cases], [2, 1, 2, 1, 2, 2, 3, 1, 3, 2, 1, 2, 3])
+            self.assertEqual([len(c["turns"]) for c in cases], [2, 1, 3, 1, 2, 3, 4, 2, 3, 2, 1, 2, 3])
             after = {p.relative_to(moved): p.read_bytes() for p in moved.rglob("*") if p.is_file()}
             self.assertEqual(before, after)
 
@@ -40,25 +40,26 @@ class ContentEvaluationTests(unittest.TestCase):
         expected = ["fixtures/cost-pilot-" + part + ".md"
                     for part in ("records", "rules", "checks", "arrangements")]
         for case in selected:
-            self.assertEqual(case["fixtures"], expected)
-            for turn in case["turn_fixtures"]:
+            self.assertEqual(case["fixtures"][:len(expected)], expected)
+            count = 2 if case["family"] == "03-business-direct" else 1
+            for turn in case["turn_fixtures"][:count]:
                 self.assertEqual(turn, expected)
 
     def test_unchanged_scenarios_keep_original_prompts_and_exposure(self):
         prior = [json.loads(line) for line in
-                 (EVAL / "content-0.8.2/cases.jsonl").read_text(encoding="utf-8").splitlines()]
+                 (EVAL / "content-0.8.3/cases.jsonl").read_text(encoding="utf-8").splitlines()]
         current, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
         for n in range(13):
             for field in ("turns", "fixtures", "turn_fixtures"):
-                self.assertEqual(current[n][field], prior[n][field])
+                self.assertEqual(current[n][field][:len(prior[n][field])], prior[n][field])
 
     def test_all_prior_fixture_bytes_preserved(self):
-        prior = EVAL / "content-0.8.2/fixtures"
+        prior = EVAL / "content-0.8.3/fixtures"
         actual = CURRENT / "fixtures"
         before = {p.name: p.read_bytes() for p in prior.iterdir() if p.is_file()}
         after = {p.name: p.read_bytes() for p in actual.iterdir() if p.is_file()}
-        self.assertEqual(before, after)
+        self.assertEqual(before, {name: after[name] for name in before})
 
     def test_rich_cost_rows_reconcile_without_treating_pending_as_zero(self):
         body = (CURRENT / "fixtures/cost-pilot-records.md").read_text(encoding="utf-8")
@@ -79,7 +80,7 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_new_evidence_is_not_visible_in_first_turn(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C083-MATERIAL")
+        case = next(c for c in cases if c["id"] == "C084-MATERIAL")
         first = CHECK.visible_turn(case, 1)
         second = CHECK.visible_turn(case, 2)
         third = CHECK.visible_turn(case, 3)
@@ -114,7 +115,7 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_audit_exposes_body_before_sources_and_author_notes(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        case = next(c for c in cases if c["id"] == "C083-AUDIT")
+        case = next(c for c in cases if c["id"] == "C084-AUDIT")
         first, second, third = [CHECK.visible_turn(case, n) for n in (1, 2, 3)]
         self.assertEqual(first["fixtures"], ["fixtures/audit-draft.md"])
         self.assertIn("fixtures/audit-source.md", second["fixtures"])
@@ -145,8 +146,8 @@ class ContentEvaluationTests(unittest.TestCase):
     def test_periodic_correction_and_close_are_released_in_their_stages(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
-        weekly = next(c for c in cases if c["id"] == "C083-WEEKLY")
-        monthly = next(c for c in cases if c["id"] == "C083-MONTHLY")
+        weekly = next(c for c in cases if c["id"] == "C084-WEEKLY")
+        monthly = next(c for c in cases if c["id"] == "C084-MONTHLY")
         first = CHECK.visible_turn(weekly, 1)["fixtures"]
         corrected = CHECK.visible_turn(weekly, 2)["fixtures"]
         close = CHECK.visible_turn(monthly, 1)["fixtures"]
@@ -161,25 +162,39 @@ class ContentEvaluationTests(unittest.TestCase):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
         self.assertEqual({c["id"] for c in cases}, {
-            "C083-INTERNAL", "C083-EXTERNAL", "C083-BUSINESS-DIRECT",
-            "C083-BUSINESS-DEPARTMENT", "C083-TECHNICAL-DIRECT",
-            "C083-TECHNICAL-DEPARTMENT", "C083-GENERAL-MANAGER",
-            "C083-EXTERNAL-PEER", "C083-MATERIAL", "C083-WEEKLY",
-            "C083-MONTHLY", "C083-TRANSFER", "C083-AUDIT",
+            "C084-INTERNAL", "C084-EXTERNAL", "C084-BUSINESS-DIRECT",
+            "C084-BUSINESS-DEPARTMENT", "C084-TECHNICAL-DIRECT",
+            "C084-TECHNICAL-DEPARTMENT", "C084-GENERAL-MANAGER",
+            "C084-EXTERNAL-PEER", "C084-MATERIAL", "C084-WEEKLY",
+            "C084-MONTHLY", "C084-TRANSFER", "C084-AUDIT",
         })
-        self.assertEqual(sum(len(c["turns"]) for c in cases), 25)
+        self.assertEqual(sum(len(c["turns"]) for c in cases), 29)
 
     def test_new_choice_conditions_are_not_exposed_early(self):
         cases, errors = CHECK.validate(CURRENT)
         self.assertFalse(errors)
         for identity, filename, final_turn in [
-            ("C083-TECHNICAL-DEPARTMENT", "fixtures/next-task-options.md", 2),
-            ("C083-GENERAL-MANAGER", "fixtures/pilot-participation.md", 3),
+            ("C084-TECHNICAL-DEPARTMENT", "fixtures/next-task-options.md", 2),
+            ("C084-GENERAL-MANAGER", "fixtures/pilot-participation.md", 3),
         ]:
             case = next(c for c in cases if c["id"] == identity)
             for turn in range(1, final_turn):
                 self.assertNotIn(filename, CHECK.visible_turn(case, turn)["fixtures"])
             self.assertIn(filename, CHECK.visible_turn(case, final_turn)["fixtures"])
+
+    def test_supplemental_materials_are_only_visible_in_their_added_round(self):
+        cases, errors = CHECK.validate(CURRENT)
+        self.assertFalse(errors)
+        additions = {"C084-BUSINESS-DIRECT": (3, "fixtures/cost-use-observation.md"),
+                     "C084-TECHNICAL-DEPARTMENT": (3, "fixtures/next-task-change-update.md"),
+                     "C084-EXTERNAL-PEER": (2, "fixtures/peer-partial-sample.md"),
+                     "C084-GENERAL-MANAGER": (4, None)}
+        new_files = {x[1] for x in additions.values() if x[1]}
+        for case in cases:
+            last, supplied = additions.get(case["id"], (None, None))
+            for turn in range(1, len(case["turns"]) + 1):
+                actual = set(CHECK.visible_turn(case, turn)["fixtures"]) & new_files
+                self.assertEqual(actual, {supplied} if turn == last and supplied else set())
 
     def test_invalid_stage_cannot_use_undeclared_fixture(self):
         with tempfile.TemporaryDirectory() as temporary:

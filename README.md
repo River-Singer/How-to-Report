@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.8.3，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.8.4，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
 
 ## 设计哲学
 
@@ -158,13 +158,15 @@ git clone https://github.com/River-Singer/How-to-Report.git
 - **逐页内容**：每页有标题、可直接使用的正文，以及需要的数据、比较或关系。不是“第1页介绍背景”式空大纲。
 - **必要补充**：按需列真正影响使用的待确认事项与来源，不计作汇报页。
 
+如果某个值得展开的方向还缺资料，会先交当前可用稿，再告诉你：补哪项具体材料，能把哪段内容讲得更清楚。可以只补一部分，也可以暂不补；新记录不支持原先构想时，方案会据实调整。只改标题等局部任务不附例行材料清单。
+
 例如，[完整合成示例](skills/how-to-report/assets/examples/report-proposal.md)交付两页：第一页用两组规则差异说明首轮样本选择及实际贡献，第二页提出联系人与可参与时间请求，并交代后续核对安排。主管已看过工具演示，因此已有能力不再各占一页；两页只适用于这组输入。
 
 [另一份短长对照](skills/how-to-report/assets/examples/report-depth-proposals.md)用同一组检修交接资料，分别写成两页管理摘要和七页联合评审。长稿具体解释版本如何对应、待核记录如何处理、检查结果说明了什么；新增的是理解所需的关系，建议和证据强度保持一致。
 
 明确只要口头稿、独立阅读稿或先讨论思路时，按该形式交付；一句话修改直接给替换文字。后续可以继续修改某一页、补充事实或调整时长。增删、合并页面时，同步总页数、页序及相关内容；不因局部改动重做全部分析。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十三场景评测](evaluation/content-0.8.3/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十三场景评测](evaluation/content-0.8.4/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -185,6 +187,6 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-0.8.2 的 V10 已复核：复杂评审中出现了有据的解释展开，多轮改稿仍会发生归属错配、无据补强与行动遗漏。0.8.3 据此调整实际编辑与核查方式，保留原产物，并准备同源[13场景25轮](evaluation/content-0.8.3/README.md)的新 V11。模型仍由用户运行，尚无0.8.3效果结论。工程状态以[0.8.3记录](verification/0.8.3/README.md)为准；[0.8.2记录](verification/0.8.2/README.md)独立保留。详见[开发与验证计划](docs/development-plan.md)。
+V11的0.8.3产物已复核：有据的展开和部分修订有进步，版本归属、无据解释与当前行动仍不稳定。0.8.4将来源约束前移到解释形成时，并加入可选补件与后续采用。[13场景29轮](evaluation/content-0.8.4/README.md)保留原25轮、增加4个补件续轮。V12模型测试由用户运行，尚无本版效果结论。工程状态以[0.8.4记录](verification/0.8.4/README.md)为准；[0.8.3记录](verification/0.8.3/README.md)独立保留。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

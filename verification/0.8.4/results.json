@@ -1,0 +1,94 @@
+{
+  "version": "0.8.4",
+  "date": "2026-11-12",
+  "scope": "Engineering verification; model behavior awaits user-run evaluation",
+  "unit_tests": {
+    "total": 232,
+    "passed": 231,
+    "skipped": 1,
+    "skip": "Windows symlink creation permission"
+  },
+  "checks": [
+    {
+      "name": "package-check",
+      "exit_code": 0
+    },
+    {
+      "name": "offline-sources",
+      "exit_code": 0
+    },
+    {
+      "name": "current-inputs",
+      "exit_code": 0
+    },
+    {
+      "name": "unit-tests",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.8.3",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.8.2",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.8.1",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.8.0",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.7.5",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.7.4",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.7.3",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.7.2",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.7.1",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.7.0",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.6.1",
+      "exit_code": 0
+    },
+    {
+      "name": "inputs-0.6.0",
+      "exit_code": 0
+    },
+    {
+      "name": "historical-inputs",
+      "exit_code": 0
+    },
+    {
+      "name": "format-how-to-report",
+      "exit_code": 0
+    },
+    {
+      "name": "format-report-audit",
+      "exit_code": 0
+    },
+    {
+      "name": "diff-whitespace",
+      "exit_code": 0
+    }
+  ],
+  "model_execution": false
+}
