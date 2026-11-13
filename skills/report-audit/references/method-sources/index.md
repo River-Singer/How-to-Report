@@ -1,6 +1,6 @@
 # 离线方法来源
 
-本目录为核心通用方法的背景，不含可选领域卡。32份均为原创短摘要，记录实际阅读范围；不是全文下载，也不证明本产品的模型表现。只读当前疑点所需的条目，无需把目录全部装入上下文。网址仅溯源，离线即可使用；完整元信息和哈希见[清单](sources/manifest.json)。
+本目录为核心通用方法的背景，不含可选领域卡。当前36份表示：旧32份原创摘要保持（含NASA既有摘要），加3份原创摘要和Yu/Zenker许可全文提取。获取范围与真实阅读范围分开登记，不证明本产品模型表现。只读当前疑点所需的条目，无需把目录全部装入上下文。网址仅溯源，离线即可使用；完整元信息和哈希见[清单](sources/manifest.json)。
 
 ## 从目标到内容：按疑点选择
 
@@ -47,3 +47,12 @@
 - [snapshot-testing](sources/snapshot-testing.txt) — 原创摘要；范围及限制见文本。
 
 [未采用的工具候选及未取得范围](candidates.json)仅保留研究元信息；它们不是运行依赖，也不被宣称为已支持能力。
+
+## 0.9.0论证与价值构思增补
+
+- [Schemes, Critical Questions, and Complete Argument Evaluation, 2020: full extracted text](sources/yu-zenker-2020-fulltext.txt)：source_text；Complete30-page extracted paper text; read abstract,§1,§2.1–2.2,§5,§6.1–6.5,§7 and license. §3–4 only located selectively; not all-page review. Complements unchanged earlier Springer abstract/introduction summary.
+- [Lord, Lepper & Preston1984: considering the opposite notes](sources/consider-opposite.txt)：original_summary；Research read printed1231–1239: abstract, experiments1/2 methods/results, general discussion and footnote3. No full end discussion/references; copyrighted original not redistributed.
+- [Mitchell, Russo & Pennington1989: temporal perspective notes](sources/prospective-hindsight.txt)：original_summary；Research read printed25–36: abstract, design, two experiments major methods/results, General Discussion and Aiding decisions; not all tables or full appendix.
+- [Scopelliti, Loewenstein & Vosgerau2015: self-presentation notes](sources/self-presentation-calibration.txt)：original_summary；Research read abstract, experiment1 methods PDF1–3, experiment3 design/selected results7–9, discussion/limits10–11; not full experiment2 or table replication.
+
+旧critical-questions来源身份/字节仍是早期Springer摘要与引言札记；新许可全文用不同归档URL和ID记录，不冒改旧摘要身份。完整提取不表示逐页精读。旧audience-value-contribution包含的终刊摘要等读取范围不升级为新全文研究。理论、人类实验、方法设计和当前模型效果分别看待。

@@ -1,0 +1,187 @@
+{
+  "date_utc": "2026-11-13T07:13:07.198351+00:00",
+  "package_version": "0.9.0",
+  "contract_version": "0.1",
+  "packages": [
+    {
+      "skill": "how-to-report",
+      "version": "0.9.0",
+      "contract_version": "0.1",
+      "manifest_sha256": "b652a2d97058ff6c276537715fb1196e1d8b6d4b7885e0c16935ee033b8dd119",
+      "payload_files": 171
+    },
+    {
+      "skill": "report-audit",
+      "version": "0.9.0",
+      "contract_version": "0.1",
+      "manifest_sha256": "ad0e100f91fe161227a89f3ad9d9a09eea83cc2ff129e8c3bf4cade02695deba",
+      "payload_files": 158
+    }
+  ],
+  "checks": {
+    "build": "pass",
+    "package_check": "pass",
+    "offline_sources": {
+      "valid": true,
+      "network_used": false,
+      "representations": 77,
+      "legacy_records_and_bytes_preserved": 55
+    },
+    "unit_tests": {
+      "run": 239,
+      "passed": 238,
+      "skipped": 1,
+      "failed": 0,
+      "skip_reason": "Windows symbolic link privilege unavailable",
+      "scope": "full suite after initial integration; unchanged runtime algorithms"
+    },
+    "post_review_source_tests": {
+      "run": 15,
+      "passed": 15,
+      "scope": "after MKT01 read-scope clarification and new Yu source-header locator/hash correction; rebuilt both packages"
+    },
+    "temporary_handoff_tests": {
+      "run": 24,
+      "passed": 24,
+      "model_calls": 0
+    },
+    "quick_validate": {
+      ".": "pass",
+      "skills/how-to-report": "pass",
+      "skills/report-audit": "pass"
+    },
+    "current_evaluation": {
+      "cases": 18,
+      "turns": 41,
+      "valid": true
+    },
+    "historical_evaluation_root": {
+      "cases": 67,
+      "valid": true
+    },
+    "all_versioned_content_datasets": {
+      "versions": 14,
+      "valid": true
+    },
+    "current_document_links": {
+      "files": 9,
+      "local_links": 64,
+      "errors": 0
+    },
+    "python_ast": "pass",
+    "whitespace": {
+      "checked_at_utc": "2026-11-13T07:23:33.088267+00:00",
+      "initial_worktree_check": {
+        "command": [
+          "git",
+          "-c",
+          "core.whitespace=cr-at-eol",
+          "diff",
+          "--check"
+        ],
+        "result": "pass",
+        "scope": "Tracked unstaged changes only; did not include then-untracked added files. Not a complete release whitespace gate."
+      },
+      "full_staged_check": {
+        "command": [
+          "git",
+          "-c",
+          "core.whitespace=cr-at-eol",
+          "diff",
+          "--cached",
+          "--check"
+        ],
+        "exit_code": 2,
+        "result": "archive_whitespace_diagnostics_present",
+        "diagnostic_count": 37200,
+        "file_count": 24,
+        "diagnostics_by_kind": {
+          "trailing whitespace.": 37191,
+          "new blank line at EOF.": 9
+        },
+        "diagnostics_by_path": {
+          "skill-src/shared/knowledge/sources/business-cases-2026.txt": 2039,
+          "skill-src/shared/knowledge/sources/gao-cost-selected.txt": 1,
+          "skill-src/shared/knowledge/sources/green-book-2026-oct-pdf.txt": 2268,
+          "skill-src/shared/knowledge/sources/nist-csf-2.0.txt": 1088,
+          "skill-src/shared/knowledge/sources/nist-privacy-1.0.txt": 2137,
+          "skill-src/shared/knowledge/sources/nist-sp800-207.txt": 2126,
+          "skill-src/shared/knowledge/sources/should-cost-2021.txt": 2140,
+          "skill-src/shared/references/method-sources/sources/yu-zenker-2020-fulltext.txt": 601,
+          "skills/how-to-report/knowledge/sources/business-cases-2026.txt": 2039,
+          "skills/how-to-report/knowledge/sources/gao-cost-selected.txt": 1,
+          "skills/how-to-report/knowledge/sources/green-book-2026-oct-pdf.txt": 2268,
+          "skills/how-to-report/knowledge/sources/nist-csf-2.0.txt": 1088,
+          "skills/how-to-report/knowledge/sources/nist-privacy-1.0.txt": 2137,
+          "skills/how-to-report/knowledge/sources/nist-sp800-207.txt": 2126,
+          "skills/how-to-report/knowledge/sources/should-cost-2021.txt": 2140,
+          "skills/how-to-report/references/method-sources/sources/yu-zenker-2020-fulltext.txt": 601,
+          "skills/report-audit/knowledge/sources/business-cases-2026.txt": 2039,
+          "skills/report-audit/knowledge/sources/gao-cost-selected.txt": 1,
+          "skills/report-audit/knowledge/sources/green-book-2026-oct-pdf.txt": 2268,
+          "skills/report-audit/knowledge/sources/nist-csf-2.0.txt": 1088,
+          "skills/report-audit/knowledge/sources/nist-privacy-1.0.txt": 2137,
+          "skills/report-audit/knowledge/sources/nist-sp800-207.txt": 2126,
+          "skills/report-audit/knowledge/sources/should-cost-2021.txt": 2140,
+          "skills/report-audit/references/method-sources/sources/yu-zenker-2020-fulltext.txt": 601
+        },
+        "outside_source_archive_txt": []
+      },
+      "scoped_staged_check": {
+        "command": [
+          "git",
+          "-c",
+          "core.whitespace=cr-at-eol",
+          "diff",
+          "--cached",
+          "--check",
+          "--",
+          ".",
+          ":(exclude,glob)skill-src/shared/knowledge/sources/*.txt",
+          ":(exclude,glob)skill-src/shared/references/method-sources/sources/*.txt",
+          ":(exclude,glob)skills/how-to-report/knowledge/sources/*.txt",
+          ":(exclude,glob)skills/how-to-report/references/method-sources/sources/*.txt",
+          ":(exclude,glob)skills/report-audit/knowledge/sources/*.txt",
+          ":(exclude,glob)skills/report-audit/references/method-sources/sources/*.txt"
+        ],
+        "exit_code": 0,
+        "result": "pass",
+        "scope": "All staged additions and modifications except .txt files directly inside the six canonical/generated source-archive directories. Markdown, Python, JSON manifests, tests, fixtures and release docs are included.",
+        "excluded_pathspecs": [
+          ":(exclude,glob)skill-src/shared/knowledge/sources/*.txt",
+          ":(exclude,glob)skill-src/shared/references/method-sources/sources/*.txt",
+          ":(exclude,glob)skills/how-to-report/knowledge/sources/*.txt",
+          ":(exclude,glob)skills/how-to-report/references/method-sources/sources/*.txt",
+          ":(exclude,glob)skills/report-audit/knowledge/sources/*.txt",
+          ":(exclude,glob)skills/report-audit/references/method-sources/sources/*.txt"
+        ]
+      },
+      "preservation": "Extracted source/archive whitespace is retained as content bytes; no stripping, newline conversion, package rebuild or frozen-payload change.",
+      "index_unchanged": true,
+      "other_tests_rerun": false
+    }
+  },
+  "model_execution": false,
+  "quality": "not_assessed_by_engineering_checks",
+  "independent_review": {
+    "status": "pass",
+    "scope": "source contracts, package consistency, input isolation, read-scope and engineering evidence",
+    "model_quality_assessed": false
+  },
+  "handoff_freeze": {
+    "status": "frozen_integrity_pass",
+    "groups": 18,
+    "turns": 41,
+    "outputs_empty": true,
+    "model_execution": false,
+    "date_utc": "2026-11-13T07:18:26.556596+00:00",
+    "handoff_manifest_sha256": "5d7e67a936779df0117aa7f5ff66c23210ff1b7497d341c570342b7b69a4c521",
+    "package_identities_match_final_bundles": true
+  },
+  "history_protection": {
+    "files_checked": 8772,
+    "unchanged": 8771,
+    "authorized_change": "evaluation/tools/validate_content_cases.py current default advanced to 0.9.0",
+    "unexpected_changes": 0
+  }
+}

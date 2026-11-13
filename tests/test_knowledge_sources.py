@@ -54,12 +54,39 @@ class OfflineSourcesTest(unittest.TestCase):
         (self.root / "sources/example.txt").write_text("tampered", encoding="utf-8")
         self.assertTrue(any("hash mismatch" in error for error in vendor.check(self.root)))
 
-    def test_core_method_archive_checks_offline_and_labels_summaries(self):
+    def test_core_archive_distinguishes_summaries_and_licensed_fulltext(self):
         with patch.object(socket, "socket", side_effect=AssertionError("network forbidden")):
             self.assertEqual(vendor.check(vendor.METHOD_ROOT), [])
         data = json.loads((vendor.METHOD_ROOT / "sources/manifest.json").read_text(encoding="utf-8"))
-        self.assertTrue(data["sources"])
-        self.assertTrue(all(s["representation"] == "original_summary" for s in data["sources"]))
+        sources = {source['id']: source for source in data['sources']}
+        baseline = json.loads((PROJECT / 'tests/fixtures/knowledge-sources-0.8.4.json').read_text(encoding='utf-8'))
+        old_ids = set(baseline['archives']['skill-src/shared/references/method-sources'])
+        new_summary_ids = {'consider-opposite', 'prospective-hindsight', 'self-presentation-calibration'}
+        self.assertEqual(set(sources), old_ids | new_summary_ids | {'yu-zenker-2020-fulltext'})
+        summaries = {identity for identity, source in sources.items() if source['representation'] == 'original_summary'}
+        self.assertEqual(summaries, old_ids | new_summary_ids)
+        self.assertEqual(len(summaries), 35)
+        fulltext = sources['yu-zenker-2020-fulltext']
+        self.assertEqual(fulltext['representation'], 'source_text')
+        self.assertEqual(fulltext['canonical_url'], 'https://d-nb.info/121098167X/34')
+        self.assertEqual(fulltext['local_path'], 'sources/yu-zenker-2020-fulltext.txt')
+        self.assertEqual(fulltext['reuse']['evidence_url'], 'https://creativecommons.org/licenses/by/4.0/')
+        self.assertEqual(fulltext['reuse']['license'], 'CC BY4.0; format conversion from PDF text, no translated original')
+        self.assertEqual(fulltext['reuse']['attribution'], 'Shiyang Yu and Frank Zenker')
+
+    def test_084_source_records_and_bytes_remain_immutable(self):
+        baseline = json.loads((PROJECT / 'tests/fixtures/knowledge-sources-0.8.4.json').read_text(encoding='utf-8'))
+        for relative, expected_sources in baseline['archives'].items():
+            root = PROJECT / relative
+            current = json.loads((root / 'sources/manifest.json').read_text(encoding='utf-8'))
+            sources = {source['id']: source for source in current['sources']}
+            for identity, expected in expected_sources.items():
+                with self.subTest(archive=relative, identity=identity):
+                    self.assertIn(identity, sources)
+                    source = sources[identity]
+                    record = json.dumps(source, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode('utf-8')
+                    self.assertEqual(hashlib.sha256(record).hexdigest(), expected['record_sha256'])
+                    self.assertEqual(hashlib.sha256((root / expected['local_path']).read_bytes()).hexdigest(), expected['sha256'])
 
     def test_missing_and_unregistered_text_are_detected(self):
         (self.root / "sources/example.txt").unlink()

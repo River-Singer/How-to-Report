@@ -1,0 +1,677 @@
+SOURCE: https://www.gov.uk/government/publications/data-ownership-in-government/data-ownership-model
+RETRIEVED: 2026-11-12
+FORMAT: extracted source text; download is not evidence of complete reading
+
+Data ownership model - GOV.UK
+Cookies on GOV.UK
+We use some essential cookies to make this website work.
+We’d like to set additional cookies to understand how you use GOV.UK, remember your settings and improve government services.
+We also use cookies set by other sites to help us deliver content from their services.
+You have accepted additional cookies. You can change your cookie settings at any time.
+You have rejected additional cookies. You can change your cookie settings at any time.
+Accept additional cookies
+Reject additional cookies
+View cookies
+Hide cookie message
+Skip to main content
+GOV.UK
+Navigation menu
+Menu
+Menu
+Services and information
+Benefits
+Births, death, marriages and care
+Business and self-employed
+Childcare and parenting
+Citizenship and living in the UK
+Crime, justice and the law
+Disabled people
+Driving and transport
+Education and learning
+Employing people
+Environment and countryside
+Housing and local services
+Money and tax
+Passports, travel and living abroad
+Visas and immigration
+Working, jobs and pensions
+Government activity
+Departments
+Departments, agencies and public bodies
+News
+News stories, speeches, letters and notices
+Guidance and regulation
+Detailed guidance, regulations and rules
+Research and statistics
+Reports, analysis and official statistics
+Policy papers and consultations
+Consultations and strategy
+Transparency
+Data, Freedom of Information releases and corporate reports
+Search GOV.UK
+×
+Search GOV.UK
+Search
+Search GOV.UK
+Search
+Home
+Data ownership in government
+GovernmentDigital Service
+Guidance
+Data ownership model
+Published 16 April 2026
+Contents
+1. Introducing the data ownership model
+2. What data ownership is
+3. Why data ownership is important
+4. What we mean by data
+5. Principles of data ownership
+6. Data ownership roles and responsibilities
+7. Merged data sets and data services
+8. The relationship between data ownership and information asset ownership
+9. A checklist for your organisation
+10. Appendices
+Print this page
+© Crown copyright 2026
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk.
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+This publication is available at https://www.gov.uk/government/publications/data-ownership-in-government/data-ownership-model
+1. Introducing the data ownership model
+Government data assets are vital to the nation because they support the formulation of evidence-based policy making, economic growth and public accountability. Their wide-ranging impact fuels innovation, enhances transparency, enables better public services and empowers citizens. This means it’s essential that the government manages its assets effectively to fully realise their value in a legal, ethical and secure way.
+The government needs a consistent framework around data ownership. The lack of a shared understanding of roles, accountabilities and responsibilities is most deeply felt around critical data which multiple public sector organisations may rely on. This lack of a shared approach prevents effective cross-government data sharing and our ability to reuse data for public good.
+Data governance maturity levels vary across government. Some organisations already have data ownership policies and implementation plans in place, whereas others are at the early stages of creating an enterprise-level model. This model helps public sector organisations understand the importance of data ownership behaviours and principles and ensure they have the policies and plans in place. Where public sector organisations already have ownership policies, it’s an opportunity to assess, update where needed and reinforce the message about its importance.
+This guidance formalises the roles of the people in government responsible for managing data throughout its life cycle. The guidance explains best practice, and encourages a consistent and standardised approach to data ownership across government.
+2. What data ownership is
+Data ownership does not deal with ‘possession of data’. It’s about formalising the roles of people responsible for the management of data throughout its life cycle. It establishes accountability for data access and usage, solving issues, iterating and versioning access and ensuring compliance with legislation, regulations and applicable guidelines.
+3. Why data ownership is important
+Data is one of the most valuable assets in your organisation. It’s also a liability with significant risks if not guarded, such as theft, loss or misuse. It must be protected and managed to:
+be fit for purpose
+be used lawfully and ethically
+provide maximum value to your organisation and the rest of government
+It’s critical that your organisation has people with the right data ownership roles. This will ensure that you:
+comply with regulations, legislation, policies and standards
+define and implement data controls to manage risk and data security
+have data assets that serve their intended business purpose and realise their full potential value through enhanced cross-government data sharing
+have confidence in your data, and can make reliable decisions based on its integrity
+reduce data duplication and inefficiencies
+4. What we mean by data
+The Government Functional Standard for Digital defines data as ‘information that has been translated into a form that is efficient for movement or processing’. When we talk about data ownership, we generally mean ownership of highly structured data sets (often containing personal data) of the kind which are vital to departments working together to deliver effective services. An information asset is a body of information, defined and managed as a single unit so it can be understood, shared, protected and exploited effectively.
+There is no single, correct way to segment your data into logical groupings or data domains. Each organisation will have its own way of doing this, based on its business needs or areas of strategic interest.
+5. Principles of data ownership
+Adopting this data ownership model will help you follow these principles.
+1. Data is recognised as a valuable resource
+Your organisation’s data has great potential value to the digital economy. Assess your data whenever possible to support decisions about:
+investing in it
+encouraging data sharing
+realising its wider commercial and societal value through protection and exploitation
+2. Data is managed throughout its life cycle
+You must handle data in line with policies, standards and legislation.
+This includes:
+The Data Protection Act 2018
+UK GDPR
+EU GDPR (relevant if processing data about EU subjects)
+The Public Records Act 1958
+UK Government Licensing Framework
+The Digital Economy Act 2017
+The Data and AI Ethics Framework
+The Data Sharing Governance Framework
+The Data Maturity Assessment for Government
+The Rose Book
+3. Data is secure
+Protect your data from unauthorised access – whether malicious, fraudulent or accidental.
+4. Data is defined
+Clearly and consistently define your data for common interpretation.
+5. Data is FAIR
+Ensure your data is FAIR – findable, accessible, interoperable and reusable.
+6. Data is standardised
+Apply common data standards wherever possible.
+7. Data is fit for its intended purpose
+Your data should be of the quality required, depending on how you intend to use it.
+8. Data is authoritative
+Share your data from a qualified authoritative source wherever possible.
+6. Data ownership roles and responsibilities
+An important objective of data ownership is shifting the view of data as an asset to data as a product. This is about government, and the wider public sector, defining and proactively measuring how and where data is actually used and adds value.
+Finding ways to define and measure value is an important part of the roles of data owners, stewards and custodians.
+Data owners and information asset owners (IAOs) are accountable for assets as they ultimately ‘own’ the asset, making decisions on major changes and being answerable for them. Data stewards and asset managers are responsible as they are experts on what is held within the asset and responsible for its day-to-day management.
+Data owners
+A data owner is a senior individual with dedicated accountabilities for data, and in-depth insights of the overall business strategy in their data remit. This may include the overall accountability for the meaning, content, quality and management of a logical grouping of data, or distribution of a given set of data.
+By liasing with a team of operational data stewards, they are empowered to steer and ensure the data is fit for its intended purpose and used appropriately.
+Data owners:
+act as the strategic points of contact for the data within their remit
+should have a position at the leadership level – for example, a senior civil servant (SCS) particularly where the data sets are large or complex (for smaller or medium-sized data sets with less impact, a Grade 6 or Grade 7 level might be more appropriate)
+need to be able to use their authority and knowledge of business strategies and processes underpinning the data to make decisions
+do not need a granular understanding of the data
+Using their knowledge of data applications, data owners:
+liaise with a team of operational data stewards to ensure data is fit for its intended purpose
+influence the strategic direction of data
+approve changes to data
+support data governance practices in their area
+allow organisations to make faster decisions around data to achieve business outcomes
+What data owners are accountable for
+Data owners have accountability for:
+understanding how their data is being used, who by and where, data lineage and flow of data, and whether it’s controlled properly
+working with business requirements to define centralised data definitions for their subject areas
+providing guidance to data stewards to ensure definitions are managed and adopted consistently
+strategic data decisions and approvals around business requirements and modifications to their data
+ensuring appropriate identification, protection and exploitation of data assets for wider governmental, societal and economic value, in collaboration with the organisation’s knowledge asset senior responsible owner (SRO) where there is one
+ensuring that their data stewards maintain agreed data definitions in the data catalogue
+ensuring that the quality of the data they are responsible for is known, considering all critical data users
+the management, monitoring and reporting of activities to improve their data through their data stewards
+ensuring security measures, in accordance with the organisation’s policies, are in place to protect data that is in transit, data received, or data transferred to another organisation
+ensuring an appropriate retention schedule is in place outlining storage periods for all data (particularly personal data), which is reviewed regularly
+ensuring their data assets comply with legal requirements for archival, disposal and preservation
+limiting access to data (particularly personal data or data of significance to national security) to those authorised to do so
+ensuring that data sets comply with licensing agreements and that the data is used appropriately
+Skills that data owners need
+Data owners should:
+have a strong ‘data mindset’ – this means they should:
+be data literate
+understand the benefits of data governance, and be able to implement a data governance strategy
+understand how data is governed, managed and exploited within their data domain, so they can maximise the value of their data assets
+be experienced leaders with a proven ability to deliver results and drive change – this includes:
+persuade colleagues to adopt a data governance framework, standards and workflows
+embed data governance at pace to help their organisation deliver on its timelines and commitments
+ensure there is operational and governance reporting
+ensure that key performance indicators (KPIs) are appropriately set and approved
+solve problems, removing barriers and ensuring issues are identified and remedied
+be strong communicators – they should be able to communicate complex ideas to non-technical audiences
+have experience working effectively across the different functions in their organisation, such as business and operations
+Currently in some organisations the data owner may be a dedicated data role, whilst in others it may be just one of several responsibilities held by individuals with limited data expertise. Given the strategic importance to government of critical data assets, we recommend that those responsible for critical data assets develop their data capabilities in line with this model.
+Data stewards
+Data stewards are responsible for day-to-day operational activities in their data domain that support data owners’ decisions, and for implementing policies, standards and processes.
+As subject matter experts (SMEs), data stewards should have a deep knowledge of their business area, including its rules and requirements. They need strong communication and collaboration skills to help ensure that data flows smoothly in their organisation.
+Having operational points of contact with data expertise will help your organisation to embed data-related policies and strategies, and set up sustainable data governance processes.
+What data stewards are responsible for
+Data stewards have responsibility for:
+handling data governance queries, and asking data owners for tactical guidance when needed
+facilitating data governance processes, including:
+data access
+data archival
+data deletion
+facilitating data quality governance processes, such as:
+monitoring
+investigating
+communicating
+triaging
+remediating
+reporting
+reporting to the data owner and other forums on activities including:
+compliance
+issues
+fixes
+changes
+maintaining and implementing data standards and process documentation, for example a business glossary, in the data catalogue
+creating processes, procedures and standards for their data domain that is aligned to their organisation’s policies
+relationship management and understanding data flows to understand the impact of anything that may change
+contributing to the development, maintenance and implementation of agreed data standards and reporting measures
+working with data custodians to facilitate discussions around
+discussing technical requirements with data custodians, including changes to data governance standards
+assisting with periodic data maturity assessments
+Data custodians
+Data custodians are responsible for capturing, storing and disposing of data in line with the data owner’s requirements.
+They work closely with data stewards to:
+ensure data quality
+operationalise data decisions
+support data governance implementation within the tools they are responsible for
+Data custodians should be technical SMEs for the system containing their assigned data.
+They should:
+have in-depth knowledge and expertise around the system
+be able to explain how to design and execute technical activities related to data governance
+What data custodians are responsible for
+Data custodians have responsibility for:
+assisting data stewards with technical and system-related queries
+identifying and reporting data governance issues to the data steward and data owner
+producing impact assessments for implementing system changes led by the data steward
+implementing technical requirements according to data standards and rules within their systems and data types – for example, adding a character limit on a field
+guiding other technical teams to use standards and definitions
+implementing user access policies specified by the data owner, including the appropriate physical and technical safeguards to protect the confidentiality, integrity and availability of the data asset
+ensuring that data quality is sustained during technical processing
+resolving data quality issues in partnership with data stewards
+ensuring that changes to data content and controls can be audited
+Executive leadership roles
+The following roles are also likely to be involved when you adopt this data ownership model.
+Chief data officer
+A senior, executive-level role with responsibility for the organisation’s enterprise-wide:
+data and information strategy
+governance
+control
+policy development
+effective exploitation
+This role combines accountability and responsibility for information protection and privacy, information governance, data quality and data life cycle management, along with the exploitation of data assets to create business value.
+Chief data and information officer (CDIO)
+A senior executive role responsible for managing an organisation’s data and information strategy. The CDIO is accountable for digital transformation, data governance, technology infrastructure and information assurance. Though information and data governance are distinct responsibilities they are combined here into a single role.
+Data protection officer (DPO)
+A specified role defined in data protection law under the UK GDPR. DPOs work in an independent manner to:
+monitor their organisation’s internal compliance
+advise on their organisation’s data protection obligations
+advise on Data Protection Impact Assessments (DPIAs)
+act as a contact point for data subjects and the Information Commissioner
+Chief technology officer (CTO)
+A senior, executive-level role with responsibility for the organisation’s technological infrastructure. CTOs ensure that the technology aligns with the organisation’s goals.
+Chief digital officer
+A senior, executive-level role with responsibility for driving digital transformation within an organisation, using the potential of online technologies and data.
+Chief information security officer (CISO)
+A designated individual responsible for the security of information in electronic form. CISOs advise the board on how best to exploit technology to deliver the organisation’s strategic objectives.
+CISOs also provide strong strategic leadership for the organisation’s IT community and its investment in technology.
+CISOs are responsible for their organisation’s:
+IT strategy
+IT architecture
+IT policies and standards
+technology assurance
+IT professionalism
+Board-level executive or senior information risk owner (SIRO)
+Someone with particular responsibility for information risk.
+Process owners and enterprise data owners
+In larger, more complex organisations, you might need a process owner role.
+You should also consider establishing an enterprise data owner (EDO) if:
+data is being shared across government departments or other public sector organisations
+you’re using additional processing to transform the data
+EDOs are responsible for specific, logical groupings of data or data domains (such as entities and attributes). EDOs ensure a consistent and common approach across data assets within and beyond their organisation.
+How process owners and EDOs work together
+EDOs:
+define data attributes
+establish business rules around the validity of the data
+set thresholds for others to follow
+They might also define the conditions for how data is used.
+Process owners must work closely with the EDO to ensure the integrity of the original data is not compromised in the process of:
+transformation
+enrichment
+aggregation
+In this type of arrangement, EDOs need to ensure the necessary policies and standards are in place. However, they do not necessarily need to have accountability for the accuracy, security and protection of the data that’s outside their direct sphere of influence.
+In addition to their day-to-day role, process owners are responsible for:
+managing data risks, and assuring IAOs and EDOs that risks are mitigated
+enforcing data policies and standards to improve the data involved in their processes
+building awareness in their organisation so that managers, staff and contractors understand their areas of responsibility in relation to data protection, security, quality and capability
+Data protection roles
+The UK GDPR defines the role of a data controller as the natural or legal person, public authority, agency or other body which, alone or jointly with others, determines the purposes and means of the processing of personal data. Public sector organisations act as the data controller for UK GDPR purposes.
+A data controller is a person or organisation that:
+decides how personal data is processed under the UK GDPR
+is responsible for complying with the UK GDPR
+Public sector organisations often decide that the organisation as a legal entity is the data controller for UK GDPR purposes.
+In the context of the UK GDPR, data owners are accountable for the quality, integrity and protection of their data domain.
+To cover the accountabilities of the data controller, data owners partner with their organisation’s:
+data stewards
+data protection officer
+chief data officer
+chief technology officer
+chief digital officer
+senior information risk owner
+chief information security officer (where there is one)
+7. Merged data sets and data services
+For any model where data is processed, you must clearly define and attribute accountabilities for data to individuals or institutions.
+Example use cases of merged data
+These use cases pose challenges to the traditional model of data ownership of a data asset:
+data merged or linked from different sources to become a new data set
+data being drawn from different sources into a data lake, from which analysis and insights are drawn and data repurposed for multiple needs
+data being held in a trust or a cooperative where an institution, or individuals, steward the use and potential repurposing of data in the interests of those it represents
+In these cases, data is one of the following:
+transferred to an individual, institution or platform for usage
+consumed at source via an Application Programming Interface (API) or other method, such as secure file transfer
+In these scenarios, the source data owner must agree to the conditions for how the data is provided. This includes:
+transfer of ownership or retained ownership
+how access will be managed
+defining the decisions that data stewards and custodians can make on behalf of data providers
+Example of handling data ownership for shared data sets across multiple organisations
+In these scenarios, it’s essential to establish a collaborative approach:
+designate a primary data owner in the originating organisation to be responsible for the overall data set(s)
+designate local data owners – each organisation using the data should have their own local data owner who officially records the data and coordinates with the primary data owner for any issues or queries
+have clear communication channels – there should be regular communication and coordination between the primary and local data owners
+develop and adhere to shared data governance policies so that you maintain consistency and quality
+Data platforms and services
+Where a data platform or service is involved, your organisation will usually need a new role of product or service owner.
+This person will have specific accountability for:
+developing and operating the platform or service
+who accesses and uses the service
+how data is used within the terms and conditions provided by the source data owner
+Data licensing impact on data owners
+While data stewards handle the day-to-day management of licensing, data owners need to understand the importance of data licensing and its implications. Data owners are responsible for ensuring that data sets comply with licensing agreements and that the data is used appropriately.
+This includes:
+overseeing the application of licenses – ensuring that the correct licenses are applied to data sets
+ensuring compliance with usage restrictions – making sure that all data usage complies with the terms of the licence
+addressing licensing issues – handling any issues related to licensing promptly and effectively
+handling sharing requests – understanding licensing terms to correctly address and manage data sharing requests
+Example:
+If an organisation releases data under a specific licence, the data owner must ensure that the terms of the licence are respected and that users understand their rights and obligations when accessing or using the data.
+Data from a third party
+When data is received from a third party (like a university or external research institution) or from an ALB, the receiving entity becomes the data owner for the copy of the asset they hold. This means that once the data is transferred to the organisation or its ALBs, they are responsible for managing and maintaining that copy.
+This includes ensuring data quality, compliance and proper usage. However, the original sender retains ownership of their version of the data and continues to govern it unless explicitly stated otherwise.
+Does open data require a data owner?
+Open data requires a data owner. Data ownership for open data is crucial because it ensures the data remains accurate, current and properly maintained even when made publicly accessible. A data owner is responsible for overseeing the data set(s), ensuring it meets quality standards, and resolving any issues that may arise. This accountability helps maintain the integrity and usability of open data.
+8. The relationship between data ownership and information asset ownership
+The data owner role and the IAO role are both important in managing data, including personal data, within government.
+Information asset ownership is well established in government. IAO guidance aims to ensure information assets are managed effectively so it can be understood, shared, protected and exploited effectively. Responsibilities for the role are primarily focused on safeguarding and managing the overall information asset (including compliance and physical or digital security).
+Data ownership looks more broadly at the quality, clarity and value of the data, and owners act as a bridge between business needs and technical expertise.
+Data ownership in context
+Introducing new activities is an opportunity to review the wider approach to data and information management within your organisation.
+It’s important to apply data ownership in the wider organisational context, which may include an existing information asset ownership approach. Some organisations may choose to integrate data ownership into their existing information asset ownership approach. Others may choose to wrap information asset owner activities into their data ownership approach.
+What’s important is that you undertake all the relevant activities.
+Taking an integrated approach to data ownership and information asset ownership
+Given the close relationship between data and information, there could be significant value in taking an integrated approach to data and information ownership. Being joined up could help to ensure the overall landscape is coherent, avoid unnecessary pressures on resources and double-tasking of staff. There may be existing support mechanisms, communities and frameworks that data ownership could dock into – for example, an IAO handbook or training module.
+Adopting a model
+Your organisation should think carefully about the following questions before deciding which model to adopt:
+will there be different teams overseeing data ownership and information asset ownership, and if so how will you achieve a joined-up approach?
+who in the organisation holds ultimate accountability for data assets, and is this the same person as for information assets?
+are your information asset owners senior enough and skilled enough to implement changes to data management?
+how does your organisation use the terms ‘data’ and ‘information’ and how might they be interpreted by staff? These terms may be used interchangeably or there may be scenarios where a distinction is important
+Your organisation has 3 choices when it comes to deciding how to ensure there is an appropriate ownership model in place to meet its needs. However, you must ensure you meet the specific actions mandated of IAOs in the IAO guidance.
+The options are:
+continue with the information asset ownership model but ensure data ownership accountabilities and responsibilities are absorbed into your existing IAO roles
+adopt the data ownership model, ensuring that you cover mandatory information asset ownership actions with appropriate roles
+adopt a hybrid model in which IAOs are responsible for core information assets – such as databases or ICT systems that hold personal data – but are supported by data owners responsible for specific data assets such as reference or master data
+If you choose the first option
+You should consider the additional accountabilities and responsibilities of data owners, stewards and custodians and map these to appropriate roles such as information asset managers and local information asset managers.
+It’s essential that when you apply the model, it extends to all your data assets including those that do not relate to personal data. When incorporating data ownership activities into an existing information asset ownership model, your organisation should consider the following questions:
+does your organisation consider data assets to be subsets of information assets? How are these data sets linked to information assets? Do all data sets need to ‘belong’ to an information asset?
+if your IAOs are also data owners, do they have the right skills and support to meet their data ownership responsibilities? Data owners do not necessarily need to have a granular understanding of the data they are accountable for, but they do need to be data literate, with a strong ‘data mindset’
+can you avoid unnecessary granularity and duplication in the recording of data assets and information assets?
+can you improve consistency between your organisation’s information asset register, data catalogue and register of processing activities?
+If you choose the second option
+You should ensure that your data owners fulfil the mandatory actions required of IAOs. There’s training on Civil Service Learning to support the IAO role, which is recognised as a specialist role with the GovS 007 Security Functional Standard.
+Whichever option you choose
+Your organisation should ensure there is appropriate governance in place to support your chosen model.
+The governance must define:
+where accountability lies for data and information assets in your organisation – clarify if there are different governance processes for data and information
+who your data owners and IAOs are accountable to – for example, a chief data officer or SIRO
+how your accounting officer will be assured that the right data ownership activities are being undertaken at the right level
+how data quality is factored into your organisation’s existing governance processes
+Can a data owner and an IAO be the same person?
+Yes, in some cases, the roles can overlap, especially in smaller teams or projects. However, combining these roles requires careful management to ensure neither responsibility is neglected.
+The difference between a data owner and a project manager
+A data owner focuses on the strategic management and quality of data, while a project manager oversees the planning, execution and delivery of specific projects. Their responsibilities intersect when data is a critical component of a project.
+The difference between a data owner and a portfolio manager
+A portfolio manager oversees a collection of projects or programmes to achieve strategic objectives, while a data owner ensures the quality and governance of data used across these projects.
+The difference between a data owner and a programme manager
+A programme manager coordinates related projects to deliver broader organisational goals, while a data owner ensures the data used within these projects is reliable and well-governed.
+The difference between a data owner and a product owner
+A product owner is accountable for maximising the value of the product resulting from the work of the scrum team, while a data owner will be responsible for ensuring the data is accurate, secure and complies with privacy regulations.
+Can a data owner have multiple roles, such as being a project manager or portfolio manager?
+A data owner can hold multiple roles, but this requires clear boundaries and prioritisation to avoid conflicts of interest or overstretch.
+The process of becoming a data owner
+To become a data owner, the typical process involves:- identification – individuals with relevant expertise and roles are identified by their managers or teams- nomination – suitable candidates are nominated, and their responsibilities are clearly defined- training – new data owners are provided with guides, manuals and workshops to ensure they understand their roles and responsibilities- formal acknowledgment – data owners confirm they have read the training materials and understand their obligations- support and review – ongoing support is available from the relevant team in the organisation responsible for data (such as the office of the chief data officer), and periodic reviews are conducted to ensure compliance and data quality
+Promoting and ensuring a culture of data ownership within the organisation
+Promoting and ensuring a culture of data ownership within an organisation involves contributions from everyone, with important initiatives actively led by the chief data officer:- leadership support – ensure that senior leaders endorse and promote data ownership initiatives- awareness campaigns – conduct campaigns to highlight the importance and benefits of data ownership- training and workshops – provide continuous training and workshops to keep teams informed and engaged- recognition and incentives – recognise and reward teams and individuals who demonstrate exemplary data ownership practices- clear communication – maintain open channels of communication to address concerns and share best practices- individual accountability – encourage everyone within the organisation to take personal responsibility for the data they handle, ensuring its accuracy and integrity
+When to think about allocating data assets a data owner
+The best time to allocate data assets to a data owner is at the beginning of any data-related project or initiative. Establishing clear ownership from the outset ensures that data quality and management are prioritised throughout the project’s life cycle.However, if you have not done so yet, do not worry – it’s never too late to start. Assigning data ownership at any stage can still bring significant improvements to data management and lead to better-informed decisions as there is someone now accountable for ensuring that the data is the best it can be.
+Steps to transition data ownership when someone leaves the organisation
+When a data owner leaves, the following steps can help ensure a smooth transition:- identify a successor well in advance – designate a new data owner as early as possible to facilitate a smooth handover- ensure proper handover of responsibilities – the departing data owner should comprehensively brief their successor on all responsibilities- update relevant documentation and records – ensure all records and documents reflect the change in data ownership- inform the chief data officer of the change so that you maintain updated records within their current scope (critical data assets, QFAIR assessments, etc)
+How often data ownership should be reviewed or updated
+Data ownership should be reviewed or updated periodically to ensure continued relevance and accountability. A recommended frequency would be on an annual (once a year) basis, or whenever there are significant changes in roles or responsibilities within the organisation.Regular reviews help ensure that data ownership remains aligned with current organisational goals and that any transitions of responsibilities are handled smoothly.
+What support the data owner needs from their team
+Data owners require several types of support from their team and the wider organisation to effectively manage their responsibilities:- collaboration and engagement – team members, such as data stewards, must actively participate in data management practices and ensure data quality- resources and training – the organisation (usually from the office of the chief data officer) should provide necessary tools and training to data owners so they can fulfil their roles effectively- clear policies and guidelines – establish and communicate standards and procedures to guide data ownership practices- communication with the chief data officer’s team – ensure data owners have access to additional support and guidance from centralised resources as needed
+Measuring the success of data ownership initiatives
+Success can be measured through several indicators, including but not limited to:- improved data quality metrics – a notable improvement in assessments such as the QFAIR assessment scores indicates better data quality- enhanced compliance with data policies – improvements within critical data asset assessments, where the provided information becomes more comprehensive and includes both recommended and optional details, enhancing users’ understanding of available data- increased stakeholder satisfaction – positive feedback and higher satisfaction scores from data stakeholders reflect successful engagement and effective data management- reduction in data-related issues – as highlighted in data maturity assessments, a reduction in data duplications and improved data storage efficiency demonstrates better data practices- effective processing of data sharing requests – a successful data ownership initiative enables the organisation to confidently and efficiently handle data sharing requests, ensuring that data is shared in compliance with licensing agreements and promptly addressing any related queries or issues
+9. A checklist for your organisation
+Your organisation must:
+have an enterprise-level data ownership model and supporting guidance in place that recognises that:
+data ownership is the responsibility of the business and not the technology domain
+the responsibilities of ownership are not exclusive to a single person and require close collaboration across organisational levels, including the delegation of responsibilities from the senior owners
+ensure that enterprise-level ownership policies include monitoring and reporting arrangements as part of their organisation’s broader risk management practices (for example, identify and counter any internal or external potential vulnerabilities and threats, which may be incorporated into the broader information asset risk management processes)
+ensure data assets are included in their organisation’s asset registers and considered in their organisation’s asset and knowledge asset management strategies
+consider where data assets may have value to wider government, society and the economy, and the protection and exploitation approaches required to realise it
+have named owners for all data assets determined to be critical at an enterprise level
+have a nominated accountable individual data owner for each data asset determined to be a critical data asset (as defined in published guidance)
+ensure every critical data asset has accurate metadata, which must include the name and roles of responsible data owners and data steward(s)
+include information about critical data assets (cross-government and enterprise-level) and any critical data elements they include within a central register or catalogue managed by the enterprise, linking the name of the owner with the asset
+ensure that each critical data asset (cross-government and enterprise-level) has an owner who understands what they are accountable for – owners must ensure that stewards and process owners understand their responsibilities
+ensure that where data is shared between public sector organisations and with other sectors it includes agreed roles, accountabilities and responsibilities in line with this model
+ensure the interoperability (the ability to share and use between different computer systems and software) of all its data, with its critical data prioritised, through common standards and practical steps such as data owners recognising the importance of maintaining good quality reference data
+where common data is used across business processes, services, products and systems, organisations should consider establishing an enterprise data model with data ownership agreed at a conceptual data model layer
+10. Appendices
+Appendix A: Comparing accountabilities and responsibilities of data owners and IAOs
+Area
+Data owner
+IAO
+Overall accountability
+Accountable for the value, quality, life cycle and strategic use of a data asset
+Accountable for protecting, managing, and governing an information asset
+Understanding of data
+Understand how data is used, who uses it, lineage and flow of data
+Maintain understanding of information asset: what is held, added, removed, how it moves, who accesses it and why
+Cultural leadership
+Promotes culture of data ownership, value realisation and cross-government sharing
+Fosters a culture of information protection, lawful processing, compliance
+Data or information asset governance
+Approves strategic changes to data; influences governance practices
+Ensures information asset is governed according to security policy, risk frameworks, data protection legislation
+Ownership scope
+Logical grouping of data or data domain (data as product)
+Entire information asset (including data, documents, records, ICT systems, paper assets)
+Business strategy alignment
+Aligns data use with business strategy; influences strategic direction of data
+Ensures information asset supports business needs, ensures legal and security alignment
+Merged or shared data sets
+Defines ownership and sharing rules for merged or shared data sets; manages value realisation
+Approves shared use of information asset; ensures ongoing compliance with data-sharing policies
+Responsibility for third-party data
+Accountable when data is received from third parties; becomes owner of the copy held
+Accountable for information asset when third-party data forms part of it; ensures appropriate controls are in place
+Responsibility for third-party data
+Accountable when data is received from third parties; becomes owner of the copy held
+Accountable for information asset when third-party data forms part of it; ensures appropriate controls are in place
+Data product life cycle
+Accountable for continuous improvement and iterative evolution of data as a product
+Focus is on maintaining integrity and protection of information asset across its life cycle (does not treat information asset as a ‘product’)
+Data sharing
+Approves conditions for data sharing; ensures licensing terms are respected
+Approves sharing of information asset data; ensures data sharing is lawful, proportionate, necessary
+Data standards
+Ensures data is defined, FAIR (findable, accessible, interoperable, reusable), standardised
+Ensures information asset complies with policy and process standards
+Engagement with enterprise data models or reference data
+Leads alignment with enterprise data models, ensures authoritative sources
+Not typically responsible for driving enterprise data model alignment (information asset manager or technical roles may support)
+Security and protection
+Ensures data security (in transit, at rest, when shared); ensures security measures are implemented
+Maintains and monitors information asset security: access control, physical and logical protections, incident response
+Data definition
+Defines centralised data definitions; provides guidance to stewards to manage definitions
+Not explicitly accountable for data definition
+Data quality
+Accountable for quality of data across life cycle; monitoring and improving quality
+Not explicitly accountable for data quality
+Training and awareness
+Embeds data governance awareness, promotes data culture
+Must complete IAO training; responsible for fostering culture of protection and compliance in business area
+Working with stewards / information asset manager
+Provides strategic guidance to data stewards who manage day-to-day data activities
+Appoints information asset manager to manage day-to-day information asset management and monitoring (including training and culture)
+Collaboration with custodians
+Works with data custodians for technical implementation of governance
+Information asset manager works with information technology systems and information asset governance for technical controls on information asset systems
+Engagement with SIRO / chief data officer / DPO
+Collaborates with SIRO, chief data officer, DPO for UK GDPR and strategic data governance
+Accountable to SIRO; works with DPO, chief data officer, information asset managers, information asset governance for compliance and reporting
+Innovation and value realisation
+Actively drives opportunities for data innovation, re-use, cross-sector value
+Typically focused on safeguarding, not exploitation of value
+Licensing
+Accountable for ensuring the use of the data asset complies with licensing agreements
+Accountable for ensuring any data shared from information asset complies with legal or licensing terms
+Incident management
+Works with stewards on incident prevention and response; ensures data breach processes exist
+Accountable for data incident investigation and reporting; ensures staff awareness of incident policies
+Risk management
+Understands and manages data-related risks; ensures risk management is part of governance
+Undertakes risk impact assessments on information asset; manages and reports risks to SIRO, ensures mitigations are in place
+Access control
+Limits access to data (especially personal or sensitive data); monitors data access practices
+maintains log of information asset access; ensures authorised access only; monitors handling activities
+Retention and archival
+Ensures appropriate retention schedule; complies with legal requirements on archival or disposal
+Sets information asset retention or review period; ensures disposal mechanisms are approved and lawful
+Audit and monitoring
+Ensures monitoring and reporting of data management activities
+Ensures compliance monitoring is conducted on information asset; participates in regular assurance processes (information asset governance, SIRO)
+Appendix B: RACI matrix for data owners and IAOs
+Legend:
+R = Responsible (does the work)
+A = Accountable (owns the outcome)
+C = Consulted (provides input)
+I = Informed (kept up to date)
+Responsibility area
+Data owner
+IAO
+Define data ownership model and data domains
+A
+I
+Define information asset structure and register
+I
+A
+Understand data flow, lineage, usage
+A
+C
+Understand information asset  flow, movement, and access
+I
+A
+Ensure data compliance with the UK GDPR, the Data Protection Act 2018 and licensing
+A
+A
+Ensure information asset compliance with the UK GDPR, the Data protection Act 2018 and licensing
+C
+A
+Approve strategic changes to data
+A
+I
+Approve information asset -related changes (systems, processes)
+I
+A
+Define and maintain data definitions and standards
+A
+C
+Maintain information asset register
+I
+A
+Implement data security measures (logical)
+A
+C
+Implement information asset security measures (physical and logical)
+C
+A
+Approve data sharing agreements
+A
+C
+Approve information asset  data sharing agreements
+C
+A
+Data risk identification and mitigation
+A
+C
+Information asset  risk identification and mitigation
+C
+A
+Monitor and report data quality
+A
+I
+Monitor and report information asset compliance
+I
+A
+Define and monitor data retention and disposal
+A
+C
+Define and monitor information asset retention and disposal
+C
+A
+Lead data governance forums
+A
+I
+Participate in information asset governance forums
+C
+A
+Drive value realisation from data
+A
+I
+Safeguard integrity of information asset
+I
+A
+Respond to data incidents
+R/A
+R/A
+Respond to information asset -related incidents
+I
+R/A
+Ensure training and awareness for data management
+A
+C
+Ensure training and awareness for information asset management
+C
+A
+Engage with SIRO, chief data officer, DPO
+A
+A
+Promote a culture of data ownership
+A
+C
+Promote a culture of information protection
+C
+A
+Summary of patterns
+Data owners are typically A for:
+data definitions
+data quality
+strategic direction
+data sharing
+value realisation
+data governance
+data risk
+IAOs are typically A for:
+compliance and legal obligations
+physical and logical information asset security
+information asset retention and disposal
+information asset sharing approval
+risk and incident management (information asset-level)
+oversight of information asset register
+Back to top
+Is this page useful?
+Maybe
+Yes this page is useful
+No this page is not useful
+Thank you for your feedback
+Report a problem with this page
+Help us improve GOV.UK
+Do not include personal or financial information like your National Insurance number or credit card details.
+This field is for robots only. Please leave blank
+What were you doing?
+What went wrong?
+Send
+Cancel
+Help us improve GOV.UK
+To help us improve GOV.UK, we’d like to know more about your visit today.
+Please fill in this survey (opens in a new tab and requires JavaScript).
+Cancel
+Services and information
+Benefits
+Births, death, marriages and care
+Business and self-employed
+Childcare and parenting
+Citizenship and living in the UK
+Crime, justice and the law
+Disabled people
+Driving and transport
+Education and learning
+Employing people
+Environment and countryside
+Housing and local services
+Money and tax
+Passports, travel and living abroad
+Visas and immigration
+Working, jobs and pensions
+Government activity
+Departments
+News
+Guidance and regulation
+Research and statistics
+Policy papers and consultations
+Transparency
+How government works
+Get involved
+Support links
+Help
+Privacy
+Cookies
+Accessibility statement
+Contact
+Terms and conditions
+Rhestr o Wasanaethau Cymraeg
+Government Digital Service
+All content is available under the Open Government Licence v3.0, except where otherwise stated
+© Crown copyright

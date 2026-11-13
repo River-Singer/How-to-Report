@@ -1,0 +1,284 @@
+{
+  "scope": "Immutable source records and bytes shipped with 0.8.4; card mappings may grow in later releases.",
+  "archives": {
+    "skill-src/shared/knowledge": {
+      "teal-19": {
+        "local_path": "sources/teal-19.txt",
+        "sha256": "bfd00838126090873db6863e6de9b7b00e67f67e17d74e253e0abb57d033147c",
+        "record_sha256": "e6472a1683ed28a2decabf79a1f7af45cc665884155698b328def35e0767c5f5"
+      },
+      "green-book-2026": {
+        "local_path": "sources/green-book-2026.txt",
+        "sha256": "b266b13699ac5da89882cb7e321f4bd1bb57966b92c6ddbaa8d7bb2e99c721f7",
+        "record_sha256": "d630330f4e06d0d8102cd04524f179d6c5c5fb030b3e1cdc3b85727660904ac2"
+      },
+      "cdc-use": {
+        "local_path": "sources/cdc-use.txt",
+        "sha256": "1634c4983eb13edd732ffadfc240b4515f85587d5b4025093a4a0af200b70deb",
+        "record_sha256": "f623b0cceff65b48d4126a07af6f7a25ecf5b28b59d3bbf4e78d000dc69643f6"
+      },
+      "cdc-uncertainty": {
+        "local_path": "sources/cdc-uncertainty.txt",
+        "sha256": "45a9d9caa65d3b51bad74d27d6c01e3999f5d68b0f375a2731b5c29571050847",
+        "record_sha256": "5c6b1daf9c69aa5543f30280ac55f04ec450c1b787db69d3e6aeab51d7184d04"
+      },
+      "gov-data-quality": {
+        "local_path": "sources/gov-data-quality.txt",
+        "sha256": "46f6cc5e39bcddd8aa7b3e0ccdf51187603cdf29f2a22e01604e41c3a8910537",
+        "record_sha256": "a22dabc248b22506efdaa6b203e94df6e73e89d75c971cb11e7256c727b25ddb"
+      },
+      "gov-completion-rate": {
+        "local_path": "sources/gov-completion-rate.txt",
+        "sha256": "cd05f3f83417c79ac15a3a89e8f3c51e3807a913a4a2282489307559386ab577",
+        "record_sha256": "38d3ab736742823cb9c0b85daa9581a73de17595858f3c1b226ed76b7c5c94c1"
+      },
+      "nist-experimental-design": {
+        "local_path": "sources/nist-experimental-design.txt",
+        "sha256": "745295f9ee44cbaabb8b9e41a7308db7c63987a59157fca19651adf3d781f8af",
+        "record_sha256": "471da72846377bddc06ec1b6c671ce2d6e97f342305245b379752be2bb2bdc4c"
+      },
+      "nist-mean-confidence": {
+        "local_path": "sources/nist-mean-confidence.txt",
+        "sha256": "2d967e89c9a329bf6888dc763313ebbb9f497d551b4ba748af539bb915dff398",
+        "record_sha256": "936cc74004fc2240bf4ab12bb29d98ede397850b0382b355debbfa7ade771e8e"
+      },
+      "teal-18": {
+        "local_path": "sources/teal-18.txt",
+        "sha256": "eeb9815ad3580385262eac518e642fe4b7789988886a5dabf268f464e70c8d29",
+        "record_sha256": "376e6b81cfba65b38b9074bed55b8f15f24a3875e3b8a4ef736882be2abdc13a"
+      },
+      "teal-30": {
+        "local_path": "sources/teal-30.txt",
+        "sha256": "d2cafd4b03454b1d7b7c676743d0c69f804ad23d39b98043efd0f2d613acb8ad",
+        "record_sha256": "bbc8ee26fa934f7695092582d10d5664c55faa4e9e2c72770248ac1b798caaef"
+      },
+      "teal-16": {
+        "local_path": "sources/teal-16.txt",
+        "sha256": "6374b90c7f4a9344924c20ceb11f861ee79fa496bd5f6180d47594cf91224365",
+        "record_sha256": "01364ab4c936d403211a1e8f56c37db01f81c3400f9ede739b9eb501fa620e46"
+      },
+      "teal-20": {
+        "local_path": "sources/teal-20.txt",
+        "sha256": "963d7758f16b1e2fe09489dd6976c09ec277e4a4aff1ddeaf063630cc6fd562c",
+        "record_sha256": "9125df1defe5aec25b279e02fe72419bafc7bc1de560a80ecfe7baa6fd5794eb"
+      },
+      "dora-metrics": {
+        "local_path": "sources/dora-metrics.txt",
+        "sha256": "ed378546d4ddb49b87819aec4f7a48e74472886162bd095e73a95f9d512de0cd",
+        "record_sha256": "01856dc40d634cd43550b43f78fd1b2eddb8f8c48a15fd6caaa28d46480e4e9d"
+      },
+      "space-abstract-summary": {
+        "local_path": "sources/space-abstract-summary.txt",
+        "sha256": "ba7e7fb5d578fb63031627296ab8137a4bc10936735d01b081a4b6e22d7b5237",
+        "record_sha256": "25898b94d8102bb48f3459562aeed6038e793aff6db328875a3d041686149892"
+      },
+      "sre-service-objectives": {
+        "local_path": "sources/sre-service-objectives.txt",
+        "sha256": "c94e689ee70cbb2be1b50100b9be2a22867975934195ae36b7fce6c5679af0c4",
+        "record_sha256": "f24b0e14c0ec63a3b0d41b1460c32648ed6e9b06e6744ce5bf20a5d44757e592"
+      },
+      "sre-testing-reliability": {
+        "local_path": "sources/sre-testing-reliability.txt",
+        "sha256": "19f6057363c49c06d1253542429e297b8c9ac0bcc30a4bc44f32a918b42080e9",
+        "record_sha256": "d6ddbfbd1affe5358ad38404e1fbe2ea1ed65270fc386e942be0c3821704e551"
+      },
+      "gov-user-needs": {
+        "local_path": "sources/gov-user-needs.txt",
+        "sha256": "ccaad946c918af989f27c988e3a227506245ec457229f03022cdb99fe1cea920",
+        "record_sha256": "99790bf677c849d8425452ea8fea08c77cce88e0f98ffda58c2bce1c5495a411"
+      },
+      "gov-digital-takeup": {
+        "local_path": "sources/gov-digital-takeup.txt",
+        "sha256": "82daa8dfb59d0c1fe02901fe4a6fd5afbc78ecd8c8f4337628bffa43f98cdad4",
+        "record_sha256": "41b5d2e997d4bb2b1ccfe13b6ca7fa128da2cf62d6f59bb1faef9007e465bd8f"
+      },
+      "gao-schedule-summary": {
+        "local_path": "sources/gao-schedule-summary.txt",
+        "sha256": "469755650635fb22da7bfc71f71d561e226fbdef572aed3b7c8a35fa5d91fc30",
+        "record_sha256": "36355e0a781edf3734e471126d58cb1c86efba12d51d336a46492d0ea8e9c3d7"
+      },
+      "ibcs-scenarios-summary": {
+        "local_path": "sources/ibcs-scenarios-summary.txt",
+        "sha256": "dbaa888181029f3094655686a82121bd2f2aef3006606d4a1f7f5c9c066c340a",
+        "record_sha256": "ba73ae084a9f4ba9ce57fcfd77a66f535d2a78dc38727b3c9c79b33503a4061b"
+      },
+      "iapm-trend-summary": {
+        "local_path": "sources/iapm-trend-summary.txt",
+        "sha256": "893d2f608c76b3cb6b93b0bcf1ab578a313ab4420f482392e995c73972987de7",
+        "record_sha256": "655aeb72066c3e0deb34b4cbd90f062710829adae89e81287e22a39f282da07b"
+      },
+      "gantt-task-taxonomy": {
+        "local_path": "sources/gantt-task-taxonomy.txt",
+        "sha256": "81c4f78729bd6d5c422e3344d229f67aa796a1c68703484954e64b7801159fd1",
+        "record_sha256": "9c5938c6ffaf51e8c0324e57a66c0e1aa7805c360961f3378f5187f6d78d79a3"
+      },
+      "w3c-use-color": {
+        "local_path": "sources/w3c-use-color.txt",
+        "sha256": "6c08565692242312939f0f107e2c2b6e52a347f7656bd15e965e57f47eb84620",
+        "record_sha256": "518d1de88aedd0097dc7443b2df88cb7c5b269399471b972da56fc5ef6bfab02"
+      }
+    },
+    "skill-src/shared/references/method-sources": {
+      "ontology-scope": {
+        "local_path": "sources/ontology-scope.txt",
+        "sha256": "c05787ff44fb314230d4acb8e14bc5ab4ccb746b7ab3b8277eaaa86339306f7f",
+        "record_sha256": "f0b4266163c8a82d7c79b7493992b4057bb828e917cdbf36bc99c22b87e79539"
+      },
+      "ontology-vocabulary": {
+        "local_path": "sources/ontology-vocabulary.txt",
+        "sha256": "fdd7f6543a4918131ff497f6e2348077282ae94c06228f6c0780a055b5be1ae6",
+        "record_sha256": "78bf7387580f42fad723e1294323ef7e2b63bcff65de572c6781a866bce8b115"
+      },
+      "critical-thinking": {
+        "local_path": "sources/critical-thinking.txt",
+        "sha256": "4725a9ec7852c7fb49ab8a0a735d8bf9f578293160608b7513f5a71cfa0ec33f",
+        "record_sha256": "d8442b668ca6a6da2edb3f4908465667f082a09be24f4dc18a9962148ba8ebb1"
+      },
+      "toulmin": {
+        "local_path": "sources/toulmin.txt",
+        "sha256": "d6d36731d0a42e749b49447fc48f382b1ec592e5f87de72b7346d5a62ae1eb7b",
+        "record_sha256": "d8007d3aedd7a5f4bfba33f515a34741a73a323f1f81c2e3362053524455150e"
+      },
+      "critical-questions": {
+        "local_path": "sources/critical-questions.txt",
+        "sha256": "4b1406309bfe6dc4e38736f8f146d26d94b96fb21457f32ba669ef411dfa3953",
+        "record_sha256": "123dcdeaf4e3bbbd104f0005be13b843d93e1f171b6f9c2bfd96807dea125c3a"
+      },
+      "step-back": {
+        "local_path": "sources/step-back.txt",
+        "sha256": "e924113b0ff9c9a36f7b3a0d5a8f7615c40621d3e27143fe281de99e7660fbd5",
+        "record_sha256": "f9323546c96e362c98d6d574be6af554dfddfdde5a5facb7acc7dc6afb5a4aaf"
+      },
+      "self-correction": {
+        "local_path": "sources/self-correction.txt",
+        "sha256": "2361f32064be1296a12cf6d81e0add7b14b57112c7dfa39c57afc0859d6b540d",
+        "record_sha256": "9ae0aa23909b3b7f276da96dd97aee2bbbf93ed74d0aa1ecfad65a568068f454"
+      },
+      "conditions-background": {
+        "local_path": "sources/conditions-background.txt",
+        "sha256": "303a2e892942fda3d9ef786242c19a6f48ff9fe0bfc12c835348c5fe4338cb23",
+        "record_sha256": "6058d5f3c1ffdee41d74fa004be9229bbdac12c335fd935c15e6260fa1b835f7"
+      },
+      "design-tokens": {
+        "local_path": "sources/design-tokens.txt",
+        "sha256": "b25ad9f541cfd17ce09558f3d5ff268bb6d9696442f69818c528f7d8385efcef",
+        "record_sha256": "1b38a23452e624fb67ca07b6ffbc2862054d293018fe946b6ef1c7d9c20e25c2"
+      },
+      "design-direction": {
+        "local_path": "sources/design-direction.txt",
+        "sha256": "3b94e57806e9c58284c15468ac2e4804e520a386fc6cef7ccd168f7eb77170ed",
+        "record_sha256": "67561c3224b8e2d58188e668c1bcb4437e444d383144d65e5ef4abdfec385d0e"
+      },
+      "evaluation-evidence": {
+        "local_path": "sources/evaluation-evidence.txt",
+        "sha256": "b68554e4d0a870cb23a213e8ef8dc7f173d440786feff5d2cf8af0ed47ff5835",
+        "record_sha256": "0b6af1ec1494d873ba6481f7849d96332a73d54afb72ac74c6a2368ce27d7ff2"
+      },
+      "skill-practices": {
+        "local_path": "sources/skill-practices.txt",
+        "sha256": "9d4e80407138ec6ede70c7cdc984fdb2677db794c39648147929a50c38c2547e",
+        "record_sha256": "593526676ec312ea22e7b3ce3a2a983bc6e1b77f495f30a76e46b9cd610e3c28"
+      },
+      "mit-story": {
+        "local_path": "sources/mit-story.txt",
+        "sha256": "bd7661b9da95a200d07930b6246bd44c32a74a2d1bb8213a13d624109253b66c",
+        "record_sha256": "9a928ba865b16237b9409b0f7cf07f1e8b805d9708bda8dbb1e821a86ae68280"
+      },
+      "mit-slides": {
+        "local_path": "sources/mit-slides.txt",
+        "sha256": "5055e5e6deb75032b606acaded291164d262efe57618bf5f5763668f46f7eb93",
+        "record_sha256": "84a808fe3f2da064217458a2add17e0159c4f36aff1eb36b7c4f7c2a1af84d17"
+      },
+      "chart-checklist": {
+        "local_path": "sources/chart-checklist.txt",
+        "sha256": "0a3ba4b8d123dc64dbd6899ca6fdb99dc60d1bf2351e0a81b594bee51213dba3",
+        "record_sha256": "ab91afc310616c4df412bee70f1f08c6c8c9f5b6f4f8655c95d10ad6a9c67110"
+      },
+      "chart-choice": {
+        "local_path": "sources/chart-choice.txt",
+        "sha256": "f91a98f8ea4f5d5bc5dfa6c3547e257856670d463b7aa50c3e3ddde479b4287a",
+        "record_sha256": "9ff15fe2ce37e88280a2be77838fa6c7d7f7ef792e22e8395a82e51eb0780b2d"
+      },
+      "echarts-container": {
+        "local_path": "sources/echarts-container.txt",
+        "sha256": "d532e7f3ec79b62099220a3755dc0e36bc2f402b4ca0e7b4206b5306f5d23519",
+        "record_sha256": "bc22db497c004b56a98d4660bddcb17d02f08bdc9d7fa1978ca569084acb2be3"
+      },
+      "svg-viewport": {
+        "local_path": "sources/svg-viewport.txt",
+        "sha256": "5861530e0f22fe490ead4e00e16ae7f3ca78eda6d66d65906e3b187cccfbbdff",
+        "record_sha256": "d958bccecc82118f6e719046fcea6dcfea2e73bb6bca37d9ffaaf9c3354a766b"
+      },
+      "complex-images": {
+        "local_path": "sources/complex-images.txt",
+        "sha256": "a6f76f0a6c5b9c17a2c181faf5a4d233779f07124ba1388ad480c325abdbcf2a",
+        "record_sha256": "78682369bacadf14e63bcbb253babb926395bf0ae1eb4e6ca18c9d9cd5c88335"
+      },
+      "snapshot-testing": {
+        "local_path": "sources/snapshot-testing.txt",
+        "sha256": "8c50a908b18791c590e750e3b8f2e151c0f14aeb27448bedb7a1278d4f255ba1",
+        "record_sha256": "286f386b44978d49241151c94b7af1bac8f501ac99b5aa28614619f51c8420fa"
+      },
+      "grounding": {
+        "local_path": "sources/grounding.txt",
+        "sha256": "dac66959a850dd342a130bc40cf634829ea3ef5735a49facf6b68aec29fb4621",
+        "record_sha256": "35b79cd4393cbf3b5c882add7ae5ff0b4361e1a387b75d20d154188eb00badab"
+      },
+      "clarification-value": {
+        "local_path": "sources/clarification-value.txt",
+        "sha256": "07201fd6887a5e07e45bf7bea9b207f264a7fa90dc638be032962ed9dc194844",
+        "record_sha256": "3ad26eaded9278d13cfb0678e232f0162da1411e1d6afdcc2349dfb7bac2d785"
+      },
+      "decision-under-uncertainty": {
+        "local_path": "sources/decision-under-uncertainty.txt",
+        "sha256": "919b6155d291f0e01e96fab68eb45c60913a488b18a2a4bc206920096eec4a5d",
+        "record_sha256": "2dd388cc945ccd7ffe21a4d6f4b4691d5105fdd10256746d1670f83a913c9578"
+      },
+      "expert-judgment-capture": {
+        "local_path": "sources/expert-judgment-capture.txt",
+        "sha256": "4d85a3a6716b468fb013da3f8e79fd9ca10ed0e9f6d8dd1153a87c6a5d3bde9c",
+        "record_sha256": "e2440f5f7ecc53424ba2db25cfa241b90b1f7f3e0ce45d25bb511aeccb58b899"
+      },
+      "mechanism-and-transfer": {
+        "local_path": "sources/mechanism-and-transfer.txt",
+        "sha256": "d198415dcbd1706365f4126d49842822a47a46f0845deb679694e5c8b16fe218",
+        "record_sha256": "a1e083f2c74b0b3fca7a674d30183bb1555b7828a0eb1a8d9fa504a31fedc6fb"
+      },
+      "text-relations": {
+        "local_path": "sources/text-relations.txt",
+        "sha256": "4d4fbe8d7bb3cfeac2b6e231319c475dae6135460d739df42f72761aa8ce7c1c",
+        "record_sha256": "5a1f613f3d8ab476b909634d933ee6d715ec987c5e21b494884dda6f4d918825"
+      },
+      "reading-synthesis": {
+        "local_path": "sources/reading-synthesis.txt",
+        "sha256": "be969cb451444adf75c0f78ac7ffafa010cc36c5ee2477d21f50ec7fd41e1559",
+        "record_sha256": "cef6348b7a80fa1feae3592bfd178427a67c631d0cd7bb86b496424cd524d526"
+      },
+      "reader-argument-attention": {
+        "local_path": "sources/reader-argument-attention.txt",
+        "sha256": "12f6ee6b210b97006868aab28bace5de14ba8e3c3858c5579a2ca453c4934bb3",
+        "record_sha256": "77180f5946c79c288e81a6fe8cb5f82a84da6f2e33680fe5df3d6f61527806f2"
+      },
+      "revision-coaching": {
+        "local_path": "sources/revision-coaching.txt",
+        "sha256": "1a61b14864ff7419957c110e3c9dc8a308812a830a064b145c8ce1923044b941",
+        "record_sha256": "6fe9eafe6f72b182433469db2194b284b894fde9452ab4ab052247844e6ed9b0"
+      },
+      "audience-value-contribution": {
+        "local_path": "sources/audience-value-contribution.txt",
+        "sha256": "559de1e969cb8335fcf89ab16e1b5670e055eddc8ac3783ce9f0d719c26ae0fc",
+        "record_sha256": "f9eb4188155366887fe58dc3f1b9004a48ff15907d433cc906036c195b9ef56d"
+      },
+      "judgment-led-editing": {
+        "local_path": "sources/judgment-led-editing.txt",
+        "sha256": "dce9610225304bc3c7423fc8be2a021d451e5314411f96e2e46efd3e7f38aa89",
+        "record_sha256": "191dda32fcc4b3032b649fa747417cb5d7d14970e0e413ae64955c129f566d5e"
+      },
+      "explanation-depth": {
+        "local_path": "sources/explanation-depth.txt",
+        "sha256": "42e7e95319801713e75c983b392f5db24c399c1a6ce06b10732a638e42c25d04",
+        "record_sha256": "ff04747d878aab223749f96fc69126908698e42b7d0fe185a527efb9aa60d4ff"
+      }
+    }
+  }
+}

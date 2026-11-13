@@ -1,8 +1,8 @@
 {
   "schema_version": "1",
-  "archive_version": "0.3",
+  "archive_version": "0.4",
   "runtime_network_required": false,
-  "scope": "32 concise original method-source summaries, including selective syntheses. Read only by need; no full-source or product-effectiveness claim.",
+  "scope": "36 method representations: 35 original summaries and one full extracted CC BY paper; existing NASA summary reused without duplicate URL; read scopes are narrower than acquisitions. Existing32 records and bytes preserved.",
   "card_sources": {},
   "sources": [
     {
@@ -804,6 +804,106 @@
         "limitations": "No quotations or original full-text redistribution. No universal heading effect, model effectiveness or endorsement claim."
       },
       "sha256": "42e7e95319801713e75c983b392f5db24c399c1a6ce06b10732a638e42c25d04"
+    },
+    {
+      "id": "yu-zenker-2020-fulltext",
+      "title": "Schemes, Critical Questions, and Complete Argument Evaluation, 2020: full extracted text",
+      "publisher": "Shiyang Yu and Frank Zenker",
+      "canonical_url": "https://d-nb.info/121098167X/34",
+      "local_path": "sources/yu-zenker-2020-fulltext.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Complete30-page extracted paper text; read abstract,§1,§2.1–2.2,§5,§6.1–6.5,§7 and license. §3–4 only located selectively; not all-page review. Complements unchanged earlier Springer abstract/introduction summary.",
+      "representation": "source_text",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Complete30-page extracted paper text; read abstract,§1,§2.1–2.2,§5,§6.1–6.5,§7 and license. §3–4 only located selectively; not all-page review. Complements unchanged earlier Springer abstract/introduction summary.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "CC BY4.0; format conversion from PDF text, no translated original",
+        "evidence_url": "https://creativecommons.org/licenses/by/4.0/",
+        "attribution": "Shiyang Yu and Frank Zenker",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "2772f7eb548e6ce63a47255e4a8e80b62d4f0e615bb1861c39bb60c0d69821d3"
+    },
+    {
+      "id": "consider-opposite",
+      "title": "Lord, Lepper & Preston1984: considering the opposite notes",
+      "publisher": "Charles G. Lord, Mark R. Lepper and Elizabeth Preston",
+      "canonical_url": "https://doi.org/10.1037/0022-3514.47.6.1231",
+      "local_path": "sources/consider-opposite.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Research read printed1231–1239: abstract, experiments1/2 methods/results, general discussion and footnote3. No full end discussion/references; copyrighted original not redistributed.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Research read printed1231–1239: abstract, experiments1/2 methods/results, general discussion and footnote3. No full end discussion/references; copyrighted original not redistributed.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://doi.org/10.1037/0022-3514.47.6.1231",
+        "attribution": "Charles G. Lord, Mark R. Lepper and Elizabeth Preston",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "ae685d682417d6e371b411780031804f2ebd9d19a1bb4c4f3763e34e764ab5b6"
+    },
+    {
+      "id": "prospective-hindsight",
+      "title": "Mitchell, Russo & Pennington1989: temporal perspective notes",
+      "publisher": "Deborah J. Mitchell, J. Edward Russo and Nancy Pennington",
+      "canonical_url": "https://onlinelibrary.wiley.com/doi/10.1002/bdm.3960020103",
+      "local_path": "sources/prospective-hindsight.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Research read printed25–36: abstract, design, two experiments major methods/results, General Discussion and Aiding decisions; not all tables or full appendix.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Research read printed25–36: abstract, design, two experiments major methods/results, General Discussion and Aiding decisions; not all tables or full appendix.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://onlinelibrary.wiley.com/doi/10.1002/bdm.3960020103",
+        "attribution": "Deborah J. Mitchell, J. Edward Russo and Nancy Pennington",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "e1b2633fe921cafa0a7ae55cd6c5d096cadb3291657bfdb3b5aa4de675b3386f"
+    },
+    {
+      "id": "self-presentation-calibration",
+      "title": "Scopelliti, Loewenstein & Vosgerau2015: self-presentation notes",
+      "publisher": "Irene Scopelliti, George Loewenstein and Joachim Vosgerau",
+      "canonical_url": "https://doi.org/10.1177/0956797615573516",
+      "local_path": "sources/self-presentation-calibration.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Research read abstract, experiment1 methods PDF1–3, experiment3 design/selected results7–9, discussion/limits10–11; not full experiment2 or table replication.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Research read abstract, experiment1 methods PDF1–3, experiment3 design/selected results7–9, discussion/limits10–11; not full experiment2 or table replication.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://doi.org/10.1177/0956797615573516",
+        "attribution": "Irene Scopelliti, George Loewenstein and Joachim Vosgerau",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "10b72970b537b212b2304834f16c0467f6f2c1043e12040be2d949e20ef226a3"
     }
   ]
 }

@@ -1,0 +1,1278 @@
+Source: https://doi.org/10.1007/s10503-020-09512-4
+Archive: https://d-nb.info/121098167X/34
+Authors: Shiyang Yu and Frank Zenker (2020)
+License: CC BY 4.0 https://creativecommons.org/licenses/by/4.0/
+Representation: full PDF text extraction; formatting altered, original PDF unchanged.
+Fetched: 2026-11-12. Read scope recorded separately in manifest.json and ../index.md.
+
+[PDF page 1]
+Vol.:(0123456789)
+Argumentation
+https://doi.org/10.1007/s10503-020-09512-4
+1 3
+ORIGINAL RESEARCH
+Schemes, Critical Questions, and Complete Argument 
+Evaluation
+Shiyang Yu1  · Frank Zenker2 
+ 
+© The Author(s) 2020
+Abstract
+According to the argument scheme approach, to evaluate a given scheme-saturat-
+ing instance completely does entail asking all critical questions (CQs) relevant to it. 
+Although this is a central task for argumentation theorists, the field currently lacks 
+a method for providing a complete argument evaluation. Approaching this task at 
+the meta-level, we combine a logical with a substantive approach to the argument 
+schemes by starting from Toulmin’s schema: ‘data, warrant, so claim’. For the yet 
+more general schema: ‘premise(s); if premise(s), then conclusion; so conclusion’, we 
+forward a meta-level CQ-list that is arguably both complete and applicable. This list 
+should inform ongoing theoretical efforts at generating appropriate object-level CQs 
+for specific argument schemes.
+Keywords Argument · Complete evaluation · Critical question · Scheme · 
+Standardization
+1 Introduction
+For the purpose of evaluating natural language arguments, argument(ation) schemes 
+and their associated critical questions (CQs) have remained central to contemporary 
+argumentation theory (e.g., Walton et al. 2014, 89). Probably the first scholar to use 
+‘critical question’ (CQ) in today’s technical sense was Hastings (1962). Yet earlier, 
+ * Frank Zenker 
+ f.zenker@ans.pw.edu.pl
+1 College of Philosophy, Nankai University, Tianjin, People’s Republic of China
+2 Center for Formal Ontology, Warsaw University of Technology, Pl. Politechniki 1, 
+00-661 Warsaw, Poland
+
+[PDF page 2]
+ S. Yu, F . Zenker 
+1 3
+Perelman and Olbrechts-Tyteca (1958) had introduced ‘argumentative scheme’ 
+(French: schème argumentatif) with reference to the schemes’ historical ancestors: 
+the topoi (Greek: places; Latin: loci).1 While the topoi serve primarily in argument 
+construction, whereas the schemes and CQs serve primarily in argument evaluation, 
+both concepts, of course, are closely related. Even when restricted to argument eval-
+uation, however, a unified theoretical understanding of argument schemes and CQs 
+has so far remained absent.
+Indeed, already a unified taxonomy of argument schemes can hardly arise as 
+long as “existing classifications of arguments are unsatisfying in a number of ways” 
+(Wagemans 2016, 1).
+2 For instance, pragma-dialecticians treat an argument scheme 
+as a kind of “characteriz[ation] [of] the way in which the reason given in support of 
+a standpoint is supposed to bring about a transfer of acceptance to the standpoint in 
+a particular type of argumentation” (van Eemeren 2018, 7). Further, informal logi-
+cians and scholars in AI & law tend to view schemes as “forms of argument (struc-
+tures of inference) that represent structures of common types of arguments used in 
+everyday discourse, as well as in special contexts like those of legal argumentation 
+and scientific argumentation” (Walton et al. 2008, 1). Virtually all scholars, moreo-
+ver, let ‘argument scheme’ denote a linguistic structure, while some few also view 
+such structures as externalizing an (internal) reasoning scheme (Blair 2001; Hitch-
+cock 2006, 218).
+3 We adopt the former use.
+Schemes and CQs clearly relate to other methods for evaluating arguments. For 
+example, a normative application of fallacy theory assumes that “many [possibly 
+most] of the fallacies are failed instances of good argument schemes or forms” 
+(Tindale 2007, xiv), although such instances as “[a] ‘Straw Man’ argument would 
+seem to be always incorrect and have no redeemable instances” (ibid., 12). Argu-
+ment schemes also are indispensable in computational versions of acceptance-based 
+approaches like Walton (2016), who—viewing schemes and CQs as basic (ibid., 
+339)—finds them compatible with probabilistic approaches like Verheij’s (2014). 
+Hahn and Hornikx (2016, 1833) even argue “that the most fruitful approach to 
+developing normative models of argument quality […] combines the argumenta-
+tion scheme approach with [the Pascalian probability approach known as] Bayesian 
+argumentation.”
+2 Wagemans’ own periodic table of arguments is based on three distinctions (ibid., 3–7): subject argu-
+ment versus predicate argument, a distinction referencing the constituents of arguments under a formal-
+linguistic analysis; first-order versus second-order argument, a distinction seemingly running parallel 
+to the classical one between internal and external topics (Hitchcock and Wagemans 2011, 197–199); 
+and finally the distinction—originating in debate theory—between propositions that constitute policy-, 
+value-, or fact-related argumentation (Schut and Wagemans 2014, 25–39).
+3 Argument tends to differ from reasoning in its direction. Argument runs typically (but not necessarily) 
+from a claim to its supporting reason(s), whereas reasoning runs from the reason(s) to a claim. Only the 
+former direction assumes that a claim is yet in need of reasoned support. In fact, the argument-to-reason-
+ing relation is yet more complex: “[a]rguments can also […] stimulate reflection on one’s own reason-
+ing,” which is one of their “cognitive functions” (Hoffmann 2016, 366).
+1 For additional background, see Garssen’s (2001) historical overview, Rubinelli (2009) on Aristotle’s 
+and Cicero’s topoi, Rapp and Wagner (2013, 22–24) on how the topoi relate to argument schemes, and 
+Walton et al. (2008) for a collection of schemes and associated CQs.
+
+[PDF page 3]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+Contemporary scholarship associates lists of CQs (or CQ-lists) for the most part to 
+the schemes themselves, and only in rare cases to their applied instances. This asso-
+ciation occurs at what we call the theoretical level, respectively the applied level. At 
+both levels, however, agreed-upon stopping criteria for a complete CQ-list are una-
+vailable, thus leaving it unclear whether analysts must ask yet further CQs. Our main 
+objective in this paper, therefore, is to develop meta-level conditions under which a 
+CQ-based evaluation is complete. Similar in motivation is Rigotti and Greco Moras-
+so’s (2006, 2009, 2010) argumentum model of topics (AMT).
+4 Closest to our own 
+approach probably comes the epistemological approach of Lumer (2011), who treats 
+an argument scheme as the “general form of an ideal, elementary or molecular argu-
+ment” (ibid., 8), and considers “the whole system of (ideal [i.e., fully explicit, valid]) 
+elementary argument schemes [as] the argument tree” (ibid., 10; his italics). This 
+tree’s three “branches [should] be defined […] according to the argument schemes’ 
+epistemological underpinnings,” namely: “logic, probability theory and (prudential) 
+desirability theory” (ibid., 10), which thus serve as meta-level evaluative principles. 
+Our approach differs from Lumer’s in that we treat ARGUMENT SCHEME as a pri-
+marily logical concept.
+5 Moreover, Lumer seems to downplay the influence of the 
+Aristotelian Topics (ibid., 2), whereas our own attempt seeks to incorporate them by 
+enriching a logical with a substantive approach.
+The following thus offers a meta-level hybrid-account of argument schemes and 
+CQs, that is, a logical account (Sect.  2) complemented by a substantive account 
+(Sect.  3). We submit that the Toulmin model proves sufficient to develop this 
+account (Sect.  4). Upon reviewing related work (Sect.  5), we propose a complete 
+CQ-list, justify its applicability (Sect. 6), and then conclude (Sect. 7).
+2  Why a Logical Account of Argument Schemes?
+2.1  Levels
+One may associate CQs to an argument scheme or to its specific instance. The for -
+mer level we call theoretical because it abstracts from the argument’s specific con-
+tent; the latter level we call applied. Accordingly, one may separate theoretical from 
+applied CQs, which specify the theoretical CQs by saturating their placeholders. 
+4 Devised for argument reconstruction, the AMT builds upon the pragma-dialectical distinction between 
+procedural and material starting points. According to the AMT, an “argument scheme combines a proce-
+dural starting point, coinciding with the inferential connection (maxim) that is activated, with a material 
+starting point guaranteeing […] the applicability of the maxim to the actual situation considered in the 
+argument” (Rigotti and Greco Morasso 2010, 493). Regarding the procedural starting point, they distin-
+guish three levels: (i) ontological relations, represented as locus; (ii) a series of inferential connections 
+(‘maxims’) arising from each ontological relation; and (iii) a logical form activated by each maxim. Our 
+own approach is more fundamental because our theoretical level can house all of their three levels.
+5 We borrow the term ‘logical’ from Prakken (2010), who obtains a logical account by formalizing argu-
+ment schemes such that ‘formalization’ denotes his method, while ‘logical account’ names the method’s 
+outcome. As an anonymous reviewer has rightly pointed out, one may alternatively call our account ‘for-
+mal’ rather than ‘logical’.
+
+[PDF page 4]
+ S. Yu, F . Zenker 
+1 3
+This distinction also applies to argument schemes. As an example, consider the 
+‘from a position to know’-scheme at the theoretical level (1a–c),6 and compare three 
+of its instances at the applied level (1a′–c′), where substantive rather than logical 
+information saturates the placeholders a and A.
+(1a) Argument scheme ‘from a position to know’; theoretical level, instance 1
+a is in a position to know whether A is true.
+a asserts that A is true.
+A is true.
+(1b) Argument scheme ‘from a position to know’; theoretical level, instance 2
+a is in a position to know whether A is true.
+a asserts that A is true.
+If a is in a position to know whether A is true, and a asserts that A is true, 
+then A is true.
+A is true.
+(1c) Argument scheme ‘from a position to know’; theoretical level, instance 3
+a is in a position to know whether A is true.
+a asserts that A is true.
+a is an honest (trustworthy, reliable) source.
+A is true.
+(1a′) Argument scheme ‘from a position to know’; applied level, instance 1
+Harry is in a position to know whether ‘Mary is the murderer’ is true.
+Harry asserts, “‘Mary is the murderer’ is true.”7
+‘Mary is the murderer’ is true.
+7 At the applied level, one may find the alternative version: “Harry asserts ‘Mary is the murderer’.” Fol-
+lowing a deflationary account of truth, this version omits ‘is true’ (e.g., Daniel and Nic 2014). Yet both 
+versions amount to pragmatic (near-)equivalents.
+6 See Prakken (2010) and our Sect.  2.2 for alternative scheme-versions, whose names variously carry 
+‘a’, ‘the’ or no article), and the wording of which is always a matter of choice. Walton et al. (2008, 309), 
+for instance, list this scheme as “Major Premise: Source a is in position to know about things in a certain 
+subject domain S containing proposition A. Minor Premise: a asserts that A is true (false). Conclusion: A 
+is true (false).”.
+
+[PDF page 5]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+(1b′) Argument scheme ‘from a position to know’; applied level, instance 2
+Harry is in a position to know whether ‘Mary is the murderer’ is true.
+Harry asserts, “‘Mary is the murderer’ is true.”
+If Harry is in a position to know whether ‘Mary is the murderer’ is true, and 
+Harry asserts ‘Mary is the murderer’, then ‘Mary is the murderer’ is true.
+‘Mary is the murderer’ is true.
+(1c′) Argument scheme ‘from a position to know’; applied level, instance 3
+Harry is in a position to know whether ‘Mary is the murderer’ is true.
+Harry asserts “‘Mary is the murderer’ is true.”
+Harry is an honest (trustworthy, reliable) source.
+‘Mary is the murderer’ is true.
+As these examples show, at the applied level one simply replaces ‘a ’ by 
+‘Harry’, and ‘A’ by ‘Mary is the murderer’. At the theoretical level, moreover, 
+1(b) externalizes the logical inference underlying 1(a). Finally, 1(c′ ) states infor -
+mation—viz. Harry is an honest (trustworthy, reliable) source—that, if it is false, 
+expresses exceptions to the inference in 1(b′ ), as do (1b–1c). (We return to this in 
+Sect. 2.2).
+Evaluating a given scheme instance requires a general normative yardstick, one 
+not limited to specific schemes or instances. Only if the theoretical level provides 
+such normativity, or reasonableness, can this normativity transfer unproblemati-
+cally from the theoretical to the applied level. This constraint forces us to rec-
+ognize a third level: the meta -level. Its instances are the logical forms (1a″ –c″), 
+which are themselves yet more abstract than the instances at the theoretical level. 
+As desired, these meta-level logical forms are sufficiently general to transfer their 
+own evident reasonableness from the meta-level to the theoretical level.
+(1a″) Argument scheme ‘from a position to know’; meta-level, instance 1
+Premise(s)
+Conclusion
+(1b″) Argument scheme ‘from a position to know’; meta-level, instance 2
+Premise(s)
+If premise(s), then conclusion
+Conclusion
+
+[PDF page 6]
+ S. Yu, F . Zenker 
+1 3
+(1c″) Argument scheme ‘from a position to know’; meta-level, instance 3
+Premise(s)
+Absence of exception(s)
+Conclusion
+Insofar as the meta-level is a logical construction, one must accordingly treat an 
+argument scheme as a logical structure. This structure one can study independently 
+of dialectical or rhetorical considerations, because such considerations will affect 
+neither a scheme’s structure nor its components. They rather pertain to the criteria 
+for evaluating a scheme instance, for instance with regard to being internally con-
+sistent, audience-accepted, commitment-incurring, burden-of-proof discharging, etc. 
+(see Sect. 6.2).
+2.2  A Logical Account of Argument Schemes
+The two basic features of our account thus are an inference rule and exceptions to it. 
+Argument schemes, after all, “can be transformed into instances of logical inference 
+rules by adding the connection between premises and conclusion as a conditional 
+premise” (Prakken 2005, 307; see Walton 1996, 2016, 323–325). Treating schemes 
+as logical constructs therefore entails that “a procedure for evaluating arguments pri-
+marily takes the form of a [non-monotonic] logic” (Prakken 2010, 1).
+8
+For instance, the inference rule in (2)—containing ‘usually’—is the defeasible 
+modus ponens rule.
+(2) Defeasible modus ponens rule
+   P
+   If P then usually Q
+   Therefore (presumably), Q
+Saturating (2) to the ‘from a position to know’-scheme can either yield (3), con-
+taining a defeasible inference rule, or (4), containing a generalised conditional 
+premise that must itself be defeasible (Prakken 2010, 7f.). The choice between (3) 
+and (4), of course, is a matter of taste rather than of substance.
+8 Prakken (2010, 5) submits that a scheme not only includes “defeasible inference rules, i.e., elements of 
+a reasoning method.” He rather finds that a scheme can be “a reasoning method in itself” (ibid.), because 
+it features “abstractions of more complex lines of reasoning, which may not always be naturally reduced 
+to reasoning with defeasible inference rules” (ibid., 13). What thus amounts to an identification of the 
+method with its elements, he illustrates with the modern version of Peirce’s abductive reasoning (Yu and 
+Zenker 2018)—an identification we reject. For it raises questions (e.g., “How many reasoning methods 
+are there; what separates them?”) that Prakken himself leaves unaddressed.
+
+[PDF page 7]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+(3) Argument scheme ‘from a position to know’; defeasible inference rule
+a is in a position to know whether A is true.
+a asserts that A is true.
+A is true.
+(4) Argument scheme ‘from a position to know’; generalised conditional premise
+a is in a position to know whether A is true.
+a asserts that A is true.
+If a is in a position to know if A is true, and a asserts that A is true, then A is 
+true.
+A is true.
+When formulating the inference rule, another matter of taste is whether to include 
+a dedicated premise stating the absence of exceptions,9 as in (5).
+(5) Argument scheme ‘from a position to know’; inference-rule account with 
+exception-premise(s)
+a is in a position to know whether A is true.
+a asserts that A is true.
+a is an honest (trustworthy, reliable) source.
+A is true.
+Moving beyond considerations of mere taste, evaluating a defeasible argument 
+completely always presupposes that one makes its implicit parts explicit (Ennis 
+1982, 66; Gough and Tindale 1985, 99; van Eemeren and Grootendorst 1992, 141; 
+Yu and Zenker 2019). At the applied level, this demands listing an inference’s 
+exceptions. At the same time, however, it is unclear whether all actual and possi-
+ble exceptions can be listed (Zenker 2009). Even if all premises of (5) are true, for 
+instance, one cannot safely infer ‘A is true’, because a might lie. To give another 
+example, the premise ‘a is generally a reliable source’ does not imply ‘a speaks the 
+truth now’. Otherwise, one could deduce ‘A is true’ from ‘a is generally a reliable 
+source’ and ‘a asserts that A’ alone. (As this sidesteps the premise ‘a is in a position 
+to know whether A is true’, however, it also makes it questionable that one treats the 
+‘from a position to know’-scheme.) The gap in meaning between ‘generally’ and 
+‘now’ thus implies implicit parts, which to make explicit is an unsatisfied need that 
+rightly fosters doubt whether a list of applied CQs can ever be complete (see note 9).
+9 For any scheme, adding inference-invalidating exceptions to the premises turns undercutting attacks—
+directed at the inference in (3)—into premise attacks in (5), for one can always transform a scheme’s CQs 
+into additional premises (Prakken 2010, 9; Hoffmann 2018, 233). Logically equivalent, both methods 
+differ in convenience.
+
+[PDF page 8]
+ S. Yu, F . Zenker 
+1 3
+In developing a logical account that fits with any  argument scheme, the forgoing 
+provides strong reasons against operating at the applied level. Instead, we opt for a 
+meta-level version of a defeasible conditional premise, as in (6).
+(6) Meta-level logical structure for any argument scheme
+    Premise(s)
+    If premise(s), then conclusion
+    Therefore, conclusion
+As (6) abstracts from (2), one may omit ‘usually’ (contained in the ‘if–then’ con-
+ditional’s saturated version), because this term becomes redundant at the meta-level. 
+An argument scheme’s logical structure now looks deductive. Far from providing 
+clarity, however, a deductive structure rather obscures the conditional’s defeasible 
+character that the ‘if–then’ premise expresses, one that pivots on substantive rather 
+than logical information. We therefore proceed to complement our logical account 
+with a substantive account.
+3  A Substantive Account of Argument Schemes
+3.1  The Pragma‑Dialectical Theory
+Pragma-dialecticians view argumentation as “a verbal, social, and rational activ -
+ity aimed at convincing a reasonable critic of the acceptability of a standpoint by 
+putting forward a constellation of propositions justifying or refuting the proposi-
+tion expressed in the standpoint” (van Eemeren and Grootendorst 2004, 1). As the 
+authors rightly note, logic alone offers but limited insights into how the acceptabil-
+ity of an argument’s premises transfers to a claim. For such transfers “to achieve the 
+interactional effect that the listener accept[s] [the speaker’s] standpoint,” speakers 
+rely not on logic but rather “on a ready-made argumentation scheme”—or argument 
+scheme—that is, “a more or less conventionalized way of representing the relation 
+between what is stated in the argument and what is stated in the standpoint” (van 
+Eemeren and Grootendorst 1992, 96; their italics).
+Argument schemes thus represent kinds of relations between premises, or rea-
+sons, and a standpoint, or claim. As the theory’s basic kinds, moreover, Pragma-
+dialecticians distinguish relations based on symptomaticity, similarity, or causality 
+(Garssen 1994, 1997). As an example, if “someone tries to convince his interlocutor 
+by pointing out that something is symptomatic of something else,” then acceptability 
+is transferred by “a relation of concomitance” (van Eemeren and Grootendorst 1992, 
+96f.). In such cases, “[t]he argumentation is presented as if it [were] an expression, 
+a phenomenon, a sign or some other kind of symptom of what is stated in the stand-
+point” (ibid., 97). As is the case with the other two kinds, this relation cites substan-
+tive rather than formal content.
+
+[PDF page 9]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+3.2  A Substantive Account’s Benefits
+As a logical premise, the ‘if–then’ premise is central to both deductive inferences 
+such as modus ponens, as well as to inductive ones such as the statistical syllogism. 
+Insofar as the three basic relations specify the ‘if–then’ premise’s substance, moreo-
+ver, suitable replacement in (6) yields:
+(7) Combined argument scheme at the meta-level
+    Premise(s).
+    The relation R holds between the referents of premise(s) and conclusion.
+    Therefore, conclusion.
+This specifies what the ‘if–then’ premise means. Like a logical account, also a 
+substantive account allows one to distinguish three levels. Given the similarity rela-
+tion, for instance, one can readily obtain three increasingly abstract specifications:
+(8a) Example, similarity relation, applied level
+“The method I propose worked last year (and this problem is similar to last 
+year’s), so the method will work again.” (van Eemeren and Grootendorst 
+1992, 97)
+(8b) Example, similarity relation, theoretical level
+“For [problem] X, [method] Y is valid because [, f]or [problem] Z, [method] 
+Y is valid and X is comparable [because it is relevantly similar] to Z.” (van 
+Eemeren and Kruiger 1987, 73f.)
+(8c) Example, similarity relation, meta-level
+For X, Y is valid because, for Z, Y is valid; and the relation R connects X and 
+Z.
+In (8a), the similarity between last year’s and this year’s problem shall support 
+that the method is valid for this year’s problem, a conclusion that is grounded in 
+the method’s proven validity for a similar problem. Strictly speaking, if the accept-
+ability-grounding similarity relation, R, holds true, it cannot in any good sense hold 
+between (parts of) premises and the conclusion, but must rather hold between the 
+two problems, on one hand, and between the methods’ validity for each problem, on 
+
+[PDF page 10]
+ S. Yu, F . Zenker 
+1 3
+the other.10 Of course, where the distinction between the linguistic and the ontic—
+between words and things—is negligible, one may abstract R yet further:
+(9a) Example, similarity relation, applied level
+The method I propose worked last year (and the method’s proven problem-
+solving ability for last year’s problem is similar to the method’s problem-
+solving validity for this year’s problem, because the problems are similar), 
+so the method will work again.
+(9b) Example, similarity relation, theoretical level
+Premise(s).
+Therefore, conclusion.
+(9c) General relation, meta-level
+Premise(s).
+Therefore, conclusion.
+Like the meta-level treatment of the ‘from a position to know’-scheme in 
+(1a″–c″),
+11 (9c) abstracts fully from the relation being one of similarity. It is this 
+scheme, therefore, that applies to all types of substantive relations. Having thus rep-
+resented an argument scheme’s structure, we can turn to its substantive aspect.
+3.3  Defining Argument Scheme
+A consensus-definition of ‘argument scheme’ being absent, our own definition pivots 
+on three choices. These relate to the level of abstraction, to the substantive versus 
+logical distinction, and to the object of study. First, we define ‘argument scheme’ at 
+the meta-level, to which both the theoretical and the object level are subordinate. The 
+‘argument from a position to know’-scheme, for instance, exemplifies the concept 
+10 As Wagemans (2019, 61) observes, “the common term [that is shared between the premises] functions 
+as the fulcrum of the leverage of acceptability from the premise to the conclusion.” A transfer of accept-
+ability that is itself achieved through speakers’ use of natural language argument will trivially depend on 
+linguistic information. The transfer’s own reasonableness, however, may non-trivially depend on ontic 
+information, viz. on how the world is. This holds although—on the linguistic side—one can distinguish, 
+at the same abstract level, two additional similarity-levels. In 8(a), at one level, a similarity relation holds 
+between the entire premise and the conclusion—viz. between ‘the method’s problem-solving validity for 
+last year’s problem’ and ‘the method’s problem-solving validity for this year’s problem’. At a second 
+level, an additional similarity relation holds between this year’s and last year’s problem, now treated as 
+parts of the premise and the conclusion. (We thank an anonymous reviewer for this observation.).
+11 One can alternatively treat the ‘from a position to know’-scheme as in (7). Considering the witness as 
+an authority lets the scheme feature a symptomatic relation (Garssen 2001, 92).
+
+[PDF page 11]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+ARGUMENT SCHEME, yet the scheme itself remains distinct from the concept. 12 
+Second, argument schemes do not merely cite substantive information that a logical 
+account abstracts “away,” they also cite such information at structural positions that 
+a logical account helps identify. A logical and a substantive account are therefore 
+complementary. Third, if one were to define an argument scheme at the meta-level in 
+terms of the substantive relation alone, then one would capture merely the ‘if–then’ 
+premise. However, one could obviously not saturate this scheme any further to (re-)
+construct an argument at the applied-level. We therefore define as follows:
+Definition of ‘argument scheme’: S is an argument scheme if, and only if, S 
+is a meta-level argument with at least one premise and a conclusion, where 
+the transfer of the premise(s)’s acceptability to the conclusion grounds in a 
+substantive—as opposed to a logical—relation, R, that holds between the 
+scheme’s sentences, their parts, or their referents.
+This captures the combined meta-level account of argument scheme in (7). We 
+view (7) as embodying an argument scheme’s structure and its substance. Having 
+thus defined the noumenon of argument scheme, we can turn to its evaluation, a task 
+for which the Toulmin model proves sufficient.
+4  Argument Evaluation on the Toulmin Model
+4.1  The Toulmin Model
+Viewing arguments as organisms, Toulmin (1958 [2003]) 13 observed that differ -
+ent fields use distinct argument evaluation criteria, but the same argument layout, 
+or model (Conley 1990, 294–296; Hitchcock and Verheij 2006; van Eemeren et al. 
+2014, 203–256; Zenker 2018). In fact, Toulmin’s model became so influential as to 
+widely “replace the old concepts of ‘premises’ and ‘conclusion’ with the new con-
+cepts of ‘claim’, ‘data’, ‘warrant’, ‘model qualifier’, ‘rebuttal’ and ‘backing’” (van 
+Eemeren et  al. 2014, 204). Figure  1 illustrates this model with what probably is 
+Toulmin’s best-known example (Toulmin 2003, 97).
+In Fig.  1, the starting point is the claim (C) ‘Harry is a British subject’; the data 
+element (D) is ‘Harry was born in Bermuda’ (see ibid., 90). The warrant (W)—the 
+relevant instance of any “general, hypothetical statements, which can act as bridges, 
+and authorize the sort of step to which our specific argument commits us” (ibid., 
+91)—is: ‘A man born in Bermuda will generally be a British subject’. Alas, this war-
+rant “would possess neither authority nor currency” without a backing (B), which 
+13 Page numbers cited for Toulmin (1958) refer to Toulmin (2003).
+12 By analogy, the infamous bird Tweety and its genus—penguin—both exemplify the concept BIRD. 
+Yet both are distinct from the concept itself. The level at which one defines BIRD thus is more abstract 
+than the level where one defines penguin or Tweety. In other words, Tweety, penguin, and BIRD are 
+housed at the applied, the theoretical, and the meta-level.
+
+[PDF page 12]
+ S. Yu, F . Zenker 
+1 3
+Toulmin abbreviates as: “[t]he following statues and other legal provisions: …” 
+(ibid., 96f.).
+Since a warrant can feature “exceptional conditions which might be capable of 
+defeating or rebutting the warranted conclusion,” the rebuttal (R) may be instanti-
+ated, for instance, by “[b]oth his parents were aliens,” or by “[h]e has become a 
+naturalized American” (ibid., 94, 106). Accordingly, a qualifier (Q)—e.g., ‘presum-
+ably’—must indicate “the strength conferred by the warrant on this step” (ibid., 94), 
+which thus specifies the claim. We will return to this model in Sect. 4.3.
+4.2  Evaluation Criteria
+Virtually all approaches to argument evaluation seek to supply general norms. For 
+instance, the RSA criteria—relevance, sufficiency, acceptability—demand that a 
+good argument’s premises are acceptable, relevant to the conclusion, and that they 
+support it sufficiently (Johnson and Blair 1994, 54f.). So do Govier’s (2001) ARG-
+conditions, as well as Freeman’s (1991) “basic dialectical questions […] a rational 
+judge would ask in drawing out an argument from a proponent” (ibid., 37f.; see his 
+1985, 38f.) Johnson (2000) adds premise truth as a fourth criterion, yielding the 
+RSAT criteria.
+14
+The RSAT criteria are interrelated: premise sufficiency presupposes premise 
+relevance. Both in turn presuppose premise acceptability (Biro and Siegel 1992; 
+Harry is a 
+British subject.
+Harry was born 
+in Bermuda.
+So, presumably,
+Unless
+Both his parents were 
+aliens/he has become a 
+naturalized American/…
+Since
+A man born in Bermuda 
+will generally be a 
+British subject.
+On account of 
+The following statutes 
+and other legal 
+provisions: …
+Fig. 1  Toulmin’s “Harry is a British subject”-example
+14 Comparing truth to acceptability, Johnson (2000, 336f.) favors including the truth criterion, so that 
+truth can ground acceptability (ibid., 197f.). For criticisms, see Blair (2011, 94), van Rees (2001, 236), 
+van Eemeren et al. (2014, 383), and Bondy (2010).
+
+[PDF page 13]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+Godden and Zenker 2018), while the truth criterion may conflict with the accept-
+ability criterion (Pinto 1994).15 In specifying how the criteria apply, Johnson (2000) 
+suggests that for an argument to achieve rational persuasion, it is necessary (but 
+insufficient) that, next to the argument’s illative core, analysts also address its dialec-
+tical tier—for instance by asking such CQs as ‘how well does the arguer deal with 
+standard objections and criticism?’; ‘how well does the argument address alternative 
+positions, as well as its consequence or implications?’ (ibid., 207f.).
+Analysts may need various CQs to render the RSAT criteria applicable; yet none 
+of the authors cited here claim that the criteria are  complete. Indeed, the specifi-
+cation and the completeness problem—how to detail all dialectical obligations to 
+address objections to the illative core (ibid., 327–333); are the illative core- and 
+dialectical tier-criteria exhaustive (ibid., 333–336)—have both resisted a satisfac-
+tory solution. Rather than discuss the criteria’s scope, independence, or consistency, 
+therefore, our immediate task is to address their completeness.
+4.3  Making Toulmin’s Model More Precise
+Various scholars already use the Toulmin model in argument evaluation (e.g., Free-
+ley and Steinberg 2009; Grennan 1997; Hastings 1962; Kienpointner 1992; Toulmin 
+et al. 1984). Particularly Verheij (2003, 2006) and Prakken (2010) use it for a com-
+plete evaluation (see Sect.  5.2). Because the model prescribes how an argument’s 
+structural parts should function, it offers a useful sense in which the model is nor -
+matively complete: an argument is good (or valid) if, and only if, all model com-
+ponents are fully explicit and fulfill their functions. Thus, to evaluate an argument 
+completely is to evaluate whether all its components function well.
+Some scholars have suggested equating an argument scheme with the war -
+rant (e.g., Grennan 1997; Hitchcock 2006; see van Eemeren 2018, 171). As Mar -
+raud (2018, 325) observes, however, even if argument schemes are normally clas-
+sified according to their warrants, nothing forces us to identify both. At any rate, 
+this would run counter to understanding a warrant as a genuine part of an argument 
+scheme (see Sect. 3.3).
+If one instead treats only the substantive relation R as a warrant, then Toulmin’s 
+model is already sufficiently general to subsume any specific argument. A decisive 
+reason to nevertheless make the model yet more precise is Toulmin’s inconsistent 
+stance as to whether warrants must be more general than ‘if D, then C’ (see Hitch-
+cock 2003, 74; and our Sect.  5.2). In addressing this question, we now turn to the 
+three central components of Toulmin’s model: warrant, backing, and qualifier.
+15 “If […] the premises have satisfied the sufficiency criterion, then […] they are true” (Johnson 2000, 
+342), suggesting this order: acceptability, relevance, truth, sufficiency (ibid., 341–343). “[T]he easiest 
+determination,” he finds, “is that of relevance” (ibid., 342), while acceptability is easier to apply than 
+relevance or truth.
+
+[PDF page 14]
+ S. Yu, F . Zenker 
+1 3
+4.4  Warrant, Backing, and Qualifier
+Regarding the warrant, Toulmin (1958, 91) states that warrants “may normally be 
+written very briefly (in the form ‘If D, then C’).” This form answers to the How 
+do you get there-question. But the warrant is neither a kind of premise, because “a 
+premise is that from which an argument starts”—which instead suggests “Toulmin’s 
+grounds [or data]” (Hitchcock 2003, 71)—nor is the warrant an implicit premise; it 
+is rather “not a premise at all” (ibid., 72). Moreover, one cannot readily interpret the 
+warrant as a specific saturation of the indicative conditional ‘if D, then C’. For this 
+“misses the generality of warrants, which is one of their key features” (ibid., 73). 
+This keeps from always considering the warrant as an explicit ‘if–then’ premise.
+We view the warrant as the element that expresses the argument’s substantive rela-
+tion. With Hitchcock (2003), we thus assume that the warrant differs functionally 
+from the data element, and that a complete argument evaluation must make both parts 
+explicit.
+16 Where the warrant ‘If D, then C’ is overt, then, we view it as an explicit 
+premise, otherwise as an implicit one. (This characterization is somewhat simpler than 
+Hitchcock’s own.)
+Regarding the backing, some scholars view “the relation between backing and 
+warrant [as] the same as the relation between datum and claim” (Verheij 2006, 192). 
+As we now explain, this equation is problematic. Toulmin treats D and B as facts, 
+whereas he treats W as a rule (Toulmin 1958; esp. 90, 91, 98). Specifically, the 
+D-to-C inference is fact-to -claim; the B-to-W inference is fact-to -rule. The content 
+of C, Toulmin left unconstrained (C can be a rule or a fact), while the B-to-W infer-
+ence is a context-specific transformation of the ‘if–then’ premise. (A transformation 
+in opposite direction is what Goodnight (1993, 51) calls ‘legitimation inference’: 
+the specific selection of backing material as pertinent to a context.) To appreciate 
+the problem in equating the B–W relation with the D–C relation, consider the well-
+worn, yet instructive “Petersen is a Swede”-example (Toulmin 1958, 102):
+(10) D–W–C version
+  (D) Petersen is a Swede.
+  (W) A Swede can be taken almost certainly not to be a Roman Catholic.
+So, (C) Petersen is almost certainly not a Roman Catholic.
+(11) D–B–C version
+  (D) Petersen is a Swede.
+  (B) The proportion of Roman Catholics Swedes is minute.
+So, (C) Petersen is almost certainly not a Roman Catholic.
+16 Leaving the warrant implicit indicates that Toulmin (1958) had broadly ignored argument evaluation. 
+Only in his later textbook (Toulmin et al. 1984, esp. 46, 56) did he made the warrant explicit (see Hitch-
+cock 2003, 71f.).
+
+[PDF page 15]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+In (10) and (11), warrant and backing may seem to express two distinct reasons why 
+few Swedes are Roman Catholics, in virtue of the backing expressing “a statistical 
+report, [while the other reason expresses] an inference-warrant” (Toulmin 1958, 102). 
+Both reasons nevertheless converge in content. Indeed, the warrant’s content (“almost 
+certainly not property x”)—read as an inference rule—mirrors the backing’s content 
+(“population with minute proportion of property x-bearers”) read as a factual distribu-
+tion. In this sense, the warrant formulates a doxastic rule, the backing a doxastic fact. 
+‘Doxastic’ means that one believes the respective contents. (One might change ‘belief’ 
+to ‘commitment’.) Far from denying a backing-to-warrant inference, this identifies two 
+ways of expressing the same state of affairs.
+If the backing-to-warrant inference is simple, it may behave as the transformation 
+between (10) and (11). Other B-to-W inferences can be far more complex. For instance, 
+one could treat the backing as a rule’s legal source and the warrant as its legal interpre-
+tation. On this very matter, however, the philosophy of law offers no consensus. In legal 
+“hard cases,” indeed, a B-to-W inference may very well trigger insufficiency, inconsist-
+ency, or indeterminacy, or raise axiological issues—regarding natural or positivistic law 
+(Peczenik 2009, 18)—on which arguers themselves need not be coherent. So, as we 
+transform (10) into (11), we assume that warrant and backing can be co-transformed.
+The qualifier refers to “the degree of force which our data confer on our claim in 
+virtue of our warrant” (Toulmin 1958, 93)—as in: ‘Presumably, Harry is a British sub-
+ject’. Some scholars treat ‘presumably’ as “[…] a part of the sentence that expresses 
+the claim supported by the data” (Verheij 2006, 189). Others hold that “[a] modality[-
+expression such as ‘presumably’] is not a component either of the premises or of the 
+conclusion of an argument[, but instead] serves to modify the claim that the prem-
+ises support the conclusion” (Freeman 1985, 154; italics added). Between these two 
+options, the following seeks to offer a midway approach.
+Clearly, one may challenge the data themselves, for instance as being “fake,” biased, 
+or incomplete. Moreover, the qualifier’s strength depends on the warrant’s force and the 
+probability that data are faithful to the empirical reality generating them (aka the error-
+rate). For instance, if W and D are independent, and if W’s force without D is 90%, and 
+the error-rate is 10%, then the warrant’s force reduces from 90% to 90% × 90% = 81%. 
+So, poor data necessarily weaken the qualifier.
+While this speaks for keeping the claim’s content distinct from its modality, the 
+modality shall nevertheless associate to the claim itself. Our midway approach is to 
+combine the qualifier and the claim into a new claim. It conveys the overall strength of 
+the transition from “D, and ‘if D then C’”, to ‘C’, given W and B. To distinguish this 
+construction from Toulmin’s own qualifier, call it qualifier-inside-a-claim.
+In sum, the warrant is the ‘if D, then C’-premise that expresses the substantive 
+relation between D and C (aka. the associated conditional; see Sect.  5.2). The B-to-
+W inference transforms substantive (rather than logical) information from fact-level 
+to rule-level. Finally, a qualifier that is a part of a claim differs from the qualifier 
+expressing the warrant’s force.
+With this precisification of Toulmin’s model as background, we turn to related 
+work that informs our own CQ-list (Sect. 6).
+
+[PDF page 16]
+ S. Yu, F . Zenker 
+1 3
+5  CQs as Argument Attacks or Rebuttals
+5.1  Three Attack Types
+Prakken (2005, 303) submits that “the argument-scheme approach and the way it 
+has been employed in AI & Law respects some of the main lessons to be learnt from 
+Toulmin’s The Uses of Argument.” His own version of a complete CQ-list identifies 
+CQs dialectically as “pointers to counterarguments” (Prakken 2005, 306; 2010, 6). 
+His list rests on the insight that “arguments can only be attacked [either] on their 
+premises” or “on their applications of [deductive or] defeasible inference rules” 
+(Prakken 2010, 3; see Pollock 1987, 1995; Vreeswijk 1997; Besnard and Hunter 
+2008; Bondarenko et al. 1997).
+A defeasible attack has two sub-types: the comparatively weaker undercut-
+ter targets the inference from premises to conclusion; the stronger rebuttal targets 
+premises or conclusion directly. Thus, “arguments can be attacked in three ways: 
+on their premises, on their inference and on their conclusion” (Prakken 2010, 3). 
+The three attack-types motivate associating three kinds of CQs to a scheme, namely 
+CQs addressing (i) “whether a premise is true, […] [ii] whether there is an exception 
+(undercutter) to the scheme[,] and […] [iii] whether there is an argument with a con-
+tradictory conclusion (rebuttal)” (ibid., 8f.). Because the three attack-types assign a 
+distinct role to each CQ, call this the three role CQ-version.
+5.2  Five Rebuttal Types
+Viewing argumentation schemes as “a kind of generalized rules of inference […] 
+express[ing] that, given certain [accepted] premises, a specific conclusion can be 
+drawn” (Verheij 2003, 167), Verheij observes that schemes are often “defeasible, 
+concrete and contingently valid, i.e., valid in certain contexts or under certain cir -
+cumstances” (ibid.). Since a CQ’s purpose is “to question the dialectical relevance 
+of an argument based on the scheme” (ibid., 173), he views rebuttals as functional 
+elements that “involve conditions of exception for the argument” (2006, 194).
+Verheij thus distinguishes rebuttals as per what one may argue against:
+(11) Five elements one may argue against
+1. The data, D
+2. The claim, C
+3. The warrant, W
+4. The associated conditional ‘if D, then C’ expressing the bridge from D to 
+C
+5. The associated conditional ‘if W, then if D, then C’ expressing the bridge 
+between W and ‘if D, then C’
+From this, one straightforwardly obtains five types of rebuttal (Fig. 2).
+
+[PDF page 17]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+The arrows in Fig.  2 denote the associated conditional, itself representing the lin-
+guistic realization of what Verheij calls ‘primitive implication’ (ibid., 178, esp. note 
+4). Symbolized as ‘~>’, the truth of this conditional’s antecedent provides a reason 
+for, and thus supports, the consequent exclusively in virtue of a premise’s substance 
+(rather than its logical form). ‘D~>C’ thus expresses a “relation between D and C 
+that is not captured by the truth values of D and C alone” (ibid., 178). Unlike the 
+“notorious material conditional of standard logic” (ibid., 178), the associated condi-
+tional “only validates [the formally valid inference] Modus ponens” (ibid., 187). The 
+truth of ~> does therefore not  follow from the falsity of its antecedent, nor does the 
+truth of ~> require a true antecedent.
+17 For instance, granted that ‘Harry was born 
+in Bermuda ~> Harry is a British subject’ is true, the associated conditional remains 
+true even if its antecedent is defeated, i.e., if it turns out that Harry was not born in 
+Bermuda.
+Marked in Fig.  2 with lines ending in an ‘x’, moreover, type-1, 2, 3 rebuttals 
+attack respectively the data, the claim, and the warrant, whereas type-4 and type-5 
+rebuttals attack the modus ponens inference. A rebuttal of type-5, for instance, tar -
+gets: ‘If W, then if D, then C’, in form: W~>(D~>C) (ibid., 191). Similarly, a type-4 
+rebuttal targets D~>C.
+Toulmin and Verheij differ in how they treat the warrant. To Verheij (ibid., 192), 
+a warrant justifies the connection between D and C (justification interpretation); to 
+Toulmin (1958, 91), by contrast, a warrant functions as a “bridge” and merely con-
+nects D and C (connection interpretation).
+18 As the item that shoulders the justifi-
+cation, Verheij’s warrant thus plays the functional role that Toulmin assigns to the 
+backing. Both authors chose different formulations: Verheij’s warrant appears in a 
+rule statement; Toulmin’s backing appears in a fact statement (see Sects. 4.3, 4.4).
+Fig. 2  Five types of rebuttals (Verheij 2006, 195)
+17 We thank an anonymous reviewer for clarifying the nuances of this construction, which earlier ver -
+sions of this paper had misrepresented severely.
+18 Remaining somewhat vague as to his own preferred interpretation, Toulmin (2003, 91; italics added) 
+states that warrants “can act as bridges, and authorize the sort of step to which our particular argument 
+commits us. These may normally be written very briefly (in the form ‘If D, then C’) […].” The term 
+‘authorize’ may suggest that the warrant justifies the D-to-C transition. Yet the bulk of Toulmin’s writing 
+instead indicates that he adopts the comparatively weaker connection-interpretation.
+
+[PDF page 18]
+ S. Yu, F . Zenker 
+1 3
+5.3  From Five Types to Three
+Type-1 and type-2 rebuttals feature distinct contents that attack the data, respec-
+tively the claim. Though type-3, 4, and 5 rebuttals are structurally distinct, each type 
+directly or indirectly attacks the modus ponens relation. For instance, the type-3 
+rebuttal ‘A man born in Bermuda is normally French’ targets ‘A man born in Ber -
+muda is normally a British subject’ (W). The type-4 rebuttal ‘Harry has become a 
+naturalized American’ targets the (saturated) associated conditional ‘if D, then C’, 
+thus targeting the connection between ‘Harry was born in Bermuda’ (D) and ‘Harry 
+is a British subject’ (C). Finally, the type-5 rebuttal ‘Harry’s parents are aliens’ tar-
+gets ‘A man born in Bermuda will generally be a British subject’ (W) by providing a 
+reason against applying W.
+Both a type-3 and a type-5 rebuttal thus attack the connection between D and 
+C. A type-4 rebuttal attacks ‘If D, then C’ directly, and a type-5 or type-3 rebuttal 
+attacks the justification of ‘If D, then C’ directly, and hence attacks ‘If D, then C’ 
+indirectly. Therefore, type-3 and type-5 rebuttals are structurally distinct but func-
+tionally equivalent variants of a type-4 rebuttal.
+Verheij models an argument that transfers an evaluation from accepted premises 
+(marked with ‘!’) to claims about issues (marked with ‘?’) (Fig.  3) as a two-step 
+modus ponens derivation (Fig.  4). This model includes, first, a justification “from the 
+warrant statement […] to the arrow representing the associated conditional, that if 
+Harry was born in Bermuda, he is a British subject”—thus from ‘W, W~>(D~>C)’ 
+to ‘D~>C’. Second, it includes a justification from data to claim—thus from ‘D, 
+D~>C’ to ‘C’. (Hence, attacking ‘W’ and attacking ‘W~>(D~>C)’ are two options 
+of attacking D~>C.) Finally, in ‘If W, then if D, then C’ (type-5), the ‘if W’-part 
+specifies ‘If D, then C’ (type-4) by providing a condition under which ‘If D, then C’ 
+holds.
+One can thus specify ‘If D, then C’ either to ‘If W, then if D, then C’ or to ‘If 
+not W, then if D, then C’, which therefore makes type-5 a functional specification 
+of type-4. By further integrating this fivefold typology, one retains three types, such 
+that a type-3 and a type-5 rebuttal are both functional specifications of a type-4 
+Fig. 3  Data, claim and warrant-model (Verheij 2006, 191)
+Fig. 4  Two-step modus ponens 
+derivation (Verheij 2006, 192)
+
+
+[PDF page 19]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+rebuttal. The CQs associated to type-3 and type-5 rebuttals should therefore be sub-
+CQs to those for a type-4 rebuttal (see below).
+This allows our own CQ-list to use the three-role version, where one attacks argu-
+ments on their premises, inferences, or conclusions.
+6  A Complete CQ‑List
+6.1  Premise, Inference, and Conclusion Attacks
+A CQ-list’s primary purpose being that of enabling a systematic argument evalua-
+tion, a complete evaluation requires a (preferably short) finite CQ-list.
+19 Although 
+analysts are free to ask CQs in any order, the specific order we propose lets us 
+develop a scheme’s CQs step-by-step, level-by-level, starting at the meta-level. This 
+list is meta-level complete insofar as sub-CQs arise only at the theoretical or applied 
+level. (This is similar to how Pragma-dialecticians arrange argumentative patterns 
+(van Eemeren 2016, 2017) and to how Macagno, Walton and Tindale (2017) detail 
+analogical arguments via inferential structures and defeasibility conditions.)
+Restricted to an attack’s three targets—premises, inference, conclusion—we 
+retain the following components of Toulmin’s model, here combing a logical with 
+a substantive account of argument schemes according to modus ponens (Fig.  5). 
+Attack-1 and attack-2 both imply an attack-3 because by attacking D, or the D–C 
+relation, one attacks C indirectly, without offering a direct counter-reason. The three 
+kinds yield a straightforward meta-level CQ-list: CQ-1 for attack 1, CQ-2 for attack 
+2, and CQ-3 for the direct attack 3. As will become clear soon, one should first ask 
+CQ-1, followed by CQ-2, and next CQ-3.
+Fig. 5  Three kinds of attacks, 
+leading to three kinds of CQs
+Ar elation of type X 
+holds between D and C.
+D
+C
+Attack 1
+Attack 2
+Attack 3
+19 When treated instead as pointers to counterarguments (see Sect.  5.1), CQs would be assertives rather 
+than interrogatives. For the same premise, moreover, the number of pointers can exceed the number of 
+necessary CQs. In case of ‘a is an honest source’, for instance, the necessary CQ simply is: ‘Is a in fact 
+an honest source?’ Yet multiple pointers can direct us towards counter-arguments. For instance: ‘Liars 
+are prone to dishonesty’, or ‘An ill-hearted person can be a dishonest source’, ‘As can an interest-con-
+flicted person’, etc. Hence, if one saw the main purpose of a CQ-list in generating these pointers, then 
+one could readily associate several pointers to a single CQ. To avoid such multiplicity, we define our CQs 
+extensionally (in Sects. 6.2, 6.3).
+
+[PDF page 20]
+ S. Yu, F . Zenker 
+1 3
+6.2  Towards a Complete Meta‑Level CQ‑List
+We first present the basic CQs and their evaluative answers, adding further CQs and 
+sub-CQs in Sect.  6.3. Our CQs all use the term ‘correct’; of course, one may sub-
+stitute with ‘(rhetorically) acceptable’, ‘(logically or factually) true’, ‘(epistemologi-
+cally or doxastically) plausible’, etc.
+CQ-1. Are the data correct?
+This CQ evaluates the content of the data element.
+CQ-2. Is ‘If D, then C’ correct?
+Once saturated, this conditional expresses the focal substantive relation. The cor -
+responding CQ, then, is: “Does the (content of the) ‘D therefore C’-relation hold?”
+Evaluating the D-to-C-relation regularly requires more information than arguers 
+offer or analysts can access readily. For instance, in “[a]s Daniel is an American […] 
+he is sure to be concerned about the costs” (van Eemeren and Grootendorst 1992, 
+97), acceptability would transfer from data to claim, insofar as a symptomatic rela-
+tion were to hold between Daniel being American and being inclined to care about 
+the costs. Upon assuming that Daniel is American, however, one may nevertheless 
+specify this relation in various ways: “Americans generally care (lots) about money” 
+(ibid.), ‘Young Americans care (lots) …’, or ‘Male Americans …’, etc. Yet the right 
+choice is not obvious. Absent information to the contrary, one should interpret D’s 
+predicate (“is American”) as naming the intended category. For acceptability to 
+transfer, then, this category must include D’s subject (Daniel). Indeed, since argu-
+ment evaluation presupposes that one can know the intended category, the first step 
+is to determine it.
+If D’s intended category implies C’s predicate necessarily, because D’s subject 
+necessarily belongs to the intended category, then D’s subject implies C’s predicate 
+logically, and hence ‘D implies C’ holds. (One may interpret ‘necessary implica-
+tion’ epistemically or ontically; regardless, ‘knowing-p’ entails ‘p’, but not vice 
+versa.) By contrast, if D’s intended category fails to imply C’s predicate necessarily, 
+then one must test whether D’s subject belongs to the intended category’s exception 
+class. If so, then D’s subject fails to imply C’s predicate logically.
+In this case, one arrives at the following sub-CQs: CQ-2.1 “What is the intended 
+category of D’s subject?” CQ-2.2 “What is the content of the substantive relation 
+between D and C (represented by the ‘if–then’ conditional)?” CQ-2.3 “Is the rela-
+tion between the intended category of D’s subject and C’s predicate claimed to hold 
+necessarily?” Finally, if one answers CQ-2.3 negatively: CQ-2.4 “Does D’s subject 
+belong to the focal exception class?” In this way, CQ-2 narrowly examines only (the 
+content of) the inference ‘if D, then C’.
+For instance, instead of category membership—as in “Daniel is American”—
+arguers may assert state of affairs such as “The weather is fine,” and conclude: “let’s 
+go for a hike.” Assume the weather is fine. The evaluation would proceed as follows: 
+to the arguer, suppose, fine weather is but one among other enabling conditions such 
+
+[PDF page 21]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+as “money in the bank,” “time on one’s hand,” or “energy to spare,” etc. (Where 
+such conditions are negated, they express inference-exceptions.) Since the relation 
+between the weather and the hike is contingent rather than necessary, evaluation 
+thus proceeds with the above sub-CQ-2.1 to CQ-2.4. For contingent relations gener-
+ally, one cannot fix all enabling conditions that count towards the arguer’s intended 
+category.
+CQ-3. Is the claim correct?
+Evaluating an argument’s claim implies evaluating whether all relevant data have 
+been considered fully. This makes CQ-3 broader than CQ-1 (correctness of data), 
+and presupposes having specified the ‘D-to-C’ relation by answering CQ-2. If ana-
+lysts can offer additional relevant data, D*, then further pro- or con-arguments relate 
+to the claim. To evaluate them, and then compare the strength of pro- and con-argu-
+ments, one must iterate the evaluative process.
+We have so far shown that our CQ-list applies specifically to the Harry-example, 
+which cites a symptomatic relation between premise and claim. This leaves the rela-
+tions of similarity and causality effectively untreated. Two anonymous reviewers 
+therefore rightly expressed doubt that our CQ-list is general. For reasons of lim-
+ited space, we can only offer an indirect response: one can regiment any  argument 
+scheme to the form: ‘x has property F, so x has property G’ (Hitchcock 2017, 296). 
+It follows that all object-level arguments are meta-level sign arguments. Put differ -
+ently, the symptomatic relation reduces both the similarity and the causality relation. 
+Hence, if our model evaluates sign arguments completely, and we believe it does, 
+then it evaluates any argument completely.
+6.3  Full Meta‑Level CQ‑List
+The full version of our CQ-list (including sub-CQs) is the following:
+CQ-1 Is D correct?
+• If not, or if no clear answer is forthcoming, then the evaluation process stops, 
+resulting in a negative evaluation.
+• If yes, then the evaluation process continues.
+CQ-2.1 What is the intended category of D’s subject?
+• If no clear answer comes forth, the process stops with a negative evaluation.
+• Otherwise, the evaluation continues.
+CQ-2.2 What is the content of the ‘D therefore C’-relation?
+• If no clear answer comes forth, the process stops with a negative evaluation.
+• Otherwise, the evaluation process continues.
+
+[PDF page 22]
+ S. Yu, F . Zenker 
+1 3
+CQ-2.3 Does the relation between D’s intended category and C’s predicate hold 
+necessarily?
+• If yes, then the process stops with a positive evaluation.
+• If not, or if no clear answer comes forth, then the evaluation continues.
+CQ-2.4 Does D’s subject belong to an exception-class of its intended category 
+(as per CQ-2.1)?
+• If yes, then the process stops with a negative evaluation.
+• If not, then the process stops with a positive evaluation.
+• If no clear answer comes forth, then the evaluation continues.
+CQ-3.1 Can one offer additional relevant data (D*) besides D?
+• If no clear answer comes forth, the process stops with a negative evaluation.
+• If yes, then add these data, and return to CQ-1.
+• If no, then the evaluation continues.
+CQ-3.2 Are there other arguments against the claim?20
+• If yes, then evaluate these arguments (pros versus cons).
+• If no, then the process stops with a positive evaluation.
+The evaluation process stops if analysts find the argument good, or bad; or if lack 
+of information makes this impossible (e.g., for CQ-1, one may not know whether 
+D is correct). Having thus defined our CQs extensionally, we can proceed to apply 
+them.
+21
+6.4  Applying the CQs
+Our CQ-list assumes that D is explicit. In a realistic argumentative context, this is 
+implausible. The Harry-example, for instance, might read: ‘A man born in Bermuda 
+will be a British subject, so Harry is a British subject’. This leaves D implicit.
+Generally, analysts must make choices when they specify implicit elements, and 
+these specifications can easily differ in use value. For instance, Verheij (2006, 190) 
+distinguishes three warrant-versions: (i) ‘A man born in Bermuda will generally be 
+a British subject’; (ii) ‘If a person was born in Bermuda, then generally that person 
+is a British subject’; (iii) ‘If Harry was born in Bermuda, then generally he is a 
+British subject.’ Verheij (ibid., 190f.) treats (i) as the warrant’s ordinary language 
+21 Walton and Sartor (2013, 111) state that argument evaluation “needs to take into account the atti-
+tudes of dialogue partners as well as normative models of dialogue and communicative activity types, 
+in particular social and cultural settings.” Of course, such considerations may influence one’s evaluative 
+criteria, as well as the answers to the CQs themselves. Yet they will not determine a meta-level CQ-list’s 
+content.
+20 CQ-3.1 sits before CQ-3.2, because the reverse order may require asking CQ-3.2 twice, namely once 
+again if the answer to CQ-3.1 is positive. One should consider CQ-3.1 before CQ-3.2 also because the 
+answer “fewer than all relevant data were considered” normally amounts to a reason against the claim.
+
+[PDF page 23]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+expression, (ii) as “the formal explication of the bridge-like connection,” and (iii) 
+as “the associated conditional” expressing that a particular D implies a particular C.
+Given the pragmatic optimum versus logical minimum-distinction (van Eemeren 
+and Grootendorst 1992, 98f.), (iii) thus expresses the logical minimum, (i) expresses 
+the pragmatic optimum, and (ii) can be a pragmatic optimum in at least some con-
+texts.
+22 To Verheij, the pragmatic optimum justifies the associated conditional for -
+mally, while Pragma-dialecticians proceed in the opposite direction: the pragmatic 
+optimum specifies the logical minimum. In specifying the logical minimum to the 
+pragmatic optimum, then, one invariably justifies how one arrives at the pragmatic 
+optimum in a specific context. This entails that one obtains two D–W–C models 
+(Fig. 6).
+justifies
+D
+Pragmatico ptimum
+W
+Associated 
+conditional
+D~>C
+specifies
+C
+D
+Pragmatico ptimum
+W
+Logical 
+minimum
+D C
+C
+Fig. 6  Two D–W–C models
+Fig. 7  D–W–B–C model
+informs
+justifies
+specifies
+C
+D
+Pragmatico ptimum
+W
+Associated 
+conditional
+B
+22 The logical minimum is “a modus ponens-like inference from premises to a conclusion” (van Eeme-
+ren and Grootendorst 1992, 97). The pragmatic optimum requires that arguers make the logical minimum 
+“as informative as possible without ascribing unwarranted commitments to the speaker and [while] for -
+mulating it in a colloquial way that fits in with the rest of the argumentative discourse” (ibid., 64).
+
+[PDF page 24]
+ S. Yu, F . Zenker 
+1 3
+According to modus ponens, the logical minimum is valid even if D is false. Sim-
+ilarly, when D is false, the associated conditional D~>C can be correct, as long as 
+D supports C. Per CQ-1, instead, if D is false, then argument evaluation stops with a 
+negative result. Further, a D-to-C transition differs from a B-to-C transition: the first 
+justifies the transition, while the second transforms this justification according to a 
+context (see Sect.  4.3). Thus, in Fig.  7, the backing informs the pragmatic optimum.
+This we can articulate further in Fig. 8.
+Given a context, one may specify a doxastic fact-formulation into a doxastic rule-
+formulation (see the W-to-B transformation; Sect.  4.3). As an instance of Fig.  8, 
+then, see Fig.  9, which connects both doxastic elements (using a line without arrow-
+head) to represent that information is neither added nor deleted.
+informs
+justifies
+specifies
+C
+D
+Doxastic rule-formulation of 
+the relation between D and C.
+If D, then C; or: the 
+relationR  holds
+between D and C.
+Doxastic fact-formulation of 
+the relation between D and C
+Fig. 8  Argument components
+Harry is a British subject.
+Harry was born in Bermuda.
+A man born in 
+Bermuda is British.
+If Harry was born in Bermuda, then 
+symptomatic relation holds between 
+Harry is a Britishs ubject.O r: a
+“Harry wasb orni nB ermuda”a nd
+“Harry is a British subject.”
+All men born in 
+Bermuda are British.
+Fig. 9  The components of Toulmin’s Harry-example
+
+[PDF page 25]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+6.5  Standardization
+Before concluding, we review the seven possible combinations of argument compo-
+nents that may appear in natural language (Table 1).
+By rearranging and/or supplementing these components, one can standardize 
+(1)–(7) to the form ‘D, W, so C’. In fact, ‘D, so C’ already suffices to apply our CQ-
+list. The following illustrates this with the Harry-example:
+1. D, so C (“Harry was born in Bermuda. So, Harry is a British subject.”) To this 
+form, the CQ-list is already applicable.
+2. W, so C (“A man born in Bermuda is a British subject. So, Harry is a British 
+subject.”) To obtain a data element, one must transform W into a doxastic fact-
+formulation. The warrant’s ontological formulation is the original backing: ‘All 
+men born in Bermuda are British subjects’. Considering this backing as a data-
+element, one can treat ‘W, so C’ as (1).
+23
+3. B, so C (“All men born in Bermuda are British subjects, so Harry is a British 
+subject.”) One may treat (3) as ‘D, so C’—which puts one back at (1)—or may 
+transform B into W—which puts one back at (2).
+4. D, W, so C (“Harry was born in Bermuda, and a man born in Bermuda is a British 
+subject; so Harry is a British subject.”) It is easy to distinguish D and W; one can 
+apply ‘D, so C’ as per (1), or ‘W, so C’ as per (2).
+5. D, B, so C (“Harry was born in Bermuda, and all men born in Bermuda are Brit-
+ish subjects; so Harry is a British subject.”) Both B and D are fact-formulations. 
+Without further assumptions, distinguishing their roles proves challenging. After 
+all, B’s doxastic rule-formulation can represent the relation between D and C, 
+but D’s doxastic rule-formulation cannot represent the relation between B and C. 
+Of course, one may assume some fact-formulation as B, and then test whether it 
+represents the relation between the other fact-formulation and C. If so, then one 
+should treat it as B, otherwise as D. At last, then, one can distinguish D and B, 
+and thus apply ‘D, so C’ as per (1) or, respectively, ‘B, so C’ as per (3).
+Table 1  Possible argument-
+component combinations (1) D, so C
+(2) W, so C
+(3) B, so C
+(4) D, W, so C
+(5) D, B, so C
+(6) W, B, so C
+(7) D, W, B, so C
+23 The warrant connects C to D (rather than to B). Since D and B both constitute a fact-formulation, our 
+model applies insofar as a fact-formulation serves as a premise. Thus, one need not formulate the original 
+data, but can use the backing as a new D, itself transformed from W. Where the original D is unknown, 
+the transformation reflects an evaluation based on additional known information.
+
+[PDF page 26]
+ S. Yu, F . Zenker 
+1 3
+  When evaluating the form ‘D, B, so C’—e.g., “Harry was born in Bermuda, and 
+all men born in Bermuda are British subjects; so Harry is a British subject”—one 
+cannot distinguish the premises’ roles immediately, because both premises state 
+facts. One therefore needs something like the following test: the rule-formulation 
+of “All men born in Bermuda are British subjects” is “A man born in Bermuda is a 
+British subject.” This reflects the relation between “Harry was born in Bermuda” 
+and “Harry is a British subject.” So B is: “All men born in Bermuda are British 
+subjects.” By contrast, the rule-formation of “Harry was born in Bermuda” is “If 
+a man is Harry, then he was born in Bermuda.” But this cannot suitably connect 
+“All men born in Bermuda are British subjects” with “Harry is a British subject.” 
+Therefore, one cannot justify “Harry is a British subject” with “All men born in 
+Bermuda are British subjects.” It follows that “Harry was born in Bermuda” is 
+not a B.
+24
+6. W, B, so C (“A man born in Bermuda is a British subject, and all men born in Ber-
+muda are British subjects; so Harry is a British subject.”) It is easy to distinguish 
+W and B; the first is a rule-formulation, the other is a fact-formulation. Hence, 
+one can apply ‘W, so C’ as per (2), or ‘B, so C’ as per (3).
+7. D, W, B, so C (“Harry was born in Bermuda, and a man born in Bermuda is a 
+British subject, and all men born in Bermuda are British subjects; so Harry is a 
+British subject.”) One can treat this form either as ‘D, so C’ as per (1), or as ‘W, 
+so C’ as per (2), or as ‘B, so C’ as per (3).
+Given argument components that correspond to D, W, B, C, then, the foregoing 
+applies to any argument, and so facilitates a complete meta-level evaluation.
+7  Conclusion
+Treating ARGUMENT SCHEME as a logical concept, we have sought to capitalize 
+on the distinction between an argument scheme’s levels, separating an applied 
+level, from a theoretical, and a meta -level. If this approach to evaluating natural 
+language arguments completely does succeed, then this would be so because we 
+proceeded from the outset at the meta-level. This showed that one can abstract 
+all elements that a complete evaluation must address. Although this result is 
+fully consistent with a logical account, we also saw why a substantive account 
+must complement it, and how a specification of Toulmin’s model can ground this 
+hybrid account. Having applied our complete CQ-list so far only exemplarily, 
+future research should relate our meta-level CQs to the applied level in order to 
+24 We thank an anonymous reviewer for pointing out an alternative rule-formation for “Harry was born 
+in Bermuda,” namely “If every man born in Bermuda has a certain property, then Harry has it.” This 
+alternative rule-formulation can connect “All men born in Bermuda are British subjects” with “Harry 
+is a British subject.” However, it not only is a less natural formulation, but also involves a second-order 
+generalization.
+
+[PDF page 27]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+obtain specific criteria for a given scheme. This should advance the construction 
+of an exhaustive list of applied CQs.
+Acknowledgements We thank Minghui Xiong, as well as two anonymous reviewers for this journal, for 
+their extensive and at times painstakingly detailed comments, all of which served to improve previous 
+versions of this paper. SY acknowledges support from the Major Program of the National Social Science 
+Foundation of China (No. 14ZDB013).
+Open Access This article is licensed under a Creative Commons Attribution 4.0 International License, 
+which permits use, sharing, adaptation, distribution and reproduction in any medium or format, as long as 
+you give appropriate credit to the original author(s) and the source, provide a link to the Creative Com-
+mons licence, and indicate if changes were made. The images or other third party material in this article 
+are included in the article’s Creative Commons licence, unless indicated otherwise in a credit line to the 
+material. If material is not included in the article’s Creative Commons licence and your intended use is 
+not permitted by statutory regulation or exceeds the permitted use, you will need to obtain permission 
+directly from the copyright holder. To view a copy of this licence, visit http://creat iveco mmons .org/licen 
+ses/by/4.0/.
+References
+Besnard, P., and A. Hunter. 2008. Elements of argumentation. Cambridge, MA: MIT Press.
+Biro, J.I., and H. Siegel. 1992. Normativity, argumentation and a doxastic theory of fallacies. In Argu-
+mentation illuminated, ed. F.H. van Eemeren, R. Grootendorst, J.A. Blair, and C.A. Willard, 
+85–103. Amsterdam: Sic Sat.
+Blair, J.A. 2001. Walton’s argumentation schemes for presumptive reasoning: A critique and develop-
+ment. Argumentation 15: 365–379.
+Blair, J.A. 2011. Groundwork in the theory of argumentation. New York: Springer.
+Bondarenko, A., P. Dung, R. Kowalski, and F. Toni. 1997. An abstract, argumentation-theoretic 
+approach to default reasoning. Artificial Intelligence 93: 63–101.
+Bondy, P. 2010. Truth and argument evaluation. Informal Logic 30: 142–158.
+Conley, T.M. 1990. Rhetoric in the European tradition. Chicago, IL: University of Chicago Press.
+Daniel, S., and D. Nic. 2014. The deflationary theory of truth. In The Stanford Encyclopedia of Phi-
+losophy (Fall 2014 Edition), ed. Edward N. Zalta. https ://plato .stanf  ord.edu/archi ves/fall2 014/
+entri es/truth -defla tiona ry/.  Accessed 18 Feb 2020.
+Ennis, R. 1982. Identifying implicit assumptions. Synthese 51: 61–86.
+Freeley, A.J., and D.L. Steinberg. 2009. Argumentation and debate: Critical thinking for reasoned 
+decision making, 12th ed. Boston: Wadsworth Cengage Learning.
+Freeman, J.B. 1985. Dialectical situations and argument analysis. Informal Logic 7: 151–162.
+Freeman, J.B. 1991. Dialectics and the macrostructure of arguments: A theory of argument structure. 
+Berlin and New York: Foris Publications.
+Garssen, B. 1994. Recognizing argumentation schemes. In Studies in pragma-dialectics, ed. F.H. van 
+Eemeren and R. Grootendorst, 105–111. Amsterdam: Sic Sat.
+Garssen, B. 1997. Agumentatieschema’s in Pragma- dialectisch Perspectief. Een Theoretisch en 
+Empirisch Onderzoek [ Argument Schemes from a pragma- dialectical Perspective: A Theoretical 
+and Empirical Overview]. Dissertation. Amsterdam: IFOTT.
+Garssen, B. 2001. Argument schemes. In Crucial concepts in argumentation theory, ed. F.H. van 
+Eemeren, 81–99. Amsterdam: Amsterdam University Press.
+Godden, D., and F. Zenker. 2018. A probabilistic analysis of argument cogency. Synthese 195: 
+1715–1740.
+Goodnight, G.T. 1993. Legitimation inferences: An additional component for the Toulmin model. 
+Informal Logic 15: 41–52.
+Gough, J., and C. Tindale. 1985. ‘Hidden’ or ‘missing’ premises. Informal Logic 7: 99–106.
+Govier, T. 2001. A practical study of argument, 5th ed. Belmont, CA: Wadsworth. (1st ed. 1985).
+
+[PDF page 28]
+ S. Yu, F . Zenker 
+1 3
+Grennan, W. 1997. Informal logic: Issues and techniques. Montreal: McGill-Queen’s University 
+Press.
+Hahn, U., and J. Hornikx. 2016. A normative framework for argument quality: Argumentation 
+schemes with a Bayesian foundation. Synthese 193: 1833–1873.
+Hastings, A.C. 1962. A reformulation of the modes of reasoning in argumentation. Dissertation. 
+Northwestern University, Evanston, IL.
+Hitchcock, D. 2003. Toulmin’s warrants. In Anyone who has a view. Theoretical contributions to the 
+study of argumentation, ed. F.H. van Eemeren, J.A. Blair, C.A. Willard, and A.F. Snoeck Henke-
+mans, 69–82. Dordrecht: Kluwer.
+Hitchcock, D. 2006. Good reasoning on the Toulmin model. In Arguing on the Toulmin model. New 
+essays in argument analysis and evaluation, ed. D. Hitchcock and B. Verheij, 203–218. Nether -
+lands: Springer.
+Hitchcock, D. 2017. On reasoning and argument: Essays in Informal Logic and Critical Thinking. 
+Berlin: Springer.
+Hitchcock, D., and B. Verheij (eds.). 2006. Arguing on the Toulmin model. New essays in argument 
+analysis and evaluation. Netherlands: Springer.
+Hitchcock, D.L., and J.H.M. Wagemans. 2011. The pragma-dialectical account of argument schemes. 
+In Keeping in touch with pragma-dialectics, ed. E.T. Feteris, B.J. Garssen, and A.F. Snoeck Hen-
+kemans, 185–205. Amsterdam: Benjamins.
+Hoffmann, M. 2016. Reflective argumentation: A cognitive function of arguing. Argumentation 30: 
+365–397.
+Hoffmann, M. 2018. The elusive notion of “argument quality”. Argumentation 32: 213–240.
+Johnson, R.H. 2000. Manifest rationality: A pragmatic theory of argument. Mahwah, NJ: Lawrence 
+Erlbaum Associates.
+Johnson, R.H., and J.A. Blair 1994. Logical self- defense (U.S. edition). New York: McGraw-Hill.
+Kienpointner, M. 1992. Alltagslogik. Struktur und Funktion von Argumentationsmustern [Everyday 
+Logic. Structure and Function of Argument Patterns]. Stuttgart-Bad Cannstatt: Frommann-Holzbog.
+Lumer, C. 2011. Argument schemes—An epistemological approach. In Argumentation: Cognition and 
+community. Proceedings of the 9th international conference of the Ontario Society for the Study of 
+Argumentation (OSSA), ed. F. Zenker, 1–32. Windsor, ON (CD ROM). https ://schol ar.uwind sor.ca/
+cgi/viewc onten t.cgi?refer er=&https redir =1&artic le=1016&conte xt=ossaa rchiv e. Accessed 18 Feb 
+2020.
+Macagno, F., D. Walton, and C. Tindale. 2017. Analogical arguments: Inferential structures and defeasi-
+bility conditions. Argumentation 31: 221–243.
+Marraud, H. 2018. Arguments from ostension. Argumentation 32: 309–327.
+Peczenik, A. 2009. On law and reason. Dordrecht: Springer.
+Perelman, C., and L. Olbrechts-Tyteca. 1958. La nouvelle rhétorique. Traité de l’argumentation. Paris: 
+Presses Universitaires de France. [Perelman, C., and Olbrechts-Tyteca, L. 1969. The New Rheto-
+ric. A Treatise on Argumentation (trans: Wilkinson, J., and Weaver, P.). Notre Dame: University of 
+Notre Dame Press].
+Pinto, R.C. 1994. Logic, epistemology and argument appraisal. In New essays in informal logic, ed. R.H. 
+Johnson and J.A. Blair, 116–124. Windsor, ON: Informal Logic.
+Pollock, J.L. 1987. Defeasible reasoning. Cognitive Science 11: 481–518.
+Pollock, J.L. 1995. Cognitive carpentry. A blueprint for how to build a person. Cambridge, MA: MIT 
+Press.
+Prakken, H. 2005. AI & law, logic and argument schemes. Argumentation 19: 303–320.
+Prakken, H. 2010. On the nature of argument schemes. In Dialectics, dialogue and argumentation. An 
+examination of Douglas Walton’s theories of reasoning and argument, ed. C.A. Reed and C. Tin-
+dale, 167–185. London: College Publications. http://www.cs.uu.nl/group s/IS/archi ve/henry /schem 
+es10.pdf. Accessed 18 Feb 2020.
+Rapp, C., and T. Wagner. 2013. On some Aristotelian sources of modern argumentation theory. Argumen-
+tation 27: 7–30.
+Rigotti, E., and S. Greco Morasso. 2006. Topics: The argument generator. In Argumentation for financial 
+communication, Argumentum eLearning module. www.argum entum .ch. Accessed 18 Feb 2020.
+Rigotti, E., and S. Greco Morasso. 2009. Argumentation as object of interest and as social and cultural 
+resource. In Argumentation and education: Theoretical foundations and practices, ed. A.N. Perret-
+Clermont and N. Müller-Mirza, 9–66. New York: Springer.
+
+[PDF page 29]
+1 3
+Schemes, Critical Questions, and Complete Argument Evaluation  
+Rigotti, E., and S. Greco Morasso. 2010. Comparing the argumentum model of topics to other contem-
+porary approaches to argument schemes: The procedural and material components. Argumentation 
+24: 489–512.
+Rubinelli, S. 2009. Ars Topica. The classical technique of constructing arguments from Aristotle to Cic-
+ero. Netherlands: Springer.
+Schut, D., and J.H.M. Wagemans. 2014. Argumentatie en debat. Den Haag: Boom Lemma.
+Tindale, C. 2007. Fallacies and argument appraisal. Cambridge: Cambridge University Press.
+Toulmin, S. E. (2003; 1958). The uses of argument (Updated ed.). Cambridge: Cambridge University 
+Press (1st ed., 1958).
+Toulmin, S.E., R.D. Rieke, and A. Janik. 1984. An introduction to reasoning, 2nd ed. New York: Macmil-
+lan. (1st ed., 1978).
+van Eemeren, F.H., and T. Kruiger. 1987. Identifying argumentation schemes. In Argumentation: Per -
+spectives and approaches: Proceedings of the conference on argumentation 1986, ed. van Eemeren, 
+F.H., T. Kruiger, R. Grootendorst, J.A. Blair, and C.A. Willard, 70–81. Dordrecht-Holland/Provi-
+dence: Foris Publications. [reprinted in: F.H. van Eemeren (ed.), Reasonableness and effectiveness 
+in argumentative discourse, 2015, pp. 703–712. Cham: Springer International Publishing AG.].
+van Eemeren, F.H. 2016. Identifying argumentative patterns: A vital step in the development of pragma-
+dialectics. Argumentation 30: 1–23.
+van Eemeren, F.H. (ed.). 2017. Prototypical argumentative patterns. Exploring the relationship between 
+argumentative discourse and institutional context. Amsterdam/Philadelphia: John Benjamins.
+van Eemeren, F.H. 2018. Argumentation theory: A pragma-dialectical perspective. Cham: Springer Inter-
+national Publishing AG.
+van Eemeren, F.H., B. Garssen, E.C.W. Krabbe, F. Snoek Henkemans, B. Verheij, and J.H.M. Wagemans. 
+2014. Handbook of argumentation theory. Dordrecht: Springer.
+van Eemeren, F.H., and R. Grootendorst. 1992. Argumentation, communication, and fallacies. Hillsdale: 
+Lawrence Erlbaum.
+van Eemeren, F.H., and R. Grootendorst. 2004. A systematic theory of argumentation. The pragma-dia-
+lectical approach. Cambridge: Cambridge University Press.
+van Rees, M.A. 2001. Review of Ralph H. Johnson (2000), Manifest rationality. A pragmatic theory of 
+argument. Argumentation 15: 231–237.
+Verheij, B. 2003. Dialectical argumentation with argumentation schemes: An approach to legal logic. 
+Artificial Intelligence and Law 11: 167–195.
+Verheij, B. 2006. Evaluating arguments based on Toulmin’s scheme. In Arguing on the Toulmin model. 
+New essays in argument analysis and evaluation, ed. D. Hitchcock and B. Verheij, 181–202. Neth-
+erlands: Springer.
+Verheij, B. 2014. Arguments and their strength: Revisiting Pollock’s anti-probabilistic starting points. 
+In Computational models of argument. Proceedings of the COMMA 2014, ed. S. Parsons, N. Oren, 
+C. Reed, and F. Cerutti, 433–444. Amsterdam: IOS Press. http://dx.doi.org/10.3233/978-1-61499 
+-436-7-433.
+Vreeswijk, G. 1997. Abstract argumentation systems. Artificial Intelligence 90: 225–279.
+Wagemans, J.H.M. 2016. Constructing a periodic table of arguments. In Argumentation, objectivity, and 
+bias. Proceedings of the 11th international conference of the Ontario Society for the Study of Argu-
+mentation (OSSA), ed. P. Bondy and L. Benacquista, 1–12. Windsor, ON. http://schol ar.uwind sor.ca/
+ossaa rchiv e/OSSA1 1/paper sandc ommen tarie s/106.
+Wagemans, J.H.M. 2019. Four basic argument forms. Research in Language 17: 57–69.
+Walton, D. 1996. Argumentation schemes for presumptive reasoning. Mahwah: Lawrence Erlbaum.
+Walton, D. 2016. Some artificial intelligence tools for argument evaluation: An introduction. Argumenta-
+tion 30: 317–340.
+Walton, D., C. Reed, and F. Macagno. 2008. Argumentation schemes. Cambridge: Cambridge University 
+Press.
+Walton, D., and G. Sartor. 2013. Teleological justification of argumentation schemes. Argumentation 27: 
+111–142.
+Walton, D., C. Tindale, and T. Gordon. 2014. Applying recent argumentation methods to some ancient 
+examples of plausible reasoning. Argumentation 28: 85–119.
+Yu, S., and F. Zenker. 2018. Peirce knew why abduction isn’t IBE. A scheme and critical questions for 
+abductive argument. Argumentation 32: 569–587.
+Yu, S., and F. Zenker. 2019. A dialectical view on conduction: Reasons, warrants, and normal suasory 
+inclinations. Informal Logic 39: 32–69.
+
+[PDF page 30]
+ S. Yu, F . Zenker 
+1 3
+Zenker, F. 2009. Ceteris Paribus in conservative belief revision. Berlin: Peter Lang.
+Zenker, F. 2018. Logic, reasoning, argumentation: Insights from the wild. Logic and Logical Philosophy 
+27: 421–451.
+Publisher’s Note Springer Nature remains neutral with regard to jurisdictional claims in published 
+maps and institutional affiliations.

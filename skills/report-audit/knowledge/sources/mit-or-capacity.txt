@@ -1,0 +1,11 @@
+MIT 15.760B Lecture3 Capacity: original notes
+Source: https://ocw.mit.edu/courses/15-760b-introduction-to-operations-management-spring-2004/resources/lec3_capacity/
+Attribution: MIT OpenCourseWare, course2004 / lecture footer2002
+Representation: Original project summary, not source full text or translation.
+Compiled: 2026-11-12; reviewed research reused.
+Reading scope: Read PDF pages1–8,13–20,22; no diagram recomputation or adoption of page19 queue approximation.
+Rights: Underlying source rights retained; no endorsement.
+
+需求与服务能力须以相同工作单位和时间窗口比较，过程各段的能力不等于整体吞吐。短期积压与稳态排队不同，平均能力充足仍可能因波动而等待。应根据真实过程记录定位约束；提高非瓶颈能力不自动提高全链产出。缺少分布和模型条件时，不给精确等待预测。
+
+这些方法不是当前项目、参会者或市场事实，也不证明本 Skill 的模型效果；运行时不联网补齐。

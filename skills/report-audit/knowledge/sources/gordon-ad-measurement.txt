@@ -1,0 +1,11 @@
+Gordon et al2019 advertising measurement: abstract notes
+Source: https://pubsonline.informs.org/doi/10.1287/mksc.2018.1135
+Attribution: Brett R. Gordon, Florian Zettelmeyer, Neha Bhargava, Dan Chapsky / INFORMS
+Representation: Original project summary, not source full text or translation.
+Compiled: 2026-11-12; reviewed research reused.
+Reading scope: Publisher abstract and metadata only; PDF request returned abstract page. No full paper, appendix or statistical recomputation.
+Rights: Underlying source rights retained; no endorsement.
+
+论文摘要比较15个美国Facebook广告实验与观察估计，报告多种观察估计常不能还原实验效果，即使控制较多变量。可据此区分购买关联与投放新增效果；不能据摘要实施完整估计模型、否定所有观察方法或断言当前广告无效。
+
+这些方法不是当前项目、参会者或市场事实，也不证明本 Skill 的模型效果；运行时不联网补齐。

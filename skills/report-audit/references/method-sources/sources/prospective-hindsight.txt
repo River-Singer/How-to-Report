@@ -1,0 +1,11 @@
+Mitchell, Russo & Pennington1989: temporal perspective notes
+Source: https://onlinelibrary.wiley.com/doi/10.1002/bdm.3960020103
+Attribution: Deborah J. Mitchell, J. Edward Russo and Nancy Pennington
+Representation: Original project summary, not source full text or translation.
+Compiled: 2026-11-12; reviewed research reused.
+Reading scope: Research read printed25–36: abstract, design, two experiments major methods/results, General Discussion and Aiding decisions; not all tables or full appendix.
+Rights: Underlying source rights retained; no endorsement.
+
+把结果暂作已发生来思考原因可帮助暴露解释前提，但假设失败不是项目实际失败，产生更多原因不等于预测准确。仅把可核且与当前目的有关的前提带回资料检查；不能把想象的事故写成反对证据或失败概率。
+
+这些方法不是当前项目、参会者或市场事实，也不证明本 Skill 的模型效果；运行时不联网补齐。

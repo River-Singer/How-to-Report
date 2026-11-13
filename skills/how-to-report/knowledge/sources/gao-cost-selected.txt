@@ -1,0 +1,1086 @@
+COMBINED SELECTED OFFICIAL TEXT, NOT FULL GUIDE. Five separately acquired passages; original source headers retained. No complete local PDF.
+
+PARTIAL OFFICIAL-TEXT EXTRACT, NOT FULL GUIDE. Read via web tool 2026-11-12. Direct PDF download returned HTTP 403; no full PDF claimed.
+Original: https://www.gao.gov/assets/gao-20-195g.pdf
+GAO-20-195G, March 2020. PDF page 12 (printed xi) permits reproduction and distribution in entirety; separate reuse of third-party material can need permission. Text below is a tool extraction with source line numbers and 0-based PDF page numbers.
+
+GAO-20-195G, Cost Estimating and Assessment Guide: Best Practice by Developing and Managing Program Cost (https://www.gao.gov/assets/gao-20-195g.pdf)
+L2147@P61: Acquisition plan or strategy Includes the competition strategy, whether multiyear procurement will be used, and whether the
+L2148@P61: program will lease or buy certain items; it should identify the type of contract awarded or to be
+L2149@P61: awarded and, if known, the contractor responsible for developing and implementing the system
+L2150@P61: Development, test, and
+L2151@P61: production quantities and
+L2152@P61: program schedule
+L2153@P61: Includes quantities required for development, test (e.g., test assets), and production; lays out an
+L2154@P61: overall development and production schedule that identifies the years of its phases—the schedule
+L2155@P61: should include a standard Gantt chart with major events such as milestone reviews, design reviews,
+L2156@P61: and major tests—and that addresses, at a high level, major program activities, their duration and
+L2157@P61: sequence, and the critical path
+L2158@P61: System test and evaluation plan Includes the number of tests and test assets, criteria for entering into testing, exit criteria for passing
+L2159@P61: the test, and where the test will be conducted
+L2160@P61: Deployment details Includes standard platform and site configurations for all scenarios (peacetime, contingency, war)
+L2161@P61: and a transition plan between legacy and new systems
+L2162@P61: Safety plan Includes any special or unique system safety considerations that may relate to specific safety goals
+L2163@P61: established through standards, laws, regulations, and lessons learned from similar systems
+L2164@P61: Training plan Includes training for users and maintenance personnel, any special certifications required, who will
+L2165@P61: provide the training, where it will be held, and how often it will be offered or required
+L2166@P61: Disposal and environmental
+L2167@P61: effect
+L2168@P61: Includes identification of environment impact, mitigation plan, and disposal concept
+L2169@P61: Operational concept Includes program management details, such as how, where, and when the system will be operated;
+L2170@P61: the platforms on which it will be installed; and the installation schedule
+L2171@P61: Personnel requirements Includes comparisons to the legacy system (if possible) in salary levels, skill-level quantity
+L2172@P61: requirements, and where staff will be housed
+L2173@P61: Logistics support details Includes maintenance and sparing plans, as well as planned upgrades
+L2174@P61: Environmental plan Includes how the environment may be impacted or any environment liability
+L2175@P61: Changes from the previous
+L2176@P61: technical baseline
+L2177@P61: Includes a tracking of changes, with a summary of what changed and why
+L2178@P61: Source: DOD, DOE, and ICEAA. | GAO-20-195G
+L2179@P61: Programs following an incremental development approach should have a
+L2180@P61: technical baseline that clearly states system characteristics for the entire
+L2181@P61: program. In addition, the technical baseline should define the
+L2182@P61: characteristics to be included in each increment, so that a rigorous LCCE
+L2183@P61: can be developed. For programs with a spiral development approach, the
+L2184@P61: technical baseline tends to evolve as requirements become better
+L2185@P61: defined. In earlier versions of a spiral development program, the technical
+L2186@P61: baseline should clearly state the requirements that are included and those
+L2187@P61: that have been excluded. This is important because a lack of defined
+L2188@P61: requirements can lead to cost increases and delays in delivering services,
+L2189@P61-62: as case study 7 illustrates.Chapter 6: Step 3: Define the Program -
+L2190@P62: Technical Baseline Description
+L2191@P62: Page 51 GAO-20-195G Cost Estimating and Assessment Guide
+L2192@P62: Case Study 7: Defining Requirements, from Defense Management, GAO-14-82
+L2193@P62: Given its strategic location, Guam serves as an important staging base and operating
+L2194@P62: location for mobilizing U.S. military forces and equipment within Asia and the western
+L2195@P62: Pacific. In 2006, the United States and Japan planned to relocate 17,600 U.S. Marines and
+L2196@P62: dependents from Japan to Guam. However, in 2012, representatives from the countries
+L2197@P62: developed a revised plan under which 6,300 Marines and dependents would relocate to
+L2198@P62: Guam.
+L2199@P62: Despite the reduction of Marines and dependents relocating to Guam, DOD had not yet
+L2200@P62: revalidated the public infrastructure requirements based on the revised realignment plan or
+L2201@P62: differentiated between requirements needed to address long-standing conditions and those
+L2202@P62: related to the realignment. At the time of our assessment, the revalidation was not
+L2203@P62: expected to be completed until 2015. Even so, DOD had requested over $400 million for
+L2204@P62: Guam public infrastructure projects in its budget requests since fiscal year 2012. However,
+L2205@P62: it was unclear if all of the infrastructure projects were necessary given the reduction in
+L2206@P62: forces. For example, if DOD decided to locate the Marines on the naval base that handles
+L2207@P62: all of its own water/wastewater needs, public water/wastewater improvements would not
+L2208@P62: have been needed to support the Marines.
+L2209@P62: GAO reviewed DOD’s $1.3 billion cost estimate for improvements to Guam’s water and
+L2210@P62: wastewater systems used to support budget requests for fiscal years 2013 and 2014. GAO
+L2211@P62: determined that the estimate minimally met the best practice criteria for three
+L2212@P62: characteristics of a reliable cost estimate—comprehensive, well documented, and
+L2213@P62: accurate—and did not satisfy best practice criteria for the credible characteristic.
+L2214@P62: GAO determined that the estimate was not comprehensive, in part because the water and
+L2215@P62: wastewater systems estimate did not include a technical baseline describing the scope and
+L2216@P62: technical details of the program. A brief discussion and description of individual projects
+L2217@P62: were provided in a technical memorandum, but none of the water or wastewater projects
+L2218@P62: were sufficiently defined to understand the scope of work. In addition, there was no
+L2219@P62: indication that the projects’ scope or complexity had been updated to reflect more current
+L2220@P62: environmental studies or reports, infrastructure inspections, or other reviews.
+L2221@P62: Understanding the program—including the acquisition strategy, technical definition,
+L2222@P62: characteristics, system design features, and technologies to be included—is key to
+L2223@P62: developing a credible cost estimate. Without these data, the cost estimator will not be able
+L2224@P62: to identify the technical and program parameters that will bound the cost estimate.
+L2225@P62: GAO recommended that, to provide DOD and Congress with sufficient information
+L2226@P62: regarding the requirements and costs associated with DOD’s Guam realignment plans and
+L2227@P62: the public infrastructure necessary to support that realignment, the Secretary of Defense
+L2228@P62: should direct the Department of the Navy’s Joint Guam Program Office in concert with the
+L2229@P62: Office of Economic Adjustment to fully incorporate the best practices identified by GAO for
+L2230@P62: developing high-quality cost estimates as future cost estimates for Guam public
+L2231@P62: infrastructure projects are developed. As a result of GAO’s recommendation, in August
+L2232@P62: 2015 DOD followed the standards set forth in GAO’s Cost Estimating and Assessment
+L2233@P62: Guide and revised its cost estimates for public infrastructure needs on Guam. In doing so,
+L2234@P62: DOD reduced its estimate and future budget requests.
+L2235@P62: GAO, Defense Management: Further Analysis Needed to Identify Guam’s Public
+L2236@P62: Infrastructure Requirements and Costs for DOD’s Realignment Plan, GAO-14-82
+L2237@P62-63: (Washington, D.C.: December 17, 2013).Chapter 6: Step 3: Define the Program -
+L2238@P63: Technical Baseline Description
+L2239@P63: Page 52 GAO-20-195G Cost Estimating and Assessment Guide
+L2240@P63: Fully understanding requirements up front helps increase the accuracy of
+L2241@P63: the cost estimate. While each program should have a technical baseline
+L2242@P63: that addresses each element in table 4, each program’s aspects are
+L2243@P63: unique.
+L2244@P63: Each system has unique physical and performance characteristics;
+L2245@P63: analysts need specific knowledge about these characteristics before they
+L2246@P63: can develop a cost estimate for a weapon system, an information system,
+L2247@P63: or a construction program.
+L2248@P63: While the specific physical and performance characteristics for a system
+L2249@P63: will vary from one program to another, several general characteristics
+L2250@P63: have been identified in the various guides we reviewed. Table 5 lists
+L2251@P63: general characteristics shared within several system types. Table 5 is not
+L2252@P63: intended to be exhaustive.
+L2253@P63: Table 5: General System Characteristics
+L2254@P63: System Characteristic
+L2255@P63: Aircraft Breakdown of airframe unit weight by material type
+L2256@P63: Combat ceiling and speed
+L2257@P63: Internal fuel capacity
+L2258@P63: Length
+L2259@P63: Load factor
+L2260@P63: Maximum altitude
+L2261@P63: Maximum speed (knots at sea level)
+L2262@P63: Mission and profile
+L2263@P63: Weight (for example, airframe unit weight, combat, empty,
+L2264@P63: maximum gross, payload, structure)
+L2265@P63: Wetted area
+L2266@P63: Wing (for example, wingspan, wing area, wing loading)
+L2267@P63: Automated information
+L2268@P63: systems
+L2269@P63: Architecture
+L2270@P63: Commercial off-the-shelf (COTS) software used
+L2271@P63: Customization of COTS software
+L2272@P63: Expansion factors
+L2273@P63: Memory size
+L2274@P63: Processor type
+L2275@P63: Proficiency of programmers
+L2276@P63: Programming language used
+L2277@P63: Software sizing metric
+L2278@P63: Key System
+L2279@P63: Characteristics and
+L2280@P63: Performance
+L2281@P63-64: ParametersChapter 6: Step 3: Define the Program -
+L2282@P64: Technical Baseline Description
+L2283@P64: Page 53 GAO-20-195G Cost Estimating and Assessment Guide
+L2284@P64: System Characteristic
+L2285@P64: Construction Ability to secure long-term visas
+L2286@P64: Changeover
+L2287@P64: Environmental impact
+L2288@P64: Geography
+L2289@P64: Geology
+L2290@P64: Liability
+L2291@P64: Location (for example, land value, proximity to major roads,
+L2292@P64: relocation expenses for workers)
+L2293@P64: Material type (for example, composite, masonry, metal, tile,
+L2294@P64: wood shake)
+L2295@P64: Number of stories
+L2296@P64: Permits
+L2297@P64: Public acceptance
+L2298@P64: Square feet
+L2299@P64: Systemization
+L2300@P64: Missiles Height
+L2301@P64: Length
+L2302@P64: Payload
+L2303@P64: Propulsion type
+L2304@P64: Range
+L2305@P64: Sensors
+L2306@P64: Weight
+L2307@P64: Width
+L2308@P64: Ships Acoustic signature
+L2309@P64: Full displacement
+L2310@P64: Full load weight
+L2311@P64: Length overall
+L2312@P64: Lift capacity
+L2313@P64: Light ship weight
+L2314@P64: Margin
+L2315@P64: Maximum beam
+L2316@P64: Number of screws
+L2317@P64: Payload
+L2318@P64: Propulsion type
+L2319@P64: Shaft horsepower
+L2320@P64: Space Attitude
+L2321@P64-65: Design life and reliabilityChapter 6: Step 3: Define the Program -
+L2322@P65: Technical Baseline Description
+L2323@P65: Page 54 GAO-20-195G Cost Estimating and Assessment Guide
+L2324@P65: System Characteristic
+L2325@P65: Launch vehicle
+L2326@P65: Mission and duration
+L2327@P65: Orbit type
+L2328@P65: Pointing accuracy
+L2329@P65: Satellite type
+L2330@P65: Thrust
+L2331@P65: Weight and volume
+L2332@P65: Tanks and trucks Engine
+L2333@P65: Height
+L2334@P65: Horsepower
+L2335@P65: Length
+L2336@P65: Weight
+L2337@P65: Width
+L2338@P65: Payload
+L2339@P65: Source: DOD and GAO. | GAO-20-195G
+L2340@P65: Once a system’s unique requirements have been defined, they should be
+L2341@P65: managed and tracked continually throughout the program’s development.
+L2342@P65: If requirements change, both the technical baseline and cost estimate
+L2343@P65: should be updated so that users and management can understand the
+L2344@P65: effects of the change. Because it is evolutionary, earlier versions of the
+L2345@P65: technical baseline will necessarily include more assumptions and,
+L2346@P65: therefore, more uncertainty. These assumptions should be replaced with
+L2347@P65: information as they become known; consequently, the level of uncertainty
+L2348@P65: associated with the assumptions will decline.
+L2349@P65: In a technical baseline document or group of documents, identify
+L2350@P65: • The program’s purpose and its system and performance
+L2351@P65: characteristics;
+L2352@P65: • All system configurations;
+L2353@P65: • Any technology implications;
+L2354@P65: • The program acquisition schedule and acquisition strategy;
+L2355@P65: • The relationship to other existing systems, including predecessor or
+L2356@P65: similar legacy systems;
+L2357@P65: Survey of Step 3
+L2358@P65-66: Process TasksChapter 6: Step 3: Define the Program -
+L2359@P66: Technical Baseline Description
+L2360@P66: Page 55 GAO-20-195G Cost Estimating and Assessment Guide
+L2361@P66: • Support (e.g., manpower, training) and risk items;
+L2362@P66: • System quantities for development, test, and production; and
+L2363@P66: • Deployment and maintenance plans
+L2364@P66: The technical baseline description completely defines the program,
+L2365@P66: reflects the current schedule, and is technically reasonable.
+L2366@P66: • A documented technical baseline description exists and resides in one
+L2367@P66: location.
+L2368@P66: • The technical baseline description has been developed by qualified
+L2369@P66: personnel such as system engineers.
+L2370@P66: • The technical baseline description has been updated with technical,
+L2371@P66: program, and schedule changes.
+L2372@P66: • The technical baseline description contains sufficient detail of the
+L2373@P66: technical characteristics, risk, and the like, based on the best
+L2374@P66: available information at the time.
+L2375@P66: • The technical baseline description has been approved by
+L2376@P66: management.
+L2377@P66: • Without an adequate understanding of the acquisition program—such
+L2378@P66: as the acquisition strategy, technical definition, characteristics, system
+L2379@P66: design features, and included technologies—the cost estimator will
+L2380@P66: not be able to identify the technical and program parameters that
+
+
+
+PARTIAL official-source text extract, not the full guide. Source: GAO-20-195G. Acquired 2026-11-12 via web text. Full PDF download HTTP 403. Page marker P is 0-based PDF page, distinct from printed page. Permission and limits: see README.md.
+
+GAO-20-195G, Cost Estimating and Assessment Guide: Best Practice by Developing and Managing Program Cost (https://www.gao.gov/assets/gao-20-195g.pdf)
+L2309@P64: Full displacement
+L2310@P64: Full load weight
+L2311@P64: Length overall
+L2312@P64: Lift capacity
+L2313@P64: Light ship weight
+L2314@P64: Margin
+L2315@P64: Maximum beam
+L2316@P64: Number of screws
+L2317@P64: Payload
+L2318@P64: Propulsion type
+L2319@P64: Shaft horsepower
+L2320@P64: Space Attitude
+L2321@P64-65: Design life and reliabilityChapter 6: Step 3: Define the Program -
+L2322@P65: Technical Baseline Description
+L2323@P65: Page 54 GAO-20-195G Cost Estimating and Assessment Guide
+L2324@P65: System Characteristic
+L2325@P65: Launch vehicle
+L2326@P65: Mission and duration
+L2327@P65: Orbit type
+L2328@P65: Pointing accuracy
+L2329@P65: Satellite type
+L2330@P65: Thrust
+L2331@P65: Weight and volume
+L2332@P65: Tanks and trucks Engine
+L2333@P65: Height
+L2334@P65: Horsepower
+L2335@P65: Length
+L2336@P65: Weight
+L2337@P65: Width
+L2338@P65: Payload
+L2339@P65: Source: DOD and GAO. | GAO-20-195G
+L2340@P65: Once a system’s unique requirements have been defined, they should be
+L2341@P65: managed and tracked continually throughout the program’s development.
+L2342@P65: If requirements change, both the technical baseline and cost estimate
+L2343@P65: should be updated so that users and management can understand the
+L2344@P65: effects of the change. Because it is evolutionary, earlier versions of the
+L2345@P65: technical baseline will necessarily include more assumptions and,
+L2346@P65: therefore, more uncertainty. These assumptions should be replaced with
+L2347@P65: information as they become known; consequently, the level of uncertainty
+L2348@P65: associated with the assumptions will decline.
+L2349@P65: In a technical baseline document or group of documents, identify
+L2350@P65: • The program’s purpose and its system and performance
+L2351@P65: characteristics;
+L2352@P65: • All system configurations;
+L2353@P65: • Any technology implications;
+L2354@P65: • The program acquisition schedule and acquisition strategy;
+L2355@P65: • The relationship to other existing systems, including predecessor or
+L2356@P65: similar legacy systems;
+L2357@P65: Survey of Step 3
+L2358@P65-66: Process TasksChapter 6: Step 3: Define the Program -
+L2359@P66: Technical Baseline Description
+L2360@P66: Page 55 GAO-20-195G Cost Estimating and Assessment Guide
+L2361@P66: • Support (e.g., manpower, training) and risk items;
+L2362@P66: • System quantities for development, test, and production; and
+L2363@P66: • Deployment and maintenance plans
+L2364@P66: The technical baseline description completely defines the program,
+L2365@P66: reflects the current schedule, and is technically reasonable.
+L2366@P66: • A documented technical baseline description exists and resides in one
+L2367@P66: location.
+L2368@P66: • The technical baseline description has been developed by qualified
+L2369@P66: personnel such as system engineers.
+L2370@P66: • The technical baseline description has been updated with technical,
+L2371@P66: program, and schedule changes.
+L2372@P66: • The technical baseline description contains sufficient detail of the
+L2373@P66: technical characteristics, risk, and the like, based on the best
+L2374@P66: available information at the time.
+L2375@P66: • The technical baseline description has been approved by
+L2376@P66: management.
+L2377@P66: • Without an adequate understanding of the acquisition program—such
+L2378@P66: as the acquisition strategy, technical definition, characteristics, system
+L2379@P66: design features, and included technologies—the cost estimator will
+L2380@P66: not be able to identify the technical and program parameters that
+L2381@P66: underpin the cost estimate and the quality of the cost estimate will be
+L2382@P66: compromised.
+L2383@P66: • Unless the technical baseline is maintained and updated in
+L2384@P66: preparation for program reviews, milestone decisions, and major
+L2385@P66: program changes, the credibility of the cost estimate will suffer.
+L2386@P66: • Without explicit documentation of the basis of a program’s estimates,
+L2387@P66: it will be difficult to update the cost estimate and provide a verifiable
+L2388@P66: trace to a new cost baseline as key assumptions change during the
+L2389@P66: course of the program’s life.
+L2390@P66: Best Practices
+L2391@P66: Likely Effects If Criteria
+L2392@P66-67: Are Not Fully MetChapter 7: Step 4: Determine the Estimating
+L2393@P67: Structure - Work Breakdown Structure
+L2394@P67: Page 56 GAO-20-195G Cost Estimating and Assessment Guide
+L2395@P67: A work breakdown structure (WBS) deconstructs a program’s end product
+L2396@P67: into smaller specific elements that are suitable for management control.
+L2397@P67: The WBS is the cornerstone of every program because it defines in detail
+L2398@P67: the work necessary to accomplish a program’s objectives. The WBS
+L2399@P67: provides a consistent framework for planning and assigning responsibility
+L2400@P67: for the work, and is an essential element for identifying activities in a
+L2401@P67: program’s integrated master schedule. The WBS is initially set up when a
+L2402@P67: program is established and becomes successively detailed over time as
+L2403@P67: more information becomes known about the program. Establishing a
+L2404@P67: product-oriented WBS is a best practice because it allows a program to
+L2405@P67: track cost and schedule by defined deliverables, such as a hardware or
+L2406@P67: software component.
+L2407@P67: A WBS provides a basic framework for a variety of related activities
+L2408@P67: including estimating costs, developing schedules, identifying resources,
+L2409@P67: and determining where risks may occur. It also provides the framework to
+L2410@P67: develop a schedule and cost plan that can easily track technical
+L2411@P67: accomplishments—in terms of resources spent in relation to the plan, as
+L2412@P67: well as completion of activities—enabling quick identification of cost and
+L2413@P67: schedule variances.
+L2414@P67: A WBS diagrams effort in small discrete pieces, or elements, to show how
+L2415@P67: each element relates to the others and to the program as a whole. It can
+L2416@P67: be thought of as an illustration of what work will be accomplished to
+L2417@P67: satisfy a program’s requirements. Elements such as hardware, software,
+L2418@P67: and data are further broken down into specific lower-level elements. The
+L2419@P67: lowest level of the WBS is defined as the work package level. By breaking
+L2420@P67: work down into smaller elements, management can more easily plan and
+L2421@P67: schedule the program’s activities and assign responsibility for the work.
+L2422@P67: A WBS breaks down product-oriented elements into a hierarchical parentchild structure that shows how elements relate to one another as well as
+L2423@P67: to the overall end product. A well-defined WBS clearly delineates the
+L2424@P67: logical relationship of all program elements and helps promote
+L2425@P67: accountability by identifying work products that are independent of one
+L2426@P67: another. Failing to include all work for all deliverables can lead to
+L2427@P67: schedule delays and subsequent cost increases. It can also result in
+L2428@P67: confusion among team members.
+L2429@P67: A WBS is an essential part of developing a program’s cost estimate and
+L2430@P67: enhancing an agency’s ability to collect data necessary to support future
+L2431@P67: cost estimates. A WBS also facilitates establishing the schedule, cost,
+L2432@P67: and earned value management (EVM) baseline. Its hierarchical nature
+L2433@P67: Chapter 7: Step 4: Determine the Estimating
+L2434@P67: Structure - Work Breakdown Structure
+L2435@P67-68: WBS ConceptsChapter 7: Step 4: Determine the Estimating
+L2436@P68: Structure - Work Breakdown Structure
+L2437@P68: Page 57 GAO-20-195G Cost Estimating and Assessment Guide
+L2438@P68: allows the WBS to logically sum the lower-level elements that support the
+L2439@P68: measuring of cost, schedule, and technical analysis in an EVM system. It
+L2440@P68: also allows a program manager to more precisely identify which
+L2441@P68: components are causing cost or schedule overruns and to more
+L2442@P68: effectively mitigate the root cause of the overruns. Moreover, when
+L2443@P68: appropriately integrated with systems engineering, cost estimating, EVM,
+L2444@P68: and risk management, a WBS provides the basis to allow program
+L2445@P68: managers to have a better view into a program’s status, facilitating
+L2446@P68: continual improvement.
+L2447@P68: The number of levels in a WBS depends on a program’s complexity and
+L2448@P68: risk. Work breakdown structures need to be expanded to a level of detail
+L2449@P68: that is sufficient for planning and successfully managing the full scope of
+L2450@P68: work. However, each WBS should, at the very least, include three levels.
+L2451@P68: The first level represents the program as a whole and therefore contains
+L2452@P68: only one element—the program’s name. The second level contains the
+L2453@P68: major program segments and the third level contains the subsystems for
+L2454@P68: each segment. These relationships are illustrated in figure 7, which
+L2455@P68: depicts a simple construction WBS.
+L2456@P68: Figure 7: A Product-Oriented Work Breakdown Structure
+L2457@P68: In figure 7, all level 2 elements also have level 3 subcomponents. For
+L2458@P68: some level 2 elements, level 3 is the lowest level of breakdown; for other
+L2459@P68: level 2 elements, lower levels are required. The hierarchical parent–child
+L2460@P68: relationship shows logical connections and relationships and leads to a
+L2461@P68: better understanding of the technical effort involved. It also helps improve
+L2462@P68-69: the ability to trace relationships within the cost estimate and EVM system.Chapter 7: Step 4: Determine the Estimating
+L2463@P69: Structure - Work Breakdown Structure
+L2464@P69: Page 58 GAO-20-195G Cost Estimating and Assessment Guide
+L2465@P69: In the example in figure 7, construction is a child of the house system but
+L2466@P69: the parent of foundations and underground, house construction, and site
+L2467@P69: work. In a WBS, the sum of a parent’s children must equal the parent.
+L2468@P69: Thus, in figure 7, the sum of framing, exterior finishes, interior rough-in,
+L2469@P69: and interior finishes must be equal to the level 3 parent house
+L2470@P69: construction. In this way, the WBS ensures that each element is defined
+L2471@P69: and related to only one work effort.
+L2472@P69: Case study 8 highlights problems that can occur when this best practice
+L2473@P69-70: is not followed.Chapter 7: Step 4: Determine the Estimating
+L2474@P70: Structure - Work Breakdown Structure
+L2475@P70: Page 59 GAO-20-195G Cost Estimating and Assessment Guide
+L2476@P70: Case Study 8: Program Level Work Breakdown Structure, from Plutonium
+L2477@P70: Disposition Program, GAO-14-231
+L2478@P70: The Department of Energy’s (DOE) National Nuclear Security Administration (NNSA), a
+L2479@P70: separately organized agency within DOE, manages the Plutonium Disposition program to
+L2480@P70: dispose of surplus weapons-grade plutonium by burning it as mixed oxide (MOX) fuel—a
+L2481@P70: mixture of plutonium and uranium oxides—in specially modified commercial nuclear
+L2482@P70: reactors. In 2012, DOE forecasted cost increases of close to $3 billion over the previous
+L2483@P70: estimates for the program’s two construction projects, the MOX facility and the Waste
+L2484@P70: Solidification Building (WSB) for disposing of waste from the MOX facility. GAO was asked
+L2485@P70: to review these cost increases and the life cycle cost estimate.
+L2486@P70: GAO’s assessment of NNSA’s process for developing its draft life cycle cost estimate
+L2487@P70: found, in part, that the estimate was only partially comprehensive. GAO found that work
+L2488@P70: breakdown structures were developed for the MOX and WSB projects and other
+L2489@P70: components of the program, but that NNSA had not formalized a program-level work
+L2490@P70: breakdown structure. A typical work breakdown structure provides a clear picture of what
+L2491@P70: needs to be accomplished, how the work will be done, and a basis for identifying resources
+L2492@P70: and tasks for developing a cost estimate. Without a program-level work breakdown
+L2493@P70: structure, NNSA could not ensure that its life cycle cost estimate captured all relevant
+L2494@P70: costs, which could lead to cost overruns.
+L2495@P70: GAO recommended that to identify lessons learned from and provide assurance of
+L2496@P70: preventing recurrence of cost increases for the MOX facility and WSB, and to develop
+L2497@P70: reliable cost estimates for the Plutonium Disposition program, the Secretary of Energy
+L2498@P70: should direct the DOE and NNSA Offices of Acquisition and Project Management and the
+L2499@P70: NNSA office responsible for managing the Plutonium Disposition program, as appropriate,
+L2500@P70: to revise and update the program’s life cycle cost estimate following the 12 key steps
+L2501@P70: described in the GAO Cost Estimating and Assessment Guide for developing high-quality
+L2502@P70: cost estimates, such as conducting an independent cost estimate to provide an objective
+L2503@P70: and unbiased assessment of whether the estimate can be achieved. In 2017, NNSA
+L2504@P70: directed its Office of Cost Estimating and Program Evaluation to develop a new life cycle
+L2505@P70: estimate for the plutonium disposition program based on NNSA’s preferred approach of
+L2506@P70: dilute and dispose. That estimate was completed in March 2018. The estimate was directed
+L2507@P70: to be done in accordance with GAO cost estimating and assessment best practices.
+L2508@P70: GAO, Plutonium Disposition Program: DOE Needs to Analyze the Root Causes of Cost
+L2509@P70: Increases and Develop Better Cost Estimates, GAO-14-231 (Washington, D.C.: February
+L2510@P70: 13, 2014).
+L2511@P70: A WBS may sometimes be organized by function rather than by product.
+L2512@P70: A functional WBS categorizes effort by activities or processes, such as
+L2513@P70: manufacturing, engineering, or quality control. But because a productoriented WBS reflects cost, schedule, and technical performance on
+L2514@P70: specific portions of a program, it represents a cost estimating best
+L2515@P70: practice. For example, an overrun on a specific item in figure 7 (for
+L2516@P70: example, framing) might cause program management to change a
+L2517@P70-71: specification, shift funds, or modify the design. If the WBS was Chapter 7: Step 4: Determine the Estimating
+
+
+
+PARTIAL official-source text extract, not the full guide. Source: GAO-20-195G. Acquired 2026-11-12 via web text. Full PDF download HTTP 403. Page marker P is 0-based PDF page, distinct from printed page. Permission and limits: see README.md.
+
+GAO-20-195G, Cost Estimating and Assessment Guide: Best Practice by Developing and Managing Program Cost (https://www.gao.gov/assets/gao-20-195g.pdf)
+L3645@P102: data, allowing the analyst to determine outliers, relationships, and trends.
+L3646@P102: In a scatterplot, cost is typically treated as the dependent variable (the yaxis). Independent variables depend on the data collected, but are
+L3647@P102: typically technical—such as weight, lines of code, and speed—or
+L3648@P102: operational parameters—such as crew size and flying hours.
+L3651@P102: which the points are scattered will determine how likely it is that each
+L3652@P102: independent variable is a cost driver. The less scattered the points are,
+L3653@P102: the more likely it is that the variable is a cost driver. Eventually, the
+L3654@P102: analyst will use statistical techniques to confirm cost drivers, but using
+L3655@P102: scatterplots is an excellent way to identify potential drivers.
+L3656@P102: The cost estimator should also calculate descriptive statistics to
+L3657@P102: characterize and describe the data. Important measures and statistics
+L3658@P102: include sample size, mean, standard deviation, and coefficient of
+L3659@P102: variation. The coefficient of variation is calculated by dividing the standard
+L3660@P102: deviation by the mean. The resulting percentage can be used to compare
+L3661@P102: the extent of variation within data sets.
+L3662@P102: Visual displays of the descriptive statistics help discern differences
+L3663@P102: among groups. Bar charts, for example, are useful for comparing means.
+L3664@P102: Histograms can be used to examine the distribution of different data, the
+L3665@P102: frequency of values, and for determining potential outliers.
+L3666@P102: Many times, estimates are not based on actual data but are derived by
+L3667@P102: subjective engineering judgment. All engineering judgments should be
+L3668@P102: validated before being used in a cost estimate. Validation involves crosschecking the results, in addition to analyzing the data and examining the
+L3669@P102: documentation for the judgment. Graphs and scatterplots can help
+L3670@P102: validate an engineering judgment because they can quickly point out any
+L3671@P102-103: outliers.Chapter 9: Step 6: Obtain the Data
+L3672@P103: Page 92 GAO-20-195G Cost Estimating and Assessment Guide
+L3673@P103: An outlier is a data point that is typically defined as falling outside the
+L3674@P103: expected range of three standard deviations. Statistically speaking,
+L3675@P103: outliers are rare, occurring only 0.3 percent of the time. If a data point is
+L3676@P103: truly an outlier, it should be removed from the data set, because it can
+L3677@P103: skew the results. However, an outlier should not be removed simply
+L3678@P103: because it appears too high or too low compared to the rest of the data
+L3679@P103: set. Instead, a cost estimator should provide adequate documentation as
+L3680@P103: to why an outlier was removed. The documentation should include
+L3681@P103: comparisons to historical data that show the outlier is in fact an anomaly.
+L3682@P103: If possible, the documentation should describe why the outlier exists. For
+L3683@P103: example, there might have been a strike, a program restructuring, or a
+L3684@P103: natural disaster that skewed the data. If the historical data show the
+L3685@P103: outlier is simply an extreme case, the cost estimator should retain the
+L3686@P103: data point; otherwise, it will appear that the estimator was trying to
+L3687@P103: manipulate the data. Removing an extreme case should rarely be done
+L3688@P103: because historical data are necessary for capturing the natural variation
+L3689@P103: within programs.
+L3690@P103: While collecting data, the estimator needs to be aware of any potential
+L3691@P103: biases within the data. In particular, data collected through subject matter
+L3692@P103: expert interviews have the potential to be biased.
+L3693@P103: Bias can originate from different sources, such as over-optimism, group
+L3694@P103: think, dominating personalities, inexperience, or pressure from
+L3695@P103: management. For example, motivational bias is a source of bias that
+L3696@P103: arises when interviewees feel threatened (whether justifiably or
+L3697@P103: unjustifiably) if they give their true thoughts about a program. This threat
+L3698@P103: is typically from fear of being punished by someone in authority.
+L3699@P103: Confidence bias occurs when the estimator is overly optimistic about the
+L3700@P103: success of the program. Other forms of bias include a tendency to give
+L3701@P103: more weight to recent events than earlier events, to assume patterns
+L3702@P103: where none exist, and to assign connections to coincidences.
+L3703@P103: As we describe in chapter 20, an EVM system should be validated to
+L3704@P103: ensure that, among other things, it provides reliable data for managing
+L3705@P103: the program and reporting its status. Before using EVM data, analysts
+L3706@P103: should ensure that the data are reliable by
+L3707@P103: • requesting a copy of the EVM system compliance letter showing the
+L3708@P103: contractor’s ability to satisfy the 32 guidelines;
+L3709@P103: • requesting a copy of the IBR documentation and final briefing to see
+L3710@P103: what risks were identified and what weaknesses, if any, were found;
+L3711@P103: Data Bias
+L3712@P103-104: EVM Data ReliabilityChapter 9: Step 6: Obtain the Data
+L3713@P104: Page 93 GAO-20-195G Cost Estimating and Assessment Guide
+L3714@P104: • determining whether EVM surveillance is being done by qualified and
+L3715@P104: independent staff; and
+L3716@P104: • determining the financial accounting status of the contractor’s EVM
+L3717@P104: system to see whether any adverse opinions would call into question
+L3718@P104: the reliability of the accounting data.
+L3719@P104: In addition to these tasks, auditors should perform a sanity check to see if
+L3720@P104: the data are reasonable. For example, the auditor should review all WBS
+L3721@P104: elements in the cost reports to determine whether there are data
+L3722@P104: anomalies (chapter 19 describes several measures for EVM data
+L3723@P104: anomalies). Despite the fact that EVM data anomalies should be rare and
+L3724@P104: fully explained in variance analysis reports, we have found programs that
+L3725@P104: submit reports with these types of errors.
+L3726@P104: The purpose of data normalization is to make a given data set consistent
+L3727@P104: with and comparable to other data used in the estimate. Because data
+L3728@P104: can be gathered from a variety of sources, they are often in different
+L3729@P104: forms. They therefore need to be adjusted before being compared or
+L3730@P104: used as a basis for projecting costs. Cost data are adjusted in a process
+L3731@P104: called normalization, which removes the effects of external influences.
+L3732@P104: The objective of data normalization is to improve data consistency so that
+L3733@P104: comparisons and projections are more valid. Data are normalized in
+L3734@P104: several ways: by cost units, sizing units, key groupings, and technology
+L3735@P104: maturity.
+L3736@P104: Cost units primarily adjust for inflation so it is important to know the year
+L3737@P104: in which funds were spent. For example, an item that cost $100 in 1990 is
+L3738@P104: more expensive than an item that cost $100 in 2005 when adjusted for
+L3739@P104: the effects of inflation. In addition to inflation, the cost estimator needs to
+L3740@P104: understand what the cost represents. For example, some data may
+L3741@P104: represent only direct labor while other data include overhead and fee.
+L3742@P104: Cost data should also be converted to equivalent units before being used
+L3743@P104: in a data set. That is, costs expressed in thousands, millions, or billions of
+L3744@P104: dollars must be converted to one format—for example, all costs
+L3745@P104: expressed in millions of dollars. Costs may also be adjusted for currency
+L3746@P104: conversions.
+L3747@P104: Sizing units normalize data to common units—for example, cost per foot,
+L3748@P104: cost per pound, and dollars per software line of code. When normalizing
+L3749@P104: data for unit size, it is important to define exactly what the unit represents.
+L3750@P104: For example, does a software line of code include carriage returns or
+L3751@P104: comments? Cost estimators should clearly define the sizing metric so that
+L3752@P104: Data Normalization
+L3753@P104: Cost Units
+L3754@P104-105: Sizing UnitsChapter 9: Step 6: Obtain the Data
+L3755@P105: Page 94 GAO-20-195G Cost Estimating and Assessment Guide
+L3756@P105: the data can be converted to a common standard before being used in
+L3757@P105: the estimate.
+L3758@P105: Key groupings normalize data by similar missions, characteristics, or
+L3759@P105: operating environments by cost type or work content. Products with
+L3760@P105: similar mission applications have similar characteristics and traits, as do
+L3761@P105: products with similar operating environments. For example, space
+L3762@P105: systems exhibit different characteristics from those of submarines, but the
+L3763@P105: space shuttle has characteristics distinct from those of a satellite. Costs
+L3764@P105: should also be grouped by type. For example, costs should be broken out
+L3765@P105: between recurring and nonrecurring or fixed and variable costs.
+L3766@P105: Using homogeneous groups normalizes for differences between historical
+L3767@P105: and new program WBS elements in order to achieve content consistency.
+L3768@P105: To do this type of normalization, a cost estimator needs to gather cost
+L3769@P105: data that can be formatted to match the desired WBS element definition.
+L3770@P105: This may require adding and deleting certain items to get a like for like
+L3771@P105: comparison. A properly defined WBS dictionary is necessary to avoid
+L3772@P105: inconsistencies.
+L3773@P105: Technology normalization is the process of adjusting cost data for
+L3774@P105: productivity improvements resulting from technological advancements
+L3775@P105: that occur over time. In effect, technology normalization is the recognition
+L3776@P105: that technology continually improves, so a cost estimator must make a
+L3777@P105: subjective attempt to measure the effect of this improvement on historical
+L3778@P105: program costs. For instance, an item developed 10 years ago may have
+L3779@P105: been considered state of the art and the costs would be higher than
+L3780@P105: normal. Today, that item may be available off the shelf and therefore the
+L3781@P105: costs would be considerably less.
+L3782@P105: Therefore, technology normalization is the ability to forecast changes in
+L3783@P105: cost due to changes in technology by predicting the timing and degree of
+L3784@P105: change of technological parameters associated with the design,
+L3785@P105: production, and use of devices.
+L3786@P105: Cost data should be separated into recurring and nonrecurring costs
+L3787@P105: because one-time nonrecurring costs will skew the costs for recurring
+L3788@P105: production units.
+L3789@P105: Nonrecurring costs only occur once. These include development and
+L3790@P105: investment costs that generally occur only once in a system’s life cycle.
+L3791@P105: Key Groupings
+L3792@P105: Technology Maturity
+L3793@P105: Recurring,
+L3794@P105: Nonrecurring, Fixed,
+L3795@P105: and Variable Costs
+L3796@P105-106: Nonrecurring CostsChapter 9: Step 6: Obtain the Data
+L3797@P106: Page 95 GAO-20-195G Cost Estimating and Assessment Guide
+L3798@P106: They include all the effort required to develop and qualify an item, such as
+L3799@P106: defining its requirements and its allocation, design, analysis,
+L3800@P106: development, qualification, and verification. Costs for the following are
+L3801@P106: generally nonrecurring:
+L3802@P106: • manufacturing and testing development units, both breadboard and
+L3803@P106: engineering, for hardware, as well as qualification and life-test units;
+L3804@P106: • retrofitting and refurbishing development hardware for requalification;
+L3805@P106: • developing and testing software before beginning routine system
+L3806@P106: operation; nonrecurring integration and test efforts usually end when
+L3807@P106: qualification tests are complete;
+L3808@P106: • providing services and some hardware, such as engineering, before
+L3809@P106: and during critical design review; and
+L3810@P106: • developing, acquiring, producing, and checking all tooling, ground
+L3811@P106: handling, software, and support equipment and test equipment.
+L3812@P106: Recurring costs occur periodically as items are produced or services are
+L3813@P106: performed. For example, the costs associated with producing hardware—
+L3814@P106: that is, manufacturing and testing, providing engineering support for
+L3815@P106: production, and supporting that hardware with spare units or parts—are
+L3816@P106: recurring costs. Recurring integration and testing, including the integration
+L3817@P106: and acceptance testing of production units at all WBS levels, also
+L3818@P106: represent recurring costs. In addition, refurbishing hardware for
+L3819@P106: operational or spare units is a recurring cost, as is maintaining test
+L3820@P106: equipment and production support software.
+L3821@P106: An important reason for differentiating recurring from nonrecurring costs
+L3822@P106: is because of their application to learning curves. Cost improvement, or
+L3823@P106: learning, is generally associated with repetitive actions or processes,
+L3824@P106: such as those directly tied to producing an item again and again.
+L3825@P106: Therefore, learning curve theory applies only to recurring costs. Appendix
+L3826@P106: VII provides more information on learning curves.
+L3827@P106: Costs can also be categorized as fixed or variable. Fixed costs are static,
+L3828@P106: regardless of the number of quantities to be produced. An example of a
+L3829@P106: fixed cost is the cost to rent a facility. A variable cost is directly affected
+L3830@P106: by the number of units produced and includes such things as the cost of
+L3831@P106: electricity or overtime pay. Knowing what the data represent is important
+L3832@P106: for understanding anomalies that can occur as the result of production
+L3833@P106: unit cuts.
+L3834@P106-107: Recurring CostsChapter 9: Step 6: Obtain the Data
+L3835@P107: Page 96 GAO-20-195G Cost Estimating and Assessment Guide
+L3836@P107: In the development of an estimate, cost data must be expressed in like
+L3837@P107: terms. This is usually accomplished by adjusting costs for inflation to
+L3838@P107: express them in a base year that will serve as a point of reference for a
+L3839@P107: fixed price level. Adjusting for inflation is an important step in cost
+L3840@P107: estimating. If the inflation index used is not correct, the resulting estimate
+L3841@P107: could overstate or understate the cost of the program, as case study 13
+L3842@P107: illustrates.
+L3843@P107: Case Study 13: Documenting Inflation, from Coast Guard, GAO-12-741
+L3844@P107: From fiscal years 2005 through 2011, the physical condition of the Coast Guard’s legacy
+L3845@P107: vessels was generally poor, and the Coast Guard had taken two key actions to improve the
+L3846@P107: vessels’ condition: reorganizing its maintenance command structure and implementing
+
+
+
+PARTIAL official-source text extract, not the full guide. Source: GAO-20-195G. Acquired 2026-11-12 via web text. Full PDF download HTTP 403. Page marker P is 0-based PDF page, distinct from printed page. Permission and limits: see README.md.
+
+GAO-20-195G, Cost Estimating and Assessment Guide: Best Practice by Developing and Managing Program Cost (https://www.gao.gov/assets/gao-20-195g.pdf)
+L4153@P115: addition, because analogies are one-to-one comparisons, the historical
+L4154@P115: and new systems should have a strong parallel. Table 9 shows how an
+L4155@P115: analogy works.
+L4156@P115: Table 9: An Example of the Analogy Cost Estimating Method
+L4163@P115: Source: ICEAA (International Cost Estimating and Analysis). Cost Estimating Body of Knowledge. Vienna, Va.: 2013. | GAO-20-195G
+L4164@P115: The equation in table 9 assumes a linear relationship between engine
+L4165@P115: cost and the amount of thrust. Note that there should be a compelling
+L4166@P115: scientific or engineering reason why an engine’s cost is directly
+L4167@P115: proportional to its thrust. Without more data (or an expert opinion on
+L4168@P115: engine costs), it is difficult to know what parameters are the true drivers of
+L4169@P115: cost. Therefore, when using the analogy method, it is important that the
+L4170@P115: estimator research and discuss the reasonableness of technical program
+L4171@P115: drivers with program experts to determine whether they are significant
+L4172@P115: cost drivers.
+L4173@P115: Analogy relies a great deal on expert opinion to modify the existing
+L4174@P115: system data to approximate the new system. When possible, the
+L4175@P115: adjustments should be quantitative rather than qualitative, avoiding
+L4176@P115-116: subjective judgments as much as possible. Even when an analyst is using Chapter 10: Step 7: Develop the Point Estimate
+L4177@P116: Page 105 GAO-20-195G Cost Estimating and Assessment Guide
+L4178@P116: a more detailed cost estimating technique, an analogy can provide a
+L4179@P116: useful cross-check.
+L4180@P116: The analogy method has several advantages:
+L4181@P116: • It can be used before detailed program requirements are known.
+L4182@P116: • If the analogy is strong, the estimate will be defensible.
+L4183@P116: • An analogy can be developed quickly and at minimum cost.
+L4184@P116: • The tie to historical data is simple enough to be readily understood.
+L4185@P116: Analogies also have some disadvantages:
+L4186@P116: • An analogy relies on a single data point.
+L4187@P116: • It is often difficult to find the detailed cost, technical, and program data
+L4188@P116: required for analogies.
+L4189@P116: • There is a tendency to be overly subjective about the technical
+L4190@P116: parameter adjustment factors.
+L4191@P116: The last disadvantage can be best explained with an example. If a cost
+L4192@P116: estimator assumes that a new component will be 20 percent more
+L4193@P116: complex but cannot explain why, the adjustment factor is unacceptable.
+L4194@P116: The complexity must be related to the system’s parameters, such as that
+L4195@P116: the new system will have 20 percent more data processing capacity or
+L4196@P116: will weigh 20 percent more. Case study 14 highlights what can happen
+L4197@P116-117: when technical parameter assumptions are overly optimistic.Chapter 10: Step 7: Develop the Point Estimate
+L4198@P117: Page 106 GAO-20-195G Cost Estimating and Assessment Guide
+L4199@P117: Case Study 14: Cost Estimating Methods, from Space Acquisitions, GAO-07-96
+L4200@P117: In 2004, Advanced Extremely High Frequency (AEHF) satellite program decision-makers
+L4201@P117: relied on the program office cost estimate rather than the independent estimate the Cost
+L4202@P117: Analysis Improvement Group (CAIG) developed to support the production decision. The
+L4203@P117: program office estimated that the system would cost about $6 billion on the assumption that
+L4204@P117: AEHF would have 10 times more capacity than Milstar, the predecessor satellite, at half the
+L4205@P117: cost and weight. However, the CAIG concluded that the program could not deliver more
+L4206@P117: data capacity at half the weight given the state of the technology. In fact, the CAIG believed
+L4207@P117: that to get the desired increase in data rate, the weight would have to increase
+L4208@P117: proportionally. As a result, the CAIG estimated that AEHF would cost $8.7 billion and
+L4209@P117: predicted a $2.7 billion cost overrun.
+L4210@P117: The CAIG relied on weight data from historical satellites to estimate the program’s cost
+L4211@P117: because it considered weight to be the best cost predictor for military satellite
+L4212@P117: communications. The historical data from the AEHF contractor showed that the weight had
+L4213@P117: more than doubled since the program began and that the majority of the weight growth was
+L4214@P117: in the payload. The Air Force also used weight as a cost predictor, but attributed the weight
+L4215@P117: growth to structural components rather than the more costly payload portion of the satellite.
+L4216@P117: The CAIG stated that major cost growth was inevitable from the program start because
+L4217@P117: historical data showed that it was possible to achieve a weight reduction or an increase in
+L4218@P117: data capacity, but not both at the same time.
+L4219@P117: GAO, Space Acquisitions: DOD Needs to Take More Action to Address Unrealistic Initial
+L4220@P117: Cost Estimates of Space Systems, GAO-07-96 (Washington, D.C.: November 17, 2006).
+L4221@P117: Several questions should be asked when the analogy method is used as
+L4222@P117: an estimating technique.
+L4223@P117: • What heritage programs and scaling factors were used to create the
+L4224@P117: analogy?
+L4225@P117: • Are the analogous data from reliable sources?
+L4226@P117: • Did technical experts validate the scaling factor?
+L4227@P117: • Can any unusual requirements invalidate the analogy?
+L4228@P117: • Are the parameters used to develop an analogous factor similar to the
+L4229@P117: program being estimated?
+L4230@P117: • How were adjustments made to account for differences between
+L4231@P117: existing and new systems? Were they logical, credible, and
+L4232@P117-118: acceptable?Chapter 10: Step 7: Develop the Point Estimate
+L4233@P118: Page 107 GAO-20-195G Cost Estimating and Assessment Guide
+L4234@P118: The engineering build-up cost estimating method builds the overall cost
+L4235@P118: estimate by summing or “rolling up” detailed estimates done at lower
+L4236@P118: levels of the WBS. Because the lower-level estimating associated with the
+L4237@P118: build-up method uses industrial engineering principles, it is often referred
+L4238@P118: to as engineering build-up. It is sometimes referred to as a grass-roots or
+L4239@P118: bottom-up estimate.
+L4240@P118: An engineering build-up estimate is done at the lowest level of detail and
+L4241@P118: consists of labor and materials costs that have overhead and fee added
+L4242@P118: to them. In addition to labor hours, a detailed parts list is required. Once
+L4243@P118: in hand, the material parts are allocated to the lowest WBS level based
+L4244@P118: on how the work will be accomplished. In addition, quantity and schedule
+L4245@P118: have to be considered for time-phasing the estimate and applying
+L4246@P118: learning curves, if applicable. (Learning curves are discussed later in this
+L4247@P118: chapter and in appendix VII.) Typically, cost estimators work with
+L4248@P118: engineers to develop the detailed estimates. The cost estimator’s focus is
+L4249@P118: to get detailed information from the engineer that is reasonable, complete,
+L4250@P118: and consistent with the program’s ground rules and assumptions. The
+L4251@P118: cost estimator should find additional data to validate the engineer’s
+L4252@P118: estimates.
+L4253@P118: The underlying assumption of this method is that actual costs are good
+L4254@P118: predictors of future costs. Thus, the engineering build-up method is
+L4255@P118: normally used during the program’s production phase when the program’s
+L4256@P118: configuration is stable and actual cost data are available. It is assumed
+L4257@P118: that data from the development phase can be used to estimate the cost
+L4258@P118: for production. As illustrated in table 10, the build-up method is used
+L4259@P118: when there is enough detailed information about building an item—such
+L4260@P118: as number of hours and number of parts—and the manufacturing process
+L4261@P118: to be used.
+L4262@P118: Engineering Build-Up Cost
+L4263@P118-119: Estimating MethodChapter 10: Step 7: Develop the Point Estimate
+L4264@P119: Page 108 GAO-20-195G Cost Estimating and Assessment Guide
+L4265@P119: Table 10: An Example of the Engineering Build-Up Cost Estimating Method
+L4266@P119: Problem Similar component Solution Result
+L4267@P119: Estimate labor hours for the
+L4268@P119: sheet metal element of the
+L4269@P119: inlet nacelle for a new aircraft
+L4270@P119: F/A-18 inlet nacelle Apply historical F/A-18
+L4271@P119: variance for touch labor effort
+L4272@P119: and apply support labor factor
+L4273@P119: to adjust estimated touch
+L4274@P119: labor hours
+L4275@P119: 2,000 hours for F/A-18 inlet nacelle x
+L4276@P119: 1.2 (variance factor) = 2,400 touch
+L4277@P119: labor hours; and 2,400 labor hours x
+L4278@P119: 1.48 (1+support labor factor) = 3,552
+L4279@P119: total labor hours (touch labor plus
+L4280@P119: support labor) estimate for new
+L4281@P119: aircraft inlet nacelle sheet metal
+L4282@P119: Estimate labor hour cost for
+L4283@P119: the sheet metal of the inlet
+L4284@P119: nacelle for a new aircraft
+L4285@P119: Apply average labor hour rate
+L4286@P119: for manufacturing firm
+L4287@P119: personnel to labor hours
+L4288@P119: Total labor hour cost = total labor
+L4289@P119: hours x average labor hour rate
+L4290@P119: Source: ICEAA (International Cost Estimating and Analysis). Cost Estimating Body of Knowledge. Vienna, Va.: 2013. | GAO-20-195G
+L4291@P119: The several advantages to the build-up technique include:
+L4292@P119: • the estimator’s ability to determine exactly what the estimate includes
+L4293@P119: and whether anything was overlooked,
+L4294@P119: • its unique application to the specific program and manufacturer, and
+L4295@P119: • it gives good insight into major cost contributors.
+L4296@P119: Some disadvantages of the engineering build-up method are that:
+L4297@P119: • it can be expensive to implement and it is time consuming,
+L4298@P119: • it is not flexible enough to answer what-if questions,
+L4299@P119: • new estimates must be built for each alternative,
+L4300@P119: • the product specification must be well known and stable,
+L4301@P119: • all product and process changes must be reflected in the estimate,
+L4302@P119: • small errors can grow into larger errors during the summation, and
+L4303@P119: • some elements can be omitted by accident.
+L4304@P119: As with the analogy method, several questions should be asked regarding
+L4305@P119: engineering build-up to check the accuracy of the estimating technique.
+L4306@P119: • Was each WBS cost element defined in enough detail to use this
+L4307@P119: method correctly?
+L4308@P119: • Were data adequate to accurately estimate the cost of each WBS
+L4309@P119: element?
+L4310@P119-120: • Did experienced experts help determine a reasonable cost estimate?Chapter 10: Step 7: Develop the Point Estimate
+L4311@P120: Page 109 GAO-20-195G Cost Estimating and Assessment Guide
+L4312@P120: • Was the estimate based on specific quantities that would be ordered
+L4313@P120: at one time, allowing for quantity discounts?
+L4314@P120: • Did the estimate account for contractor material handling overhead?
+L4315@P120: • Was there a definitive understanding of each WBS cost element’s
+L4316@P120: composition?
+L4317@P120: • Were labor rates based on auditable sources? Did they include all
+L4318@P120: applicable overhead, general and administrative costs, and fees?
+L4319@P120: Were they consistent with industry standards?
+L4320@P120: • Is a detailed and accurate materials and parts list available?
+L4321@P120: In the parametric method, a statistical relationship is developed between
+L4322@P120: historical costs and program, physical, and performance characteristics.
+L4323@P120: The method is sometimes referred to as a top-down approach. Types of
+L4324@P120: physical characteristics used for parametric estimating include weight,
+L4325@P120: power, and lines of code. Other program and performance characteristics
+L4326@P120: include site deployment plans for information technology installations,
+L4327@P120: maintenance plans, test and evaluation schedules, technical performance
+L4328@P120: measures, and crew size. These are just some examples of potential cost
+L4329@P120: drivers for a particular program.
+L4330@P120: Sources for these cost drivers are often found in the technical baseline or
+L4331@P120: program technical data. It is important that the attributes used in a
+L4332@P120: parametric estimate be cost drivers of the program. The assumption
+L4333@P120: driving the parametric approach is that the same factors that affected cost
+L4334@P120: in the past will continue to affect costs in the future. This method is often
+L4335@P120: used when little is known about a program except for a few key
+L4336@P120: characteristics like weight, volume, or speed.
+L4337@P120: Using a parametric method requires access to historical data, which may
+L4338@P120: be difficult to obtain. If these data are available, they can be used to
+L4339@P120: determine the cost drivers and to provide statistical results, and can be
+L4340@P120: adjusted to meet the requirements of the new program. Unlike the
+L4341@P120: analogy method, parametric estimating relies on data from many
+L4342@P120: programs and covers a broader range. Confidence in a parametric
+L4343@P120: estimate’s results depends on how valid the relationships are between
+L4344@P120: cost and the physical attributes or performance characteristics. Using this
+L4345@P120: method, the cost estimator must always present the related statistics,
+L4346@P120: assumptions, and sources for the data.
+L4347@P120: Parametric Cost
+L4348@P120-121: Estimating MethodChapter 10: Step 7: Develop the Point Estimate
+L4349@P121: Page 110 GAO-20-195G Cost Estimating and Assessment Guide
+L4350@P121: The goal of parametric estimating is to create a statistically valid cost
+L4351@P121: estimating relationship using historical data. The parametric CER can
+L4352@P121: then be used to estimate the cost of the new program by entering its
+L4353@P121: specific characteristics into the parametric model. CERs established early
+L4354@P121: in a program’s life cycle should be periodically reviewed to make sure
+L4355@P121: they are current and the input range still applies to the new program. In
+L4356@P121: addition, parametric CERs should be well documented, because serious
+L4357@P121: estimating errors can occur if the CER is improperly used.
+L4358@P121: Parametric techniques can be used in a wide variety of situations ranging
+L4359@P121: from early planning estimates to detailed contract negotiations. It is
+
+
+
+PARTIAL official-source text extract, not the full guide. Source: GAO-20-195G. Acquired 2026-11-12 via web text. Full PDF download HTTP 403. Page marker P is 0-based PDF page, distinct from printed page. Permission and limits: see README.md.
+
+GAO-20-195G, Cost Estimating and Assessment Guide: Best Practice by Developing and Managing Program Cost (https://www.gao.gov/assets/gao-20-195g.pdf)
+L5153@P144: minimally met the credibility standard because it did not contain a sensitivity analysis; such
+L5154@P144: analyses reveal how the cost estimate is affected by a change in a single assumption.
+L5155@P144: Without a sensitivity analysis to reveal how a cost estimate is affected by a change in a
+L5156@P144: single assumption, the cost estimator cannot fully understand which variable most affects
+L5157@P144: the cost estimate.
+L5158@P144: The use of a sensitivity analysis was not specified in cost estimation guidance for MILCON
+L5159@P144: projects by either DOD or the Air Force. According to Office of the Secretary of Defense
+L5160@P144: and Air Force officials, a sensitivity analysis is part of the underlying unit cost development,
+L5161@P144: because costs are developed through the use of both historical data and industry averages.
+L5162@P144: Officials further stated that the Office of the Secretary of Defense used actual data
+L5163@P144: underpinned by relevant sensitivity and range analyses to develop its cost estimates. For
+L5164@P144: example, Office of the Secretary of Defense and Air Force officials said that the Office of
+L5165@P144: the Secretary of Defense used the DOD Selling Price Index—which averaged three
+L5166@P144: commonly accepted national indexes for construction price escalation—to calculate actual
+L5167@P144: project award cost data. However, for sensitivity analysis to be useful in informing
+L5168@P144: decisions, careful assessment of the underlying risks and supporting data related to a
+L5169@P144: specific MILCON project is also necessary. In addition, the sources of the variation should
+L5170@P144: be well documented and traceable. Without conducting a sensitivity analysis to identify the
+L5171@P144: effect of uncertainties associated with different assumptions, DOD and the Air Force
+L5172@P144: increased the risk that decisions would be made without a clear understanding of the
+L5173@P144: effects of these assumptions on costs.
+L5174@P144: GAO, Joint Intelligence Analysis Complex: DOD Needs to Fully Incorporate Best Practices
+L5175@P144-145: into Future Cost Estimates, GAO-17-29 (Washington, D.C.: November 2016).Chapter 11: Step 8: Conduct Sensitivity
+L5176@P145: Analysis
+L5177@P145: Page 134 GAO-20-195G Cost Estimating and Assessment Guide
+L5178@P145: For sensitivity analysis to reveal how the cost estimate is affected by a
+L5179@P145: change in a single parameter or assumption, the cost estimator must
+L5180@P145: examine the effect of changing one factor at a time while holding all
+L5181@P145: others constant. This allows for an understanding of which factor most
+L5182@P145: affects the cost estimate. By examining each factor independently, the
+L5183@P145: cost estimator can evaluate the results to discover which parameters or
+L5184@P145: assumptions most influence the estimate.
+L5185@P145: A valid sensitivity analysis typically has five steps:
+L5186@P145: 1. identify assumptions and parameters, including key cost drivers, as
+L5187@P145: factors for sensitivity testing;
+L5188@P145: 2. re-estimate the total cost of the program by varying one of these
+L5189@P145: factors between two set amounts—for example, maximum and
+L5190@P145: minimum or performance thresholds;28
+L5191@P145: 3. document the results;
+L5192@P145: 4. repeat steps 2 and 3 until all factors identified in step 1 have been
+L5193@P145: tested independently; and
+L5194@P145: 5. evaluate the results to determine which factors affect the cost
+L5195@P145: estimate most and document the results.
+L5196@P145: The first step of a sensitivity analysis requires analysts to identify the
+L5197@P145: factors to be varied. The sources of variation should be well documented
+L5198@P145: and traceable. Simply varying factors by a subjective plus or minus
+L5199@P145: percentage is not useful and does not constitute a valid sensitivity
+L5200@P145: analysis.
+L5201@P145: Uncertainty about the values of some, if not most, of the technical
+L5202@P145: parameters is common early in a program’s design and development.
+L5203@P145: Many assumptions made at the start of a program turn out to be
+L5204@P145: inaccurate. Therefore, once the point estimate has been developed, it is
+L5205@P145: important to determine how sensitive the total cost estimate is to changes
+L5206@P145: in the factors. Some factors that are often varied in a sensitivity analysis
+L5207@P145: are:
+L5208@P145: • a shorter or longer life cycle;
+L5209@P145: • the volume, mix, or pattern of workload;
+L5210@P145:  28The ranges should be documented during data collection and cost estimating (steps 6
+L5211@P145: and 7 of the 12-step process).
+L5212@P145: Steps in Performing a
+L5213@P145: Sensitivity Analysis
+L5214@P145: Identifying Factors for
+L5215@P145: the Sensitivity
+L5216@P145-146: AnalysisChapter 11: Step 8: Conduct Sensitivity
+L5217@P146: Analysis
+L5218@P146: Page 135 GAO-20-195G Cost Estimating and Assessment Guide
+L5219@P146: • potential requirements changes;
+L5220@P146: • configuration changes in hardware, software, or facilities;
+L5221@P146: • alternative assumptions about program operations, fielding strategy,
+L5222@P146: inflation rate, technology heritage savings, and development time;
+L5223@P146: • higher or lower learning curves;
+L5224@P146: • changes in performance characteristics;
+L5225@P146: • testing requirements;
+L5226@P146: • acquisition strategy, whether multiyear procurement or dual sourcing,
+L5227@P146: among others;
+L5228@P146: • labor rates; and
+L5229@P146: • growth in software size or amount of software reuse.
+L5230@P146: In a sensitivity analysis, the cost estimator should always include the
+L5231@P146: factors that are most likely to change, such as an assumption that was
+L5232@P146: made for lack of knowledge or one that is outside the program office’s
+L5233@P146: control.
+L5234@P146: Another method for identifying parameters is to examine artifacts from
+L5235@P146: related analyses, such as risk and uncertainty analysis. One such artifact
+L5236@P146: is a tornado chart, a special type of bar chart that shows which
+L5237@P146: parameters have the greatest effect—positive or negative—on the overall
+L5238@P146-147: point estimate (figure 12 is an example).Chapter 11: Step 8: Conduct Sensitivity
+L5239@P147: Analysis
+L5240@P147: Page 136 GAO-20-195G Cost Estimating and Assessment Guide
+L5241@P147: Figure 12: Tornado Chart for a Sensitivity Analysis
+L5242@P147: Determining which parameters are key cost drivers can be done in
+L5243@P147: several ways. One way to determine key cost drivers is to calculate the
+L5244@P147: proportion of each cost element to the total cost. Those input variables
+L5245@P147: affecting the highest proportion cost elements should be varied in a
+L5246@P147: sensitivity analysis. However, analysts may want to consider the
+L5247@P147: parameters contributing to high-risk cost elements as well, even if they
+L5248@P147: are not cost drivers, because these elements may become schedule
+L5249@P147: drivers.
+L5250@P147: Many factors that should be tested are determined by the assumptions
+L5251@P147: and performance characteristics outlined in the technical baseline
+L5252@P147: description and associated assumptions. There should be a clear link
+L5253@P147: between the technical baseline parameters, assumptions, and the cost
+L5254@P147: model input values examined by cost estimators in the sensitivity analysis
+L5255@P147: A sensitivity analysis reveals critical factors that most affect the estimate
+L5256@P147: results and can sometimes yield surprises. Therefore, the value of
+L5257@P147: sensitivity analysis to decision-makers lies in the additional information
+L5258@P147: The Limitations of
+L5259@P147-148: Sensitivity AnalysisChapter 11: Step 8: Conduct Sensitivity
+L5260@P148: Analysis
+L5261@P148: Page 137 GAO-20-195G Cost Estimating and Assessment Guide
+L5262@P148: and understanding it brings. For example, a sensitivity analysis can help
+L5263@P148: engineers make technical trade-offs and can help program managers
+L5264@P148: make key acquisition and program management decisions.
+L5265@P148: However, sensitivity analysis does not yield a comprehensive sense of
+L5266@P148: the overall possible range of the estimate. Rather, it examines only the
+L5267@P148: effect of changing one factor at a time. In some cases, a sensitivity
+L5268@P148: analysis can be conducted to examine the effect of multiple factors
+L5269@P148: changing in relation to a specific scenario. But the risk of several factors
+L5270@P148: varying simultaneously and the effect on the overall point estimate should
+L5271@P148: be understood. Whether the analysis is performed on only one cost driver
+L5272@P148: or several within a single scenario, sensitivity analysis tries to isolate the
+L5273@P148: effects of changing one variable at a time, while risk and uncertainty
+L5274@P148: analysis examines the effects of many variables changing all at once. In
+L5275@P148: the next chapter, we discuss risk and uncertainty analyses that vary more
+L5276@P148: than one factor at a time to better understand a program’s overall risk.
+L5277@P148: • Identify assumptions and parameters, including key cost drivers, as
+L5278@P148: factors for sensitivity testing.
+L5279@P148: • Test the sensitivity of cost elements to changes in identified factors.
+L5280@P148: • Document the results, including those factors that are most sensitive
+L5281@P148: to change.
+L5282@P148: The cost estimate includes a sensitivity analysis that identifies a
+L5283@P148: range of possible costs based on varying major assumptions and
+L5284@P148: parameters.
+L5285@P148: • The following steps were taken: key cost drivers, ground rules, and
+L5286@P148: assumptions were identified as factors;
+L5287@P148: • Cost elements representing the highest percentage of cost were
+L5288@P148: determined and their assumptions were examined;
+L5289@P148: • The total cost was re-estimated by varying each factor; and
+L5290@P148: • Results were documented and outcomes were evaluated for factors
+L5291@P148: most sensitive to change.
+L5292@P148: Survey of Step 8
+L5293@P148: Process Tasks
+L5294@P148-149: Best PracticesChapter 11: Step 8: Conduct Sensitivity
+L5295@P149: Analysis
+L5296@P149: Page 138 GAO-20-195G Cost Estimating and Assessment Guide
+L5297@P149: • Without a sensitivity analysis that reveals how the cost estimate is
+L5298@P149: affected by a change in a single factor, stakeholders will not fully
+L5299@P149: understand which variable most affects the cost estimate.
+L5300@P149: • An agency that fails to conduct sensitivity analysis to identify the effect
+L5301@P149: of uncertainties associated with different assumptions increases the
+L5302@P149: chance that decisions will be made without a clear understanding of
+L5303@P149: these impacts on costs.
+L5304@P149: • Carefully assessing the underlying risks and supporting data, and
+L5305@P149: documenting the sources of variation, is necessary for a sensitivity
+L5306@P149: analysis to be useful in making informed decisions.
+L5307@P149: • Simply varying factors by applying a subjective plus or minus
+L5308@P149: percentage that does not have a valid basis is not useful and does not
+L5309@P149: constitute a valid sensitivity analysis. For management to make
+L5310@P149: informed decisions there should be a clear link between the technical
+L5311@P149: baseline parameters, assumptions, and cost model inputs examined
+L5312@P149: by cost estimators in the sensitivity analysis.
+L5313@P149: Likely Effects if Criteria Are
+L5314@P149-150: Not Fully MetChapter 12: Step 9: Conduct Risk And
+L5315@P150: Uncertainty Analysis
+L5316@P150: Page 139 GAO-20-195G Cost Estimating and Assessment Guide
+L5317@P150: In the previous chapter, we discussed sensitivity analysis and how it is
+L5318@P150: useful for identifying cost drivers by determining how sensitive the
+L5319@P150: estimate is to changes in input parameters, developing ranges of potential
+L5320@P150: costs, and performing what-if analyses. By understanding which input
+L5321@P150: variables have a significant effect on a program’s final costs,
+L5322@P150: management can devote resources to acquire better knowledge about
+L5323@P150: those inputs to respond to their risks. But while sensitivity analysis
+L5324@P150: measures the effects of changing one parameter at a time, in reality,
+L5325@P150: many parameters can change at the same time. Quantitative risk and
+L5326@P150: uncertainty analysis uses statistical techniques to predict the probability of
+L5327@P150: successfully executing a program within its budget by capturing the
+L5328@P150: cumulative effect of program risks and uncertainty.
+L5329@P150: A risk and uncertainty analysis is one way to ascertain whether a program
+L5330@P150: is realistically budgeted because it can determine the probability
+L5331@P150: associated with achieving the cost estimate for the program. The analysis
+L5332@P150: provides a way to assess the variability in the estimate by quantifying
+L5333@P150: cost, schedule, and technical risks. A cost estimator can model such
+L5334@P150: effects as changing technical parameters, schedule delays or
+L5335@P150: accelerations, labor productivity, and changing missions, thus creating a
+L5336@P150: range of potential costs. A range of costs is more useful to decisionmakers than a point estimate because a range helps them better
+L5337@P150: understand program risk.
+L5338@P150: A risk and uncertainty analysis requires the cost estimating team to
+L5339@P150: collect program risk data.29 Risk data should be derived from a
+L5340@P150: quantitative risk assessment and should not be based on arbitrary
+L5341@P150: percentages or factors. A risk assessment is a part of the program’s
+L5342@P150: overall risk management process in which risks are identified and
+L5343@P150: analyzed and potential consequences are determined. As risks are
+L5344@P150: identified and prioritized, risk response plans are developed and
+L5345@P150: incorporated into the program’s cost estimate and schedule, as
+L5346@P150: necessary. Ultimately, management needs to understand that a risk and
+L5347@P150: uncertainty analysis is only as good as the comprehensiveness of risks
+L5348@P150: and uncertainties quantified at a point in time. Without a risk and
+L5349@P150: uncertainty analysis, the program estimate will not reflect the degree of
+L5350@P150: uncertainty and a level of confidence cannot be given about the estimate.
+L5351@P150:  29The term “risk data” comprises the parameters and data sets that are used in performing
+L5352@P150: a risk and uncertainty analysis. These data are both cost and non-cost and may include
+L5353@P150: costs, durations, performance parameters, and requirements, among other types. Risk
+L5354@P150: data also include statistics and factors used to define probability distributions used in
+L5355@P150: simulations.
+L5356@P150: Chapter 12: Step 9: Conduct Risk And
+L5357@P150-151: Uncertainty AnalysisChapter 12: Step 9: Conduct Risk And
+L5358@P151: Uncertainty Analysis
+L5359@P151: Page 140 GAO-20-195G Cost Estimating and Assessment Guide
+L5360@P151: Unless a range of costs is provided, decision-makers will lack information
+L5361@P151: on cost, schedule, and technical risks, and will not have insight into the
+L5362@P151: likelihood of executing the program within the budget.
+

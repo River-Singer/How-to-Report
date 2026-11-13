@@ -1,4 +1,4 @@
-"""Current content inputs remain portable, staged and separate from historical designs."""
+"""Retain explicit 0.8.4 regression contracts while the default entry advances."""
 from pathlib import Path
 import hashlib
 import importlib.util
@@ -92,7 +92,7 @@ class ContentEvaluationTests(unittest.TestCase):
         self.assertFalse({"must", "must_not", "turns", "scored_dimensions"} & first.keys())
 
     def test_cli_default_current_and_explicit_historical_scope(self):
-        for arguments, expected in [([], 13), (["--root", str(EVAL / "content-0.8.0")], 13), (["--root", str(EVAL / "content-0.7.5")], 13), (["--root", str(EVAL / "content-0.7.4")], 4), (["--root", str(EVAL / "content-0.7.3")], 4), (["--root", str(EVAL / "content-0.7.2")], 4), (["--root", str(EVAL / "content-0.7.1")], 4), (["--root", str(EVAL / "content-0.7.0")], 4), (["--root", str(EVAL / "content-0.6.1")], 6), (["--root", str(EVAL / "content-0.6.0")], 4), (["--root", str(EVAL)], 67)]:
+        for arguments, expected in [([], 18), (["--root", str(CURRENT)], 13), (["--root", str(EVAL / "content-0.8.0")], 13), (["--root", str(EVAL / "content-0.7.5")], 13), (["--root", str(EVAL / "content-0.7.4")], 4), (["--root", str(EVAL / "content-0.7.3")], 4), (["--root", str(EVAL / "content-0.7.2")], 4), (["--root", str(EVAL / "content-0.7.1")], 4), (["--root", str(EVAL / "content-0.7.0")], 4), (["--root", str(EVAL / "content-0.6.1")], 6), (["--root", str(EVAL / "content-0.6.0")], 4), (["--root", str(EVAL)], 67)]:
             with self.subTest(arguments=arguments):
                 result = subprocess.run([sys.executable, "-B", "-I", str(EVAL / "tools/validate_content_cases.py"), *arguments], cwd=ROOT, capture_output=True, text=True, encoding="utf-8")
                 self.assertEqual(result.returncode, 0, result.stdout + result.stderr)

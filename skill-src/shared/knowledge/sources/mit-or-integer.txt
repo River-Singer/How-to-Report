@@ -1,0 +1,11 @@
+MIT 15.053 Lecture11 integer formulations: original notes
+Source: https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/resources/mit15_053s13_lec11/
+Attribution: MIT OpenCourseWare, Spring2013
+Representation: Original project summary, not source full text or translation.
+Compiled: 2026-11-12; reviewed research reused.
+Reading scope: Read PDF pages4–9 and17–24; binary choices, logical constraints, fixed costs and model validation. Not graph-coloring section or numerical example reuse.
+Rights: Underlying source rights retained; no endorsement.
+
+组合需保留真实互斥、先后依赖与启动成本；一项能力的固定投入不能随项目数重复或凭空消失。可行候选与全局最优不同。对小范围候选可枚举并实际复算，实际约束和价值权重仍要由任务输入支持，不能为了公式整齐自行决定。
+
+这些方法不是当前项目、参会者或市场事实，也不证明本 Skill 的模型效果；运行时不联网补齐。

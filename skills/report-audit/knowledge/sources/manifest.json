@@ -1,19 +1,23 @@
 {
   "schema_version": "1",
-  "archive_version": "0.2.0",
+  "archive_version": "0.3.0",
   "created_at_utc": "2026-10-26T08:22:01.546036+00:00",
   "runtime_network_required": false,
-  "scope": "Fourteen optional Knowledge cards with 23 local representations (19 acquired source texts, 4 original summaries). Linked works are not recursively archived.",
+  "scope": "25 optional Knowledge cards with 41 local representations; original texts, selected texts and original summaries distinguished per source. Existing source records and bytes preserved. No recursive acquisition or runtime network.",
   "card_sources": {
     "bus-01-benefits-chain.md": [
-      "teal-19"
+      "teal-19",
+      "business-cases-2026"
     ],
     "bus-02-options.md": [
-      "green-book-2026"
+      "green-book-2026",
+      "green-book-2026-oct-pdf",
+      "business-cases-2026"
     ],
     "com-01-message-risk.md": [
       "cdc-use",
-      "cdc-uncertainty"
+      "cdc-uncertainty",
+      "govs-011-communications"
     ],
     "data-01-comparability.md": [
       "gov-data-quality",
@@ -24,14 +28,18 @@
       "nist-mean-confidence"
     ],
     "fin-01-time-capacity-cash.md": [
-      "teal-19"
+      "teal-19",
+      "business-cases-2026"
     ],
     "fin-02-cost-benefit.md": [
-      "green-book-2026"
+      "green-book-2026",
+      "green-book-2026-oct-pdf",
+      "should-cost-2021"
     ],
     "mkt-01-user-adoption.md": [
       "gov-user-needs",
-      "gov-digital-takeup"
+      "gov-digital-takeup",
+      "gordon-ad-measurement"
     ],
     "pm-01-delivery-status.md": [
       "teal-18",
@@ -58,6 +66,47 @@
     "pm-04-forecast-history.md": [
       "iapm-trend-summary",
       "gao-schedule-summary"
+    ],
+    "com-02-communication-effects.md": [
+      "govs-011-communications",
+      "gordon-ad-measurement"
+    ],
+    "data-03-purpose-accountability.md": [
+      "uk-data-ownership",
+      "nist-privacy-1.0"
+    ],
+    "fin-03-cost-structure.md": [
+      "should-cost-2021",
+      "gao-cost-selected"
+    ],
+    "mkt-02-market-evidence.md": [
+      "sba-market-research"
+    ],
+    "mkt-03-positioning-value.md": [
+      "dunford-positioning",
+      "sba-market-research"
+    ],
+    "or-01-feasibility.md": [
+      "mit-or-formulation"
+    ],
+    "or-02-bottleneck-flow.md": [
+      "mit-or-capacity"
+    ],
+    "or-03-portfolio-options.md": [
+      "mit-or-integer",
+      "should-cost-2021"
+    ],
+    "sec-01-control-coverage.md": [
+      "nist-csf-2.0",
+      "nist-sp800-207"
+    ],
+    "sls-01-buying-conditions.md": [
+      "huthwaite-spin",
+      "huthwaite-advance"
+    ],
+    "swe-03-system-boundary.md": [
+      "govs-005-digital",
+      "nist-sp800-207"
     ]
   },
   "sources": [
@@ -781,6 +830,465 @@
         "limitations": "No endorsement or claim of full reading, experiment replication, or current product quality. Source text and author summary are distinct."
       },
       "sha256": "6c08565692242312939f0f107e2c2b6e52a347f7656bd15e965e57f47eb84620"
+    },
+    {
+      "id": "business-cases-2026",
+      "title": "Guidance on Developing Business Cases, 2026",
+      "publisher": "HM Treasury, Crown copyright 2026",
+      "canonical_url": "https://www.gov.uk/government/publications/guidance-on-developing-business-cases",
+      "local_path": "sources/business-cases-2026.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Complete 98-page PDF text extraction; selected reading chapter10 §10.1–10.27 (printed63–67), case summaries and benefits responsibilities. Not complete reading; table extraction may lose layout.",
+      "representation": "source_text",
+      "card_ids": [
+        "BUS-01",
+        "BUS-02",
+        "FIN-01"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Complete 98-page PDF text extraction; selected reading chapter10 §10.1–10.27 (printed63–67), case summaries and benefits responsibilities. Not complete reading; table extraction may lose layout.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0; third-party material excluded",
+        "evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "HM Treasury, Crown copyright 2026",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "1030351d7370fa206fc9779363abdbff285858ce922d34ec012d4236b448ac3d"
+    },
+    {
+      "id": "should-cost-2021",
+      "title": "Should Cost Modelling Development Guidance v1.0 May2021",
+      "publisher": "Cabinet Office, Crown copyright 2021",
+      "canonical_url": "https://www.gov.uk/government/publications/should-cost-modelling-tools-and-templates",
+      "local_path": "sources/should-cost-2021.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Complete 53-page PDF text extraction; read §3.1–3.2, §5.1–5.2, selected §7.1.2 and copyright. Cover May2021, inner header April2021; no full reading claimed.",
+      "representation": "source_text",
+      "card_ids": [
+        "FIN-02",
+        "FIN-03",
+        "OR-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Complete 53-page PDF text extraction; read §3.1–3.2, §5.1–5.2, selected §7.1.2 and copyright. Cover May2021, inner header April2021; no full reading claimed.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0; third-party material excluded",
+        "evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "Cabinet Office, Crown copyright 2021",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "0a2523e9472e94987751b3c7e9e02ab067e2335699ae3f1bd2bd0d29a9d2da26"
+    },
+    {
+      "id": "gao-cost-selected",
+      "title": "GAO-20-195G cost estimating selected text",
+      "publisher": "U.S. Government Accountability Office",
+      "canonical_url": "https://www.gao.gov/products/gao-20-195g",
+      "local_path": "sources/gao-cost-selected.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Selected official PDF-reader passages from chapters6,7,9,10,11; not full 476-page text or local PDF. Direct PDF download returned403; accompanying focused reading covers baseline/WBS, normalization, build-up and sensitivity.",
+      "representation": "partial_source_text",
+      "card_ids": [
+        "FIN-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Selected official PDF-reader passages from chapters6,7,9,10,11; not full 476-page text or local PDF. Direct PDF download returned403; accompanying focused reading covers baseline/WBS, normalization, build-up and sensitivity.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "U.S. government-authored report text; third-party material excluded",
+        "evidence_url": "https://www.gao.gov/assets/gao-20-195g.pdf",
+        "attribution": "U.S. Government Accountability Office",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "7a61d5fc7d901a7c7b1fa41462fbea7dfedc5f99846bfbff5b1497be68293a68"
+    },
+    {
+      "id": "mit-or-formulation",
+      "title": "MIT 15.053 Lecture2 formulation: original notes",
+      "publisher": "MIT OpenCourseWare, 15.053 Spring2013",
+      "canonical_url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/resources/mit15_053s13_lec2/",
+      "local_path": "sources/mit-or-formulation.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Selected pages3,5–6,11–15,35–41 of 42-page lecture; original summary only.",
+      "representation": "original_summary",
+      "card_ids": [
+        "OR-01"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Selected pages3,5–6,11–15,35–41 of 42-page lecture; original summary only.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/resources/mit15_053s13_lec2/",
+        "attribution": "MIT OpenCourseWare, 15.053 Spring2013",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "88fa4068712c3253dacdabc8e359c895fce5aa04d2900907e335ee734723bd5f"
+    },
+    {
+      "id": "mit-or-capacity",
+      "title": "MIT 15.760B Lecture3 Capacity: original notes",
+      "publisher": "MIT OpenCourseWare, course2004 / lecture footer2002",
+      "canonical_url": "https://ocw.mit.edu/courses/15-760b-introduction-to-operations-management-spring-2004/resources/lec3_capacity/",
+      "local_path": "sources/mit-or-capacity.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Read PDF pages1–8,13–20,22; no diagram recomputation or adoption of page19 queue approximation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "OR-02"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Read PDF pages1–8,13–20,22; no diagram recomputation or adoption of page19 queue approximation.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://ocw.mit.edu/courses/15-760b-introduction-to-operations-management-spring-2004/resources/lec3_capacity/",
+        "attribution": "MIT OpenCourseWare, course2004 / lecture footer2002",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "7908c7c02ad798ce78fb3b896adc59f13b63e82c822755fdeb44b30bdffbef20"
+    },
+    {
+      "id": "mit-or-integer",
+      "title": "MIT 15.053 Lecture11 integer formulations: original notes",
+      "publisher": "MIT OpenCourseWare, Spring2013",
+      "canonical_url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/resources/mit15_053s13_lec11/",
+      "local_path": "sources/mit-or-integer.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Read PDF pages4–9 and17–24; binary choices, logical constraints, fixed costs and model validation. Not graph-coloring section or numerical example reuse.",
+      "representation": "original_summary",
+      "card_ids": [
+        "OR-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Read PDF pages4–9 and17–24; binary choices, logical constraints, fixed costs and model validation. Not graph-coloring section or numerical example reuse.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/resources/mit15_053s13_lec11/",
+        "attribution": "MIT OpenCourseWare, Spring2013",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "bcc0f1664f047b74ac31906a57bfc023894da780af6bda06490952edd2cbae77"
+    },
+    {
+      "id": "nist-csf-2.0",
+      "title": "NIST CSF2.0, CSWP29",
+      "publisher": "National Institute of Standards and Technology",
+      "canonical_url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.29.pdf",
+      "local_path": "sources/nist-csf-2.0.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Full32-page PDF text; selected abstract, GV.OC/GV.RR/GV.SC/ID.AM/PR.IR/RC.RP and GV.RM. Not all controls or external references. PDF figures/layout are not reproduced or visually verified.",
+      "representation": "source_text",
+      "card_ids": [
+        "SEC-01"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Full32-page PDF text; selected abstract, GV.OC/GV.RR/GV.SC/ID.AM/PR.IR/RC.RP and GV.RM. Not all controls or external references. PDF figures/layout are not reproduced or visually verified.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "NIST public technical publication reuse terms; overseas rights and third-party exceptions retained",
+        "evidence_url": "https://www.nist.gov/copyrights-disclaimers",
+        "attribution": "National Institute of Standards and Technology",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "707431911e71536a889c3da3a97214bfae41da2a00d83676d562a5d5913f76fe"
+    },
+    {
+      "id": "nist-sp800-207",
+      "title": "NIST SP800-207 Zero Trust Architecture",
+      "publisher": "National Institute of Standards and Technology",
+      "canonical_url": "https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-207.pdf",
+      "local_path": "sources/nist-sp800-207.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Full59-page PDF text; selected rights, §2 and §2.1 identity/resource/session/network-location principles. Not all migration scenarios. PDF figures/layout are not reproduced or visually verified.",
+      "representation": "source_text",
+      "card_ids": [
+        "SEC-01",
+        "SWE-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Full59-page PDF text; selected rights, §2 and §2.1 identity/resource/session/network-location principles. Not all migration scenarios. PDF figures/layout are not reproduced or visually verified.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "NIST public technical publication reuse terms; overseas rights and third-party exceptions retained",
+        "evidence_url": "https://www.nist.gov/copyrights-disclaimers",
+        "attribution": "National Institute of Standards and Technology",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "0d31fdb4c1433152ff35d221b1e36e22f93e49cf8c0918951fda2c85b3e72938"
+    },
+    {
+      "id": "nist-privacy-1.0",
+      "title": "NIST Privacy Framework1.0, 2020",
+      "publisher": "National Institute of Standards and Technology",
+      "canonical_url": "https://nvlpubs.nist.gov/nistpubs/CSWP/NIST.CSWP.01162020.pdf",
+      "local_path": "sources/nist-privacy-1.0.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Full43-page PDF text; selected executive summary, §1.2.1–1.2.2, ID.IM-P/ID.BE-P. This is1.0, not1.1 final. PDF figures/layout are not reproduced or visually verified.",
+      "representation": "source_text",
+      "card_ids": [
+        "DATA-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Full43-page PDF text; selected executive summary, §1.2.1–1.2.2, ID.IM-P/ID.BE-P. This is1.0, not1.1 final. PDF figures/layout are not reproduced or visually verified.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "NIST public technical publication reuse terms; overseas rights and third-party exceptions retained",
+        "evidence_url": "https://www.nist.gov/copyrights-disclaimers",
+        "attribution": "National Institute of Standards and Technology",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "db6745cc4244c8ef9f01d733907cfaedde0d4216e2c949134fbab216ce1c37b0"
+    },
+    {
+      "id": "govs-005-digital",
+      "title": "GovS005 Digital, update2026-10-01",
+      "publisher": "UK Government, Crown copyright2026",
+      "canonical_url": "https://www.gov.uk/government/publications/government-functional-standard-govs-005-digital/government-functional-standard-govs-005-digital-html",
+      "local_path": "sources/govs-005-digital.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Full extractable HTML text including navigation; selected §1–2,4.4–4.5,4.6.1/4/5/6/7/8/9,6.2–6.3.2,7.2–7.4.1 and5.8. PDF figures/layout are not reproduced or visually verified.",
+      "representation": "source_text",
+      "card_ids": [
+        "SWE-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Full extractable HTML text including navigation; selected §1–2,4.4–4.5,4.6.1/4/5/6/7/8/9,6.2–6.3.2,7.2–7.4.1 and5.8. PDF figures/layout are not reproduced or visually verified.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0; third-party material excluded",
+        "evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "UK Government, Crown copyright2026",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "47ef640dd8d1cac8f668313af37bdecb6bd2e51b7be4952059ccff272d666ff9"
+    },
+    {
+      "id": "uk-data-ownership",
+      "title": "UK Data Ownership Model, 2026-04-16",
+      "publisher": "UK Government, Crown copyright2026",
+      "canonical_url": "https://www.gov.uk/government/publications/data-ownership-in-government/data-ownership-model",
+      "local_path": "sources/uk-data-ownership.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Full extractable HTML text including navigation; read §1–5 and selected §6 owner/steward/custodian roles; no imported legal conclusion. PDF figures/layout are not reproduced or visually verified.",
+      "representation": "source_text",
+      "card_ids": [
+        "DATA-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Full extractable HTML text including navigation; read §1–5 and selected §6 owner/steward/custodian roles; no imported legal conclusion. PDF figures/layout are not reproduced or visually verified.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0; third-party material excluded",
+        "evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "UK Government, Crown copyright2026",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "3233fe20d07c28312e8187698f9c7a29fc762b123cdb1a2f8e8444c68adf9324"
+    },
+    {
+      "id": "sba-market-research",
+      "title": "SBA Plan your business: market research",
+      "publisher": "U.S. Small Business Administration",
+      "canonical_url": "https://www.sba.gov/counseling/plan-your-business/",
+      "local_path": "sources/sba-market-research.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Complete current HTML main text, not old redirected standalone page. Read market research/competitive analysis and marketing/sales plan paragraphs; not all sections. No images/layout or linked statistics.",
+      "representation": "source_text",
+      "card_ids": [
+        "MKT-02",
+        "MKT-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Complete current HTML main text, not old redirected standalone page. Read market research/competitive analysis and marketing/sales plan paragraphs; not all sections. No images/layout or linked statistics.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "SBA government text public domain; third-party assets excluded",
+        "evidence_url": "https://www.sba.gov/about-sba/open-government/about-the-sba-gov-website/",
+        "attribution": "U.S. Small Business Administration",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "03834bf8f1d379c6e2a05757ba31b5e1ed3831ea7352c01e2de2388e9b4a18f9"
+    },
+    {
+      "id": "dunford-positioning",
+      "title": "A Quickstart Guide to Positioning, 2021-03-15: notes",
+      "publisher": "April Dunford",
+      "canonical_url": "https://www.aprildunford.com/post/a-quickstart-guide-to-positioning",
+      "local_path": "sources/dunford-positioning.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Read definition, context setting, five components/interdependence and Customer-Centric Methodology; not book, linked lessons or case revenue verification.",
+      "representation": "original_summary",
+      "card_ids": [
+        "MKT-03"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Read definition, context setting, five components/interdependence and Customer-Centric Methodology; not book, linked lessons or case revenue verification.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.aprildunford.com/post/a-quickstart-guide-to-positioning",
+        "attribution": "April Dunford",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "de4c222554196d8e977803f92d4fb4617cb901d65323f4ee183ffefea9c019bd"
+    },
+    {
+      "id": "huthwaite-spin",
+      "title": "Huthwaite SPIN Methodology: notes",
+      "publisher": "Huthwaite International",
+      "canonical_url": "https://www.huthwaiteinternational.com/spin-methodology",
+      "local_path": "sources/huthwaite-spin.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Read current page four question types and four meeting phases, 2026-11-12; no paid course, original training data, video or book.",
+      "representation": "original_summary",
+      "card_ids": [
+        "SLS-01"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Read current page four question types and four meeting phases, 2026-11-12; no paid course, original training data, video or book.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.huthwaiteinternational.com/spin-methodology",
+        "attribution": "Huthwaite International",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "f931ee454ef4c9ed7f22071f0600239559386ba2069d5166c883188b79446eea"
+    },
+    {
+      "id": "huthwaite-advance",
+      "title": "Cutting through the noise with SPIN Selling, 2017-09-04: notes",
+      "publisher": "David Freedman / Huthwaite International",
+      "canonical_url": "https://www.huthwaiteinternational.com/blog/cutting-noise-five-steps-develop-win-win-sales-deal",
+      "local_path": "sources/huthwaite-advance.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Read listening and advance/continuation passages; no training effectiveness verification.",
+      "representation": "original_summary",
+      "card_ids": [
+        "SLS-01"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Read listening and advance/continuation passages; no training effectiveness verification.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.huthwaiteinternational.com/blog/cutting-noise-five-steps-develop-win-win-sales-deal",
+        "attribution": "David Freedman / Huthwaite International",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "d70651b58bc3009d8a155fc9ad3f729146741a6e57f90d727b74cd2265b1a7fa"
+    },
+    {
+      "id": "gordon-ad-measurement",
+      "title": "Gordon et al2019 advertising measurement: abstract notes",
+      "publisher": "Brett R. Gordon, Florian Zettelmeyer, Neha Bhargava, Dan Chapsky / INFORMS",
+      "canonical_url": "https://pubsonline.informs.org/doi/10.1287/mksc.2018.1135",
+      "local_path": "sources/gordon-ad-measurement.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Publisher abstract and metadata only; PDF request returned abstract page. No full paper, appendix or statistical recomputation.",
+      "representation": "original_summary",
+      "card_ids": [
+        "COM-02",
+        "MKT-01"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Publisher abstract and metadata only; PDF request returned abstract page. No full paper, appendix or statistical recomputation.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://pubsonline.informs.org/doi/10.1287/mksc.2018.1135",
+        "attribution": "Brett R. Gordon, Florian Zettelmeyer, Neha Bhargava, Dan Chapsky / INFORMS",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "00885f498baa2b1ec17e3c13405eaea2d93cd2046a940a0de9203980a90fd0d3"
+    },
+    {
+      "id": "govs-011-communications",
+      "title": "GovS011 Communications v2.1, 2023-11-30",
+      "publisher": "UK Government, Crown copyright2023",
+      "canonical_url": "https://www.gov.uk/government/publications/government-functional-standard-govs-011-communication/government-functional-standard-govs-011-communications",
+      "local_path": "sources/govs-011-communications.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Complete HTML main text; selected §1,4.5.7–4.5.10,5.1–5.6 and portions6.1–6.5; not all governance/support clauses or figures.",
+      "representation": "source_text",
+      "card_ids": [
+        "COM-01",
+        "COM-02"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Complete HTML main text; selected §1,4.5.7–4.5.10,5.1–5.6 and portions6.1–6.5; not all governance/support clauses or figures.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0; third-party material excluded",
+        "evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "UK Government, Crown copyright2023",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "728ae7ca40fdaa7dadede597cc102d587534c3e6739deb17693bf62943412961"
+    },
+    {
+      "id": "green-book-2026-oct-pdf",
+      "title": "The Green Book2026, October PDF archive",
+      "publisher": "HM Treasury, Crown copyright2026",
+      "canonical_url": "https://assets.publishing.service.gov.uk/media/6ae0ba897b7111c482d80a3b/The_Green_Book_2026.pdf",
+      "local_path": "sources/green-book-2026-oct-pdf.txt",
+      "fetched_at_utc": "2026-11-13T06:56:22.549509+00:00",
+      "scope": "Complete86-page PDF extraction. Selected §1.1–1.8,3.6–3.16,4.1–4.5/4.10–4.19,5.6–5.20,6.9–6.13/6.32–6.38/6.78–6.84/6.95–6.104. Publication page updated2026-10-28; no whole-book diff against preserved February HTML archive.",
+      "representation": "source_text",
+      "card_ids": [
+        "BUS-02",
+        "FIN-02"
+      ],
+      "retrieval": {
+        "method": "reviewed_imported_extraction",
+        "coverage": "Complete86-page PDF extraction. Selected §1.1–1.8,3.6–3.16,4.1–4.5/4.10–4.19,5.6–5.20,6.9–6.13/6.32–6.38/6.78–6.84/6.95–6.104. Publication page updated2026-10-28; no whole-book diff against preserved February HTML archive.",
+        "timestamp_semantics": "Product archive compilation timestamp; underlying research acquisition/read date is 2026-11-12 unless scope says otherwise. Exact retrieval time not asserted."
+      },
+      "reuse": {
+        "license": "Open Government Licence v3.0; third-party material excluded",
+        "evidence_url": "https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/",
+        "attribution": "HM Treasury, Crown copyright2026",
+        "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
+      },
+      "sha256": "cae055962d291594daaf82220a81b95561363ee8953fce753eec2a5aad189be9"
     }
   ]
 }

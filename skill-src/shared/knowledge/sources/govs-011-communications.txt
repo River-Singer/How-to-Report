@@ -1,0 +1,574 @@
+Source: https://www.gov.uk/government/publications/government-functional-standard-govs-011-communication/government-functional-standard-govs-011-communications
+Retrieved: 2026-11-12
+© Crown copyright 2023. Contains public sector information licensed under the Open Government Licence v3.0.
+Scope: full HTML main text extraction; selected sections read, not full-standard review.
+
+Civil Service
+Standard
+Government Functional Standard - GovS 011: Communications
+Updated 30 November 2023
+Contents
+1. About this government functional standard
+2. Principles
+3. Context
+4. Governance
+5. The campaign lifecycle
+6. Core communication disciplines
+7. Supporting policies and practices
+8. References
+9. Glossary
+Print this page
+© Crown copyright 2023
+This publication is licensed under the terms of the Open Government Licence v3.0 except where otherwise stated. To view this licence, visit nationalarchives.gov.uk/doc/open-government-licence/version/3 or write to the Information Policy Team, The National Archives, Kew, London TW9 4DU, or email: psi@nationalarchives.gov.uk.
+Where we have identified any third party copyright information you will need to obtain permission from the copyright holders concerned.
+This publication is available at https://www.gov.uk/government/publications/government-functional-standard-govs-011-communication/government-functional-standard-govs-011-communications
+This functional standard is part of a suite of management standards that promotes consistent and coherent ways of working across government, and provides a stable basis for assurance, risk management and capability improvement.
+The suite of standards, and associated guidance, can be found at GOV.UK government functional standards. Functional standards cross-refer to each other where needed, so can be confidently used together. They contain both mandatory and advisory elements, described in consistent language (see the table below).
+Term
+Intention
+shall
+denotes a requirement: a mandatory element.
+should
+denotes a recommendation: an advisory element.
+may
+denotes approval.
+might
+denotes a possibility.
+can
+denotes both capability and possibility.
+is/are
+denotes a description
+The meaning of words is as defined in the Shorter Oxford English Dictionary, except where defined in the Glossary in Annex B. It is assumed that legal and regulatory requirements are always met.
+Version 2.1 of this standard replaces the previous edition [version 2 dated June 2021] and has the same purpose, scope and intent. The main changes relate to:
+Minor wording changes to ensure consistency across the suite of functional standards
+Updated references to Government Communications Service governance structure
+Reordering to better reflect the structure of the Modern Communications Operating Model v3.0, and adding two new communications disciplines, Data & Insight and Digital
+Updated references to the Government Communications Service canon of professional guidance
+Clariifcation around requirements on conduct, propriety and ethics.
+1. About this government functional standard
+1.1 Purpose of this standard
+The purpose of this government standard is to set expectations for the management and practice of government communication in order to deliver responsive and informative public service communication that support the effective delivery of HM Government policy and priorities, and assist with the effective operation of public services.
+This standard provides direction and guidance for:
+permanent secretaries, directors general and chief executive officers of arm’s length bodies
+senior leadership and board members within organisations
+those commissioning communication
+communication leads within organisations
+those involved in developing, managing and delivering communication
+third parties engaged in government communication, including in partnership marketing
+1.2 Scope of this standard
+This standard applies to the planning, delivery and management of communication.
+This standard applies to government departments and their arm’s length bodies.
+This standard may be used by other public sector bodies, such as local government and the National Health Service, to support benchmarking and continuous improvement. In these circumstances, and when the standard is used in this way, mandatory elements in this standard may be treated as advisory.
+Communication, in the context of
+this functional standard, includes announcements, media management, coordinated communication activities
+(including digital and social media, branded campaigns, external affairs and stakeholder management) aimed to support the organisation’s policy and priority objectives. This includes external and internal audiences.
+The following work is outside of scope of this standard: official correspondence, telephony, drafting of official papers and submissions, legal, transactional and operational notices.
+Note: an organisation, in the context of government functional standards, is the generic term used to describe a government department, arm’s length body, or any other entity that is identified as being within scope of a functional standard.
+1.3 Government standards references
+The following standards are directly necessary for the use of this standard:
+GovS 002, Project delivery
+GovS 003, Human Resources
+GovS 005, Digital
+GovS 006, Finance
+GovS 008, Commercial
+GovS 010, Analysis
+A functional standard supports achievement of the outcomes sought by an organisation. It sets expectations for what needs to be done and why relating to the functional work within its scope, in order to achieve those organisational outcomes.
+Note: for expectations relating to management of a function across government, and management of functional standards, please see GovS 001, Government functions.
+2. Principles
+Those engaged in the planning, delivery and management of communication shall ensure that it:
+has objectives aligned to government policy and organisational objectives
+promotes a shared vision across government, ensuring they meet the needs of government as a whole in relation to policy and strategic objectives
+champions a unified response to crisis and emergency management
+promotes a culture of diversity and inclusion which represents the society served
+ensures, through tiered accountability, that it is clear who makes decisions and owns outcomes and processes
+works collaboratively in order to achieve clear, simple and consistent communication on behalf of government; managing duplication and minimising complexity
+keeps processes simple, proportionate and user-focused
+promotes opportunities for continuous improvement, efficiency, innovation and transformation where this represents value for money
+upholds public service codes of conduct
+3. Context
+3.1 General
+3.1.1 Introduction
+This section provides essential background information for the use of this functional standard.
+3.1.2 Government Communication Service
+The Government Communication Service (GCS) is responsible for the development and delivery of the government’s annual communication plan and sets the direction for the development of professional capability, talent management, standards and guidance for communication across government.
+Government communicators are responsible for delivery across all communication disciplines (see section 6).
+This includes - but is not limited to - media work, public-facing campaigns, stakeholder and internal communications, managing the reputation and brand of an organisation, and handling communication during a crisis or emergency.
+Figure 1: Relationship between communication plans, campaigns and communication packages, showing associated roles
+3.1.3 Ministerial oversight
+The Government Communication Service is accountable to the nominated Minister, usually within the Cabinet Office, who approves the Government Communication Plan (see 4.2.3) and reviews performance against delivery, ensuring:
+an appropriate annual government communication plan is developed and delivered
+the plan contributes to the delivery of government policy priorities
+government communication is delivered in an effective and efficient way
+the government can respond appropriately to risks and crises in an appropriate and timely manner.
+The Civil Service Board is accountable for the direction of all government functions, including the Communication Function.
+It has responsibility for the direction
+and oversight of the development and implementation of the cross-government communication strategy.
+3.2 Campaigns and communication
+The government publishes the overall Government Communication Service three-year strategy, and the annual Government Communication Plan which sets out
+the themes and ambitions for the major campaigns for the forthcoming period which fulfil one or more defined objectives.
+Each campaign can comprise one or more communication packages, each of which is aligned to the campaign objectives
+and covers a specific need or event. A communication package can be made up of a number of sub-packages. See Figure 2.
+4. Governance
+4.1 Governance and management framework
+Governance comprises prioritising, authorising, directing, empowering and overseeing management, and assuring and reviewing performance.
+A governance and management framework shall be defined and established across government, and within organisations.
+The governance of communication within an organisation should be an integrated part of that organisation’s overall governance.
+Note: See the Modern Communications Operating Model [1] for governance, and team structures (see 4.5.11).
+4.1.1 Cross-government governance of communication
+Cross-government policy, directives and guidance relating to the management
+of government communication should be defined, kept up to date and be communicated to and available for the use of organisational communication teams.
+Note: See Modern Communications Operating Model [1]
+4.1.2 Campaign governance
+Each campaign shall be undertaken in accordance with the Objectives, Audience Insight, Strategy, Implementation, Scoring (OASIS) campaign life cycle (see section 5) and should be the accountability of a named campaign commissioner (see 4.5.6) who, working in collaboration with a named head of campaign, will agree the objectives for the campaign (see 5.2).
+The head of campaign (see 4.5.7) defines the roles, responsibilities, strategy, plan and resources for the campaign.
+If a campaign forms part of a wider initiative, such as a programme or project (see GovS 002, Project delivery) the governance of the campaign should be integrated with that of the wider initiative.
+4.1.3 Advertising, marketing and communications spend controls
+HM Government organisations shall comply with GovS 006, Finance, and communications advertising, marketing and communications spend controls [5,
+20] on campaigns or programmes of communication with a value of £100,000 or over (per year) in accordance with GovS 008, Commercial.
+Expenditure should be in line with the annual government communication plan. Where
+it is not, written approval shall be sought from the senior officer responsible for cross-government communication (see 4.5.2).
+Cabinet Office spend expenditure controls require central government bodies to obtain expenditure approval from Cabinet Office ministers, based on professional advice from relevant functions, before certain expenditure is made or committed. Organisations should take advice from relevant functions well in advance of planned expenditure, and comply with spend expenditure controls guidance [20].
+Applications for approval of advertising, marketing and communications expenditure shall have written approval from the relevant departmental minister and the senior officer accountable for an organisation’s communication (see 4.5.2) before being submitted. Arm’s-length bodies shall seek internal approvals from their parent department before submitting a request.
+4.2 Strategy and planning
+4.2.1 Overview
+The purpose of communication strategy and planning is to set out the themes, ambitions and risks for the major campaigns for the forthcoming period.
+4.2.2 Cross-government strategy
+A government-wide communication strategy should be defined and published, defining the communication priorities to be delivered. The strategy should be approved in accordance with the governance and management framework (see 4.1) .
+Supporting delivery of the strategy should be reflected in SCS members of the Communication Function’s performance objectives.
+Note: see Government Communication Service Strategy: Performance with Purpose [23]
+Note: See the Modern Communications Operating Model [1], in particular the Leadership Objective set out in the Strategic Approach.
+4.2.3 Government-wide communication plan
+A government-wide communication plan should be defined and published, defining the communication priorities to be delivered annually. The Government Communication Plan should be approved in accordance with the governance and management framework (see 4.1).
+4.2.4 Organisational communication plans
+Each organisation shall prepare a communication plan annually, which:
+shall demonstrate how the organisation’s communication supports the government-wide communication plan and any higher-level organisational plan
+should outline how communication supports the effective delivery of both the wider government, and the organisation’s own, policies, priorities and public services
+should include outcome-based metrics summarising what outcomes they are seeking to achieve that year.
+Note: see Government Communication Service Evaluation Framework [2]
+The organisation’s annual communication plan, and any updates, should be agreed by the senior officer accountable for the organisation’s communication(see 4.5.5) and approved at an executive board level.
+4.3 Assurance
+4.3.1 Assurance framework
+The purpose of assurance is to provide, through a systematic set of actions, confidence to senior leaders and stakeholders that work is controlled and supports safe and successful delivery of policy, strategy and objectives.
+Organisations should have a defined and established approach to assurance, which should be applied proportionately to the risk and value of the activity, and integrated with the organisation’s overall assurance framework. Typically, assurance should be on at least three separate and defined levels including:
+by, or on behalf of, operational management in organisations, who apply their judgement to support successful delivery and monitor adherence with a function’s standards
+by, or on behalf of, senior management independent of operational management, to ensure the first line of defence is properly designed, in place and operating as intended
+by independent bodies (within or external to government, such as internal audit and National Audit Office) who provide an objective evaluation of the adequacy and effectiveness of governance, risk management and controls
+The work of internal and external assurance providers should be planned
+to minimise disruption to other work, avoiding overlaps with other assurance activities and duplication of effort, whilst remaining rigorous and meeting the needs of stakeholders. Where assurance includes formal review activity, the customer for the review should be clearly identified.
+The work of internal and external assurance providers should be planned to:
+proactively support known events of campaigns
+minimise disruption to the work - overlaps with other assurance activities and duplication of effort, whilst remaining rigorous
+Where assurance includes formal review activity, the customer for the review should be clearly identified.
+Assurance of communication should focus on requirements and audiences, not government policies.
+The requirements of the Orange Book: management of risk - principles and concepts, shall be met [19].
+4.4 Decision-making
+Decisions relating to communication management should be made and approvals given in a timely manner, in accordance with the organisation’s communication governance and management framework. Government policy and Government Communication Service professional assurance processes (see 4.3) should be complied with. Decisions should be made by assessing options against defined criteria and in consultation with stakeholders and subject matter experts.
+Key decisions required relating to communication include, but are not limited to, the approval of the following:
+communication policies and directives
+communication spending (see 4.1.3)
+communication plans (see 4.2.3)
+campaigns, initiatives and projects (see 4.3.1)
+individual communication packages (see 4.3.1)
+Decisions should be holistic, taking account of the wider context, risks and possible stakeholder reactions.
+Communicators should take advice from other functions where necessary (for example, on legal or commercial aspects).
+4.5 Roles and accountabilities
+4.5.1 Introduction
+Roles and accountabilities shall be defined in the organisation’s governance and management framework and assigned to people with appropriate seniority, skills and experience. This should include, but is not limited to, the activities, outputs or outcomes they are responsible for, and the person they are accountable to.
+4.5.2 Senior officer accountable for communication across government
+The senior officer accountable for communication across government is accountable to ministers (see 3.1.3) for the efficient and effective operation of government-wide communication.
+The senior officer accountable for communication across government is responsible for:
+the government’s communication strategy
+the effectiveness and efficiency of government communication through the approval of marketing spending and the procurement of external contracts (see 4.1.3)
+providing advice to ministers and senior officials
+major cross-government campaigns
+the government’s communication plan
+standards of professionalism in government communication
+Note: the current job title associated with this role is CEO for Government communication who runs the Government Communication Service and the Communication Function.
+See also GovS 001, Government Functions which sets common expectations for managing government functions and functional standards.
+4.5.3 Senior officer accountable for a specific communications discipline across government
+A senior officer accountable for a specific communications discipline across government is accountable to the senior officer accountable for communication across government (see 4.5.2) for leading the continuous improvement and professional development of their communication discipline (see section 6), in particular:
+building capability (see 7.2)
+overseeing cross-government professional networks
+reviewing, updating and commissioning professional guidance.
+Note: The role is undertaken as a corporate contribution to the wider profession;
+they should be supported by their senior officer accountable for the organisation’s communication (see 4.5.5) to allot 20% of their working time to the role.
+Note: the current job title associated with this role is Head of Discipline, or Deputy Head of Discipline.
+4.5.4 Accounting officer
+The permanent head of a government department is usually its Principal Accounting Officer.
+An organisation’s Accounting Officer is accountable (via a Principal Accounting Officer where appropriate) to Parliament and the public for the stewardship of public resources, including for communication, ensuring they are used effectively and to high standards of probity.
+The Principal Accounting Officer generally appoints the most senior executive in the arm’s length bodies within the department’s ambit as an Accounting Officer.
+4.5.5 Senior officer accountable for an organisation’s communication
+The senior officer accountable for an organisation’s communication is accountable to their respective Accounting Officer for:
+developing the scope
+of communication in the organisation
+setting communication-related objectives, terms of reference, and responsibilities as necessary, to underpin the organisation’s objectives developing the governance and management framework for communication
+developing and maintaining the organisation’s communication plan and grid (see 6.6) setting performance measures and evaluation criteria to assess progress against the plan
+ensuring adequate resources are available and organised to support departmental objectives
+building capability and talent within their organisation (see 7.2.1)
+managing expenditure.
+Note: in a government department or arm’s length body, this role is usually known as the Director or Head of Communication.
+4.5.6 Communication commissioner
+A communication commissioner is accountable to their organisation’s senior officer (and ultimately the Accounting Officer) for setting a campaign’s objectives (see 5.2) and ensuring they are fulfilled, in particular:
+keeping their senior leadership informed of the progress of the campaign, seeking guidance and direction as appropriate
+developing and defining the objectives and desired outcomes in collaboration with the head of campaign
+keeping the head of the campaign up-to-date on the context and relevant changes, providing direction and seeking advice, as appropriate
+advising, in collaboration with the head of campaign (see 4.5.7), on the handling of escalated issues and risks, and approving changes to the campaign plan.
+Note: in a government department or arm’s length body, this role may be known as
+a campaign lead, head of a discipline or similar title.
+4.5.7 Head of a campaign
+A head of a campaign (see Figure 3)
+is accountable to the communication commissioner (see 4.5.5) for developing and managing a campaign (see section 5) on a day-to-day basis, in particular:
+mobilising, briefing and motivating the campaign team
+developing a campaign plan in collaboration with the communication commissioner and managing progress towards its achievement
+keeping the campaign’s commissioner up to date on the progress, providing advice and seeking guidance and direction as appropriate
+keeping those working on the campaign informed of the context and progress, providing direction as appropriate
+managing issues and risks, escalating as appropriate and requesting changes to the plan, in consultation with the campaign commissioner
+evaluating the outcomes of the campaign and taking preventive or corrective action when needed
+4.5.8 Communication lead for a communication package
+The communication lead for a communication package is accountable to the head of a campaign (see 4.5.7) for managing the work assigned to them, including:
+ensuring work is completed within defined constraints
+planning, monitoring, forecasting and reporting progress on their work
+managing the resolution of risks and issues, escalating those they cannot deal with
+requesting changes to their work scope
+4.5.9 Communication business partner
+Communication business partners are communication professionals who work directly with teams to build local, specialist knowledge. Business partners should
+be expert communicators, ensuring that communication advice is integrated in planning and decision-making from the outset.
+Note: see Government Communication Service business partnering guidance [22]
+4.5.10 Other specialist communication roles
+Other specialist communication roles should be defined to suit the needs of the activity being undertaken. This can be for managing a variety of aspects of communication practice in accordance with this standard and the organisation’s communication governance and management framework.
+Such roles may be either advisory as part of a team or may fulfil a leadership or executive role with accountability assigned.
+Note: examples include roles for campaigns, marketing, press and media, digital, internal communication – see Government Communication Service website
+4.5.11 Other requirements
+Government communication should be undertaken in accordance with the government’s communication governance framework for communication [1].
+Staff engaged in communication activity shall follow and be subject to the Government Communication Service’s codes of practice in their communication activities [8].
+5. The campaign lifecycle
+5.1 Introduction
+The purpose of a campaign is to ensure each communication is viewed in the context of a wider campaign and that an organisation’s communication can be linked to a clear objective so that their impact can be evaluated.
+Each campaign shall be undertaken in accordance with the OASIS campaign
+life cycle (see Figure 2), which provides a framework for implementing communication initiatives, enabling:
+problems to be addressed from an audience perspective
+a united course of action to be taken
+communication to be implemented in a co-ordinated way
+Figure 2: The campaign life cycle
+A campaign should be planned and managed by a head of campaign (see 4.5.7) in consultation with the campaign commissioner (see 4.5.6), key influencers, marketing partners (where appropriate) and other relevant stakeholders. Lessons from previous campaigns should be drawn on (see 5.6).
+Note: see the OASIS model [7]
+5.2 Campaign objectives
+The purpose of defining campaign objectives is to ensure those managing the campaign and its component parts are clear on what is required and that those component parts are aligned.
+Campaign objectives should be developed which:
+support the policy aim – communication objectives should be developed for the activities that are intended to deliver this
+include the part that communication should contribute to achieving the policy aim
+Campaign objectives should be achievable, measurable, (expressed numerically) focused on outcomes not outputs, and related to changing attitudes and/or behaviour. When objectives cannot be measured numerically, the criteria for validating their achievement should be defined.
+Note: see Strategic communication [9] and the evaluation framework [2].
+5.3 Audience insight
+The purpose of understanding audiences is to determine the target audience’s attitudes, habits and preferences so that government communication can be relevant, meaningful and effective.
+Campaigns should use data (see 6.4) to generate insights determining the target audience’s attitudes, habits and preferences so that government communication can be relevant, meaningful and effective.
+Note: see Insight [24]
+5.4 Campaign strategy
+Government communicators should use audience insight to set out the strategic approach. The strategy shall include:
+a defined target audience (see 5.3)
+a proposition
+messages
+a channel strategy
+5.5 Campaign implementation
+The purpose of campaign planning is to ensure the objectives of the campaign can be achieved within the known constraints
+(such as time, cost, resources and risk). The campaign plan should be developed from the campaign strategy (see 5.4) and include:
+the objective
+purpose of the campaign (for example, instruct, influence, inform)
+audience
+internal and external issues
+messages
+channels
+accountabilities
+measurement
+the approach to be taken
+the timescales for delivery
+resources required
+influencers to engage
+partners to be involved
+The campaign plan should initially be developed using a channel-agnostic approach, with the most appropriate channel, or combination of channels, used to achieve any given communication objective. The chosen approach should be piloted to verify its effectiveness as measured against the defined evaluation criteria. If necessary, corrective action should be taken to improve the plan.
+The campaign should be rolled out with each communication package initiated in accordance with the plan. Progress should be monitored in terms of outputs, outtakes and outcomes.
+5.6 Campaign evaluation
+Evaluation is conducted to assess the performance in delivering on objectives such as changing behaviour, improving operational effectiveness, building the reputation of the UK and explaining government policies and programmes. Outputs, outtakes and outcomes should be monitored throughout a campaign and evaluated once the campaign is complete. It is recommended that approximately 5% to 10% of total campaign expenditure is allocated to evaluation. Analysis shall be undertaken in accordance with GovS 010, Analysis.
+Note: see Evaluation Framework [2]; Government Communication Service Test and Learn guidelines for media buying [25]
+6. Core communication disciplines
+6.1 Introduction
+Government communications is divided into seven disciplines, each providing guidance around key skills and/or areas of practice.
+Government communicators may have a primary specialism in one Modern Communications Operating Model discipline (such as Media, Internal Communications) and may also have advanced specialist skills (for example those working in insight and evaluation, design and creative roles). They should all seek to develop core skills and awareness across all MCOM disciplines.
+6.2 Strategic communication
+The purpose of strategic communication
+is to set, co-ordinate and guide the implementation of activity, based on insight, in a timely way, as part of an overarching plan to deliver against the government
+and organisation’s agreed priorities to measurable effect. Strategic communication should be:
+aligned to the delivery of HM Government priorities
+planned using defined practices
+focused on audience understanding
+evaluated to demonstrate value and capture future insight
+integrated with all other aspects of communication
+Strategic communication specialists should work alongside policy, operations, human resources and project delivery colleagues from the outset, so they can inform and advise the government and organisational decision-makers on appropriate communication options and strategies. Long term communication requirements should be identified by long-term horizon scanning, and threats and opportunities acted on.
+Short-term planning should be managed through a forward-planning grid (published weekly). Research should be carried out to understand the audiences and the impact of communication on them. Analysis shall be undertaken in accordance with GovS 010, Analysis.
+Note: see Strategic Communication [9].
+6.3 Digital communication
+The future of government communication depends on the ability to connect with target audiences in a timely, appropriate and relevant way, giving them information and helping change behaviours in a way that fits in with their lives. In this respect digital media can enable communication teams to integrate more closely, connecting directly and quickly with influencers and audiences in a well-governed and planned way.
+Communicators should ensure they master new techniques, including digital technologies, and remain at the forefront of the latest practice, revising and updating their skillsets to keep ahead of the extraordinary pace of change.
+Digital communication teams should include generalist digital experts with a deep understanding of the digital channels, platforms and content formats required to grow and engage audiences, as well as specialists in the fields of digital content creation and data analytics.
+There are four core functions of a modern digital communications team around which they should be structured:
+Digital strategy & leadership
+Data and insight analysis
+Technical content creation (split into specialisms; Graphic design and animation; Videography; Photography)
+Copywriting, editing, channel management & strategic platform publishing
+Work shall be undertaken, and data managed, in accordance with GovS 005, Digital.
+Note: See Government Communication Service digital guidance [26]
+6.4 Data & Insight
+The purpose of understanding audiences is to determine the target audience’s attitudes, habits and preferences so that government communication can be relevant, meaningful and effective.
+The effective use of data can help personalise and target messages, delivering more relevant, interesting and engaging content to the public.
+Government communicators should draw on a range of data sources – quantitative and qualitative, commissioned and publicly available – to create a full picture of target audiences and identify the appropriate method to reach them to achieve any given communication objective. Analysis shall be undertaken in accordance with GovS 010, Analysis.
+Note: key audience categories include those in work, businesses, older people, families, young people, international stakeholders.
+Note: see Insight [24].
+6.5 Marketing
+The purpose of marketing is to help fulfil operational and policy objectives by understanding and meeting the needs of citizens. Marketing campaigns are underpinned by research and insight into citizen attitudes and behaviours, which inform strategic planning and the implementation of communication programmes across multiple channels.
+Marketing channels should:
+support the raising of awareness of policies, influence attitudes and behaviours
+be founded on established behavioural science and research techniques
+be based on reliable data
+use appropriate and validated creative approaches
+be measurable in terms of effectiveness and outcomes
+focus on delivering a high-quality end-to-end service and customer experience
+aid the operation of services
+build confidence and trust in the government’s institutions and brands
+Analysis shall be undertaken in accordance with GovS 010, Analysis.
+Note: see guidance on buying advertising, marketing and communication services [18].
+6.5.1 Partnership marketing
+The purpose of partnership marketing is to provide a cost-effective way to reach audiences, by harnessing relevant third-party influence and insight to increase the impact of government communication. Partnerships shall be negotiated on an in-kind basis and partners shall not be required to pay a fee to be associated with a campaign.
+Partners may be from the business sector, civil society or public sector bodies (such as fire and rescue services, police, local authorities and other government departments or their arm’s length bodies).
+Partnership campaigns should be undertaken in accordance with government requirements and recommendations.
+Note: see Government Communication Service Delivering Excellence in Partnership Marketing [11].
+The objectives of a campaign should be defined and an assessment of potential partnership organisations undertaken against reach, relevance and impact to the target audience. Additional criteria may be used depending on the campaign subject and/or audience to be addressed and determine the role the partner is intended to take.
+Existing relationships should be identified, reviewed against the organisation’s current and previous partners, and where necessary across government, to determine the potential partner’s reputation and the risks of working with them.
+A partnership agreement shall be drawn up taking into account, but not limited to, requirements, roles, time considerations (including embargo and restricted periods), resource needs, budget, funding sources, value exchange, data security, governance, risk allocation and performance indicators. The relationship with the partner shall be managed in accordance with the agreement. Any changes to the agreement should be formally agreed. Performance should be measured and preventative and corrective action taken if needed.
+If the campaign is significant in terms of size, duration or complexity, it shall be managed in accordance with GovS 002, Project Delivery. Commercial partnerships shall be defined and managed in accordance with GovS 008, Commercial.
+6.6 Media relations
+The purpose of media relations is to explain the policies and services of government departments and agencies through partners in the media to create public understanding of the aims of government and build the trust that the public place in the government’s services. The media has a duty to hold the government to account and media teams should promote, explain and justify the government’s policies accurately and in an appropriate style.
+Those advising ministers and officials shall be prepared to communicate (verbally and in writing) with honesty and based
+on professional expertise and evidence,
+to advise ministers and officials on the appropriate approach to meet the needs of the media and achieve the government’s objectives. The government and each organisation shall have a media relations operation which shall maintain a media planning schedule and forward look (in some organisations, referred to as the ‘grid’, see 6.2) to plan announcements which should be coordinated with the government-wide-grid. Practitioners should have the expertise to work across all media platforms and channels (broadcast, print, online), including:
+proactive media handling, such as making announcements
+reactive media handling, including monitoring the media, handling calls and managing crises (see 7.3)
+relationship management including engaging policy makers, ministers and special advisors and winning journalists’ trust
+content creation, both proactively and reactively using appropriate channels
+insight and evaluation including communication impact assessment and tracking across media
+Note: see Media [15].
+6.7 External affairs
+The purpose of external affairs is to
+build and maintain, for the public benefit, relationships with an organisation’s external stakeholders, including influential individuals. External affairs practitioners and teams should:
+gather intelligence to inform internal thinking and provide early warning of issue which might need to be addressed
+take a balanced approach, encouraging supportive voices and mitigating criticism, and disseminate messages through selected stakeholder channels
+explain government and the organisation’s policies to influential individuals and organisations for public benefit
+co-ordinate high-level stakeholder engagement, providing advice based on gathered intelligence and an evaluation of impact of related campaigns and communication packages
+Note: see External Affairs [16].
+6.8 Internal communication
+The purpose of internal communication is to inform and engage employees in a way which motivates staff to maximise their performance and deliver the business strategy most effectively. Organisations should develop, in consultation with senior business leaders and representative stakeholders, an internal communication strategy describing the current situation, agreed future state and means to achieving that future state.
+Internal communication should be designed to support the organisation’s leaders by helping:
+the organisation to deliver its objectives
+staff see the connection between their job and the organisation’s vision
+understand employee engagement and what drives it
+managers communicate better with their teams
+Internal communication should:
+add value to the organisation in the short and long term
+support the organisation’s reputation and brand
+be agreed with the organisation’s commissioning manager(s)
+be authentic, achievable, actionable and compelling
+engage line managers in action
+consider employees’ views and challenges
+be authentic, and consistent in style and content
+Note: see Internal communication [13]
+7. Supporting policies and practices
+7.1 Introduction
+This section sets out policies and practices relevant to communication activity in government.
+7.2 Capability and capacity: overview
+Management balances the supply and demand for appropriate communication resources (such as people, equipment, material and facilities) to be deployed when needed. Communication resources may be sourced from within government, by recruiting or from the supply chain.
+A comprehensive view of future resource needs should be developed and maintained, with possible shortfalls identified and addressed.
+Planned resources should include the expertise and capability to provide consistent and effective application of contemporary technologies and data across all disciplines, and the use of online platforms (such as web, mobile, social media and related channels) for the dissemination of content.
+Communication resources should be developed or acquired, and work prioritised to meet the planned needs.
+7.2.1 Building capability and talent
+The senior officer accountable for an organisation’s communication (see
+4.5.5) should champion the Government Communication Service talent schemes and training offer.
+Government Communication careers guidance should be used to provide clarity on the skills, capability and experience needed by grade.
+All line managers should conduct career conversations with their employees, and ensure they have a Personal Development Plan incorporating the relevant Professional Development for their grade and discipline.
+Note: See Government Communication Service Career Framework [4]
+7.2.2 Building diverse and effective teams
+Diversity of thinking and representation is critical to the operational success of
+the function. Teams cannot communicate effectively with people across the UK unless they draw talent from every section of society.
+Senior officers accountable for an organisation’s communication (see 4.5.5), campaign commissioners (see 4.5.6), heads (see 4.5.7) and leads (see 4.5.8) should ensure Government Communication Service principles and best practice are considered and factored into recruitment, team building and communications planning.
+Directors and Heads of Communication should promote and support careers across the UK by following GCS best practice principles.
+Note: See Government Communication Service Equality, Diversity and Inclusion Action Plan [27]
+Note: See Government Communication Service Location Strategy [28]
+7.3 Propriety & Ethics
+Government communicators shall carry out their work objectively and without political bias, in accordance with the standards of behaviour set out in the Civil Service Code.
+In the specific context of government communications, propriety means presenting the policies and programmes of the government of the day properly and effectively.
+Senior officers accountable for communications shall ensure that all communicators in their organisation are clear on propriety and ethics guidance, their responsibilities and how to raise a concern.
+Note: See Government Communication Service Propriety [8]
+7.4 Data handling & data protection
+To ensure government communication delivery is appropriate, transparent
+and trustworthy, it is important that communicators follow the correct approach to existing and emerging technologies, such as AI and digital channels.
+Senior officers accountable for communication, and all responsible for communications campaigns, shall review guidance regularly and ensure compliance within their teams and areas.
+Note: See Government Communication Service Data guidance, MCOM [1]
+7.5 Accessible communications
+To ensure that government information is accessible and inclusive, it is important that communicators follow the correct approach and best practice to create accessible content and channels.
+Senior officers accountable for an organisation’s communication, and all responsible for communications campaigns, shall review GCS guidance regularly and ensure compliance within their teams and areas.
+7.6 Brand
+Government departments, agencies and arm’s length bodies shall comply with the HM Government identity guidelines [3].
+The unifying element of the government’s identity is the Royal Coat of Arms, approved by Her Majesty the Queen in 1956. Only departments of HM Government and its organisations are permitted to use the Royal Coat of Arms and associated insignia.
+Note: see Brand Guidelines [3]
+7.7 Communication in an emergency or a crisis
+The purpose of communication management during an emergency or crisis is to ensure the flow of reliable, accurate, relevant and timely information to those who need it.
+A crisis communication plan should be developed and validated in advance for known risks and should aim to:
+keep stakeholders informed
+build and maintain public trust in government and the organisation
+ensure accurate information is being reported by the media
+recover lost reputation
+The plan should be updated to reflect the emerging situation. The plan should include:
+who would be affected in the crisis
+the worst case scenario and how to handle it
+key messages to be used
+channels to be used
+Roles and responsibilities should be established as soon as a crisis has been identified. If not already planned, a crisis communication plan should be developed as soon as the crisis has been recognised, drawing on existing crisis plans where possible.
+Communication should be open, transparent and informative, and based on established facts; trusted sources and channels should be identified. Senior management should be advised, at the start and as the crisis evolves, of the key messages to be communicated.
+Note: an emergency or crisis can include incidents such as flooding, terror attacks, civil insurrection, acts of war, death of a major public figure.
+Note: see the Crisis Communications Operating Model [29]
+Note: for more information on practical crisis communication, see the PRIMER framework [10].
+7.8 Behaviour change
+One of the primary purposes of government communication is to encourage changes in behaviour which benefit individuals and the public at large and help the government to run more effectively and efficiently.
+Behaviour change should be a consideration in government communication campaigns, regardless of discipline. The behaviours necessary to meet the wider government policy objective(s) and any barriers to change should be identified and those which can be addressed by communication included within campaign planning, considering how people are likely to behave in response. In this respect, it should be determined whether the audience has the:
+right skills, mental and physical ability, and knowledge to change their behaviour
+the resources and systems and support
+the motivation to change
+Note: see Behaviour change guidance [17] and GovS 002, Project delivery.
+7.9 Writing style
+Communication should be written using the most appropriate language to effectively engage with target audiences to achieve the given communication objective.
+Writing should be:
+clear
+concise
+consistent
+Note: see Style guide [12].
+7.10 Learning from experience
+The purpose of learning from experience is to avoid repeating mistakes and help spread improved practices to benefit current and future communication work. Lessons should be continually captured, evaluated and action should be taken to mitigate risk and facilitate continual improvement of communication practice, including an evidence base of what techniques work best with different audiences.
+8. References
+All references are correct at the time of publication, users should check for updated versions.
+ID
+Description
+1
+GCS, Modern Communication Operating Model 3.0, 2023
+2
+GCS, Evaluation Framework 2.0 (2018)
+3
+HM Government, Brand Guidelines and artwork
+4
+GCS, Career Framework (2019)
+5
+GCS, Professional Assurance (2022)
+6
+GCS, OASIS Campaign Framework (2020)
+7
+GCS, Propriety guidance
+8
+GCS, Strategic communication discipline guidance (MCOM)
+9
+GCS, PRIMER framework (2021)
+10
+GCS, Delivering Excellence in Partnership Marketing (2022)
+11
+GCS, Style Guide (2021)
+12
+GCS, Internal communication discipline guidance (MCOM)
+13
+Engage for Success (external website)
+14
+GCS, Media discipline guidance (MCOM)
+15
+GCS, External Affairs discipline (MCOM)
+16
+GCS, Strategic communication; a behavioural approach (2018)
+17
+GCS, Buying communication support (2020)
+18
+HM Treasury and Government Finance function, Orange Book, guidance on risk management
+19
+Cabinet Office, Advertising, marketing and communication spend controls
+20
+Cabinet Office, Cabinet Office controls
+21
+GCS, Business partnering for government communication: a guide (2018)
+22
+GCS Strategy: Performance with Purpose 2022-25
+23
+GCS, Insight disicipline guidance (MCOM)
+24
+GCSTest and learn guidelines for media buying (2021)
+25
+GCS,Digital discipline guidance (MCOM)
+26
+GCS Equality, Diversity and Inclusion Action Plan (2023)
+27
+GCS Locations Strategy 2023-2025
+28
+GCS Crisis Communications Operating Model (2023)
+9. Glossary
+See also the common glossary of definitions which includes a list of defined terms and phrases used across the suite of government standards. The common glossary includes the term, definition, and which function owns the term and definition.
+Term
+Definition
+assurance
+A general term for the confidence that can be derived from objective information over the successful conduct of activities, the efficient and effective design and operation of internal control, compliance with internal and external requirements, and the production of insightful and credible information to support decision making. Confidence diminishes when there are uncertainties around the integrity of information or of underlying processes
+campaign
+A planned sequence of communication and interactions that uses a compelling narrative over time to deliver a defined and measurable outcome.
+channel
+The medium to deliver a message to an end audience. Often categorised as either ‘paid’, ‘owned’ or ‘earned’.
+channel (earned)
+The publicity gained through means other than paid-for advertising or own channel.
+channel (owned)
+Owned media refers to media channels that a party has complete control over such as their website, blogs, email newsletters, social media and internal communication.
+channel (paid)
+Covers all paid media, including TV and radio advertising, display, programmatic, search, media partnerships and sponsorship.
+communication
+Communication, in the context of this functional standard includes announcements, media management, co-ordinated communication activities (including social media, branded campaigns, external affairs and stakeholder management) aimed to support the organisation’s policy and priority objectives. This includes external and internal audiences.
+communication package
+A communication package, managed by a communication lead, is an element of a campaign which covers a specific need or event and is aligned to the campaign objectives. A communication package can be made up of a number of sub-packages.
+defined
+In the context of standards, ‘defined’ denotes a documented way of working which people are expected to use. This can apply to any aspect of a governance or management framework for example processes, codes of practice, methods, templates, tools and guides.
+established
+In the context of standards, ‘established’ denotes a way of working that is implemented and used throughout the organisation. This can apply to any aspect of a governance or management framework for example processes, codes of practice, methods, templates, tools and guides.
+external affairs
+External affairs is about building and maintaining relationships with influential individuals and organisations for the public benefit.
+fillers
+Low cost government TV and radio public service announcements, containing public welfare, health and safety messages, which are aired entirely at the goodwill of media owners who have donated free airtime.
+governance
+Governance defines relationships and the distribution of rights and responsibilities among those who work with and in the organisation. It determines the rules and procedures through which the organisational objectives are set, and provides the means of attaining those objectives and monitoring performance. Importantly, it defines where accountability lies throughout the organisation.
+governance and management framework
+A governance and management framework sets out the authority limits, decision making roles and rules, degrees of autonomy, assurance needs, reporting structure, accountabilities and roles and the appropriate management practices and associated documentation needed to meet this standard.
+grid
+A media planning schedule and forward look to plan announcements.
+internal communication
+Internal communication helps leaders in an organisation inform and engage employees, in a way which motivates staff to maximise their performance and deliver the business strategy most effectively.
+marketing
+In a government context, marketing is the strategic application of a range of techniques that help fulfil operational and policy objectives by effectively understanding and meeting the needs of citizens.
+media
+Communication channels through which news, entertainment, education, data, or promotional messages are disseminated. Media includes every broadcasting and narrowcasting medium on and off line such as websites, social media platforms, newspapers, magazines, TV, radio, billboards, direct mail and telephone.
+organisation
+An organisation, in the context of government functional standards, is the generic term used to describe a government department, arm’s length body, or any other entity that is identified as being within scope of a functional standard.
+partner longlist
+A list of potential partner organisations who are able to reach a defined audience before prioritisation has taken place.
+partner shortlist
+A prioritised list of partner organisations to be approached for campaign support.
+partnership
+The development and delivery of government messages via partnerships with private sector organisations, the public sector and civil society, utilising one or more elements of the partner’s marketing communication channels.
+plan
+A plan sets out how objectives, outcomes and outputs are to be delivered within defined constraints, in accordance with the strategy.
+reach
+The number of people reached by a communication activity.
+sponsorship
+A contractual arrangement where an organisation pays for the rights (exclusive or non-exclusive) to be associated with an activity. This may be financially or through the provision of products or services.
+strategic
+Strategic communication sets, co-ordinates and guides the implementation of activity, based on insight, in a timely way, as part of an overarching plan to deliver against agreed priorities to measurable effect.
+strategy
+A strategy outlines longer term objectives, outcomes and outputs, and the means to achieve them, to inform future decisions and planning.
+value exchange
+Ensuring that each side of a marketing partnership is content with what they are receiving from the relationship relative to what they are giving.
+Back to top

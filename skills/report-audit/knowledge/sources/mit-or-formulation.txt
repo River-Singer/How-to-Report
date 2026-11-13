@@ -1,0 +1,11 @@
+MIT 15.053 Lecture2 formulation: original notes
+Source: https://ocw.mit.edu/courses/15-053-optimization-methods-in-management-science-spring-2013/resources/mit15_053s13_lec2/
+Attribution: MIT OpenCourseWare, 15.053 Spring2013
+Representation: Original project summary, not source full text or translation.
+Compiled: 2026-11-12; reviewed research reused.
+Reading scope: Selected pages3,5–6,11–15,35–41 of 42-page lecture; original summary only.
+Rights: Underlying source rights retained; no endorsement.
+
+把现实选择转成可变决策、目标与约束，先核关系是否符合实际，再讨论求解。人员排班涉及时段、技能和依赖，总量够不保证安排可执行。示例数据只解释模型，不能替用户填产能或人员参数。这里不复现课程案例或算法。
+
+这些方法不是当前项目、参会者或市场事实，也不证明本 Skill 的模型效果；运行时不联网补齐。

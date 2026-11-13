@@ -1,0 +1,11 @@
+Lord, Lepper & Preston1984: considering the opposite notes
+Source: https://doi.org/10.1037/0022-3514.47.6.1231
+Attribution: Charles G. Lord, Mark R. Lepper and Elizabeth Preston
+Representation: Original project summary, not source full text or translation.
+Compiled: 2026-11-12; reviewed research reused.
+Reading scope: Research read printed1231–1239: abstract, experiments1/2 methods/results, general discussion and footnote3. No full end discussion/references; copyrighted original not redistributed.
+Rights: Underlying source rights retained; no endorsement.
+
+主动考虑相反解释可用于检查只选支持材料的判断。人类社会判断实验不证明角色名字或LLM多Agent机制有效；反方需要依据，不能为坚持相反意见虚构事实。反证推翻异议时应撤回，不从问题数量推断质量。
+
+这些方法不是当前项目、参会者或市场事实，也不证明本 Skill 的模型效果；运行时不联网补齐。
