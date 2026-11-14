@@ -96,6 +96,33 @@ class SuiteEntryTests(unittest.TestCase):
         with self.assertRaisesRegex(packager.PackageError, "ppt-handoff.md"):
             packager.validate_payload("how-to-report", missing_handoff)
 
+    def test_challenge_selection_reaches_shared_method_and_evidence_rules(self) -> None:
+        shared = PROJECT / "skill-src" / "shared" / "references"
+        method_paths = (
+            "references/directed-challenge.md",
+            "references/agent-delegation.md",
+            "references/stakeholder-roles.md",
+        )
+        for skill, payload in self.packages.items():
+            with self.subTest(skill=skill):
+                standalone = self.base / ("challenge-" + skill)
+                self.write_payload(standalone, payload)
+                relocated, _ = packager.tree(standalone)
+                packager.validate_payload(skill, relocated)
+                for relative in method_paths:
+                    self.assertEqual(relocated[relative], (shared / Path(relative).name).read_bytes())
+                for relative in method_paths[1:]:
+                    targets = {
+                        packager.local_target(skill, relative, link)
+                        for link in packager.markdown_links(relocated[relative].decode("utf-8-sig"))
+                    }
+                    self.assertIn("references/directed-challenge.md", targets)
+                evidence_targets = {
+                    packager.local_target(skill, method_paths[0], link)
+                    for link in packager.markdown_links(relocated[method_paths[0]].decode("utf-8-sig"))
+                }
+                self.assertIn("references/semantic-structuring.md", evidence_targets)
+
 
 if __name__ == "__main__":
     unittest.main()

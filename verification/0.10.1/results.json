@@ -1,0 +1,40 @@
+{
+  "package_version": "0.10.1",
+  "run_contract_version": "0.1",
+  "full_unittest": {
+    "total": 256,
+    "passed": 255,
+    "skipped": 1,
+    "seconds": 81.351,
+    "wall_seconds": 81.85,
+    "returncode": 0
+  },
+  "package_check": "pass",
+  "frontmatter_validation": {
+    "total": 3,
+    "passed": 3,
+    "utf8_mode": true
+  },
+  "static_validation": {
+    "changed_files": 17,
+    "runtime_and_document_markdown_files": 9,
+    "local_links": 153,
+    "canonical_markdown_files_in_materialized_package_check": 4,
+    "python_syntax": "pass",
+    "whitespace": "pass",
+    "missing_links": []
+  },
+  "independent_lint_configured": false,
+  "static_typecheck_configured": false,
+  "fixed_findings": 0,
+  "unfixed_engineering_findings": 0,
+  "new_model_cases_executed": false,
+  "semantic_effect_validation": "pending_future_model_results",
+  "package_manifests": {
+    "how-to-report": "32b3bc11c26a63256a3f5a67185f60660beb76a2e09a908b6efe51c532b16e54",
+    "report-audit": "a6a13d32d7c16f1b2588005a009efbfbc016aa060829e051b66b8921c6fe069f"
+  },
+  "root_entry_sha256": "4301a983f80440c766266e0e94662138314ea3fca279035f2b09bf5f32f6db2b",
+  "verification_date": "2026-11-14",
+  "evidence_scope": "engineering and rule-contract checks; model effects pending"
+}
