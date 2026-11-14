@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.9.1，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.10.0，以 Markdown 交付汇报内容与审查意见。** 需要 PPT 时，可从总入口提出完整任务，确认内容后连续接续宿主可用的 PPT-Master，由其完成设计、制作与导出。
 
 ## 设计哲学
 
@@ -64,7 +64,7 @@ Skill 按疑点调用方法：该追问时追问，该检查前提时检查前�
 
 完整材料要明确建议页数，写出每页可用的标题、正文和必要数据；不规定一页放几张卡片、画什么图、用什么配色。需要三十秒更新时，就交付一段话。
 
-0.6.0 已退出 HTML、SVG、PPTX 生成与视觉验收。下游可以自由设计，同时保留内容中的数字、状态、归因和关键条件。旧视觉实现保存在[历史归档](legacy/visual-0.5.3/README.md)。
+内容 Skill 负责正文、来源和必须保留的含义，PPT-Master 负责 PPT 专用设计、模板、对象、导出及制作检查。总入口传递用户实际确认的页数、页序、措辞或语义范围，制作时保留关键条件。其他表现形式可由用户选择相应工具。旧视觉实现保存在[历史归档](legacy/visual-0.5.3/README.md)。
 
 ## 一条生成主线，按当前需要进入
 
@@ -90,7 +90,7 @@ flowchart LR
 
 ## 总入口与两个独立 Skill
 
-从仓库根目录的 [SKILL.md](SKILL.md) 开始即可。它根据当前需求进入生成、先分析、修订或审计工作流；具体方法由以下两个 Skill 负责。
+从仓库根目录的 [SKILL.md](SKILL.md) 开始即可。它根据当前需求进入生成、先分析、修订或审计工作流，也可在用户确认内容后接续 PPT-Master；内容方法由以下两个 Skill 负责。
 
 | Skill | 什么时候用 | 得到什么 |
 |---|---|---|
@@ -120,6 +120,21 @@ git clone https://github.com/River-Singer/How-to-Report.git
 **3. 给出已有材料和当前需求。** 汇报对象、场合、时长、目标，以及各参会者本次代表的职责和要作的判断，知道多少就说多少。不确定的部分可以一起讨论，不用先填模板。真实材料与输出保存在 Skill 安装目录之外。
 
 普通内容任务无需 Python 或浏览器。核心方法与选用的知识资料可离线读取，外部链接用于溯源；模型运行方式由宿主决定。详细说明见[使用指南](docs/usage.md)与[离线资料说明](docs/offline-knowledge.md)。
+
+### 从总入口连续制作 PPT
+
+让助手读取总入口，并在当前任务中说明需要 PPT。宿主已提供的 PPT-Master 可直接发现和使用，也可以给出其完整 `SKILL.md` 的实际路径。完整制作工具包含自己的工作流、脚本与资源，运行依赖由所选路线核对。
+
+```text
+请读取 [仓库实际位置]/SKILL.md。我需要向负责安排业务试用的主管
+做五分钟汇报 PPT，希望他判断是否进入下一轮试用，材料在 [资料路径]。
+请先完成内容，交我确认后继续制作 PPT，保存到 [输出目录]。
+PPT-Master 的完整入口在 [实际位置]/SKILL.md。
+```
+
+总入口沿用已确认目的、角色和来源，明确当前内容及其可改范围后进入制作。PPT-Master 保留自己适用的沟通、模板和方案确认，助手继续处理至实际输出或具体未完成项。已有 PPT 要保留原设计时，交接会记录原稿和允许修改范围，由下游进入相应原稿编辑路线。可复用模板通过其 Create Template 路线单独沉淀。
+
+外部入口缺失或制作失败时，助手保存当前内容、已确认要求和实际失败位置，取得所需能力后接续。交付时分别说明内容对照、渲染和对象编辑实际完成的范围。完整链路与模板效果通过用户运行的试点验证。[内容交接方法](skills/how-to-report/references/ppt-handoff.md)说明具体职责。
 
 ## 使用示例
 
@@ -172,7 +187,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 
 明确只要口头稿、独立阅读稿或先讨论思路时，按该形式交付；一句话修改直接给替换文字。后续可以继续修改某一页、补充事实或调整时长。增删、合并页面时，同步总页数、页序及相关内容；不因局部改动重做全部分析。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十八场景评测](evaluation/content-0.9.1/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[0.9.1 内容评测](evaluation/content-0.9.1/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -193,6 +208,6 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-0.9.1把可复算的Python计算接到最终推荐，补明确参照的差额、人时单位和容量场景；同时加强来源身份、多轮余项及挑战后的正文收敛。既有角色挑战与专业方法保留。[18场景41轮](evaluation/content-0.9.1/README.md)复用上一版任务和事实，模型测试由用户运行，本版效果待测。工程状态见[0.9.1记录](verification/0.9.1/README.md)，[历史0.9.0记录](verification/0.9.0/README.md)保留。详见[开发与验证计划](docs/development-plan.md)。
+0.10.0增加总入口到完整 PPT-Master 的内容确认与制作接续，工程检查覆盖入口、资源闭包和搬迁，详见[本版工程记录](verification/0.10.0/README.md)。完整模型执行与实际 PPT 效果由用户试点核验。0.9.1 的[18场景41轮](evaluation/content-0.9.1/README.md)继续记录计算、来源与多轮更新的既有回归范围，模型测试由用户运行。[0.9.1 工程记录](verification/0.9.1/README.md)与[0.9.0 记录](verification/0.9.0/README.md)对应各自交付。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

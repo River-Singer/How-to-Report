@@ -1,6 +1,6 @@
 {
   "files": {
-    "SKILL.md": "f20693bdc32577df6c9271942f81819feef4c1720fa282cc158e929b076ff5fb",
+    "SKILL.md": "137bef9f676d5b9ddf1147d2fabeb5cd4e6c0cda3bc6f375803b3e7922e36d55",
     "THIRD_PARTY_NOTICES.md": "d01c84ffbb6efbf6f4364a3d948079b7b31ca8e6ddc0e2e9a177dfb1c972e9b5",
     "assets/examples/experience-entry.json": "2f9df97f5b41cf90461fe7a92972a403fdec0921b919f91bf07eba94cff91d98",
     "assets/examples/foreign-audit/audit-report.md": "ec652b0f9bce095a6ce709694c1d624c57448e90ef0c05c2aa05cd73294e9e27",
@@ -108,7 +108,7 @@
     "references/evidence-handoff.md": "5b6e47d7e8650f29d230bf8ecf18b17c6b44df0ab2e5ff8cecfdd3a812b05095",
     "references/goal-discovery.md": "0fbe2803fb2c16fb2712d7e9771b758c1f339bdfddcbd953fa1596db1417b98e",
     "references/graph-model.md": "92406e7e1f8cdf03e346aa934c3640ed33e96a8a3d775c2fa82ec7f42d2f8f43",
-    "references/host-capabilities.md": "7ca10576370057fd6c1c4361143707586cd30c7fea0de56f740b6abbfa18d4ad",
+    "references/host-capabilities.md": "d2dc577808e327800897e50f8b060785c7e7510091a73543882acecace609a18",
     "references/insight-discovery.md": "1a1eede061f9b6f4a90603263d00db9e8cea1a05318894f3ebcbc663b3c60be0",
     "references/meeting-expression.md": "73a57d47d9ff76f11d02319657ad096f08e202c65a7ef9f25f5d3b7ea560223f",
     "references/method-argument.md": "ed8a8554c5300b764226cd895e7c1618ce76f036c6bb0c5000bb36fd974e1889",
@@ -155,13 +155,14 @@
     "references/method-sources/sources/toulmin.txt": "d6d36731d0a42e749b49447fc48f382b1ec592e5f87de72b7346d5a62ae1eb7b",
     "references/method-sources/sources/yu-zenker-2020-fulltext.txt": "2772f7eb548e6ce63a47255e4a8e80b62d4f0e615bb1861c39bb60c0d69821d3",
     "references/numeric-evidence.md": "52c91ba2435894a6e271d91d01ed5f664be4d3723d1cedb160924ffeadf31ee0",
+    "references/ppt-handoff.md": "e327cf96250a5d1ec16d3f53658adccfee07373ae397389148725079fa244e73",
     "references/project-progress.md": "47558d2fb2580c6cf7c747904940922a4444a07f65942c760c2c6efbb61a0fd4",
     "references/reasoning-methods.md": "469c612817d3221c94119b5f0ae09746e33027487f2a01ad9fcc3a03d7042f69",
     "references/report-calculation.md": "eb49c7d4dde12c56d72a161fc430e4d2ff3e8ebc585a879bd09aad1b4a797893",
     "references/report-experience.md": "ae2cf4ae6350037b8fb070ea47cf0b053485434ed5f7efcb9ec668f159325f4d",
     "references/report-profile.md": "47499221705dc813718ccf0d0780fbe792a8e269fb5186fb3f0563fc61c451e9",
     "references/report-run.md": "023fb2d40b9ba375e234436ca2aa0894b985d34b3476bc509aa1d6cd16ce373a",
-    "references/reporting-method.md": "521c22dc9c01b7167f58a324bbf1eceacfdf36a6acfa095cfa263a18b790d771",
+    "references/reporting-method.md": "85dc7a6066815fc3f02490e07f65bdc2341303b8f28444e779e3b3d4cd14dcb9",
     "references/semantic-structuring.md": "4f1489cab5fd251a1f6b010b601e3315376a33bc852e597d1b6b8a11a5353eb9",
     "references/stakeholder-roles.md": "db2573bbf9484a43b21101d035a7d64f885ad5bca9be35b2a0bc579d96ae86f2",
     "references/version-lifecycle.md": "0591133aeb750a02d9941c455a8ab1685532bd9583b570f9fe3b7bcc0e204fb9",
@@ -177,7 +178,7 @@
     "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
   },
   "generated_by": "tools/package_skills.py",
-  "package_version": "0.9.1",
+  "package_version": "0.10.0",
   "skill_name": "how-to-report",
   "supported_contract_version": "0.1"
 }

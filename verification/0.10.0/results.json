@@ -1,0 +1,103 @@
+{
+  "verification_date": "2026-11-14",
+  "package_version": "0.10.0",
+  "run_contract_version": "0.1",
+  "full_unittest": {
+    "total": 255,
+    "passed": 254,
+    "skipped": 1,
+    "seconds": 79.234,
+    "returncode": 0
+  },
+  "postfix_suite_tests": {
+    "total": 3,
+    "passed": 3,
+    "seconds": 1.743,
+    "returncode": 0
+  },
+  "package_check": "pass",
+  "frontmatter_validation": {
+    "total": 3,
+    "passed": 3,
+    "utf8_mode": true
+  },
+  "whitespace_check": "pass",
+  "python_syntax": "pass",
+  "local_links": {
+    "files": 7,
+    "links": 62,
+    "status": "pass"
+  },
+  "independent_lint_configured": false,
+  "static_typecheck_configured": false,
+  "fixed_findings": 2,
+  "unfixed_engineering_findings": 0,
+  "model_execution": false,
+  "pptx_generation": false,
+  "native_host_edit_validation": "not_run",
+  "handoff_engineering_tests": {
+    "total": 20,
+    "passed": 19,
+    "skipped": 1,
+    "run_usability_followup": {
+      "command": "python -B .trellis/tasks/11-14-architecture-ppt-research/research/release-0.10.0/test_ppt_link_v1.py PptLinkTests.test_prepare_is_single_case_and_keeps_source_bytes -v",
+      "tests": 1,
+      "passed": 1,
+      "scope": "RUN direct-start guidance and optional executable relocation check"
+    }
+  },
+  "historical_protection": {
+    "protected_files": 24222,
+    "changed": [],
+    "missing": [],
+    "passed": true
+  },
+  "pilot": {
+    "cases": 1,
+    "freeze_integrity": "frozen_integrity_pass",
+    "outputs_empty": true,
+    "model_execution": false
+  },
+  "frozen_entry_preflight": {
+    "attribution_guard": {
+      "returncode": 0,
+      "scope": "frozen entry preflight from unrelated cwd"
+    },
+    "export_entry_help": {
+      "returncode": 0,
+      "scope": "frozen entry preflight from unrelated cwd"
+    }
+  },
+  "package_identities": {
+    "suite": {
+      "skill": "how-to-report-suite",
+      "version": "0.10.0",
+      "entry_sha256": "4301a983f80440c766266e0e94662138314ea3fca279035f2b09bf5f32f6db2b",
+      "packages": [
+        {
+          "skill": "how-to-report",
+          "version": "0.10.0",
+          "manifest_sha256": "3f76fcb83a7994be517412ef54e07925563cfcc5afb53cdc60d1ddfa72bae5fd"
+        },
+        {
+          "skill": "report-audit",
+          "version": "0.10.0",
+          "manifest_sha256": "1cc4001a1fdd29c355e34671ea95f7149e2b7805488677a08e34e098a1fb17c1"
+        }
+      ]
+    },
+    "ppt_master": {
+      "skill": "ppt-master",
+      "version": "6.9.0",
+      "entry_sha256": "cda3f1f476a93a48385867dbdb89f661f27c35bfb670f51c7dbd53a3b300c856",
+      "files": 13091,
+      "payload_sha256": "d9ef56e98c31ab541f3c81a360e850ca8765a758c6f7310783bcf2b892f06504"
+    }
+  },
+  "final_delivery_documents": {
+    "files": 8,
+    "local_links": 64,
+    "whitespace": "pass",
+    "status": "pass"
+  }
+}

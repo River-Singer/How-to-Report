@@ -102,7 +102,7 @@
     "references/evidence-handoff.md": "5b6e47d7e8650f29d230bf8ecf18b17c6b44df0ab2e5ff8cecfdd3a812b05095",
     "references/goal-discovery.md": "0fbe2803fb2c16fb2712d7e9771b758c1f339bdfddcbd953fa1596db1417b98e",
     "references/graph-model.md": "92406e7e1f8cdf03e346aa934c3640ed33e96a8a3d775c2fa82ec7f42d2f8f43",
-    "references/host-capabilities.md": "7ca10576370057fd6c1c4361143707586cd30c7fea0de56f740b6abbfa18d4ad",
+    "references/host-capabilities.md": "d2dc577808e327800897e50f8b060785c7e7510091a73543882acecace609a18",
     "references/insight-discovery.md": "1a1eede061f9b6f4a90603263d00db9e8cea1a05318894f3ebcbc663b3c60be0",
     "references/meeting-expression.md": "73a57d47d9ff76f11d02319657ad096f08e202c65a7ef9f25f5d3b7ea560223f",
     "references/method-argument.md": "ed8a8554c5300b764226cd895e7c1618ce76f036c6bb0c5000bb36fd974e1889",
@@ -160,7 +160,7 @@
     "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
   },
   "generated_by": "tools/package_skills.py",
-  "package_version": "0.9.1",
+  "package_version": "0.10.0",
   "skill_name": "report-audit",
   "supported_contract_version": "0.1"
 }

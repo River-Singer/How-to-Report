@@ -1,11 +1,11 @@
 ---
 name: how-to-report
-description: 从真实处境和材料澄清汇报目标、提炼信息、形成有依据的判断，组织叙事并交付明确页数与逐页内容的 Markdown 汇报方案；支持先分析和多轮局部修订。
+description: 从真实处境和材料澄清目标、形成有依据的判断并交付明确页数与逐页内容的 Markdown 汇报方案，支持先分析、多轮局部修订，以及内容确认后向实际可用的完整 PPT-Master 交接制作。
 ---
 
 # How to Report
 
-帮助用户把事情想清楚，再形成听众能够使用的汇报材料。默认完整交付是《汇报方案.md》：简短安排、具体页数和页序、每页可直接使用的标题与内容。到内容交付即停止，不生成 HTML、SVG、PPTX、固定版式或视觉验收记录。
+帮助用户把事情想清楚，再形成听众能够使用的汇报材料。默认完整内容交付为《汇报方案.md》，包含简短安排、具体页数和页序、每页可直接使用的标题与内容。用户要求 PPT 时，内容确认后按 [PPT 交接](references/ppt-handoff.md) 由协调者连续接续实际可用的完整 PPT-Master，页面制作、导出和制作检查沿其正式工作流执行。
 
 ## 先进入生成与修订主线
 
@@ -32,6 +32,7 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 | 标题有要点，正文却只重复标签；复杂评审仍讲不清一件事 | 用[关系展开](references/semantic-structuring.md#把概括展开为可理解的关系)补本场必要解释，定向参考[同源短稿与完整评审](assets/examples/report-depth-proposals.md)；不照搬页数或逐层句式 |
 | 派生数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；适用运算实际调用[Python计算工具](references/report-calculation.md)，结果还要对到正文比较与推荐 |
 | 材料交接、续接或版本追溯 | [最小证据](references/evidence-handoff.md)、[生成Run](references/report-run.md)、[版本操作](references/version-lifecycle.md) |
+| 请求制作 PPT、确认内容后继续制作，或制作中需要回改内容 | [PPT 交接](references/ppt-handoff.md)，承接当前稿、来源、属性级确认及实际制作状态 |
 | 明确复用或保存已确认偏好/经验 | [画像](references/report-profile.md)、[私有经验](references/report-experience.md) |
 | 专业关系需要领域知识 | [知识目录元信息](knowledge/index.md)，正文按已有授权范围读取 |
 
@@ -40,6 +41,8 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 ## 交付与可靠性边界
 
 完整材料必须有具体总页数和全部逐页内容，不能只交长讲稿或空页纲。用户明确只要口头稿、阅读稿、分析或局部修改时按其范围交付。下游可自由选择图形、插画和布局，事实、关系与重要条件仍应保留。
+
+PPT 请求的协调者在当前内容得到实际确认后继续制作，沿用仍适用的确认和限制。通过总入口调用时将当前稿与确认交回该协调者，独立调用本 Skill 时由当前主 Agent 接续。实际文件、工具与外部入口能力按 [宿主边界](references/host-capabilities.md#外部制作-skill) 核对，制作未完成时交代当前产物与具体续接点。
 
 普通任务不要求建Run、Graph或Blueprint。复杂关系和留存按需使用[多图视图](references/graph-model.md)、[工作区契约](references/workspace-contract.md)与[宿主能力](references/host-capabilities.md)；记录可审阅的决定，不输出私有推理过程。普通分析可按[可选并行协作](references/host-capabilities.md#可选并行协作)拆分独立问题。审计与定向挑战必须按[委派契约](references/agent-delegation.md)由真实子Agent执行，失败或无能力时明确未完成，不由主Agent串行假扮或私调模型服务。文件能力不要求每次初始化目录。
 
