@@ -16,7 +16,7 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.9.0，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
+**当前版本 0.9.1，以 Markdown 交付汇报内容与审查意见。** 视觉制作留给下游模型或工具，自由选择幻灯片、HTML、SVG、插画与版式。
 
 ## 设计哲学
 
@@ -172,7 +172,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 
 明确只要口头稿、独立阅读稿或先讨论思路时，按该形式交付；一句话修改直接给替换文字。后续可以继续修改某一页、补充事实或调整时长。增删、合并页面时，同步总页数、页序及相关内容；不因局部改动重做全部分析。
 
-需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十八场景评测](evaluation/content-0.9.0/README.md)或[独立审查入口](docs/audit-start-here.md)。
+需要进一步了解，可阅读[当前范围](docs/content-scope.md)、[内容取舍示例](skills/how-to-report/references/content-decisions.md)、[十八场景评测](evaluation/content-0.9.1/README.md)或[独立审查入口](docs/audit-start-here.md)。
 
 ---
 
@@ -181,7 +181,7 @@ git clone https://github.com/River-Singer/How-to-Report.git
 
 源码在 `skill-src/how-to-report/`、`skill-src/report-audit/` 和 `skill-src/shared/`；`skills/` 是构建生成的完整安装包。修改源码后统一构建，不手改生成目录。
 
-按需计算、日期校验、版本记录与已确认偏好等工具使用 Python 3.10+ 标准库。普通写作无需初始化 Run 或额外 JSON；私有资料和输出留在安装包之外。
+计算、日期校验、版本记录与已确认偏好等工具使用 Python 3.10+ 标准库。影响判断的数值先按[计算方法](skills/how-to-report/references/report-calculation.md)取得可复算结果，再检查正文的比较与推荐；Python可用时执行受支持计算，工具不可用时如实说明。普通写作无需初始化 Run 或额外 JSON；私有资料和输出留在安装包之外。
 
 在项目根目录执行：
 
@@ -193,6 +193,6 @@ python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
 
-0.9.0加入真实利益相关者确认、纯问句定向挑战、主代理求助和分阶段独立审计，专业知识覆盖费用、资源、技术数据边界、市场、产品营销、销售与传播，并加强真实个人贡献的正向表达。[18场景41轮](evaluation/content-0.9.0/README.md)保留原13类覆盖并加入新探针。模型测试由用户运行，本版尚无效果结论。工程状态以[0.9.0记录](verification/0.9.0/README.md)为准；[0.8.4记录](verification/0.8.4/README.md)及历史产物保留。详见[开发与验证计划](docs/development-plan.md)。
+0.9.1把可复算的Python计算接到最终推荐，补明确参照的差额、人时单位和容量场景；同时加强来源身份、多轮余项及挑战后的正文收敛。既有角色挑战与专业方法保留。[18场景41轮](evaluation/content-0.9.1/README.md)复用上一版任务和事实，模型测试由用户运行，本版效果待测。工程状态见[0.9.1记录](verification/0.9.1/README.md)，[历史0.9.0记录](verification/0.9.0/README.md)保留。详见[开发与验证计划](docs/development-plan.md)。
 
 </details>

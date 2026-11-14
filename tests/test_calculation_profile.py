@@ -64,6 +64,158 @@ class CalculationProfileTests(unittest.TestCase):
         self.data.write_text(contents, encoding="utf-8")
         self.spec["source"]["sha256"] = self.digest(self.data)
 
+    def comparison_spec(self):
+        self.spec.update(calculation_version="0.2", operation="difference_of_sums",
+                         columns={"minuend": "a", "subtrahend": "b"},
+                         column_units={"minuend": "CNY", "subtrahend": "CNY"},
+                         parameters={"minuend_label": "Option A", "subtrahend_label": "Option B"})
+        self.refresh("key,a,b\nA,10800,9000\n")
+
+    def person_time_spec(self, basis="capacity", duration_unit="half_day"):
+        self.spec.update(calculation_version="0.2", operation="person_time",
+                         columns={"count": "count", "duration": "duration"},
+                         column_units={"count": "person_occurrence", "duration": duration_unit},
+                         parameters={"population_basis": basis})
+        self.spec["context"]["unit"] = "person_day"
+        self.refresh("key,count,duration\nA,80,1\n")
+
+    def calculated_result(self):
+        self.calc()
+        return json.loads((self.out / "result.json").read_text(encoding="utf-8"))
+
+    def test_v2_signed_comparison_swapped_equal_and_negative_operands(self):
+        self.comparison_spec()
+        forward = self.calculated_result()
+        self.assertEqual(forward["values"]["difference"], {"unrounded": "1800", "rounded": "1800.00", "unit": "CNY"})
+        self.assertEqual(forward["comparison"], {"minuend_label": "Option A", "subtrahend_label": "Option B",
+                                                "relation": "minuend_greater", "basis": "unrounded totals"})
+        self.spec["columns"] = {"minuend": "b", "subtrahend": "a"}
+        self.spec["parameters"] = {"minuend_label": "Option B", "subtrahend_label": "Option A"}
+        self.out = self.root / "reverse"
+        reverse = self.calculated_result()
+        self.assertEqual(reverse["values"]["difference"]["unrounded"], "-1800")
+        self.assertEqual(reverse["values"]["absolute_difference"]["unrounded"], "1800")
+        self.assertEqual(reverse["comparison"]["relation"], "minuend_less")
+        for i, (a, b, difference, relation) in enumerate([(9, 9, "0", "equal"), (-9, -12, "-3", "minuend_less")]):
+            self.refresh(f"key,a,b\nA,{a},{b}\n")
+            self.out = self.root / f"comparison-{i}"
+            result = self.calculated_result()
+            self.assertEqual(result["values"]["difference"]["unrounded"], difference)
+            self.assertEqual(result["comparison"]["relation"], relation)
+
+    def test_v2_difference_aggregate_rounding_and_relation_use_unrounded_values(self):
+        self.comparison_spec()
+        self.refresh("key,a,b\nA,0.004,0\nB,0.004,0\n")
+        result = self.calculated_result()
+        self.assertEqual(result["values"]["difference"]["rounded"], "0.01")
+        self.refresh("key,a,b\nA,0.004,0\n")
+        self.out = self.root / "rounded-zero"
+        result = self.calculated_result()
+        self.assertEqual(result["values"]["difference"]["rounded"], "0.00")
+        self.assertEqual(result["comparison"]["relation"], "minuend_greater")
+
+    def test_v2_person_time_dual_units_and_population_basis(self):
+        for i, basis in enumerate(("capacity", "planned_attendance", "attendance")):
+            self.person_time_spec(basis)
+            self.out = self.root / f"basis-{i}"
+            result = self.calculated_result()
+            self.assertEqual(result["values"]["person_days"], {"unrounded": "40.0", "rounded": "40.00", "unit": "person_day"})
+            self.assertEqual(result["values"]["person_half_days"], {"unrounded": "80", "rounded": "80.00", "unit": "person_half_day"})
+            self.assertEqual(result["parameters"], {"population_basis": basis})
+        self.person_time_spec(duration_unit="day")
+        self.refresh("key,count,duration\nA,80,0.5\nB,0,1\n")
+        self.out = self.root / "days"
+        result = self.calculated_result()
+        self.assertEqual(result["values"]["person_days"]["unrounded"], "40.0")
+        self.assertEqual(result["values"]["person_half_days"]["unrounded"], "80")
+        self.assertEqual(result["conversion"]["days_per_duration_unit"], "1")
+        self.person_time_spec()
+        self.spec["context"]["unit"] = "person_half_day"
+        self.refresh("key,count,duration\nA,48,1\n")
+        self.out = self.root / "half-days"
+        result = self.calculated_result()
+        self.assertEqual(result["values"]["person_days"]["rounded"], "24.00")
+        self.assertEqual(result["values"]["person_half_days"]["rounded"], "48.00")
+        self.refresh("key,count,duration\nA,0,1\nB,10,0\n")
+        self.out = self.root / "explicit-zero"
+        result = self.calculated_result()
+        self.assertEqual(result["values"]["person_days"]["rounded"], "0.00")
+        self.assertEqual(result["values"]["person_half_days"]["rounded"], "0.00")
+
+    def test_v2_person_time_rejects_negative_duration_and_noninteger_counts(self):
+        self.person_time_spec()
+        for count, duration in [("-1", "1"), ("0.5", "1"), ("1", "-0.5"), ("", "1"), ("1", "Infinity")]:
+            with self.subTest(count=count, duration=duration):
+                self.refresh(f"key,count,duration\nA,{count},{duration}\n")
+                self.calc(expected=2)
+                self.assertFalse(self.out.exists())
+
+    def test_v2_units_parameters_and_versions_are_strict_and_fail_cleanly(self):
+        self.comparison_spec()
+        original = deepcopy(self.spec)
+        variants = []
+        for units in ({"minuend": "CNY", "subtrahend": "USD"}, {"minuend": "CNY", "subtrahend": "万元"},
+                      {"minuend": "CNY", "subtrahend": None}, [], True):
+            variants.append({**deepcopy(original), "column_units": units})
+        for parameters in (None, [], True, {}, {"minuend_label": "A", "subtrahend_label": " A "},
+                           {"minuend_label": [], "subtrahend_label": "B"},
+                           {"minuend_label": "A", "subtrahend_label": "B", "extra": 1}):
+            variants.append({**deepcopy(original), "parameters": parameters})
+        for version in ("0.1", "0.3", [], {}, True):
+            variants.append({**deepcopy(original), "calculation_version": version})
+        variants.append({k: v for k, v in original.items() if k != "parameters"})
+        variants.append({**{k: v for k, v in original.items() if k != "parameters"}, "calculation_version": "0.1"})
+        variants.append({**deepcopy(original), "operation": "sum"})
+        variants.append({**deepcopy(original), "operation": []})
+        wrong_context = deepcopy(original)
+        wrong_context["context"]["unit"] = "USD"
+        variants.append(wrong_context)
+        self.person_time_spec()
+        person = deepcopy(self.spec)
+        wrong_person_unit = deepcopy(person)
+        wrong_person_unit["context"]["unit"] = "person_hour"
+        variants.append(wrong_person_unit)
+        for basis in ("actual", [], {}, None):
+            variants.append({**deepcopy(person), "parameters": {"population_basis": basis}})
+        for units in ({"count": "person", "duration": "half_day"}, {"count": "person_occurrence", "duration": "hour"}):
+            variants.append({**deepcopy(person), "column_units": units})
+        for i, spec in enumerate(variants):
+            with self.subTest(variant=i):
+                self.save(self.spec_path, spec)
+                response = self.command("report_calculate.py", "run", self.spec_path, "--output", self.out, expected=2)
+                self.assertEqual(response["execution_status"], "failed")
+                self.assertFalse(self.out.exists())
+
+    def test_v2_receipts_replay_and_input_snapshots_for_both_operations(self):
+        for i, setup in enumerate((self.comparison_spec, self.person_time_spec)):
+            setup()
+            self.out = self.root / f"operation-{i}"
+            before = self.data.read_bytes()
+            result = self.calculated_result()
+            receipt = json.loads((self.out / "calculation-receipt.json").read_text())
+            self.assertEqual(result["calculation_version"], "0.2")
+            self.assertEqual(receipt["calculation_version"], "0.2")
+            self.assertEqual(receipt["result_sha256"], self.digest(self.out / "result.json"))
+            self.assertEqual(receipt["spec_sha256"], self.digest(self.spec_path))
+            self.assertEqual(receipt["source"]["sha256"], self.digest(self.data))
+            self.assertEqual(receipt["method"]["sha256"], self.digest(self.package / "scripts/report_calculate.py"))
+            self.assertEqual(receipt["checks"]["declared_unit_relationship"], "pass")
+            self.assertEqual(receipt["independent_review"], "not_run")
+            self.assertEqual(receipt["source_authenticity"], "not_assessed")
+            self.assertEqual((self.out / "input.csv").read_bytes(), before)
+            self.assertEqual((self.out / "spec.json").read_bytes(), self.spec_path.read_bytes())
+            replay = self.root / f"replayed-{i}"
+            self.command("report_calculate.py", "run", self.out / "replay-spec.json", "--output", replay)
+            self.assertEqual((replay / "result.json").read_bytes(), (self.out / "result.json").read_bytes())
+            self.assertEqual(self.data.read_bytes(), before)
+
+    def test_packaged_calculation_examples_execute_from_relocated_source_copy(self):
+        assets = self.package / "assets" / "report-calculation"
+        shutil.copytree(SOURCE / "assets" / "report-calculation", assets)
+        for spec in sorted(assets.glob("*.json")):
+            with self.subTest(spec=spec.name):
+                self.command("report_calculate.py", "run", spec, "--output", self.root / spec.stem)
+
     def test_decomposition_receipt_snapshot_and_independent_integer_oracle(self):
         before = self.data.read_bytes()
         response = self.calc()

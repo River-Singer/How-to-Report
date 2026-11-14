@@ -30,7 +30,7 @@ description: 从真实处境和材料澄清汇报目标、提炼信息、形成�
 | 句子抽象生硬、角色混乱或混入制作旁白 | [观众成稿编辑](references/audience-copy.md) |
 | 有了判断却仍平均介绍全部主题，或新回复替掉原余项 | 定向用[内容删合示范](references/content-decisions.md#读者仍需自己拼接)或[部分更新示范](references/content-decisions.md#新回复只完成部分请求)，实际重写受影响内容；交付形式看[完整材料示例](assets/examples/report-proposal.md) |
 | 标题有要点，正文却只重复标签；复杂评审仍讲不清一件事 | 用[关系展开](references/semantic-structuring.md#把概括展开为可理解的关系)补本场必要解释，定向参考[同源短稿与完整评审](assets/examples/report-depth-proposals.md)；不照搬页数或逐层句式 |
-| 数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；定义明确的CSV用[显式计算](references/report-calculation.md) |
+| 派生数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；适用运算实际调用[Python计算工具](references/report-calculation.md)，结果还要对到正文比较与推荐 |
 | 材料交接、续接或版本追溯 | [最小证据](references/evidence-handoff.md)、[生成Run](references/report-run.md)、[版本操作](references/version-lifecycle.md) |
 | 明确复用或保存已确认偏好/经验 | [画像](references/report-profile.md)、[私有经验](references/report-experience.md) |
 | 专业关系需要领域知识 | [知识目录元信息](knowledge/index.md)，正文按已有授权范围读取 |

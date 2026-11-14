@@ -24,6 +24,10 @@ OPERATIONS = {
     "ratio_of_sums": {"numerator", "denominator"},
     "price_quantity_decomposition": {"base_price", "base_quantity", "current_price", "current_quantity"},
 }
+OPERATIONS_V2 = {
+    "difference_of_sums": {"minuend", "subtrahend"},
+    "person_time": {"count", "duration"},
+}
 ROUNDING = {"half_up": ROUND_HALF_UP, "half_even": ROUND_HALF_EVEN}
 CONTEXT = {"measure", "unit", "grain", "period", "population", "filters", "limitations"}
 NUMBER = re.compile(r"-?(?:0|[1-9][0-9]{0,11})(?:\.[0-9]{1,12})?\Z")
@@ -37,12 +41,18 @@ def load_json(data):
 def validate_spec(spec):
     required = {"calculation_version", "id", "operation", "source", "context", "columns", "column_units", "key_columns",
                 "decimal_places", "rounding", "missing_policy", "definition_ref"}
-    if not isinstance(spec, dict) or set(spec) != required or spec["calculation_version"] != "0.1":
+    if not isinstance(spec, dict) or spec.get("calculation_version") not in ("0.1", "0.2"):
+        raise ValueError("unsupported calculation spec shape/version")
+    version = spec["calculation_version"]
+    if version == "0.2":
+        required = required | {"parameters"}
+    if set(spec) != required:
         raise ValueError("unsupported calculation spec shape/version")
     if not text(spec["id"]) or not text(spec["definition_ref"]):
         raise ValueError("id and explicit approved definition_ref are required")
     operation = spec["operation"]
-    if not isinstance(operation, str) or operation not in OPERATIONS:
+    operations = OPERATIONS if version == "0.1" else OPERATIONS_V2
+    if not isinstance(operation, str) or operation not in operations:
         raise ValueError("unsupported operation; arbitrary expressions are not accepted")
     source = spec["source"]
     if not isinstance(source, dict) or set(source) != {"id", "revision", "ref", "sha256"}:
@@ -53,7 +63,7 @@ def validate_spec(spec):
     if not isinstance(spec["context"], dict) or set(spec["context"]) != CONTEXT or not all(text(v) for v in spec["context"].values()):
         raise ValueError("context requires measure/unit/grain/period/population/filters/limitations")
     columns = spec["columns"]
-    if not isinstance(columns, dict) or set(columns) != OPERATIONS[operation] or not all(text(v) for v in columns.values()):
+    if not isinstance(columns, dict) or set(columns) != operations[operation] or not all(text(v) for v in columns.values()):
         raise ValueError("columns must explicitly map this operation's roles")
     units = spec["column_units"]
     if not isinstance(units, dict) or set(units) != set(columns) or not all(text(v) for v in units.values()):
@@ -65,6 +75,29 @@ def validate_spec(spec):
         raise ValueError("decimal_places must be an integer from 0 to 8")
     if not isinstance(spec["rounding"], str) or spec["rounding"] not in ROUNDING or spec["missing_policy"] != "error":
         raise ValueError("explicit half_up/half_even rounding and missing_policy=error required")
+    if version == "0.2":
+        validate_parameters(spec)
+
+
+def validate_parameters(spec):
+    """Check declared unit relationships only, not the truth of business labels."""
+    parameters, units = spec["parameters"], spec["column_units"]
+    if not isinstance(parameters, dict):
+        raise ValueError("parameters must be an operation-specific object")
+    if spec["operation"] == "difference_of_sums":
+        if (set(parameters) != {"minuend_label", "subtrahend_label"}
+                or not all(text(v) for v in parameters.values())
+                or parameters["minuend_label"].strip() == parameters["subtrahend_label"].strip()):
+            raise ValueError("difference requires distinct nonempty minuend_label/subtrahend_label")
+        if not units["minuend"] == units["subtrahend"] == spec["context"]["unit"]:
+            raise ValueError("difference input and result units must match exactly; no automatic conversion")
+    else:
+        if (set(parameters) != {"population_basis"}
+                or parameters["population_basis"] not in ("capacity", "planned_attendance", "attendance")):
+            raise ValueError("person_time requires population_basis: capacity/planned_attendance/attendance")
+        if (units["count"] != "person_occurrence" or units["duration"] not in ("half_day", "day")
+                or spec["context"]["unit"] not in ("person_half_day", "person_day")):
+            raise ValueError("person_time requires person_occurrence, half_day/day, and person_half_day/person_day units")
 
 
 def read_rows(data, spec):
@@ -92,6 +125,11 @@ def read_rows(data, spec):
             if not NUMBER.fullmatch(value):
                 raise ValueError(f"row {number}: missing/invalid/out-of-range decimal in {role}")
             values[role] = Decimal(value)
+        if spec["operation"] == "person_time":
+            if values["count"] < 0 or values["count"] != values["count"].to_integral_value():
+                raise ValueError(f"row {number}: count must be a nonnegative integer of person occurrences")
+            if values["duration"] < 0:
+                raise ValueError(f"row {number}: duration must be nonnegative")
         rows.append(values)
     if not rows:
         raise ValueError("CSV has no observations; empty is not zero")
@@ -106,6 +144,7 @@ def compute(rows, spec):
         ctx.rounding = ROUNDING[spec["rounding"]]
         total = lambda role: sum((r[role] for r in rows), Decimal(0))
         operation = spec["operation"]
+        extra, value_units = {}, {}
         if operation == "sum":
             values = {"total": total("value")}
             formula = "total = sum(value)"
@@ -118,6 +157,25 @@ def compute(rows, spec):
                 raise ValueError("aggregate denominator is zero; ratio is undefined")
             values = {"numerator": numerator, "denominator": denominator, "ratio": numerator / denominator}
             formula = "ratio = sum(numerator) / sum(denominator); not mean of row ratios"
+        elif operation == "difference_of_sums":
+            minuend, subtrahend = total("minuend"), total("subtrahend")
+            difference = minuend - subtrahend
+            values = {"minuend_total": minuend, "subtrahend_total": subtrahend,
+                      "difference": difference, "absolute_difference": abs(difference)}
+            value_units = {name: spec["context"]["unit"] for name in values}
+            extra["comparison"] = {**spec["parameters"],
+                                   "relation": "minuend_greater" if difference > 0 else "minuend_less" if difference < 0 else "equal",
+                                   "basis": "unrounded totals"}
+            formula = "difference = sum(minuend) - sum(subtrahend); signed, with named operands"
+        elif operation == "person_time":
+            factor = Decimal("0.5") if spec["column_units"]["duration"] == "half_day" else Decimal(1)
+            days = sum((r["count"] * r["duration"] * factor for r in rows), Decimal(0))
+            values = {"person_days": days, "person_half_days": days / Decimal("0.5")}
+            value_units = {"person_days": "person_day", "person_half_days": "person_half_day"}
+            extra["conversion"] = {"duration_unit": spec["column_units"]["duration"],
+                                   "days_per_duration_unit": format(factor, "f"),
+                                   "half_days_per_day": "2"}
+            formula = "person_days = sum(count * duration * days_per_duration_unit); person_half_days = person_days / 0.5"
         else:
             base = sum((r["base_price"] * r["base_quantity"] for r in rows), Decimal(0))
             current = sum((r["current_price"] * r["current_quantity"] for r in rows), Decimal(0))
@@ -131,11 +189,12 @@ def compute(rows, spec):
                 raise ValueError("decomposition did not reconcile")
             formula = "delta=sum((p1-p0)*q0)+sum(p0*(q1-q0))+sum((p1-p0)*(q1-q0)); interaction remains separate"
         quantum = Decimal(1).scaleb(-spec["decimal_places"])
-        return {"values": {k: {"unrounded": format(v, "f"), "rounded": format(v.quantize(quantum), "f")}
+        return {"values": {k: {"unrounded": format(v, "f"), "rounded": format(v.quantize(quantum), "f"),
+                               **({"unit": value_units[k]} if value_units else {})}
                            for k, v in values.items()}, "formula": formula,
                 "rounding_layer": "each final aggregate only; no row rounding",
                 "arithmetic_precision": 80, "ratio_precision_note": "ratio may be repeating and is computed to 80 significant digits",
-                "row_count": len(rows)}
+                "row_count": len(rows), **extra}
 
 
 def run(spec_path, directory):
@@ -153,10 +212,12 @@ def run(spec_path, directory):
     if sha(data) != spec["source"]["sha256"]:
         raise ValueError("source bytes differ from declared version hash; revise spec explicitly")
     rows = read_rows(data, spec)
-    result = {"calculation_version": "0.1", "id": spec["id"], "operation": spec["operation"],
+    result = {"calculation_version": spec["calculation_version"], "id": spec["id"], "operation": spec["operation"],
               "source": {"id": spec["source"]["id"], "revision": spec["source"]["revision"], "sha256": sha(data)},
               "context": spec["context"], "column_units": spec["column_units"],
               "decimal_places": spec["decimal_places"], "rounding": spec["rounding"], **compute(rows, spec)}
+    if spec["calculation_version"] == "0.2":
+        result["parameters"] = spec["parameters"]
     directory = require_external_write(directory, (PACKAGE,))
     if directory.is_relative_to(PACKAGE) or os.path.lexists(directory) or not directory.parent.is_dir():
         raise ValueError("output must be a new external directory with an existing parent")
@@ -165,7 +226,7 @@ def run(spec_path, directory):
     output = encoded(result)
     replay = {**spec, "source": {**spec["source"], "ref": "input.csv"}}
     replay_bytes = encoded(replay)
-    receipt = {"calculation_version": "0.1", "id": spec["id"], "execution_status": "completed",
+    receipt = {"calculation_version": spec["calculation_version"], "id": spec["id"], "execution_status": "completed",
                "scope": "declared_formula_and_captured_data_only", "definition_ref": spec["definition_ref"],
                "source": result["source"], "spec_sha256": sha(raw), "result_sha256": sha(output),
                "snapshot_ref": "input.csv", "spec_ref": "spec.json", "result_ref": "result.json",
@@ -177,6 +238,9 @@ def run(spec_path, directory):
                           "decomposition_reconciled": "pass" if spec["operation"] == "price_quantity_decomposition" else "not_applicable"},
                "independent_review": "not_run", "source_authenticity": "not_assessed",
                "caveat": "Algebraic reconciliation is not causal attribution. Business definitions, units and completeness require review. No Run acceptance or graph verification is performed."}
+    if spec["calculation_version"] == "0.2":
+        receipt["checks"]["declared_unit_relationship"] = "pass"
+        receipt["checks"]["person_time_nonnegative_integer_count"] = "pass" if spec["operation"] == "person_time" else "not_applicable"
     directory.mkdir()
     for name, contents in (("spec.json", raw), ("replay-spec.json", replay_bytes), ("input.csv", data), ("result.json", output), ("calculation-receipt.json", encoded(receipt))):
         with (directory / name).open("xb") as handle:

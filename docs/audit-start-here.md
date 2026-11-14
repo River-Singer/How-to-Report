@@ -1,4 +1,4 @@
-# 0.9.0 独立审查入口
+# 0.9.1 独立审查入口
 
 当前检查内容思考、Markdown成稿、真实委派契约和保留的可靠性工具。HTML、SVG、PPTX和视觉验收不属于当前范围，旧证据保留原版本身份。
 
@@ -6,9 +6,9 @@
 
 检查[委派](../skills/report-audit/references/agent-delegation.md)、[挑战](../skills/report-audit/references/directed-challenge.md)与[职责](../skills/report-audit/references/stakeholder-roles.md)接入：新完整任务不能只凭头衔推定权限；挑战者只能返回问题，主Agent自己分析和求助；审计意见仍可包括依据、影响与修法。纯问句、文件存在或Run字段均不证明真实执行。
 
-核专业方法的输入、分析动作和能支持到哪里，而不是只出现名词。核事实、贡献、条件、版本、替代选项和必要解释；主Agent先用已有材料，真正必要缺件不能降成可选深化。反证或部分回复应改变对应判断，拒补不补造事实。
+核专业方法的输入、分析动作和能支持到哪里，而不是只出现名词。核事实、贡献、条件、版本、替代选项和必要解释；数值既看真实计算证据，也看比较方向与最终推荐是否一致；主Agent先用已有材料，真正必要缺件不能降成可选深化。反证或部分回复应改变对应判断，拒补不补造事实。
 
-[当前18组41轮输入](../evaluation/content-0.9.0/README.md)保留13类回归并补5组专业探针。只按当前轮暴露来源，操作者参考和未来材料不可交给生成者。[本版工程记录](../verification/0.9.0/README.md)与[历史0.8.4记录](../verification/0.8.4/README.md)分开，模型效果尚未验证。
+[当前18组41轮输入](../evaluation/content-0.9.1/README.md)沿用上一版全部18场景，用同一事实和请求复核计算、来源、更新和正文价值。只按当前轮暴露来源，操作者参考和未来材料不可交给生成者。[本版工程记录](../verification/0.9.1/README.md)与[历史0.8.4记录](../verification/0.8.4/README.md)分开，模型效果尚未验证。
 
 ```text
 python -B tools/package_skills.py check

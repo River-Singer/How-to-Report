@@ -1,0 +1,38 @@
+{
+  "calculation_version": "0.2",
+  "id": "synthetic-person-time",
+  "operation": "person_time",
+  "source": {
+    "id": "synthetic-person-time",
+    "revision": 1,
+    "ref": "synthetic-person-time.csv",
+    "sha256": "9bea22c3d6a1c578dcaac6cddf216523058db419f64dbd40401a8d0c75ca45a7"
+  },
+  "context": {
+    "measure": "Synthetic person-time",
+    "unit": "person_day",
+    "grain": "cohort",
+    "period": "synthetic scenario",
+    "population": "all fictional rows",
+    "filters": "none; all rows included",
+    "limitations": "Full seat capacity only, not actual attendance or unique persons; no hours-per-day assumption."
+  },
+  "columns": {
+    "count": "seats",
+    "duration": "duration"
+  },
+  "column_units": {
+    "count": "person_occurrence",
+    "duration": "half_day"
+  },
+  "key_columns": [
+    "cohort"
+  ],
+  "decimal_places": 2,
+  "rounding": "half_even",
+  "missing_policy": "error",
+  "definition_ref": "README.md: synthetic 0.2 example definition; original data is this CSV",
+  "parameters": {
+    "population_basis": "capacity"
+  }
+}

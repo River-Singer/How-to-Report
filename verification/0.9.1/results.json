@@ -1,0 +1,97 @@
+{
+  "date_utc": "2026-11-14T03:16:00.641012+00:00",
+  "package_version": "0.9.1",
+  "contract_version": "0.1",
+  "packages": [
+    {
+      "skill": "how-to-report",
+      "version": "0.9.1",
+      "contract_version": "0.1",
+      "manifest_sha256": "6c1931820a51a967661051af429a2682a2ac81468fc3882e24e9755b73550fb3",
+      "payload_files": 175
+    },
+    {
+      "skill": "report-audit",
+      "version": "0.9.1",
+      "contract_version": "0.1",
+      "manifest_sha256": "ab3bf816a5d72480ad67ee8fcf7813fa61c67ecf885a69cf324bb5ba9c91d1b3",
+      "payload_files": 158
+    }
+  ],
+  "checks": {
+    "build": "pass",
+    "package_check": "pass",
+    "offline_sources": {
+      "valid": true,
+      "network_used": false,
+      "representations": 77,
+      "source_archive_and_record_changes": 0
+    },
+    "unit_tests": {
+      "run": 252,
+      "passed": 251,
+      "skipped": 1,
+      "failed": 0,
+      "seconds": 75.501,
+      "skip_reason": "Windows symbolic link privilege unavailable",
+      "scope": "full integrated suite before final illustrative-number-only edit; calculation implementation unchanged afterwards"
+    },
+    "temporary_handoff_tests": {
+      "run": 24,
+      "passed": 24,
+      "seconds": 13.484,
+      "model_calls": 0
+    },
+    "quick_validate": {
+      ".": "pass",
+      "skills/how-to-report": "pass",
+      "skills/report-audit": "pass"
+    },
+    "current_evaluation": {
+      "cases": 18,
+      "turns": 41,
+      "valid": true
+    },
+    "historical_evaluation_root": {
+      "cases": 67,
+      "valid": true
+    },
+    "all_versioned_content_datasets": {
+      "versions": 15,
+      "valid": true
+    },
+    "current_document_links": {
+      "files": 9,
+      "local_links": 65,
+      "errors": 0
+    },
+    "python_ast": "pass",
+    "historical_protection": {
+      "files": 9907,
+      "changed": 0
+    }
+  },
+  "post_review": {
+    "change": "Isolated synthetic person-time teaching value changed from80 to60 to avoid matching evaluation facts; no arithmetic implementation change",
+    "build": "pass",
+    "package_check": "pass",
+    "python_ast": "pass",
+    "current_document_links": "pass",
+    "temporary_handoff_extension": {
+      "existing_test_extended": 1,
+      "passed": 1,
+      "seconds": 1.426,
+      "scope": "read-only integrity accepts new calculation and agent-evidence files under outputs; still24 total tests"
+    }
+  },
+  "independent_review": "pass",
+  "user_batch": {
+    "groups": 18,
+    "turns": 41,
+    "status": "frozen_integrity_pass",
+    "manifest_sha256": "e495b4b256a467a3844d277552ef524b754de8f86e1d201a866916ee9425a62b",
+    "outputs_empty": true
+  },
+  "model_execution": false,
+  "semantic_quality": "not_assessed_by_engineering_checks"
+}

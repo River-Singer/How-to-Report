@@ -1,0 +1,39 @@
+{
+  "calculation_version": "0.2",
+  "id": "synthetic-comparison",
+  "operation": "difference_of_sums",
+  "source": {
+    "id": "synthetic-comparison",
+    "revision": 1,
+    "ref": "synthetic-comparison.csv",
+    "sha256": "477d7f58aae6e861f4f9cc96732cb1c92d45c996d20d9af85ac0d1fc66cf81de"
+  },
+  "context": {
+    "measure": "Synthetic comparison",
+    "unit": "CNY",
+    "grain": "component",
+    "period": "synthetic scenario",
+    "population": "all fictional rows",
+    "filters": "none; all rows included",
+    "limitations": "Two fictional full budget alternatives; same included items; does not establish effectiveness."
+  },
+  "columns": {
+    "minuend": "option_b",
+    "subtrahend": "option_a"
+  },
+  "column_units": {
+    "minuend": "CNY",
+    "subtrahend": "CNY"
+  },
+  "key_columns": [
+    "component"
+  ],
+  "decimal_places": 2,
+  "rounding": "half_even",
+  "missing_policy": "error",
+  "definition_ref": "README.md: synthetic 0.2 example definition; original data is this CSV",
+  "parameters": {
+    "minuend_label": "合成方案乙",
+    "subtrahend_label": "合成方案甲"
+  }
+}
