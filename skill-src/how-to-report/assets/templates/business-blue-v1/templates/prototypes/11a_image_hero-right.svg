@@ -1,0 +1,41 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="image-hero-right" data-pptx-layout-name="image-hero-right">
+  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <ns0:rect x="616.3199999999999" y="120" width="615.6800000000001" height="462" fill="#EFEFEF" rx="0" id="atom-3" data-pptx-layer="layout" />
+  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
+      <ns0:tspan x="48" y="55.68">{{页面标题}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="48" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="379.52000000000004" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-images-0-caption" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="616.32 594 615.68 50">
+    <ns0:text id="text-images-0-caption" data-pptx-carrier="true" x="616.3199999999999" y="608.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="616.3199999999999" y="608.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-sections-0-title" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="48 144 509.12 70">
+    <ns0:text id="text-sections-0-title" data-pptx-carrier="true" x="48" y="168.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="48" y="168.64">{{案例}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-sections-0-body" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="48 230 509.12 398">
+    <ns0:text id="text-sections-0-body" data-pptx-carrier="true" x="48" y="251.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="48" y="251.12">{{案例说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+</ns0:svg>

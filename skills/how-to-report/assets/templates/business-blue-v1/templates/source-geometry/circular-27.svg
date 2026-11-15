@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1280" height="720" viewBox="0 0 1280 720" font-family="&quot;HarmonyOS Sans SC Medium&quot;, &quot;Alibaba PuHuiTi 2.0 55&quot;, sans-serif">
+  <defs>
+    <filter id="fx1" x="-25%" y="-25%" width="150%" height="150%">
+      <feDropShadow dx="0" dy="33.33333333" stdDeviation="20.66666667" flood-color="#000000" flood-opacity="0.1" />
+    </filter>
+    <linearGradient id="ggrad1" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0" stop-color="#055CF9" data-htr-stop-color="accent2" />
+      <stop offset="0.5" stop-color="#055CF9" stop-opacity="0.49804" data-htr-stop-color="accent2" />
+      <stop offset="1" stop-color="#055CF9" stop-opacity="0" data-htr-stop-color="accent2" />
+    </linearGradient>
+    <linearGradient id="mstrokegrad1" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0" stop-color="#004BD3" data-htr-stop-color="accent1" />
+      <stop offset="0.5" stop-color="#004BD3" stop-opacity="0.49804" data-htr-stop-color="accent1" />
+      <stop offset="1" stop-color="#004BD3" stop-opacity="0" data-htr-stop-color="accent1" />
+    </linearGradient>
+  </defs>
+  <path d="M 849.67 406.67 C 849.67 529.83 749.83 629.67 626.67 629.67 C 503.51 629.67 403.67 529.83 403.67 406.67 C 403.67 283.51 503.51 183.67 626.67 183.67 C 749.83 183.67 849.67 283.51 849.67 406.67 Z " fill="#055CF9" stroke-width="0.66667" stroke-linecap="butt" stroke="#0044BE" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:11" data-htr-fill="accent2" data-htr-stroke="accent1" />
+  <path d="M 1161.33 407.33 C 1161.33 473.98 1107.31 528 1040.67 528 C 974.02 528 920 473.98 920 407.33 C 920 340.69 974.02 286.67 1040.67 286.67 C 1107.31 286.67 1161.33 340.69 1161.33 407.33 Z " fill="#FFFFFF" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:15" data-htr-fill="lt1" />
+  <path d="M 332.67 407.33 C 332.67 473.98 278.64 528 212 528 C 145.36 528 91.33 473.98 91.33 407.33 C 91.33 340.69 145.36 286.67 212 286.67 C 278.64 286.67 332.67 340.69 332.67 407.33 Z " fill="#D9D9D9" fill-opacity="0.5" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:16" data-htr-fill="lt2" />
+  <path d="M 332.67 407.33 C 332.67 473.98 278.64 528 212 528 C 145.36 528 91.33 473.98 91.33 407.33 C 91.33 340.69 145.36 286.67 212 286.67 C 278.64 286.67 332.67 340.69 332.67 407.33 Z " fill="#FFFFFF" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:17" data-htr-fill="lt1" />
+  <path d="M 616.89 597.4 C 553.55 618.4 397.49 630.73 279.89 512.07" fill="none" stroke-width="0.66667" stroke-linecap="butt" stroke="#055CF9" stroke-dasharray="2.00001 2.00001" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:28" data-htr-stroke="accent2" />
+  <path d="M 279.89 513.85 L 284.33 515.09 L 281.03 518.32 L 279.89 513.85 Z " fill="#055CF9" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:29" data-htr-fill="accent2" />
+  <path d="M 632.67 600.33 C 696 621.33 852.07 633.67 969.67 515" fill="none" stroke-width="0.66667" stroke-linecap="butt" stroke="#055CF9" stroke-dasharray="2.00001 2.00001" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:30" data-htr-stroke="accent2" />
+  <path d="M 970.78 513.85 L 966.33 515.09 L 969.63 518.32 L 970.78 513.85 Z " fill="#055CF9" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:31" data-htr-fill="accent2" />
+  <path d="M 764.67 486 C 764.67 562.22 702.88 624 626.67 624 C 550.45 624 488.67 562.22 488.67 486 C 488.67 409.78 550.45 348 626.67 348 C 702.88 348 764.67 409.78 764.67 486 Z " fill="#FFFFFF" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:32" data-htr-fill="lt1" />
+  <path d="M 604.8 355.33 L 626.67 385.43 L 648.53 355.33 L 604.8 355.33 Z " fill="url(#ggrad1)" stroke-width="0.66667" stroke-linecap="butt" stroke="url(#mstrokegrad1)" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:34" />
+  <path d="M 170.66 150 L 182.66 150 L 170.66 138 L 170.66 150 Z " fill="#055CF9" stroke-width="0.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:40" data-htr-fill="accent2" />
+  <path d="M 62.94 49.28 L 146.95 49.28 L 146.95 123.6 L 62.94 123.6 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:41" />
+  <path d="M 58.58 73.09 L 313.57 73.09 L 313.57 128.03 L 58.58 128.03 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:42" />
+  <path d="M 56.85 121.2 L 124.7 121.2 L 124.7 159.97 L 56.85 159.97 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:43" />
+  <path d="M 105.53 121.2 L 173.38 121.2 L 173.38 159.97 L 105.53 159.97 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:44" />
+  <path d="M 1125.63 73.52 L 1220.92 73.52 L 1220.92 99.37 L 1125.63 99.37 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:45" />
+  <path d="M 148.45 332.08 L 275.55 332.08 L 275.55 374.09 L 148.45 374.09 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:46" />
+  <path d="M 152.82 383.77 L 269.14 383.77 L 269.14 417.06 L 152.82 417.06 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:47" />
+  <path d="M 139.52 418.9 L 282.44 418.9 L 282.44 452.19 L 139.52 452.19 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:48" />
+  <path d="M 152.82 454.27 L 269.14 454.27 L 269.14 487.56 L 152.82 487.56 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:49" />
+  <path d="M 977.12 332.08 L 1104.21 332.08 L 1104.21 374.09 L 977.12 374.09 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:50" />
+  <path d="M 942.11 383.77 L 1139.22 383.77 L 1139.22 417.06 L 942.11 417.06 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:51" />
+  <path d="M 966.35 418.9 L 1114.99 418.9 L 1114.99 452.19 L 966.35 452.19 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:52" />
+  <path d="M 974.43 454.27 L 1106.91 454.27 L 1106.91 487.56 L 974.43 487.56 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:53" />
+  <path d="M 557.73 396.55 L 695.6 396.55 L 695.6 441.79 L 557.73 441.79 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:54" />
+  <path d="M 515.91 448.25 L 737.42 448.25 L 737.42 514.86 L 515.91 514.86 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:55" />
+  <path d="M 522.73 516.86 L 730.61 516.86 L 730.61 583.48 L 522.73 583.48 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:56" />
+  <path d="M 557.73 214.46 L 695.6 214.46 L 695.6 259.69 L 557.73 259.69 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:57" />
+  <path d="M 534.76 266.15 L 718.57 266.15 L 718.57 332.77 L 534.76 332.77 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:58" />
+  <path d="M 363.29 548.32 L 420.38 548.32 L 420.38 580.63 L 363.29 580.63 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:59" />
+  <path d="M 832.64 548.32 L 889.72 548.32 L 889.72 580.63 L 832.64 580.63 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:60" />
+</svg>

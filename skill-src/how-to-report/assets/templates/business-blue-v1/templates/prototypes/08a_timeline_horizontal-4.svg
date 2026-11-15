@@ -1,0 +1,90 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="timeline-horizontal-4" data-pptx-layout-name="timeline-horizontal-4">
+  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <ns0:line x1="68" y1="290" x2="1212" y2="290" stroke="#003591" stroke-width="1.67" id="atom-3" data-pptx-layer="layout" />
+  <ns0:circle cx="72.0" cy="290" r="8" fill="#003591" id="atom-4" data-pptx-layer="layout" />
+  <ns0:circle cx="368.0" cy="290" r="8" fill="#003591" id="atom-5" data-pptx-layer="layout" />
+  <ns0:circle cx="664.0" cy="290" r="8" fill="#003591" id="atom-6" data-pptx-layer="layout" />
+  <ns0:circle cx="960.0" cy="290" r="8" fill="#003591" id="atom-7" data-pptx-layer="layout" />
+  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
+      <ns0:tspan x="48" y="55.68">{{页面标题}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="48" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="379.52000000000004" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-0-time_label" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="48 206 272 66">
+    <ns0:text id="text-events-0-time_label" data-pptx-carrier="true" x="48.0" y="230.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="48.0" y="230.64">{{时间}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-0-title" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="48 330 272 86">
+    <ns0:text id="text-events-0-title" data-pptx-carrier="true" x="48.0" y="354.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="48.0" y="354.64">{{节点}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-0-body" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="48 430 272 218">
+    <ns0:text id="text-events-0-body" data-pptx-carrier="true" x="48.0" y="451.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="48.0" y="451.12">{{节点说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-1-time_label" data-pptx-placeholder="body" data-pptx-idx="7" data-pptx-bounds="344 206 272 66">
+    <ns0:text id="text-events-1-time_label" data-pptx-carrier="true" x="344.0" y="230.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="344.0" y="230.64">{{时间}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-1-title" data-pptx-placeholder="body" data-pptx-idx="8" data-pptx-bounds="344 330 272 86">
+    <ns0:text id="text-events-1-title" data-pptx-carrier="true" x="344.0" y="354.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="344.0" y="354.64">{{节点}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-1-body" data-pptx-placeholder="body" data-pptx-idx="9" data-pptx-bounds="344 430 272 218">
+    <ns0:text id="text-events-1-body" data-pptx-carrier="true" x="344.0" y="451.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="344.0" y="451.12">{{节点说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-2-time_label" data-pptx-placeholder="body" data-pptx-idx="10" data-pptx-bounds="640 206 272 66">
+    <ns0:text id="text-events-2-time_label" data-pptx-carrier="true" x="640.0" y="230.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="640.0" y="230.64">{{时间}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-2-title" data-pptx-placeholder="body" data-pptx-idx="11" data-pptx-bounds="640 330 272 86">
+    <ns0:text id="text-events-2-title" data-pptx-carrier="true" x="640.0" y="354.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="640.0" y="354.64">{{节点}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-2-body" data-pptx-placeholder="body" data-pptx-idx="12" data-pptx-bounds="640 430 272 218">
+    <ns0:text id="text-events-2-body" data-pptx-carrier="true" x="640.0" y="451.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="640.0" y="451.12">{{节点说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-3-time_label" data-pptx-placeholder="body" data-pptx-idx="13" data-pptx-bounds="936 206 272 66">
+    <ns0:text id="text-events-3-time_label" data-pptx-carrier="true" x="936.0" y="230.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="936.0" y="230.64">{{时间}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-3-title" data-pptx-placeholder="body" data-pptx-idx="14" data-pptx-bounds="936 330 272 86">
+    <ns0:text id="text-events-3-title" data-pptx-carrier="true" x="936.0" y="354.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="936.0" y="354.64">{{节点}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-events-3-body" data-pptx-placeholder="body" data-pptx-idx="15" data-pptx-bounds="936 430 272 218">
+    <ns0:text id="text-events-3-body" data-pptx-carrier="true" x="936.0" y="451.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="936.0" y="451.12">{{节点说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+</ns0:svg>

@@ -1,0 +1,302 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="source-spatial-28" data-pptx-layout-name="source-spatial-28">
+  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <ns0:defs>
+    <ns0:linearGradient id="bggrad1" x1="0.5" y1="0" x2="0.5" y2="1">
+      <ns0:stop offset="0" stop-color="#80AACD" stop-opacity="0.45" data-htr-stop-color="accent3" />
+      <ns0:stop offset="1" stop-color="#5385C5" stop-opacity="0.45" data-htr-stop-color="accent2" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="ggrad2" x1="0.5" y1="0" x2="0.5" y2="1">
+      <ns0:stop offset="0" stop-color="#5385C5" stop-opacity="0" data-htr-stop-color="accent2" />
+      <ns0:stop offset="1" stop-color="#5385C5" stop-opacity="0.13603" data-htr-stop-color="accent2" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="mstrokegrad1" x1="0.5" y1="0" x2="0.5" y2="1">
+      <ns0:stop offset="0" stop-color="#5385C5" stop-opacity="0" data-htr-stop-color="accent2" />
+      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </ns0:linearGradient>
+    <ns0:filter id="fx1" x="-25%" y="-25%" width="150%" height="150%">
+      <ns0:feDropShadow dx="0" dy="13.33333333" stdDeviation="13.33333333" flood-color="#0B1C45" flood-opacity="0.2" />
+    </ns0:filter>
+    <ns0:linearGradient id="ggrad4" x1="0.5" y1="0" x2="0.5" y2="1">
+      <ns0:stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="ggrad5" x1="0" y1="0" x2="1" y2="1">
+      <ns0:stop offset="0" stop-color="#383535" stop-opacity="0.1" data-htr-stop-color="dk1" />
+      <ns0:stop offset="1" stop-color="#383535" stop-opacity="0.2" data-htr-stop-color="dk1" />
+    </ns0:linearGradient>
+    <ns0:linearGradient id="ggrad6" x1="0" y1="0" x2="1" y2="1">
+      <ns0:stop offset="0" stop-color="#383535" data-htr-stop-color="dk1" />
+      <ns0:stop offset="1" stop-color="#383535" data-htr-stop-color="dk1" />
+    </ns0:linearGradient>
+    <ns0:filter id="fx3" x="-25%" y="-25%" width="150%" height="150%">
+      <ns0:feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000000" flood-opacity="0.2" />
+    </ns0:filter>
+    <ns0:linearGradient id="mstrokegrad6" x1="0.5" y1="0" x2="0.5" y2="1">
+      <ns0:stop offset="0" stop-color="#EFEFEF" stop-opacity="0" data-htr-stop-color="lt2" />
+      <ns0:stop offset="0.28" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </ns0:linearGradient>
+    <ns0:marker id="marrow7" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="1.5" markerHeight="1.5" orient="auto" markerUnits="strokeWidth">
+      <ns0:circle cx="5" cy="5" r="4" fill="#5385C5" data-htr-fill="accent2" />
+    </ns0:marker>
+    <ns0:linearGradient id="ggrad13" x1="0.5" y1="1" x2="0.5" y2="0">
+      <ns0:stop offset="0" stop-color="#5385C5" stop-opacity="0" data-htr-stop-color="accent2" />
+      <ns0:stop offset="0.21" stop-color="#5385C5" data-htr-stop-color="accent2" />
+      <ns0:stop offset="1" stop-color="#80AACD" data-htr-stop-color="accent3" />
+    </ns0:linearGradient>
+    <ns0:marker id="marrow7-accent2" viewBox="0 0 10 10" refX="10" refY="5" markerWidth="1.5" markerHeight="1.5" orient="auto" markerUnits="strokeWidth">
+      <ns0:circle cx="5" cy="5" r="4" fill="#5385C5" data-htr-fill="accent2" />
+    </ns0:marker>
+  </ns0:defs>
+  <ns0:path d="M 458.6 618.84 C 458.6 595.970773 540.463116 577.431251 641.45 577.43 C 689.947487 577.43 736.458644 581.792827 770.751546 589.558708 C 805.044448 597.32459 824.31 607.857385 824.31 618.84 C 824.285616 641.706206 742.423547 660.240001 641.45 660.24 C 540.480358 660.23875 458.624383 641.705322 458.6 618.84 Z " fill="url(#ggrad2)" stroke-width="0.66667" stroke-linecap="butt" stroke="url(#mstrokegrad1)" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:21" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-4" data-pptx-layer="layout" />
+  <ns0:path d="M 81.56 59.83 L 508.22 59.83 L 508.22 109.92 L 81.56 109.92 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:5" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-5" data-pptx-layer="layout" />
+  <ns0:path d="M 570.55 243.13 C 570.55 222.920503 578.578191 203.538735 592.868463 189.248463 C 607.158735 174.958191 626.540503 166.93 646.75 166.93 C 688.830193 166.935522 722.94 201.049807 722.94 243.13 C 722.94 285.210194 688.830192 319.324478 646.749999 319.33 C 626.540503 319.33 607.158735 311.301809 592.868463 297.011537 C 578.578191 282.721265 570.55 263.339497 570.55 243.13 Z " fill="url(#bggrad1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:7" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-6" data-pptx-layer="layout" />
+  <ns0:path d="M 586.88 241.86 C 586.88 225.982408 593.188033 210.755267 604.416123 199.529052 C 615.644214 188.302837 630.872408 181.997348 646.75 182 C 662.625859 182 677.851484 188.30666 689.077412 199.532588 C 700.30334 210.758516 706.61 225.984141 706.61 241.86 C 706.612652 257.737592 700.307163 272.965786 689.080948 284.193877 C 677.854733 295.421967 662.627592 301.73 646.75 301.73 C 630.870676 301.732653 615.640965 295.425791 604.412587 284.197413 C 593.184209 272.969035 586.877347 257.739324 586.88 241.86 Z " fill="url(#ggrad4)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:8" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-7" data-pptx-layer="layout" />
+  <ns0:path d="M 420.68 243.13 C 420.685522 208.914342 448.424342 181.18 482.64 181.18 C 516.851753 181.185521 544.584479 208.918247 544.59 243.13 C 544.590001 277.345658 516.855658 305.084478 482.64 305.09 C 448.420437 305.09 420.68 277.349563 420.68 243.13 Z " fill="url(#ggrad5)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:10" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-8" data-pptx-layer="layout" />
+  <ns0:path d="M 433.96 242.1 C 433.96 229.189261 439.088771 216.807313 448.218042 207.678042 C 457.347313 198.548771 469.729261 193.42 482.64 193.42 C 509.521316 193.425522 531.310001 215.218683 531.31 242.1 C 531.31 268.981317 509.521316 290.774478 482.64 290.78 C 455.754778 290.78 433.96 268.985222 433.96 242.1 Z " fill="url(#ggrad6)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:11" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-9" data-pptx-layer="layout" />
+  <ns0:path d="M 748.91 243.13 C 748.915521 208.918247 776.648247 181.185521 810.86 181.18 C 845.075658 181.18 872.814478 208.914342 872.82 243.13 C 872.82 259.562814 866.29209 275.322582 854.672336 286.942336 C 843.052582 298.56209 827.292814 305.09 810.86 305.09 C 776.644342 305.084478 748.91 277.345658 748.91 243.13 Z " fill="url(#ggrad5)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:13" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-10" data-pptx-layer="layout" />
+  <ns0:path d="M 762.18 242.1 C 762.18 229.189261 767.308771 216.807313 776.438042 207.678042 C 785.567313 198.548771 797.949261 193.42 810.86 193.42 C 837.745222 193.42 859.54 215.214778 859.54 242.1 C 859.54 268.985222 837.745222 290.78 810.86 290.78 C 797.949261 290.78 785.567313 285.651229 776.438042 276.521958 C 767.308771 267.392687 762.18 255.010739 762.18 242.1 Z " fill="url(#ggrad6)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:14" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-11" data-pptx-layer="layout" />
+  <ns0:path d="M 226.07 360.67 C 226.12539 337.803794 412.081128 319.269999 641.45 319.27 C 870.822777 319.269449 1056.784609 337.803405 1056.84 360.67 C 1056.84 371.652788 1013.075503 382.185734 935.174479 389.951644 C 857.273455 397.717554 751.617358 402.080264 641.45 402.08 C 412.041961 402.08 226.07 383.540111 226.07 360.67 Z " fill="url(#ggrad2)" stroke-width="0.66667" stroke-linecap="butt" stroke="url(#mstrokegrad1)" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-12" data-pptx-layer="layout" />
+  <ns0:path d="M 372.59 488.5 C 372.59 477.517385 386.148372 466.98459 410.282428 459.218708 C 434.416485 451.452827 467.14929 447.09 501.28 447.09 C 535.412443 447.089147 568.147817 451.451597 592.284036 459.21757 C 616.420256 466.983544 629.98 477.516828 629.98 488.5 C 629.962839 511.367463 572.345295 529.901778 501.28 529.9 C 430.21861 529.900001 372.60716 511.366206 372.59 488.5 Z " fill="url(#ggrad2)" stroke-width="0.66667" stroke-linecap="butt" stroke="url(#mstrokegrad1)" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:17" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-13" data-pptx-layer="layout" />
+  <ns0:path d="M 652.93 488.5 C 652.93 477.517385 666.488372 466.98459 690.622428 459.218708 C 714.756485 451.452827 747.48929 447.09 781.62 447.09 C 815.752443 447.089147 848.487817 451.451597 872.624036 459.21757 C 896.760256 466.983544 910.32 477.516828 910.32 488.5 C 910.302839 511.367463 852.685295 529.901778 781.62 529.9 C 710.55861 529.900001 652.94716 511.366206 652.93 488.5 Z " fill="url(#ggrad2)" stroke-width="0.66667" stroke-linecap="butt" stroke="url(#mstrokegrad1)" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:18" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-14" data-pptx-layer="layout" />
+  <ns0:path d="M 444.55 610.18 C 444.55 587.309889 530.959043 568.77 637.55 568.77 C 744.140957 568.77 830.55 587.309889 830.55 610.18 C 830.524264 633.046206 744.122758 651.580001 637.55 651.58 C 530.977242 651.580001 444.575736 633.046206 444.55 610.18 Z " fill="url(#ggrad2)" stroke-width="0.66667" stroke-linecap="butt" stroke="url(#mstrokegrad1)" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:20" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-15" data-pptx-layer="layout" />
+  <ns0:path d="M 428.97 216.85 L 536.3 216.85 L 536.3 245.94 L 428.97 245.94 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:26" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-16" data-pptx-layer="layout" />
+  <ns0:path d="M 404.57 235.34 L 560.7 235.34 L 560.7 263.48 L 404.57 263.48 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:27" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-17" data-pptx-layer="layout" />
+  <ns0:path d="M 593.09 216.85 L 700.41 216.85 L 700.41 245.94 L 593.09 245.94 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:28" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-18" data-pptx-layer="layout" />
+  <ns0:path d="M 568.69 235.34 L 724.81 235.34 L 724.81 263.38 L 568.69 263.38 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:29" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-19" data-pptx-layer="layout" />
+  <ns0:path d="M 757.2 216.85 L 864.52 216.85 L 864.52 245.94 L 757.2 245.94 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:30" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-20" data-pptx-layer="layout" />
+  <ns0:path d="M 732.8 235.34 L 888.92 235.34 L 888.92 263.48 L 732.8 263.48 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:31" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-21" data-pptx-layer="layout" />
+  <ns0:path d="M 992.35 257.22 L 1099.67 257.22 L 1099.67 286.3 L 992.35 286.3 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:32" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-22" data-pptx-layer="layout" />
+  <ns0:path d="M 992.35 275.7 L 1225.26 275.7 L 1225.26 303.84 L 992.35 303.84 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:33" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-23" data-pptx-layer="layout" />
+  <ns0:path d="M 1057.03 304.62 L 1164.35 304.62 L 1164.35 333.7 L 1057.03 333.7 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:34" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-24" data-pptx-layer="layout" />
+  <ns0:path d="M 1057.03 323.1 L 1213.16 323.1 L 1213.16 351.24 L 1057.03 351.24 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:35" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-25" data-pptx-layer="layout" />
+  <ns0:path d="M 226.07 327.15 C 226.07 304.279889 412.041961 285.74 641.45 285.74 C 751.617358 285.739736 857.273456 290.102446 935.174479 297.868356 C 1013.075503 305.634266 1056.84 316.167212 1056.84 327.15 C 1056.84 338.132788 1013.075503 348.665734 935.174479 356.431644 C 857.273455 364.197554 751.617358 368.560264 641.45 368.56 C 531.284374 368.56 425.630846 364.197173 347.731985 356.431292 C 269.833124 348.66541 226.07 338.132615 226.07 327.15 Z " fill="none" stroke-width="1.33333" stroke-linecap="butt" stroke="url(#mstrokegrad6)" stroke-dasharray="4 4" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:36" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-26" data-pptx-layer="layout" />
+  <ns0:path d="M 847.05 327.86 L 954.38 327.86 L 954.38 356.95 L 847.05 356.95 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:37" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-27" data-pptx-layer="layout" />
+  <ns0:path d="M 847.05 346.35 L 1003.18 346.35 L 1003.18 374.49 L 847.05 374.49 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:38" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-28" data-pptx-layer="layout" />
+  <ns0:path d="M 682.15 336.26 L 789.47 336.26 L 789.47 365.34 L 682.15 365.34 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:39" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-29" data-pptx-layer="layout" />
+  <ns0:path d="M 682.15 354.74 L 852.33 354.74 L 852.33 382.79 L 682.15 382.79 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:40" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-30" data-pptx-layer="layout" />
+  <ns0:path d="M 451.8 341.06 L 559.12 341.06 L 559.12 370.14 L 451.8 370.14 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:41" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-31" data-pptx-layer="layout" />
+  <ns0:path d="M 403 359.55 L 559.12 359.55 L 559.12 387.69 L 403 387.69 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:42" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-32" data-pptx-layer="layout" />
+  <ns0:path d="M 280.14 321.94 L 387.47 321.94 L 387.47 351.02 L 280.14 351.02 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:43" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-33" data-pptx-layer="layout" />
+  <ns0:path d="M 231.34 340.42 L 387.47 340.42 L 387.47 368.56 L 231.34 368.56 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:44" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-34" data-pptx-layer="layout" />
+  <ns0:path d="M 139.04 303.28 L 246.36 303.28 L 246.36 332.37 L 139.04 332.37 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:45" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-35" data-pptx-layer="layout" />
+  <ns0:path d="M 90.24 321.77 L 246.36 321.77 L 246.36 349.91 L 90.24 349.91 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:46" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-36" data-pptx-layer="layout" />
+  <ns0:path d="M 230.58 254.3 L 337.9 254.3 L 337.9 283.38 L 230.58 283.38 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:47" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-37" data-pptx-layer="layout" />
+  <ns0:path d="M 181.77 272.78 L 337.9 272.78 L 337.9 300.92 L 181.77 300.92 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:48" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-38" data-pptx-layer="layout" />
+  <ns0:path d="M 445.51 448.08 L 552.84 448.08 L 552.84 477.16 L 445.51 477.16 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:49" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-39" data-pptx-layer="layout" />
+  <ns0:path d="M 405.26 466.56 L 593.09 466.56 L 593.09 494.7 L 405.26 494.7 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:50" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-40" data-pptx-layer="layout" />
+  <ns0:path d="M 732.37 448.08 L 839.69 448.08 L 839.69 477.16 L 732.37 477.16 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:51" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-41" data-pptx-layer="layout" />
+  <ns0:path d="M 707.97 466.56 L 864.1 466.56 L 864.1 494.7 L 707.97 494.7 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:52" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-42" data-pptx-layer="layout" />
+  <ns0:path d="M 587.79 551.64 L 695.12 551.64 L 695.12 580.72 L 587.79 580.72 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:53" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-43" data-pptx-layer="layout" />
+  <ns0:path d="M 563.39 570.12 L 719.52 570.12 L 719.52 598.26 L 563.39 598.26 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:54" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-44" data-pptx-layer="layout" />
+  <ns0:path d="M 563.39 600.88 L 719.52 600.88 L 719.52 629.96 L 563.39 629.96 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:55" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-45" data-pptx-layer="layout" />
+  <ns0:path d="M 519.19 619.36 L 763.72 619.36 L 763.72 647.5 L 519.19 647.5 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:56" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-46" data-pptx-layer="layout" />
+  <ns0:path d="M 411.87 574.63 L 519.19 574.63 L 519.19 603.71 L 411.87 603.71 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:57" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-47" data-pptx-layer="layout" />
+  <ns0:path d="M 334.41 593.12 L 519.19 593.12 L 519.19 621.16 L 334.41 621.16 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:58" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-48" data-pptx-layer="layout" />
+  <ns0:path d="M 767.98 570.05 L 875.31 570.05 L 875.31 599.13 L 767.98 599.13 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:59" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-49" data-pptx-layer="layout" />
+  <ns0:path d="M 767.98 588.53 L 924.11 588.53 L 924.11 616.57 L 767.98 616.57 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:60" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-50" data-pptx-layer="layout" />
+  <ns0:path d="M 906.09 293.85 L 929.12 267.4" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:62" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-51" data-pptx-layer="layout" />
+  <ns0:path d="M 973.91 301.98 L 996.94 275.53" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:64" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-52" data-pptx-layer="layout" />
+  <ns0:path d="M 1032.63 340.42 L 1055.66 313.97" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:65" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-53" data-pptx-layer="layout" />
+  <ns0:path d="M 828.18 365.88 L 851.21 339.43" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:66" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-54" data-pptx-layer="layout" />
+  <ns0:path d="M 659.02 370.12 L 682.05 343.67" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:67" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-55" data-pptx-layer="layout" />
+  <ns0:path d="M 584.23 370.12 L 561.21 343.67" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:68" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-56" data-pptx-layer="layout" />
+  <ns0:path d="M 407.23 360.92 L 384.2 334.47" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:69" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-57" data-pptx-layer="layout" />
+  <ns0:path d="M 265.24 346.15 L 242.21 319.7" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:70" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-58" data-pptx-layer="layout" />
+  <ns0:path d="M 360.07 294.01 L 337.04 267.56" stroke-width="0.66667" stroke-linecap="butt" stroke="#5385C5" stroke-dasharray="4 4" stroke-linejoin="miter" marker-end="url(#marrow7-accent2)" fill="none" opacity="1.0" data-htr-source-ref="slide:71" data-htr-stroke="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-59" data-pptx-layer="layout" />
+  <ns0:path d="M 644.19 509.09 C 647.01 514.46 649.45 518.54 657.71 523.27 L 651.42 523.27 L 652.34 529.12 C 653.97 537.26 656.71 545.53 661.03 552.83 L 628.22 552.83 C 632.54 545.21 635.48 536.86 637.06 528.88 L 637.86 523.27 L 630.68 523.27 C 638.56 518.76 642.5 513.17 644.19 509.09 Z " fill="url(#ggrad13)" stroke-width="4" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:72" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-60" data-pptx-layer="layout" />
+  <ns0:path d="M 688.08 528 C 690.43 532.48 692.46 535.88 699.35 539.82 L 694.1 539.82 L 694.88 544.7 C 696.23 551.49 698.51 558.38 702.12 564.46 L 674.76 564.46 C 678.36 558.11 680.82 551.15 682.13 544.5 L 682.8 539.82 L 676.81 539.82 C 683.39 536.06 686.67 531.4 688.08 528 Z " fill="url(#ggrad13)" stroke-width="4" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:73" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-61" data-pptx-layer="layout" />
+  <ns0:path d="M 596.44 526.55 C 598.79 531.02 600.83 534.43 607.71 538.37 L 602.47 538.37 L 603.24 543.24 C 604.6 550.03 606.88 556.92 610.48 563.01 L 583.13 563.01 C 586.73 556.65 589.19 549.7 590.5 543.04 L 591.17 538.37 L 585.18 538.37 C 591.75 534.61 595.04 529.95 596.44 526.55 Z " fill="url(#ggrad13)" stroke-width="4" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:74" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-62" data-pptx-layer="layout" />
+  <ns0:path d="M 69.33 69.33 L 75.43 69.33 L 75.43 97.52 L 69.33 97.52 Z " fill="#5385C5" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:75" data-htr-fill="accent2" transform="matrix(0.8935371 0 0 0.8935371 61.61789919 58.05107092)" id="source-atom-63" data-pptx-layer="layout" />
+  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
+      <ns0:tspan x="48" y="55.68">城市服务与平台能力</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="48" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="379.52000000000004" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_26" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="444.918 251.815 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_26" data-pptx-carrier="true" x="492.8657" y="265.8946" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#FFFFFF" data-htr-source-ref="slide:26" text-anchor="middle">
+      <ns0:tspan x="492.8657" y="265.8946">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_27" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="423.116 268.336 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_27" data-pptx-carrier="true" x="492.87014999999997" y="278.8961" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#FFFFFF" data-htr-source-ref="slide:27" text-anchor="middle">
+      <ns0:tspan x="492.87014999999997" y="278.8961">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_28" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="591.566 251.815 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_28" data-pptx-carrier="true" x="639.5129999999999" y="265.8946" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#FFFFFF" data-htr-source-ref="slide:28" text-anchor="middle">
+      <ns0:tspan x="639.5129999999999" y="265.8946">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_29" data-pptx-placeholder="body" data-pptx-idx="7" data-pptx-bounds="569.764 268.336 139.508 25.0548">
+    <ns0:text id="text-nodes-shape_29" data-pptx-carrier="true" x="639.51745" y="278.8961" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#FFFFFF" data-htr-source-ref="slide:29" text-anchor="middle">
+      <ns0:tspan x="639.51745" y="278.8961">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_30" data-pptx-placeholder="body" data-pptx-idx="8" data-pptx-bounds="738.204 251.815 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_30" data-pptx-carrier="true" x="786.1514" y="265.8946" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#FFFFFF" data-htr-source-ref="slide:30" text-anchor="middle">
+      <ns0:tspan x="786.1514" y="265.8946">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_31" data-pptx-placeholder="body" data-pptx-idx="9" data-pptx-bounds="716.402 268.336 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_31" data-pptx-carrier="true" x="786.15585" y="278.8961" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#FFFFFF" data-htr-source-ref="slide:31" text-anchor="middle">
+      <ns0:tspan x="786.15585" y="278.8961">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_32" data-pptx-placeholder="body" data-pptx-idx="10" data-pptx-bounds="948.319 287.887 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_32" data-pptx-carrier="true" x="948.3194" y="301.9667" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:32">
+      <ns0:tspan x="948.3194" y="301.9667">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_33" data-pptx-placeholder="body" data-pptx-idx="11" data-pptx-bounds="948.319 304.399 208.114 25.1441">
+    <ns0:text id="text-nodes-shape_33" data-pptx-carrier="true" x="948.3194" y="314.9593" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:33">
+      <ns0:tspan x="948.3194" y="314.9593">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_34" data-pptx-placeholder="body" data-pptx-idx="12" data-pptx-bounds="1006.11 330.24 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_34" data-pptx-carrier="true" x="1006.1134" y="344.3203" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:34">
+      <ns0:tspan x="1006.1134" y="344.3203">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_35" data-pptx-placeholder="body" data-pptx-idx="13" data-pptx-bounds="1006.11 346.753 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_35" data-pptx-carrier="true" x="1006.1134" y="357.3129" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:35">
+      <ns0:tspan x="1006.1134" y="357.3129">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_37" data-pptx-placeholder="body" data-pptx-idx="14" data-pptx-bounds="818.489 351.006 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_37" data-pptx-carrier="true" x="818.4885" y="365.0861" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:37">
+      <ns0:tspan x="818.4885" y="365.0861">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_38" data-pptx-placeholder="body" data-pptx-idx="15" data-pptx-bounds="818.489 367.528 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_38" data-pptx-carrier="true" x="818.4885" y="378.0876" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:38">
+      <ns0:tspan x="818.4885" y="378.0876">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_39" data-pptx-placeholder="body" data-pptx-idx="16" data-pptx-bounds="671.144 358.512 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_39" data-pptx-carrier="true" x="671.1442" y="372.5919" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:39">
+      <ns0:tspan x="671.1442" y="372.5919">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_40" data-pptx-placeholder="body" data-pptx-idx="17" data-pptx-bounds="671.144 375.024 152.062 25.0548">
+    <ns0:text id="text-nodes-shape_40" data-pptx-carrier="true" x="671.1442" y="385.5844" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:40">
+      <ns0:tspan x="671.1442" y="385.5844">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_41" data-pptx-placeholder="body" data-pptx-idx="18" data-pptx-bounds="465.318 362.801 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_41" data-pptx-carrier="true" x="561.2124" y="376.88079999999997" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:41" text-anchor="end">
+      <ns0:tspan x="561.2124" y="376.88079999999997">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_42" data-pptx-placeholder="body" data-pptx-idx="19" data-pptx-bounds="421.713 379.322 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_42" data-pptx-carrier="true" x="561.2212999999999" y="389.8823" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:42" text-anchor="end">
+      <ns0:tspan x="561.2212999999999" y="389.8823">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_43" data-pptx-placeholder="body" data-pptx-idx="20" data-pptx-bounds="311.933 345.716 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_43" data-pptx-carrier="true" x="407.8278" y="359.7964" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:43" text-anchor="end">
+      <ns0:tspan x="407.8278" y="359.7964">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_44" data-pptx-placeholder="body" data-pptx-idx="21" data-pptx-bounds="268.329 362.229 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_44" data-pptx-carrier="true" x="407.8367" y="372.789" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:44" text-anchor="end">
+      <ns0:tspan x="407.8367" y="372.789">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_45" data-pptx-placeholder="body" data-pptx-idx="22" data-pptx-bounds="185.855 329.043 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_45" data-pptx-carrier="true" x="281.7497" y="343.123" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:45" text-anchor="end">
+      <ns0:tspan x="281.7497" y="343.123">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_46" data-pptx-placeholder="body" data-pptx-idx="23" data-pptx-bounds="142.251 345.565 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_46" data-pptx-carrier="true" x="281.7586" y="356.1245" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:46" text-anchor="end">
+      <ns0:tspan x="281.7586" y="356.1245">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_47" data-pptx-placeholder="body" data-pptx-idx="24" data-pptx-bounds="267.65 285.278 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_47" data-pptx-carrier="true" x="363.5441" y="299.3576" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:47" text-anchor="end">
+      <ns0:tspan x="363.5441" y="299.3576">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_48" data-pptx-placeholder="body" data-pptx-idx="25" data-pptx-bounds="224.036 301.79 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_48" data-pptx-carrier="true" x="363.544" y="312.3501" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:48" text-anchor="end">
+      <ns0:tspan x="363.544" y="312.3501">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_49" data-pptx-placeholder="body" data-pptx-idx="26" data-pptx-bounds="459.698 458.427 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_49" data-pptx-carrier="true" x="507.64480000000003" y="472.5072" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:49" text-anchor="middle">
+      <ns0:tspan x="507.64480000000003" y="472.5072">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_50" data-pptx-placeholder="body" data-pptx-idx="27" data-pptx-bounds="423.733 474.94 167.824 25.1441">
+    <ns0:text id="text-nodes-shape_50" data-pptx-carrier="true" x="507.64475000000004" y="485.4997" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:50" text-anchor="middle">
+      <ns0:tspan x="507.64475000000004" y="485.4997">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_51" data-pptx-placeholder="body" data-pptx-idx="28" data-pptx-bounds="716.018 458.427 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_51" data-pptx-carrier="true" x="763.9649" y="472.5072" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:51" text-anchor="middle">
+      <ns0:tspan x="763.9649" y="472.5072">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_52" data-pptx-placeholder="body" data-pptx-idx="29" data-pptx-bounds="694.215 474.94 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_52" data-pptx-carrier="true" x="763.9693500000001" y="485.4997" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:52" text-anchor="middle">
+      <ns0:tspan x="763.9693500000001" y="485.4997">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_53" data-pptx-placeholder="body" data-pptx-idx="30" data-pptx-bounds="586.83 550.962 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_53" data-pptx-carrier="true" x="634.7773" y="565.0419" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:53" text-anchor="middle">
+      <ns0:tspan x="634.7773" y="565.0419">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_54" data-pptx-placeholder="body" data-pptx-idx="31" data-pptx-bounds="565.028 567.474 139.508 25.1441">
+    <ns0:text id="text-nodes-shape_54" data-pptx-carrier="true" x="634.78175" y="578.0343999999999" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:54" text-anchor="middle">
+      <ns0:tspan x="634.78175" y="578.0343999999999">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_55" data-pptx-placeholder="body" data-pptx-idx="32" data-pptx-bounds="565.028 594.96 139.508 25.9841">
+    <ns0:text id="text-nodes-shape_55" data-pptx-carrier="true" x="634.78175" y="609.0396000000001" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:55" text-anchor="middle">
+      <ns0:tspan x="634.78175" y="609.0396000000001">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_56" data-pptx-placeholder="body" data-pptx-idx="33" data-pptx-bounds="525.533 611.472 218.488 25.1441">
+    <ns0:text id="text-nodes-shape_56" data-pptx-carrier="true" x="634.77725" y="622.0322" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:56" text-anchor="middle">
+      <ns0:tspan x="634.77725" y="622.0322">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_57" data-pptx-placeholder="body" data-pptx-idx="34" data-pptx-bounds="429.639 571.504 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_57" data-pptx-carrier="true" x="525.5334" y="585.5843" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:57" text-anchor="end">
+      <ns0:tspan x="525.5334" y="585.5843">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_58" data-pptx-placeholder="body" data-pptx-idx="35" data-pptx-bounds="360.426 588.026 165.117 25.0548">
+    <ns0:text id="text-nodes-shape_58" data-pptx-carrier="true" x="525.5423" y="598.5858" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:58" text-anchor="end">
+      <ns0:tspan x="525.5423" y="598.5858">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_59" data-pptx-placeholder="body" data-pptx-idx="36" data-pptx-bounds="747.837 567.412 95.8944 25.9841">
+    <ns0:text id="text-nodes-shape_59" data-pptx-carrier="true" x="747.8365" y="581.4919" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" data-htr-source-ref="slide:59">
+      <ns0:tspan x="747.8365" y="581.4919">层级</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-nodes-shape_60" data-pptx-placeholder="body" data-pptx-idx="37" data-pptx-bounds="747.837 583.924 139.508 25.0548">
+    <ns0:text id="text-nodes-shape_60" data-pptx-carrier="true" x="747.8365" y="594.4844999999999" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="12" font-weight="400" fill="#383535" data-htr-source-ref="slide:60">
+      <ns0:tspan x="747.8365" y="594.4844999999999">关系说明</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+</ns0:svg>

@@ -1,0 +1,103 @@
+Representation: original_summary
+Research date: 2026-11-14 UTC
+Read scope: Selected original report text and page fragments from twelve official Chinese industry/analysis reports. Eight Big Four reports were studied by the research agent, and four McKinsey/Bain reports by the root agent. The integrator read both original research syntheses and the reading receipts. Source totals, download, extraction, selected-page text reading, fragment reading and actual image viewing are separate evidence.
+
+Original synthesis: Choose sentence structure by communicative purpose. Use a concrete business object and its state/change/comparison for a finding. Use a verb with an explicit object for a proposed action. Use noun phrases for dimensions, columns, indicators and process labels, and restore concrete actions when explaining implementation. Omit a repeated subject when it is recoverable, and state the actor or population when responsibility, contribution or comparison changes. An analytical paragraph links a meaningful finding to supporting comparisons and business implications. A proposal links an action to a relevant audience, situation and expected observation. Necessary scope, period and proposal/prediction identity remain attached to the meaning. These are original cross-source editing choices rather than a proprietary writing standard or evidence that a phrase is human-authored.
+
+Big Four original reports and actual read boundaries follow. Their combined 422 source pages are an inventory total; no full reading of all 422 pages is claimed.
+
+Report: D1 / 德勤中国消费品和零售行业纵览2025
+Source: https://www.deloitte.com/content/dam/assets-zone1/cn/zh/docs/industries/consumer/2025/deloitte-consumer-products-and-retail-industry-overview-2025-zh-250414.pdf
+Source pages: 55
+Read mode: downloaded original, selected full-page text, and selected actual page images
+Body text pages actually read: 3, 5, 8, 12, 16, 19, 24, 26, 31, 51
+Actual page images viewed: 3, 19
+Acquired PDF SHA-256: 79ef4d6c30979b684ff1983128267d0fa5bc06737f03a6c178da33609b4df25a
+
+Report: D2 / 数据智能赋能消费者增长的策略与实践分享
+Source: https://www.deloitte.com/content/dam/assets-zone1/cn/zh/docs/industries/technology-media-telecommunications/2025/deloitte-cn-tech-consumer-growth-empowered-by-data-intelligence-zh-240426.pdf
+Source pages: 20
+Read mode: downloaded original, selected full-page text, and selected actual page images
+Body text pages actually read: 4, 7, 9, 10, 11, 13, 14, 15, 16, 17
+Actual page images viewed: 13, 17
+Acquired PDF SHA-256: e0a090631f83d917731f257d2ebcd300496db3c07321a21c6bce32794cdb113b
+
+Report: P1 / 2025年消费者之声全球调研中国报告
+Source: https://www.pwccn.com/zh/retail-and-consumer/voice-of-consumers-china-report-dec2025.pdf
+Source pages: 40
+Read mode: official PDF opened and selected returned page fragments actually read through web tool
+Returned official-PDF page fragments actually read: 1, 2, 3, 11, 12, 13, 14, 15, 16, 17, 19, 20, 21, 22, 23, 24, 29, 30, 31, 32, 33, 34, 35, 36
+Actual page images viewed: none
+Acquisition limitation: 403 access denied, no local original retained
+
+Report: P2 / 全球娱乐及媒体行业展望2025-2029中国摘要
+Source: https://www.pwccn.com/zh/tmt/entertainment-and-media-outlook-2025-2029.pdf
+Source pages: 32
+Read mode: official PDF opened and selected returned page fragments actually read through web tool
+Returned official-PDF page fragments actually read: 1, 2, 3, 4, 5, 6, 9, 10, 11, 13, 14, 15, 16, 18, 19, 20, 21, 28, 29, 30
+Actual page images viewed: none
+Acquisition limitation: 403 access denied, no local original retained
+
+Report: E1 / 2025年中国海外投资概览
+Source: https://www.ey.com/content/dam/ey-unified-site/ey-com/zh-cn/insights/china-overseas-investment-network/documents/ey-overview-of-2025-china-outbound-investment-zh.pdf
+Source pages: 25
+Read mode: downloaded original, selected full-page text, and selected actual page images
+Body text pages actually read: 3, 4, 7, 9, 10, 12, 17, 19, 20
+Actual page images viewed: 9, 17
+Acquired PDF SHA-256: 855fbe8aa3a5a8495f73ec377d31c766dbb71377bb1c9029125f58bbfd42e148
+
+Report: E2 / 中国上市银行2025年回顾与未来展望
+Source: https://www.ey.com/content/dam/ey-unified-site/ey-com/zh-cn/newsroom/2026/5/documents/ey-listed-banks-in-china-2025-review-and-outlook-zh.pdf
+Source pages: 108
+Read mode: downloaded original, selected full-page text, and selected actual page images
+Body text pages actually read: 3, 4, 5, 6, 7, 8, 15, 89, 97, 98
+Actual page images viewed: 15
+Acquired PDF SHA-256: aaadd213ac854e6745b528e443afcfefb1243ecbbc722f125cf820d9df8df282
+
+Report: K1 / 毕马威2025年跨国企业中国展望
+Source: https://assets.kpmg.com/content/dam/kpmgsites/cn/pdf/zh/2025/11/2025-kpmg-mnc-china-outlook-report.pdf
+Source pages: 19
+Read mode: downloaded original, selected full-page text, and selected actual page images
+Body text pages actually read: 3, 4, 5, 7, 9, 10, 13, 16, 17, 18
+Actual page images viewed: 10
+Acquired PDF SHA-256: b0e23c795958c705d161bc6071742dd6b518b903e03afe3824467f6eb972939f
+
+Report: K2 / 银行业战略对标洞察报告
+Source: https://kpmg.com/content/dam/kpmgsites/cn/pdf/zh/2025/03/banking-strategic-benchmarking-insights-report.pdf.coredownload.inline.pdf
+Source pages: 123
+Read mode: downloaded original, selected full-page text, and selected actual page images
+Body text pages actually read: 4, 5, 6, 7, 9, 12, 14, 15, 16, 21, 30, 31, 111, 112
+Actual page images viewed: 16
+Acquired PDF SHA-256: 4bae0bbad79901423adede27a55fca27abab01548852f7490b4df0df5e6a446e
+
+D2 cover date is April 2024, while its official site publication date is April 25, 2025. E1/E2 cover reporting-year 2025 and were published in 2026. These identities are retained separately.
+
+Additional McKinsey and Bain original reports follow. The root actually read 54 selected PDF text-layer pages in total. Some chart glyphs in subset fonts were unreadable and were excluded from language and data inferences. Full-page graphical review is not claimed by this text-reading count.
+
+Report: mck-china-brief-2025
+Source: https://www.mckinsey.com.cn/wp-content/uploads/2025/08/2025-china-brief_CN_0819v2.pdf
+Source pages: 9
+Text-layer pages actually read: 1, 2, 3, 4, 5, 6, 7, 8, 9
+Acquired PDF SHA-256: 946e1522c684e1e03768b272ad7040e2b98f5ae2b8b3e69f79a3406e6315ce92
+
+Report: mck-auto-2024
+Source: https://www.mckinsey.com.cn/wp-content/uploads/2024/03/2024麦肯锡中国汽车消费者洞察报告.pdf
+Source pages: 54
+Text-layer pages actually read: 3, 5, 6, 7, 8, 9, 11, 15, 20, 28, 31, 41, 46, 48, 51, 52
+Acquired PDF SHA-256: 3f32c5f8b8145e4be9c136adb5103f420bb88856a7c3be2b86a45c80bbcfca59
+
+Report: bain-luxury-2025
+Source: https://www.bain.cn/pdfs/202601300953121435.pdf
+Source pages: 17
+Text-layer pages actually read: 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16
+Acquired PDF SHA-256: ab641ac678643937897bbff21b7ea17cca6d8be6a1da611b1c3618c73a661606
+
+Report: bain-shopper-2025-2
+Source: https://www.bain.cn/pdfs/202512090733043136.pdf
+Source pages: 28
+Text-layer pages actually read: 3, 4, 5, 8, 10, 14, 20, 21, 22, 23, 24, 25, 26, 27, 28
+Acquired PDF SHA-256: 9438800820e81f88e8ea5296232d9fabb00af91d33e28181ca81b7213c8c1ac7
+
+Project adaptation: Keep the existing audience-facing editing and single reporting workflow. A short heading does a concrete job, while the explanation adds actual comparisons or implementation. The project examples are original synthetic teaching, with no report phrases, charts, brands, images or case facts repackaged. Industry strategies remain scoped to their source contexts. Public observable language patterns have not established cross-task model effectiveness or access to the organisations' internal editorial rules.
+
+Reuse: Original concise summary and reading metadata. Underlying publications retain their rights. Official URLs provide attribution; runtime use is offline.

@@ -1,0 +1,58 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="architecture-stack-3" data-pptx-layout-name="architecture-stack-3">
+  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <ns0:rect x="48" y="120.0" width="1184" height="160.0" fill="#EFEFEF" rx="0" id="atom-3" data-pptx-layer="layout" />
+  <ns0:rect x="72" y="304.0" width="1136" height="160.0" fill="#EFEFEF" rx="0" id="atom-4" data-pptx-layer="layout" />
+  <ns0:rect x="96" y="488.0" width="1088" height="160.0" fill="#EFEFEF" rx="0" id="atom-5" data-pptx-layer="layout" />
+  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
+      <ns0:tspan x="48" y="55.68">{{页面标题}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="48" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="379.52000000000004" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-layers-0-title" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="68 140 230 128">
+    <ns0:text id="text-layers-0-title" data-pptx-carrier="true" x="68" y="164.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="68" y="164.64">{{层级}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-layers-0-body" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="328 140 880 128">
+    <ns0:text id="text-layers-0-body" data-pptx-carrier="true" x="328" y="161.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="328" y="161.12">{{职责或内容}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-layers-1-title" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="92 324 230 128">
+    <ns0:text id="text-layers-1-title" data-pptx-carrier="true" x="92" y="348.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="92" y="348.64">{{层级}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-layers-1-body" data-pptx-placeholder="body" data-pptx-idx="7" data-pptx-bounds="352 324 832 128">
+    <ns0:text id="text-layers-1-body" data-pptx-carrier="true" x="352" y="345.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="352" y="345.12">{{职责或内容}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-layers-2-title" data-pptx-placeholder="body" data-pptx-idx="8" data-pptx-bounds="116 508 230 128">
+    <ns0:text id="text-layers-2-title" data-pptx-carrier="true" x="116" y="532.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="116" y="532.64">{{层级}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-layers-2-body" data-pptx-placeholder="body" data-pptx-idx="9" data-pptx-bounds="376 508 784 128">
+    <ns0:text id="text-layers-2-body" data-pptx-carrier="true" x="376" y="529.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
+      <ns0:tspan x="376" y="529.12">{{职责或内容}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+</ns0:svg>

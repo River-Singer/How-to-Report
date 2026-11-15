@@ -1,11 +1,11 @@
 ---
 name: how-to-report
-description: 从真实处境和材料澄清目标、形成有依据的判断并交付明确页数与逐页内容的 Markdown 汇报方案，支持先分析、多轮局部修订，以及内容确认后向实际可用的完整 PPT-Master 交接制作。
+description: 从真实处境和材料澄清目标、形成有依据的判断并交付明确页数与逐页内容的 Markdown 汇报方案，支持先分析、多轮局部修订，以及内容确认后使用自有参数模板与包内 PPT 制作技术继续制作。
 ---
 
 # How to Report
 
-帮助用户把事情想清楚，再形成听众能够使用的汇报材料。默认完整内容交付为《汇报方案.md》，包含简短安排、具体页数和页序、每页可直接使用的标题与内容。用户要求 PPT 时，内容确认后按 [PPT 交接](references/ppt-handoff.md) 由协调者连续接续实际可用的完整 PPT-Master，页面制作、导出和制作检查沿其正式工作流执行。
+帮助用户把事情想清楚，再形成听众能够使用的汇报材料。默认完整内容交付为《汇报方案.md》，包含简短安排、具体页数和页序、每页可直接使用的标题与内容。用户要求 PPT 时，内容确认后按 [PPT 交接](references/ppt-handoff.md) 由协调者连续使用自有模板、tokens和包内制作技术完成参数绑定、页面制作、检查与导出。
 
 ## 先进入生成与修订主线
 
@@ -31,6 +31,7 @@ description: 从真实处境和材料澄清目标、形成有依据的判断并�
 | 有了判断却仍平均介绍全部主题，或新回复替掉原余项 | 定向用[内容删合示范](references/content-decisions.md#读者仍需自己拼接)或[部分更新示范](references/content-decisions.md#新回复只完成部分请求)，实际重写受影响内容；交付形式看[完整材料示例](assets/examples/report-proposal.md) |
 | 标题有要点，正文却只重复标签；复杂评审仍讲不清一件事 | 用[关系展开](references/semantic-structuring.md#把概括展开为可理解的关系)补本场必要解释，定向参考[同源短稿与完整评审](assets/examples/report-depth-proposals.md)；不照搬页数或逐层句式 |
 | 派生数字、日期、基准或计算影响判断 | [数值方法](references/numeric-evidence.md)、[进度事实](references/project-progress.md)；适用运算实际调用[Python计算工具](references/report-calculation.md)，结果还要对到正文比较与推荐 |
+| 数字、看板或调研结果仍停留在罗列，需要解释差异与业务含义 | [业务数据分析](references/business-data-analysis.md)，按问题实际比较、拆解和计算，再形成判断与具体建议 |
 | 材料交接、续接或版本追溯 | [最小证据](references/evidence-handoff.md)、[生成Run](references/report-run.md)、[版本操作](references/version-lifecycle.md) |
 | 请求制作 PPT、确认内容后继续制作，或制作中需要回改内容 | [PPT 交接](references/ppt-handoff.md)，承接当前稿、来源、属性级确认及实际制作状态 |
 | 明确复用或保存已确认偏好/经验 | [画像](references/report-profile.md)、[私有经验](references/report-experience.md) |

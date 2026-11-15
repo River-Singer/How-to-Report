@@ -1,0 +1,88 @@
+<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="process-cycle-4" data-pptx-layout-name="process-cycle-4">
+  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <ns0:line x1="782.9545454545455" y1="275.03999999999996" x2="899.6054545454544" y2="324.0" stroke="#003591" stroke-width="1.67" id="atom-3" data-pptx-layer="layout" />
+  <ns0:polygon points="899.6054545454544,324.0 890.6808115807504,324.59223977623856 893.7768769456412,317.2156294939799" fill="#003591" id="atom-4" data-pptx-layer="layout" />
+  <ns0:line x1="899.6054545454546" y1="444.0" x2="782.9545454545454" y2="492.96000000000004" stroke="#003591" stroke-width="1.67" id="atom-5" data-pptx-layer="layout" />
+  <ns0:polygon points="782.9545454545454,492.96000000000004 788.7831230543586,486.17562949397995 791.8791884192494,493.5522397762386" fill="#003591" id="atom-6" data-pptx-layer="layout" />
+  <ns0:line x1="497.04545454545456" y1="492.96000000000004" x2="380.39454545454544" y2="444.0" stroke="#003591" stroke-width="1.67" id="atom-7" data-pptx-layer="layout" />
+  <ns0:polygon points="380.39454545454544,444.0 389.31918841924943,443.40776022376144 386.2231230543587,450.7843705060201" fill="#003591" id="atom-8" data-pptx-layer="layout" />
+  <ns0:line x1="380.39454545454544" y1="324.0" x2="497.04545454545456" y2="275.03999999999996" stroke="#003591" stroke-width="1.67" id="atom-9" data-pptx-layer="layout" />
+  <ns0:polygon points="497.04545454545456,275.03999999999996 491.2168769456413,281.82437050602005 488.12081158075057,274.4477602237614" fill="#003591" id="atom-10" data-pptx-layer="layout" />
+  <ns0:rect x="510.0" y="320.0" width="260" height="128" fill="#EFEFEF" rx="0" id="atom-11" data-pptx-layer="layout" />
+  <ns0:rect x="486.0" y="155.04" width="308" height="120" fill="#EFEFEF" rx="0" id="atom-12" data-pptx-layer="layout" />
+  <ns0:rect x="888.56" y="324.0" width="308" height="120" fill="#EFEFEF" rx="0" id="atom-13" data-pptx-layer="layout" />
+  <ns0:rect x="486.0" y="492.96000000000004" width="308" height="120" fill="#EFEFEF" rx="0" id="atom-14" data-pptx-layer="layout" />
+  <ns0:rect x="83.44" y="324.0" width="308" height="120" fill="#EFEFEF" rx="0" id="atom-15" data-pptx-layer="layout" />
+  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
+      <ns0:tspan x="48" y="55.68">{{页面标题}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="48" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="379.52000000000004" y="698.08" />
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-center-title" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="530 341 220 44">
+    <ns0:text id="text-center-title" data-pptx-carrier="true" x="530.0" y="365.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="530.0" y="365.64">{{中心}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-center-body" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="530 392 220 44">
+    <ns0:text id="text-center-body" data-pptx-carrier="true" x="530.0" y="406.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="530.0" y="406.08">{{中心说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-0-title" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="526 171.04 228 46">
+    <ns0:text id="text-steps-0-title" data-pptx-carrier="true" x="526.0" y="195.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="526.0" y="195.68">{{步骤}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-0-body" data-pptx-placeholder="body" data-pptx-idx="7" data-pptx-bounds="526 223.04 228 44">
+    <ns0:text id="text-steps-0-body" data-pptx-carrier="true" x="526.0" y="237.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="526.0" y="237.12">{{说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-1-title" data-pptx-placeholder="body" data-pptx-idx="8" data-pptx-bounds="928.56 340 228 46">
+    <ns0:text id="text-steps-1-title" data-pptx-carrier="true" x="928.56" y="364.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="928.56" y="364.64">{{步骤}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-1-body" data-pptx-placeholder="body" data-pptx-idx="9" data-pptx-bounds="928.56 392 228 44">
+    <ns0:text id="text-steps-1-body" data-pptx-carrier="true" x="928.56" y="406.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="928.56" y="406.08">{{说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-2-title" data-pptx-placeholder="body" data-pptx-idx="10" data-pptx-bounds="526 508.96 228 46">
+    <ns0:text id="text-steps-2-title" data-pptx-carrier="true" x="526.0" y="533.6" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="526.0" y="533.6">{{步骤}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-2-body" data-pptx-placeholder="body" data-pptx-idx="11" data-pptx-bounds="526 560.96 228 44">
+    <ns0:text id="text-steps-2-body" data-pptx-carrier="true" x="526.0" y="575.0400000000001" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="526.0" y="575.0400000000001">{{说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-3-title" data-pptx-placeholder="body" data-pptx-idx="12" data-pptx-bounds="123.44 340 228 46">
+    <ns0:text id="text-steps-3-title" data-pptx-carrier="true" x="123.44" y="364.64" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591">
+      <ns0:tspan x="123.44" y="364.64">{{步骤}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+  <ns0:g id="slot-text-steps-3-body" data-pptx-placeholder="body" data-pptx-idx="13" data-pptx-bounds="123.44 392 228 44">
+    <ns0:text id="text-steps-3-body" data-pptx-carrier="true" x="123.44" y="406.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
+      <ns0:tspan x="123.44" y="406.08">{{说明}}</ns0:tspan>
+    </ns0:text>
+  </ns0:g>
+</ns0:svg>

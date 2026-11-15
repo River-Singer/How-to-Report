@@ -1,0 +1,148 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "template_id": {
+      "const": "business-blue-v1"
+    },
+    "content_source": {
+      "type": "object"
+    },
+    "pages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9_-]{0,63}$"
+          },
+          "family": {
+            "enum": [
+              "cover",
+              "toc",
+              "chapter",
+              "kpi",
+              "parallel",
+              "comparison",
+              "chart",
+              "timeline",
+              "gantt",
+              "process",
+              "image",
+              "ending",
+              "strategy",
+              "architecture",
+              "matrix",
+              "hub",
+              "source-house",
+              "source-architecture",
+              "source-spatial",
+              "source-circular"
+            ]
+          },
+          "variant": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 40
+          },
+          "content": {
+            "type": "object"
+          },
+          "config": {
+            "type": "object",
+            "properties": {
+              "body_role": {
+                "enum": [
+                  "body",
+                  "compactBody"
+                ]
+              },
+              "show_source": {
+                "type": "boolean"
+              },
+              "show_page_number": {
+                "type": "boolean"
+              },
+              "show_icons": {
+                "type": "boolean"
+              },
+              "show_legend": {
+                "type": "boolean"
+              },
+              "show_owner": {
+                "type": "boolean"
+              },
+              "show_progress": {
+                "type": "boolean"
+              },
+              "decimals": {
+                "type": "integer",
+                "minimum": 0,
+                "maximum": 4
+              },
+              "date_format": {
+                "enum": [
+                  "%m",
+                  "%Y-%m",
+                  "%m-%d"
+                ],
+                "description": "甘特刻度使用各等时间区段的实际起始日期。兼容值%m显示为月/日以区分同月刻度，%Y-%m或%m-%d沿所选格式显示；相邻重复标签留空。完整首末日期始终显示。"
+              },
+              "chart_type": {
+                "enum": [
+                  "column",
+                  "line"
+                ]
+              },
+              "image_fit": {
+                "enum": [
+                  "contain",
+                  "cover"
+                ]
+              },
+              "image_position": {
+                "enum": [
+                  "xMinYMin",
+                  "xMidYMin",
+                  "xMaxYMin",
+                  "xMinYMid",
+                  "xMidYMid",
+                  "xMaxYMid",
+                  "xMinYMax",
+                  "xMidYMax",
+                  "xMaxYMax"
+                ],
+                "description": "图片完整显示或填框裁剪时的对齐焦点，x为左/中/右，Y为上/中/下。默认xMidYMid。与image_fit共同生效，保留原图完整画面供原生重裁。"
+              },
+              "show_data_labels": {
+                "type": "boolean",
+                "description": "显示各已知数据点的原值，SVG与原生图表共同生效。默认false。"
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          },
+          "notes": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "id",
+          "family",
+          "content"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "required": [
+    "schema_version",
+    "template_id",
+    "pages"
+  ],
+  "additionalProperties": false
+}

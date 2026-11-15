@@ -1,8 +1,8 @@
 {
   "schema_version": "1",
-  "archive_version": "0.4",
+  "archive_version": "0.5",
   "runtime_network_required": false,
-  "scope": "36 method representations: 35 original summaries and one full extracted CC BY paper; existing NASA summary reused without duplicate URL; read scopes are narrower than acquisitions. Existing32 records and bytes preserved.",
+  "scope": "39 method representations: 38 original summaries and one full extracted CC BY paper. Existing36 records and source bytes preserved; three new original syntheses retain actual read scopes.",
   "card_sources": {},
   "sources": [
     {
@@ -904,6 +904,81 @@
         "limitations": "No endorsement. Reading scope differs from acquisition scope. No logos, third-party images, linked works or project-specific authority are granted."
       },
       "sha256": "10b72970b537b212b2304834f16c0467f6f2c1043e12040be2d949e20ef226a3"
+    },
+    {
+      "id": "business-analysis-practice",
+      "title": "Business analysis and action from public practice",
+      "publisher": "McKinsey; Deloitte; AAPOR; Amplitude",
+      "canonical_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-to-master-the-seven-step-problem-solving-process",
+      "local_path": "sources/business-analysis-practice.txt",
+      "fetched_at_utc": "2026-11-14T12:48:58.569132+00:00",
+      "scope": "McKinsey official podcast transcript problem definition, decomposition, prioritisation, analysis and synthesis sections (web text lines 26–124); Deloitte official IDO article main text lines 448–483; AAPOR Best Practices main recommendations lines 136–222; Amplitude Analytics landing documentation lines 1–51. Linked specialist documentation was not exhaustively read.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "McKinsey official podcast transcript problem definition, decomposition, prioritisation, analysis and synthesis sections (web text lines 26–124); Deloitte official IDO article main text lines 448–483; AAPOR Best Practices main recommendations lines 136–222; Amplitude Analytics landing documentation lines 1–51. Linked specialist documentation was not exhaustively read.",
+        "timestamp_semantics": "Local original-summary compilation time; underlying official pages reviewed on 2026-11-14. Exact initial retrieval timestamps are not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-to-master-the-seven-step-problem-solving-process",
+        "attribution": "McKinsey; Deloitte; AAPOR; Amplitude",
+        "limitations": "Original synthesis only, with actual read scope retained. Linked reports and underlying data are not redistributed. Methods provide background rather than current project facts or validated model performance."
+      },
+      "sha256": "2f967de9648b69029322c17d7ed408f5bff0c420001e15c2141bbc3b84fb264f"
+    },
+    {
+      "id": "chart-image-production",
+      "title": "Chart selection and editable image cropping",
+      "publisher": "UK Analysis Function; Microsoft; project synthesis",
+      "canonical_url": "https://support.microsoft.com/en-us/office/graphics-visuals/crop-a-picture-to-fit-in-a-shape",
+      "local_path": "sources/chart-image-production.txt",
+      "fetched_at_utc": "2026-11-14T12:48:58.578274+00:00",
+      "scope": "UK Analysis Function choosing-visualisations page (145 web text lines) and accessible-charts checklist (252 lines), with substantive checks at lines 137–232; Microsoft crop-to-shape Windows guidance lines 133–165, Office crop guidance lines 127–206, OpenXML SourceRectangle definition/remarks lines 194–215, and PowerPoint CropLeft lines 30–68. Local PPT-Master technical methods and actual derived runtime code were inspected separately. Original templates, icons and chart catalogues are not redistributed here.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "UK Analysis Function choosing-visualisations page (145 web text lines) and accessible-charts checklist (252 lines), with substantive checks at lines 137–232; Microsoft crop-to-shape Windows guidance lines 133–165, Office crop guidance lines 127–206, OpenXML SourceRectangle definition/remarks lines 194–215, and PowerPoint CropLeft lines 30–68. Local PPT-Master technical methods and actual derived runtime code were inspected separately. Original templates, icons and chart catalogues are not redistributed here.",
+        "timestamp_semantics": "Local original-summary compilation time; underlying official pages reviewed on 2026-11-14. Exact initial retrieval timestamps are not asserted."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://support.microsoft.com/en-us/office/graphics-visuals/crop-a-picture-to-fit-in-a-shape",
+        "attribution": "UK Analysis Function; Microsoft; project synthesis",
+        "limitations": "Original synthesis only, with actual read scope retained. Linked reports and underlying data are not redistributed. Methods provide background rather than current project facts or validated model performance."
+      },
+      "sha256": "b271426be81b9d74ac57f46c47e57a5478d968a825aa8864ad87ce0705b14b60"
+    },
+    {
+      "id": "chinese-report-expression",
+      "title": "Chinese professional report sentence choices from selected original reports",
+      "publisher": "Deloitte; PwC; EY; KPMG; McKinsey; Bain; project synthesis",
+      "canonical_url": "https://www.deloitte.com/content/dam/assets-zone1/cn/zh/docs/industries/consumer/2025/deloitte-consumer-products-and-retail-industry-overview-2025-zh-250414.pdf",
+      "local_path": "sources/chinese-report-expression.txt",
+      "fetched_at_utc": "2026-11-14T12:56:10.458410+00:00",
+      "scope": "Selected official original-report text and fragments from eight Big Four and four McKinsey/Bain Chinese reports; exact pages, read modes and image-viewing limits retained in local notes. Eight-report source total422 is not a full-reading claim. Integrator read research syntheses and receipts.",
+      "representation": "original_summary",
+      "card_ids": [
+        "CORE-METHOD"
+      ],
+      "retrieval": {
+        "method": "reviewed_original_summary",
+        "coverage": "Selected official original-report text and fragments from eight Big Four and four McKinsey/Bain Chinese reports; exact pages, read modes and image-viewing limits retained in local notes. Eight-report source total422 is not a full-reading claim. Integrator read research syntheses and receipts.",
+        "timestamp_semantics": "Original-summary compilation time; parent and research-agent source reading occurred on 2026-11-14."
+      },
+      "reuse": {
+        "license": "Original project summary; underlying source rights retained",
+        "evidence_url": "https://www.deloitte.com/content/dam/assets-zone1/cn/zh/docs/industries/consumer/2025/deloitte-consumer-products-and-retail-industry-overview-2025-zh-250414.pdf",
+        "attribution": "Named original-report publishers and original project synthesis",
+        "limitations": "Selected text/page-fragment reading with actual boundaries, no proprietary style guide, no full-report redistribution, no universal model-effectiveness claim."
+      },
+      "sha256": "652be0da13acc21610f1d11bc558d329821adf046b867345e4320ee48001c2d1"
     }
   ]
 }

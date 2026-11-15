@@ -1,11 +1,11 @@
 ---
 name: how-to-report-suite
-description: How-to-Report 总入口：梳理汇报思路、生成或多轮修改逐页内容、审查已有汇报；用户要求制作 PPT 时，确认内容后连续接续实际可用的 PPT-Master 完整工作流。
+description: How-to-Report 总入口：梳理汇报思路、生成或多轮修改逐页内容、审查已有汇报；用户要求制作 PPT 时，确认内容后连续接续自有参数模板与包内 PPT 制作技术。
 ---
 
 # How-to-Report
 
-帮助用户明确这次沟通要取得的结果，从真实材料中形成有依据的判断，再把事情讲给相应听众。完整内容稿交付具体页数、页序及每页可直接使用的内容。PPT 请求由本入口保持任务连续性，将用户确认的内容交给完整 PPT-Master 制作。
+帮助用户明确这次沟通要取得的结果，从真实材料中形成有依据的判断，再把事情讲给相应听众。完整内容稿交付具体页数、页序及每页可直接使用的内容。PPT 请求由本入口保持任务连续性，将用户确认的内容按自有模板参数继续制成 PPT。
 
 ## 按当前任务进入
 
@@ -15,13 +15,13 @@ description: How-to-Report 总入口：梳理汇报思路、生成或多轮修�
 |---|---|
 | 先讨论目标、价值、解释或叙事，暂不成稿 | [how-to-report](skills/how-to-report/SKILL.md) 的 `analyze-first` |
 | 从材料生成完整汇报方案 | [how-to-report](skills/how-to-report/SKILL.md) 的 `create` |
-| 从材料制作 PPT，或将当前方案继续制成 PPT | 先沿 [how-to-report](skills/how-to-report/SKILL.md) 创建或修订当前内容，再按 [PPT 交接](skills/how-to-report/references/ppt-handoff.md) 取得实际内容确认并连续进入可用的 PPT-Master |
+| 从材料制作 PPT，或将当前方案继续制成 PPT | 先沿 [how-to-report](skills/how-to-report/SKILL.md) 创建或修订当前内容，再按 [PPT 交接](skills/how-to-report/references/ppt-handoff.md) 取得实际内容确认并连续进入包内制作流程 |
 | 继续改已有稿件，或只调整一句话、一个标题 | [how-to-report](skills/how-to-report/SKILL.md) 的 `revise`；继承当前稿与仍有效的约定，按请求范围修改 |
 | 审查稿件、核查疑点或复核旧审查意见 | [report-audit](skills/report-audit/SKILL.md)；可以直接审查外来稿件，审计请求本身不授权改稿 |
 
 新完整汇报先确认目的、场合和真实参与职责、受托利益、决定/评价、否决范围及影响关系；沿用已有确认，局部改句不重新全量盘问。相关角色的定向挑战按生成主线真实委派，问题只关联本场职责、目的与事实。
 
-PPT 请求保留当前稿、来源和已确认属性。当前内容确认后继续完成制作所需的真实确认、工具执行和导出，用户无需重新提出制作请求。已有内容确认适用于当前版本时直接沿用。要求保留原 PPT 设计进行更新，或明确沉淀可复用模板时，按 [PPT 交接](skills/how-to-report/references/ppt-handoff.md) 带入原文件与保留意图，由外部完整 Skill 的正式路由选择相应工作流。
+PPT 请求保留当前稿、来源和已确认属性。当前内容确认后继续完成制作所需的真实确认、工具执行和导出，用户无需重新提出制作请求。已有内容确认适用于当前版本时直接沿用。要求保留原 PPT 设计进行更新，或明确沉淀可复用模板时，按 [PPT 交接](skills/how-to-report/references/ppt-handoff.md) 带入原文件与保留意图，先核实相应编辑或模板创建能力，再按实际支持范围操作和验证。
 
 审计请求由主会话协调真实子Agent；已获宿主真实指派的审计执行者直接执行，不递归派同角色。干净上下文先只读正文，取得初读后才给目标、角色、来源和必要作者说明。若同时要求修改，主Agent核对返回后统一修稿。读取另一个入口、主Agent串行换角色或继承创作历史，不构成独立审计；无能力明确该环节未完成，继续有据内容工作。集中规则见[真实委派](skills/how-to-report/references/agent-delegation.md)。
 

@@ -1,0 +1,17 @@
+Representation: original_summary
+Research date: 2026-11-14 UTC
+Read scope: McKinsey official podcast transcript problem definition, decomposition, prioritisation, analysis and synthesis sections (web text lines 26–124); Deloitte official IDO article main text lines 448–483; AAPOR Best Practices main recommendations lines 136–222; Amplitude Analytics landing documentation lines 1–51. Linked specialist documentation was not exhaustively read.
+
+McKinsey source: https://www.mckinsey.com/capabilities/strategy-and-corporate-finance/our-insights/how-to-master-the-seven-step-problem-solving-process
+Original summary: Define the consequential question and its constraints, decompose it in useful ways, prioritise important and actionable branches, choose analysis proportionate to time and precision, and synthesise findings into a recommendation. Iteration and uncertainty accompany the work. Starting with explanatory comparisons can clarify what deeper modelling is worth doing. This is public problem-solving practice, with no proprietary consulting toolkit or model-effectiveness certification acquired.
+
+Deloitte source: https://www.deloitte.com/mt/en/services/consulting/perspectives/five-essential-building-blocks-to-becoming-an-insight-driven-organisation.html
+Original summary: Relate analytics objectives and KPIs to business goals. Strategy, people, process, data and technology jointly enable insights to become actions with feedback. The IDO framework describes organisational capabilities and implementation dependencies. Statistical estimates and causal findings need their own data and designs.
+
+AAPOR source: https://aapor.org/standards-and-ethics/best-practices/
+Original summary: Select the research approach from the question and existing evidence. Identify the population, sampling frame and recruitment, design understandable unbiased questions, consider mode and question-order effects, and preserve measurement comparability over time. Cross-tabulation can describe group differences. Report the actual weighting, uncertainty and missing-response treatment with the survey design. These principles help scope market and user research claims. They do not create a representative sample or a valid error margin for an arbitrary questionnaire.
+
+Amplitude source: https://amplitude.com/docs/analytics
+Original summary: Choose behavioural analysis by the product question. Event segmentation, funnel conversion, cohort retention, journeys and adoption-by-frequency views answer different questions. Reusable cohorts and aligned windows support comparisons. The public documentation provides analytical use cases. Applying them to another platform needs the relevant event definitions, object linkage and observation windows.
+
+Project adaptation: Existing report reasoning and domain cards remain the routing context. Perform feasible comparisons and useful derived calculations, explain the business meaning, and propose specific actions with an observable feedback question. Public methods guide analysis, while the current project's sources establish its facts. No survey deployment, platform integration, advanced estimator or external service is installed by this summary. All wording is an original concise synthesis, with underlying source rights retained.

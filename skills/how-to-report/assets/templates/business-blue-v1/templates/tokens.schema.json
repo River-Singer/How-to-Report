@@ -1,0 +1,771 @@
+{
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "canvas": {
+      "type": "object",
+      "properties": {
+        "width": {
+          "const": 1280
+        },
+        "height": {
+          "const": 720
+        },
+        "background": {
+          "const": "#FFFFFF"
+        }
+      },
+      "required": [
+        "width",
+        "height",
+        "background"
+      ],
+      "additionalProperties": false
+    },
+    "theme": {
+      "type": "object",
+      "properties": {
+        "slots": {
+          "type": "object",
+          "properties": {
+            "dk1": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "lt1": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "dk2": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "lt2": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "accent1": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "accent2": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "accent3": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "accent4": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "accent5": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "accent6": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "hlink": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            },
+            "folHlink": {
+              "type": "string",
+              "pattern": "^#[0-9A-Fa-f]{6}$"
+            }
+          },
+          "required": [
+            "dk1",
+            "lt1",
+            "dk2",
+            "lt2",
+            "accent1",
+            "accent2",
+            "accent3",
+            "accent4",
+            "accent5",
+            "accent6",
+            "hlink",
+            "folHlink"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "slots"
+      ],
+      "additionalProperties": false
+    },
+    "color": {
+      "type": "object",
+      "properties": {
+        "roles": {
+          "type": "object",
+          "properties": {
+            "primary": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "secondary": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "tertiary": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "surface": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "surfaceMuted": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "text": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "textMuted": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            },
+            "border": {
+              "enum": [
+                "dk1",
+                "lt1",
+                "dk2",
+                "lt2",
+                "accent1",
+                "accent2",
+                "accent3",
+                "accent4",
+                "accent5",
+                "accent6",
+                "hlink",
+                "folHlink"
+              ]
+            }
+          },
+          "required": [
+            "primary",
+            "secondary",
+            "tertiary",
+            "surface",
+            "surfaceMuted",
+            "text",
+            "textMuted",
+            "border"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "roles"
+      ],
+      "additionalProperties": false
+    },
+    "font": {
+      "type": "object",
+      "properties": {
+        "families": {
+          "type": "object",
+          "properties": {
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "body": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "latin": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "fallback": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "title",
+            "body",
+            "latin",
+            "fallback"
+          ],
+          "additionalProperties": false
+        },
+        "sizes": {
+          "type": "object",
+          "properties": {
+            "hero": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "chapter": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "title": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "heading": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "body": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "compactBody": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "caption": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "metric": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "diagramCompact": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            },
+            "diagramMicro": {
+              "type": "number",
+              "exclusiveMinimum": 0
+            }
+          },
+          "required": [
+            "hero",
+            "chapter",
+            "title",
+            "heading",
+            "body",
+            "compactBody",
+            "caption",
+            "metric"
+          ],
+          "additionalProperties": false
+        },
+        "lineHeight": {
+          "type": "object",
+          "properties": {
+            "body": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "compactBody": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "caption": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "heading": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "title": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "chapter": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "metric": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "hero": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "diagramCompact": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            },
+            "diagramMicro": {
+              "type": "number",
+              "minimum": 1,
+              "maximum": 2
+            }
+          },
+          "required": [
+            "body",
+            "compactBody",
+            "caption",
+            "heading",
+            "title",
+            "chapter",
+            "metric",
+            "hero"
+          ],
+          "additionalProperties": false
+        },
+        "weights": {
+          "type": "object",
+          "properties": {
+            "hero": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "chapter": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "title": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "heading": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "body": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "compactBody": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "caption": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "metric": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "diagramCompact": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            },
+            "diagramMicro": {
+              "type": "integer",
+              "enum": [
+                400,
+                700
+              ]
+            }
+          },
+          "required": [
+            "hero",
+            "chapter",
+            "title",
+            "heading",
+            "body",
+            "compactBody",
+            "caption",
+            "metric"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "families",
+        "sizes",
+        "lineHeight",
+        "weights"
+      ],
+      "additionalProperties": false
+    },
+    "header": {
+      "type": "object",
+      "properties": {
+        "frame": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "titleFrame": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "ruleY": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "frame",
+        "titleFrame",
+        "ruleY"
+      ],
+      "additionalProperties": false
+    },
+    "body": {
+      "type": "object",
+      "properties": {
+        "frame": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        }
+      },
+      "required": [
+        "frame"
+      ],
+      "additionalProperties": false
+    },
+    "footer": {
+      "type": "object",
+      "properties": {
+        "frame": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "textFrame": {
+          "type": "array",
+          "items": {
+            "type": "number"
+          },
+          "minItems": 4,
+          "maxItems": 4
+        },
+        "ruleY": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "frame",
+        "textFrame",
+        "ruleY"
+      ],
+      "additionalProperties": false
+    },
+    "spacing": {
+      "type": "object",
+      "properties": {
+        "xs": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "sm": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "md": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "lg": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "xl": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "xs",
+        "sm",
+        "md",
+        "lg",
+        "xl"
+      ],
+      "additionalProperties": false
+    },
+    "line": {
+      "type": "object",
+      "properties": {
+        "hairline": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "divider": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "connector": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "hairline",
+        "divider",
+        "connector"
+      ],
+      "additionalProperties": false
+    },
+    "shape": {
+      "type": "object",
+      "properties": {
+        "nodeRadius": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        },
+        "cardRadius": {
+          "type": "number",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "nodeRadius",
+        "cardRadius"
+      ],
+      "additionalProperties": false
+    },
+    "chart": {
+      "type": "object",
+      "properties": {
+        "series_roles": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "primary",
+              "secondary",
+              "tertiary",
+              "surface",
+              "surfaceMuted",
+              "text",
+              "textMuted",
+              "border"
+            ]
+          },
+          "minItems": 2,
+          "maxItems": 2
+        },
+        "axis_role": {
+          "enum": [
+            "hero",
+            "chapter",
+            "title",
+            "heading",
+            "body",
+            "compactBody",
+            "caption",
+            "metric"
+          ]
+        },
+        "grid_role": {
+          "enum": [
+            "primary",
+            "secondary",
+            "tertiary",
+            "surface",
+            "surfaceMuted",
+            "text",
+            "textMuted",
+            "border"
+          ]
+        }
+      },
+      "required": [
+        "series_roles",
+        "axis_role",
+        "grid_role"
+      ],
+      "additionalProperties": false
+    },
+    "table": {
+      "type": "object",
+      "properties": {
+        "header_role": {
+          "enum": [
+            "hero",
+            "chapter",
+            "title",
+            "heading",
+            "body",
+            "compactBody",
+            "caption",
+            "metric"
+          ]
+        },
+        "body_role": {
+          "enum": [
+            "hero",
+            "chapter",
+            "title",
+            "heading",
+            "body",
+            "compactBody",
+            "caption",
+            "metric"
+          ]
+        },
+        "padding": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "required": [
+        "header_role",
+        "body_role",
+        "padding"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "canvas",
+    "theme",
+    "color",
+    "font",
+    "header",
+    "body",
+    "footer",
+    "spacing",
+    "line",
+    "shape",
+    "chart",
+    "table"
+  ],
+  "additionalProperties": false
+}

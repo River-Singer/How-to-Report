@@ -1,0 +1,146 @@
+{
+  "briefcase": {
+    "file": "briefcase.svg",
+    "source_slide": 2,
+    "source_shape_id": "38",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "building": {
+    "file": "building.svg",
+    "source_slide": 3,
+    "source_shape_id": "64",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "team": {
+    "file": "team.svg",
+    "source_slide": 8,
+    "source_shape_id": "33",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "person": {
+    "file": "person.svg",
+    "source_slide": 8,
+    "source_shape_id": "51",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "bar-chart": {
+    "file": "bar-chart.svg",
+    "source_slide": 4,
+    "source_shape_id": "13",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "line-chart": {
+    "file": "line-chart.svg",
+    "source_slide": 11,
+    "source_shape_id": "49",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "trend-up": {
+    "file": "trend-up.svg",
+    "source_slide": 11,
+    "source_shape_id": "68",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "trend-down": {
+    "file": "trend-down.svg",
+    "source_slide": 11,
+    "source_shape_id": "70",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "calendar": {
+    "file": "calendar.svg",
+    "source_slide": 3,
+    "source_shape_id": "43",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "clock": {
+    "file": "clock.svg",
+    "source_slide": 9,
+    "source_shape_id": "80",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "task": {
+    "file": "task.svg",
+    "source_slide": 3,
+    "source_shape_id": "32",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "check": {
+    "file": "check.svg",
+    "source_slide": 2,
+    "source_shape_id": "68",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "warning": {
+    "file": "warning.svg",
+    "source_slide": 12,
+    "source_shape_id": "51",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "info": {
+    "file": "info.svg",
+    "source_slide": 4,
+    "source_shape_id": "22",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "lock": {
+    "file": "lock.svg",
+    "source_slide": 7,
+    "source_shape_id": "16",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "shield": {
+    "file": "shield.svg",
+    "source_slide": 12,
+    "source_shape_id": "7",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "arrow-right": {
+    "file": "arrow-right.svg",
+    "source_slide": 1,
+    "source_shape_id": "121",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "cycle": {
+    "file": "cycle.svg",
+    "source_slide": 9,
+    "source_shape_id": "34",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "link": {
+    "file": "link.svg",
+    "source_slide": 6,
+    "source_shape_id": "58",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "gear": {
+    "file": "gear.svg",
+    "source_slide": 10,
+    "source_shape_id": "27",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "comment": {
+    "file": "comment.svg",
+    "source_slide": 3,
+    "source_shape_id": "21",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "mail": {
+    "file": "mail.svg",
+    "source_slide": 7,
+    "source_shape_id": "25",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "document": {
+    "file": "document.svg",
+    "source_slide": 3,
+    "source_shape_id": "48",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  },
+  "search": {
+    "file": "search.svg",
+    "source_slide": 10,
+    "source_shape_id": "12",
+    "source_sha256": "4d679d6a58e59d3b173a308e3bdb7fb89214a6bf69e9e7d0fd8b71985b4c94cf"
+  }
+}

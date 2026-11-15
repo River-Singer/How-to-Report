@@ -1,0 +1,17 @@
+Representation: original_summary
+Research date: 2026-11-14 UTC
+Read scope: UK Analysis Function choosing-visualisations page (145 web text lines) and accessible-charts checklist (252 lines), with substantive checks at lines 137–232; Microsoft crop-to-shape Windows guidance lines 133–165, Office crop guidance lines 127–206, OpenXML SourceRectangle definition/remarks lines 194–215, and PowerPoint CropLeft lines 30–68. Local PPT-Master technical methods and actual derived runtime code were inspected separately. Original templates, icons and chart catalogues are not redistributed here.
+
+UK choosing source: https://analysisfunction.civilservice.gov.uk/support/communicating-analysis/introduction-to-data-visualisation-e-learning/data-visualisation-e-learning-module-2-choosing-the-right-data-visualisation/
+UK checklist source: https://analysisfunction.civilservice.gov.uk/policy-store/charts-a-checklist/
+Original summary: Choose an expression from the question, such as category comparison, time change, part-to-whole composition or exact lookup. Bars use a zero baseline, related comparisons need comparable scales, and pie segments need a coherent whole. Labels, units, sources and reading size affect usability. Website-specific publishing arrangements require their own context.
+
+Microsoft crop-to-shape source: https://support.microsoft.com/en-us/office/graphics-visuals/crop-a-picture-to-fit-in-a-shape
+Microsoft crop source: https://support.microsoft.com/en-us/office/graphics-visuals/crop-a-picture-in-office
+OpenXML source: https://learn.microsoft.com/en-us/dotnet/api/documentformat.openxml.drawing.sourcerectangle?view=openxml-3.0.1
+PowerPoint API source: https://learn.microsoft.com/en-us/office/vba/api/powerpoint.pictureformat.cropleft
+Original summary: Fill keeps aspect ratio while cropping overflow, whereas Fit shows the full picture within the frame. Moving the picture adjusts the visible focus. Ordinary cropping retains the hidden area until the user separately removes cropped regions. OpenXML stores visible source bounds as crop percentages. CropLeft point values are interpreted relative to the picture's original dimensions. Native crop parameters support subsequent editing, subject to actual export and host checks.
+
+Project adaptation: Prefer graphical relationships for spoken reporting, reserve tables for tasks needing exact lookup or cross-positioning, and use matching native data. Combo and doughnut selection conditions are project synthesis supported by the locally studied production methods. Current template chart parameters expose column and line only. Inspect an image's purpose, effective content area and required labels before choosing contain, cover and one of nine alignment anchors. Keep original local resources, verify native source crops, and assess the final visible subject. Complete frame preservation and original embedded-file byte identity are different checks.
+
+Reuse: Original project summaries. Underlying publications, trademarks and source content retain their respective rights. No product endorsement, full linked-library review or general quality guarantee is claimed.

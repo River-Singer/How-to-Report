@@ -61,11 +61,12 @@ class OfflineSourcesTest(unittest.TestCase):
         sources = {source['id']: source for source in data['sources']}
         baseline = json.loads((PROJECT / 'tests/fixtures/knowledge-sources-0.8.4.json').read_text(encoding='utf-8'))
         old_ids = set(baseline['archives']['skill-src/shared/references/method-sources'])
-        new_summary_ids = {'consider-opposite', 'prospective-hindsight', 'self-presentation-calibration'}
+        new_summary_ids = {'consider-opposite', 'prospective-hindsight', 'self-presentation-calibration',
+                           'business-analysis-practice', 'chart-image-production', 'chinese-report-expression'}
         self.assertEqual(set(sources), old_ids | new_summary_ids | {'yu-zenker-2020-fulltext'})
         summaries = {identity for identity, source in sources.items() if source['representation'] == 'original_summary'}
         self.assertEqual(summaries, old_ids | new_summary_ids)
-        self.assertEqual(len(summaries), 35)
+        self.assertEqual(len(summaries), 38)
         fulltext = sources['yu-zenker-2020-fulltext']
         self.assertEqual(fulltext['representation'], 'source_text')
         self.assertEqual(fulltext['canonical_url'], 'https://d-nb.info/121098167X/34')
