@@ -10,7 +10,7 @@ from pathlib import Path
 import shutil
 import tempfile
 
-from report_ppt import DEFAULT_TEMPLATE, SKILL_ROOT, external_target, load_template
+from report_ppt import DEFAULT_TEMPLATE, SKILL_ROOT, external_target, load_template, read_json
 
 SCHEMA = "how-to-report.storybook.v1"
 RESOURCES = SKILL_ROOT / "assets/storybook"
@@ -144,6 +144,11 @@ def _add_invocation(record):
         record["preview_scope"] = "引擎按现有report-14pt规范计算的角色、段落与富文本示例，可切换实际预览页"
         record["style_scope"] = "通过brief.design_profile绑定全局文字规范；原生源格式保持不变"
     elif kind == "component":
+        variant_example = record.get("variant_examples", {}).get("arrow-ring")
+        if variant_example:
+            record["invocation"] = {"mode": "author", "request": read_json(SKILL_ROOT / variant_example["example_ref"])}
+            record["preview_scope"] = "arrow-ring变体的实际合成示例；其他topology布局见组件合同，不表示数量占比"
+            return
         examples = record.get("contract", {}).get("examples", {})
         if examples:
             record["invocation"] = {"mode": "author", "request": _leaf_story(next(iter(examples.values())), record["label"])}
@@ -275,7 +280,8 @@ def _publish(records, stage, catalog, title):
         chunks[chunk].append(record)
         index.append({key: copy.deepcopy(record.get(key)) for key in (
             "id", "kind", "label", "purpose", "executable", "mode", "source_id", "source_name",
-            "slide_number", "hidden", "conditional", "visible_default", "categories", "relations", "preview", "preview_scope")})
+            "slide_number", "hidden", "conditional", "visible_default", "categories", "relations", "preview", "preview_scope",
+            "presentation_role", "selection_guidance")})
         index[-1]["chunk"] = f"chunk-{chunk:04}"
     for number, records_chunk in enumerate(chunks):
         (stage / "data" / f"chunk-{number:04}.js").write_text(

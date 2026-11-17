@@ -1,0 +1,1944 @@
+{
+  "schema_version": "0.1",
+  "project_id": "visual-composition-v2",
+  "revision": 1,
+  "brief": {
+    "audience": "Engine engineering demonstration",
+    "purpose": "Controlled before/after comparison",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default"
+  },
+  "sources": [],
+  "facts": {},
+  "pages": [
+    {
+      "id": "platform-before",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "platform-before-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "platform-before-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "共同平台支持三项并行能力",
+              "role": "title"
+            }
+          },
+          {
+            "id": "platform-before-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 24,
+            "children": [
+              {
+                "id": "platform-before-0",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-before-0-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "对象管理",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-before-0-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "维护对象与负责人",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "platform-before-0-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "保留关系与版本",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "platform-before-1",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-before-1-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "方案比较",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-before-1-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "统一比较基准",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "platform-before-1-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "说明差异与影响",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "platform-before-2",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-before-2-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "执行协同",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-before-2-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "明确任务与状态",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "platform-before-2-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "跟踪反馈与调整",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "platform-before-shared",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-before-shared-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "共同支撑：统一数据平台",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-before-shared-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "主数据与权限 · 版本记录 · 可追溯指标",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              }
+            ]
+          },
+          {
+            "id": "platform-before-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 基础容器 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "id": "platform-after",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "platform-after-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "platform-after-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "共同平台支持三项并行能力",
+              "role": "title"
+            }
+          },
+          {
+            "id": "platform-after-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 24,
+            "children": [
+              {
+                "id": "platform-after-0",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-after-0-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "对象管理",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-after-0-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "维护对象与负责人",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "platform-after-0-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "保留关系与版本",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted",
+                  "accent": {
+                    "kind": "rule",
+                    "color": "primary",
+                    "thickness": 4,
+                    "gap": 12
+                  }
+                }
+              },
+              {
+                "id": "platform-after-1",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-after-1-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "方案比较",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-after-1-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "统一比较基准",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "platform-after-1-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "说明差异与影响",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted",
+                  "accent": {
+                    "kind": "rule",
+                    "color": "secondary",
+                    "thickness": 4,
+                    "gap": 12
+                  }
+                }
+              },
+              {
+                "id": "platform-after-2",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-after-2-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "执行协同",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "platform-after-2-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "明确任务与状态",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "platform-after-2-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "跟踪反馈与调整",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted",
+                  "accent": {
+                    "kind": "rule",
+                    "color": "tertiary",
+                    "thickness": 4,
+                    "gap": 12
+                  }
+                }
+              },
+              {
+                "id": "platform-after-shared",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "platform-after-shared-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "共同支撑：统一数据平台",
+                      "role": "heading",
+                      "style": {
+                        "color": "surface"
+                      }
+                    }
+                  },
+                  {
+                    "id": "platform-after-shared-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "主数据与权限 · 版本记录 · 可追溯指标",
+                      "role": "body",
+                      "style": {
+                        "color": "surface"
+                      }
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "primary"
+                },
+                "column_span": 3
+              }
+            ]
+          },
+          {
+            "id": "platform-after-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 语义视觉组合 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "id": "flow-before",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "flow-before-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "flow-before-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "从问题识别到应用的四阶段交接",
+              "role": "title"
+            }
+          },
+          {
+            "id": "flow-before-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 28,
+            "children": [
+              {
+                "id": "flow-before-stage-0",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "flow-before-stage-0-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "1  识别问题",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-0-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "明确当前障碍",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-0-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "记录预期结果",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "flow-before-stage-1",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "flow-before-stage-1-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "2  形成方案",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-1-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "比较可行选项",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-1-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "确认资源条件",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "flow-before-stage-2",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "flow-before-stage-2-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "3  验证结果",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-2-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "运行受控试点",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-2-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "对照验收依据",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "flow-before-stage-3",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "flow-before-stage-3-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "4  推进应用",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-3-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "落实责任分工",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "flow-before-stage-3-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "持续收集反馈",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              }
+            ]
+          },
+          {
+            "id": "flow-before-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 基础容器 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "id": "flow-after",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "flow-after-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "flow-after-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "从问题识别到应用的四阶段交接",
+              "role": "title"
+            }
+          },
+          {
+            "id": "flow-after-body",
+            "type": "column",
+            "gap": 24,
+            "children": [
+              {
+                "id": "flow-after-sequence",
+                "type": "row",
+                "gap": 28,
+                "connect": "sequence",
+                "relation_ref": "explicit-four-stage-handoff",
+                "children": [
+                  {
+                    "id": "flow-after-head-0",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-heading-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "1  识别问题",
+                          "role": "heading",
+                          "style": {
+                            "color": "surface",
+                            "align": "center"
+                          }
+                        }
+                      }
+                    ],
+                    "padding": [
+                      32,
+                      24,
+                      40,
+                      24
+                    ],
+                    "grow": 1,
+                    "basis": 0,
+                    "surface": {
+                      "shape": "chevron",
+                      "fill": "primary"
+                    }
+                  },
+                  {
+                    "id": "flow-after-head-1",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-heading-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "2  形成方案",
+                          "role": "heading",
+                          "style": {
+                            "color": "surface",
+                            "align": "center"
+                          }
+                        }
+                      }
+                    ],
+                    "padding": [
+                      32,
+                      24,
+                      40,
+                      24
+                    ],
+                    "grow": 1,
+                    "basis": 0,
+                    "surface": {
+                      "shape": "chevron",
+                      "fill": "primary"
+                    }
+                  },
+                  {
+                    "id": "flow-after-head-2",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-heading-2",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "3  验证结果",
+                          "role": "heading",
+                          "style": {
+                            "color": "surface",
+                            "align": "center"
+                          }
+                        }
+                      }
+                    ],
+                    "padding": [
+                      32,
+                      24,
+                      40,
+                      24
+                    ],
+                    "grow": 1,
+                    "basis": 0,
+                    "surface": {
+                      "shape": "chevron",
+                      "fill": "primary"
+                    }
+                  },
+                  {
+                    "id": "flow-after-head-3",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-heading-3",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "4  推进应用",
+                          "role": "heading",
+                          "style": {
+                            "color": "surface",
+                            "align": "center"
+                          }
+                        }
+                      }
+                    ],
+                    "padding": [
+                      32,
+                      24,
+                      40,
+                      24
+                    ],
+                    "grow": 1,
+                    "basis": 0,
+                    "surface": {
+                      "shape": "chevron",
+                      "fill": "primary"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "flow-after-details-grid",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 28,
+                "children": [
+                  {
+                    "id": "flow-after-details-0",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-detail-0-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "明确当前障碍",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "flow-after-detail-0-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "记录预期结果",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rail",
+                        "color": "secondary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  },
+                  {
+                    "id": "flow-after-details-1",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-detail-1-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "比较可行选项",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "flow-after-detail-1-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "确认资源条件",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rail",
+                        "color": "secondary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  },
+                  {
+                    "id": "flow-after-details-2",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-detail-2-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "运行受控试点",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "flow-after-detail-2-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "对照验收依据",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rail",
+                        "color": "secondary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  },
+                  {
+                    "id": "flow-after-details-3",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "flow-after-detail-3-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "落实责任分工",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "flow-after-detail-3-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "持续收集反馈",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rail",
+                        "color": "secondary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "flow-after-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 语义视觉组合 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "id": "cycle-before",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "cycle-before-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "cycle-before-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "用闭环表达过程，用分区区分能力和适用范围",
+              "role": "title"
+            }
+          },
+          {
+            "id": "cycle-before-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 24,
+            "children": [
+              {
+                "id": "cycle-before-loop",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "cycle-before-loop-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "持续改进闭环",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "cycle-before-loop-line-0",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "发现",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "cycle-before-loop-line-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "设计",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "cycle-before-loop-line-2",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "验证",
+                      "role": "body"
+                    }
+                  },
+                  {
+                    "id": "cycle-before-loop-line-3",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "改进",
+                      "role": "body"
+                    }
+                  }
+                ],
+                "padding": 24,
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "cycle-before-right",
+                "type": "column",
+                "gap": 24,
+                "children": [
+                  {
+                    "id": "cycle-before-abilities",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "cycle-before-abilities-title",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "执行能力",
+                          "role": "heading"
+                        }
+                      },
+                      {
+                        "id": "cycle-before-abilities-line-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "问题识别 · 方案比较",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "cycle-before-abilities-line-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "证据验证 · 改进行动",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 24,
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "cycle-before-scopes",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "cycle-before-scopes-title",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "适用维度",
+                          "role": "heading"
+                        }
+                      },
+                      {
+                        "id": "cycle-before-scopes-line-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "按项目 · 按产品",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "cycle-before-scopes-line-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "按设备 · 按场景",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 24,
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cycle-before-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 基础容器 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "id": "cycle-after",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "cycle-after-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "cycle-after-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "用闭环表达过程，用分区区分能力和适用范围",
+              "role": "title"
+            }
+          },
+          {
+            "id": "cycle-after-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 24,
+            "children": [
+              {
+                "id": "cycle-after-loop",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "cycle-after-loop-heading",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "持续改进闭环",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "cycle-after-cycle",
+                    "type": "leaf",
+                    "height": 310,
+                    "element": {
+                      "type": "component",
+                      "component": "topology",
+                      "layout": "cycle",
+                      "nodes": [
+                        {
+                          "id": "stage-0",
+                          "label": "发现"
+                        },
+                        {
+                          "id": "stage-1",
+                          "label": "设计"
+                        },
+                        {
+                          "id": "stage-2",
+                          "label": "验证"
+                        },
+                        {
+                          "id": "stage-3",
+                          "label": "改进"
+                        }
+                      ],
+                      "edges": [
+                        {
+                          "id": "edge-0",
+                          "from": "stage-0",
+                          "to": "stage-1",
+                          "arrow": true
+                        },
+                        {
+                          "id": "edge-1",
+                          "from": "stage-1",
+                          "to": "stage-2",
+                          "arrow": true
+                        },
+                        {
+                          "id": "edge-2",
+                          "from": "stage-2",
+                          "to": "stage-3",
+                          "arrow": true
+                        },
+                        {
+                          "id": "edge-3",
+                          "from": "stage-3",
+                          "to": "stage-0",
+                          "arrow": true
+                        }
+                      ],
+                      "variant": "arrow-ring"
+                    }
+                  }
+                ],
+                "padding": 20
+              },
+              {
+                "id": "cycle-after-right",
+                "type": "column",
+                "gap": 28,
+                "children": [
+                  {
+                    "id": "cycle-after-abilities",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "cycle-after-abilities-title",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "执行能力",
+                          "role": "heading"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-abilities-line-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "问题识别 · 方案比较",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-abilities-line-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "证据验证 · 改进行动",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 24,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rule",
+                        "color": "secondary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  },
+                  {
+                    "id": "cycle-after-scopes",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "cycle-after-scopes-title",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "适用维度",
+                          "role": "heading"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-scopes-line-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "按项目 · 按产品",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-scopes-line-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "按设备 · 按场景",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 24,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rule",
+                        "color": "tertiary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cycle-after-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 语义视觉组合 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    },
+    {
+      "id": "integrated",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "integrated-root",
+        "type": "column",
+        "gap": 20,
+        "children": [
+          {
+            "id": "integrated-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "一套数据基础贯穿规划、验证和执行",
+              "role": "title"
+            }
+          },
+          {
+            "id": "integrated-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 20,
+            "children": [
+              {
+                "id": "integrated-abilities",
+                "type": "column",
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "integrated-abilities-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "三项并行能力",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "integrated-abilities-items",
+                    "type": "column",
+                    "gap": 24,
+                    "children": [
+                      {
+                        "id": "integrated-objects",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-objects-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "对象管理",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-objects-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "维护负责人、关系与版本",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          16,
+                          12,
+                          16,
+                          12
+                        ],
+                        "surface": {
+                          "fill": "surface",
+                          "accent": {
+                            "kind": "rail",
+                            "color": "secondary",
+                            "thickness": 4,
+                            "gap": 12
+                          }
+                        }
+                      },
+                      {
+                        "id": "integrated-options",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-options-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "方案比较",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-options-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "统一基准，说明差异与影响",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          16,
+                          12,
+                          16,
+                          12
+                        ],
+                        "surface": {
+                          "fill": "surface",
+                          "accent": {
+                            "kind": "rail",
+                            "color": "secondary",
+                            "thickness": 4,
+                            "gap": 12
+                          }
+                        }
+                      },
+                      {
+                        "id": "integrated-execution",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-execution-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "执行协同",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-execution-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "落实责任，跟踪状态与反馈",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          16,
+                          12,
+                          16,
+                          12
+                        ],
+                        "surface": {
+                          "fill": "surface",
+                          "accent": {
+                            "kind": "rail",
+                            "color": "secondary",
+                            "thickness": 4,
+                            "gap": 12
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": 20,
+                "surface": {
+                  "fill": "surfaceMuted",
+                  "accent": {
+                    "kind": "rule",
+                    "color": "secondary",
+                    "thickness": 4,
+                    "gap": 12
+                  }
+                }
+              },
+              {
+                "id": "integrated-process",
+                "type": "column",
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "integrated-process-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "有序工作流",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "integrated-sequence",
+                    "type": "column",
+                    "gap": 24,
+                    "children": [
+                      {
+                        "id": "integrated-step-0",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-step-0-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "1  形成方案",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-step-0-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "明确取舍与资源条件",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          20,
+                          12,
+                          20,
+                          12
+                        ],
+                        "surface": {
+                          "shape": "roundRect",
+                          "fill": "surface"
+                        }
+                      },
+                      {
+                        "id": "integrated-step-1",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-step-1-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "2  验证结果",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-step-1-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "用试点证据对照验收依据",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          20,
+                          12,
+                          20,
+                          12
+                        ],
+                        "surface": {
+                          "shape": "roundRect",
+                          "fill": "surface"
+                        }
+                      },
+                      {
+                        "id": "integrated-step-2",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-step-2-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "3  推进应用",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-step-2-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "明确责任并跟踪执行反馈",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          20,
+                          12,
+                          20,
+                          12
+                        ],
+                        "surface": {
+                          "shape": "roundRect",
+                          "fill": "surface"
+                        }
+                      }
+                    ],
+                    "connect": "sequence",
+                    "relation_ref": "proposal-validation-deployment"
+                  }
+                ],
+                "padding": 20,
+                "surface": {
+                  "fill": "surfaceMuted",
+                  "accent": {
+                    "kind": "rule",
+                    "color": "primary",
+                    "thickness": 4,
+                    "gap": 12
+                  }
+                }
+              },
+              {
+                "id": "integrated-evidence",
+                "type": "column",
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "integrated-evidence-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "对应交付证据",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "integrated-evidence-items",
+                    "type": "column",
+                    "gap": 24,
+                    "children": [
+                      {
+                        "id": "integrated-proposal",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-proposal-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "方案说明",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-proposal-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "保留选择理由与适用边界",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          16,
+                          12,
+                          16,
+                          12
+                        ],
+                        "surface": {
+                          "fill": "surface",
+                          "accent": {
+                            "kind": "rail",
+                            "color": "secondary",
+                            "thickness": 4,
+                            "gap": 12
+                          }
+                        }
+                      },
+                      {
+                        "id": "integrated-validation",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-validation-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "验证记录",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-validation-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "记录结果、偏差与待办事项",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          16,
+                          12,
+                          16,
+                          12
+                        ],
+                        "surface": {
+                          "fill": "surface",
+                          "accent": {
+                            "kind": "rail",
+                            "color": "secondary",
+                            "thickness": 4,
+                            "gap": 12
+                          }
+                        }
+                      },
+                      {
+                        "id": "integrated-ledger",
+                        "type": "column",
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "integrated-ledger-title",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "执行台账",
+                              "role": "bodyStrong"
+                            }
+                          },
+                          {
+                            "id": "integrated-ledger-detail",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "text": "追踪责任、状态与完成依据",
+                              "role": "body"
+                            }
+                          }
+                        ],
+                        "padding": [
+                          16,
+                          12,
+                          16,
+                          12
+                        ],
+                        "surface": {
+                          "fill": "surface",
+                          "accent": {
+                            "kind": "rail",
+                            "color": "secondary",
+                            "thickness": 4,
+                            "gap": 12
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "padding": 20,
+                "surface": {
+                  "fill": "surfaceMuted",
+                  "accent": {
+                    "kind": "rule",
+                    "color": "tertiary",
+                    "thickness": 4,
+                    "gap": 12
+                  }
+                }
+              },
+              {
+                "id": "integrated-platform",
+                "type": "column",
+                "gap": 8,
+                "children": [
+                  {
+                    "id": "integrated-platform-title",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "共同基础：统一数据、权限和版本记录",
+                      "role": "heading",
+                      "style": {
+                        "color": "surface"
+                      }
+                    }
+                  },
+                  {
+                    "id": "integrated-platform-detail",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "同一对象身份 · 共享比较基准 · 可追溯证据链",
+                      "role": "body",
+                      "style": {
+                        "color": "surface"
+                      }
+                    }
+                  }
+                ],
+                "padding": [
+                  24,
+                  18,
+                  24,
+                  18
+                ],
+                "surface": {
+                  "fill": "primary"
+                },
+                "column_span": 3
+              }
+            ]
+          },
+          {
+            "id": "integrated-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "中性综合样例 · 并行能力 / 有序流程 / 证据映射 / 共同基础 · 不属于控制变量对照",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    }
+  ]
+}

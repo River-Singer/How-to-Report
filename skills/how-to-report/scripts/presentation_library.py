@@ -18,7 +18,7 @@ COMPONENT_RELATIONS = {
     "progress-ring": ["part-to-whole", "比例", "占比"],
     "paragraph-flow": ["explanation", "解释"],
     "evidence-map": ["evidence-action", "证据", "行动"],
-    "topology": ["relationship", "hierarchy", "结构", "拓扑", "架构"],
+    "topology": ["relationship", "hierarchy", "cycle", "结构", "拓扑", "架构", "闭环", "厚曲箭头"],
 }
 
 
@@ -71,9 +71,16 @@ def _records(template, *, include_icons=True):
         records.append(_record("primitive." + name, "primitive", "Editable scene " + name,
                                compiler_ref="scripts/presentation_svg.py"))
     for name, definition in COMPONENTS.items():
+        visual = {}
+        if name == "topology":
+            preview_manifest = read_json(SYSTEM / "previews/topology-arrow-ring.json")
+            visual = {"preview_refs": preview_manifest["preview_refs"],
+                      "variant_examples": {"arrow-ring": {"example_ref": preview_manifest["example_ref"],
+                          "compile_contract": "normal build --geometry-policy computed",
+                          "scope": "qualitative cycle; 3..6 measured thick arrows; not quantitative shares"}}}
         records.append(_record("component." + name, "component", definition["purpose"],
                                COMPONENT_RELATIONS.get(name, []), capacity=definition.get("capacity"),
-                               compiler_ref="scripts/presentation_topology.py" if name == "topology" else "scripts/presentation_composition.py"))
+                               compiler_ref="scripts/presentation_topology.py" if name == "topology" else "scripts/presentation_composition.py", **visual))
     if include_icons:
         from presentation_icons import icon_catalog
         icon_offset = 0
@@ -106,6 +113,8 @@ def _records(template, *, include_icons=True):
             records.append(_record("template." + summary["id"], "template", summary["purpose"],
                 summary["relations"], family=family_id, variant=variant_id, capacity=summary["capacity"],
                 label=summary["label"], description=summary["description"], preview_refs=preview_refs,
+                presentation_role="structural-template",
+                selection_guidance="结构基础候选；成稿前查看实际预览，并与匹配语义和容量的 designed-composition 比较。可执行不等于视觉设计已完成。",
                 catalog_revision=catalog.get("revision"), catalog_sha256=catalog_hash,
                 compiler_ref="scripts/report_ppt.py", schema_scope="catalog-adapter-on-describe"))
     registry = read_json(SYSTEM / "registry.json")
@@ -150,12 +159,16 @@ def library(template=DEFAULT_TEMPLATE, *, identifier=None, kind=None, relationsh
             raise ValueError(f"unknown library ID {identifier!r}")
         return _describe(record, template)
     terms = query.casefold().split()
+    role_query = query.strip().casefold()
+    known_roles = {record["presentation_role"].casefold() for record in records if record.get("presentation_role")}
+    exact_role = role_query in known_roles
     matches = [record for record in records
                if (kind is None or record["kind"] == kind)
                and (status is None or record["status"] == status)
                and (executable is None or record["executable"] == executable)
                and (relationship is None or relationship in record["relations"])
-               and all(term in json.dumps(record, ensure_ascii=False).casefold() for term in terms)]
+               and (record.get("presentation_role", "").casefold() == role_query if exact_role
+                    else all(term in json.dumps(record, ensure_ascii=False).casefold() for term in terms))]
     matches.sort(key=lambda record: record["id"])
     return {"library_version": "0.1", "total": len(matches), "offset": offset, "limit": limit,
             "next_offset": offset + limit if offset + limit < len(matches) else None,
@@ -195,7 +208,7 @@ def _describe(record, template):
         result["tokens"] = values
     elif kind == "recipe":
         result["schema"] = read_json(SYSTEM / "recipe-request.schema.json")
-        result["example"] = read_json(SYSTEM / "examples/three-recipes.json")
+        result["example"] = read_json(SKILL_ROOT / result.get("example_ref", "assets/design-system/examples/three-recipes.json"))
     else:
         vocabulary = read_json(SYSTEM / "visual-vocabulary.json")
         result["definition"] = next(entry for entry in vocabulary["entries"] if entry["id"] == identifier)

@@ -71,6 +71,8 @@ _SEMANTIC_ATTRS = (
     "data-pptx-object",
     "data-pptx-prst",
     "data-pptx-frame",
+    "data-pptx-shape-id",
+    "data-pptx-shape-scope",
 )
 _TEMPLATE_ATOM_ATTRS = (
     "data-pptx-layer",

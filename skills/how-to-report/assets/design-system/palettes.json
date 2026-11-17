@@ -254,6 +254,53 @@
         "relationship": "project-derived semantic assignment; selected source hex swatches, generated light tints; not an official PPT theme",
         "checked_on": "2026-11-16"
       }
+    },
+    {
+      "id": "consulting-spectrum",
+      "label": "青绿多彩 · 结构与重点",
+      "purpose": "草绿、青蓝、深蓝和中性灰建立结构层级；橘色强调、红色少量状态提示。分类色可区分阶段，不表示数值大小。",
+      "roles": {
+        "primary": "#07366E",
+        "secondary": "#00A4CC",
+        "tertiary": "#8AB524",
+        "accent": "#E98732",
+        "body": "#333333",
+        "text": "#333333",
+        "muted": "#A6A6A6",
+        "textMuted": "#A6A6A6",
+        "surface": "#FFFFFF",
+        "surfaceMuted": "#F3F5F4",
+        "border": "#CDD3D5",
+        "accentSurface": "#FFF2E7",
+        "success": "#4F7F1C",
+        "warning": "#B85B13",
+        "danger": "#C7473D",
+        "positive": "#4F7F1C",
+        "negative": "#C7473D",
+        "neutral": "#969DA4"
+      },
+      "categorical": [
+        "#8AB524",
+        "#00A4CC",
+        "#07366E",
+        "#E98732",
+        "#C7473D",
+        "#969DA4"
+      ],
+      "sequential": [
+        "#EDF6F5",
+        "#007C8D"
+      ],
+      "diverging": [
+        "#C7473D",
+        "#F4F4F4",
+        "#4F7F1C"
+      ],
+      "provenance": {
+        "sources": [],
+        "relationship": "project-authored swatches inspired by the user-provided consulting slide and explicit green/cyan/navy/grey/orange/red preference; not an official Deloitte theme",
+        "checked_on": "2026-11-17"
+      }
     }
   ]
 }

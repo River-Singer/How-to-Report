@@ -21,7 +21,7 @@
 | 图种与拓扑能力 | [图表使用场景](../skills/how-to-report/references/ppt-chart-usage.md)、[计算排版合同](../skills/how-to-report/references/ppt-layout.md)和[Storybook](../skills/how-to-report/references/ppt-storybook.md)：先查真实输入、数量域及编辑等级再调用 |
 | 是否还可减少一页 | [全稿减页审核](../skills/report-audit/references/ppt-visual-review.md#全稿减页挑战)：先保理解关系，再用真实测排证明容量，不把删内容或藏入不可用备注当合页 |
 
-16种模式包含通栏、等宽双栏、2:1和1:2主次、三栏、2×2、上总下分、标签解释行、图证解释、横向条带、中心外围/循环、时间线、流程附注、分层架构、连续正文多栏和同维度对照行。它们并非16个独立算法；当前没有完整CSS、自动跨栏续排、通用keep/孤行控制、span/subgrid或任意连线避障。
+16种模式包含通栏、等宽双栏、2:1和1:2主次、三栏、2×2、上总下分、标签解释行、图证解释、横向条带、中心外围/循环、时间线、流程附注、分层架构、连续正文多栏和同维度对照行。它们并非16个独立算法；显式列Grid直接子项支持有限column_span，当前没有完整CSS、自动跨栏续排、通用keep/孤行控制、row_span/subgrid或任意连线避障。
 
 ## 中性结构样例如何取用
 

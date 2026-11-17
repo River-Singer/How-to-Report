@@ -249,6 +249,10 @@ class SceneRenderer:
         x, y, width, height = frame(item.get("frame"), item["id"], self.canvas, allow_zero=kind == "line")
         style = {"fill": self.color(item.get("fill", "none")), "stroke": self.color(item.get("stroke", "none")),
                  "stroke-width": number(item.get("stroke_width", 1), item["id"] + ".stroke_width", 0)}
+        if style["stroke"] == "none":
+            # Registered DrawingML presets reject stroke attributes without a
+            # visible stroke. Filled presets are valid, including layout surfaces.
+            style.pop("stroke-width")
         attrs = {**self.identity(item), **style}
         if kind in {"rect", "roundRect"}:
             radius = number(item.get("rx", 8 if kind == "roundRect" else 0), item["id"] + ".rx", 0)
@@ -265,7 +269,7 @@ class SceneRenderer:
         else:
             fragment = self.helpers[2](kind, (x, y, width, height), element_id=item["id"], style={k: str(v) for k,v in style.items()})
             result = ET.fromstring(fragment)
-            result.attrib.update(self.identity(item))
+            result.attrib.update({key: str(value) for key, value in self.identity(item).items()})
         if item.get("rotation"):
             result.set("transform", f"rotate({number(item['rotation'], 'rotation'):g} {x+width/2:g} {y+height/2:g})")
         return result
@@ -338,7 +342,7 @@ class SceneRenderer:
         else:
             fragment = self.helpers[2](preset, (x,y,width,height), element_id=item["id"], object_kind="connector", style=style)
             result = ET.fromstring(fragment)
-            result.attrib.update(self.identity(item))
+            result.attrib.update({key: str(value) for key, value in self.identity(item).items()})
             if end[0] < start[0] or end[1] < start[1]:
                 sx, sy = (-1 if end[0] < start[0] else 1), (-1 if end[1] < start[1] else 1)
                 result.set("transform", f"translate({2*x+width if sx<0 else 0:g} {2*y+height if sy<0 else 0:g}) scale({sx} {sy})")

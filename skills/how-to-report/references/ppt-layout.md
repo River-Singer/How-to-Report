@@ -47,7 +47,17 @@ python <Skill>/scripts/report_engine.py build --input <author.json> --output <ne
 
 尺寸和间距使用SVG px，PPT字号沿px×0.75转换。padding按left/top/right/bottom排列，也支持单个非负数。width/height及basis默认为auto，grow/shrink默认0，align默认stretch，justify默认start。需要分配剩余空间时显式设置grow或fr；需要收缩时显式设置shrink。auto宽按内容偏好处理，不能假定其等同浏览器CSS行为。
 
-容器支持gap、padding、align、justify，以及可选surface背景，背景生成稳定的`节点id--surface`形状。容器本身主要承担空间计算，叶对象默认同scope平铺，局部组件保留自己的原生group。文字复用同一字体角色、行高、内边距和DrawingML估算器；超容量会返回诊断，不自动缩字、删文或拆页。节点、深度及轨道上限以layouts返回的limits为准。当前不支持百分比、span、wrap、subgrid、绝对定位及语义自动拆页。
+容器支持gap、padding、align、justify，以及可选surface背景，背景生成稳定的`节点id--surface`形状。容器本身主要承担空间计算，叶对象默认同scope平铺，局部组件保留自己的原生group。文字复用同一字体角色、行高、内边距和DrawingML估算器；超容量会返回诊断，不自动缩字、删文或拆页。节点、深度及轨道上限以layouts返回的limits为准。当前支持下述有限`column_span`，不支持百分比、row_span、wrap、subgrid、绝对定位及语义自动拆页。
+
+### 跨列与语义视觉组合
+
+显式列Grid的直接子项可声明`column_span: 2`，范围为1到列数的整数。程序按输入顺序放置，当前行剩余列不足就进入下一行，不回填前行空位；测量宽度为覆盖轨道之和加内部沟槽。跨列适合共同底座、共享平台或需要主次宽度的证据区，不代表文本自动跨栏续排。`rows`须符合实际占用行数，`grid_cell`记录零起始行列、span及分配宽度。跨列的最小宽度不足时按fr权重（auto权重1）增加可伸缩轨道的下限；这是保守的单调约束算法，不是完整CSS内在轨道协商。与auto_fit同时声明column_span、或uniform_components配合大于1的span会明确拒绝。旧单格Grid接口不变。
+
+容器`surface.accent`可声明`{"kind":"rail","color":"primary","thickness":4,"gap":12}`。rail沿左边、rule沿上边、bracket沿左边及上下短折返建立分区；程序根据容器实测尺寸生成原生矩形，颜色继承tokens，禁止渐变。有效padding在相应边至少预留thickness+gap，防止装饰覆盖文字；作者padding不被改写。bracket折返长为短边的四分之一，受容器宽度及线宽约束。稳定ID为`节点id--accent-rail/rule/top/bottom`；报告记录effective_padding和accent_ids。背景与accent属于装饰，不计入信息占用面积。该能力适用于有语义的组别和层级，不应给每个段落重复加边框。
+
+`row/column`显式声明`connect:"sequence"`才会生成相邻直接子项之间的有向连接，至少两项且gap大于0。端点必须是未旋转的区域形状叶或有surface的子容器，并且形状预设提供连接点。横排使用right→left，竖排使用bottom→top，连接器继承primary纯色并可在PPT继续编辑。并列能力、平级比较不声明sequence；引擎不根据位置推断因果。层序固定为父背景→父accent→关系线→子树，关系线位于子节点后方；connector_ids、端点ID和relation_ref可追溯。没有任意障碍路由，也没有全局CSS zIndex或自动原生容器group。
+
+可同时用已有chevron/ellipse等注册形状、progress-ring和拓扑组件表达方向、循环或比例，再用上述容器管理层级。算法负责尺寸、间距与端点；作者负责保证关系及形状语义成立。SVG和原生PPT沿同一场景顺序导出，几何通过后仍需查看PowerPoint成图。
 
 底部对齐的layout文字会按同一运行时可见下降部计算最小底部安全内边距。作者已留足空间时保留原值，空间不足时只在求解场景写入有效insets，原作者树保留原值。布局报告的computed_text_insets记录请求值、有效值和计算原因，实际字号与行距保持作者样式。
 
@@ -84,6 +94,10 @@ python <Skill>/scripts/report_engine.py build --input <author.json> --output <ne
 使用`type: "component", component: "topology"`，在scene中声明frame，或放进layout叶让求解器提供frame。`layout`选择tree、layered、radial、cycle或arch，nodes和edges保存参数化节点及关系。拓扑根据文字及可用空间计算原生形状、标签和同group连接器，继承当前tokens。树核父子关系，layered计算有向层级，radial/cycle按圆周分配，arch按椭圆弧计算。
 
 arch的可选interior接受同一种布局树，在弧内安全矩形中调用相同求解器，可继续放Grid、文字及普通组件。interior首版禁止递归topology。可选实色弧带及标记能力以components topology返回的合同为准。首版连接器为原生直线，可声明箭头；不声称实现任意折线路由，穿过非端点节点或不能安全容纳时明确失败。
+
+`layout: "cycle", variant: "arrow-ring"`提供3–6个阶段的厚曲箭头闭环，适合持续改进、生命周期或重复流程。各阶段等角度分配，只表达定性顺序，不能解释为数值占比。程序根据容器尺寸及阶段数计算圆半径、弧体、宽箭头、缝隙和水平文字安全区；每个弧段为原生可编辑自定义形状，标签为独立原生文本。正向或逆向显式闭环分别改变箭头方向；不会另叠直线连接器。默认cycle仍保留原有节点连线模式。
+
+厚曲箭头采用当前全局palette的categorical顺序，未指定palette时使用report-default；可显式设节点fill，默认文字颜色按实际背景选择可读的深色或白色。安全区检查排除中央孔及箭头尖端，文字放不下即报错，不缩字。该variant不接受node_width/node_height、节点width/height/shape/stroke或组件paint style；node_padding控制弧内文字净距，node_gap检查标签间距。当前不支持内嵌中心内容、徽标或任意路径布尔。完整参数和可调用示例沿`components topology`以及`library component.topology`读取。
 
 ## 单图标发现与使用
 

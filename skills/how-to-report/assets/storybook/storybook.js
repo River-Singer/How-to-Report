@@ -9,6 +9,7 @@
   let kind = "", page = 0, current = null, currentMode = "", currentPaletteDefault = null, activePalette = "", detailEpoch = 0;
   const selection = new Set(), loaded = new Map(), requests = new Map();
   const lookup = new Map(data.items.map(x=>[x.id,x]));
+  const presentationRoles = new Set(data.items.map(x=>x.presentation_role?.toLocaleLowerCase()).filter(Boolean));
   const displayOrder = new Map(["component", "recipe", "chart", "palette", "profile", "template", "icon", "native-page", "native-group", "native-atom", "primitive"].map((kind, index)=>[kind,index]));
   const browseItems = data.items.map((record,index)=>({record,index})).sort((a,b)=>(displayOrder.get(a.record.kind)??100)-(displayOrder.get(b.record.kind)??100)||a.index-b.index).map(item=>item.record);
   const native = r=>r.kind.startsWith("native-");
@@ -92,9 +93,10 @@
     return (await loaded.get(record.chunk)).find(x=>x.id===record.id);
   }
   function matches(r){
-    const q=$("search").value.trim().toLocaleLowerCase().split(/\s+/).filter(Boolean);
-    const text=[r.id,r.label,r.purpose,r.source_name,...(r.categories||[]),...(r.relations||[])].join(" ").toLocaleLowerCase();
-    return (!kind||r.kind===kind) && (!$("source").value||r.source_id===$("source").value) && (!$("category").value||(r.categories||r.relations||[]).includes($("category").value)) && (!$("executable").checked||r.executable===true) && ($("hidden").checked||(!r.hidden&&!r.conditional&&r.visible_default!==false)) && q.every(t=>text.includes(t));
+    const query=$("search").value.trim().toLocaleLowerCase(),q=query.split(/\s+/).filter(Boolean);
+    const text=[r.id,r.label,r.purpose,r.source_name,r.presentation_role,r.selection_guidance,...(r.categories||[]),...(r.relations||[])].join(" ").toLocaleLowerCase();
+    const queryMatch=presentationRoles.has(query)?r.presentation_role?.toLocaleLowerCase()===query:q.every(t=>text.includes(t));
+    return (!kind||r.kind===kind) && (!$("source").value||r.source_id===$("source").value) && (!$("category").value||(r.categories||r.relations||[]).includes($("category").value)) && (!$("executable").checked||r.executable===true) && ($("hidden").checked||(!r.hidden&&!r.conditional&&r.visible_default!==false)) && queryMatch;
   }
   function updateSelection(){ $("selection-count").textContent=`已选 ${selection.size} 个原生资产`;$("download-selection").disabled=!selection.size;$("clear-selection").disabled=!selection.size; }
   function render(){

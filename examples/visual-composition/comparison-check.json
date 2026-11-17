@@ -1,0 +1,66 @@
+{
+  "status": "pass",
+  "scope": "3 controlled pairs and 1 separate integrated synthetic example",
+  "controlled_variables": [
+    "body and title content units",
+    "font roles",
+    "design profile",
+    "palette",
+    "canvas"
+  ],
+  "excluded_from_content_equality": "caption labels identify before/after; page 7 is a separate composition, not a controlled pair",
+  "pairs": [
+    {
+      "before": "platform-before",
+      "after": "platform-after",
+      "content_units": 12,
+      "author_content_and_font_roles_equal": true,
+      "native_text_units_equal_ignoring_whitespace": true
+    },
+    {
+      "before": "flow-before",
+      "after": "flow-after",
+      "content_units": 13,
+      "author_content_and_font_roles_equal": true,
+      "native_text_units_equal_ignoring_whitespace": true
+    },
+    {
+      "before": "cycle-before",
+      "after": "cycle-after",
+      "content_units": 12,
+      "author_content_and_font_roles_equal": true,
+      "native_text_units_equal_ignoring_whitespace": true
+    }
+  ],
+  "integrated_row_alignment": [
+    {
+      "row": 1,
+      "same_top_and_height": true
+    },
+    {
+      "row": 2,
+      "same_top_and_height": true
+    },
+    {
+      "row": 3,
+      "same_top_and_height": true
+    }
+  ],
+  "cycle_native_curved_arrows": 4,
+  "cycle_native_labels_14pt": 4,
+  "cycle_images_and_straight_connectors": 0,
+  "native_chevrons": 4,
+  "attached_native_connectors": 3,
+  "duplicate_native_ids": 0,
+  "hashes": {
+    "comparison.author.json": "06cef6d96c7520454553cb083224473f87c3a7305669d2f4c3705595a865f1e5",
+    "visual-composition.pptx": "fefc5433134744cb61872d673489c38bd600daca1ea8c98268fa536da51b7956",
+    "previews/slide-01.png": "82d8633daef74bae8b15226389ff49beec931b720a056d7fa0a5b18a64d33a70",
+    "previews/slide-02.png": "c7f2692ee8fee34ee32e722794780d23ddc8b2662fb879360eb1ce9fc6e52957",
+    "previews/slide-03.png": "42b737d20aae5bacebcbfaabe90cb9709b757f298ad014e85c4f7279319bd570",
+    "previews/slide-04.png": "bcaa3122f8b49cc94be6d525b955d5b347f2b690f3a0f8c7464c6dee835a9fe2",
+    "previews/slide-05.png": "c9aed7df1177da2da996a1efc3fb7f82a1e2268a02c813e40f8bea8e25f04234",
+    "previews/slide-06.png": "db2835392aff36075be825e136a38191141c9ee89dd9a9e8837ee6ec080320dc",
+    "previews/slide-07.png": "5dcfd761751ca1ca4c54f57f746fcdc14dcf37b9eaa7b1d38fadc7288aa54ff7"
+  }
+}

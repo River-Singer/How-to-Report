@@ -35,7 +35,7 @@ def _tree_identity(root):
 def _compiler_identity():
     names=("presentation_compiler.py","presentation_composition.py","presentation_svg.py","presentation_document.py","presentation_typography.py",
            "report_ppt.py","report_ppt_layouts.py","report_ppt_source.py",
-           "presentation_library.py","presentation_recipes.py","presentation_layout.py","presentation_topology.py","presentation_chart_assets.py","presentation_palette.py",
+           "presentation_library.py","presentation_recipes.py","presentation_visual_recipes.py","presentation_layout.py","presentation_topology.py","presentation_cycle_arrows.py","presentation_chart_assets.py","presentation_palette.py",
            "presentation_content_diagnostics.py","presentation_text_profile.py")
     directory=Path(__file__).resolve().parent
     return {name:hashlib.sha256((directory/name).read_bytes()).hexdigest() for name in names}

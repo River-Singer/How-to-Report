@@ -128,6 +128,146 @@
         "采用前交清证据支持何种状况、动作回应何种原因或检验何种解释，以及结果怎样改变选择。组合器核输入、容量与排布，诊断和建议依据由上游实际分析与内容审阅负责。",
         "诊断尚未完成时，先制作有据解释页和补数清单，动作矩阵按本场用途选择。"
       ]
+    },
+    {
+      "id": "recipe.editorial-pillars",
+      "kind": "recipe",
+      "version": "0.1",
+      "status": "high_level",
+      "purpose": "并列解释、能力介绍：同级内容共享标题基线，分类色区分支柱，共同结论单独归组；不暗示先后过程",
+      "relations": [
+        "explanation",
+        "parallel",
+        "并列解释",
+        "能力介绍"
+      ],
+      "capacity": "3–4 个同级支柱和 1 个共同说明",
+      "presentation_role": "designed-composition",
+      "selection_guidance": "语义及容量匹配时作为成稿设计候选；实际查看预览并与结构模板比较，不代表自动审美通过。",
+      "schema_ref": "assets/design-system/recipe-request.schema.json",
+      "compiler_ref": "scripts/presentation_visual_recipes.py",
+      "example_ref": "assets/design-system/examples/presentation-ui.json",
+      "preview_refs": [
+        {
+          "ref": "assets/design-system/previews/editorial-pillars.svg",
+          "scope": "package",
+          "format": "svg",
+          "source": "normal computed recipe replay",
+          "target_native_equivalence": "not_asserted"
+        },
+        {
+          "ref": "assets/design-system/previews/editorial-pillars.png",
+          "scope": "package",
+          "format": "png",
+          "source": "Microsoft PowerPoint 16.0 1600x900",
+          "source_pptx_sha256": "5f1f79e1432777ad1c757f059da25ca762e87a230869dc91364b1cd6ad385fbb",
+          "viewed_by": "palette_template_ui: direct full-size inspection",
+          "evidence_scope": "synthetic engineering preview; all page text legible, body14pt; native shapes; no business-density acceptance"
+        }
+      ],
+      "validation": {
+        "scope": "finite semantic recipe; same normal computed build and typography measurement as author layouts",
+        "user_quality_acceptance": "not_established"
+      },
+      "limitations": [
+        "输入必须满足声明的关系；引擎不能代替内容审查",
+        "禁止 caller frame/font overrides；正文14pt/最低9pt，溢出报错而不自动缩字",
+        "纯色、原生形状；保留 recipe_source 后每次构建重新测排，不是任意内容自由布局"
+      ]
+    },
+    {
+      "id": "recipe.stage-ribbon",
+      "kind": "recipe",
+      "version": "0.1",
+      "status": "high_level",
+      "purpose": "过程、时间顺序、交付阶段：连续方向带与同列阶段说明；没有顺序关系时不使用箭头",
+      "relations": [
+        "process",
+        "sequence",
+        "过程",
+        "阶段",
+        "时间线"
+      ],
+      "capacity": "3–5 个有序阶段和 1 个结果",
+      "presentation_role": "designed-composition",
+      "selection_guidance": "语义及容量匹配时作为成稿设计候选；实际查看预览并与结构模板比较，不代表自动审美通过。",
+      "schema_ref": "assets/design-system/recipe-request.schema.json",
+      "compiler_ref": "scripts/presentation_visual_recipes.py",
+      "example_ref": "assets/design-system/examples/presentation-ui.json",
+      "preview_refs": [
+        {
+          "ref": "assets/design-system/previews/stage-ribbon.svg",
+          "scope": "package",
+          "format": "svg",
+          "source": "normal computed recipe replay",
+          "target_native_equivalence": "not_asserted"
+        },
+        {
+          "ref": "assets/design-system/previews/stage-ribbon.png",
+          "scope": "package",
+          "format": "png",
+          "source": "Microsoft PowerPoint 16.0 1600x900",
+          "source_pptx_sha256": "5f1f79e1432777ad1c757f059da25ca762e87a230869dc91364b1cd6ad385fbb",
+          "viewed_by": "palette_template_ui: direct full-size inspection",
+          "evidence_scope": "synthetic engineering preview; all page text legible, body14pt; native shapes; no business-density acceptance"
+        }
+      ],
+      "validation": {
+        "scope": "finite semantic recipe; same normal computed build and typography measurement as author layouts",
+        "user_quality_acceptance": "not_established"
+      },
+      "limitations": [
+        "输入必须满足声明的关系；引擎不能代替内容审查",
+        "禁止 caller frame/font overrides；正文14pt/最低9pt，溢出报错而不自动缩字",
+        "纯色、原生形状；保留 recipe_source 后每次构建重新测排，不是任意内容自由布局"
+      ]
+    },
+    {
+      "id": "recipe.capability-platform",
+      "kind": "recipe",
+      "version": "0.1",
+      "status": "high_level",
+      "purpose": "分层架构、共享平台：跨列平台区连接输入与产出，强主体表达共同支撑范围；不用于无依赖的并列能力",
+      "relations": [
+        "architecture",
+        "hierarchy",
+        "shared-platform",
+        "架构",
+        "共享平台"
+      ],
+      "capacity": "2–4 类输入、1 个共享平台、2–3 类输出",
+      "presentation_role": "designed-composition",
+      "selection_guidance": "语义及容量匹配时作为成稿设计候选；实际查看预览并与结构模板比较，不代表自动审美通过。",
+      "schema_ref": "assets/design-system/recipe-request.schema.json",
+      "compiler_ref": "scripts/presentation_visual_recipes.py",
+      "example_ref": "assets/design-system/examples/presentation-ui.json",
+      "preview_refs": [
+        {
+          "ref": "assets/design-system/previews/capability-platform.svg",
+          "scope": "package",
+          "format": "svg",
+          "source": "normal computed recipe replay",
+          "target_native_equivalence": "not_asserted"
+        },
+        {
+          "ref": "assets/design-system/previews/capability-platform.png",
+          "scope": "package",
+          "format": "png",
+          "source": "Microsoft PowerPoint 16.0 1600x900",
+          "source_pptx_sha256": "5f1f79e1432777ad1c757f059da25ca762e87a230869dc91364b1cd6ad385fbb",
+          "viewed_by": "palette_template_ui: direct full-size inspection",
+          "evidence_scope": "synthetic engineering preview; all page text legible, body14pt; native shapes; no business-density acceptance"
+        }
+      ],
+      "validation": {
+        "scope": "finite semantic recipe; same normal computed build and typography measurement as author layouts",
+        "user_quality_acceptance": "not_established"
+      },
+      "limitations": [
+        "输入必须满足声明的关系；引擎不能代替内容审查",
+        "禁止 caller frame/font overrides；正文14pt/最低9pt，溢出报错而不自动缩字",
+        "纯色、原生形状；保留 recipe_source 后每次构建重新测排，不是任意内容自由布局"
+      ]
     }
   ],
   "template_source": "current catalog adapter",

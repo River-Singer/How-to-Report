@@ -41,14 +41,14 @@
     },
     {
       "id": "metric-evidence-columns",
-      "title": "规模证据与能力解释",
-      "grid_family": "总述+5列指标证据",
-      "content_relation": "并列维度共同支持一个总体判断",
+      "title": "服务资源与范围索引",
+      "grid_family": "通栏四列查阅索引：维度/数量/单位/范围说明",
+      "content_relation": "查阅五项服务资源和范围，核对维度—数量—说明的对应",
       "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
-      "suitable": "公司介绍、服务覆盖、能力证明",
-      "unsuitable": "没有共同论点的指标堆砌；跨单位比较长度",
-      "density": "中；5项指标+各2条解释",
-      "limitations": "五个维度分别用独立柱图表示数值，各自单位不同，不能跨图比较柱长。仅用于量级证据解释；只查精确记录时应使用表。",
+      "suitable": "资源、服务范围、异单位指标的精确查阅和核对",
+      "unsuitable": "解释增长、差异、分布或排名；没有基准的独立单值柱",
+      "density": "五项资源，各项单位与范围就近对应",
+      "limitations": "这是呈现精确记录的索引表。保留原五个合成值和单位；不把查阅记录包装成量级比较或能力结论。",
       "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
       "author": "authors/metric-evidence-columns.json",
       "preview": "previews/metric-evidence-columns.png",
@@ -66,13 +66,19 @@
           "page": 5
         }
       ],
-      "author_sha256": "160bc630a27ac8915543f6a2f28c856049540e5c1a565e63df6cccd54a77603b",
-      "status": "public-author-metadata-sanitized",
+      "author_sha256": "90522f66882a3502e3a744216aa01723ab709d770c56dea2b40e175a0c3595cc",
+      "status": "representation-corrected-computed-author",
       "preview_provenance": {
-        "source_author_sha256": "21055a2ca9d38940e5c32db27707816428406f76b9b1fd64ad6e76feb747de14",
-        "public_author_sha256": "160bc630a27ac8915543f6a2f28c856049540e5c1a565e63df6cccd54a77603b",
-        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
-        "not_a_public_input_build_receipt": true
+        "relationship": "new computed build after representation correction; not a same-content styling-only comparison",
+        "viewing_status": "viewed full-size by palette_template_ui; native editable index, no chart bars",
+        "source_pptx_sha256": "ecebb6f2dcd8dfef5855a8ffda74f000a4267824f17182eb201260c9c0c101c7",
+        "png_sha256": "e0494deea037bcc32b1d838e7f5e7b2874b32609b4b9d1945eedbbfb32c1ad5d",
+        "public_author_sha256": "90522f66882a3502e3a744216aa01723ab709d770c56dea2b40e175a0c3595cc",
+        "powerpoint_version": "16.0",
+        "resolution": [
+          1600,
+          900
+        ]
       }
     },
     {

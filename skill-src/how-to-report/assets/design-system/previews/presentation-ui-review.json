@@ -1,0 +1,41 @@
+{
+  "scope": "three synthetic engineering design recipes; not business report approval or a full template-library visual review",
+  "palette_id": "report-default",
+  "powerpoint_version": "16.0",
+  "resolution": [
+    1600,
+    900
+  ],
+  "pptx_sha256": "5f1f79e1432777ad1c757f059da25ca762e87a230869dc91364b1cd6ad385fbb",
+  "request_sha256": "ee5d9f63a2f4da1d585a306a5a65d33a49f20002b18223b96a12c3eaf4e5db2a",
+  "author_sha256": "5d8b397a669027a3ca003e0cecbae360cd26e6b4d49c0dfda43902c6ebe998ff",
+  "pages": [
+    {
+      "recipe": "editorial-pillars",
+      "slide": 1,
+      "preview": "previews/editorial-pillars.png",
+      "png_sha256": "9b0ee340036b312513238aa4647a4f172e06ceabfc2dedf16d644eead6abd77c",
+      "svg_sha256": "f8e1f7ca2db180f00e80b5b337f8007529cf6a352d7f539c8558a8e1978d51d2",
+      "visual_findings": "inspected; no text clipping; semantic grouping visible",
+      "content_limit": "sparse component capability demonstration, not a finished high-density report"
+    },
+    {
+      "recipe": "stage-ribbon",
+      "slide": 2,
+      "preview": "previews/stage-ribbon.png",
+      "png_sha256": "78c6bc1176b30f939ece3e20c7871e6e48d1cac6f0f282519f5487deaf2ff108",
+      "svg_sha256": "40ea415c3fa669ce72f07bc67de838df5a6501edaaabcf0c965ee5cd774e30c2",
+      "visual_findings": "inspected; no text clipping; semantic grouping visible",
+      "content_limit": "sparse component capability demonstration, not a finished high-density report"
+    },
+    {
+      "recipe": "capability-platform",
+      "slide": 3,
+      "preview": "previews/capability-platform.png",
+      "png_sha256": "70e71f7f71d99e3dbded1b7ad958f1ca934b8f1899affb12c06036bb79ce3e66",
+      "svg_sha256": "c8849cd1b2f1d41082672b9338e54519411c80df91b6e036f4b911822bf621cb",
+      "visual_findings": "inspected; no text clipping; platform branches cover each input/output",
+      "content_limit": "sparse component capability demonstration, not a finished high-density report"
+    }
+  ]
+}

@@ -3,13 +3,13 @@
   "text_slots": [
     {
       "id": "metric-evidence-columns.slot-001",
-      "default": "规模证据与能力解释",
+      "default": "服务资源与范围索引",
       "type": "text",
       "required": true
     },
     {
       "id": "metric-evidence-columns.slot-002",
-      "default": "服务覆盖和专业深度共同构成能力基础",
+      "default": "按维度查阅规模、单位和对应范围",
       "type": "text",
       "required": true
     },
@@ -75,7 +75,7 @@
     },
     {
       "id": "metric-evidence-columns.slot-013",
-      "default": "各图表示不同维度，分别标明单位，不将跨单位数量解释为共同排名",
+      "default": "各行单位不同，仅作资源与范围查阅；没有共同基准，不表达优劣、贡献或排名。",
       "type": "text",
       "required": true
     },
@@ -84,111 +84,50 @@
       "default": "合成内容 · 结构样例 02 / 21",
       "type": "text",
       "required": true
+    },
+    {
+      "id": "metric-evidence-columns.quantity-1",
+      "default": "200",
+      "type": "text",
+      "required": true,
+      "meaning": "精确查阅数量，单位为人；不同单位不共用比较尺度"
+    },
+    {
+      "id": "metric-evidence-columns.quantity-2",
+      "default": "12",
+      "type": "text",
+      "required": true,
+      "meaning": "精确查阅数量，单位为区域；不同单位不共用比较尺度"
+    },
+    {
+      "id": "metric-evidence-columns.quantity-3",
+      "default": "80",
+      "type": "text",
+      "required": true,
+      "meaning": "精确查阅数量，单位为项目；不同单位不共用比较尺度"
+    },
+    {
+      "id": "metric-evidence-columns.quantity-4",
+      "default": "4",
+      "type": "text",
+      "required": true,
+      "meaning": "精确查阅数量，单位为环节；不同单位不共用比较尺度"
+    },
+    {
+      "id": "metric-evidence-columns.quantity-5",
+      "default": "3",
+      "type": "text",
+      "required": true,
+      "meaning": "精确查阅数量，单位为类型；不同单位不共用比较尺度"
     }
   ],
   "structural_parameters": {
     "layout_columns": "作者layout树的fr比例；保持语义分组",
     "item_count": "增加/删除同类子项后由正常computed入口重新测量",
-    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "chart_data": "本样例为不同单位的资源查阅索引，无图表槽；需要解释比较时先提供同口径关系和基准，再选择合适图表。",
     "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
   },
   "no_final_frames": true,
-  "chart_slots": [
-    {
-      "id": "chart-34",
-      "asset": "chart.column",
-      "data": {
-        "categories": [
-          "人"
-        ],
-        "series": [
-          {
-            "name": "服务团队",
-            "values": [
-              200
-            ]
-          }
-        ],
-        "unit": "人"
-      },
-      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
-    },
-    {
-      "id": "chart-38",
-      "asset": "chart.column",
-      "data": {
-        "categories": [
-          "区域"
-        ],
-        "series": [
-          {
-            "name": "地区网络",
-            "values": [
-              12
-            ]
-          }
-        ],
-        "unit": "区域"
-      },
-      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
-    },
-    {
-      "id": "chart-42",
-      "asset": "chart.column",
-      "data": {
-        "categories": [
-          "项目"
-        ],
-        "series": [
-          {
-            "name": "交付积累",
-            "values": [
-              80
-            ]
-          }
-        ],
-        "unit": "项目"
-      },
-      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
-    },
-    {
-      "id": "chart-46",
-      "asset": "chart.column",
-      "data": {
-        "categories": [
-          "环节"
-        ],
-        "series": [
-          {
-            "name": "质量机制",
-            "values": [
-              4
-            ]
-          }
-        ],
-        "unit": "环节"
-      },
-      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
-    },
-    {
-      "id": "chart-50",
-      "asset": "chart.column",
-      "data": {
-        "categories": [
-          "类型"
-        ],
-        "series": [
-          {
-            "name": "持续服务",
-            "values": [
-              3
-            ]
-          }
-        ],
-        "unit": "类型"
-      },
-      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
-    }
-  ],
+  "chart_slots": [],
   "image_slots": []
 }

@@ -1,0 +1,27 @@
+{
+  "example_ref": "assets/design-system/examples/topology-arrow-ring.json",
+  "preview_refs": [
+    {
+      "ref": "assets/design-system/previews/topology-arrow-ring.png",
+      "scope": "package",
+      "format": "png",
+      "variant": "arrow-ring",
+      "sha256": "db2835392aff36075be825e136a38191141c9ee89dd9a9e8837ee6ec080320dc",
+      "source": "Microsoft PowerPoint 16.0 1600x900",
+      "source_pptx_sha256": "96c4741c0624c25777595640b4532ed370f18709b8c8f1ba390ad409f8ae320e",
+      "viewed_by": "visual_vnext_check",
+      "evidence_scope": "synthetic engineering example; all seven PowerPoint pages inspected; not full-library aesthetic acceptance"
+    },
+    {
+      "ref": "assets/design-system/previews/topology-arrow-ring.svg",
+      "scope": "package",
+      "format": "svg",
+      "variant": "arrow-ring",
+      "sha256": "370dd2a1d2c5997543ee3f65afc4b063168402d9db7b36f731332570b3831ea7",
+      "source": "normal generated package computed CLI",
+      "source_pptx_sha256": "96c4741c0624c25777595640b4532ed370f18709b8c8f1ba390ad409f8ae320e",
+      "viewed_by": "visual_vnext_check",
+      "evidence_scope": "synthetic engineering example; all seven PowerPoint pages inspected; not full-library aesthetic acceptance"
+    }
+  ]
+}

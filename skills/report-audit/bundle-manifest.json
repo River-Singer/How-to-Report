@@ -1,6 +1,6 @@
 {
   "files": {
-    "SKILL.md": "a18f527a79a0b651cc245d7c84ff11e95e36679843ad046f51f726de8f10196c",
+    "SKILL.md": "ec5707001f1fe52098b0d6a6aa7f2d0fc630534f560b966a39934eaaa1f08d7a",
     "THIRD_PARTY_NOTICES.md": "d01c84ffbb6efbf6f4364a3d948079b7b31ca8e6ddc0e2e9a177dfb1c972e9b5",
     "assets/audit-run/audit.md": "47c7a46b6cc45ac8f3d4ff5d37cb948cfd80791090ff5f2e260e06c92e895206",
     "assets/audit-run/run.json": "e9c794a10c2e1b885a1c40626b39df5639ad6ebd38f4c5eb215851cdddf4fbe1",
@@ -154,7 +154,8 @@
     "references/method-sources/sources/yu-zenker-2020-fulltext.txt": "2772f7eb548e6ce63a47255e4a8e80b62d4f0e615bb1861c39bb60c0d69821d3",
     "references/numeric-evidence.md": "52c91ba2435894a6e271d91d01ed5f664be4d3723d1cedb160924ffeadf31ee0",
     "references/ppt-data-display.md": "cb472ea2b88ca9c7a10cedbd9a73a5b533367d50f6874ee6394332b306caa999",
-    "references/ppt-visual-review.md": "b8e88550901c387f953962d4346c13557677f9a8920d9d73d7b89d4677f3a93a",
+    "references/ppt-visual-design.md": "1aee374cfe1bdb57e96ca17c96dbb861588c56bc38165c4737f8ce89e8379b87",
+    "references/ppt-visual-review.md": "d17e831a122c970f34cac14d0e7ca29b7e8fc9a2be3276f9579a771fc02bacb8",
     "references/reasoning-methods.md": "f35b02f95a32cdf34570ae3c387ae2797aa0c32a40c14fe13fb70501930c99cf",
     "references/report-experience.md": "ae2cf4ae6350037b8fb070ea47cf0b053485434ed5f7efcb9ec668f159325f4d",
     "references/semantic-structuring.md": "2277c38d27aacabce182844e1c50003ebabd2e8f6e44e6916a7ec8b719009b92",
@@ -166,7 +167,7 @@
     "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
   },
   "generated_by": "tools/package_skills.py",
-  "package_version": "0.11.4",
+  "package_version": "0.11.6",
   "skill_name": "report-audit",
   "supported_contract_version": "0.1"
 }

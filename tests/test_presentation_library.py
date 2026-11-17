@@ -16,6 +16,18 @@ from report_ppt import DEFAULT_TEMPLATE, read_json
 
 
 class LibraryTests(unittest.TestCase):
+    def test_role_queries_match_identity_not_mentions_in_selection_guidance(self):
+        designed = library(query=" DESIGNED-COMPOSITION ", limit=100)
+        self.assertEqual(designed["total"], 3)
+        self.assertEqual({r["id"] for r in designed["items"]}, {
+            "recipe.editorial-pillars", "recipe.stage-ribbon", "recipe.capability-platform"})
+        structural = library(query="structural-template", limit=100)
+        self.assertEqual(structural["total"], 170)
+        self.assertTrue(all(r["presentation_role"] == "structural-template" for r in structural["items"]))
+        self.assertEqual(library(query="结构基础候选", limit=100)["total"], 170)
+        self.assertEqual(library(query="语义及容量匹配时作为成稿设计候选", limit=100)["total"], 3)
+        self.assertEqual(library(kind="template", query="designed-composition")["total"], 0)
+
     def test_template_adapter_has_all_current_variants_once(self):
         found, offset = [], 0
         while True:

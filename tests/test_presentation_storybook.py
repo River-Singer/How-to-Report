@@ -198,7 +198,7 @@ class BuiltinRequestTests(unittest.TestCase):
         for record in records:
             self.assertEqual(record["invocation"]["mode"], "author")
             visit(record["invocation"]["request"])
-        self.assertEqual(sum("invocation" in r for r in self.records if r["kind"] == "recipe"), 3)
+        self.assertEqual(sum("invocation" in r for r in self.records if r["kind"] == "recipe"), 6)
 
     def test_individual_icon_request_builds_with_declared_asset_root(self):
         from presentation_compiler import build_project
@@ -214,7 +214,7 @@ class BuiltinRequestTests(unittest.TestCase):
         from presentation_storybook import _component_previews
         from report_ppt import DEFAULT_TEMPLATE
         palettes = [copy.deepcopy(r) for r in self.records if r["kind"] == "palette"]
-        self.assertEqual(len(palettes), 5)
+        self.assertEqual(len(palettes), 6)
         with tempfile.TemporaryDirectory() as temp:
             root = Path(temp)
             _component_previews(palettes, root / "previews", DEFAULT_TEMPLATE)
@@ -237,7 +237,7 @@ class BuiltinRequestTests(unittest.TestCase):
             self.assertGreater(len(set(colors)), 1)
             build_storybook(None, root / "site", include_builtin=False, extra_records=palettes)
             data = js_data(root / "site/data/index.js")
-            self.assertEqual(len(data["palettes"]), 5)
+            self.assertEqual(len(data["palettes"]), 6)
             self.assertEqual({r["palette_id"] for r in data["palettes"]}, {r["palette_id"] for r in palettes})
             self.assertTrue((root / "site/storybook-requests.js").is_file())
 

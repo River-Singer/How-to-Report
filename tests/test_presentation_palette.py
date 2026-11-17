@@ -43,17 +43,22 @@ class PaletteTests(unittest.TestCase):
 
     def test_catalog_sources_contrast_and_fixed_text_semantics(self):
         records = palette_catalog()
-        self.assertEqual(len(records), 5)
+        self.assertEqual(len(records), 6)
         self.assertAlmostEqual(contrast_ratio("#000000", "#FFFFFF"), 21)
         for item in records:
             self.assertEqual(item["roles"]["body"], "#333333")
             self.assertEqual(item["roles"]["muted"], "#A6A6A6")
-            self.assertEqual(item["roles"]["danger"], "#C21E2B")
-            self.assertEqual(item["roles"]["success"], "#198038")
+            if item["id"] == "consulting-spectrum":
+                self.assertEqual(item["roles"]["danger"], "#C7473D")
+                self.assertEqual(item["roles"]["success"], "#4F7F1C")
+                self.assertIn("user-provided", item["provenance"]["relationship"])
+            else:
+                self.assertEqual(item["roles"]["danger"], "#C21E2B")
+                self.assertEqual(item["roles"]["success"], "#198038")
             self.assertEqual(len(item["categorical"]), 6)
             self.assertGreater(item["contrast"]["body"]["on_white"], 12)
             self.assertLess(item["contrast"]["muted"]["on_white"], 3)
-            if item["id"] != "report-default":
+            if item["id"] not in {"report-default", "consulting-spectrum"}:
                 self.assertTrue(item["provenance"]["sources"])
 
     def test_default_is_exact_and_new_themes_do_not_mutate_typography(self):

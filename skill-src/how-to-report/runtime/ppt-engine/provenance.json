@@ -452,10 +452,10 @@
     },
     {
       "path": "scripts/pptx_to_svg/preset_authoring.py",
-      "sha256": "31d7eb7c2d5e40ce97906d094ef6304d8159ba4edbe8a1b9fee6e1e9bc497b07",
+      "sha256": "d6c0253625916ce2d4e4bba1b1f93fa6e0ad1ac4de5ea2bc851825e31c43070b",
       "source_path": "scripts/pptx_to_svg/preset_authoring.py",
       "source_sha256": "31d7eb7c2d5e40ce97906d094ef6304d8159ba4edbe8a1b9fee6e1e9bc497b07",
-      "adapted": false
+      "adapted": true
     },
     {
       "path": "scripts/pptx_to_svg/preset_registry_to_svg.py",
@@ -1138,6 +1138,10 @@
     {
       "path": "scripts/svg_to_pptx/native_objects/chart_xml.py",
       "change": "Carry resolved text styles into base, axis, legend and data-label properties, including custom rich-label defaults, while preserving explicit global, series and point overrides and the legacy omitted-style path."
+    },
+    {
+      "path": "scripts/pptx_to_svg/preset_authoring.py",
+      "change": "Accept source shape identity and scope as authored preset semantic metadata and carry them into the native geometry carrier, so computed preset surfaces retain editable connector endpoints. Source-to-output identity validation remains in the native converter."
     }
   ]
 }

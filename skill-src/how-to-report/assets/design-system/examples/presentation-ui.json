@@ -1,0 +1,105 @@
+{
+  "recipe_version": "0.1",
+  "project_id": "presentation-ui-synthetic",
+  "profile": "report-14pt",
+  "brief": {
+    "audience": "engineering example",
+    "purpose": "semantic visual composition; synthetic content",
+    "palette_id": "report-default"
+  },
+  "facts": {
+    "shared-copy": {
+      "value": "统一对象定义、权限和版本，连接业务记录与决策。"
+    }
+  },
+  "pages": [
+    {
+      "id": "editorial-pillars",
+      "recipe": "editorial-pillars",
+      "title": "三项能力共同支持从问题识别到执行复盘",
+      "source": "合成工程样例 · 同级解释，无顺序含义",
+      "slots": {
+        "items": [
+          {
+            "title": "问题识别",
+            "body": "界定业务范围与目标\n核对事实与异常\n区分现象和可能原因"
+          },
+          {
+            "title": "方案比较",
+            "body": "明确可选路径\n对照成本与实施条件\n呈现取舍及适用边界"
+          },
+          {
+            "title": "执行复盘",
+            "body": "记录任务与责任\n跟踪交付结果\n将验证结论纳入下一轮"
+          }
+        ],
+        "closing": "共同要求：结论有依据，责任可追溯，评估标准在执行前明确。"
+      }
+    },
+    {
+      "id": "stage-ribbon",
+      "recipe": "stage-ribbon",
+      "title": "交付分为四个阶段，各阶段留下可核验的成果",
+      "source": "合成工程样例 · 有序过程，非数量比较",
+      "slots": {
+        "steps": [
+          {
+            "title": "界定",
+            "body": "确认范围与边界\n建立问题清单\n约定验收标准"
+          },
+          {
+            "title": "设计",
+            "body": "比较实施路径\n确定职责与接口\n形成方案说明"
+          },
+          {
+            "title": "验证",
+            "body": "执行代表性场景\n记录差异与原因\n修订实施方案"
+          },
+          {
+            "title": "交付",
+            "body": "移交成果与记录\n确认运维责任\n安排后续复盘"
+          }
+        ],
+        "result": "阶段出口：范围说明 → 方案记录 → 验证证据 → 交付清单。"
+      }
+    },
+    {
+      "id": "capability-platform",
+      "recipe": "capability-platform",
+      "title": "共享平台将分散输入连接为可复用的业务能力",
+      "source": "合成工程样例 · 输入—共享支撑—产出",
+      "slots": {
+        "inputs": [
+          {
+            "title": "业务记录",
+            "body": "需求、任务与变更\n保留业务上下文"
+          },
+          {
+            "title": "专业数据",
+            "body": "规则、模型与基线\n注明范围和版本"
+          },
+          {
+            "title": "过程证据",
+            "body": "会议、附件与结果\n连接结论和来源"
+          }
+        ],
+        "platform": {
+          "title": "共享数据与协同平台",
+          "body": {
+            "ref": "shared-copy"
+          }
+        },
+        "outputs": [
+          {
+            "title": "一致的评估",
+            "body": "按共同标准比较方案\n保存判断与取舍"
+          },
+          {
+            "title": "可追溯的执行",
+            "body": "连接责任、行动和结果\n支持复盘与改进"
+          }
+        ]
+      }
+    }
+  ]
+}

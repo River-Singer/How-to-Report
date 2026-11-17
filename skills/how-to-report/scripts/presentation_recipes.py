@@ -12,6 +12,7 @@ from presentation_document import evaluate_facts, resolve_text, resolve_value, v
 from presentation_library import SYSTEM, library, profile_identity, profile_path
 from presentation_typography import STYLE_FIELDS, measure_text_block, resolve_text_style
 from presentation_svg import runtime_helpers
+from presentation_visual_recipes import NAMES as VISUAL_RECIPES, visual_recipe
 
 
 CHILDREN = {"primitive.chart", "primitive.image", "component.partition", "component.comparison",
@@ -305,6 +306,7 @@ def _evidence(page, tokens, facts):
 
 
 BUILDERS = {"kpi-chart-explanation": _kpi, "paired-charts-conclusion": _paired, "evidence-action": _evidence}
+BUILDERS.update({name: visual_recipe for name in VISUAL_RECIPES})
 
 
 def lower_recipe_page(page, tokens, facts, index, count, *, schema=None):

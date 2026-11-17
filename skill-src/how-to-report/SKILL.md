@@ -38,7 +38,8 @@ PPT在内容路线明确后先完成[制作前设计评估](references/ppt-desig
 | 请求制作 PPT、确认内容后继续制作，或制作中需要回改内容 | [PPT 交接](references/ppt-handoff.md)，承接当前稿、来源、属性级确认及实际制作状态 |
 | PPT需要模板、组件及推荐组合发现、跨页数字联动或持续局部修改 | [组件系统](references/ppt-component-system.md)通过library发现、compose调用3个受约束组合，查看slot、profile及样例。自由编排与版本化修改沿[作者工程](references/ppt-engine.md) |
 | PPT需要判断图表或明细表、比较图种或查数据表达条件 | 先读[听众任务与表示选择](references/ppt-data-display.md)，再读[图表使用场景手册](references/ppt-chart-usage.md)及[68种注册图表](assets/design-system/chart-assets/README.md)：先用chart-assets读取当前数据合同、算法限制及可编辑等级，再由chart-build计算；既有5种原生Chart入口按兼容合同使用 |
-| PPT需要选择主次比例、双栏/三栏、重复小图或统一对齐线 | [栅格设计选择](references/ppt-grid-design.md)及[16种模式详解](references/ppt-grid-patterns.md)：先按内容关系选择结构，再映射现有布局容器；12/24列是设计参照，不是新增span/subgrid能力或已注册模板 |
+| PPT需要选择主次比例、双栏/三栏、重复小图或统一对齐线 | [栅格设计选择](references/ppt-grid-design.md)及[16种模式详解](references/ppt-grid-patterns.md)：先按内容关系选择结构，再映射现有布局容器；12/24列是设计参照，实际column_span仅按显式列Grid合同，未实现row_span/subgrid |
+| PPT看起来只有描边填充，主次、分组或关系不清 | [视觉组织与形状组合](references/ppt-visual-design.md)：从信息关系选择区域、轨道、连接与强调，再由engine计算；实际成图审美与几何检查分开，不用装饰数量或机械总分判断 |
 | 资讯、介绍或技术说明文字多，需要短语、解释段与图形分工 | [长文本结构化](references/ppt-explanatory-content.md)，保留关系与必要条件后选栅格，不把全部说明压成标签 |
 | PPT需要自动测高、Grid/Flex、文档流或计算拓扑 | [计算排版与拓扑](references/ppt-layout.md)：layouts发现持久布局树，components topology发现节点、连线及弧形结构。每次正常build重新计算坐标 |
 | 用户给出真实PPTX，要求读取对象配置并原样重建或保留式修改 | [原生配置读取与重建](references/ppt-native-roundtrip.md)：native-import读取全包配置，native-inspect核配置与依赖，native-build从配置重建。用同台PowerPoint对照原件并验证实际编辑操作 |

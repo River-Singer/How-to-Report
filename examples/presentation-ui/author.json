@@ -1,0 +1,1461 @@
+{
+  "schema_version": "0.1",
+  "project_id": "presentation-ui-synthetic",
+  "revision": 1,
+  "brief": {
+    "audience": "engineering example",
+    "purpose": "semantic visual composition; synthetic content",
+    "palette_id": "report-default",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "recipe_usage": {
+      "contract": "0.1",
+      "request_sha256": "94d8f5395d2b7b6129c72e54e1147ced4877cd058a554618f84a900b2ae719be",
+      "recipes": {
+        "editorial-pillars": 1,
+        "stage-ribbon": 1,
+        "capability-platform": 1
+      },
+      "recipe_source_sha256": "c136e28d5fb490989f1f46febcba8f861668c932d4867e228a7271b5ee7367ad",
+      "schema_sha256": "68562fc236c8c067d12449905fe4ebe307f5717fd17bdc78e77ba213e992556e",
+      "comparability_scope": "equal unit and numeric scale/domain are machine-checked; panel scope/period must be declared and displayed; truth and business comparability require review"
+    }
+  },
+  "sources": [],
+  "facts": {
+    "shared-copy": {
+      "value": "统一对象定义、权限和版本，连接业务记录与决策。"
+    }
+  },
+  "pages": [
+    {
+      "id": "editorial-pillars",
+      "kind": "scene",
+      "job": "三项能力共同支持从问题识别到执行复盘",
+      "notes": "",
+      "elements": [
+        {
+          "id": "editorial-pillars--title",
+          "type": "text",
+          "frame": [
+            48,
+            24,
+            1184,
+            48
+          ],
+          "text": "三项能力共同支持从问题识别到执行复盘",
+          "role": "title",
+          "style": {}
+        },
+        {
+          "id": "editorial-pillars--header-rule",
+          "type": "shape",
+          "shape": "line",
+          "frame": [
+            48,
+            84,
+            1184,
+            0
+          ],
+          "stroke": "border",
+          "stroke_width": 1
+        },
+        {
+          "id": "editorial-pillars--source",
+          "type": "text",
+          "frame": [
+            48,
+            684,
+            1104,
+            24
+          ],
+          "text": "合成工程样例 · 同级解释，无顺序含义",
+          "role": "caption",
+          "style": {}
+        },
+        {
+          "id": "editorial-pillars--page",
+          "type": "text",
+          "frame": [
+            1168,
+            684,
+            64,
+            24
+          ],
+          "text": "1/3",
+          "role": "caption",
+          "style": {
+            "align": "right"
+          }
+        },
+        {
+          "id": "editorial-pillars--ui-pillar-title-0--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            120.0,
+            358.0,
+            66.0
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "#153653"
+        },
+        {
+          "type": "text",
+          "text": "问题识别",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF",
+            "align": "center"
+          },
+          "id": "editorial-pillars--ui-pillar-title-0-label",
+          "frame": [
+            80.0,
+            138.0,
+            290.0,
+            29.173333
+          ]
+        },
+        {
+          "type": "text",
+          "text": "界定业务范围与目标\n核对事实与异常\n区分现象和可能原因",
+          "role": "body",
+          "style": {},
+          "id": "editorial-pillars--ui-pillar-copy-0",
+          "frame": [
+            48.0,
+            202.0,
+            358.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "editorial-pillars--ui-pillar-title-1--surface",
+          "type": "shape",
+          "frame": [
+            452.0,
+            120.0,
+            358.0,
+            66.0
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "#0756B8"
+        },
+        {
+          "type": "text",
+          "text": "方案比较",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF",
+            "align": "center"
+          },
+          "id": "editorial-pillars--ui-pillar-title-1-label",
+          "frame": [
+            484.0,
+            138.0,
+            290.0,
+            29.173333
+          ]
+        },
+        {
+          "type": "text",
+          "text": "明确可选路径\n对照成本与实施条件\n呈现取舍及适用边界",
+          "role": "body",
+          "style": {},
+          "id": "editorial-pillars--ui-pillar-copy-1",
+          "frame": [
+            452.0,
+            202.0,
+            358.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "editorial-pillars--ui-pillar-title-2--surface",
+          "type": "shape",
+          "frame": [
+            856.0,
+            120.0,
+            358.0,
+            66.0
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "#087F8C"
+        },
+        {
+          "type": "text",
+          "text": "执行复盘",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF",
+            "align": "center"
+          },
+          "id": "editorial-pillars--ui-pillar-title-2-label",
+          "frame": [
+            888.0,
+            138.0,
+            290.0,
+            29.173333
+          ]
+        },
+        {
+          "type": "text",
+          "text": "记录任务与责任\n跟踪交付结果\n将验证结论纳入下一轮",
+          "role": "body",
+          "style": {},
+          "id": "editorial-pillars--ui-pillar-copy-2",
+          "frame": [
+            856.0,
+            202.0,
+            358.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "editorial-pillars--ui-closing--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            307.733333,
+            1184.0,
+            59.866667
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "editorial-pillars--ui-closing--accent-rail",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            48.0,
+            307.733333,
+            4.0,
+            59.866667
+          ],
+          "fill": "accent",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "editorial-pillars--ui-closing",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "共同要求：结论有依据，责任可追溯，评估标准在执行前明确。",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "editorial-pillars--ui-closing-copy",
+          "frame": [
+            66.0,
+            325.733333,
+            1148.0,
+            23.866667
+          ]
+        }
+      ],
+      "recipe_source": {
+        "id": "editorial-pillars",
+        "recipe": "editorial-pillars",
+        "title": "三项能力共同支持从问题识别到执行复盘",
+        "source": "合成工程样例 · 同级解释，无顺序含义",
+        "slots": {
+          "items": [
+            {
+              "title": "问题识别",
+              "body": "界定业务范围与目标\n核对事实与异常\n区分现象和可能原因"
+            },
+            {
+              "title": "方案比较",
+              "body": "明确可选路径\n对照成本与实施条件\n呈现取舍及适用边界"
+            },
+            {
+              "title": "执行复盘",
+              "body": "记录任务与责任\n跟踪交付结果\n将验证结论纳入下一轮"
+            }
+          ],
+          "closing": "共同要求：结论有依据，责任可追溯，评估标准在执行前明确。"
+        }
+      }
+    },
+    {
+      "id": "stage-ribbon",
+      "kind": "scene",
+      "job": "交付分为四个阶段，各阶段留下可核验的成果",
+      "notes": "",
+      "elements": [
+        {
+          "id": "stage-ribbon--title",
+          "type": "text",
+          "frame": [
+            48,
+            24,
+            1184,
+            48
+          ],
+          "text": "交付分为四个阶段，各阶段留下可核验的成果",
+          "role": "title",
+          "style": {}
+        },
+        {
+          "id": "stage-ribbon--header-rule",
+          "type": "shape",
+          "shape": "line",
+          "frame": [
+            48,
+            84,
+            1184,
+            0
+          ],
+          "stroke": "border",
+          "stroke_width": 1
+        },
+        {
+          "id": "stage-ribbon--source",
+          "type": "text",
+          "frame": [
+            48,
+            684,
+            1104,
+            24
+          ],
+          "text": "合成工程样例 · 有序过程，非数量比较",
+          "role": "caption",
+          "style": {}
+        },
+        {
+          "id": "stage-ribbon--page",
+          "type": "text",
+          "frame": [
+            1168,
+            684,
+            64,
+            24
+          ],
+          "text": "2/3",
+          "role": "caption",
+          "style": {
+            "align": "right"
+          }
+        },
+        {
+          "id": "stage-ribbon--ui-sequence--link-stage-ribbon--ui-step-0-to-stage-ribbon--ui-step-1",
+          "type": "connector",
+          "from": "stage-ribbon--ui-step-0--surface",
+          "to": "stage-ribbon--ui-step-1--surface",
+          "from_port": "right",
+          "to_port": "left",
+          "stroke": "primary",
+          "stroke_width": 2,
+          "arrow": true,
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-sequence",
+            "relation": "declared sequence"
+          }
+        },
+        {
+          "id": "stage-ribbon--ui-sequence--link-stage-ribbon--ui-step-1-to-stage-ribbon--ui-step-2",
+          "type": "connector",
+          "from": "stage-ribbon--ui-step-1--surface",
+          "to": "stage-ribbon--ui-step-2--surface",
+          "from_port": "right",
+          "to_port": "left",
+          "stroke": "primary",
+          "stroke_width": 2,
+          "arrow": true,
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-sequence",
+            "relation": "declared sequence"
+          }
+        },
+        {
+          "id": "stage-ribbon--ui-sequence--link-stage-ribbon--ui-step-2-to-stage-ribbon--ui-step-3",
+          "type": "connector",
+          "from": "stage-ribbon--ui-step-2--surface",
+          "to": "stage-ribbon--ui-step-3--surface",
+          "from_port": "right",
+          "to_port": "left",
+          "stroke": "primary",
+          "stroke_width": 2,
+          "arrow": true,
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-sequence",
+            "relation": "declared sequence"
+          }
+        },
+        {
+          "id": "stage-ribbon--ui-step-0--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            120.0,
+            276.5,
+            66.0
+          ],
+          "shape": "chevron",
+          "role": "decoration",
+          "fill": "#153653"
+        },
+        {
+          "type": "text",
+          "text": "界定",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF",
+            "align": "center"
+          },
+          "id": "stage-ribbon--ui-step-0-label",
+          "frame": [
+            80.0,
+            138.0,
+            208.5,
+            29.173333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-1--surface",
+          "type": "shape",
+          "frame": [
+            350.5,
+            120.0,
+            276.5,
+            66.0
+          ],
+          "shape": "chevron",
+          "role": "decoration",
+          "fill": "#0756B8"
+        },
+        {
+          "type": "text",
+          "text": "设计",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF",
+            "align": "center"
+          },
+          "id": "stage-ribbon--ui-step-1-label",
+          "frame": [
+            382.5,
+            138.0,
+            208.5,
+            29.173333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-2--surface",
+          "type": "shape",
+          "frame": [
+            653.0,
+            120.0,
+            276.5,
+            66.0
+          ],
+          "shape": "chevron",
+          "role": "decoration",
+          "fill": "#087F8C"
+        },
+        {
+          "type": "text",
+          "text": "验证",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF",
+            "align": "center"
+          },
+          "id": "stage-ribbon--ui-step-2-label",
+          "frame": [
+            685.0,
+            138.0,
+            208.5,
+            29.173333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-3--surface",
+          "type": "shape",
+          "frame": [
+            955.5,
+            120.0,
+            276.5,
+            66.0
+          ],
+          "shape": "chevron",
+          "role": "decoration",
+          "fill": "#CBD8E5"
+        },
+        {
+          "type": "text",
+          "text": "交付",
+          "role": "heading",
+          "style": {
+            "color": "#333333",
+            "align": "center"
+          },
+          "id": "stage-ribbon--ui-step-3-label",
+          "frame": [
+            987.5,
+            138.0,
+            208.5,
+            29.173333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-0--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            210.0,
+            275.0,
+            97.733333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "none"
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-0--accent-rail",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            48.0,
+            210.0,
+            4.0,
+            97.733333
+          ],
+          "fill": "#153653",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-step-detail-0",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "确认范围与边界\n建立问题清单\n约定验收标准",
+          "role": "body",
+          "style": {},
+          "id": "stage-ribbon--ui-step-copy-0",
+          "frame": [
+            64.0,
+            222.0,
+            247.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-1--surface",
+          "type": "shape",
+          "frame": [
+            351.0,
+            210.0,
+            275.0,
+            97.733333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "none"
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-1--accent-rail",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            351.0,
+            210.0,
+            4.0,
+            97.733333
+          ],
+          "fill": "#0756B8",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-step-detail-1",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "比较实施路径\n确定职责与接口\n形成方案说明",
+          "role": "body",
+          "style": {},
+          "id": "stage-ribbon--ui-step-copy-1",
+          "frame": [
+            367.0,
+            222.0,
+            247.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-2--surface",
+          "type": "shape",
+          "frame": [
+            654.0,
+            210.0,
+            275.0,
+            97.733333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "none"
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-2--accent-rail",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            654.0,
+            210.0,
+            4.0,
+            97.733333
+          ],
+          "fill": "#087F8C",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-step-detail-2",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "执行代表性场景\n记录差异与原因\n修订实施方案",
+          "role": "body",
+          "style": {},
+          "id": "stage-ribbon--ui-step-copy-2",
+          "frame": [
+            670.0,
+            222.0,
+            247.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-3--surface",
+          "type": "shape",
+          "frame": [
+            957.0,
+            210.0,
+            275.0,
+            97.733333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "none"
+        },
+        {
+          "id": "stage-ribbon--ui-step-detail-3--accent-rail",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            957.0,
+            210.0,
+            4.0,
+            97.733333
+          ],
+          "fill": "#CBD8E5",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-step-detail-3",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "移交成果与记录\n确认运维责任\n安排后续复盘",
+          "role": "body",
+          "style": {},
+          "id": "stage-ribbon--ui-step-copy-3",
+          "frame": [
+            973.0,
+            222.0,
+            247.0,
+            73.733333
+          ]
+        },
+        {
+          "id": "stage-ribbon--ui-result--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            331.733333,
+            1184.0,
+            63.866667
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "stage-ribbon--ui-result--accent-rule",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            48.0,
+            331.733333,
+            1184.0,
+            4.0
+          ],
+          "fill": "accent",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "stage-ribbon--ui-result",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "阶段出口：范围说明 → 方案记录 → 验证证据 → 交付清单。",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "stage-ribbon--ui-result-copy",
+          "frame": [
+            68.0,
+            351.733333,
+            1144.0,
+            23.866667
+          ]
+        }
+      ],
+      "recipe_source": {
+        "id": "stage-ribbon",
+        "recipe": "stage-ribbon",
+        "title": "交付分为四个阶段，各阶段留下可核验的成果",
+        "source": "合成工程样例 · 有序过程，非数量比较",
+        "slots": {
+          "steps": [
+            {
+              "title": "界定",
+              "body": "确认范围与边界\n建立问题清单\n约定验收标准"
+            },
+            {
+              "title": "设计",
+              "body": "比较实施路径\n确定职责与接口\n形成方案说明"
+            },
+            {
+              "title": "验证",
+              "body": "执行代表性场景\n记录差异与原因\n修订实施方案"
+            },
+            {
+              "title": "交付",
+              "body": "移交成果与记录\n确认运维责任\n安排后续复盘"
+            }
+          ],
+          "result": "阶段出口：范围说明 → 方案记录 → 验证证据 → 交付清单。"
+        }
+      }
+    },
+    {
+      "id": "capability-platform",
+      "kind": "scene",
+      "job": "共享平台将分散输入连接为可复用的业务能力",
+      "notes": "",
+      "elements": [
+        {
+          "id": "capability-platform--title",
+          "type": "text",
+          "frame": [
+            48,
+            24,
+            1184,
+            48
+          ],
+          "text": "共享平台将分散输入连接为可复用的业务能力",
+          "role": "title",
+          "style": {}
+        },
+        {
+          "id": "capability-platform--header-rule",
+          "type": "shape",
+          "shape": "line",
+          "frame": [
+            48,
+            84,
+            1184,
+            0
+          ],
+          "stroke": "border",
+          "stroke_width": 1
+        },
+        {
+          "id": "capability-platform--source",
+          "type": "text",
+          "frame": [
+            48,
+            684,
+            1104,
+            24
+          ],
+          "text": "合成工程样例 · 输入—共享支撑—产出",
+          "role": "caption",
+          "style": {}
+        },
+        {
+          "id": "capability-platform--page",
+          "type": "text",
+          "frame": [
+            1168,
+            684,
+            64,
+            24
+          ],
+          "text": "3/3",
+          "role": "caption",
+          "style": {
+            "align": "right"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-junction-0",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            235.95,
+            265.28333299999997,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-junction-1",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            639.95,
+            265.28333299999997,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-junction-2",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            1043.95,
+            265.28333299999997,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-center",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            639.95,
+            265.28333299999997,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-bus",
+          "type": "connector",
+          "from": "capability-platform--ui-inputs-junction-0",
+          "to": "capability-platform--ui-inputs-junction-2",
+          "from_port": "right",
+          "to_port": "left",
+          "arrow": false,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-branch-0",
+          "type": "connector",
+          "from": "capability-platform--ui-inputs-0--surface",
+          "to": "capability-platform--ui-inputs-junction-0",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": false,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-branch-1",
+          "type": "connector",
+          "from": "capability-platform--ui-inputs-1--surface",
+          "to": "capability-platform--ui-inputs-junction-1",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": false,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-branch-2",
+          "type": "connector",
+          "from": "capability-platform--ui-inputs-2--surface",
+          "to": "capability-platform--ui-inputs-junction-2",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": false,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs-trunk",
+          "type": "connector",
+          "from": "capability-platform--ui-inputs-center",
+          "to": "capability-platform--ui-platform--surface",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": true,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-junction-0",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            336.95,
+            422.323333,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-junction-1",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            942.95,
+            422.323333,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-center",
+          "type": "shape",
+          "shape": "rect",
+          "frame": [
+            639.95,
+            422.323333,
+            0.1,
+            0.1
+          ],
+          "fill": "none",
+          "stroke": "none",
+          "role": "decoration",
+          "metadata": {
+            "purpose": "computed shared-bus junction"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-bus",
+          "type": "connector",
+          "from": "capability-platform--ui-outputs-junction-0",
+          "to": "capability-platform--ui-outputs-junction-1",
+          "from_port": "right",
+          "to_port": "left",
+          "arrow": false,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-branch-0",
+          "type": "connector",
+          "from": "capability-platform--ui-outputs-junction-0",
+          "to": "capability-platform--ui-outputs-0--surface",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": true,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-branch-1",
+          "type": "connector",
+          "from": "capability-platform--ui-outputs-junction-1",
+          "to": "capability-platform--ui-outputs-1--surface",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": true,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-outputs-trunk",
+          "type": "connector",
+          "from": "capability-platform--ui-platform--surface",
+          "to": "capability-platform--ui-outputs-center",
+          "from_port": "bottom",
+          "to_port": "top",
+          "arrow": false,
+          "stroke": "primary",
+          "stroke_width": 2,
+          "metadata": {
+            "relation": "inputs-to-shared-platform-to-outputs"
+          }
+        },
+        {
+          "id": "capability-platform--ui-inputs--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            120.0,
+            1184.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "none"
+        },
+        {
+          "id": "capability-platform--ui-inputs-0--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            120.0,
+            376.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "capability-platform--ui-inputs-0--accent-rule",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            48.0,
+            120.0,
+            376.0,
+            4.0
+          ],
+          "fill": "#153653",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "capability-platform--ui-inputs-0",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "业务记录",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "capability-platform--ui-inputs-title-0",
+          "frame": [
+            66.0,
+            138.0,
+            340.0,
+            23.866667
+          ]
+        },
+        {
+          "type": "text",
+          "text": "需求、任务与变更\n保留业务上下文",
+          "role": "body",
+          "style": {},
+          "id": "capability-platform--ui-inputs-copy-0",
+          "frame": [
+            66.0,
+            177.866667,
+            340.0,
+            49.466667
+          ]
+        },
+        {
+          "id": "capability-platform--ui-inputs-1--surface",
+          "type": "shape",
+          "frame": [
+            452.0,
+            120.0,
+            376.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "capability-platform--ui-inputs-1--accent-rule",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            452.0,
+            120.0,
+            376.0,
+            4.0
+          ],
+          "fill": "#0756B8",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "capability-platform--ui-inputs-1",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "专业数据",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "capability-platform--ui-inputs-title-1",
+          "frame": [
+            470.0,
+            138.0,
+            340.0,
+            23.866667
+          ]
+        },
+        {
+          "type": "text",
+          "text": "规则、模型与基线\n注明范围和版本",
+          "role": "body",
+          "style": {},
+          "id": "capability-platform--ui-inputs-copy-1",
+          "frame": [
+            470.0,
+            177.866667,
+            340.0,
+            49.466667
+          ]
+        },
+        {
+          "id": "capability-platform--ui-inputs-2--surface",
+          "type": "shape",
+          "frame": [
+            856.0,
+            120.0,
+            376.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "capability-platform--ui-inputs-2--accent-rule",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            856.0,
+            120.0,
+            376.0,
+            4.0
+          ],
+          "fill": "#087F8C",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "capability-platform--ui-inputs-2",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "过程证据",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "capability-platform--ui-inputs-title-2",
+          "frame": [
+            874.0,
+            138.0,
+            340.0,
+            23.866667
+          ]
+        },
+        {
+          "type": "text",
+          "text": "会议、附件与结果\n连接结论和来源",
+          "role": "body",
+          "style": {},
+          "id": "capability-platform--ui-inputs-copy-2",
+          "frame": [
+            874.0,
+            177.866667,
+            340.0,
+            49.466667
+          ]
+        },
+        {
+          "id": "capability-platform--ui-platform--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            285.333333,
+            1184.0,
+            117.04
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "primary"
+        },
+        {
+          "type": "text",
+          "text": "共享数据与协同平台",
+          "role": "heading",
+          "style": {
+            "color": "#FFFFFF"
+          },
+          "id": "capability-platform--ui-platform-title",
+          "frame": [
+            72.0,
+            309.333333,
+            1136.0,
+            29.173333
+          ]
+        },
+        {
+          "type": "text",
+          "text": {
+            "ref": "shared-copy"
+          },
+          "role": "body",
+          "style": {
+            "color": "#FFFFFF"
+          },
+          "id": "capability-platform--ui-platform-copy",
+          "frame": [
+            72.0,
+            354.506667,
+            1136.0,
+            23.866667
+          ]
+        },
+        {
+          "id": "capability-platform--ui-outputs--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            442.373333,
+            1184.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "none"
+        },
+        {
+          "id": "capability-platform--ui-outputs-0--surface",
+          "type": "shape",
+          "frame": [
+            48.0,
+            442.373333,
+            578.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "capability-platform--ui-outputs-0--accent-rule",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            48.0,
+            442.373333,
+            578.0,
+            4.0
+          ],
+          "fill": "#153653",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "capability-platform--ui-outputs-0",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "一致的评估",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "capability-platform--ui-outputs-title-0",
+          "frame": [
+            66.0,
+            460.373333,
+            542.0,
+            23.866667
+          ]
+        },
+        {
+          "type": "text",
+          "text": "按共同标准比较方案\n保存判断与取舍",
+          "role": "body",
+          "style": {},
+          "id": "capability-platform--ui-outputs-copy-0",
+          "frame": [
+            66.0,
+            500.24,
+            542.0,
+            49.466667
+          ]
+        },
+        {
+          "id": "capability-platform--ui-outputs-1--surface",
+          "type": "shape",
+          "frame": [
+            654.0,
+            442.373333,
+            578.0,
+            125.333333
+          ],
+          "shape": "rect",
+          "role": "decoration",
+          "fill": "surfaceMuted"
+        },
+        {
+          "id": "capability-platform--ui-outputs-1--accent-rule",
+          "type": "shape",
+          "shape": "rect",
+          "role": "decoration",
+          "frame": [
+            654.0,
+            442.373333,
+            578.0,
+            4.0
+          ],
+          "fill": "#0756B8",
+          "stroke": "none",
+          "metadata": {
+            "layout_owner": "capability-platform--ui-outputs-1",
+            "purpose": "section accent"
+          }
+        },
+        {
+          "type": "text",
+          "text": "可追溯的执行",
+          "role": "bodyStrong",
+          "style": {},
+          "id": "capability-platform--ui-outputs-title-1",
+          "frame": [
+            672.0,
+            460.373333,
+            542.0,
+            23.866667
+          ]
+        },
+        {
+          "type": "text",
+          "text": "连接责任、行动和结果\n支持复盘与改进",
+          "role": "body",
+          "style": {},
+          "id": "capability-platform--ui-outputs-copy-1",
+          "frame": [
+            672.0,
+            500.24,
+            542.0,
+            49.466667
+          ]
+        }
+      ],
+      "recipe_source": {
+        "id": "capability-platform",
+        "recipe": "capability-platform",
+        "title": "共享平台将分散输入连接为可复用的业务能力",
+        "source": "合成工程样例 · 输入—共享支撑—产出",
+        "slots": {
+          "inputs": [
+            {
+              "title": "业务记录",
+              "body": "需求、任务与变更\n保留业务上下文"
+            },
+            {
+              "title": "专业数据",
+              "body": "规则、模型与基线\n注明范围和版本"
+            },
+            {
+              "title": "过程证据",
+              "body": "会议、附件与结果\n连接结论和来源"
+            }
+          ],
+          "platform": {
+            "title": "共享数据与协同平台",
+            "body": {
+              "ref": "shared-copy"
+            }
+          },
+          "outputs": [
+            {
+              "title": "一致的评估",
+              "body": "按共同标准比较方案\n保存判断与取舍"
+            },
+            {
+              "title": "可追溯的执行",
+              "body": "连接责任、行动和结果\n支持复盘与改进"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

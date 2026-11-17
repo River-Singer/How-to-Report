@@ -14,9 +14,9 @@ from presentation_typography import STYLE_FIELDS, measure_text_block, resolve_te
 
 COMPONENTS = {
     "topology": {
-        "purpose": "Compute editable tree, layered, radial, cycle and arch node/connector geometry from parameters.",
+        "purpose": "Compute editable tree, layered, radial, cycle and arch geometry; cycle arrow-ring provides thick curved stage arrows.",
         "required": ["layout", "nodes"],
-        "optional": ["edges", "interior"],
+        "optional": ["edges", "interior", "variant"],
         "contract_command": "components topology",
         "invariants": ["computed node frames", "native shapes and connector endpoints", "same tokens as the page"],
     },

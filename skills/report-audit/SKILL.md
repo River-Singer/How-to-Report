@@ -21,7 +21,7 @@ description: 独立审查汇报方案、成稿与PPT是否回答本次问题，�
 
 - 意见被反驳、范围或条件句有争议，或解释和修法加入新断言时，用[审计判断与反证](references/audit-judgment.md)处理当前这一项。争议是“是否讲够、是否重复”时看其中的[具体对照](references/audit-judgment.md#解释是否足够)。归属、版本或效果错接时看[具体改句](references/audit-judgment.md#把一句话对回实际记录)。更正须改到仍依赖旧断言的影响与建议，具体动作由主工作流负责。已能直接查清的意见不必读完整示例，其余专题见主工作流。
 - 涉及数值或缺附件时，用[数值证据](references/numeric-evidence.md)和[最小证据交接](references/evidence-handoff.md)，把复核结果对到实际比较与推荐。未取得的材料不证明事情未发生；明确给定的观察也不因缺附件被擅自取消。
-- 审核实际PPT或成图时，先独立初读并核源审阅业务解释，再用[模板适配与数据可视化审核](references/ppt-visual-review.md)结合页面任务、原资料、实际模板及可用候选逐页检查，按本版成图记录结果与复验。
+- 审核实际PPT或成图时，先独立初读并核源审阅业务解释，再用[模板适配、视觉组织与数据可视化审核](references/ppt-visual-review.md)结合页面任务、原资料、实际模板及可用候选逐页检查。沿[视觉组织方法](references/ppt-visual-design.md)实际看图核重点、分区、关系、对齐与可读性，按页和区域给可复验意见；几何通过不代证美观，不机械给审美总分。按本版成图记录结果与复验。
 - 复杂关系和版本追溯才用[多图模型](references/graph-model.md)、[工作区契约](references/workspace-contract.md)和[审计Run](references/audit-run.md)；实际工具能力见[宿主边界](references/host-capabilities.md)。选择Run后校验自己的目录，结构通过不代替内容判断。
 - 明确要检索或记录已确认经验时用[私有经验](references/report-experience.md)；领域知识先看[目录元信息](knowledge/index.md)。可选正文按已有授权范围读取，拒绝、未回应或撤销时不读，同范围许可不重复申请。
 

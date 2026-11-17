@@ -21,7 +21,7 @@ MAX_NODES = 64
 MAX_EDGES = 256
 COMMON = {"id", "type", "component", "frame", "metadata", "source_ref", "content_ref", "relation_ref", "role"}
 OPTIONS = {"layout", "nodes", "edges", "style", "node_width", "node_height", "node_padding", "node_gap",
-           "layer_gap", "padding", "direction", "root_id", "center_id", "arrow", "marker_size", "label_gap", "band", "interior"}
+           "layer_gap", "padding", "direction", "root_id", "center_id", "arrow", "marker_size", "label_gap", "band", "interior", "variant"}
 NODE_FIELDS = {"id", "label", "width", "height", "shape", "fill", "stroke", "style", "role", "marker"}
 EDGE_FIELDS = {"id", "from", "to", "arrow", "preset", "label"}
 PAINT_FIELDS = {"fill", "stroke", "stroke_width", "marker_fill", "marker_color"}
@@ -50,8 +50,9 @@ def topology_catalog(name=None, tokens=None):
                     "constraints": ["acyclic", "no isolated nodes unless it is the only node", "long edges may be rejected for node obstruction"]},
         "radial": {"purpose": "A center and variable spokes.", "algorithm": "center plus evenly spaced ellipse angles",
                    "constraints": ["all edges join the center and a spoke", "every spoke connected"]},
-        "cycle": {"purpose": "An ordered directed cycle.", "algorithm": "evenly spaced ellipse angles",
-                  "constraints": ["at least three nodes", "explicit edges must follow node order or its reverse"]},
+        "cycle": {"purpose": "An ordered directed cycle.", "algorithm": "default: evenly spaced ellipse nodes; arrow-ring: measured thick annular arrow segments",
+                  "variants": ["default", "arrow-ring"],
+                  "constraints": ["at least three nodes (arrow-ring: 3..6)", "explicit edges must follow node order or its reverse"]},
         "arch": {"purpose": "External nodes on an upper elliptical arch with an optional interior layout tree.",
                  "algorithm": "ellipse angles; external labels; maximum-area inner rectangle with clearance",
                  "constraints": ["node markers are ellipses", "optional solid annular band is an editable custom shape, not a connector",
@@ -84,6 +85,15 @@ def topology_catalog(name=None, tokens=None):
         "direction": ["down", "right"], "padding": "nonnegative number, applied to all four sides",
         "band_fields": ["thickness", "fill", "stroke", "stroke_width"],
         "band_semantics": "arch only; boolean or object; 14px thickness by default; solid theme fill/stroke; no gradient or shadow",
+        "variant": {"scope": "cycle only", "default": "default", "arrow-ring": {
+            "purpose": "Qualitative closed process; equal angle stages do not encode numeric shares.",
+            "capacity": [3, 6], "geometry": "thick solid annular arrows with widened heads; circle fits the allocated frame",
+            "labels": "horizontal native text; measured safe rectangle inside each arc body; no font shrinking",
+            "colors": "palette categorical order; optional node.fill; automatic contrasting label ink unless explicitly styled",
+            "limits": "node_width/node_height, node width/height/shape/stroke and paint style reject; arrows cannot be disabled; no badges or interior",
+            "example": {"id": "cycle", "type": "component", "component": "topology", "layout": "cycle", "variant": "arrow-ring",
+                        "frame": [100, 140, 600, 510], "nodes": [{"id": "discover", "label": "Discover"}, {"id": "design", "label": "Design"},
+                                                               {"id": "verify", "label": "Verify"}, {"id": "improve", "label": "Improve"}]}}},
         "automatic_edges": "radial: first node (or center_id) to every spoke; cycle: node input order closed; tree/layered: explicit edges; arch: none",
         "interior": "arch only: normal row/column/grid/leaf layout root; node IDs are prefixed by topology ID; nested topology is rejected",
         "connectors": {"presets": ["line"], "arrow": "boolean, straight native connectors only", "labels": "not supported; explicit labels reject",
@@ -134,6 +144,9 @@ class _Topology:
         self.kind = self.item.get("layout")
         if self.kind not in LAYOUTS:
             self.fail("unknown topology layout", path="layout", reason="unsupported_layout")
+        self.variant = self.item.get("variant", "default")
+        if self.variant not in ("default", "arrow-ring") or ("variant" in self.item and self.kind != "cycle"):
+            self.fail("variant supports default/arrow-ring on cycle only", path="variant", reason="unsupported_variant")
         if self.item.get("type") != "component" or self.item.get("component") != "topology":
             self.fail("requires type=component and component=topology", reason="invalid_component")
         unknown = set(self.item) - COMMON - OPTIONS
@@ -553,7 +566,10 @@ class _Topology:
     def render(self):
         self.report={"topology_version":VERSION,"layout":self.kind,"node_count":len(self.nodes),"edge_count":len(self.edges),
                      "bounds":self.bounds,"routing":"straight segments; non-endpoint occupied rectangles checked; edge crossings not optimized"}
-        if self.kind in {"tree","layered"}:
+        if self.variant == "arrow-ring":
+            from presentation_cycle_arrows import lower_arrow_ring
+            lower_arrow_ring(self)
+        elif self.kind in {"tree","layered"}:
             self.ranked()
         elif self.kind in {"radial","cycle"}:
             self.circular()
@@ -564,9 +580,13 @@ class _Topology:
             for identifier,boxes in self.occupied.items():
                 if any(_overlap(box,self.report["interior_bounds"],self.gap) for box in boxes):
                     self.fail("interior safe rectangle violates external node clearance",node_id=identifier,path="interior",reason="node_overlap")
-        self.add_edges()
+        if self.variant != "arrow-ring":
+            self.add_edges()
         self.report.update(node_frames=copy.deepcopy(self.boxes),occupied_frames=copy.deepcopy(self.occupied),measurements=self.measurements,
                            checks=["text measurement","component containment","pairwise node and label gap","straight edge obstruction"])
+        if self.variant == "arrow-ring":
+            self.report["checks"] = ["text measurement", "component containment", "label rectangle inside annular body",
+                                     "pairwise label gap", "disjoint directed angular sectors", "palette contrasting label ink"]
         metadata={**self.item.get("metadata",{}),"component":"topology","component_contract":VERSION,"component_frame":self.bounds,"topology_report":self.report}
         result={k:copy.deepcopy(v) for k,v in self.item.items() if k in COMMON-{"type","component","frame","metadata"}}
         return {**result,"type":"group","children":self.children,"metadata":metadata}

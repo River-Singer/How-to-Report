@@ -13,7 +13,7 @@
 | Tokens与profile | 统一字体角色、文字色、图表色、字阶、间距和画布 | profile.report-14pt，compose选择后写入作者的profile身份 |
 | Primitive | text、shape、image、chart、connector、group等绘图对象 | scene的elements，用library primitive.ID查询实际合同 |
 | Component | 具有数据语义和局部布局算法的块 | scene的type=component，含partition、comparison、progress-ring、paragraph-flow、evidence-map |
-| Pattern与recipe | 主值加主图、双图对照、证据到行动等重复表达方法 | 当前3种recipe有compose入口，schema规定可装入的子对象和数量 |
+| Pattern与recipe | 主值加主图、双图对照、证据到行动、并列解释、阶段带、共享平台 | 当前6种recipe有compose入口；后三种为可重放的成稿设计候选，schema规定输入和数量 |
 | Page template | 已有完整页面结构、Master/Layout及槽位 | kind=template页，按family/variant绑定，library读取现有catalog |
 | Page与deck | 当前页的业务问题、整稿叙事与页面推进 | How-to-Report形成任务与内容，作者工程保存实际页序和采用理由 |
 
@@ -37,7 +37,11 @@ library不带ID时按offset、limit分页，沿next_offset读取到null。kind�
 
 high_level、backend_only和planned描述各自kind的实现状态。validation记录实际验证范围，preview_refs记录预览来源，user_quality_acceptance记录用户评价身份。采用前查看当前图像，并确认其数据与关系适合本页。推荐样板的视觉效果证据与语义保真证据分别记录，新图样所需数据或分支条件在材料中缺失时标记data-required，补齐有来源的输入后再实例化。[注册记录](../assets/design-system/registry.json)
 
-## 三种已接通的recipe
+## 新增成稿设计组合
+
+`recipe.editorial-pillars`、`recipe.stage-ribbon`、`recipe.capability-platform` 已接入 compose；前两种分别用于同级解释和有序过程，第三种用于输入—共享平台—输出。语义和容量、结构原型与设计组合的选型、纯色与可重放约束见[成稿设计组合](ppt-visual-recipes.md)。正常 library 返回三者的实际示例和 SVG/PowerPoint PNG 预览。
+
+## 三种数据与行动recipe
 
 | recipe值 | slots与数量 | 允许的child与关键约束 |
 | --- | --- | --- |

@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>计算式视觉组合 · How-to-Report</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f4f7fa;color:#333;font:16px/1.65 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1500px;margin:0 auto;padding:36px 28px 64px}h1,h2{color:#153653;line-height:1.25}h1{font-size:30px}h2{font-size:22px;margin-top:40px}p{max-width:1040px}a{color:#0756b8}nav{display:flex;gap:24px;flex-wrap:wrap}.pair{display:grid;grid-template-columns:1fr 1fr;gap:20px}figure{margin:0;background:white;border:1px solid #cbd8e5}figure img{display:block;width:100%;height:auto}figcaption{padding:12px 18px;border-top:1px solid #e3e9f0;color:#555}.integrated{max-width:1200px}.small{font-size:14px;color:#666}code{background:#e8eef4;padding:2px 5px}@media(max-width:850px){.pair{grid-template-columns:1fr}main{padding:24px 16px}}
+</style><main>
+<h1>从容器到有语义的视觉组合</h1>
+<p>三组原创合成对照使用相同标题与正文、字体角色、画布和tokens。差异来自覆盖范围、顺序和分组的计算式表达。页脚对照标签除外；最后一页为独立综合展示。全部沿正常 <code>build --geometry-policy computed</code> 生成并由PowerPoint成图。</p>
+<nav><a href="visual-composition.pptx">下载可编辑PPTX</a><a href="comparison.author.json">作者布局树</a><a href="comparison-check.json">核验记录</a><a href="README.md">使用场景与重建说明</a></nav>
+<h2>01 · 并行能力与共同基础</h2>
+<p>共同基础占完整三列，以宽度和色带说明共享范围。三项并行能力没有被强行串成流程。</p>
+<div class="pair"><figure><img src="previews/slide-01.png" alt="基础容器：三个能力和共同支撑都作为同格卡片"><figcaption>Before · 等规格卡片使共同平台看似第四项能力</figcaption></figure><figure><img src="previews/slide-02.png" alt="跨列共同支撑：全宽基础色带覆盖三个能力"><figcaption>After · column_span明确覆盖范围，分区rule标记平行组</figcaption></figure></div>
+<h2>02 · 有向阶段交接</h2>
+<p>用原生chevron、绑定端点的连接线和同轨说明表达顺序。形状和连线都可继续在PowerPoint中编辑。</p>
+<div class="pair"><figure><img loading="lazy" src="previews/slide-03.png" alt="四个等规格阶段卡片"><figcaption>Before · 顺序主要依赖编号和阅读</figcaption></figure><figure><img loading="lazy" src="previews/slide-04.png" alt="四个有向chevron串接阶段并对齐下方说明"><figcaption>After · 显式sequence承载交接，连接位于节点后方</figcaption></figure></div>
+<h2>03 · 闭环、能力与适用范围</h2>
+<p>厚曲箭头的轮廓直接形成闭环，保留水平可编辑文字；右侧用开放式说明组和规则线区分执行能力与适用范围。各阶段是定性顺序，不是数值占比。</p>
+<div class="pair"><figure><img loading="lazy" src="previews/slide-05.png" alt="闭环阶段、能力、范围均为文字卡片"><figcaption>Before · 闭环以清单表达，分组视觉角色相近</figcaption></figure><figure><img loading="lazy" src="previews/slide-06.png" alt="草绿青蓝深蓝橘四段厚弧箭头和开放式说明组"><figcaption>After · arrow-ring计算弧段、箭头与安全文字区</figcaption></figure></div>
+<h2>04 · 独立综合展示</h2>
+<p>三轨分别呈现并行能力、工作流和交付证据。共同基础跨完整三列；只在有顺序的工作流内部连接。此页不是前三组控制变量实验的一部分。</p>
+<figure class="integrated"><img loading="lazy" src="previews/slide-07.png" alt="三轨能力、流程、证据及全宽共同平台的综合计算布局"><figcaption>Computed · 嵌套容器、规则线、原生连接与共享底座协同</figcaption></figure>
+<p class="small">正文14pt、最小9pt、纯色优先。预览为PowerPoint 16.0实际成图；文本、形状与连接保留原生编辑能力。有限column_span不是完整CSS Grid；未实现row_span/subgrid、通用布尔形状、遮罩或任意避障。前三组是局部关系示例，并非完整业务汇报的信息密度验收。</p>
+</main></html>

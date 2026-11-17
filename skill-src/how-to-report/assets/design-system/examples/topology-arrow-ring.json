@@ -1,0 +1,238 @@
+{
+  "schema_version": "0.1",
+  "project_id": "topology-arrow-ring-example",
+  "revision": 1,
+  "brief": {
+    "audience": "Engine engineering demonstration",
+    "purpose": "Controlled before/after comparison",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default"
+  },
+  "sources": [],
+  "facts": {},
+  "pages": [
+    {
+      "id": "cycle-after",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering comparison. No client data; not a business report or PDF reproduction.",
+      "layout": {
+        "id": "cycle-after-root",
+        "type": "column",
+        "gap": 28,
+        "children": [
+          {
+            "id": "cycle-after-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "用闭环表达过程，用分区区分能力和适用范围",
+              "role": "title"
+            }
+          },
+          {
+            "id": "cycle-after-grid",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 24,
+            "children": [
+              {
+                "id": "cycle-after-loop",
+                "type": "column",
+                "gap": 12,
+                "children": [
+                  {
+                    "id": "cycle-after-loop-heading",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "text": "持续改进闭环",
+                      "role": "heading"
+                    }
+                  },
+                  {
+                    "id": "cycle-after-cycle",
+                    "type": "leaf",
+                    "height": 310,
+                    "element": {
+                      "type": "component",
+                      "component": "topology",
+                      "layout": "cycle",
+                      "nodes": [
+                        {
+                          "id": "stage-0",
+                          "label": "发现"
+                        },
+                        {
+                          "id": "stage-1",
+                          "label": "设计"
+                        },
+                        {
+                          "id": "stage-2",
+                          "label": "验证"
+                        },
+                        {
+                          "id": "stage-3",
+                          "label": "改进"
+                        }
+                      ],
+                      "edges": [
+                        {
+                          "id": "edge-0",
+                          "from": "stage-0",
+                          "to": "stage-1",
+                          "arrow": true
+                        },
+                        {
+                          "id": "edge-1",
+                          "from": "stage-1",
+                          "to": "stage-2",
+                          "arrow": true
+                        },
+                        {
+                          "id": "edge-2",
+                          "from": "stage-2",
+                          "to": "stage-3",
+                          "arrow": true
+                        },
+                        {
+                          "id": "edge-3",
+                          "from": "stage-3",
+                          "to": "stage-0",
+                          "arrow": true
+                        }
+                      ],
+                      "variant": "arrow-ring"
+                    }
+                  }
+                ],
+                "padding": 20
+              },
+              {
+                "id": "cycle-after-right",
+                "type": "column",
+                "gap": 28,
+                "children": [
+                  {
+                    "id": "cycle-after-abilities",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "cycle-after-abilities-title",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "执行能力",
+                          "role": "heading"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-abilities-line-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "问题识别 · 方案比较",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-abilities-line-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "证据验证 · 改进行动",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 24,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rule",
+                        "color": "secondary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  },
+                  {
+                    "id": "cycle-after-scopes",
+                    "type": "column",
+                    "gap": 12,
+                    "children": [
+                      {
+                        "id": "cycle-after-scopes-title",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "适用维度",
+                          "role": "heading"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-scopes-line-0",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "按项目 · 按产品",
+                          "role": "body"
+                        }
+                      },
+                      {
+                        "id": "cycle-after-scopes-line-1",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "text": "按设备 · 按场景",
+                          "role": "body"
+                        }
+                      }
+                    ],
+                    "padding": 24,
+                    "surface": {
+                      "fill": "surface",
+                      "accent": {
+                        "kind": "rule",
+                        "color": "tertiary",
+                        "thickness": 4,
+                        "gap": 12
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "cycle-after-caption",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "text": "计算样例 · 语义视觉组合 · 相同内容 / 相同字阶 / 相同 tokens",
+              "role": "caption"
+            }
+          }
+        ],
+        "padding": [
+          48,
+          40,
+          48,
+          32
+        ]
+      }
+    }
+  ]
+}

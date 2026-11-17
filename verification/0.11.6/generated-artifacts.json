@@ -1,0 +1,186 @@
+{
+  "package_version": "0.11.6",
+  "geometry_policy": "computed",
+  "target_renderer": "Microsoft PowerPoint 16.0 1600x900",
+  "independently_viewed": {
+    "visual_composition": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "presentation_ui": [
+      1,
+      2,
+      3
+    ]
+  },
+  "final_render_hash_equality_to_viewed_images": {
+    "visual_composition": 7,
+    "presentation_ui": 3
+  },
+  "controlled_pairs_character_font_sizes_equal": 3,
+  "platform_native_connections": {
+    "capability-platform--ui-inputs-bus": {
+      "from": "capability-platform--ui-inputs-junction-0",
+      "to": "capability-platform--ui-inputs-junction-2",
+      "arrow": false
+    },
+    "capability-platform--ui-inputs-branch-0": {
+      "from": "capability-platform--ui-inputs-0--surface",
+      "to": "capability-platform--ui-inputs-junction-0",
+      "arrow": false
+    },
+    "capability-platform--ui-inputs-branch-1": {
+      "from": "capability-platform--ui-inputs-1--surface",
+      "to": "capability-platform--ui-inputs-junction-1",
+      "arrow": false
+    },
+    "capability-platform--ui-inputs-branch-2": {
+      "from": "capability-platform--ui-inputs-2--surface",
+      "to": "capability-platform--ui-inputs-junction-2",
+      "arrow": false
+    },
+    "capability-platform--ui-inputs-trunk": {
+      "from": "capability-platform--ui-inputs-center",
+      "to": "capability-platform--ui-platform--surface",
+      "arrow": true
+    },
+    "capability-platform--ui-outputs-bus": {
+      "from": "capability-platform--ui-outputs-junction-0",
+      "to": "capability-platform--ui-outputs-junction-1",
+      "arrow": false
+    },
+    "capability-platform--ui-outputs-branch-0": {
+      "from": "capability-platform--ui-outputs-junction-0",
+      "to": "capability-platform--ui-outputs-0--surface",
+      "arrow": true
+    },
+    "capability-platform--ui-outputs-branch-1": {
+      "from": "capability-platform--ui-outputs-junction-1",
+      "to": "capability-platform--ui-outputs-1--surface",
+      "arrow": true
+    },
+    "capability-platform--ui-outputs-trunk": {
+      "from": "capability-platform--ui-platform--surface",
+      "to": "capability-platform--ui-outputs-center",
+      "arrow": false
+    }
+  },
+  "platform_image_objects": 0,
+  "artifacts": {
+    "examples/visual-composition/visual-composition.pptx": "fefc5433134744cb61872d673489c38bd600daca1ea8c98268fa536da51b7956",
+    "examples/presentation-ui/presentation-ui.pptx": "895696d5a48a448dba8eb821240662d4c5f1149be47c03d24e7ae68164cd6426",
+    "skills/how-to-report/bundle-manifest.json": "0af386f097c1a5d0a2e771b86d4ef63c7d9f53b4f4ee5e83ff5db322415433b9",
+    "skills/report-audit/bundle-manifest.json": "a7ef7f873a6d2b771ef8c8fff855febd7e70df4808d40afe70f56079db400542"
+  },
+  "storybook_search_repair": {
+    "scope": "Normal export index, frontend and library exact identity queries over mixed builtin catalog; ordinary words remain full-text",
+    "actual_browser": "Playwright Chromium",
+    "matching_role": "designed-composition",
+    "matching_cards": 3,
+    "opened_recipe_requests": [
+      "editorial-pillars",
+      "stage-ribbon",
+      "capability-platform"
+    ],
+    "selection_guidance_search": "pass",
+    "unmatched_query_zero_cards": "pass",
+    "csp_bypass": false,
+    "dom_mutation": false,
+    "fixture": "All builtin records including 3 designed compositions, 170 structural templates, charts and icons",
+    "structural_role_results": 170,
+    "ordinary_guidance_results": [
+      3,
+      170
+    ],
+    "affected_regression_tests": 22,
+    "affected_regression_passed": 22,
+    "seconds": 40.176
+  },
+  "final_discovery_rebuild": {
+    "visual-composition": {
+      "package_manifest_sha256": "0af386f097c1a5d0a2e771b86d4ef63c7d9f53b4f4ee5e83ff5db322415433b9",
+      "prior_render_source_pptx_sha256": "6db6cacc4218f22e99ab2e4c94c5f21fec8adb791cf31491b767ebcd4e732305",
+      "rebuilt_pptx_sha256": "fefc5433134744cb61872d673489c38bd600daca1ea8c98268fa536da51b7956",
+      "normal_cli_geometry_policy": "computed",
+      "compiler_files": {
+        "presentation_compiler.py": "b1a357ca59b872ae6ee8bcb518c259fb974a84b21aeaa07ceb03dc17e6188847",
+        "presentation_composition.py": "061716ddc1b553c2bcc7ca51cb75b7bb640f346f45497e45ad5aac64f2da6bd5",
+        "presentation_svg.py": "e30b7e95a9f7a9a2245d28a15a80276cbc89f8605d181e6d070f22c8028cd657",
+        "presentation_document.py": "50ce5faee6bb464503c12b3889bfe1ce6f9850384fde048012fe207372dd9a47",
+        "presentation_typography.py": "23cd46600fb51e00ae6aac5d0ec16d4c8eb1bc121b07b05287b283ac9cba7040",
+        "report_ppt.py": "738936267cad654591edb456620535f14a1df3c7fced1c6eb339b76ad1deec31",
+        "report_ppt_layouts.py": "510fcd7f042f3e15d837061dbceba48ed298ece8a3f03024ef326fc85bf5c5e6",
+        "report_ppt_source.py": "f4857fc29cfed5b9f12a713afdf9db17e1d577bc33071799b10d5f000ff4f545",
+        "presentation_library.py": "ab5e966e48c7112ea499331fb56d263a1abc92fefc8c7c1b54fd84f51e580cbe",
+        "presentation_recipes.py": "c136e28d5fb490989f1f46febcba8f861668c932d4867e228a7271b5ee7367ad",
+        "presentation_visual_recipes.py": "5e33b17427e90585b7443910c0d1fff23ae9d5bfdbaa8dfc6222460557368ec3",
+        "presentation_layout.py": "67f864e3d3c519f98148c2fc24d2c79931a60203193ec3011626b38b97f319aa",
+        "presentation_topology.py": "fc6a1dfd5cef0e84851ecebba59542f26cd47061c07fad186adb7fe62279e6a8",
+        "presentation_cycle_arrows.py": "ce63d347787f559ccc5bb711d03c431370bbe68a1f4039da758dd8b44a77aa3b",
+        "presentation_chart_assets.py": "bdc450dfc73416d9278269867d24a62acfc69795a8f1acc54620ae2cc810bbbb",
+        "presentation_palette.py": "70731bc169734a62d57adee8104599f735b7a408684270d854428fa7cf599aa8",
+        "presentation_content_diagnostics.py": "15eb169d4e27f2dade803754180feae1b979471804cbe5ff5bc3c1f00effbdf6",
+        "presentation_text_profile.py": "5421b7c7c6c3dbf75b69730e70318a099c823bdd10c639eba28e7426490b86d9"
+      },
+      "receipt_sha256": "97fa395bd48c9385f9f5cf5ee8d07b431f4303c02549984d66dc8758500ebdf0",
+      "zip_part_names_equal": true,
+      "exact_part_count": 51,
+      "exact_slide_count": 7,
+      "normalized_metadata_only_parts": [
+        "docProps/core.xml",
+        "ppt/slideLayouts/slideLayout12.xml",
+        "ppt/slideLayouts/slideLayout13.xml",
+        "ppt/slideLayouts/slideLayout14.xml",
+        "ppt/slideLayouts/slideLayout15.xml",
+        "ppt/slideLayouts/slideLayout16.xml",
+        "ppt/slideLayouts/slideLayout17.xml",
+        "ppt/slideLayouts/slideLayout18.xml"
+      ],
+      "normalization": "Only docProps created/modified timestamps and p14:creationId val in slideLayouts; all other XML/resources exact",
+      "preview_inheritance": "Existing actual PowerPoint images retained; final discovery-only rebuild was not re-rendered; rendering inputs equivalent after nonvisual metadata normalization"
+    },
+    "presentation-ui": {
+      "package_manifest_sha256": "0af386f097c1a5d0a2e771b86d4ef63c7d9f53b4f4ee5e83ff5db322415433b9",
+      "prior_render_source_pptx_sha256": "850117ff4da9d488da84bebe68efd1b61b8fc3567d88a477c7836ccd6f0bce6a",
+      "rebuilt_pptx_sha256": "895696d5a48a448dba8eb821240662d4c5f1149be47c03d24e7ae68164cd6426",
+      "normal_cli_geometry_policy": "computed",
+      "compiler_files": {
+        "presentation_compiler.py": "b1a357ca59b872ae6ee8bcb518c259fb974a84b21aeaa07ceb03dc17e6188847",
+        "presentation_composition.py": "061716ddc1b553c2bcc7ca51cb75b7bb640f346f45497e45ad5aac64f2da6bd5",
+        "presentation_svg.py": "e30b7e95a9f7a9a2245d28a15a80276cbc89f8605d181e6d070f22c8028cd657",
+        "presentation_document.py": "50ce5faee6bb464503c12b3889bfe1ce6f9850384fde048012fe207372dd9a47",
+        "presentation_typography.py": "23cd46600fb51e00ae6aac5d0ec16d4c8eb1bc121b07b05287b283ac9cba7040",
+        "report_ppt.py": "738936267cad654591edb456620535f14a1df3c7fced1c6eb339b76ad1deec31",
+        "report_ppt_layouts.py": "510fcd7f042f3e15d837061dbceba48ed298ece8a3f03024ef326fc85bf5c5e6",
+        "report_ppt_source.py": "f4857fc29cfed5b9f12a713afdf9db17e1d577bc33071799b10d5f000ff4f545",
+        "presentation_library.py": "ab5e966e48c7112ea499331fb56d263a1abc92fefc8c7c1b54fd84f51e580cbe",
+        "presentation_recipes.py": "c136e28d5fb490989f1f46febcba8f861668c932d4867e228a7271b5ee7367ad",
+        "presentation_visual_recipes.py": "5e33b17427e90585b7443910c0d1fff23ae9d5bfdbaa8dfc6222460557368ec3",
+        "presentation_layout.py": "67f864e3d3c519f98148c2fc24d2c79931a60203193ec3011626b38b97f319aa",
+        "presentation_topology.py": "fc6a1dfd5cef0e84851ecebba59542f26cd47061c07fad186adb7fe62279e6a8",
+        "presentation_cycle_arrows.py": "ce63d347787f559ccc5bb711d03c431370bbe68a1f4039da758dd8b44a77aa3b",
+        "presentation_chart_assets.py": "bdc450dfc73416d9278269867d24a62acfc69795a8f1acc54620ae2cc810bbbb",
+        "presentation_palette.py": "70731bc169734a62d57adee8104599f735b7a408684270d854428fa7cf599aa8",
+        "presentation_content_diagnostics.py": "15eb169d4e27f2dade803754180feae1b979471804cbe5ff5bc3c1f00effbdf6",
+        "presentation_text_profile.py": "5421b7c7c6c3dbf75b69730e70318a099c823bdd10c639eba28e7426490b86d9"
+      },
+      "receipt_sha256": "5f5709fd35205d92e49636dc6845150813699a01543afb0233ab5d09791b6257",
+      "zip_part_names_equal": true,
+      "exact_part_count": 22,
+      "exact_slide_count": 3,
+      "normalized_metadata_only_parts": [
+        "docProps/core.xml",
+        "ppt/slideLayouts/slideLayout12.xml",
+        "ppt/slideLayouts/slideLayout13.xml",
+        "ppt/slideLayouts/slideLayout14.xml"
+      ],
+      "normalization": "Only docProps created/modified timestamps and p14:creationId val in slideLayouts; all other XML/resources exact",
+      "preview_inheritance": "Existing actual PowerPoint images retained; final discovery-only rebuild was not re-rendered; rendering inputs equivalent after nonvisual metadata normalization"
+    }
+  }
+}

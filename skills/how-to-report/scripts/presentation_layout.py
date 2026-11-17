@@ -15,15 +15,15 @@ from presentation_typography import measure_text_block, resolve_text_style
 
 
 VERSION = "0.1"
-ALGORITHM = "width-down-height-up-intrinsic-v3"
+ALGORITHM = "width-down-height-up-spans-v4"
 TOLERANCE = .01
 PRECISION = 6
 EPSILON = .000001
 LIMITS = {"nodes": 256, "depth": 12, "children": 64, "tracks": 12}
 ALIGN = {"start", "center", "end", "stretch"}
 COMMON = {"id", "type", "width", "height", "min_width", "max_width", "min_height", "max_height",
-          "basis", "grow", "shrink", "align_self", "metadata", "source_ref", "content_ref", "relation_ref"}
-CONTAINER = {"children", "padding", "gap", "align", "justify", "surface"}
+          "basis", "grow", "shrink", "align_self", "column_span", "metadata", "source_ref", "content_ref", "relation_ref"}
+CONTAINER = {"children", "padding", "gap", "align", "justify", "surface", "connect"}
 
 
 class LayoutError(TemplateInputError):
@@ -75,7 +75,57 @@ def _number(value, node, path, minimum=0, positive=False):
 
 def _padding(node):
     value = node.get("padding", 0)
-    return [value] * 4 if isinstance(value, (int, float)) else value
+    padding = [value] * 4 if isinstance(value, (int, float)) else list(value)
+    accent = node.get("surface", {}).get("accent")
+    if accent:
+        reserve = accent.get("thickness", 4) + accent.get("gap", 12)
+        edges = {"rail": (0,), "rule": (1,), "bracket": (0, 1, 3)}[accent["kind"]]
+        for edge in edges:
+            padding[edge] = max(padding[edge], reserve)
+    return padding
+
+
+def _grid_cells(children, count):
+    """Ordered, non-dense placement. An item never splits across rows."""
+    row, column, cells = 0, 0, []
+    for child in children:
+        span = child.get("column_span", 1)
+        if column + span > count:
+            row, column = row + 1, 0
+        cells.append((row, column, span))
+        column += span
+    return cells
+
+
+def _sequence_id(node, left, right):
+    return f"{node['id']}--link-{left['id']}-to-{right['id']}"
+
+
+def _span_requirements(values, columns, cells, requirements, gap, node, path, *, strict=True):
+    """Monotone bounded constraints; fr weights split a span deficit, auto uses 1.
+
+    This conservative algorithm is not CSS intrinsic track negotiation. Raising
+    an overlapping constraint never reduces a previously satisfied minimum.
+    """
+    for (_, column, span), required in zip(cells, requirements):
+        indices = list(range(column, column + span))
+        available = sum(values[i] for i in indices) + gap * (span - 1)
+        deficit = required - available
+        if deficit <= TOLERANCE:
+            continue
+        flexible = [i for i in indices if not isinstance(columns[i], (int, float))]
+        if not flexible:
+            if strict:
+                _fail(node, path, "fixed spanned tracks violate child minimum width", axis="x", available=available,
+                      required=required, code="layout_overflow")
+            continue
+        weights = [columns[i]["fr"] if isinstance(columns[i], dict) else 1 for i in flexible]
+        scale = max(weights)
+        weights = [weight / scale for weight in weights]
+        total = sum(weights)
+        for i, weight in zip(flexible, weights):
+            values[i] += deficit * weight / total
+    return values
 
 
 def _dimension(node, axis):
@@ -135,7 +185,7 @@ def validate_layout_page(page):
             else:
                 _number(track, node, location, positive=True)
 
-    def visit(node, path, depth):
+    def visit(node, path, depth, parent=None):
         if depth > LIMITS["depth"]:
             _fail(node, path, "layout depth exceeds 12")
         if not isinstance(node, dict) or id(node) in active:
@@ -156,6 +206,16 @@ def validate_layout_page(page):
         unknown = set(node) - allowed
         if unknown:
             _fail(node, path, f"unsupported layout fields {sorted(unknown)}")
+        if "column_span" in node:
+            span = node["column_span"]
+            if not parent or parent["type"] != "grid":
+                _fail(node, path + ".column_span", "column_span requires a direct grid parent")
+            if isinstance(parent["columns"], dict):
+                _fail(node, path + ".column_span", "column_span requires explicit columns; auto_fit is unsupported")
+            if type(span) is not int or not 1 <= span <= len(parent["columns"]):
+                _fail(node, path + ".column_span", "column_span must be an integer from 1 to the column count")
+            if span > 1 and parent.get("uniform_components"):
+                _fail(node, path + ".column_span", "column_span cannot combine with uniform_components")
         for field in ("metadata", "source_ref", "content_ref", "relation_ref"):
             if field in node:
                 finite_json(node[field], node, path + "." + field)
@@ -208,7 +268,8 @@ def validate_layout_page(page):
             children = node.get("children")
             if not isinstance(children, list) or not 1 <= len(children) <= LIMITS["children"]:
                 _fail(node, path + ".children", "containers require 1..64 children")
-            padding = _padding(node)
+            authored_padding = node.get("padding", 0)
+            padding = [authored_padding] * 4 if isinstance(authored_padding, (int, float)) else authored_padding
             if not isinstance(padding, list) or len(padding) != 4:
                 _fail(node, path + ".padding", "padding must be a number or [left,top,right,bottom]")
             for value in padding:
@@ -219,7 +280,7 @@ def validate_layout_page(page):
                 _fail(node, path, "unsupported align/justify")
             if "surface" in node:
                 surface = node["surface"]
-                if not isinstance(surface, dict) or set(surface) - {"fill", "stroke", "stroke_width", "shape"}:
+                if not isinstance(surface, dict) or set(surface) - {"fill", "stroke", "stroke_width", "shape", "accent"}:
                     _fail(node, path + ".surface", "unsupported surface fields")
                 for field in ("fill", "stroke", "shape"):
                     if field in surface and (not isinstance(surface[field], str) or not surface[field]):
@@ -229,6 +290,33 @@ def validate_layout_page(page):
                 if "stroke_width" in surface:
                     _number(surface["stroke_width"], node, path + ".surface.stroke_width")
                 surfaces.append((identifier + "--surface", node, path))
+                if "accent" in surface:
+                    accent = surface["accent"]
+                    if not isinstance(accent, dict) or set(accent) - {"kind", "color", "thickness", "gap"}:
+                        _fail(node, path + ".surface.accent", "accent accepts kind, color, thickness and gap")
+                    if not isinstance(accent.get("kind"), str) or accent.get("kind") not in {"rail", "rule", "bracket"}:
+                        _fail(node, path + ".surface.accent.kind", "expected rail, rule or bracket")
+                    color = accent.get("color", "primary")
+                    if not isinstance(color, str) or not color or color == "none":
+                        _fail(node, path + ".surface.accent.color", "expected a solid color or token")
+                    _number(accent.get("thickness", 4), node, path + ".surface.accent.thickness", positive=True)
+                    _number(accent.get("gap", 12), node, path + ".surface.accent.gap")
+                    for part in ("rail", "top", "bottom") if accent["kind"] == "bracket" else (accent["kind"],):
+                        surfaces.append((identifier + "--accent-" + part, node, path))
+            if "connect" in node:
+                if kind not in {"row", "column"} or node["connect"] != "sequence":
+                    _fail(node, path + ".connect", 'connect="sequence" is only supported on row/column')
+                if len(children) < 2 or node.get("gap", 0) <= 0:
+                    _fail(node, path + ".connect", "sequence needs at least two children and a positive gap")
+                for child in children:
+                    if not isinstance(child, dict):
+                        _fail(node, path + ".connect", "sequence targets must be layout nodes")
+                    target = child.get("element", {}) if child.get("type") == "leaf" else child.get("surface")
+                    if not isinstance(target, dict) or child.get("type") == "leaf" and target.get("type") != "shape" or target.get("shape", "rect") in {"path", "line"} or target.get("rotation"):
+                        _fail(node, path + ".connect", "sequence targets need unrotated shape leaves or container surfaces")
+                for left_child, right_child in zip(children, children[1:]):
+                    if "id" in left_child and "id" in right_child:
+                        surfaces.append((_sequence_id(node, left_child, right_child), node, path))
             if kind == "grid":
                 columns = node.get("columns")
                 if isinstance(columns, dict):
@@ -254,16 +342,18 @@ def validate_layout_page(page):
                     _fail(node, path + ".uniform_components", "uniform_components requires direct intrinsic component leaves")
                 if "rows" in node:
                     tracks(node["rows"], node, path + ".rows")
-                    if len(node["rows"]) != math.ceil(len(children) / len(node["columns"])):
-                        _fail(node, path + ".rows", "rows must match occupied row count")
             for index, child in enumerate(children):
-                visit(child, f"{path}.children[{index}]", depth + 1)
+                visit(child, f"{path}.children[{index}]", depth + 1, node)
+            if kind == "grid" and "rows" in node and len(node["rows"]) != _grid_cells(children, len(node["columns"]))[-1][0] + 1:
+                _fail(node, path + ".rows", "rows must match occupied row count after column_span placement")
         active.remove(id(node))
 
     visit(page.get("layout"), "layout", 1)
+    generated = set()
     for identifier, node, path in surfaces:
-        if identifier in identifiers:
-            _fail(node, path + ".surface", f"generated surface ID collides with {identifier!r}")
+        if identifier in identifiers or identifier in generated:
+            _fail(node, path, f"generated visual ID collides with {identifier!r}")
+        generated.add(identifier)
 
 
 def _distribute(bases, lows, highs, grow, shrink, available, node, path, axis, reserved=0):
@@ -458,8 +548,11 @@ class _Solver:
             if isinstance(node["columns"], dict):
                 return _clamp(max(preferred) + left + right, node, "x")
             count = len(node["columns"])
-            width = sum(float(track) if isinstance(track, (int, float)) else max(preferred[i::count], default=0)
-                        for i, track in enumerate(node["columns"])) + node.get("column_gap", gap) * (count - 1)
+            column_gap = node.get("column_gap", gap)
+            cells = _grid_cells(node["children"], count)
+            values = [float(track) if isinstance(track, (int, float)) else 0 for track in node["columns"]]
+            width = sum(_span_requirements(values, node["columns"], cells, preferred, column_gap,
+                                          node, path + ".columns", strict=False)) + column_gap * (count - 1)
         return _clamp(width + left + right, node, "x")
 
     def cross_width(self, child, parent, available, path):
@@ -619,9 +712,10 @@ class _Solver:
                 "candidate_count": len(candidates), "selection": "minimum required height, then more columns"}
             return result
         count = len(columns)
+        cells = _grid_cells(children, count)
         sizes, lows, highs, grow = [], [], [], []
         for index, track in enumerate(columns):
-            members = list(enumerate(children))[index::count]
+            members = [(i, child) for i, child in enumerate(children) if cells[i][1:] == (index, 1)]
             low = max((_limits(child, "x")[0] for _, child in members), default=0)
             if isinstance(track, (int, float)):
                 basis = float(track)
@@ -633,8 +727,18 @@ class _Solver:
                 sizes.append(max(low, preferred)); lows.append(max(low, preferred)); highs.append(math.inf); grow.append(0)
             else:
                 sizes.append(low); lows.append(low); highs.append(math.inf); grow.append(track["fr"])
+        _span_requirements(lows, columns, cells, [_limits(child, "x")[0] for child in children],
+                           column_gap, node, path + ".columns")
+        sizes = [max(size, low) for size, low in zip(sizes, lows)]
+        # An auto track reserves preferred content size; fr tracks only reserve minima.
+        auto_requirements = [self.preferred(child, f"{path}.children[{i}]")
+                             if any(columns[c] == "auto" for c in range(cells[i][1], cells[i][1] + cells[i][2]))
+                             else 0 for i, child in enumerate(children)]
+        _span_requirements(sizes, columns, cells, auto_requirements, column_gap, node, path + ".columns", strict=False)
+        lows = [max(low, size) if track == "auto" else low for low, size, track in zip(lows, sizes, columns)]
         left, top, right, bottom = _padding(node)
         widths = _fraction_sizes(sizes, lows, highs, grow, width - column_gap * (count - 1), node, path + ".columns", "x", column_gap * (count - 1) + left + right)
+        cell_widths = [sum(widths[column:column + span]) + column_gap * (span - 1) for _, column, span in cells]
         for child in children:
             self.uniform_metrics.pop(child["id"], None)
         if node.get("uniform_components"):
@@ -648,24 +752,24 @@ class _Solver:
                       required=common["diameter"], code="layout_overflow")
             for child in children:
                 self.uniform_metrics[child["id"]] = common
-        row_count = math.ceil(len(children) / count)
+        row_count = cells[-1][0] + 1
         rows = node.get("rows", ["auto"] * row_count)
         if height is None and any(isinstance(track, dict) for track in rows):
             _fail(node, path + ".rows", "fr rows require a definite container height")
         solved = []
         for i, child in enumerate(children):
-            row = rows[i // count]
+            row = rows[cells[i][0]]
             assigned = float(row) if isinstance(row, (int, float)) and child.get("align_self", node.get("align", "stretch")) == "stretch" and _dimension(child, "y") is None else None
             if assigned is None and isinstance(row, dict) and child["type"] == "leaf" and child["element"]["type"] != "text" and _dimension(child, "y") is None and "aspect_ratio" not in child and child.get("sizing") != "intrinsic":
                 assigned = max(EPSILON, _limits(child, "y")[0])
             location = f"{path}.children[{i}]"
-            child_width = self.cross_width(child, node, widths[i % count], location)
+            child_width = self.cross_width(child, node, cell_widths[i], location)
             deferred = (assigned is None and child.get("align_self", node.get("align", "stretch")) == "stretch"
                         and child["type"] == "leaf" and child["element"]["type"] != "text"
                         and _dimension(child, "y") is None and "aspect_ratio" not in child and child.get("sizing") != "intrinsic")
             solved.append(None if deferred else self.solve(child, location, child_width, assigned))
         for row_index in range(row_count):
-            indices = range(row_index * count, min(len(children), (row_index + 1) * count))
+            indices = [i for i, cell in enumerate(cells) if cell[0] == row_index]
             if any(solved[i] is None for i in indices):
                 measured_siblings = [solved[i]["height"] for i in indices if solved[i] is not None]
                 if not measured_siblings:
@@ -674,9 +778,9 @@ class _Solver:
                 for i in indices:
                     if solved[i] is None:
                         location = f"{path}.children[{i}]"
-                        child_width = self.cross_width(children[i], node, widths[i % count], location)
+                        child_width = self.cross_width(children[i], node, cell_widths[i], location)
                         solved[i] = self.solve(children[i], location, child_width, max(sibling_height, _limits(children[i], "y")[0]))
-        natural_rows = [max(c["height"] for c in solved[i * count:(i + 1) * count]) for i in range(row_count)]
+        natural_rows = [max(child["height"] for child, cell in zip(solved, cells) if cell[0] == row) for row in range(row_count)]
         row_sizes, row_lows, row_highs, row_grow = [], [], [], []
         for track, natural in zip(rows, natural_rows):
             fixed = isinstance(track, (int, float))
@@ -693,15 +797,16 @@ class _Solver:
         xs = _position("start", width, widths, column_gap)
         ys = _position(node.get("justify", "start"), natural if height is None else height, row_sizes, row_gap)
         for i, child in enumerate(solved):
-            column, row = i % count, i // count
+            row, column, span = cells[i]
             align = child["node"].get("align_self", node.get("align", "stretch"))
             if align == "stretch" and _dimension(child["node"], "y") is None:
                 if abs(child["height"] - row_sizes[row]) > EPSILON:
                     child = self.solve(child["node"], child["path"], child["width"], row_sizes[row])
                 solved[i] = child
-            free_x, free_y = max(0, widths[column] - child["width"]), max(0, row_sizes[row] - child["height"])
+            free_x, free_y = max(0, cell_widths[i] - child["width"]), max(0, row_sizes[row] - child["height"])
             child["x"] = xs[column] + (free_x / 2 if align == "center" else free_x if align == "end" else 0)
             child["y"] = ys[row] + (free_y / 2 if align == "center" else free_y if align == "end" else 0)
+            child["grid_cell"] = {"row": row, "column": column, "column_span": span, "allocated_width": cell_widths[i]}
         return solved, natural, sum(row_lows) + row_gap * (row_count - 1)
 
 
@@ -746,14 +851,50 @@ def lower_layout_page(page, facts, canvas, tokens, *, bounds=None):
                            "measurement_width": result["width"], "measurement": "runtime DrawingML estimator"})
             if "computed_text_insets" in measured:
                 record["computed_text_insets"] = copy.deepcopy(measured["computed_text_insets"])
-        if "grid_selection" in result:
-            record["grid_selection"] = copy.deepcopy(result["grid_selection"])
+        for field in ("grid_selection", "grid_cell"):
+            if field in result:
+                record[field] = copy.deepcopy(result[field])
+        if node["type"] != "leaf":
+            record["effective_padding"] = _padding(node)
         nodes.append(record)
         if "surface" in node:
             surface = {"id": node["id"] + "--surface", "type": "shape", "frame": box,
-                       "shape": "rect", **copy.deepcopy(node["surface"])}
+                       "shape": "rect", "role": "decoration", **copy.deepcopy(node["surface"])}
+            accent = surface.pop("accent", None)
             elements.append(surface)
             record["surface_id"] = surface["id"]
+            if accent:
+                thickness = accent.get("thickness", 4)
+                bx, by, bw, bh = box
+                if thickness >= min(bw, bh):
+                    _fail(node, result["path"] + ".surface.accent", "accent thickness must be smaller than its surface")
+                pieces = {"rail": [bx, by, thickness, bh], "rule": [bx, by, bw, thickness]}
+                if accent["kind"] == "bracket":
+                    length = min(bw, max(thickness, min(bw, bh) / 4))
+                    pieces = {"rail": pieces["rail"], "top": [bx, by, length, thickness],
+                              "bottom": [bx, by + bh - thickness, length, thickness]}
+                else:
+                    pieces = {accent["kind"]: pieces[accent["kind"]]}
+                record["accent_ids"] = []
+                for part, piece in pieces.items():
+                    identifier = node["id"] + "--accent-" + part
+                    elements.append({"id": identifier, "type": "shape", "shape": "rect", "role": "decoration",
+                                     "frame": [_quantize(value) for value in piece], "fill": accent.get("color", "primary"),
+                                     "stroke": "none", "metadata": {"layout_owner": node["id"], "purpose": "section accent"}})
+                    record["accent_ids"].append(identifier)
+        if node.get("connect") == "sequence":
+            record["connector_ids"] = []
+            for left_child, right_child in zip(node["children"], node["children"][1:]):
+                identifier = _sequence_id(node, left_child, right_child)
+                endpoint = lambda child: child["id"] if child["type"] == "leaf" else child["id"] + "--surface"
+                connector = {"id": identifier, "type": "connector", "from": endpoint(left_child), "to": endpoint(right_child),
+                             "from_port": "right" if node["type"] == "row" else "bottom",
+                             "to_port": "left" if node["type"] == "row" else "top", "stroke": "primary", "stroke_width": 2,
+                             "arrow": True, "metadata": {"layout_owner": node["id"], "relation": "declared sequence"}}
+                if "relation_ref" in node:
+                    connector["relation_ref"] = copy.deepcopy(node["relation_ref"])
+                elements.append(connector)
+                record["connector_ids"].append(identifier)
         if node["type"] == "leaf":
             element = {**copy.deepcopy(node["element"]), "id": node["id"], "frame": box}
             if measured is not None and "style_overrides" in measured:
@@ -804,6 +945,20 @@ def layout_catalog(name=None, tokens=None):
                                "selection": "measure every candidate at final track width; minimize required total height; ties prefer more columns",
                                "uniform_components": "direct intrinsic leaves only; same hole size; share maximum measured circle and text slots across every occupied row",
                                "row_gap": "defaults to gap; space between grid rows", "column_gap": "defaults to gap; space between grid columns"},
+            "column_span": {"scope": "direct children of a grid with explicit columns", "value": "integer 1..column count",
+                            "placement": "ordered row-major, advance to next row if remaining columns cannot hold item; no backfill",
+                            "measurement": "sum of covered track widths plus internal column gaps",
+                            "minimums": "monotone span deficits split across flexible tracks by fr weight (auto weight 1); conservative, not CSS track sizing",
+                            "unsupported": ["auto_fit with column_span", "spans greater than 1 with uniform_components", "row_span", "subgrid"]},
+            "surface_accent": {"fields": {"kind": "rail | rule | bracket", "color": "solid color/token; default primary",
+                                          "thickness": "positive px; default 4", "gap": "nonnegative clearance px; default 12"},
+                               "safe_insets": "effective padding reserves thickness+gap on left (rail), top (rule), or left/top/bottom (bracket)",
+                               "geometry": "native rectangles inside computed parent; bracket return = one quarter of shorter side",
+                               "purpose": "section grouping and hierarchy; excluded from content occupancy"},
+            "sequence": {"connect": "sequence", "scope": "row/column direct children, at least two, positive gap",
+                         "targets": "unrotated area-shape leaves or container surfaces; source presets need connection sites",
+                         "layering": "parent surface then accents then declared links then child subtrees; stable child-derived IDs",
+                         "meaning": "explicit sequence only; never inferred from sibling placement; no obstacle routing"},
             "intrinsic_components": {"sizing": "intrinsic", "supported": ["progress-ring"],
                                      "height": "omit for hug; explicit height must contain measured content",
                                      "width": "assigned by parent; unbreakable units and measured circle define hard minimum",
@@ -812,7 +967,7 @@ def layout_catalog(name=None, tokens=None):
             "sizing": "Numeric dimensions are preferred sizes clamped to explicit min/max; shrink requires explicit weight. Text height cannot shrink below measured content. Flex shrink weight = shrink * basis. Cross stretch applies to auto dimensions.",
             "bounds": "whole canvas by default; optional bounds allocates a rectangle; root explicit size/min/max is honored inside it",
             "limits": copy.deepcopy(LIMITS), "precision_decimals": PRECISION, "tolerance_px": TOLERANCE,
-            "unsupported": ["percentages", "wrap", "span", "subgrid", "absolute positioning", "semantic pagination", "automatic font shrinking", "gradient surfaces"],
+            "unsupported": ["percentages", "wrap", "row_span", "subgrid", "absolute positioning", "semantic pagination", "automatic font shrinking", "gradient surfaces"],
             "shape_geometry": "leaf shapes use registered presets; authored path/d geometry is rejected. Algorithm-generated topology geometry remains internal to component expansion.",
             "measurement": "shared runtime DrawingML estimator, not target-software measurement",
             "design_preferences": {"automatic_surface": "solid", "gradient": "lowest preference; unsupported by layout surfaces"},
