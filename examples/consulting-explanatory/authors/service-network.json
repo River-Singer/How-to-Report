@@ -1,0 +1,359 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-service-network",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "service-network.slot-001": {
+      "value": "咨询与交付能力的服务网络"
+    },
+    "service-network.slot-002": {
+      "value": "共用能力"
+    },
+    "service-network.slot-003": {
+      "value": "业务咨询"
+    },
+    "service-network.slot-004": {
+      "value": "方案设计"
+    },
+    "service-network.slot-005": {
+      "value": "系统交付"
+    },
+    "service-network.slot-006": {
+      "value": "运营支持"
+    },
+    "service-network.slot-007": {
+      "value": "诊断、设计与交付协同，形成服务闭环"
+    },
+    "service-network.slot-008": {
+      "value": "业务咨询"
+    },
+    "service-network.slot-009": {
+      "value": "明确经营问题"
+    },
+    "service-network.slot-010": {
+      "value": "识别需要验证的假设"
+    },
+    "service-network.slot-011": {
+      "value": "方案设计"
+    },
+    "service-network.slot-012": {
+      "value": "定义流程与责任"
+    },
+    "service-network.slot-013": {
+      "value": "将判断转为可执行方案"
+    },
+    "service-network.slot-014": {
+      "value": "系统与运营"
+    },
+    "service-network.slot-015": {
+      "value": "实现关键工作流"
+    },
+    "service-network.slot-016": {
+      "value": "跟踪使用反馈并持续改进"
+    },
+    "service-network.slot-017": {
+      "value": "合成内容 · 结构样例 04 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "service-network",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "核心能力—服务分支—交付事项",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "service-network-body"
+      },
+      "layout": {
+        "id": "col-612",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-609",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "service-network.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-610",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "service-network-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "grid-112",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 2
+                  },
+                  {
+                    "fr": 3
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-98",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "topology-96",
+                        "type": "leaf",
+                        "height": 360,
+                        "element": {
+                          "type": "component",
+                          "component": "topology",
+                          "layout": "radial",
+                          "nodes": [
+                            {
+                              "id": "v0",
+                              "label": {
+                                "ref": "service-network.slot-002"
+                              }
+                            },
+                            {
+                              "id": "v1",
+                              "label": {
+                                "ref": "service-network.slot-003"
+                              }
+                            },
+                            {
+                              "id": "v2",
+                              "label": {
+                                "ref": "service-network.slot-004"
+                              }
+                            },
+                            {
+                              "id": "v3",
+                              "label": {
+                                "ref": "service-network.slot-005"
+                              }
+                            },
+                            {
+                              "id": "v4",
+                              "label": {
+                                "ref": "service-network.slot-006"
+                              }
+                            }
+                          ],
+                          "role": "body",
+                          "arrow": true,
+                          "padding": 14,
+                          "layer_gap": 20,
+                          "node_gap": 16,
+                          "node_width": 125
+                        }
+                      },
+                      {
+                        "id": "text-97",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "service-network.slot-007"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-111",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-102",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-99",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "service-network.slot-008"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-100",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "service-network.slot-009"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-101",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "service-network.slot-010"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-106",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-103",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "service-network.slot-011"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-104",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "service-network.slot-012"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-105",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "service-network.slot-013"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-110",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-107",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "service-network.slot-014"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-108",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "service-network.slot-015"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-109",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "service-network.slot-016"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-611",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "service-network.slot-017"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

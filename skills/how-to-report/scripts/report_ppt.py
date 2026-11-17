@@ -51,6 +51,12 @@ def load_template(root=DEFAULT_TEMPLATE, tokens=None):
     catalog = read_json(root / "templates" / "page-catalog.json")
     values = read_json(tokens or root / "templates" / "tokens.json")
     validate_schema(values, read_json(root / "templates" / "tokens.schema.json"), "tokens")
+    from presentation_typography import resolve_text_style, typography_catalog
+    try:
+        typography_catalog(values)
+        resolve_text_style(values, values["chart"]["axis_role"])
+    except ValueError as exc:
+        raise TemplateInputError(f"tokens.font.textStyles: {exc}") from exc
     width, height = values["canvas"]["width"], values["canvas"]["height"]
     for name, frame in (("header", values["header"]["frame"]), ("title", values["header"]["titleFrame"]), ("body", values["body"]["frame"]), ("footer", values["footer"]["frame"]), ("footer text", values["footer"]["textFrame"])):
         x, y, w, h = frame
@@ -117,13 +123,19 @@ def _normalized_text(text, path):
     return text
 
 
-def validate_chart_content(content, prefix):
+def validate_chart_content(content, prefix, chart_type=None):
     categories = content["categories"]
     for series_index, series in enumerate(content["series"]):
         if len(series["values"]) != len(categories):
             raise TemplateInputError(f"{prefix}.series.{series_index}.values: align with categories")
         if not any(value is not None for value in series["values"]):
             raise TemplateInputError(f"{prefix}.series.{series_index}.values: provide at least one known numeric value")
+    if chart_type in {"pie", "doughnut"}:
+        if len(content["series"]) != 1:
+            raise TemplateInputError(f"{prefix}.series: pie and doughnut require one series")
+        values = content["series"][0]["values"]
+        if any(value is None or value < 0 for value in values) or sum(values) <= 0:
+            raise TemplateInputError(f"{prefix}.series.0.values: pie and doughnut require nonnegative values without null and a positive total")
 
 
 def validate_document(document, catalog, root):
@@ -150,7 +162,8 @@ def validate_document(document, catalog, root):
         unknown_config = set(page.get("config", {})) - set(allowed_config)
         if unknown_config:
             raise TemplateInputError(f"{prefix}.config: fields do not apply to {page['family']}: {sorted(unknown_config)}")
-        page["config"] = {**{key: catalog["config_defaults"][key] for key in allowed_config}, **page.get("config", {})}
+        page["config"] = {**{key: catalog["config_defaults"][key] for key in allowed_config},
+                          **variant.get("config_defaults", {}), **page.get("config", {})}
         validate_schema(page["content"], family["content_schema"], prefix + ".content")
         if variant.get("renderer") == "source-diagram":
             from report_ppt_source import validate_nodes
@@ -172,7 +185,22 @@ def validate_document(document, catalog, root):
                 if len(item.get(field, "")) > maximum:
                     raise TemplateInputError(f"{prefix}.content.{array_key}.{item_index}.{field}: {len(item[field])} characters exceeds {maximum} for {page['variant']}; shorten this field or use a lower-density variant")
         if page["family"] == "chart":
-            validate_chart_content(content, prefix + ".content")
+            validate_chart_content(content, prefix + ".content", page["config"]["chart_type"])
+            if (page["config"]["chart_type"] in {"pie", "doughnut"}
+                    and page["config"]["show_data_labels"] and not page["config"]["show_legend"]):
+                raise TemplateInputError(
+                    f"{prefix}.config.show_data_labels: pie and doughnut external value labels require "
+                    "show_legend=true; set show_data_labels=false to hide the external labels")
+        if page["family"] == "hierarchy":
+            registry = read_json(root / "icons" / "catalog.json")
+            nested_nodes = [("root", content["root"])]
+            for branch_index, branch in enumerate(content["branches"]):
+                nested_nodes.extend((f"branches.{branch_index}.children.{child_index}", child)
+                                    for child_index, child in enumerate(branch.get("children", [])))
+            for field, node in nested_nodes:
+                key = node.get("icon_key", "")
+                if key and key not in registry:
+                    raise TemplateInputError(f"{prefix}.content.{field}.icon_key: unknown user icon_key {key!r}")
         if page["family"] == "matrix":
             if len(content["cells"]) != len(content["rows"]) or any(len(row) != len(content["columns"]) for row in content["cells"]):
                 raise TemplateInputError(f"{prefix}.content.cells: align with row and column headers")
@@ -226,8 +254,17 @@ class Canvas:
         self.text("page_number", number, [x + width * .92, y, width * .08, height], "caption", 0, 12, derived="page order + config.show_page_number")
 
     def color(self, role):
-        slot = self.tokens["color"]["roles"][role]
-        return self.tokens["theme"]["slots"][slot]
+        if isinstance(role, str) and re.fullmatch(r"#[0-9A-Fa-f]{6}", role):
+            return role
+        from presentation_palette import palette_color
+        selected = palette_color(self.tokens, role)
+        if selected is not None:
+            return selected
+        slot = self.tokens["color"]["roles"].get(role, role)
+        try:
+            return self.tokens["theme"]["slots"][slot]
+        except (KeyError, TypeError) as exc:
+            raise TemplateInputError(f"unknown template color: {role!r}") from exc
 
     def rect(self, frame, color="surfaceMuted", layer="layout", identifier=None):
         x, y, width, height = frame
@@ -248,7 +285,9 @@ class Canvas:
     def line(self, x1, y1, x2, y2, layer="layout", identifier=None, color="primary", width_role="divider"):
         return self.element("line", {"x1": x1, "y1": y1, "x2": x2, "y2": y2, "stroke": self.color(color), "stroke-width": self.tokens["line"][width_role]}, layer, identifier)
 
-    def text(self, field, value, frame, role="body", minimum=0, maximum=100, required=False, derived=None, color_role=None, max_lines=None):
+    def text(self, field, value, frame, role="body", minimum=0, maximum=100, required=False, derived=None, color_role=None, max_lines=None, style=None):
+        from presentation_typography import ANCHORS, measure_text_block, resolve_text_style
+
         path = f"{self.page['id']}.content.{field}"
         value = _normalized_text(value, path)
         field_schema = _field_schema(self.family["content_schema"], field)
@@ -260,47 +299,69 @@ class Canvas:
         if str(ENGINE_SCRIPTS) not in sys.path:
             sys.path.insert(0, str(ENGINE_SCRIPTS))
         from text_measure import wrap_text
-        size = self.tokens["font"]["sizes"][role]
-        font = self.tokens["font"]["families"]["title" if role in {"title", "heading", "metric", "chapter"} else "body"]
-        font_family = f"{self.tokens['font']['families']['latin']}, {font}, {self.tokens['font']['families']['fallback']}"
-        weight = str(self.tokens["font"]["weights"][role])
+        from svg_to_pptx.drawingml.text_baseline import drawingml_text_baseline_offset
+
+        overrides = dict(style or {})
+        if color_role is not None:
+            overrides["color"] = color_role
         x, y, width, height = frame
-        leading = self.tokens["font"]["lineHeight"].get(role, 1.3)
-        lines, widths, oversized = [], [], []
-        for paragraph in value.split("\n"):
-            paragraph_lines, paragraph_widths, paragraph_oversized = wrap_text(paragraph, size=size, max_width=width, family=font_family, weight=weight)
-            lines.extend(paragraph_lines)
-            widths.extend(paragraph_widths)
-            oversized.extend(paragraph_oversized)
-        measured_height = size * self.variant.get("text_height_factor", 1) + (len(lines) - 1) * size * leading
+        try:
+            resolved = resolve_text_style(self.tokens, role, overrides)
+            left, top, right, bottom = resolved["insets"]
+            content_width, content_height = width - left - right, height - top - bottom
+            if content_height <= 0:
+                raise ValueError("text insets consume its frame height")
+            layout = measure_text_block(value, content_width, resolved, (wrap_text, drawingml_text_baseline_offset))
+        except ValueError as exc:
+            detail = str(exc)
+            if "exceeds" in detail:
+                detail = f"measured text exceeds its frame ({detail})"
+            raise TemplateInputError(f"{path}: {detail}") from exc
+        size, weight = resolved["font_size"], str(resolved["weight"])
+        lines, widths = layout["lines"], layout["widths"]
+        measured_height = layout["height"] + top + bottom
         if value and max_lines is not None and len(lines) > max_lines:
-            raise TemplateInputError(f"{path}: measured {len(lines)} lines, allowed {max_lines}; fit this field within {width:.1f}px at {size}px or shorten it")
-        if value and (oversized or measured_height > height + .01):
+            raise TemplateInputError(f"{path}: measured {len(lines)} lines, allowed {max_lines}; fit this field within {content_width:.1f}px at {size}px or shorten it")
+        if value and measured_height > height + .01:
             raise TemplateInputError(f"{path}: measured {max(widths, default=0):.1f}×{measured_height:.1f}px exceeds {width:.1f}×{height:.1f}px; choose a compatible variant or revise this field")
         if field not in {"title", "section_name", "source", "page_number"}:
             bx, by, bw, bh = self.body
             if x < bx - .01 or y < by - .01 or x + width > bx + bw + .01 or y + height > by + bh + .01:
                 raise TemplateInputError(f"{path}: text frame lies outside the global body region")
+        align = resolved["align"]
+        tx = x + left if align == "left" else x + width - right if align == "right" else x + left + content_width / 2
+        remaining = max(0, content_height - layout["height"])
+        vertical_offset = remaining / 2 if resolved["vertical_anchor"] == "middle" else remaining if resolved["vertical_anchor"] == "bottom" else 0
+        baseline_y = y + top + vertical_offset
         identifier = "text-" + re.sub(r"[^a-zA-Z0-9_-]", "-", field)
-        group = ET.Element(f"{{{SVG_NS}}}g", {"id": "slot-" + identifier, "data-pptx-placeholder": "title" if field == "title" else "body", "data-pptx-idx": str(len(self.slots)), "data-pptx-bounds": " ".join(f"{n:g}" for n in frame)})
+        bounds = " ".join(f"{n:g}" for n in frame)
+        group = ET.Element(f"{{{SVG_NS}}}g", {"id": "slot-" + identifier, "data-pptx-placeholder": "title" if field == "title" else "body", "data-pptx-idx": str(len(self.slots)), "data-pptx-bounds": bounds})
         node = ET.SubElement(group, f"{{{SVG_NS}}}text", {
-            "id": identifier,
-            "data-pptx-carrier": "true",
-            "x": str(x),
-            "y": str(y + size * .88),
-            "font-family": font_family,
-            "font-size": str(size),
-            "font-weight": weight,
-            "fill": self.color(color_role or ("primary" if role in {"title", "heading", "metric", "chapter"} else "text")),
+            "id": identifier, "data-pptx-carrier": "true", "data-pptx-frame": bounds,
+            "x": str(tx), "y": str(baseline_y + layout["baselines"][0]),
+            "font-family": resolved["font_family"], "font-size": str(size), "font-weight": weight,
+            "fill": self.color(resolved["color"]), "text-anchor": {"left": "start", "center": "middle", "right": "end"}[align],
+            "data-pptx-text-baseline": "metrics-v1", "data-htr-text-role": role,
+            "data-htr-resolved-style": json.dumps(resolved, ensure_ascii=False, separators=(",", ":")),
+            "data-htr-text-insets": " ".join(f"{n:g}" for n in resolved["insets"]),
+            "data-htr-vertical-anchor": ANCHORS[resolved["vertical_anchor"]],
+            "data-paragraph-line-height": str(size * resolved["line_height"]),
+            "{http://www.w3.org/XML/1998/namespace}space": "preserve",
         })
-        for index, line in enumerate(lines):
-            span = ET.SubElement(node, f"{{{SVG_NS}}}tspan", {"x": str(x), "y": str(y + size * .88 + index * size * leading)})
-            span.text = line
+        paragraph_starts = set(layout["paragraph_starts"])
+        for index, (line, baseline) in enumerate(zip(lines, layout["baselines"])):
+            attributes = {"x": str(tx), "y": str(baseline_y + baseline)}
+            if index in paragraph_starts and index > 0:
+                attributes["data-paragraph-space-before"] = str(resolved["paragraph_gap"])
+            elif index > 0:
+                attributes["data-paragraph-line-break"] = "1"
+            ET.SubElement(node, f"{{{SVG_NS}}}tspan", attributes).text = line
         self.slots.append(group)
-        self.bindings.append({"selector": identifier, "field": field, "derived_from": derived, "required": required or minimum > 0, "active": active, "inactive_when": "optional field hidden or capacity slot has no corresponding input item", "min_length": minimum, "max_length": maximum, "counting": "Unicode code points after CRLF normalization; whitespace and punctuation count", "font_role": role, "frame": frame, "text": value, "measured_width": max(widths, default=0), "measured_height": measured_height})
+        self.bindings.append({"selector": identifier, "field": field, "derived_from": derived, "required": required or minimum > 0, "active": active, "inactive_when": "optional field hidden or capacity slot has no corresponding input item", "min_length": minimum, "max_length": maximum, "counting": "Unicode code points after CRLF normalization; whitespace and punctuation count", "font_role": role, "resolved_style": resolved, "frame": frame, "text": value, "measured_width": max(widths, default=0), "measured_height": measured_height})
         if max_lines is not None:
             self.bindings[-1]["max_lines"] = max_lines
         return group
+
 
     def item(self, index):
         key = self.family.get("array_key")
@@ -315,6 +376,9 @@ class Canvas:
         if any(text.get("id") not in selectors for text in texts):
             raise TemplateInputError("editable text has no parameter binding")
         ET.indent(self.root, space="  ")
+        # Native helpers also register OOXML namespaces during lazy imports.
+        # Restore SVG's prefix before serialization so import order cannot change bytes.
+        ET.register_namespace("", SVG_NS)
         return ET.tostring(self.root, encoding="unicode") + "\n"
 
 
@@ -379,7 +443,7 @@ def refresh(template_root=DEFAULT_TEMPLATE):
         if icon_array and "icon_key" in family["content_schema"]["properties"][icon_array].get("items", {}).get("properties", {}):
             lines.extend(["图标来自用户PPT图标.pptx的首批24项，键与来源见icons/catalog.json。所有本家族variant均消费`content." + icon_array + "[].icon_key`。例如填入`team`并保持`config.show_icons=true`。空键或关闭开关隐藏图标，未知键在validate阶段报错。", "", "图标以primary色等比适配独立预留区，开关使用相同Layout与文字框。并列卡及线性流程使用卡片底部内边距，循环与环绕节点使用左侧栏，战略屋使用支柱底带，架构层使用标题与说明间隙，图片页使用说明标题上方空白。正文容量继续按原文字框实际测量。", ""])
         for variant_id, variant in family["variants"].items():
-            page = {"id": "prototype", "family": family_id, "variant": variant_id, "content": copy.deepcopy(family["prototype_content"]), "config": {key: catalog["config_defaults"][key] for key in family["config_fields"]}}
+            page = {"id": "prototype", "family": family_id, "variant": variant_id, "content": copy.deepcopy(family["prototype_content"]), "config": {**{key: catalog["config_defaults"][key] for key in family["config_fields"]}, **variant.get("config_defaults", {})}}
             page["content"].update(copy.deepcopy(variant.get("prototype_content", {})))
             array_key = family.get("array_key")
             if array_key:

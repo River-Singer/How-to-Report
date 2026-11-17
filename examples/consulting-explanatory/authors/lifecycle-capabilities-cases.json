@@ -1,0 +1,560 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-lifecycle-capabilities-cases",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "lifecycle-capabilities-cases.slot-001": {
+      "value": "生命周期、共用能力与典型用例"
+    },
+    "lifecycle-capabilities-cases.slot-002": {
+      "value": "定义目标"
+    },
+    "lifecycle-capabilities-cases.slot-003": {
+      "value": "设计开发"
+    },
+    "lifecycle-capabilities-cases.slot-004": {
+      "value": "试点验证"
+    },
+    "lifecycle-capabilities-cases.slot-005": {
+      "value": "规模运营"
+    },
+    "lifecycle-capabilities-cases.slot-006": {
+      "value": "经验复盘"
+    },
+    "lifecycle-capabilities-cases.slot-007": {
+      "value": "共用能力贯穿生命周期"
+    },
+    "lifecycle-capabilities-cases.slot-008": {
+      "value": "数据模型"
+    },
+    "lifecycle-capabilities-cases.slot-009": {
+      "value": "对象与主数据"
+    },
+    "lifecycle-capabilities-cases.slot-010": {
+      "value": "规则与参数"
+    },
+    "lifecycle-capabilities-cases.slot-011": {
+      "value": "清单台账"
+    },
+    "lifecycle-capabilities-cases.slot-012": {
+      "value": "版本化记录"
+    },
+    "lifecycle-capabilities-cases.slot-013": {
+      "value": "统一检索入口"
+    },
+    "lifecycle-capabilities-cases.slot-014": {
+      "value": "变化管理"
+    },
+    "lifecycle-capabilities-cases.slot-015": {
+      "value": "记录变化影响"
+    },
+    "lifecycle-capabilities-cases.slot-016": {
+      "value": "跟踪后续动作"
+    },
+    "lifecycle-capabilities-cases.slot-017": {
+      "value": "分析规划"
+    },
+    "lifecycle-capabilities-cases.slot-018": {
+      "value": "比较与预测"
+    },
+    "lifecycle-capabilities-cases.slot-019": {
+      "value": "透明决策依据"
+    },
+    "lifecycle-capabilities-cases.slot-020": {
+      "value": "典型用例"
+    },
+    "lifecycle-capabilities-cases.slot-021": {
+      "value": "用例甲：变化评估"
+    },
+    "lifecycle-capabilities-cases.slot-022": {
+      "value": "选择方案 → 比较影响 → 确认决策"
+    },
+    "lifecycle-capabilities-cases.slot-023": {
+      "value": "输出：更新后的业务基准"
+    },
+    "lifecycle-capabilities-cases.slot-024": {
+      "value": "用例乙：会议行动"
+    },
+    "lifecycle-capabilities-cases.slot-025": {
+      "value": "结构化事项 → 人工确认 → 跟踪落实"
+    },
+    "lifecycle-capabilities-cases.slot-026": {
+      "value": "输出：有责任和状态的任务"
+    },
+    "lifecycle-capabilities-cases.slot-027": {
+      "value": "合成内容 · 结构样例 12 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "lifecycle-capabilities-cases",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "业务背景→贯穿能力→具体用例",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "lifecycle-capabilities-cases-body"
+      },
+      "layout": {
+        "id": "col-652",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-649",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "lifecycle-capabilities-cases.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-650",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "lifecycle-capabilities-cases-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "topology-319",
+                "type": "leaf",
+                "height": 115,
+                "element": {
+                  "type": "component",
+                  "component": "topology",
+                  "layout": "layered",
+                  "nodes": [
+                    {
+                      "id": "v0",
+                      "label": {
+                        "ref": "lifecycle-capabilities-cases.slot-002"
+                      }
+                    },
+                    {
+                      "id": "v1",
+                      "label": {
+                        "ref": "lifecycle-capabilities-cases.slot-003"
+                      }
+                    },
+                    {
+                      "id": "v2",
+                      "label": {
+                        "ref": "lifecycle-capabilities-cases.slot-004"
+                      }
+                    },
+                    {
+                      "id": "v3",
+                      "label": {
+                        "ref": "lifecycle-capabilities-cases.slot-005"
+                      }
+                    },
+                    {
+                      "id": "v4",
+                      "label": {
+                        "ref": "lifecycle-capabilities-cases.slot-006"
+                      }
+                    }
+                  ],
+                  "role": "body",
+                  "arrow": true,
+                  "padding": 14,
+                  "layer_gap": 20,
+                  "node_gap": 16,
+                  "direction": "right",
+                  "node_width": 150,
+                  "edges": [
+                    {
+                      "id": "e0",
+                      "from": "v0",
+                      "to": "v1"
+                    },
+                    {
+                      "id": "e1",
+                      "from": "v1",
+                      "to": "v2"
+                    },
+                    {
+                      "id": "e2",
+                      "from": "v2",
+                      "to": "v3"
+                    },
+                    {
+                      "id": "e3",
+                      "from": "v3",
+                      "to": "v4"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "text-320",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "heading",
+                  "text": {
+                    "ref": "lifecycle-capabilities-cases.slot-007"
+                  }
+                }
+              },
+              {
+                "id": "grid-337",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-324",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-321",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-008"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-322",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-009"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-323",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-010"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-328",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-325",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-011"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-326",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-012"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-327",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-013"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-332",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-329",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-014"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-330",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-015"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-331",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-016"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-336",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-333",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-017"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-334",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-018"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-335",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-019"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "text-338",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "heading",
+                  "text": {
+                    "ref": "lifecycle-capabilities-cases.slot-020"
+                  }
+                }
+              },
+              {
+                "id": "grid-347",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-342",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-339",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-021"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-340",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-022"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-341",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-023"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-346",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-343",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-024"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-344",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-025"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-345",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "lifecycle-capabilities-cases.slot-026"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-651",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "lifecycle-capabilities-cases.slot-027"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+{
+  "template_id": "lifecycle-capabilities-cases",
+  "text_slots": [
+    {
+      "id": "lifecycle-capabilities-cases.slot-001",
+      "default": "生命周期、共用能力与典型用例",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-002",
+      "default": "定义目标",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-003",
+      "default": "设计开发",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-004",
+      "default": "试点验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-005",
+      "default": "规模运营",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-006",
+      "default": "经验复盘",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-007",
+      "default": "共用能力贯穿生命周期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-008",
+      "default": "数据模型",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-009",
+      "default": "对象与主数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-010",
+      "default": "规则与参数",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-011",
+      "default": "清单台账",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-012",
+      "default": "版本化记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-013",
+      "default": "统一检索入口",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-014",
+      "default": "变化管理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-015",
+      "default": "记录变化影响",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-016",
+      "default": "跟踪后续动作",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-017",
+      "default": "分析规划",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-018",
+      "default": "比较与预测",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-019",
+      "default": "透明决策依据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-020",
+      "default": "典型用例",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-021",
+      "default": "用例甲：变化评估",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-022",
+      "default": "选择方案 → 比较影响 → 确认决策",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-023",
+      "default": "输出：更新后的业务基准",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-024",
+      "default": "用例乙：会议行动",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-025",
+      "default": "结构化事项 → 人工确认 → 跟踪落实",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-026",
+      "default": "输出：有责任和状态的任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "lifecycle-capabilities-cases.slot-027",
+      "default": "合成内容 · 结构样例 12 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

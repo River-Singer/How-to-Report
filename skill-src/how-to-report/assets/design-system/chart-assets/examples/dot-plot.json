@@ -1,0 +1,31 @@
+{
+  "asset": "chart.dot-plot",
+  "data": {
+    "categories": [
+      "A",
+      "B",
+      "C"
+    ],
+    "ranges": [
+      {
+        "low": 10,
+        "high": 40,
+        "value": 25,
+        "target": 30
+      },
+      {
+        "low": 20,
+        "high": 55,
+        "value": 40,
+        "target": 45
+      },
+      {
+        "low": 30,
+        "high": 70,
+        "value": 50,
+        "target": 55
+      }
+    ]
+  },
+  "options": {}
+}

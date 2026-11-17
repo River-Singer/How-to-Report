@@ -1,0 +1,84 @@
+{
+  "template_id": "explanation.rows",
+  "text_slots": [
+    {
+      "id": "explanation.rows.slot-001",
+      "default": "三类知识资料分别解决开始操作、查规则和处理异常",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-002",
+      "default": "按读者要完成的任务分类",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-003",
+      "default": "入门培训",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-004",
+      "default": "按任务顺序解释基本操作，帮助新成员完成首次实践。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-005",
+      "default": "例：从创建事项到交付结果。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-006",
+      "default": "边界：不替代完整规则索引。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-007",
+      "default": "参考手册",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-008",
+      "default": "按主题组织规则、术语和例外，供熟悉流程的人快速查询。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-009",
+      "default": "例：权限、命名、版本与归档规则。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-010",
+      "default": "边界：每项规则需有适用范围。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-011",
+      "default": "故障指南",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-012",
+      "default": "从可观察症状开始，按检查结果定位下一步。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-013",
+      "default": "例：无法访问、找不到资料、版本不一致。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-014",
+      "default": "边界：不确定原因时保留排查分支。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.rows.slot-015",
+      "default": "原创合成内容 · 可计算结构样例 01/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

@@ -1,0 +1,172 @@
+{
+  "template_id": "team-profiles",
+  "text_slots": [
+    {
+      "id": "team-profiles.slot-001",
+      "default": "团队职责与专业分工",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-002",
+      "default": "肖像图片槽",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-003",
+      "default": "成员甲",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-004",
+      "default": "项目负责人",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-005",
+      "default": "统筹交付边界\n协调业务决策",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-006",
+      "default": "肖像图片槽",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-007",
+      "default": "成员乙",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-008",
+      "default": "业务负责人",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-009",
+      "default": "澄清需求范围\n确认业务验收",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-010",
+      "default": "肖像图片槽",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-011",
+      "default": "成员丙",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-012",
+      "default": "产品负责人",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-013",
+      "default": "组织功能迭代\n维护需求优先级",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-014",
+      "default": "肖像图片槽",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-015",
+      "default": "成员丁",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-016",
+      "default": "技术负责人",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-017",
+      "default": "设计系统边界\n审查接口方案",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-018",
+      "default": "肖像图片槽",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-019",
+      "default": "成员戊",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-020",
+      "default": "数据负责人",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-021",
+      "default": "统一指标口径\n验证数据质量",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "team-profiles.slot-022",
+      "default": "合成内容 · 结构样例 01 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": [
+    {
+      "id": "col-2",
+      "height_constraint": 190,
+      "description": "矩形占位可替换真实图片，contain由引擎计算；图内文字不可编辑。"
+    },
+    {
+      "id": "col-8",
+      "height_constraint": 190,
+      "description": "矩形占位可替换真实图片，contain由引擎计算；图内文字不可编辑。"
+    },
+    {
+      "id": "col-14",
+      "height_constraint": 190,
+      "description": "矩形占位可替换真实图片，contain由引擎计算；图内文字不可编辑。"
+    },
+    {
+      "id": "col-20",
+      "height_constraint": 190,
+      "description": "矩形占位可替换真实图片，contain由引擎计算；图内文字不可编辑。"
+    },
+    {
+      "id": "col-26",
+      "height_constraint": 190,
+      "description": "矩形占位可替换真实图片，contain由引擎计算；图内文字不可编辑。"
+    }
+  ]
+}

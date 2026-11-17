@@ -1,0 +1,36 @@
+{
+  "asset": "chart.column-line",
+  "data": {
+    "categories": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "series": [
+      {
+        "name": "Observed",
+        "values": [
+          25,
+          40,
+          30,
+          55
+        ]
+      },
+      {
+        "name": "Rate",
+        "values": [
+          0.2,
+          0.3,
+          0.4,
+          0.35
+        ]
+      }
+    ],
+    "series_units": [
+      "units",
+      "ratio"
+    ]
+  },
+  "options": {}
+}

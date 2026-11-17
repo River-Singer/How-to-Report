@@ -1,0 +1,104 @@
+{
+  "template_id": "mechanism.layers",
+  "text_slots": [
+    {
+      "id": "mechanism.layers.slot-001",
+      "default": "答复由授权资料、检索过程与来源标识共同支撑",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-002",
+      "default": "授权资料",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-003",
+      "default": "检索处理",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-004",
+      "default": "来源答复",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-005",
+      "default": "可使用的材料",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-006",
+      "default": "已发布规则",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-007",
+      "default": "已归档案例",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-008",
+      "default": "术语说明",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-009",
+      "default": "处理过程",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-010",
+      "default": "限定可访问范围",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-011",
+      "default": "检索相关片段",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-012",
+      "default": "组织答复",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-013",
+      "default": "面向使用者",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-014",
+      "default": "答复正文",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-015",
+      "default": "所用来源",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-016",
+      "default": "缺失信息提示",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-017",
+      "default": "未找到可用片段时提示补充，不虚构规则。",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-018",
+      "default": "权限由既有权限系统决定，流程图不扩大访问范围。",
+      "type": "text"
+    },
+    {
+      "id": "mechanism.layers.slot-019",
+      "default": "原创合成内容 · 可计算结构样例 03/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

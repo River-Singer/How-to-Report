@@ -1,0 +1,56 @@
+{
+  "package_version": "0.11.4",
+  "all_authors_validate": true,
+  "validated_author_count": 10,
+  "authors": [
+    {
+      "file": "authors/explanation.parallel.json",
+      "sha256": "0418a4c5264b5ec9b0aa361c4e4afbbb7ad7a53a09d04713725461202f3d03db"
+    },
+    {
+      "file": "authors/explanation.rows.json",
+      "sha256": "2d7984c5a9e5cbd1820f4b044c77312e2f2f95cc307c5c673d40cd8ae5e07d9c"
+    },
+    {
+      "file": "authors/image.proof-explanation.json",
+      "sha256": "2b415e83b05db3e6f7869ee5cb90db46412934da7d13c6147908d7fdd82f0252"
+    },
+    {
+      "file": "authors/judgment.evidence.json",
+      "sha256": "75a35d47c635f6d871937481bf145faa1fead262948ea3e4f080263ed2331c46"
+    },
+    {
+      "file": "authors/mechanism.layers.json",
+      "sha256": "89c6e195eda8a57bf1a4de72abc9fd5eeceff76b9d8b7e15bee8069107a5df21"
+    },
+    {
+      "file": "authors/mixed.semantic-bands.json",
+      "sha256": "dda716a3a1f104f421d94c6b5650c0dce960ae22799190c6eeaa5f810381e07e"
+    },
+    {
+      "file": "authors/process.annotated-evidence.json",
+      "sha256": "fa273e719cf0643a850141a6dfff78fedb9152590e82c3f9ff11fd60f72fd4df"
+    },
+    {
+      "file": "authors/reading.columns.json",
+      "sha256": "2cce327bb19488823aaf53f640715d8233883cc98d02bda9f055bb9a205cffa4"
+    },
+    {
+      "file": "authors/scenario.quadrants.json",
+      "sha256": "29ef94e790ee3689f4c8e06361d61672391bb3bbe23b83fb92298664c5ee1c82"
+    },
+    {
+      "file": "authors/timeline.events.json",
+      "sha256": "1ef453363062056dc27611f0d46c02a0d63c5fafe432d88cc4c8bff7a28706af"
+    }
+  ],
+  "representative_computed_builds": [
+    "timeline.events",
+    "image.proof-explanation",
+    "reading.columns"
+  ],
+  "working_directory": "unrelated temporary directory",
+  "asset_scope": "no private sources or external image dependencies in default authors",
+  "preview_note": "See each catalog entry: metadata-only publication reuses identical visible-content preview, except resource-load has a fresh public-author Office render. No old local receipt is presented as a public-input receipt.",
+  "limits": "Deterministic engineering validation; not an independent business audit or a test of arbitrary replacement content."
+}

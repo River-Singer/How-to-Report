@@ -1,0 +1,343 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-resource-load",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "resource-load.slot-001": {
+      "value": "按阶段配置团队投入"
+    },
+    "resource-load.slot-002": {
+      "value": "投入方式"
+    },
+    "resource-load.slot-003": {
+      "value": "关键岗位连续参与"
+    },
+    "resource-load.slot-004": {
+      "value": "按阶段安排专业支持"
+    },
+    "resource-load.slot-005": {
+      "value": "集中交付窗口"
+    },
+    "resource-load.slot-006": {
+      "value": "高峰期协同开发与验证"
+    },
+    "resource-load.slot-007": {
+      "value": "提前锁定环境和验收安排"
+    },
+    "resource-load.slot-008": {
+      "value": "后续支持"
+    },
+    "resource-load.slot-009": {
+      "value": "运行期处理问题与改进"
+    },
+    "resource-load.slot-010": {
+      "value": "保留明确交接与响应机制"
+    },
+    "resource-load.slot-011": {
+      "value": "合成内容 · 结构样例 20 / 21"
+    },
+    "resource-load.public-unit": {
+      "value": "单位：人天（合成数据）；颜色越深表示投入越多，格内数值为该角色当月人天数。"
+    }
+  },
+  "pages": [
+    {
+      "id": "resource-load",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "解释角色×月份投入分布，识别投入集中时段；精确核对人天需改用明细表。",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "resource-load-body"
+      },
+      "layout": {
+        "id": "col-692",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-689",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "resource-load.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-690",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "resource-load-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "chart-565",
+                "type": "leaf",
+                "height": 330,
+                "element": {
+                  "type": "chart",
+                  "asset": "chart.xy-heatmap",
+                  "data": {
+                    "x_labels": [
+                      "M1",
+                      "M2",
+                      "M3",
+                      "M4",
+                      "M5",
+                      "M6"
+                    ],
+                    "y_labels": [
+                      "业务分析",
+                      "技术设计",
+                      "数据开发",
+                      "验证测试"
+                    ],
+                    "values": [
+                      [
+                        20,
+                        20,
+                        15,
+                        10,
+                        10,
+                        5
+                      ],
+                      [
+                        15,
+                        20,
+                        20,
+                        15,
+                        10,
+                        5
+                      ],
+                      [
+                        5,
+                        10,
+                        20,
+                        25,
+                        25,
+                        15
+                      ],
+                      [
+                        0,
+                        0,
+                        5,
+                        10,
+                        20,
+                        25
+                      ]
+                    ]
+                  },
+                  "options": {}
+                }
+              },
+              {
+                "id": "resource-load-public-unit",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "caption",
+                  "text": {
+                    "ref": "resource-load.public-unit"
+                  }
+                }
+              },
+              {
+                "id": "grid-578",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-569",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-566",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "resource-load.slot-002"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-567",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "resource-load.slot-003"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-568",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "resource-load.slot-004"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-573",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-570",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "resource-load.slot-005"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-571",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "resource-load.slot-006"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-572",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "resource-load.slot-007"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-577",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-574",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "resource-load.slot-008"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-575",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "resource-load.slot-009"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-576",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "resource-load.slot-010"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-691",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "resource-load.slot-011"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

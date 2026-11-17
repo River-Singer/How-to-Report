@@ -1,0 +1,279 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-delivery-gantt",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "delivery-gantt.slot-001": {
+      "value": "实施阶段与工作流排程"
+    },
+    "delivery-gantt.slot-002": {
+      "value": "月份为统一时间尺度；区间长度表示持续时间"
+    },
+    "delivery-gantt.slot-003": {
+      "value": "阶段一"
+    },
+    "delivery-gantt.slot-004": {
+      "value": "冻结范围与关键方案"
+    },
+    "delivery-gantt.slot-005": {
+      "value": "阶段二"
+    },
+    "delivery-gantt.slot-006": {
+      "value": "完成集成与联调"
+    },
+    "delivery-gantt.slot-007": {
+      "value": "阶段三"
+    },
+    "delivery-gantt.slot-008": {
+      "value": "确认上线与运行责任"
+    },
+    "delivery-gantt.slot-009": {
+      "value": "合成内容 · 结构样例 18 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "delivery-gantt",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "同一时间尺度上的区间重叠与里程碑",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "delivery-gantt-body"
+      },
+      "layout": {
+        "id": "col-682",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-679",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "delivery-gantt.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-680",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "delivery-gantt-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "chart-535",
+                "type": "leaf",
+                "height": 320,
+                "element": {
+                  "type": "chart",
+                  "asset": "chart.priestley-timeline",
+                  "data": {
+                    "rows": [
+                      {
+                        "label": "需求与设计",
+                        "start": 1,
+                        "end": 3,
+                        "value": 1
+                      },
+                      {
+                        "label": "开发与配置",
+                        "start": 2,
+                        "end": 8,
+                        "value": 1
+                      },
+                      {
+                        "label": "集成与验证",
+                        "start": 6,
+                        "end": 10,
+                        "value": 1
+                      },
+                      {
+                        "label": "上线与运行",
+                        "start": 10,
+                        "end": 12,
+                        "value": 1
+                      }
+                    ]
+                  },
+                  "options": {}
+                }
+              },
+              {
+                "id": "text-536",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "caption",
+                  "text": {
+                    "ref": "delivery-gantt.slot-002"
+                  }
+                }
+              },
+              {
+                "id": "grid-546",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-539",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-537",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "delivery-gantt.slot-003"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-538",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "delivery-gantt.slot-004"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-542",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-540",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "delivery-gantt.slot-005"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-541",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "delivery-gantt.slot-006"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-545",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-543",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "delivery-gantt.slot-007"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-544",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "delivery-gantt.slot-008"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-681",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "delivery-gantt.slot-009"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

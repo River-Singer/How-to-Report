@@ -37,6 +37,7 @@ from .chart_style import (
     _chart_text_entry_font_face,
     _chart_text_entry_font_size,
     _chart_text_sizes,
+    _chart_text_style_override,
     _chart_title_is_bounded,
     _chart_tx_pr_xml,
     _classic_chart_style,
@@ -253,9 +254,11 @@ def _data_labels_xml(
     default_color: str | None,
     default_font_face: str | None,
     language: str | None = None,
+    text_style: dict[str, Any] | None = None,
 ) -> str:
     if config is None:
         return ""
+    text_style = _chart_text_style_override(text_style, config)
     source_xml = _source_data_labels_xml(config)
     if source_xml is not None:
         return source_xml
@@ -273,12 +276,18 @@ def _data_labels_xml(
     color = _hex_or_none(config.get("color")) or default_color
     bold = _chart_bool(config.get("bold"), False)
     font_face = _chart_text_entry_font_face(config, default_font_face)
+    if text_style is not None:
+        label_font_size = _font_size_hpt(text_style["font_size"])
+        color = _hex_or_none(text_style["color"])
+        bold = text_style["weight"] == 700
+        font_face = text_style["font_family"]
     tx_pr_xml = _chart_tx_pr_xml(
         label_font_size,
         color,
         bold=bold,
         font_face=font_face,
         language=language,
+        text_style=text_style,
     )
     num_fmt = _first_present(
         config.get("number_format"),
@@ -339,6 +348,7 @@ def _data_labels_xml(
                 bold=item_bold,
                 font_face=item_font_face,
                 language=language,
+                text_style=_chart_text_style_override(text_style, item),
             )
             custom_text_xml = ""
             if item.get("text") is not None:
@@ -380,7 +390,7 @@ def _data_labels_xml(
         point_label_xml += (
             f'<c:dLbl><c:idx val="{idx}"/>'
             f"{num_fmt_xml}"
-            f"{_chart_tx_pr_xml(label_font_size, label_color, bold=bold, font_face=font_face, language=language)}"
+            f"{_chart_tx_pr_xml(label_font_size, label_color, bold=bold, font_face=font_face, language=language, text_style=_chart_text_style_override(text_style, {'color': label_color}))}"
             f"{position_xml}"
             f"{flags_xml}"
             "</c:dLbl>"
@@ -485,6 +495,7 @@ def _series_xml(
     data_label_font_size: int = 900,
     data_label_color: str | None = None,
     data_label_font_face: str | None = None,
+    data_label_text_style: dict[str, Any] | None = None,
     language: str | None = None,
     category_column: int = 1,
     color_start_index: int | None = None,
@@ -579,6 +590,7 @@ def _series_xml(
                 default_color=data_label_color,
                 default_font_face=data_label_font_face,
                 language=language,
+                text_style=data_label_text_style,
             )
             if (
                 item_data_labels is not None
@@ -721,7 +733,7 @@ def _chart_legend_xml(
     return (
         f'<c:legend><c:legendPos val="{position}"/><c:layout/>'
         '<c:overlay val="0"/>'
-        f'{_chart_tx_pr_xml(font_size, color, font_face=font_face, language=primary_language)}'
+        f'{_chart_tx_pr_xml(font_size, color, font_face=font_face, language=primary_language, text_style=payload.get("text_styles", {}).get("legend"))}'
         '</c:legend>'
     )
 
@@ -925,6 +937,7 @@ def _axis_tx_pr_xml(
         config.get("color") or chart_style.get("text_color"),
         font_face=config.get("font_family") or chart_style.get("font_face"),
         language=chart_style.get("primary_language"),
+        text_style=_chart_text_style_override(chart_style.get("text_styles", {}).get("axis"), config),
     )
 
 
@@ -1135,6 +1148,7 @@ def _combo_plot_xml(
             data_label_font_size=axis_font_size,
             data_label_color=chart_style.get("text_color"),
             data_label_font_face=chart_style.get("font_face"),
+            data_label_text_style=chart_style.get("text_styles", {}).get("data_label"),
             language=chart_style.get("primary_language"),
             line_style=plot.get("line_style", "line"),
             marker_size=plot.get("marker_size"),
@@ -1155,6 +1169,7 @@ def _combo_plot_xml(
                 default_color=chart_style.get("text_color"),
                 default_font_face=chart_style.get("font_face"),
                 language=chart_style.get("primary_language"),
+                text_style=chart_style.get("text_styles", {}).get("data_label"),
             )
             if not _series_scoped_data_labels(data_labels)
             else ""
@@ -1340,6 +1355,7 @@ def _chart_plot_xml(
         data_label_font_size=axis_font_size,
         data_label_color=chart_style.get("text_color"),
         data_label_font_face=chart_style.get("font_face"),
+        data_label_text_style=chart_style.get("text_styles", {}).get("data_label"),
         language=chart_style.get("primary_language"),
     )
     data_labels_xml = (
@@ -1352,6 +1368,7 @@ def _chart_plot_xml(
             default_color=chart_style.get("text_color"),
             default_font_face=chart_style.get("font_face"),
             language=chart_style.get("primary_language"),
+            text_style=chart_style.get("text_styles", {}).get("data_label"),
         )
         if chart_type in {"area", "bar", "column", "line"}
         and not _series_scoped_data_labels(chart_data.get("data_labels"))
@@ -1712,6 +1729,7 @@ def _chart_xml(
         chart_style.get("text_color"),
         font_face=chart_style.get("font_face"),
         language=primary_language,
+        text_style=payload.get("text_styles", {}).get("base"),
     )
     xml = f'''<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <c:chartSpace xmlns:c="http://schemas.openxmlformats.org/drawingml/2006/chart"

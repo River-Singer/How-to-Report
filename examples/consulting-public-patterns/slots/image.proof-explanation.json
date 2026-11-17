@@ -1,0 +1,70 @@
+{
+  "template_id": "image.proof-explanation",
+  "text_slots": [
+    {
+      "id": "image.proof-explanation.slot-001",
+      "default": "版本入口需要同时显示当前资料和历史去向",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-002",
+      "default": "图片占位",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-003",
+      "default": "中性资料库界面截图：当前版本、发布日期、历史版本按钮。",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-004",
+      "default": "当前版本",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-005",
+      "default": "当前版本说明此刻应使用哪份资料。",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-006",
+      "default": "发布日期",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-007",
+      "default": "发布日期帮助判断信息的新旧。",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-008",
+      "default": "历史入口",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-009",
+      "default": "历史入口保留旧内容和替代关系。",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-010",
+      "default": "示例说明界面应表达的信息，不声称已实现系统功能。",
+      "type": "text"
+    },
+    {
+      "id": "image.proof-explanation.slot-011",
+      "default": "原创合成内容 · 可计算结构样例 05/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": [
+    {
+      "id": "column-113",
+      "height_constraint": 390,
+      "description": "替换真实图后由image/contain计算；图内内容仍是图像。"
+    }
+  ]
+}

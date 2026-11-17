@@ -40,7 +40,8 @@
               "source-house",
               "source-architecture",
               "source-spatial",
-              "source-circular"
+              "source-circular",
+              "hierarchy"
             ]
           },
           "variant": {
@@ -94,7 +95,9 @@
               "chart_type": {
                 "enum": [
                   "column",
-                  "line"
+                  "line",
+                  "pie",
+                  "doughnut"
                 ]
               },
               "image_fit": {

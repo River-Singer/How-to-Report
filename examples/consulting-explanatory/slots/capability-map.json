@@ -1,0 +1,224 @@
+{
+  "template_id": "capability-map",
+  "text_slots": [
+    {
+      "id": "capability-map.slot-001",
+      "default": "工作空间、业务能力与共享数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-002",
+      "default": "个人工作区",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-003",
+      "default": "协作工作区",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-004",
+      "default": "管理看板",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-005",
+      "default": "业务对象",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-006",
+      "default": "维护清单",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-007",
+      "default": "识别关系",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-008",
+      "default": "跟踪状态",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-009",
+      "default": "管理版本",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-010",
+      "default": "方案分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-011",
+      "default": "建立基准",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-012",
+      "default": "比较方案",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-013",
+      "default": "分析影响",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-014",
+      "default": "输出结论",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-015",
+      "default": "执行协同",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-016",
+      "default": "分配任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-017",
+      "default": "发起审批",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-018",
+      "default": "跟踪问题",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-019",
+      "default": "记录决策",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-020",
+      "default": "分析服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-021",
+      "default": "统一指标",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-022",
+      "default": "可视分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-023",
+      "default": "情景模拟",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-024",
+      "default": "结果发布",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-025",
+      "default": "共享功能：组织权限 · 流程通知 · 文档检索 · 审计记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-026",
+      "default": "主数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-027",
+      "default": "业务记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-028",
+      "default": "数据治理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-029",
+      "default": "外部系统",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-030",
+      "default": "业务系统",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-031",
+      "default": "财务平台",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-032",
+      "default": "文档空间",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-033",
+      "default": "分析工具",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-034",
+      "default": "身份平台",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "capability-map.slot-035",
+      "default": "合成内容 · 结构样例 14 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

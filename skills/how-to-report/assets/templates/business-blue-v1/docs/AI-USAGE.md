@@ -28,7 +28,7 @@ python scripts/report_ppt.py copy-template --output <私有模板根>
 - [核心指标](families/kpi.md) · 比较同层级指标及必要解释
 - [并列事项](families/parallel.md) · 展示同层级事项及各自解释
 - [问题与方案](families/comparison.md) · 逐行对应问题、方案与行动
-- [数据与结论](families/chart.md) · 由明确数值及尺度说明比较或趋势
+- [数据与结论](families/chart.md) · 用明确数值表达比较、趋势或互斥构成
 - [时间轴](families/timeline.md) · 解释有据的时间顺序与节点
 - [甘特计划](families/gantt.md) · 说明任务持续时间与重叠安排
 - [流程步骤](families/process.md) · 表达真实步骤及方向
@@ -42,5 +42,6 @@ python scripts/report_ppt.py copy-template --output <私有模板根>
 - [蓝色逻辑架构图.pptx](families/source-architecture.md) · 模块接口与分层架构
 - [立体结构逻辑图1122.pptx](families/source-spatial.md) · 立体层次与结构关系
 - [圆形逻辑图PPT模版.pptx](families/source-circular.md) · 环绕扇区与循环关系
+- [树状层级](families/hierarchy.md) · 表达根节点、分支与子项的有据归属关系
 
 新增四套源模板的128页入口见[按原文件名索引](SOURCE-COLLECTIONS.md)。每页包含关系、场景、完整调用、逐框字段与可见预览。

@@ -1,0 +1,42 @@
+{
+  "asset": "chart.voronoi",
+  "data": {
+    "bounds": [
+      0,
+      0,
+      10,
+      6
+    ],
+    "sites": [
+      {
+        "label": "A",
+        "point": [
+          2,
+          2
+        ]
+      },
+      {
+        "label": "B",
+        "point": [
+          6,
+          1
+        ]
+      },
+      {
+        "label": "C",
+        "point": [
+          4,
+          5
+        ]
+      },
+      {
+        "label": "D",
+        "point": [
+          9,
+          4
+        ]
+      }
+    ]
+  },
+  "options": {}
+}

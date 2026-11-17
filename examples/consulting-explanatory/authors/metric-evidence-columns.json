@@ -1,0 +1,459 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-metric-evidence-columns",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "metric-evidence-columns.slot-001": {
+      "value": "规模证据与能力解释"
+    },
+    "metric-evidence-columns.slot-002": {
+      "value": "服务覆盖和专业深度共同构成能力基础"
+    },
+    "metric-evidence-columns.slot-003": {
+      "value": "服务团队"
+    },
+    "metric-evidence-columns.slot-004": {
+      "value": "跨业务、产品和技术协作"
+    },
+    "metric-evidence-columns.slot-005": {
+      "value": "地区网络"
+    },
+    "metric-evidence-columns.slot-006": {
+      "value": "统一标准，提供本地支持"
+    },
+    "metric-evidence-columns.slot-007": {
+      "value": "交付积累"
+    },
+    "metric-evidence-columns.slot-008": {
+      "value": "将经验沉淀为可复用组件"
+    },
+    "metric-evidence-columns.slot-009": {
+      "value": "质量机制"
+    },
+    "metric-evidence-columns.slot-010": {
+      "value": "需求、设计、测试和验收"
+    },
+    "metric-evidence-columns.slot-011": {
+      "value": "持续服务"
+    },
+    "metric-evidence-columns.slot-012": {
+      "value": "驻场、远程和专项辅导"
+    },
+    "metric-evidence-columns.slot-013": {
+      "value": "各图表示不同维度，分别标明单位，不将跨单位数量解释为共同排名"
+    },
+    "metric-evidence-columns.slot-014": {
+      "value": "合成内容 · 结构样例 02 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "metric-evidence-columns",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "并列维度共同支持一个总体判断",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "metric-evidence-columns-body"
+      },
+      "layout": {
+        "id": "col-602",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-599",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "metric-evidence-columns.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-600",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "metric-evidence-columns-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "text-32",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "heading",
+                  "text": {
+                    "ref": "metric-evidence-columns.slot-002"
+                  }
+                }
+              },
+              {
+                "id": "grid-53",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-36",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 12,
+                    "children": [
+                      {
+                        "id": "text-33",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-003"
+                          }
+                        }
+                      },
+                      {
+                        "id": "chart-34",
+                        "type": "leaf",
+                        "height": 190,
+                        "element": {
+                          "type": "chart",
+                          "asset": "chart.column",
+                          "data": {
+                            "categories": [
+                              "人"
+                            ],
+                            "series": [
+                              {
+                                "name": "服务团队",
+                                "values": [
+                                  200
+                                ]
+                              }
+                            ],
+                            "unit": "人"
+                          },
+                          "options": {}
+                        }
+                      },
+                      {
+                        "id": "text-35",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-004"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-40",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 12,
+                    "children": [
+                      {
+                        "id": "text-37",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-005"
+                          }
+                        }
+                      },
+                      {
+                        "id": "chart-38",
+                        "type": "leaf",
+                        "height": 190,
+                        "element": {
+                          "type": "chart",
+                          "asset": "chart.column",
+                          "data": {
+                            "categories": [
+                              "区域"
+                            ],
+                            "series": [
+                              {
+                                "name": "地区网络",
+                                "values": [
+                                  12
+                                ]
+                              }
+                            ],
+                            "unit": "区域"
+                          },
+                          "options": {}
+                        }
+                      },
+                      {
+                        "id": "text-39",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-006"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-44",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 12,
+                    "children": [
+                      {
+                        "id": "text-41",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-007"
+                          }
+                        }
+                      },
+                      {
+                        "id": "chart-42",
+                        "type": "leaf",
+                        "height": 190,
+                        "element": {
+                          "type": "chart",
+                          "asset": "chart.column",
+                          "data": {
+                            "categories": [
+                              "项目"
+                            ],
+                            "series": [
+                              {
+                                "name": "交付积累",
+                                "values": [
+                                  80
+                                ]
+                              }
+                            ],
+                            "unit": "项目"
+                          },
+                          "options": {}
+                        }
+                      },
+                      {
+                        "id": "text-43",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-008"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-48",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 12,
+                    "children": [
+                      {
+                        "id": "text-45",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-009"
+                          }
+                        }
+                      },
+                      {
+                        "id": "chart-46",
+                        "type": "leaf",
+                        "height": 190,
+                        "element": {
+                          "type": "chart",
+                          "asset": "chart.column",
+                          "data": {
+                            "categories": [
+                              "环节"
+                            ],
+                            "series": [
+                              {
+                                "name": "质量机制",
+                                "values": [
+                                  4
+                                ]
+                              }
+                            ],
+                            "unit": "环节"
+                          },
+                          "options": {}
+                        }
+                      },
+                      {
+                        "id": "text-47",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-010"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-52",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 12,
+                    "children": [
+                      {
+                        "id": "text-49",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-011"
+                          }
+                        }
+                      },
+                      {
+                        "id": "chart-50",
+                        "type": "leaf",
+                        "height": 190,
+                        "element": {
+                          "type": "chart",
+                          "asset": "chart.column",
+                          "data": {
+                            "categories": [
+                              "类型"
+                            ],
+                            "series": [
+                              {
+                                "name": "持续服务",
+                                "values": [
+                                  3
+                                ]
+                              }
+                            ],
+                            "unit": "类型"
+                          },
+                          "options": {}
+                        }
+                      },
+                      {
+                        "id": "text-51",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "metric-evidence-columns.slot-012"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "text-54",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "caption",
+                  "text": {
+                    "ref": "metric-evidence-columns.slot-013"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "text-601",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "metric-evidence-columns.slot-014"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

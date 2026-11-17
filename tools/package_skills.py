@@ -22,7 +22,7 @@ from urllib.parse import unquote, urlsplit
 
 
 SKILLS = ("how-to-report", "report-audit")
-PACKAGE_VERSION = "0.11.0"
+PACKAGE_VERSION = "0.11.4"
 CONTRACT_VERSION = "0.1"
 MANIFEST = "bundle-manifest.json"
 GENERATOR = "tools/package_skills.py"
@@ -294,7 +294,7 @@ def replace_contents(
 
 
 def build_preserving_directories(output: Path, staging: Path, present: dict[str, bool]) -> None:
-    """Fallback for a Windows lock on the first managed directory rename.
+    """Install staged payloads while retaining the managed outer directories.
 
     Back up *both* old trees before any destination mutation. Existing managed
     roots are never removed. A failed restore retains all on-disk backups.
@@ -358,7 +358,9 @@ def build_preserving_directories(output: Path, staging: Path, present: dict[str,
         raise
 
 
-def build(project: Path, packages: dict[str, dict[str, bytes]]) -> None:
+def build(
+    project: Path, packages: dict[str, dict[str, bytes]], *, preserve_directories: bool = False
+) -> None:
     output = project / "skills"
     if not os.path.lexists(output):
         output.mkdir()
@@ -381,6 +383,16 @@ def build(project: Path, packages: dict[str, dict[str, bytes]]) -> None:
         # Validate both destinations again before replacing either package.
         present = {skill: existing_package(output / skill, output) for skill in SKILLS}
         cleanup_staging = False
+        if preserve_directories:
+            try:
+                build_preserving_directories(output, staging, present)
+            except DirectoryRecoveryError:
+                raise
+            except (OSError, PackageError):
+                cleanup_staging = True
+                raise
+            cleanup_staging = True
+            return
         try:
             for skill in SKILLS:
                 target = output / skill
@@ -457,12 +469,18 @@ def check(project: Path, packages: dict[str, dict[str, bytes]]) -> None:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("command", choices=("build", "check"))
+    commands = parser.add_subparsers(dest="command", required=True)
+    build_command = commands.add_parser("build", help="Build validated self-contained packages")
+    build_command.add_argument(
+        "--preserve-directories", action="store_true",
+        help="Use the existing rollback-capable content transaction without renaming managed roots",
+    )
+    commands.add_parser("check", help="Compare generated packages with validated source payloads")
     arguments = parser.parse_args()
     try:
         packages = expected_packages(PROJECT)
         if arguments.command == "build":
-            build(PROJECT, packages)
+            build(PROJECT, packages, preserve_directories=arguments.preserve_directories)
         else:
             check(PROJECT, packages)
     except (PackageError, OSError, UnicodeError, ValueError) as error:

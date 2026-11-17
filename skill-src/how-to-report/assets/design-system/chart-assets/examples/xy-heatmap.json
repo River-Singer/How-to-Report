@@ -1,0 +1,27 @@
+{
+  "asset": "chart.xy-heatmap",
+  "data": {
+    "x_labels": [
+      "A",
+      "B",
+      "C"
+    ],
+    "y_labels": [
+      "Group 1",
+      "Group 2"
+    ],
+    "values": [
+      [
+        2,
+        8,
+        4
+      ],
+      [
+        7,
+        3,
+        9
+      ]
+    ]
+  },
+  "options": {}
+}

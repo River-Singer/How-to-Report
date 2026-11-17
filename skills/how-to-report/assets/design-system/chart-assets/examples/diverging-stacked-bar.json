@@ -1,0 +1,32 @@
+{
+  "asset": "chart.diverging-stacked-bar",
+  "data": {
+    "categories": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "series": [
+      {
+        "name": "Observed",
+        "values": [
+          25,
+          -10,
+          30,
+          -15
+        ]
+      },
+      {
+        "name": "Reference",
+        "values": [
+          35,
+          28,
+          45,
+          42
+        ]
+      }
+    ]
+  },
+  "options": {}
+}

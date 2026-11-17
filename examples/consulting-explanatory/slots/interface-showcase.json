@@ -1,0 +1,74 @@
+{
+  "template_id": "interface-showcase",
+  "text_slots": [
+    {
+      "id": "interface-showcase.slot-001",
+      "default": "产品界面与关键操作说明",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-002",
+      "default": "待替换：真实产品界面截图\n建议提供完整工作区，保留必要字段与状态",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-003",
+      "default": "主要入口",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-004",
+      "default": "进入关键工作流",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-005",
+      "default": "关键操作",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-006",
+      "default": "完成一个真实任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-007",
+      "default": "可见反馈",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-008",
+      "default": "确认执行结果与状态",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "interface-showcase.slot-009",
+      "default": "合成内容 · 结构样例 13 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": [
+    {
+      "id": "col-349",
+      "height_constraint": 430,
+      "description": "矩形占位可替换真实图片，contain由引擎计算；图内文字不可编辑。"
+    }
+  ]
+}

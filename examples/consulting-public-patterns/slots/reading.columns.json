@@ -1,0 +1,59 @@
+{
+  "template_id": "reading.columns",
+  "text_slots": [
+    {
+      "id": "reading.columns.slot-001",
+      "default": "知识更新需要同时处理内容、版本和使用语境",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-002",
+      "default": "01  内容准确还不够",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-003",
+      "default": "同一条说明在不同阶段可能有不同的适用条件。资料管理既要维护正文，也要保留它在何种情况下成立，避免读者将局部规则当作普遍要求。",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-004",
+      "default": "02  版本要能解释变化",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-005",
+      "default": "仅给文档增加新的文件名，不能说明旧内容为何被替代。更新记录应描述变化对象和生效范围，让读者能够判断此前引用的内容是否需要重审。",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-006",
+      "default": "03  使用反馈形成下一轮维护",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-007",
+      "default": "查询失败、理解歧义和例外场景可以暴露资料结构中的缺口。将这些反馈连接到具体内容和版本，维护者才知道该修改哪一项，而不是不断增加重复文档。",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-008",
+      "default": "04  维护时保留适用边界",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-009",
+      "default": "资料被其他团队复用时，原场景的对象、条件和责任边界也应一起带入。条件尚不明确的内容可以继续作为线索，但不能直接变成通用规则。维护工作的重点是补齐这些差异，而不是把所有说明都压成一句口号。",
+      "type": "text"
+    },
+    {
+      "id": "reading.columns.slot-010",
+      "default": "原创合成内容 · 可计算结构样例 08/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

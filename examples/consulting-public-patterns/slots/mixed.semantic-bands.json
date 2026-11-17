@@ -1,0 +1,89 @@
+{
+  "template_id": "mixed.semantic-bands",
+  "text_slots": [
+    {
+      "id": "mixed.semantic-bands.slot-001",
+      "default": "资料管理从统一范围，推进到维护能力，再服务实际任务",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-002",
+      "default": "范围先统一",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-003",
+      "default": "先明确哪些资料属于同一业务主题，以及由谁维护。",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-004",
+      "default": "共同维护能力",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-005",
+      "default": "来源管理",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-006",
+      "default": "保留出处和采集时间。",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-007",
+      "default": "版本管理",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-008",
+      "default": "区分当前有效与历史内容。",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-009",
+      "default": "访问管理",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-010",
+      "default": "沿既有授权限定可见范围。",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-011",
+      "default": "能力服务实际任务",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-012",
+      "default": "规则查询",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-013",
+      "default": "找到适用条款并回到当前版本。",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-014",
+      "default": "案例复用",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-015",
+      "default": "理解原场景后判断是否可迁移。",
+      "type": "text"
+    },
+    {
+      "id": "mixed.semantic-bands.slot-016",
+      "default": "原创合成内容 · 可计算结构样例 06/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

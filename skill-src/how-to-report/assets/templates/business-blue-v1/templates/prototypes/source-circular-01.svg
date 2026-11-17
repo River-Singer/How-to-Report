@@ -1,113 +1,113 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="source-circular-01" data-pptx-layout-name="source-circular-01">
-  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
-  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
-  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
-  <ns0:defs>
-    <ns0:linearGradient id="ggrad1" x1="0.5" y1="0" x2="0.5" y2="1">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad2" x1="0.5" y1="1" x2="0.5" y2="0">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad3" x1="0.5" y1="0" x2="0.5" y2="1">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad6" x1="0.5" y1="1" x2="0.5" y2="0">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad7" x1="1" y1="0.5" x2="0" y2="0.5">
-      <ns0:stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad8" x1="1" y1="0" x2="0" y2="1">
-      <ns0:stop offset="0.29" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad9" x1="0.5" y1="0" x2="0.5" y2="1">
-      <ns0:stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad10" x1="1" y1="0.5" x2="0" y2="0.5">
-      <ns0:stop offset="0.34" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="ggrad14" x1="0" y1="0" x2="1" y2="1">
-      <ns0:stop offset="0.21" stop-color="#EFEFEF" data-htr-stop-color="lt2" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="txtgrad15" x1="0" y1="0" x2="1" y2="1">
-      <ns0:stop offset="0" stop-color="#003591" data-htr-stop-color="accent1" />
-      <ns0:stop offset="1" stop-color="#003591" data-htr-stop-color="accent1" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="baked-gradient-1" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
-      <ns0:stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="baked-gradient-2" x1="0.0" y1="0.5" x2="1.0" y2="0.5" gradientUnits="objectBoundingBox">
-      <ns0:stop offset="0.34" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="baked-gradient-3" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="baked-gradient-4" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
-    </ns0:linearGradient>
-    <ns0:linearGradient id="baked-gradient-5" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
-      <ns0:stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
-      <ns0:stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
-    </ns0:linearGradient>
-  </ns0:defs>
-  <ns0:path d="M 640.09 0 L 959.96 0 L 959.96 360 L 640.09 360 Z " fill="url(#ggrad1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:8" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-4" data-pptx-layer="layout" />
-  <ns0:path d="M 0 0 L 319.87 0 L 319.87 360 L 0 360 Z " fill="url(#ggrad2)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:10" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-5" data-pptx-layer="layout" />
-  <ns0:path d="M 320.04 0 L 639.91 0 L 639.91 360 L 320.04 360 Z " fill="#80AACD" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:11" data-htr-fill="accent3" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-6" data-pptx-layer="layout" />
-  <ns0:path d="M 960.13 0 L 1280 0 L 1280 360 L 960.13 360 Z " fill="url(#ggrad3)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:12" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-7" data-pptx-layer="layout" />
-  <ns0:path d="M 640.09 360 L 959.96 360 L 959.96 720 L 640.09 720 Z " fill="url(#ggrad3)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:16" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-8" data-pptx-layer="layout" />
-  <ns0:path d="M 0 360 L 319.87 360 L 319.87 720 L 0 720 Z " fill="#BBCDE5" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:17" data-htr-fill="accent4" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-9" data-pptx-layer="layout" />
-  <ns0:path d="M 320.04 360 L 639.91 360 L 639.91 720 L 320.04 720 Z " fill="url(#ggrad1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:18" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-10" data-pptx-layer="layout" />
-  <ns0:path d="M 960.13 360 L 1280 360 L 1280 720 L 960.13 720 Z " fill="url(#ggrad6)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:19" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-11" data-pptx-layer="layout" />
-  <ns0:path d="M 960.13 0 L 1280 0 L 1280 359.55 L 1264.78 360 C 1101.69 360 968.52 208.74 960.35 18.53 L 960.13 8.27 Z " fill="#80AACD" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:22" data-htr-fill="accent3" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-12" data-pptx-layer="layout" />
-  <ns0:path d="M 1280 0 L 1280 360 C 1180.59 360 1100 279.41 1100 180 C 1100 80.59 1180.59 0 1280 0 Z " fill="url(#ggrad7)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:24" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-13" data-pptx-layer="layout" />
-  <ns0:path d="M 640.09 360 L 959.96 360 L 959.96 719.55 L 944.73 720 C 781.65 720 648.47 568.74 640.31 378.53 L 640.09 368.27 Z " fill="url(#ggrad8)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:25" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-14" data-pptx-layer="layout" />
-  <ns0:path d="M 320.04 360 L 639.91 360 L 639.91 0.45 L 624.69 0 C 461.6 0 328.43 151.26 320.26 341.47 L 320.04 351.73 Z " fill="url(#baked-gradient-1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:26" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-15" data-pptx-layer="layout" />
-  <ns0:path d="M 319.86 360 L -0.01 360 L -0.01 0.45 L 15.21 0 C 178.3 0 311.48 151.26 319.64 341.47 L 319.86 351.73 Z " fill="#80AACD" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:29" data-htr-fill="accent3" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-16" data-pptx-layer="layout" />
-  <ns0:path d="M 0 0 L 0 360 C 99.41 360 180 279.41 180 180 C 180 80.59 99.41 0 0 0 Z " fill="url(#baked-gradient-2)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:28" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-17" data-pptx-layer="layout" />
-  <ns0:path d="M 640.09 0 L 640.09 360 L 959.96 0 Z " fill="url(#baked-gradient-3)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:14" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-18" data-pptx-layer="layout" />
-  <ns0:path d="M 319.86 720 L 319.86 360 L -0.01 720 Z " stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" fill="#5385C5" opacity="1.0" data-htr-source-ref="slide:31" data-htr-fill="accent2" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-19" data-pptx-layer="layout" />
-  <ns0:path d="M 320.04 360 L 320.04 720 L 639.91 360 Z " fill="url(#baked-gradient-4)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:33" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-20" data-pptx-layer="layout" />
-  <ns0:path d="M 960.13 720 L 1280 720 L 1280 360.45 L 1264.78 360 C 1101.69 360 968.52 511.26 960.35 701.47 L 960.13 711.73 Z " fill="url(#baked-gradient-5)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:35" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-21" data-pptx-layer="layout" />
-  <ns0:path d="M 256 162.84 L 390.53 162.84 L 390.53 162.84 L 592.33 162.84 L 1063.2 162.84 L 1063.2 413.18 L 1063.2 413.18 L 1063.2 520.47 L 1063.2 592 L 592.33 592 L 390.02 647.58 L 390.53 592 L 256 592 L 256 520.47 L 256 413.18 L 256 413.18 Z " fill="none" stroke-width="3.66667" stroke-linecap="butt" stroke="#FFFFFF" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:37" data-htr-stroke="lt1" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-22" data-pptx-layer="layout" />
-  <ns0:path d="M 233.42 138.53 L 1046.4 138.53 L 1046.4 576.8 L 233.42 576.8 Z " fill="url(#ggrad14)" stroke-width="3.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:30" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-23" data-pptx-layer="layout" />
-  <ns0:path d="M 262.67 244.58 L 1017.33 244.58 L 1017.33 467.54 L 262.67 467.54 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:38" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-24" data-pptx-layer="layout" />
-  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
-    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
-      <ns0:tspan x="48" y="55.68">汇报主题</ns0:tspan>
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
-    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="698.08" />
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
-    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="379.52000000000004" y="698.08" />
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
-    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-nodes-shape_38" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="363.291 299.359 553.425 163.504">
-    <ns0:text id="text-nodes-shape_38" data-pptx-carrier="true" x="640.00365" y="323.9987" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" data-htr-source-ref="slide:38" text-anchor="middle">
-      <ns0:tspan x="640.00365" y="323.9987">中心主题</ns0:tspan>
-    </ns0:text>
-  </ns0:g>
-</ns0:svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="source-circular-01" data-pptx-layout-name="source-circular-01">
+  <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <defs>
+    <linearGradient id="ggrad1" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="ggrad2" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </linearGradient>
+    <linearGradient id="ggrad3" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </linearGradient>
+    <linearGradient id="ggrad6" x1="0.5" y1="1" x2="0.5" y2="0">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="ggrad7" x1="1" y1="0.5" x2="0" y2="0.5">
+      <stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="ggrad8" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0.29" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="ggrad9" x1="0.5" y1="0" x2="0.5" y2="1">
+      <stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="ggrad10" x1="1" y1="0.5" x2="0" y2="0.5">
+      <stop offset="0.34" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="ggrad14" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0.21" stop-color="#EFEFEF" data-htr-stop-color="lt2" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="txtgrad15" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#003591" data-htr-stop-color="accent1" />
+      <stop offset="1" stop-color="#003591" data-htr-stop-color="accent1" />
+    </linearGradient>
+    <linearGradient id="baked-gradient-1" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="baked-gradient-2" x1="0.0" y1="0.5" x2="1.0" y2="0.5" gradientUnits="objectBoundingBox">
+      <stop offset="0.34" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#BBCDE5" data-htr-stop-color="accent4" />
+    </linearGradient>
+    <linearGradient id="baked-gradient-3" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </linearGradient>
+    <linearGradient id="baked-gradient-4" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </linearGradient>
+    <linearGradient id="baked-gradient-5" x1="0.5" y1="1.0" x2="0.5" y2="0.0" gradientUnits="objectBoundingBox">
+      <stop offset="0.01" stop-color="#80AACD" data-htr-stop-color="accent3" />
+      <stop offset="1" stop-color="#5385C5" data-htr-stop-color="accent2" />
+    </linearGradient>
+  </defs>
+  <path d="M 640.09 0 L 959.96 0 L 959.96 360 L 640.09 360 Z " fill="url(#ggrad1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:8" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-4" data-pptx-layer="layout" />
+  <path d="M 0 0 L 319.87 0 L 319.87 360 L 0 360 Z " fill="url(#ggrad2)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:10" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-5" data-pptx-layer="layout" />
+  <path d="M 320.04 0 L 639.91 0 L 639.91 360 L 320.04 360 Z " fill="#80AACD" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:11" data-htr-fill="accent3" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-6" data-pptx-layer="layout" />
+  <path d="M 960.13 0 L 1280 0 L 1280 360 L 960.13 360 Z " fill="url(#ggrad3)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:12" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-7" data-pptx-layer="layout" />
+  <path d="M 640.09 360 L 959.96 360 L 959.96 720 L 640.09 720 Z " fill="url(#ggrad3)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:16" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-8" data-pptx-layer="layout" />
+  <path d="M 0 360 L 319.87 360 L 319.87 720 L 0 720 Z " fill="#BBCDE5" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:17" data-htr-fill="accent4" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-9" data-pptx-layer="layout" />
+  <path d="M 320.04 360 L 639.91 360 L 639.91 720 L 320.04 720 Z " fill="url(#ggrad1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:18" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-10" data-pptx-layer="layout" />
+  <path d="M 960.13 360 L 1280 360 L 1280 720 L 960.13 720 Z " fill="url(#ggrad6)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:19" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-11" data-pptx-layer="layout" />
+  <path d="M 960.13 0 L 1280 0 L 1280 359.55 L 1264.78 360 C 1101.69 360 968.52 208.74 960.35 18.53 L 960.13 8.27 Z " fill="#80AACD" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:22" data-htr-fill="accent3" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-12" data-pptx-layer="layout" />
+  <path d="M 1280 0 L 1280 360 C 1180.59 360 1100 279.41 1100 180 C 1100 80.59 1180.59 0 1280 0 Z " fill="url(#ggrad7)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:24" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-13" data-pptx-layer="layout" />
+  <path d="M 640.09 360 L 959.96 360 L 959.96 719.55 L 944.73 720 C 781.65 720 648.47 568.74 640.31 378.53 L 640.09 368.27 Z " fill="url(#ggrad8)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:25" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-14" data-pptx-layer="layout" />
+  <path d="M 320.04 360 L 639.91 360 L 639.91 0.45 L 624.69 0 C 461.6 0 328.43 151.26 320.26 341.47 L 320.04 351.73 Z " fill="url(#baked-gradient-1)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:26" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-15" data-pptx-layer="layout" />
+  <path d="M 319.86 360 L -0.01 360 L -0.01 0.45 L 15.21 0 C 178.3 0 311.48 151.26 319.64 341.47 L 319.86 351.73 Z " fill="#80AACD" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:29" data-htr-fill="accent3" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-16" data-pptx-layer="layout" />
+  <path d="M 0 0 L 0 360 C 99.41 360 180 279.41 180 180 C 180 80.59 99.41 0 0 0 Z " fill="url(#baked-gradient-2)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:28" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-17" data-pptx-layer="layout" />
+  <path d="M 640.09 0 L 640.09 360 L 959.96 0 Z " fill="url(#baked-gradient-3)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:14" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-18" data-pptx-layer="layout" />
+  <path d="M 319.86 720 L 319.86 360 L -0.01 720 Z " stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" fill="#5385C5" opacity="1.0" data-htr-source-ref="slide:31" data-htr-fill="accent2" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-19" data-pptx-layer="layout" />
+  <path d="M 320.04 360 L 320.04 720 L 639.91 360 Z " fill="url(#baked-gradient-4)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:33" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-20" data-pptx-layer="layout" />
+  <path d="M 960.13 720 L 1280 720 L 1280 360.45 L 1264.78 360 C 1101.69 360 968.52 511.26 960.35 701.47 L 960.13 711.73 Z " fill="url(#baked-gradient-5)" stroke-width="1.33333" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:35" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-21" data-pptx-layer="layout" />
+  <path d="M 256 162.84 L 390.53 162.84 L 390.53 162.84 L 592.33 162.84 L 1063.2 162.84 L 1063.2 413.18 L 1063.2 413.18 L 1063.2 520.47 L 1063.2 592 L 592.33 592 L 390.02 647.58 L 390.53 592 L 256 592 L 256 520.47 L 256 413.18 L 256 413.18 Z " fill="none" stroke-width="3.66667" stroke-linecap="butt" stroke="#FFFFFF" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:37" data-htr-stroke="lt1" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-22" data-pptx-layer="layout" />
+  <path d="M 233.42 138.53 L 1046.4 138.53 L 1046.4 576.8 L 233.42 576.8 Z " fill="url(#ggrad14)" stroke-width="3.66667" stroke-linecap="butt" stroke="none" stroke-linejoin="miter" opacity="1.0" data-htr-source-ref="slide:30" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-23" data-pptx-layer="layout" />
+  <path d="M 262.67 244.58 L 1017.33 244.58 L 1017.33 467.54 L 262.67 467.54 Z " fill="none" opacity="1.0" data-htr-source-ref="slide:38" transform="matrix(0.73333333 0 0 0.73333333 170.66666667 120.0)" id="source-atom-24" data-pptx-layer="layout" />
+  <g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <text id="text-title" data-pptx-carrier="true" data-pptx-frame="48 24 1184 48" x="48" y="58.666666666666664" font-family="Microsoft YaHei" font-size="36" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="title" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:36,&quot;weight&quot;:700,&quot;line_height&quot;:1.1,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="39.6" xml:space="preserve">
+      <tspan x="48" y="58.666666666666664">汇报主题</tspan>
+    </text>
+  </g>
+  <g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <text id="text-section_name" data-pptx-carrier="true" data-pptx-frame="48 684 307.84 24" x="48" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <text id="text-source" data-pptx-carrier="true" data-pptx-frame="379.52 684 734.08 24" x="379.52000000000004" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="379.52000000000004" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <text id="text-page_number" data-pptx-carrier="true" data-pptx-frame="1137.28 684 94.72 24" x="1137.28" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="1137.28" y="700.0">1</tspan>
+    </text>
+  </g>
+  <g id="slot-text-nodes-shape_38" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="363.291 299.359 553.425 163.504">
+    <text id="text-nodes-shape_38" data-pptx-carrier="true" data-pptx-frame="363.291 299.359 553.425 163.504" x="640.00365" y="326.0253666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="middle" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;center&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve" data-htr-source-ref="slide:38">
+      <tspan x="640.00365" y="326.0253666666667">中心主题</tspan>
+    </text>
+  </g>
+</svg>

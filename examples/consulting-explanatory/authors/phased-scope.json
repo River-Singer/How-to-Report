@@ -1,0 +1,588 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-phased-scope",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "phased-scope.slot-001": {
+      "value": "分阶段功能范围与状态"
+    },
+    "phased-scope.slot-002": {
+      "value": "基础先行"
+    },
+    "phased-scope.slot-003": {
+      "value": "集成协同"
+    },
+    "phased-scope.slot-004": {
+      "value": "分析深化"
+    },
+    "phased-scope.slot-005": {
+      "value": "基础先行"
+    },
+    "phased-scope.slot-006": {
+      "value": "权限身份"
+    },
+    "phased-scope.slot-007": {
+      "value": "对象清单"
+    },
+    "phased-scope.slot-008": {
+      "value": "数据字典"
+    },
+    "phased-scope.slot-009": {
+      "value": "基准报表"
+    },
+    "phased-scope.slot-010": {
+      "value": "集成协同"
+    },
+    "phased-scope.slot-011": {
+      "value": "审批流程"
+    },
+    "phased-scope.slot-012": {
+      "value": "系统接口"
+    },
+    "phased-scope.slot-013": {
+      "value": "通知任务"
+    },
+    "phased-scope.slot-014": {
+      "value": "业务台账"
+    },
+    "phased-scope.slot-015": {
+      "value": "分析深化"
+    },
+    "phased-scope.slot-016": {
+      "value": "方案模拟"
+    },
+    "phased-scope.slot-017": {
+      "value": "预测分析"
+    },
+    "phased-scope.slot-018": {
+      "value": "成本优化"
+    },
+    "phased-scope.slot-019": {
+      "value": "持续运营"
+    },
+    "phased-scope.slot-020": {
+      "value": "合成内容 · 结构样例 17 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "phased-scope",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "阶段先后+每阶段功能集合",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "phased-scope-body"
+      },
+      "layout": {
+        "id": "col-677",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-674",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "phased-scope.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-675",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "phased-scope-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "topology-501",
+                "type": "leaf",
+                "height": 80,
+                "element": {
+                  "type": "component",
+                  "component": "topology",
+                  "layout": "layered",
+                  "nodes": [
+                    {
+                      "id": "v0",
+                      "label": {
+                        "ref": "phased-scope.slot-002"
+                      }
+                    },
+                    {
+                      "id": "v1",
+                      "label": {
+                        "ref": "phased-scope.slot-003"
+                      }
+                    },
+                    {
+                      "id": "v2",
+                      "label": {
+                        "ref": "phased-scope.slot-004"
+                      }
+                    }
+                  ],
+                  "role": "body",
+                  "arrow": true,
+                  "padding": 14,
+                  "layer_gap": 20,
+                  "node_gap": 16,
+                  "direction": "right",
+                  "node_width": 150,
+                  "edges": [
+                    {
+                      "id": "e0",
+                      "from": "v0",
+                      "to": "v1"
+                    },
+                    {
+                      "id": "e1",
+                      "from": "v1",
+                      "to": "v2"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "col-512",
+                "type": "column",
+                "gap": 12,
+                "padding": 14,
+                "children": [
+                  {
+                    "id": "text-502",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": {
+                        "ref": "phased-scope.slot-005"
+                      }
+                    }
+                  },
+                  {
+                    "id": "grid-511",
+                    "type": "grid",
+                    "columns": [
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      }
+                    ],
+                    "gap": 8,
+                    "children": [
+                      {
+                        "id": "col-504",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-503",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-006"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-506",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-505",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-007"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-508",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-507",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-008"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-510",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-509",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-009"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "col-523",
+                "type": "column",
+                "gap": 12,
+                "padding": 14,
+                "children": [
+                  {
+                    "id": "text-513",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": {
+                        "ref": "phased-scope.slot-010"
+                      }
+                    }
+                  },
+                  {
+                    "id": "grid-522",
+                    "type": "grid",
+                    "columns": [
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      }
+                    ],
+                    "gap": 8,
+                    "children": [
+                      {
+                        "id": "col-515",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-514",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-011"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-517",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-516",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-012"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-519",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-518",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-013"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-521",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-520",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-014"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              },
+              {
+                "id": "col-534",
+                "type": "column",
+                "gap": 12,
+                "padding": 14,
+                "children": [
+                  {
+                    "id": "text-524",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": {
+                        "ref": "phased-scope.slot-015"
+                      }
+                    }
+                  },
+                  {
+                    "id": "grid-533",
+                    "type": "grid",
+                    "columns": [
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      },
+                      {
+                        "fr": 1
+                      }
+                    ],
+                    "gap": 8,
+                    "children": [
+                      {
+                        "id": "col-526",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-525",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-016"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-528",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-527",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-017"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-530",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-529",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-018"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-532",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 10,
+                        "children": [
+                          {
+                            "id": "text-531",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "phased-scope.slot-019"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "surface": {
+                  "fill": "surfaceMuted"
+                }
+              }
+            ]
+          },
+          {
+            "id": "text-676",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "phased-scope.slot-020"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

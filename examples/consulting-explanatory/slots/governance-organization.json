@@ -1,0 +1,140 @@
+{
+  "template_id": "governance-organization",
+  "text_slots": [
+    {
+      "id": "governance-organization.slot-001",
+      "default": "治理责任与交付组织",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-002",
+      "default": "治理委员会",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-003",
+      "default": "业务经理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-004",
+      "default": "技术经理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-005",
+      "default": "业务分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-006",
+      "default": "架构设计",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-007",
+      "default": "数据开发",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-008",
+      "default": "验证测试",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-009",
+      "default": "业务分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-010",
+      "default": "澄清需求与验收标准",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-011",
+      "default": "组织场景验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-012",
+      "default": "架构设计",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-013",
+      "default": "定义系统与接口边界",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-014",
+      "default": "评审关键技术决策",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-015",
+      "default": "数据开发",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-016",
+      "default": "实现数据与业务服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-017",
+      "default": "维护版本与质量",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-018",
+      "default": "验证测试",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-019",
+      "default": "覆盖关键工作流",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-020",
+      "default": "提交问题与验收证据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "governance-organization.slot-021",
+      "default": "合成内容 · 结构样例 19 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

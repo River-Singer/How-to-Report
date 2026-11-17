@@ -1,0 +1,23 @@
+{
+  "asset": "chart.ordered-proportional-symbol",
+  "data": {
+    "categories": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "series": [
+      {
+        "name": "Observed",
+        "values": [
+          25,
+          40,
+          30,
+          55
+        ]
+      }
+    ]
+  },
+  "options": {}
+}

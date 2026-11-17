@@ -1,0 +1,113 @@
+{
+  "asset": "chart.flow-map",
+  "data": {
+    "coordinates": "planar",
+    "regions": [
+      {
+        "id": "A",
+        "label": "A",
+        "boundary": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            0,
+            1
+          ]
+        ],
+        "value": 0.2
+      },
+      {
+        "id": "B",
+        "label": "B",
+        "boundary": [
+          [
+            1,
+            0
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            1,
+            1
+          ]
+        ],
+        "value": 0.5
+      },
+      {
+        "id": "C",
+        "label": "C",
+        "boundary": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            0,
+            2
+          ]
+        ],
+        "value": 0.7
+      },
+      {
+        "id": "D",
+        "label": "D",
+        "boundary": [
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            1
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "value": 0.9
+      }
+    ],
+    "links": [
+      {
+        "source": "A",
+        "target": "D",
+        "value": 30
+      },
+      {
+        "source": "B",
+        "target": "C",
+        "value": 10
+      }
+    ]
+  },
+  "options": {}
+}

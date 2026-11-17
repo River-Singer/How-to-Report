@@ -1,0 +1,135 @@
+{
+  "registry_version": "0.1",
+  "recipes": [
+    {
+      "id": "recipe.kpi-chart-explanation",
+      "kind": "recipe",
+      "version": "0.1",
+      "status": "high_level",
+      "purpose": "主值、主图与解释，表达上游分析已经支持的主要数据判断",
+      "relations": [
+        "magnitude",
+        "comparison",
+        "part-to-whole",
+        "explanation"
+      ],
+      "schema_ref": "assets/design-system/recipe-request.schema.json",
+      "compiler_ref": "scripts/presentation_recipes.py",
+      "preview_refs": [
+        {
+          "ref": "assets/design-system/previews/kpi-chart-explanation.svg",
+          "scope": "package",
+          "format": "svg",
+          "source": "normal-compiler-synthetic-example",
+          "target_native_equivalence": "not_asserted"
+        },
+        {
+          "ref": "assets/design-system/previews/kpi-chart-explanation.png",
+          "scope": "package",
+          "format": "png",
+          "source": "Microsoft PowerPoint 16.0 1920x1080",
+          "source_pptx_sha256": "2a88d7984246df32ecfafacb4d4b005490e6801a8659348ef46dc9b3cacefa03",
+          "viewed_by": "root via pixel-identical v3/v4 images",
+          "evidence_scope": "synthetic engineering preview only"
+        }
+      ],
+      "example_ref": "assets/design-system/examples/three-recipes.json",
+      "validation": {
+        "scope": "synthetic engineering probe; see source/profile hashes in preview-manifest.json",
+        "user_quality_acceptance": "not_established"
+      },
+      "limitations": [
+        "finite slots; no child frame or typography overrides",
+        "business meaning and comparability require source review",
+        "主要主张及解释须由实际材料与分析支持，组合器校验输入、数值域、容量与排布。"
+      ]
+    },
+    {
+      "id": "recipe.paired-charts-conclusion",
+      "kind": "recipe",
+      "version": "0.1",
+      "status": "high_level",
+      "purpose": "同单位和尺度的双图与有据共同结论，各自范围和期间就近标注，比较意义由上游分析说明",
+      "relations": [
+        "comparison",
+        "magnitude",
+        "change-over-time"
+      ],
+      "schema_ref": "assets/design-system/recipe-request.schema.json",
+      "compiler_ref": "scripts/presentation_recipes.py",
+      "preview_refs": [
+        {
+          "ref": "assets/design-system/previews/paired-charts-conclusion.svg",
+          "scope": "package",
+          "format": "svg",
+          "source": "normal-compiler-synthetic-example",
+          "target_native_equivalence": "not_asserted"
+        },
+        {
+          "ref": "assets/design-system/previews/paired-charts-conclusion.png",
+          "scope": "package",
+          "format": "png",
+          "source": "Microsoft PowerPoint 16.0 1920x1080",
+          "source_pptx_sha256": "2a88d7984246df32ecfafacb4d4b005490e6801a8659348ef46dc9b3cacefa03",
+          "viewed_by": "root via pixel-identical v3/v4 images",
+          "evidence_scope": "synthetic engineering preview only"
+        }
+      ],
+      "example_ref": "assets/design-system/examples/three-recipes.json",
+      "validation": {
+        "scope": "synthetic engineering probe; see source/profile hashes in preview-manifest.json",
+        "user_quality_acceptance": "not_established"
+      },
+      "limitations": [
+        "finite slots; no child frame or typography overrides",
+        "business meaning and comparability require source review",
+        "Only unit equality and explicit scale/domain are machine-checked; different scope/period are displayed and require business review.",
+        "共同结论及业务比较意义须有实际分析依据，单位与坐标域一致后继续审阅人群、期间及条件。"
+      ]
+    },
+    {
+      "id": "recipe.evidence-action",
+      "kind": "recipe",
+      "version": "0.1",
+      "status": "high_level",
+      "purpose": "将上游已说明的业务状况、回应原因或检验解释的动作及复核判断逐行对应",
+      "relations": [
+        "evidence-action",
+        "explanation"
+      ],
+      "schema_ref": "assets/design-system/recipe-request.schema.json",
+      "compiler_ref": "scripts/presentation_recipes.py",
+      "preview_refs": [
+        {
+          "ref": "assets/design-system/previews/evidence-action.svg",
+          "scope": "package",
+          "format": "svg",
+          "source": "normal-compiler-synthetic-example",
+          "target_native_equivalence": "not_asserted"
+        },
+        {
+          "ref": "assets/design-system/previews/evidence-action.png",
+          "scope": "package",
+          "format": "png",
+          "source": "Microsoft PowerPoint 16.0 1920x1080",
+          "source_pptx_sha256": "2a88d7984246df32ecfafacb4d4b005490e6801a8659348ef46dc9b3cacefa03",
+          "viewed_by": "root via pixel-identical v3/v4 images",
+          "evidence_scope": "synthetic engineering preview only"
+        }
+      ],
+      "example_ref": "assets/design-system/examples/three-recipes.json",
+      "validation": {
+        "scope": "synthetic engineering probe; see source/profile hashes in preview-manifest.json",
+        "user_quality_acceptance": "not_established"
+      },
+      "limitations": [
+        "finite slots; no child frame or typography overrides",
+        "business meaning and comparability require source review",
+        "采用前交清证据支持何种状况、动作回应何种原因或检验何种解释，以及结果怎样改变选择。组合器核输入、容量与排布，诊断和建议依据由上游实际分析与内容审阅负责。",
+        "诊断尚未完成时，先制作有据解释页和补数清单，动作矩阵按本场用途选择。"
+      ]
+    }
+  ],
+  "template_source": "current catalog adapter",
+  "vocabulary_ref": "assets/design-system/visual-vocabulary.json"
+}

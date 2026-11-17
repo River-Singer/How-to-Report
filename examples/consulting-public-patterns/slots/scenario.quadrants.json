@@ -1,0 +1,114 @@
+{
+  "template_id": "scenario.quadrants",
+  "text_slots": [
+    {
+      "id": "scenario.quadrants.slot-001",
+      "default": "资料变化频率和使用影响决定维护方式",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-002",
+      "default": "两个独立条件：变化频率 × 使用影响",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-003",
+      "default": "",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-004",
+      "default": "变化频率低",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-005",
+      "default": "变化频率高",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-006",
+      "default": "影响较小",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-007",
+      "default": "常规维护",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-008",
+      "default": "变化少、影响较小",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-009",
+      "default": "按约定周期复核，保留来源与版本。",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-010",
+      "default": "快速更新",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-011",
+      "default": "变化频繁、影响较小",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-012",
+      "default": "缩短更新周期，明确最新生效内容。",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-013",
+      "default": "影响较大",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-014",
+      "default": "严格校核",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-015",
+      "default": "变化少、影响较大",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-016",
+      "default": "变更前核对条件，保留审阅记录。",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-017",
+      "default": "持续治理",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-018",
+      "default": "变化频繁、影响较大",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-019",
+      "default": "更新与校核并行，持续跟踪使用反馈。",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-020",
+      "default": "分类用于选择维护方式；高低档位需按资料用途定义，不表示可计算的风险分数。",
+      "type": "text"
+    },
+    {
+      "id": "scenario.quadrants.slot-021",
+      "default": "原创合成内容 · 可计算结构样例 09/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

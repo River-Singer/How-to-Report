@@ -327,7 +327,7 @@ Layout为`source-spatial-07`，原型为`templates/prototypes/source-spatial-07.
 | nodes.shape_134 | 1 | 4 | heading | [597.6134, 333.4922, 42.4245, 49.1262] |
 | nodes.shape_136 | 1 | 4 | caption | [646.0379, 350.4797, 35.1012, 27.8419] |
 | nodes.shape_137 | 1 | 11 | caption | [772.288, 369.425, 84.9637, 29.4792] |
-| nodes.shape_138 | 1 | 2 | heading | [778.7504, 333.4922, 16.9128, 49.1262] |
+| nodes.shape_138 | 1 | 2 | heading | [776.7504, 333.4922, 18.9128, 49.1262] |
 | nodes.shape_139 | 1 | 4 | caption | [801.6632, 350.4797, 50.5555, 27.8419] |
 ### page-08
 
@@ -1443,4 +1443,4 @@ Layout为`source-spatial-34`，原型为`templates/prototypes/source-spatial-34.
 
 来源为立体结构逻辑图1122.pptx，逐页结构见variants与来源索引。原始文件指纹及资产处理见asset-provenance.json。当前原型完成结构生成与文本测量，实际渲染和原生编辑范围以交付检查记录为准。
 
-catalog指纹为`cb0b762dd09720f0095cb5d682a87348e0608e2f8d5fdf784ec1d4ef62f73010`，tokens指纹为`2bb967b3a61bf7a4072665f712f39ac49458d22ebe9407f269236c21adc366f3`，参数schema指纹为`add0f4b9d6bc61cd5cae5ce6d6821748442ed906b6b779cc561790e85b605ff5`。
+catalog指纹为`498fe133ea2d00699bb4c4ea5bc798e78130623b21eea5d3cc8cb10e125af78b`，tokens指纹为`2bb967b3a61bf7a4072665f712f39ac49458d22ebe9407f269236c21adc366f3`，参数schema指纹为`6981096e740f47c827294403dd132d6609fd537f46b15e8164c4b630b9822a61`。

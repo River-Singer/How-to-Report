@@ -1,0 +1,298 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-commercial-options",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "commercial-options.slot-001": {
+      "value": "费用构成与可选方案"
+    },
+    "commercial-options.slot-002": {
+      "value": "单位：万元；合成示例"
+    },
+    "commercial-options.slot-003": {
+      "value": "方案甲：共用能力"
+    },
+    "commercial-options.slot-004": {
+      "value": "复用已有平台与规则"
+    },
+    "commercial-options.slot-005": {
+      "value": "适合标准化程度较高的场景"
+    },
+    "commercial-options.slot-006": {
+      "value": "边界：定制范围须单独明确"
+    },
+    "commercial-options.slot-007": {
+      "value": "方案乙：专项扩展"
+    },
+    "commercial-options.slot-008": {
+      "value": "补充特定模型与流程"
+    },
+    "commercial-options.slot-009": {
+      "value": "适合差异化业务任务"
+    },
+    "commercial-options.slot-010": {
+      "value": "边界：评估后续维护责任"
+    },
+    "commercial-options.slot-011": {
+      "value": "合成费用仅展示图表结构；真实报价应核实税费、期间、范围与选项关系"
+    },
+    "commercial-options.slot-012": {
+      "value": "合成内容 · 结构样例 21 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "commercial-options",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "总额由组成项相加，服务选项独立",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "commercial-options-body"
+      },
+      "layout": {
+        "id": "col-697",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-694",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "commercial-options.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-695",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "commercial-options-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "chart-579",
+                "type": "leaf",
+                "height": 270,
+                "element": {
+                  "type": "chart",
+                  "asset": "chart.waterfall",
+                  "data": {
+                    "categories": [
+                      "方案设计",
+                      "应用开发",
+                      "测试交付",
+                      "运营支持"
+                    ],
+                    "series": [
+                      {
+                        "name": "费用构成（合成）",
+                        "values": [
+                          20,
+                          45,
+                          15,
+                          10
+                        ]
+                      }
+                    ]
+                  },
+                  "options": {}
+                }
+              },
+              {
+                "id": "text-580",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "caption",
+                  "text": {
+                    "ref": "commercial-options.slot-002"
+                  }
+                }
+              },
+              {
+                "id": "grid-591",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-585",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-581",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "commercial-options.slot-003"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-582",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "commercial-options.slot-004"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-583",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "commercial-options.slot-005"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-584",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "commercial-options.slot-006"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-590",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-586",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "commercial-options.slot-007"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-587",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "commercial-options.slot-008"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-588",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "commercial-options.slot-009"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-589",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "commercial-options.slot-010"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "text-592",
+                "type": "leaf",
+                "element": {
+                  "type": "text",
+                  "role": "caption",
+                  "text": {
+                    "ref": "commercial-options.slot-011"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "text-696",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "commercial-options.slot-012"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

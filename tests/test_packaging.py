@@ -60,9 +60,11 @@ class PackagingTests(unittest.TestCase):
         path.parent.mkdir(parents=True, exist_ok=True)
         path.write_text(data, encoding="utf-8")
 
-    def command(self, command: str, success: bool = True) -> subprocess.CompletedProcess[str]:
+    def command(
+        self, command: str, success: bool = True, *, arguments: tuple[str, ...] = ()
+    ) -> subprocess.CompletedProcess[str]:
         result = subprocess.run(
-            [sys.executable, str(self.project / "tools" / "package_skills.py"), command],
+            [sys.executable, str(self.project / "tools" / "package_skills.py"), command, *arguments],
             cwd=self.cwd, capture_output=True, text=True,
         )
         if success:
@@ -731,6 +733,85 @@ class PackagingTests(unittest.TestCase):
             packager.build(self.project, packages)
         fallback.assert_not_called()
         self.assertEqual(self.snapshot(), {})
+
+    def test_explicit_preserve_uses_existing_transaction_without_renames(self) -> None:
+        self.command("build")
+        output = self.project / "skills"
+        identities = {skill: (output / skill).stat().st_ino for skill in packager.SKILLS}
+        self.write(self.shared / "assets" / "value.json", '{"answer": 43}')
+        packages = packager.expected_packages(self.project)
+        with patch.object(Path, "rename", side_effect=AssertionError("unexpected root rename")), patch.object(
+            packager, "build_preserving_directories", wraps=packager.build_preserving_directories
+        ) as transaction:
+            packager.build(self.project, packages, preserve_directories=True)
+        transaction.assert_called_once()
+        packager.check(self.project, packages)
+        for skill in packager.SKILLS:
+            self.assertEqual((output / skill).stat().st_ino, identities[skill])
+        self.assertFalse(list(output.glob(".package-build-*")))
+
+    def test_explicit_preserve_rolls_back_partial_install(self) -> None:
+        self.command("build")
+        before = self.snapshot()
+        output = self.project / "skills"
+        identities = {skill: (output / skill).stat().st_ino for skill in packager.SKILLS}
+        self.write(self.shared / "assets" / "value.json", '{"answer": 43}')
+        packages = packager.expected_packages(self.project)
+        original_write = Path.write_bytes
+        failed = False
+
+        def partial_install(path: Path, data: bytes) -> int:
+            nonlocal failed
+            if path == output / "report-audit" / "assets" / "value.json" and not failed:
+                failed = True
+                original_write(path, b"partial")
+                raise OSError("simulated explicit partial install")
+            return original_write(path, data)
+
+        with patch.object(Path, "rename", side_effect=AssertionError("unexpected root rename")), patch.object(
+            Path, "write_bytes", partial_install
+        ), self.assertRaisesRegex(OSError, "explicit partial install"):
+            packager.build(self.project, packages, preserve_directories=True)
+        self.assertTrue(failed)
+        self.assertEqual(self.snapshot(), before)
+        for skill in packager.SKILLS:
+            self.assertEqual((output / skill).stat().st_ino, identities[skill])
+        self.assertFalse(list(output.glob(".package-build-*")))
+
+    def test_explicit_preserve_cli_and_check_flag_rejection(self) -> None:
+        self.command("build")
+        output = self.project / "skills"
+        identities = {skill: (output / skill).stat().st_ino for skill in packager.SKILLS}
+        self.write(self.shared / "assets" / "value.json", '{"answer": 43}')
+        self.command("build", arguments=("--preserve-directories",))
+        self.command("check")
+        for skill in packager.SKILLS:
+            self.assertEqual((output / skill).stat().st_ino, identities[skill])
+        before = self.snapshot()
+        rejected = self.command("check", success=False, arguments=("--preserve-directories",))
+        self.assertEqual(rejected.returncode, 2)
+        self.assertEqual(self.snapshot(), before)
+
+    def test_default_stage_install_error_restores_existing_package_without_fallback(self) -> None:
+        self.command("build")
+        output = self.project / "skills"
+        before = self.snapshot()
+        self.write(self.shared / "assets" / "value.json", '{"answer": 43}')
+        packages = packager.expected_packages(self.project)
+        original_rename = Path.rename
+
+        def failed_stage_install(path: Path, destination: Path) -> Path:
+            if path.name == "how-to-report" and path.parent.name.startswith(".package-build-"):
+                raise self.windows_rename_error()
+            return original_rename(path, destination)
+
+        with patch.object(Path, "rename", failed_stage_install), patch.object(
+            packager, "build_preserving_directories"
+        ) as fallback, self.assertRaises(OSError):
+            packager.build(self.project, packages)
+        fallback.assert_not_called()
+        self.assertEqual(self.snapshot(), before)
+        self.assertFalse(list(output.glob(".package-build-*")))
 
     def test_directory_fallback_rechecks_links_before_backup_or_mutation(self) -> None:
         self.command("build")

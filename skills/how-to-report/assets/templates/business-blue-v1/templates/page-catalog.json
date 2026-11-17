@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "template_id": "business-blue-v1",
-  "revision": 4,
+  "revision": 6,
   "config_defaults": {
     "body_role": "body",
     "show_source": true,
@@ -329,6 +329,11 @@
                     "number",
                     "null"
                   ]
+                },
+                "decimals": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 4
                 },
                 "unit": {
                   "type": "string",
@@ -712,7 +717,7 @@
     },
     "chart": {
       "label": "数据与结论",
-      "purpose": "由明确数值及尺度说明比较或趋势",
+      "purpose": "用明确数值表达比较、趋势或互斥构成",
       "scenarios": "类别、数列、单位及解释有依据；趋势需要实际有序数据。",
       "source": "500页-01商务蓝配色.pptx，第422页",
       "array_key": null,
@@ -814,6 +819,68 @@
           "prototype": "07b_chart_wide.svg",
           "capacity": 6,
           "description": "全宽主图与下方结论。"
+        },
+        "pie": {
+          "id": "pie",
+          "label": "饼图与构成说明",
+          "layout_key": "chart-pie",
+          "prototype": "07c_chart_pie.svg",
+          "capacity": 6,
+          "description": "单数列、一至六个互斥部分组成同一总体。饼图按真实数值绘制扇区，右侧显示类别及可选的值/占比，下方说明结论。",
+          "scenarios": "构成占比、完成与剩余。需要相同单位、相同时点及互斥可加部分。",
+          "relations": "量化部分与整体，扇区角度由数值除以总和计算",
+          "config_defaults": {
+            "chart_type": "pie",
+            "show_data_labels": true
+          },
+          "prototype_content": {
+            "categories": [
+              "{{部分A}}",
+              "{{部分B}}",
+              "{{部分C}}"
+            ],
+            "series": [
+              {
+                "name": "{{构成}}",
+                "values": [
+                  50,
+                  30,
+                  20
+                ]
+              }
+            ]
+          }
+        },
+        "doughnut": {
+          "id": "doughnut",
+          "label": "环形图与构成说明",
+          "layout_key": "chart-doughnut",
+          "prototype": "07d_chart_doughnut.svg",
+          "capacity": 6,
+          "description": "单数列、一至六个互斥部分组成同一总体。环形图按真实数值绘制扇区，右侧显示类别及可选的值/占比，下方说明结论。",
+          "scenarios": "构成占比、完成与剩余。需要相同单位、相同时点及互斥可加部分。",
+          "relations": "量化部分与整体，扇区角度由数值除以总和计算",
+          "config_defaults": {
+            "chart_type": "doughnut",
+            "show_data_labels": true
+          },
+          "prototype_content": {
+            "categories": [
+              "{{部分A}}",
+              "{{部分B}}",
+              "{{部分C}}"
+            ],
+            "series": [
+              {
+                "name": "{{构成}}",
+                "values": [
+                  50,
+                  30,
+                  20
+                ]
+              }
+            ]
+          }
         }
       },
       "prototype_content": {
@@ -843,9 +910,10 @@
       ],
       "capability_id": "ppt.chart",
       "type": "数据表达",
-      "relations": "同尺度数量比较或有序趋势",
+      "relations": "同尺度数量比较、有序趋势或互斥部分与总体",
       "usage_notes": [
-        "config.show_data_labels默认false，设为true可在SVG和原生图表中显示各已知数值。空值保留缺口，零值显示为0；标签使用原值。数轴包含零基线，复用友好间隔算法，SVG与原生图表共享最小值、最大值和主刻度间隔。多系列或高密度标签需实际回看，出现拥挤时按本场重点调整显示或选择兼容版式。"
+        "config.show_data_labels默认false，设为true可在SVG和原生图表中显示各已知数值。空值保留缺口，零值显示为0；标签使用原值。数轴包含零基线，复用友好间隔算法，SVG与原生图表共享最小值、最大值和主刻度间隔。多系列或高密度标签需实际回看，出现拥挤时按本场重点调整显示或选择兼容版式。",
+        "`pie`与`doughnut`默认使用同名图表类型和独立可编辑的数值/占比图例。必须是一个非负数列、正总和且无null。量化扇区复用scene原生图表路径及嵌入数据工作簿，颜色由tokens的accent1至accent6逐类别取得。数值/占比标签使用外部图例区域，show_data_labels=true要求show_legend=true；不兼容组合在validate阶段明确报错。隐藏全部外部说明时，将这两个开关同时设为false。show_legend=true且show_data_labels=false时只显示类别。编辑嵌入工作簿后，独立文本需经作者工程重新构建同步。"
       ]
     },
     "timeline": {
@@ -1141,7 +1209,7 @@
               "additionalProperties": false
             },
             "minItems": 1,
-            "maxItems": 5
+            "maxItems": 6
           },
           "center": {
             "type": "object",
@@ -1188,6 +1256,49 @@
           "prototype": "10c_process_cycle-4.svg",
           "capacity": 4,
           "description": "四步闭环结构，需要有据的循环关系。"
+        },
+        "cycle": {
+          "id": "cycle",
+          "label": "可变闭环流程",
+          "layout_key": "process-cycle",
+          "prototype": "10d_process_cycle.svg",
+          "capacity": 6,
+          "min_items": 3,
+          "description": "三至六阶段闭环。步骤数按steps实际输入改变，箭头按输入顺序连接，末项返回首项。",
+          "item_text_limits": {
+            "title": 12,
+            "body": 36
+          },
+          "dynamic_count": true,
+          "adaptation": "按三至六个真实输入项重排，原生矩形和连接器随项数生成。每个数量派生独立Layout身份。",
+          "prototype_content": {
+            "steps": [
+              {
+                "title": "{{阶段}}",
+                "body": "{{阶段说明}}"
+              },
+              {
+                "title": "{{阶段}}",
+                "body": "{{阶段说明}}"
+              },
+              {
+                "title": "{{阶段}}",
+                "body": "{{阶段说明}}"
+              },
+              {
+                "title": "{{阶段}}",
+                "body": "{{阶段说明}}"
+              },
+              {
+                "title": "{{阶段}}",
+                "body": "{{阶段说明}}"
+              },
+              {
+                "title": "{{阶段}}",
+                "body": "{{阶段说明}}"
+              }
+            ]
+          }
         }
       },
       "prototype_content": {
@@ -1227,7 +1338,10 @@
       ],
       "capability_id": "ppt.process",
       "type": "信息结构",
-      "relations": "步骤先后或有据闭环"
+      "relations": "步骤先后或有据闭环",
+      "usage_notes": [
+        "`cycle`按实际三至六项生成节点及连接，沿tokens颜色、字号、线宽和间距。标题最多12字符，说明最多36字符，仍需字体测量。节点数量派生不同Layout，原生矩形与连接器保留端点引用。"
+      ]
     },
     "image": {
       "label": "图文案例",
@@ -2088,7 +2202,7 @@
               "additionalProperties": false
             },
             "minItems": 1,
-            "maxItems": 5
+            "maxItems": 6
           }
         },
         "required": [
@@ -2112,6 +2226,49 @@
           "prototype": "16b_hub_ring-5.svg",
           "capacity": 5,
           "description": "中心及五个环形分区。"
+        },
+        "radial": {
+          "id": "radial",
+          "label": "可变中心辐射",
+          "layout_key": "hub-radial",
+          "prototype": "16c_hub_radial.svg",
+          "capacity": 6,
+          "min_items": 3,
+          "description": "中心与三至六个周边对象关联。节点数按nodes实际输入改变，连线表示关联，不含顺序。",
+          "item_text_limits": {
+            "title": 12,
+            "body": 36
+          },
+          "dynamic_count": true,
+          "adaptation": "按三至六个真实输入项重排，原生矩形和连接器随项数生成。每个数量派生独立Layout身份。",
+          "prototype_content": {
+            "nodes": [
+              {
+                "title": "{{对象}}",
+                "body": "{{关联说明}}"
+              },
+              {
+                "title": "{{对象}}",
+                "body": "{{关联说明}}"
+              },
+              {
+                "title": "{{对象}}",
+                "body": "{{关联说明}}"
+              },
+              {
+                "title": "{{对象}}",
+                "body": "{{关联说明}}"
+              },
+              {
+                "title": "{{对象}}",
+                "body": "{{关联说明}}"
+              },
+              {
+                "title": "{{对象}}",
+                "body": "{{关联说明}}"
+              }
+            ]
+          }
         }
       },
       "prototype_content": {
@@ -2151,7 +2308,10 @@
       ],
       "capability_id": "ppt.hub",
       "type": "信息结构",
-      "relations": "中心归属或关联"
+      "relations": "中心归属或关联",
+      "usage_notes": [
+        "`radial`按实际三至六项生成节点及连接，沿tokens颜色、字号、线宽和间距。标题最多12字符，说明最多36字符，仍需字体测量。节点数量派生不同Layout，原生矩形与连接器保留端点引用。"
+      ]
     },
     "source-house": {
       "label": "房子图战略图.pptx",
@@ -77083,9 +77243,9 @@
               "source_text": "0",
               "role": "指标主值，与右侧独立单位配对，源值“0”",
               "frame": [
-                778.7504,
+                776.7504,
                 333.4922,
-                16.9128,
+                18.9128,
                 49.1262
               ],
               "source_frame": [
@@ -77104,7 +77264,8 @@
               "vertical_anchor": "t",
               "color_role": "text",
               "max_lines": 1,
-              "input_pattern": "^(?:T[+-])?[+-]?[0-9]+(?:[.,][0-9]+)?[+%]?$"
+              "input_pattern": "^(?:T[+-])?[+-]?[0-9]+(?:[.,][0-9]+)?[+%]?$",
+              "typography_adjustment": "统一Microsoft YaHei heading字阶后，文字框左移2px并拓宽2px，保留右边界与独立单位6px间距。源source_frame与几何文件保持原值。"
             },
             "shape_139": {
               "source_ref": "slide:139",
@@ -122069,6 +122230,203 @@
           }
         }
       }
+    },
+    "hierarchy": {
+      "label": "树状层级",
+      "purpose": "表达根节点、分支与子项的有据归属关系",
+      "scenarios": "组织结构、职责分解、决策分类树。二至三层且每个子项有唯一父节点。",
+      "source": "现有用户模板tokens及矩形语言的原创结构扩展，语义参考Microsoft SmartArt Hierarchy",
+      "array_key": "branches",
+      "default_variant": "tree",
+      "content_schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "minLength": 2,
+            "maxLength": 32
+          },
+          "section_name": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 24
+          },
+          "source": {
+            "type": "string",
+            "minLength": 0,
+            "maxLength": 64
+          },
+          "root": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 12
+              },
+              "body": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 36
+              },
+              "icon_key": {
+                "type": "string",
+                "minLength": 0,
+                "maxLength": 40
+              }
+            },
+            "required": [
+              "title",
+              "body"
+            ],
+            "additionalProperties": false
+          },
+          "branches": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "title": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 12
+                },
+                "body": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 36
+                },
+                "icon_key": {
+                  "type": "string",
+                  "minLength": 0,
+                  "maxLength": 40
+                },
+                "children": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "title": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 6
+                      },
+                      "body": {
+                        "type": "string",
+                        "minLength": 1,
+                        "maxLength": 18
+                      },
+                      "icon_key": {
+                        "type": "string",
+                        "minLength": 0,
+                        "maxLength": 40
+                      }
+                    },
+                    "required": [
+                      "title",
+                      "body"
+                    ],
+                    "additionalProperties": false
+                  },
+                  "minItems": 0,
+                  "maxItems": 2
+                }
+              },
+              "required": [
+                "title",
+                "body"
+              ],
+              "additionalProperties": false
+            },
+            "minItems": 1,
+            "maxItems": 3
+          }
+        },
+        "required": [
+          "title",
+          "root",
+          "branches"
+        ],
+        "additionalProperties": false
+      },
+      "variants": {
+        "tree": {
+          "id": "tree",
+          "label": "可变二至三层树",
+          "layout_key": "hierarchy-tree",
+          "prototype": "17a_hierarchy_tree.svg",
+          "capacity": 3,
+          "min_items": 1,
+          "description": "一个根节点、一至三个分支，每分支零至两个子项，实际生成二至三层树。连接表示归属，无流程箭头。",
+          "dynamic_count": true,
+          "adaptation": "按分支及子项实际数量均分列宽，生成真实节点和端点引用。每个子项数量组合派生独立Layout。"
+        }
+      },
+      "prototype_content": {
+        "title": "{{页面标题}}",
+        "root": {
+          "title": "{{根节点}}",
+          "body": "{{共同归属}}"
+        },
+        "branches": [
+          {
+            "title": "{{分支}}",
+            "body": "{{分支职责}}",
+            "children": [
+              {
+                "title": "{{子项}}",
+                "body": "{{归属说明}}"
+              },
+              {
+                "title": "{{子项}}",
+                "body": "{{归属说明}}"
+              }
+            ]
+          },
+          {
+            "title": "{{分支}}",
+            "body": "{{分支职责}}",
+            "children": [
+              {
+                "title": "{{子项}}",
+                "body": "{{归属说明}}"
+              },
+              {
+                "title": "{{子项}}",
+                "body": "{{归属说明}}"
+              }
+            ]
+          },
+          {
+            "title": "{{分支}}",
+            "body": "{{分支职责}}",
+            "children": [
+              {
+                "title": "{{子项}}",
+                "body": "{{归属说明}}"
+              },
+              {
+                "title": "{{子项}}",
+                "body": "{{归属说明}}"
+              }
+            ]
+          }
+        ]
+      },
+      "config_fields": [
+        "body_role",
+        "show_source",
+        "show_page_number",
+        "show_icons"
+      ],
+      "capability_id": "ppt.hierarchy",
+      "type": "信息结构",
+      "relations": "有根层级与唯一父节点归属",
+      "usage_notes": [
+        "`tree`支持一个根节点、一至三个分支及每分支零至两个子项，共二至三层、最多十个节点。数组顺序决定同级顺序，每个children项只归属其所在分支。",
+        "根与分支标题最多12字符、正文最多36字符。叶节点标题最多6字符、正文最多18字符。字号来自tokens，真实文字超出槽位时明确报错。",
+        "输出为可编辑原生矩形、文字及保留端点的连接器。节点沿Layout数量身份派生。每个节点的文字与矩形分别可编辑。"
+      ]
     }
   }
 }

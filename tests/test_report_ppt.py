@@ -34,18 +34,18 @@ class ReportPptTests(unittest.TestCase):
                 if family.get("array_key"):
                     key = family["array_key"]
                     content[key] = content[key][:variant["capacity"]]
-                page = {"id": "structure", "family": family_id, "variant": variant_id, "content": content, "config": {key: self.catalog["config_defaults"][key] for key in family["config_fields"]}}
+                page = {"id": "structure", "family": family_id, "variant": variant_id, "content": content, "config": {**{key: self.catalog["config_defaults"][key] for key in family["config_fields"]}, **variant.get("config_defaults", {})}}
                 svg, bindings, _ = ppt.render_page(page, self.catalog, self.tokens, self.root)
                 self.assertEqual(svg, (self.root / "templates" / "prototypes" / variant["prototype"]).read_text(encoding="utf-8"))
                 xml = ET.fromstring(svg)
                 self.assertEqual(xml.get("viewBox"), "0 0 1280 720")
-                self.assertEqual(xml[0].get("fill"), "#FFFFFF")
+                self.assertEqual(xml.find(".//*[@id='canvas-background']").get("fill"), "#FFFFFF")
                 self.assertEqual(bindings[0]["frame"], self.tokens["header"]["titleFrame"])
                 self.assertEqual({text.get("id") for text in xml.findall(".//{*}text")}, {binding["selector"] for binding in bindings})
                 for binding in bindings:
                     self.assertLessEqual(binding["min_length"], binding["max_length"])
                 total += 1
-        self.assertEqual(total, 165)
+        self.assertEqual(total, 170)
 
     def test_source_collections_cover_each_original_page_and_text_field(self):
         collections = ppt.read_json(self.root / "templates" / "source-collections.json")
@@ -286,7 +286,7 @@ class ReportPptTests(unittest.TestCase):
         self.assertEqual(receipt["tokens_sha256"], ppt.fingerprint(self.tokens))
         self.assertEqual(receipt["catalog_sha256"], ppt.fingerprint(self.catalog))
         self.assertEqual(receipt["pages_schema_sha256"], ppt.fingerprint(ppt.read_json(self.root / "templates" / "pages.schema.json")))
-        self.assertEqual(len(receipt["variants"]), 165)
+        self.assertEqual(len(receipt["variants"]), 170)
         for family_id in self.catalog["families"]:
             doc = (self.root / "docs" / "families" / f"{family_id}.md").read_text(encoding="utf-8")
             self.assertIn(ppt.fingerprint(self.catalog), doc)
@@ -333,7 +333,7 @@ class ReportPptTests(unittest.TestCase):
         title = next(node for node in xml.findall(".//{*}text") if node.get("id") == "text-title")
         mission = next(node for node in xml.findall(".//{*}text") if node.get("id") == "text-mission")
         self.assertEqual(title.get("font-weight"), "700")
-        self.assertEqual(title.get("font-family"), "Arial, Microsoft YaHei, Microsoft YaHei")
+        self.assertEqual(title.get("font-family"), self.tokens["font"]["families"]["title"])
         self.assertEqual(mission.get("fill"), "#FFFFFF")
         frame = next(b["frame"] for b in bindings if b["field"] == "mission")
         bx, by, bw, _ = self.tokens["body"]["frame"]

@@ -1,0 +1,30 @@
+{
+  "asset": "chart.treemap",
+  "data": {
+    "paths": [
+      [
+        "North",
+        "A"
+      ],
+      [
+        "North",
+        "B"
+      ],
+      [
+        "South",
+        "C"
+      ],
+      [
+        "South",
+        "D"
+      ]
+    ],
+    "values": [
+      30,
+      20,
+      40,
+      10
+    ]
+  },
+  "options": {}
+}

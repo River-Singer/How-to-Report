@@ -1,0 +1,236 @@
+{
+  "template_id": "categorized-directory",
+  "text_slots": [
+    {
+      "id": "categorized-directory.slot-001",
+      "default": "按价值链分类的对象目录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-002",
+      "default": "业务场景",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-003",
+      "default": "客户服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-004",
+      "default": "营销运营",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-005",
+      "default": "供应管理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-006",
+      "default": "生产制造",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-007",
+      "default": "财务分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-008",
+      "default": "项目交付",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-009",
+      "default": "服务对象",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-010",
+      "default": "管理层",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-011",
+      "default": "业务负责人",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-012",
+      "default": "一线团队",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-013",
+      "default": "共享中心",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-014",
+      "default": "合作伙伴",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-015",
+      "default": "外部客户",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-016",
+      "default": "内容资产",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-017",
+      "default": "指标字典",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-018",
+      "default": "业务模型",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-019",
+      "default": "分析口径",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-020",
+      "default": "知识条目",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-021",
+      "default": "操作指引",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-022",
+      "default": "培训材料",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-023",
+      "default": "技术能力",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-024",
+      "default": "数据集成",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-025",
+      "default": "身份验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-026",
+      "default": "流程编排",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-027",
+      "default": "任务调度",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-028",
+      "default": "检索分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-029",
+      "default": "审计监控",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-030",
+      "default": "交付形式",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-031",
+      "default": "咨询建议",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-032",
+      "default": "试点验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-033",
+      "default": "平台建设",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-034",
+      "default": "运营服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-035",
+      "default": "能力培训",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-036",
+      "default": "持续优化",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "categorized-directory.slot-037",
+      "default": "合成内容 · 结构样例 03 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

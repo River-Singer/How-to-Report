@@ -1,0 +1,32 @@
+{
+  "asset": "chart.marimekko",
+  "data": {
+    "categories": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "series": [
+      {
+        "name": "Observed",
+        "values": [
+          25,
+          40,
+          30,
+          55
+        ]
+      },
+      {
+        "name": "Reference",
+        "values": [
+          35,
+          28,
+          45,
+          42
+        ]
+      }
+    ]
+  },
+  "options": {}
+}

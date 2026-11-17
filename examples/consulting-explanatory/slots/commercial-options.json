@@ -1,0 +1,111 @@
+{
+  "template_id": "commercial-options",
+  "text_slots": [
+    {
+      "id": "commercial-options.slot-001",
+      "default": "费用构成与可选方案",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-002",
+      "default": "单位：万元；合成示例",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-003",
+      "default": "方案甲：共用能力",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-004",
+      "default": "复用已有平台与规则",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-005",
+      "default": "适合标准化程度较高的场景",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-006",
+      "default": "边界：定制范围须单独明确",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-007",
+      "default": "方案乙：专项扩展",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-008",
+      "default": "补充特定模型与流程",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-009",
+      "default": "适合差异化业务任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-010",
+      "default": "边界：评估后续维护责任",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-011",
+      "default": "合成费用仅展示图表结构；真实报价应核实税费、期间、范围与选项关系",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "commercial-options.slot-012",
+      "default": "合成内容 · 结构样例 21 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [
+    {
+      "id": "chart-579",
+      "asset": "chart.waterfall",
+      "data": {
+        "categories": [
+          "方案设计",
+          "应用开发",
+          "测试交付",
+          "运营支持"
+        ],
+        "series": [
+          {
+            "name": "费用构成（合成）",
+            "values": [
+              20,
+              45,
+              15,
+              10
+            ]
+          }
+        ]
+      },
+      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
+    }
+  ],
+  "image_slots": []
+}

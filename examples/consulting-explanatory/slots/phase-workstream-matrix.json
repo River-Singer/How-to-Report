@@ -1,0 +1,170 @@
+{
+  "template_id": "phase-workstream-matrix",
+  "text_slots": [
+    {
+      "id": "phase-workstream-matrix.slot-001",
+      "default": "阶段推进与工作流展开",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-002",
+      "default": "规划",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-003",
+      "default": "建设",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-004",
+      "default": "持续运营",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-005",
+      "default": "规划阶段",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-006",
+      "default": "确认目标",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-007",
+      "default": "比较方案",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-008",
+      "default": "冻结范围",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-009",
+      "default": "共同基础",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-010",
+      "default": "业务口径",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-011",
+      "default": "基准数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-012",
+      "default": "建设阶段",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-013",
+      "default": "设计",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-014",
+      "default": "开发",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-015",
+      "default": "验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-016",
+      "default": "支撑方法",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-017",
+      "default": "版本管理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-018",
+      "default": "场景测试",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-019",
+      "default": "运营阶段",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-020",
+      "default": "使用",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-021",
+      "default": "反馈",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-022",
+      "default": "改进",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-023",
+      "default": "持续输入",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-024",
+      "default": "运营数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-025",
+      "default": "重点问题",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phase-workstream-matrix.slot-026",
+      "default": "合成内容 · 结构样例 09 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

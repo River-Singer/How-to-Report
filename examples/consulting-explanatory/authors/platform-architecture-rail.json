@@ -1,0 +1,508 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-platform-architecture-rail",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "platform-architecture-rail.slot-001": {
+      "value": "业务平台分层与使能技术"
+    },
+    "platform-architecture-rail.slot-002": {
+      "value": "业务价值"
+    },
+    "platform-architecture-rail.slot-003": {
+      "value": "形成共同判断，支持资源配置与经营改进"
+    },
+    "platform-architecture-rail.slot-004": {
+      "value": "业务应用"
+    },
+    "platform-architecture-rail.slot-005": {
+      "value": "方案比较 · 项目协同 · 任务追踪"
+    },
+    "platform-architecture-rail.slot-006": {
+      "value": "数据基础"
+    },
+    "platform-architecture-rail.slot-007": {
+      "value": "业务规则"
+    },
+    "platform-architecture-rail.slot-008": {
+      "value": "组织责任"
+    },
+    "platform-architecture-rail.slot-009": {
+      "value": "基础数据"
+    },
+    "platform-architecture-rail.slot-010": {
+      "value": "分析应用"
+    },
+    "platform-architecture-rail.slot-011": {
+      "value": "业务判断"
+    },
+    "platform-architecture-rail.slot-012": {
+      "value": "可视分析"
+    },
+    "platform-architecture-rail.slot-013": {
+      "value": "突出重点差异"
+    },
+    "platform-architecture-rail.slot-014": {
+      "value": "认知分析"
+    },
+    "platform-architecture-rail.slot-015": {
+      "value": "解释影响因素"
+    },
+    "platform-architecture-rail.slot-016": {
+      "value": "智能助手"
+    },
+    "platform-architecture-rail.slot-017": {
+      "value": "辅助完成任务"
+    },
+    "platform-architecture-rail.slot-018": {
+      "value": "集成服务"
+    },
+    "platform-architecture-rail.slot-019": {
+      "value": "连接已有系统"
+    },
+    "platform-architecture-rail.slot-020": {
+      "value": "合成内容 · 结构样例 10 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "platform-architecture-rail",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "价值层—业务层—基础层，侧栏跨层使能",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "platform-architecture-rail-body"
+      },
+      "layout": {
+        "id": "col-642",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-639",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "platform-architecture-rail.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-640",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "platform-architecture-rail-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "grid-277",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 3
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-263",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-251",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-249",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-002"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-250",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-003"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-254",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-252",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-004"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-253",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-005"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "grid-261",
+                        "type": "grid",
+                        "columns": [
+                          {
+                            "fr": 1
+                          },
+                          {
+                            "fr": 1
+                          },
+                          {
+                            "fr": 1
+                          }
+                        ],
+                        "gap": 8,
+                        "children": [
+                          {
+                            "id": "col-256",
+                            "type": "column",
+                            "gap": 12,
+                            "padding": 10,
+                            "children": [
+                              {
+                                "id": "text-255",
+                                "type": "leaf",
+                                "element": {
+                                  "type": "text",
+                                  "role": "bodyStrong",
+                                  "text": {
+                                    "ref": "platform-architecture-rail.slot-006"
+                                  }
+                                }
+                              }
+                            ],
+                            "surface": {
+                              "fill": "surfaceMuted"
+                            }
+                          },
+                          {
+                            "id": "col-258",
+                            "type": "column",
+                            "gap": 12,
+                            "padding": 10,
+                            "children": [
+                              {
+                                "id": "text-257",
+                                "type": "leaf",
+                                "element": {
+                                  "type": "text",
+                                  "role": "bodyStrong",
+                                  "text": {
+                                    "ref": "platform-architecture-rail.slot-007"
+                                  }
+                                }
+                              }
+                            ],
+                            "surface": {
+                              "fill": "surfaceMuted"
+                            }
+                          },
+                          {
+                            "id": "col-260",
+                            "type": "column",
+                            "gap": 12,
+                            "padding": 10,
+                            "children": [
+                              {
+                                "id": "text-259",
+                                "type": "leaf",
+                                "element": {
+                                  "type": "text",
+                                  "role": "bodyStrong",
+                                  "text": {
+                                    "ref": "platform-architecture-rail.slot-008"
+                                  }
+                                }
+                              }
+                            ],
+                            "surface": {
+                              "fill": "surfaceMuted"
+                            }
+                          }
+                        ]
+                      },
+                      {
+                        "id": "topology-262",
+                        "type": "leaf",
+                        "height": 100,
+                        "element": {
+                          "type": "component",
+                          "component": "topology",
+                          "layout": "layered",
+                          "nodes": [
+                            {
+                              "id": "v0",
+                              "label": {
+                                "ref": "platform-architecture-rail.slot-009"
+                              }
+                            },
+                            {
+                              "id": "v1",
+                              "label": {
+                                "ref": "platform-architecture-rail.slot-010"
+                              }
+                            },
+                            {
+                              "id": "v2",
+                              "label": {
+                                "ref": "platform-architecture-rail.slot-011"
+                              }
+                            }
+                          ],
+                          "role": "body",
+                          "arrow": true,
+                          "padding": 14,
+                          "layer_gap": 20,
+                          "node_gap": 16,
+                          "direction": "right",
+                          "node_width": 150,
+                          "edges": [
+                            {
+                              "id": "e0",
+                              "from": "v0",
+                              "to": "v1"
+                            },
+                            {
+                              "id": "e1",
+                              "from": "v1",
+                              "to": "v2"
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-276",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-266",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-264",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-012"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-265",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-013"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-269",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-267",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-014"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-268",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-015"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-272",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-270",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-016"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-271",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-017"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "col-275",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-273",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-018"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-274",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "platform-architecture-rail.slot-019"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-641",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "platform-architecture-rail.slot-020"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

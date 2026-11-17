@@ -1,0 +1,142 @@
+{
+  "template_id": "resource-load",
+  "text_slots": [
+    {
+      "id": "resource-load.slot-001",
+      "default": "按阶段配置团队投入",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-002",
+      "default": "投入方式",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-003",
+      "default": "关键岗位连续参与",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-004",
+      "default": "按阶段安排专业支持",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-005",
+      "default": "集中交付窗口",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-006",
+      "default": "高峰期协同开发与验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-007",
+      "default": "提前锁定环境和验收安排",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-008",
+      "default": "后续支持",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-009",
+      "default": "运行期处理问题与改进",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-010",
+      "default": "保留明确交接与响应机制",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.slot-011",
+      "default": "合成内容 · 结构样例 20 / 21",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "resource-load.public-unit",
+      "default": "单位：人天（合成数据）；颜色越深表示投入越多，格内数值为该角色当月人天数。",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [
+    {
+      "id": "chart-565",
+      "asset": "chart.xy-heatmap",
+      "data": {
+        "x_labels": [
+          "M1",
+          "M2",
+          "M3",
+          "M4",
+          "M5",
+          "M6"
+        ],
+        "y_labels": [
+          "业务分析",
+          "技术设计",
+          "数据开发",
+          "验证测试"
+        ],
+        "values": [
+          [
+            20,
+            20,
+            15,
+            10,
+            10,
+            5
+          ],
+          [
+            15,
+            20,
+            20,
+            15,
+            10,
+            5
+          ],
+          [
+            5,
+            10,
+            20,
+            25,
+            25,
+            15
+          ],
+          [
+            0,
+            0,
+            5,
+            10,
+            20,
+            25
+          ]
+        ]
+      },
+      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
+    }
+  ],
+  "image_slots": []
+}

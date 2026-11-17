@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-16T11:11:46.1201034+08:00",
+  "reviewer": "root",
+  "target": "Microsoft PowerPoint 16.0, 1920x1080",
+  "v3_pptx_sha256": "9e1664581e8d1346e94dead204af3fc6b4db8a08b4a5a73c03c9cb9a86a9b14a",
+  "v4_pptx_sha256": "2a88d7984246df32ecfafacb4d4b005490e6801a8659348ef46dc9b3cacefa03",
+  "observations": [
+    "All three v3 PNGs were individually actually viewed.",
+    "KPI value and unit are adjacent with a common baseline; no clipping or overlap observed.",
+    "Paired charts display equal 0-100 domains and visible per-panel scope/period.",
+    "Evidence/action rows retain correspondence and readable paragraphs.",
+    "Synthetic sparse copy leaves considerable whitespace, particularly page 3. This is an engineering preview, not a finished quality anchor."
+  ],
+  "font_finding": "PowerPoint reports Microsoft YaHei for Latin and East Asian in all top-level text shapes queried, including English source and numeric page text.",
+  "status": "synthetic engineering preview reviewed",
+  "user_quality_acceptance": "not_established",
+  "page_png_sha256": [
+    "04c49d8606f5b7fc23df72aee9341e83b6d9d4df282c8fb4dfe56a647a8fb417",
+    "50c5c64febcd566bd79fe73dfb4e3844dcd86f83da665432becca7bd86d2d838",
+    "1eeea8c82be108b6c5c285a91bcf8298ca24807cc74c9a50aa0d083b7872a1fb"
+  ]
+}

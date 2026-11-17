@@ -16,7 +16,11 @@
 
 How-to-Report 是一组帮助 AI 构思、成稿和审查汇报的 Skill。你可以带着零散材料来，也可以只带着一句“我明天要向领导解释项目延期”。它围绕这次沟通，帮助你确认目标、找到值得讲的内容，再形成可用于制作的汇报方案：做多少页、每页讲什么、具体怎么写。
 
-**当前版本 0.11.0。** 内容与审查以 Markdown 交付。需要PPT时，总入口在内容确认后使用自有参数模板、统一tokens和包内制作技术完成页面、检查及原生PPTX导出。制作技术提炼自PPT-Master，随包模板资产来自用户素材。
+**当前版本 0.11.4。** 内容与审查以 Markdown 交付。先沿用用户确定的话题和页面约束，组织有据回答、理解前提与全篇讲述顺序，再完成制作前的表达、素材、栅格与容量评估，由引擎计算布局和诊断内容占用。解释数据的变化、差异和分布用适配图表；名单与明细供查阅核对时用表，不为孤立数字强造柱图。合页、改序或压缩解释后从最终正文重审叙事，话题全覆盖与测排通过不替代叙事成立。需要PPT时，总入口沿有效内容确认与授权，用自有参数模板、统一tokens和包内技术完成页面、检查及原生PPTX导出。制作技术提炼自PPT-Master，随包模板资产的来源与能力范围在各自manifest中记录。
+
+PPT设计方法集中在[制作前评估与方法导航](docs/ppt-design-methods.md)，包括16种栅格/内容模式、长文本结构化、图表与明细表选择、文字颜色规范和全稿减页审核。可取用[21个咨询结构样例](examples/consulting-explanatory/README.md)及[公开研究派生样例](examples/consulting-public-patterns/README.md)；它们是原创合成内容的独立索引，按槽位绑定后经正常computed入口构建，**当前不自动注册到library**，也不宣称PDF原样复刻。真实业务材料与报告保留在公开仓库之外。
+
+本版[工程检查记录](verification/0.11.4/README.md)覆盖完整常规回归、打包、搬迁和公开样例闭包。方法接入与工程通过不等于模型写作、审美或真人理解已经自动验收。
 
 ## 设计哲学
 
@@ -208,6 +212,8 @@ python tools/vendor_knowledge_sources.py check
 python evaluation/tools/validate_content_cases.py
 python -m unittest discover -s tests -v
 ```
+
+Windows目录重命名受占用影响时，可执行`python tools/package_skills.py build --preserve-directories`，显式采用已有的目录保留事务。工具先完成来源验证、暂存和两个旧包备份，再更新受管理内容，失败时恢复旧树。此选项仅适用于build，常规build保留原有重命名及失败恢复行为。
 
 0.10.1补强挑战选题、主代理接纳和复查的目标影响判断，按本场阶段与实际主张强度确定证明责任，合并共享前提并在剩余阻断消除后收束，详见[本版工程记录](verification/0.10.1/README.md)。实际问题质量需由模型运行验证。0.10.0增加总入口到完整 PPT-Master 的内容确认与制作接续，其[工程记录](verification/0.10.0/README.md)覆盖入口、资源闭包和搬迁，完整模型执行与实际 PPT 效果按该版试点核验。0.9.1 的[18场景41轮](evaluation/content-0.9.1/README.md)继续记录计算、来源与多轮更新的既有回归范围，模型测试由用户运行。[0.9.1 工程记录](verification/0.9.1/README.md)与[0.9.0 记录](verification/0.9.0/README.md)对应各自交付。详见[开发与验证计划](docs/development-plan.md)。
 

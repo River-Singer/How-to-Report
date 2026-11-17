@@ -21,7 +21,7 @@ from ..drawingml.utils import (
     text_has_rtl_characters,
     text_uses_rtl,
 )
-from .chart_data import _DEFAULT_CHART_COLORS, _category_axis_reversed, _chart_data
+from .chart_data import _DEFAULT_CHART_COLORS, _category_axis_reversed, _chart_data, _chart_text_styles
 from .marker_common import (
     _bool_attr,
     _bounds,
@@ -232,6 +232,7 @@ def _classic_chart_style(
             text_color,
         ),
         "font_face": font_face or None,
+        "text_styles": _chart_text_styles(payload),
     }
 
 
@@ -311,10 +312,10 @@ def _chart_text_sizes(
         base_raw,
     )
     return {
-        "axis": _font_size_hpt(axis_raw, 12),
-        "axis_title": _font_size_hpt(axis_title_raw, 12),
-        "base": _font_size_hpt(base_raw, 12),
-        "legend": _font_size_hpt(legend_raw, 12),
+        "axis": _font_size_hpt(payload.get("text_styles", {}).get("axis", {}).get("font_size", axis_raw), 12),
+        "axis_title": _font_size_hpt(payload.get("text_styles", {}).get("axis", {}).get("font_size", axis_title_raw), 12),
+        "base": _font_size_hpt(payload.get("text_styles", {}).get("base", {}).get("font_size", base_raw), 12),
+        "legend": _font_size_hpt(payload.get("text_styles", {}).get("legend", {}).get("font_size", legend_raw), 12),
         "note": _font_size_hpt(note_raw, 12),
         "subtitle": _font_size_hpt(subtitle_raw, 12),
         "title": _font_size_hpt(title_raw, 16),
@@ -381,6 +382,22 @@ def _font_face_xml(font_face: str | None, language: str | None = None) -> str:
     )
 
 
+def _chart_text_style_override(text_style: dict[str, Any] | None, entry: dict[str, Any]) -> dict[str, Any] | None:
+    """Keep existing local chart-label overrides above resolved role defaults."""
+    if text_style is None:
+        return None
+    result = dict(text_style)
+    for key, aliases in (("font_size", ("font_size", "fontSize")),
+                         ("font_family", ("font_family", "fontFamily", "font_face", "fontFace")),
+                         ("color", ("color",))):
+        value = _first_present(*(entry.get(alias) for alias in aliases))
+        if value is not None:
+            result[key] = value
+    if "bold" in entry:
+        result["weight"] = 700 if _chart_bool(entry["bold"], False) else 400
+    return result
+
+
 def _chart_tx_pr_xml(
     font_size: int,
     color: str | None = None,
@@ -388,16 +405,34 @@ def _chart_tx_pr_xml(
     bold: bool = False,
     font_face: str | None = None,
     language: str | None = None,
+    text_style: dict[str, Any] | None = None,
 ) -> str:
+    body_pr = "<a:bodyPr/>"
+    paragraph_attributes = ""
+    paragraph_spacing = ""
+    if text_style is not None:
+        font_size = _font_size_hpt(text_style["font_size"])
+        font_face = text_style["font_family"]
+        color = _hex_or_none(text_style["color"])
+        bold = text_style["weight"] == 700
+        left, top, right, bottom = text_style["insets"]
+        anchor = {"top": "t", "middle": "ctr", "bottom": "b"}[text_style["vertical_anchor"]]
+        body_pr = (f'<a:bodyPr lIns="{px_to_emu(left)}" tIns="{px_to_emu(top)}" '
+                   f'rIns="{px_to_emu(right)}" bIns="{px_to_emu(bottom)}" anchor="{anchor}"><a:noAutofit/></a:bodyPr>')
+        alignment = {"left": "l", "center": "ctr", "right": "r"}[text_style["align"]]
+        paragraph_attributes = f' algn="{alignment}"'
+        paragraph_spacing = (f'<a:lnSpc><a:spcPts val="{int(round(text_style["font_size"] * text_style["line_height"] * 75))}"/></a:lnSpc>'
+                             f'<a:spcBef><a:spcPts val="{int(round(text_style["paragraph_gap"] * 75))}"/></a:spcBef>'
+                             '<a:spcAft><a:spcPts val="0"/></a:spcAft>')
     fill_xml = (
         f'<a:solidFill><a:srgbClr val="{color}"/></a:solidFill>'
         if color else ""
     )
-    bold_attr = ' b="1"' if bold else ""
+    bold_attr = ' b="1"' if bold else (' b="0"' if text_style is not None else "")
     resolved_language = language or 'en-US'
     rtl_attr = ' rtl="1"' if text_uses_rtl('', language) else ''
     return (
-        f"<c:txPr><a:bodyPr/><a:lstStyle/><a:p><a:pPr{rtl_attr}>"
+        f"<c:txPr>{body_pr}<a:lstStyle/><a:p><a:pPr{rtl_attr}{paragraph_attributes}>{paragraph_spacing}"
         f'<a:defRPr lang="{resolved_language}" sz="{font_size}"{bold_attr}>'
         f'{fill_xml}{_font_face_xml(font_face, language)}</a:defRPr>'
         f'</a:pPr><a:endParaRPr lang="{resolved_language}"/></a:p></c:txPr>'

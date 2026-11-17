@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="hierarchy-tree-2-2-2" data-pptx-layout-name="hierarchy-tree-2-2-2">
+  <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <line x1="640.0" y1="246.72" x2="237.33333333333334" y2="320.64" stroke="#003591" stroke-width="2" id="edge-100-101" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="237.333 246.72 402.667 73.92" data-pptx-start-shape-id="100" data-pptx-start-site="2" data-pptx-end-shape-id="101" data-pptx-end-site="0" />
+  <line x1="237.33333333333334" y1="447.36" x2="136.66666666666669" y2="521.28" stroke="#003591" stroke-width="2" id="edge-101-200" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="136.667 447.36 100.667 73.92" data-pptx-start-shape-id="101" data-pptx-start-site="2" data-pptx-end-shape-id="200" data-pptx-end-site="0" />
+  <line x1="237.33333333333334" y1="447.36" x2="338.0" y2="521.28" stroke="#003591" stroke-width="2" id="edge-101-201" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="237.333 447.36 100.667 73.92" data-pptx-start-shape-id="101" data-pptx-start-site="2" data-pptx-end-shape-id="201" data-pptx-end-site="0" />
+  <line x1="640.0" y1="246.72" x2="640.0" y2="320.64" stroke="#003591" stroke-width="2" id="edge-100-102" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="640 246.72 0 73.92" data-pptx-start-shape-id="100" data-pptx-start-site="2" data-pptx-end-shape-id="102" data-pptx-end-site="0" />
+  <line x1="640.0" y1="447.36" x2="539.3333333333334" y2="521.28" stroke="#003591" stroke-width="2" id="edge-102-202" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="539.333 447.36 100.667 73.92" data-pptx-start-shape-id="102" data-pptx-start-site="2" data-pptx-end-shape-id="202" data-pptx-end-site="0" />
+  <line x1="640.0" y1="447.36" x2="740.6666666666666" y2="521.28" stroke="#003591" stroke-width="2" id="edge-102-203" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="640 447.36 100.667 73.92" data-pptx-start-shape-id="102" data-pptx-start-site="2" data-pptx-end-shape-id="203" data-pptx-end-site="0" />
+  <line x1="640.0" y1="246.72" x2="1042.6666666666667" y2="320.64" stroke="#003591" stroke-width="2" id="edge-100-103" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="640 246.72 402.667 73.92" data-pptx-start-shape-id="100" data-pptx-start-site="2" data-pptx-end-shape-id="103" data-pptx-end-site="0" />
+  <line x1="1042.6666666666667" y1="447.36" x2="942.0" y2="521.28" stroke="#003591" stroke-width="2" id="edge-103-204" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="942 447.36 100.667 73.92" data-pptx-start-shape-id="103" data-pptx-start-site="2" data-pptx-end-shape-id="204" data-pptx-end-site="0" />
+  <line x1="1042.6666666666667" y1="447.36" x2="1143.3333333333335" y2="521.28" stroke="#003591" stroke-width="2" id="edge-103-205" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="1042.67 447.36 100.667 73.92" data-pptx-start-shape-id="103" data-pptx-start-site="2" data-pptx-end-shape-id="205" data-pptx-end-site="0" />
+  <rect x="492.0" y="120" width="296.0" height="126.72" fill="#EFEFEF" id="node-100" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="492 120 296 126.72" data-pptx-shape-id="100" />
+  <rect x="89.33333333333334" y="320.64" width="296.0" height="126.72" fill="#EFEFEF" id="node-101" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="89.3333 320.64 296 126.72" data-pptx-shape-id="101" />
+  <rect x="492.0" y="320.64" width="296.0" height="126.72" fill="#EFEFEF" id="node-102" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="492 320.64 296 126.72" data-pptx-shape-id="102" />
+  <rect x="894.6666666666667" y="320.64" width="296.0" height="126.72" fill="#EFEFEF" id="node-103" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="894.667 320.64 296 126.72" data-pptx-shape-id="103" />
+  <rect x="48.0" y="521.28" width="177.33333333333334" height="126.72" fill="#EFEFEF" id="node-200" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="48 521.28 177.333 126.72" data-pptx-shape-id="200" />
+  <rect x="249.33333333333334" y="521.28" width="177.33333333333334" height="126.72" fill="#EFEFEF" id="node-201" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="249.333 521.28 177.333 126.72" data-pptx-shape-id="201" />
+  <rect x="450.6666666666667" y="521.28" width="177.33333333333334" height="126.72" fill="#EFEFEF" id="node-202" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="450.667 521.28 177.333 126.72" data-pptx-shape-id="202" />
+  <rect x="652.0" y="521.28" width="177.33333333333334" height="126.72" fill="#EFEFEF" id="node-203" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="652 521.28 177.333 126.72" data-pptx-shape-id="203" />
+  <rect x="853.3333333333334" y="521.28" width="177.33333333333334" height="126.72" fill="#EFEFEF" id="node-204" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="853.333 521.28 177.333 126.72" data-pptx-shape-id="204" />
+  <rect x="1054.6666666666667" y="521.28" width="177.33333333333334" height="126.72" fill="#EFEFEF" id="node-205" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="1054.67 521.28 177.333 126.72" data-pptx-shape-id="205" />
+  <g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <text id="text-title" data-pptx-carrier="true" data-pptx-frame="48 24 1184 48" x="48" y="58.666666666666664" font-family="Microsoft YaHei" font-size="36" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="title" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:36,&quot;weight&quot;:700,&quot;line_height&quot;:1.1,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="39.6" xml:space="preserve">
+      <tspan x="48" y="58.666666666666664">{{页面标题}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <text id="text-section_name" data-pptx-carrier="true" data-pptx-frame="48 684 307.84 24" x="48" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <text id="text-source" data-pptx-carrier="true" data-pptx-frame="379.52 684 734.08 24" x="379.52000000000004" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="379.52000000000004" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <text id="text-page_number" data-pptx-carrier="true" data-pptx-frame="1137.28 684 94.72 24" x="1137.28" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="1137.28" y="700.0">1</tspan>
+    </text>
+  </g>
+  <g id="slot-text-root-title" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="536 136 236 42">
+    <text id="text-root-title" data-pptx-carrier="true" data-pptx-frame="536 136 236 42" x="536.0" y="162.66666666666666" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="536.0" y="162.66666666666666">{{根节点}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-root-body" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="508 184 264 46.72">
+    <text id="text-root-body" data-pptx-carrier="true" data-pptx-frame="508 184 264 46.72" x="508.0" y="200.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="508.0" y="200.0">{{共同归属}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-0-title" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="133.333 336.64 236 42">
+    <text id="text-branches-0-title" data-pptx-carrier="true" data-pptx-frame="133.333 336.64 236 42" x="133.33333333333334" y="363.3066666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="133.33333333333334" y="363.3066666666667">{{分支}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-0-body" data-pptx-placeholder="body" data-pptx-idx="7" data-pptx-bounds="105.333 384.64 264 46.72">
+    <text id="text-branches-0-body" data-pptx-carrier="true" data-pptx-frame="105.333 384.64 264 46.72" x="105.33333333333334" y="400.64" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="105.33333333333334" y="400.64">{{分支职责}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-1-title" data-pptx-placeholder="body" data-pptx-idx="8" data-pptx-bounds="536 336.64 236 42">
+    <text id="text-branches-1-title" data-pptx-carrier="true" data-pptx-frame="536 336.64 236 42" x="536.0" y="363.3066666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="536.0" y="363.3066666666667">{{分支}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-1-body" data-pptx-placeholder="body" data-pptx-idx="9" data-pptx-bounds="508 384.64 264 46.72">
+    <text id="text-branches-1-body" data-pptx-carrier="true" data-pptx-frame="508 384.64 264 46.72" x="508.0" y="400.64" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="508.0" y="400.64">{{分支职责}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-2-title" data-pptx-placeholder="body" data-pptx-idx="10" data-pptx-bounds="938.667 336.64 236 42">
+    <text id="text-branches-2-title" data-pptx-carrier="true" data-pptx-frame="938.667 336.64 236 42" x="938.6666666666667" y="363.3066666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="938.6666666666667" y="363.3066666666667">{{分支}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-2-body" data-pptx-placeholder="body" data-pptx-idx="11" data-pptx-bounds="910.667 384.64 264 46.72">
+    <text id="text-branches-2-body" data-pptx-carrier="true" data-pptx-frame="910.667 384.64 264 46.72" x="910.6666666666667" y="400.64" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="910.6666666666667" y="400.64">{{分支职责}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-0-children-0-title" data-pptx-placeholder="body" data-pptx-idx="12" data-pptx-bounds="92 537.28 117.333 42">
+    <text id="text-branches-0-children-0-title" data-pptx-carrier="true" data-pptx-frame="92 537.28 117.333 42" x="92.0" y="555.9466666666666" font-family="Microsoft YaHei" font-size="20" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="compactBody" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:20,&quot;weight&quot;:400,&quot;line_height&quot;:1.3,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="26.0" xml:space="preserve">
+      <tspan x="92.0" y="555.9466666666666">{{子项}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-0-children-0-body" data-pptx-placeholder="body" data-pptx-idx="13" data-pptx-bounds="64 585.28 145.333 46.72">
+    <text id="text-branches-0-children-0-body" data-pptx-carrier="true" data-pptx-frame="64 585.28 145.333 46.72" x="64.0" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="64.0" y="601.28">{{归属说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-0-children-1-title" data-pptx-placeholder="body" data-pptx-idx="14" data-pptx-bounds="293.333 537.28 117.333 42">
+    <text id="text-branches-0-children-1-title" data-pptx-carrier="true" data-pptx-frame="293.333 537.28 117.333 42" x="293.33333333333337" y="555.9466666666666" font-family="Microsoft YaHei" font-size="20" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="compactBody" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:20,&quot;weight&quot;:400,&quot;line_height&quot;:1.3,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="26.0" xml:space="preserve">
+      <tspan x="293.33333333333337" y="555.9466666666666">{{子项}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-0-children-1-body" data-pptx-placeholder="body" data-pptx-idx="15" data-pptx-bounds="265.333 585.28 145.333 46.72">
+    <text id="text-branches-0-children-1-body" data-pptx-carrier="true" data-pptx-frame="265.333 585.28 145.333 46.72" x="265.33333333333337" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="265.33333333333337" y="601.28">{{归属说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-1-children-0-title" data-pptx-placeholder="body" data-pptx-idx="16" data-pptx-bounds="494.667 537.28 117.333 42">
+    <text id="text-branches-1-children-0-title" data-pptx-carrier="true" data-pptx-frame="494.667 537.28 117.333 42" x="494.6666666666667" y="555.9466666666666" font-family="Microsoft YaHei" font-size="20" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="compactBody" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:20,&quot;weight&quot;:400,&quot;line_height&quot;:1.3,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="26.0" xml:space="preserve">
+      <tspan x="494.6666666666667" y="555.9466666666666">{{子项}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-1-children-0-body" data-pptx-placeholder="body" data-pptx-idx="17" data-pptx-bounds="466.667 585.28 145.333 46.72">
+    <text id="text-branches-1-children-0-body" data-pptx-carrier="true" data-pptx-frame="466.667 585.28 145.333 46.72" x="466.6666666666667" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="466.6666666666667" y="601.28">{{归属说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-1-children-1-title" data-pptx-placeholder="body" data-pptx-idx="18" data-pptx-bounds="696 537.28 117.333 42">
+    <text id="text-branches-1-children-1-title" data-pptx-carrier="true" data-pptx-frame="696 537.28 117.333 42" x="696.0" y="555.9466666666666" font-family="Microsoft YaHei" font-size="20" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="compactBody" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:20,&quot;weight&quot;:400,&quot;line_height&quot;:1.3,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="26.0" xml:space="preserve">
+      <tspan x="696.0" y="555.9466666666666">{{子项}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-1-children-1-body" data-pptx-placeholder="body" data-pptx-idx="19" data-pptx-bounds="668 585.28 145.333 46.72">
+    <text id="text-branches-1-children-1-body" data-pptx-carrier="true" data-pptx-frame="668 585.28 145.333 46.72" x="668.0" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="668.0" y="601.28">{{归属说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-2-children-0-title" data-pptx-placeholder="body" data-pptx-idx="20" data-pptx-bounds="897.333 537.28 117.333 42">
+    <text id="text-branches-2-children-0-title" data-pptx-carrier="true" data-pptx-frame="897.333 537.28 117.333 42" x="897.3333333333334" y="555.9466666666666" font-family="Microsoft YaHei" font-size="20" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="compactBody" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:20,&quot;weight&quot;:400,&quot;line_height&quot;:1.3,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="26.0" xml:space="preserve">
+      <tspan x="897.3333333333334" y="555.9466666666666">{{子项}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-2-children-0-body" data-pptx-placeholder="body" data-pptx-idx="21" data-pptx-bounds="869.333 585.28 145.333 46.72">
+    <text id="text-branches-2-children-0-body" data-pptx-carrier="true" data-pptx-frame="869.333 585.28 145.333 46.72" x="869.3333333333334" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="869.3333333333334" y="601.28">{{归属说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-2-children-1-title" data-pptx-placeholder="body" data-pptx-idx="22" data-pptx-bounds="1098.67 537.28 117.333 42">
+    <text id="text-branches-2-children-1-title" data-pptx-carrier="true" data-pptx-frame="1098.67 537.28 117.333 42" x="1098.6666666666667" y="555.9466666666666" font-family="Microsoft YaHei" font-size="20" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="compactBody" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:20,&quot;weight&quot;:400,&quot;line_height&quot;:1.3,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="26.0" xml:space="preserve">
+      <tspan x="1098.6666666666667" y="555.9466666666666">{{子项}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-branches-2-children-1-body" data-pptx-placeholder="body" data-pptx-idx="23" data-pptx-bounds="1070.67 585.28 145.333 46.72">
+    <text id="text-branches-2-children-1-body" data-pptx-carrier="true" data-pptx-frame="1070.67 585.28 145.333 46.72" x="1070.6666666666667" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="1070.6666666666667" y="601.28">{{归属说明}}</tspan>
+    </text>
+  </g>
+</svg>

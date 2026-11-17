@@ -634,7 +634,7 @@
     },
     {
       "path": "scripts/svg_finalize/flatten_tspan.py",
-      "sha256": "af72dd1d18301dc0f43f43b3de7b5c2ed0f00e2af5d3683a693058500e6ddcdd",
+      "sha256": "13f28d11ea15bbb240c26d7f8c96cc00665e837f1fbfda0e5f6ad53de8c0442c",
       "source_path": "scripts/svg_finalize/flatten_tspan.py",
       "source_sha256": "fa4c0fc13285046a6057dbf4916b41d80f07419e95c5b543c1fb204358f41d1c",
       "adapted": true
@@ -711,7 +711,7 @@
     },
     {
       "path": "scripts/svg_to_pptx/drawingml/elements.py",
-      "sha256": "f4384166e6051bab2aa8ebae36c1e1e667f79801571898d33c1e2211fbd00dde",
+      "sha256": "c06038a2667d3af3d66b329989d713a62b7f6e8c01e547e2397591a9c1cce5cd",
       "source_path": "scripts/svg_to_pptx/drawingml/elements.py",
       "source_sha256": "186b5d54fd858e3f6f94be21aa454b3f22657bb9c4f6f433165f096397ed6ce6",
       "adapted": true
@@ -802,10 +802,10 @@
     },
     {
       "path": "scripts/svg_to_pptx/native_objects/chart_data.py",
-      "sha256": "90d87e28b2323979189b64a7cb46adc53444454b3659d88692e1444a498b4883",
+      "sha256": "5f5ea5c6f8d1547b713afbb30add2985ac125b487381835b403b01f154e6a833",
       "source_path": "scripts/svg_to_pptx/native_objects/chart_data.py",
       "source_sha256": "90d87e28b2323979189b64a7cb46adc53444454b3659d88692e1444a498b4883",
-      "adapted": false
+      "adapted": true
     },
     {
       "path": "scripts/svg_to_pptx/native_objects/chart_patch.py",
@@ -816,17 +816,17 @@
     },
     {
       "path": "scripts/svg_to_pptx/native_objects/chart_style.py",
-      "sha256": "40d2269500e9375848bb5e514b9fa22638743b07f3c25edd4ccd71fbbc16ba20",
+      "sha256": "2784b1d3b4bc3c14a188d04e19c7247aa75c1b0d900fb3cfeb6bff85798bfcdd",
       "source_path": "scripts/svg_to_pptx/native_objects/chart_style.py",
       "source_sha256": "40d2269500e9375848bb5e514b9fa22638743b07f3c25edd4ccd71fbbc16ba20",
-      "adapted": false
+      "adapted": true
     },
     {
       "path": "scripts/svg_to_pptx/native_objects/chart_xml.py",
-      "sha256": "8172068d9e1b0a250058b376d063de59fc679f85dae40d5c10925147742f7bef",
+      "sha256": "6884852d6d014a1450717f464dc30c8a56679f0dba5cb16674cd6a25f6c6a6aa",
       "source_path": "scripts/svg_to_pptx/native_objects/chart_xml.py",
       "source_sha256": "8172068d9e1b0a250058b376d063de59fc679f85dae40d5c10925147742f7bef",
-      "adapted": false
+      "adapted": true
     },
     {
       "path": "scripts/svg_to_pptx/native_objects/chartex.py",
@@ -1109,11 +1109,11 @@
     },
     {
       "path": "scripts/svg_to_pptx/drawingml/elements.py",
-      "change": "Preserve declared multiline and empty carriers, full frame and authored vertical anchor in one native editable text box."
+      "change": "Preserve declared multiline and empty carriers, full frame and authored vertical anchor in one native editable text box. Consume finite explicit four-sided data-htr-text-insets and declared semantic paragraph spacing in both direct and grouped text. Preserve semantic empty paragraphs and blank lines inside native groups through the existing carrier text path."
     },
     {
       "path": "scripts/svg_finalize/flatten_tspan.py",
-      "change": "Preserve data-pptx-carrier and explicit frame metadata when lowering positional tspans. Normalize aligned absolute or relative row baselines of declared multiline carriers through the existing single-paragraph machinery, without splitting their native frame."
+      "change": "Preserve data-pptx-carrier and explicit frame metadata when lowering positional tspans. Normalize aligned absolute or relative row baselines of declared multiline carriers through existing paragraph machinery. Retain already-declared engine semantic role line-height and paragraph boundaries so gap is not reinterpreted as line spacing."
     },
     {
       "path": "scripts/svg_quality/checker.py",
@@ -1126,6 +1126,18 @@
     {
       "path": "scripts/svg_to_pptx/pptx_package/builder.py",
       "change": "Retain source text rotation and flip attributes when replacing placeholder geometry in reusable layouts."
+    },
+    {
+      "path": "scripts/svg_to_pptx/native_objects/chart_data.py",
+      "change": "Validate optional resolved text_styles for classic-chart base text, axis, legend and data labels, rejecting unsupported roles and malformed values."
+    },
+    {
+      "path": "scripts/svg_to_pptx/native_objects/chart_style.py",
+      "change": "Emit optional resolved font family, SVG-pixel font size, normalized weight, line spacing, paragraph gap, four text insets, alignment and vertical anchor in native chart text properties."
+    },
+    {
+      "path": "scripts/svg_to_pptx/native_objects/chart_xml.py",
+      "change": "Carry resolved text styles into base, axis, legend and data-label properties, including custom rich-label defaults, while preserving explicit global, series and point overrides and the legacy omitted-style path."
     }
   ]
 }

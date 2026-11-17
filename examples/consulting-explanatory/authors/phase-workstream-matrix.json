@@ -1,0 +1,564 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-phase-workstream-matrix",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "phase-workstream-matrix.slot-001": {
+      "value": "阶段推进与工作流展开"
+    },
+    "phase-workstream-matrix.slot-002": {
+      "value": "规划"
+    },
+    "phase-workstream-matrix.slot-003": {
+      "value": "建设"
+    },
+    "phase-workstream-matrix.slot-004": {
+      "value": "持续运营"
+    },
+    "phase-workstream-matrix.slot-005": {
+      "value": "规划阶段"
+    },
+    "phase-workstream-matrix.slot-006": {
+      "value": "确认目标"
+    },
+    "phase-workstream-matrix.slot-007": {
+      "value": "比较方案"
+    },
+    "phase-workstream-matrix.slot-008": {
+      "value": "冻结范围"
+    },
+    "phase-workstream-matrix.slot-009": {
+      "value": "共同基础"
+    },
+    "phase-workstream-matrix.slot-010": {
+      "value": "业务口径"
+    },
+    "phase-workstream-matrix.slot-011": {
+      "value": "基准数据"
+    },
+    "phase-workstream-matrix.slot-012": {
+      "value": "建设阶段"
+    },
+    "phase-workstream-matrix.slot-013": {
+      "value": "设计"
+    },
+    "phase-workstream-matrix.slot-014": {
+      "value": "开发"
+    },
+    "phase-workstream-matrix.slot-015": {
+      "value": "验证"
+    },
+    "phase-workstream-matrix.slot-016": {
+      "value": "支撑方法"
+    },
+    "phase-workstream-matrix.slot-017": {
+      "value": "版本管理"
+    },
+    "phase-workstream-matrix.slot-018": {
+      "value": "场景测试"
+    },
+    "phase-workstream-matrix.slot-019": {
+      "value": "运营阶段"
+    },
+    "phase-workstream-matrix.slot-020": {
+      "value": "使用"
+    },
+    "phase-workstream-matrix.slot-021": {
+      "value": "反馈"
+    },
+    "phase-workstream-matrix.slot-022": {
+      "value": "改进"
+    },
+    "phase-workstream-matrix.slot-023": {
+      "value": "持续输入"
+    },
+    "phase-workstream-matrix.slot-024": {
+      "value": "运营数据"
+    },
+    "phase-workstream-matrix.slot-025": {
+      "value": "重点问题"
+    },
+    "phase-workstream-matrix.slot-026": {
+      "value": "合成内容 · 结构样例 09 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "phase-workstream-matrix",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "阶段顺序+阶段内任务依赖+共同基础",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "phase-workstream-matrix-body"
+      },
+      "layout": {
+        "id": "col-637",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-634",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "phase-workstream-matrix.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-635",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "phase-workstream-matrix-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "topology-226",
+                "type": "leaf",
+                "height": 80,
+                "element": {
+                  "type": "component",
+                  "component": "topology",
+                  "layout": "layered",
+                  "nodes": [
+                    {
+                      "id": "v0",
+                      "label": {
+                        "ref": "phase-workstream-matrix.slot-002"
+                      }
+                    },
+                    {
+                      "id": "v1",
+                      "label": {
+                        "ref": "phase-workstream-matrix.slot-003"
+                      }
+                    },
+                    {
+                      "id": "v2",
+                      "label": {
+                        "ref": "phase-workstream-matrix.slot-004"
+                      }
+                    }
+                  ],
+                  "role": "body",
+                  "arrow": true,
+                  "padding": 14,
+                  "layer_gap": 20,
+                  "node_gap": 16,
+                  "direction": "right",
+                  "node_width": 150,
+                  "edges": [
+                    {
+                      "id": "e0",
+                      "from": "v0",
+                      "to": "v1"
+                    },
+                    {
+                      "id": "e1",
+                      "from": "v1",
+                      "to": "v2"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "grid-248",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 2
+                  },
+                  {
+                    "fr": 3
+                  },
+                  {
+                    "fr": 3
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-233",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "text-227",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "phase-workstream-matrix.slot-005"
+                          }
+                        }
+                      },
+                      {
+                        "id": "topology-228",
+                        "type": "leaf",
+                        "height": 220,
+                        "element": {
+                          "type": "component",
+                          "component": "topology",
+                          "layout": "layered",
+                          "nodes": [
+                            {
+                              "id": "v0",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-006"
+                              }
+                            },
+                            {
+                              "id": "v1",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-007"
+                              }
+                            },
+                            {
+                              "id": "v2",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-008"
+                              }
+                            }
+                          ],
+                          "role": "body",
+                          "arrow": true,
+                          "padding": 14,
+                          "layer_gap": 20,
+                          "node_gap": 16,
+                          "node_width": 150,
+                          "edges": [
+                            {
+                              "id": "e0",
+                              "from": "v0",
+                              "to": "v1"
+                            },
+                            {
+                              "id": "e1",
+                              "from": "v1",
+                              "to": "v2"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "col-232",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-229",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-009"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-230",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-010"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-231",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-011"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-240",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "text-234",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "phase-workstream-matrix.slot-012"
+                          }
+                        }
+                      },
+                      {
+                        "id": "topology-235",
+                        "type": "leaf",
+                        "height": 220,
+                        "element": {
+                          "type": "component",
+                          "component": "topology",
+                          "layout": "layered",
+                          "nodes": [
+                            {
+                              "id": "v0",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-013"
+                              }
+                            },
+                            {
+                              "id": "v1",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-014"
+                              }
+                            },
+                            {
+                              "id": "v2",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-015"
+                              }
+                            }
+                          ],
+                          "role": "body",
+                          "arrow": true,
+                          "padding": 14,
+                          "layer_gap": 20,
+                          "node_gap": 16,
+                          "node_width": 150,
+                          "edges": [
+                            {
+                              "id": "e0",
+                              "from": "v0",
+                              "to": "v1"
+                            },
+                            {
+                              "id": "e1",
+                              "from": "v1",
+                              "to": "v2"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "col-239",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-236",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-016"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-237",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-017"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-238",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-018"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-247",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "text-241",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "phase-workstream-matrix.slot-019"
+                          }
+                        }
+                      },
+                      {
+                        "id": "topology-242",
+                        "type": "leaf",
+                        "height": 220,
+                        "element": {
+                          "type": "component",
+                          "component": "topology",
+                          "layout": "layered",
+                          "nodes": [
+                            {
+                              "id": "v0",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-020"
+                              }
+                            },
+                            {
+                              "id": "v1",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-021"
+                              }
+                            },
+                            {
+                              "id": "v2",
+                              "label": {
+                                "ref": "phase-workstream-matrix.slot-022"
+                              }
+                            }
+                          ],
+                          "role": "body",
+                          "arrow": true,
+                          "padding": 14,
+                          "layer_gap": 20,
+                          "node_gap": 16,
+                          "node_width": 150,
+                          "edges": [
+                            {
+                              "id": "e0",
+                              "from": "v0",
+                              "to": "v1"
+                            },
+                            {
+                              "id": "e1",
+                              "from": "v1",
+                              "to": "v2"
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "id": "col-246",
+                        "type": "column",
+                        "gap": 10,
+                        "padding": 16,
+                        "children": [
+                          {
+                            "id": "text-243",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "heading",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-023"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-244",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-024"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-245",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "phase-workstream-matrix.slot-025"
+                              }
+                            }
+                          }
+                        ],
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-636",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "phase-workstream-matrix.slot-026"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

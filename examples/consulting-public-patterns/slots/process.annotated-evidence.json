@@ -1,0 +1,115 @@
+{
+  "template_id": "process.annotated-evidence",
+  "text_slots": [
+    {
+      "id": "process.annotated-evidence.slot-001",
+      "default": "一次资料发布经过编写、校核和归档",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-002",
+      "default": "编写说明",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-003",
+      "default": "核对条件",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-004",
+      "default": "发布归档",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-005",
+      "default": "形成初稿",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-006",
+      "default": "说明对象、适用范围与引用来源。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-007",
+      "default": "图片占位",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-008",
+      "default": "初稿局部，标出范围和来源字段。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-009",
+      "default": "形成修订记录",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-010",
+      "default": "确认例外、责任边界和版本变化。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-011",
+      "default": "图片占位",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-012",
+      "default": "审阅记录局部，显示修改依据。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-013",
+      "default": "形成可追溯版本",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-014",
+      "default": "发布正文并保存历史版本入口。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-015",
+      "default": "图片占位",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-016",
+      "default": "发布界面，显示版本与生效日期。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-017",
+      "default": "合成工作流示例；图位为待替换证据占位，不代表已完成的业务成果。",
+      "type": "text"
+    },
+    {
+      "id": "process.annotated-evidence.slot-018",
+      "default": "原创合成内容 · 可计算结构样例 04/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": [
+    {
+      "id": "column-95",
+      "height_constraint": 210,
+      "description": "替换真实图后由image/contain计算；图内内容仍是图像。"
+    },
+    {
+      "id": "column-101",
+      "height_constraint": 210,
+      "description": "替换真实图后由image/contain计算；图内内容仍是图像。"
+    },
+    {
+      "id": "column-107",
+      "height_constraint": 210,
+      "description": "替换真实图后由image/contain计算；图内内容仍是图像。"
+    }
+  ]
+}

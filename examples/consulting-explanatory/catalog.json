@@ -1,0 +1,755 @@
+{
+  "version": "0.1",
+  "design_profile": {
+    "id": "report-14pt",
+    "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+    "hash_method": "sha256-file-bytes"
+  },
+  "palette_id": "report-default",
+  "registration": "standalone_examples_not_library_assets",
+  "templates": [
+    {
+      "id": "team-profiles",
+      "title": "团队职责与专业分工",
+      "grid_family": "等宽5列图文栅格",
+      "content_relation": "人物—角色—职责一一对应",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "3–5人/角色简介，同行比较",
+      "unsuitable": "汇报关系、完整履历、长名单",
+      "density": "中；每人1个角色、2条职责",
+      "limitations": "头像为可替换图片槽；示例用明确肖像占位，不复制客户照片。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/team-profiles.json",
+      "preview": "previews/team-profiles.png",
+      "slots": "slots/team-profiles.json",
+      "guide": "docs/team-profiles.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 2
+        }
+      ],
+      "author_sha256": "b2508f1b5d62cded7b59f60b39790589f9631e215ddc9423c277a73361d8d286",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "4c9292cc8578fb5cf4181be8061010b584345c13dd025b9053826de25c9f7560",
+        "public_author_sha256": "b2508f1b5d62cded7b59f60b39790589f9631e215ddc9423c277a73361d8d286",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "metric-evidence-columns",
+      "title": "规模证据与能力解释",
+      "grid_family": "总述+5列指标证据",
+      "content_relation": "并列维度共同支持一个总体判断",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "公司介绍、服务覆盖、能力证明",
+      "unsuitable": "没有共同论点的指标堆砌；跨单位比较长度",
+      "density": "中；5项指标+各2条解释",
+      "limitations": "五个维度分别用独立柱图表示数值，各自单位不同，不能跨图比较柱长。仅用于量级证据解释；只查精确记录时应使用表。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/metric-evidence-columns.json",
+      "preview": "previews/metric-evidence-columns.png",
+      "slots": "slots/metric-evidence-columns.json",
+      "guide": "docs/metric-evidence-columns.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 4
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 5
+        }
+      ],
+      "author_sha256": "160bc630a27ac8915543f6a2f28c856049540e5c1a565e63df6cccd54a77603b",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "21055a2ca9d38940e5c32db27707816428406f76b9b1fd64ad6e76feb747de14",
+        "public_author_sha256": "160bc630a27ac8915543f6a2f28c856049540e5c1a565e63df6cccd54a77603b",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "categorized-directory",
+      "title": "按价值链分类的对象目录",
+      "grid_family": "5列独立清单",
+      "content_relation": "分类—成员，不构成顺序",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "客户/功能/对象分类目录",
+      "unsuitable": "时间流程；分类互斥未经核实的占比",
+      "density": "高；每列6–10个短名称",
+      "limitations": "保留列分组；超长名称实际换行，不保证原页22项仍可容纳。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/categorized-directory.json",
+      "preview": "previews/categorized-directory.png",
+      "slots": "slots/categorized-directory.json",
+      "guide": "docs/categorized-directory.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 6
+        }
+      ],
+      "author_sha256": "d5af4e50d6ec5d918b2ecb436d1765d774277c36e6bfd779be6d0ff9b7d42428",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "f4790961cba50858dfb639cbdf58c3da6ac4132ea4cd896ba1f105ed28f53a43",
+        "public_author_sha256": "d5af4e50d6ec5d918b2ecb436d1765d774277c36e6bfd779be6d0ff9b7d42428",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "service-network",
+      "title": "咨询与交付能力的服务网络",
+      "grid_family": "左关系图+右分组说明（2:3）",
+      "content_relation": "核心能力—服务分支—交付事项",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "服务体系、双能力协同、能力介绍",
+      "unsuitable": "数字比较、因果未经证实的箭头",
+      "density": "中高；主图5节点+3组解释",
+      "limitations": "原脑形插图/暗色图片不重画；参数化径向节点替代视觉隐喻，非轮廓保真。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/service-network.json",
+      "preview": "previews/service-network.png",
+      "slots": "slots/service-network.json",
+      "guide": "docs/service-network.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 7
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 8
+        }
+      ],
+      "author_sha256": "a773cacbd31ff9b62448d66302b59b0123d6525fb002202ac120daef87a39434",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "7d976770aaac342b36d6dd378bb0ed0517341dc40c445b6be4fb50c03c6446d6",
+        "public_author_sha256": "a773cacbd31ff9b62448d66302b59b0123d6525fb002202ac120daef87a39434",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "evidence-index",
+      "title": "项目经验索引",
+      "grid_family": "通栏语义索引行+稳定列宽",
+      "content_relation": "记录的多属性查找",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "查阅并核对项目、主题与能力的精确二维对应关系",
+      "unsuitable": "解释数量趋势、差异或占比；这些任务优先图表",
+      "density": "高；8行×3字段",
+      "limitations": "索引表适用于精确查找对应；表格在核对任务中不属于低优先级。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/evidence-index.json",
+      "preview": "previews/evidence-index.png",
+      "slots": "slots/evidence-index.json",
+      "guide": "docs/evidence-index.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 9
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 10
+        }
+      ],
+      "author_sha256": "6b115a905e52c328500160449cc60c37b8e537bc7c8985d2e45572e4a340196f",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "840fafcc4395c7d1f1dcc655d190408811db6b1fe309aa278b085db25b40af9f",
+        "public_author_sha256": "6b115a905e52c328500160449cc60c37b8e537bc7c8985d2e45572e4a340196f",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "case-card-matrix",
+      "title": "并列案例与能力证据",
+      "grid_family": "3列×2行案例卡",
+      "content_relation": "能力—做法—结果/证据来源",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "6个可并行阅读案例",
+      "unsuitable": "流程依赖；内容长短悬殊；独立多话题",
+      "density": "高；每卡标题+2条短语+证据标签",
+      "limitations": "统一浅底和语义强调，去原深色交错品牌块。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/case-card-matrix.json",
+      "preview": "previews/case-card-matrix.png",
+      "slots": "slots/case-card-matrix.json",
+      "guide": "docs/case-card-matrix.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 11
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 12
+        }
+      ],
+      "author_sha256": "277cc915f000d59af1a7003c9dbf2da1e0d8cffd67e2932c97695b0603048584",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "69ab12f3a1019d3bd633a7d14418e118df708c8892b2a811e828a108b04e0c33",
+        "public_author_sha256": "277cc915f000d59af1a7003c9dbf2da1e0d8cffd67e2932c97695b0603048584",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "portfolio-timeline",
+      "title": "项目历程与阶段组合",
+      "grid_family": "通栏时间轴+3阶段项目栅格",
+      "content_relation": "时间先后+阶段内分类",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "项目组合历程、能力积累",
+      "unsuitable": "没有日期的分类；精确工期排程",
+      "density": "高；3阶段各6项",
+      "limitations": "原蜂窝多边形错位堆叠改成计算栅格；保留时间轴与阶段分组，非蜂窝轮廓重建。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/portfolio-timeline.json",
+      "preview": "previews/portfolio-timeline.png",
+      "slots": "slots/portfolio-timeline.json",
+      "guide": "docs/portfolio-timeline.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 13
+        }
+      ],
+      "author_sha256": "ed8e007888de76740ce678fe172929aa4deb4c85edd277268e758c7c6645ff52",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "e975db4fdffbae69558f83d27bfec4ffe40a83f2ee9f2971bf0e5b0a1d102705",
+        "public_author_sha256": "ed8e007888de76740ce678fe172929aa4deb4c85edd277268e758c7c6645ff52",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "cycle-explainer",
+      "title": "生命周期循环与阶段说明",
+      "grid_family": "两侧解释+中央循环（3:4:3）",
+      "content_relation": "四阶段闭环，与四组解释一一对应",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "产品生命周期、持续改进闭环",
+      "unsuitable": "单向时间；不能闭合的流程",
+      "density": "中；4节点各2条解释",
+      "limitations": "现有cycle为节点+直连箭头，不生成原异形弯曲箭头；关系可编辑。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/cycle-explainer.json",
+      "preview": "previews/cycle-explainer.png",
+      "slots": "slots/cycle-explainer.json",
+      "guide": "docs/cycle-explainer.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 15
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 16
+        }
+      ],
+      "author_sha256": "625ba330fedb3a6909d4e49beb52fad66926b725203ffe3d09d5c81bae91c2dd",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "bae3d3c5cab3ba62743a9987abdc9bf2fbc96fbb310dfe256f17b4e2523a86b2",
+        "public_author_sha256": "625ba330fedb3a6909d4e49beb52fad66926b725203ffe3d09d5c81bae91c2dd",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "phase-workstream-matrix",
+      "title": "阶段推进与工作流展开",
+      "grid_family": "通栏顺序轴+非对称3列工作区",
+      "content_relation": "阶段顺序+阶段内任务依赖+共同基础",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "端到端生命周期分析",
+      "unsuitable": "只有分类无先后；跨阶段复杂反馈",
+      "density": "高；3阶段、每阶段3任务+基础/方法",
+      "limitations": "不复刻原所有回绕箭头；保留直线有向关系，阶段横宽按内容约束。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/phase-workstream-matrix.json",
+      "preview": "previews/phase-workstream-matrix.png",
+      "slots": "slots/phase-workstream-matrix.json",
+      "guide": "docs/phase-workstream-matrix.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 17
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 18
+        }
+      ],
+      "author_sha256": "e1cddd637f6ddfe2dca07a5d63366061d009f1561e72c85891a250ddfd3080db",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "5d491930d13344896269727eebfd10ac8130d1d7f2d93ee5b019a67a29ea73cc",
+        "public_author_sha256": "e1cddd637f6ddfe2dca07a5d63366061d009f1561e72c85891a250ddfd3080db",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "platform-architecture-rail",
+      "title": "业务平台分层与使能技术",
+      "grid_family": "主架构3层+右说明栏（3:1）",
+      "content_relation": "价值层—业务层—基础层，侧栏跨层使能",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "平台方案、能力架构、产品介绍",
+      "unsuitable": "数据统计；把无依赖模块伪造成层级",
+      "density": "高；3层各3模块+4使能项",
+      "limitations": "屋顶/3D斜边取消；分层、包含与使能关系保留，不宣称源形状保真。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/platform-architecture-rail.json",
+      "preview": "previews/platform-architecture-rail.png",
+      "slots": "slots/platform-architecture-rail.json",
+      "guide": "docs/platform-architecture-rail.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 19
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 20
+        }
+      ],
+      "author_sha256": "76037a093177567c70441fb8d4da8575ff32903e43786fe3c78641aeb4565173",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "87851f675cfaeef52802a92dc25de0d69a2c7ecb90bdb50af42d34639992c536",
+        "public_author_sha256": "76037a093177567c70441fb8d4da8575ff32903e43786fe3c78641aeb4565173",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "three-pillar-system",
+      "title": "能力、决策流程与数据平台",
+      "grid_family": "3列混合组件栅格",
+      "content_relation": "三个互补支柱，每列内部不同关系",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "方法体系：能力清单+过程+数据支撑",
+      "unsuitable": "三个无共同上位论点的独立话题",
+      "density": "高；能力5项、流程5步、数据2组",
+      "limitations": "原九节点蛇形流程降为5步示例；输入可变但不支持任意蛇形绕线。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/three-pillar-system.json",
+      "preview": "previews/three-pillar-system.png",
+      "slots": "slots/three-pillar-system.json",
+      "guide": "docs/three-pillar-system.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 21
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 22
+        }
+      ],
+      "author_sha256": "e6bc51ed63b8b0f49887e710bedb25ab2d98b99a817f30886db3e9eadaa4a8d5",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "02636701872428ece2ea80d0968a3e371fa283a59dbc8ef7b4e511dcc73cd09c",
+        "public_author_sha256": "e6bc51ed63b8b0f49887e710bedb25ab2d98b99a817f30886db3e9eadaa4a8d5",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "lifecycle-capabilities-cases",
+      "title": "生命周期、共用能力与典型用例",
+      "grid_family": "上顺序轴/中4能力/下2用例",
+      "content_relation": "业务背景→贯穿能力→具体用例",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "介绍平台如何支持全流程",
+      "unsuitable": "把上下区域误读为阶段一一对应",
+      "density": "高；5阶段+4能力+2用例",
+      "limitations": "源波浪线属于装饰，替换直连阶段轴；能力贯穿各阶段而非逐列映射。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/lifecycle-capabilities-cases.json",
+      "preview": "previews/lifecycle-capabilities-cases.png",
+      "slots": "slots/lifecycle-capabilities-cases.json",
+      "guide": "docs/lifecycle-capabilities-cases.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 24
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 25
+        }
+      ],
+      "author_sha256": "48dc053a734eef7a4ffa3a164ed27c14b6c5c272eac8afaa789ec180ea0326bc",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "8db17531d594eb9ad39a1acab954673b334def39452eb3c53d25d3defa7b5b2f",
+        "public_author_sha256": "48dc053a734eef7a4ffa3a164ed27c14b6c5c272eac8afaa789ec180ea0326bc",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "interface-showcase",
+      "title": "产品界面与关键操作说明",
+      "grid_family": "主图+窄说明栏（4:1）",
+      "content_relation": "可视界面—解释或操作重点",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "真实产品截图、难以原生重绘的界面",
+      "unsuitable": "纯数字比较应重绘图表；整页截图冒充可编辑",
+      "density": "中；1图+3观察",
+      "limitations": "样例为明确图片占位；替换真实图片后内部不可编辑，外部说明可编辑。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/interface-showcase.json",
+      "preview": "previews/interface-showcase.png",
+      "slots": "slots/interface-showcase.json",
+      "guide": "docs/interface-showcase.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 26
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 27
+        }
+      ],
+      "author_sha256": "0148ae2025a800ae20d5ef499d7c46a8ed29cc5d7c0891dde29e21fb0d373329",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "d5b138f202304681299769af1fbc8aaec8980ea1c49a1159f24256abd1762916",
+        "public_author_sha256": "0148ae2025a800ae20d5ef499d7c46a8ed29cc5d7c0891dde29e21fb0d373329",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "capability-map",
+      "title": "工作空间、业务能力与共享数据",
+      "grid_family": "分层主区+外部系统栏（4:1）",
+      "content_relation": "工作空间—能力域—共享功能—数据，外部集成",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "应用架构、功能范围地图",
+      "unsuitable": "用架构层级表现不相关清单",
+      "density": "高；4能力域×4能力+3共享/数据项",
+      "limitations": "源阶段配色改全局色角色；真实阶段含义须通过标签，不能仅靠颜色。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/capability-map.json",
+      "preview": "previews/capability-map.png",
+      "slots": "slots/capability-map.json",
+      "guide": "docs/capability-map.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 29
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 30
+        }
+      ],
+      "author_sha256": "de9424631ad87169de10b2dc36e03e09d3b75cccaee7f53d11347d23be7a70f1",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "bc0eeb0915b047cba49d522e6c69b2f6cbd7f6898780894ed0e94eb8aeef6223",
+        "public_author_sha256": "de9424631ad87169de10b2dc36e03e09d3b75cccaee7f53d11347d23be7a70f1",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "technical-layers",
+      "title": "技术层次与跨层控制",
+      "grid_family": "三栏：源系统/核心分层/跨层控制（1:4:1）",
+      "content_relation": "上下调用层次+横向集成+治理横切",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "技术方案、系统边界、接口说明",
+      "unsuitable": "用箭头暗示尚未确认的数据写回",
+      "density": "高；核心5层，各2–3模块",
+      "limitations": "去除品牌、装饰副标题；实际方向可配置，不能推断原PDF未提供接口协议。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/technical-layers.json",
+      "preview": "previews/technical-layers.png",
+      "slots": "slots/technical-layers.json",
+      "guide": "docs/technical-layers.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 31
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 32
+        }
+      ],
+      "author_sha256": "fa60ee89ccb9221d308266ffc3f5f755eaf017bb75af887e9870101f6477d775",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "ab448c05c88399faf298d0e8b6b71ddf13a2da68d9ce031d88b92baf9569da9a",
+        "public_author_sha256": "fa60ee89ccb9221d308266ffc3f5f755eaf017bb75af887e9870101f6477d775",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "converging-readiness",
+      "title": "交付前提汇聚为计划依据",
+      "grid_family": "左条件/中汇聚图/右输出（3:2:2）",
+      "content_relation": "多个前提共同约束方案、计划与资源",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "实施准备、决策输入、就绪说明",
+      "unsuitable": "把待确认事项写成已完成事实",
+      "density": "中高；5输入+3输出",
+      "limitations": "现有layered直线汇聚替代源曲线；输入条件和输出之间关系保留。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/converging-readiness.json",
+      "preview": "previews/converging-readiness.png",
+      "slots": "slots/converging-readiness.json",
+      "guide": "docs/converging-readiness.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 33
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 1,
+          "page": 34
+        }
+      ],
+      "author_sha256": "05804640934dba0ed9fa05c3848325f9df7cf335d54ecf30438f5e7ba2ae5e99",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "40f295168d5c42376a530301b5269110fd1a540ef22292abeaa64ec190b6aa3b",
+        "public_author_sha256": "05804640934dba0ed9fa05c3848325f9df7cf335d54ecf30438f5e7ba2ae5e99",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "phased-scope",
+      "title": "分阶段功能范围与状态",
+      "grid_family": "阶段纵向分区+内部模块栅格",
+      "content_relation": "阶段先后+每阶段功能集合",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "分期交付、范围清单、阶段边界",
+      "unsuitable": "功能状态不清却强行标已完成",
+      "density": "高；3阶段每阶段4模块",
+      "limitations": "原24行表格改阶段模块组，保留阶段与状态；详细接口清单可做附录。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/phased-scope.json",
+      "preview": "previews/phased-scope.png",
+      "slots": "slots/phased-scope.json",
+      "guide": "docs/phased-scope.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 2
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 8
+        }
+      ],
+      "author_sha256": "cd4813e1cfd38accd049972d4babbe02614367d13862d404b291e446b7b19634",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "5674882a47c0749898a559520aa80e060a598d0187b5744e777c9acb08661303",
+        "public_author_sha256": "cd4813e1cfd38accd049972d4babbe02614367d13862d404b291e446b7b19634",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "delivery-gantt",
+      "title": "实施阶段与工作流排程",
+      "grid_family": "通栏甘特+底部阶段交付",
+      "content_relation": "同一时间尺度上的区间重叠与里程碑",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "项目计划、试点与推广排程",
+      "unsuitable": "无日期只写逻辑步骤；精确资源负荷",
+      "density": "中；4工作流+3阶段解释",
+      "limitations": "现成Priestley时间区间图；数字月份统一映射，原图复杂多段需拆多行。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/delivery-gantt.json",
+      "preview": "previews/delivery-gantt.png",
+      "slots": "slots/delivery-gantt.json",
+      "guide": "docs/delivery-gantt.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 3
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 9
+        }
+      ],
+      "author_sha256": "2f946eeecddfeedb90bc7cd6f8e9f3b24072efc24375979e6b68381f1609f0c9",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "28c4011b32b824f03ebc3ec35b48f065bed2386a4dd05ab261abab34257ae29a",
+        "public_author_sha256": "2f946eeecddfeedb90bc7cd6f8e9f3b24072efc24375979e6b68381f1609f0c9",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "governance-organization",
+      "title": "治理责任与交付组织",
+      "grid_family": "上层级图+下4岗位说明",
+      "content_relation": "责任层级及角色分工",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "项目治理、团队汇报结构",
+      "unsuitable": "矩阵组织的虚线职责未经确认",
+      "density": "中高；7节点+4职能组",
+      "limitations": "树状单父层级；不支持多头汇报冒充tree，需layered替换并检查交叉。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/governance-organization.json",
+      "preview": "previews/governance-organization.png",
+      "slots": "slots/governance-organization.json",
+      "guide": "docs/governance-organization.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 4
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 10
+        }
+      ],
+      "author_sha256": "a6232c21fdedcda729ddf6ce93b1212c626d7bdae73cc524e03f62afa8c0c1c5",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "8786c610cc227e21b4eb125800a71a011617de50f06c9845d3369f10ba5d9fe4",
+        "public_author_sha256": "a6232c21fdedcda729ddf6ce93b1212c626d7bdae73cc524e03f62afa8c0c1c5",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    },
+    {
+      "id": "resource-load",
+      "title": "按阶段配置团队投入",
+      "grid_family": "上资源热力图+下投入/运维说明",
+      "content_relation": "角色×期间强度，摘要与明细分层",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "解释角色×月份投入分布，识别集中时段和岗位差异",
+      "unsuitable": "逐项核对精确人天、单价或费用；此类查阅任务使用表格",
+      "density": "高；4角色×6期",
+      "limitations": "示例数值单位为人天，颜色表示多少，不是利用率。格内带值仅辅助读图，不替代核对明细表。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/resource-load.json",
+      "preview": "previews/resource-load.png",
+      "slots": "slots/resource-load.json",
+      "guide": "docs/resource-load.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 5
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 11
+        }
+      ],
+      "preview_status": "public-author-computed-and-office-rendered",
+      "author_sha256": "3ef477bbe93baf521bfe662d5dabc16893b3e67383fa23861cc7620c964318a2",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "public_author_sha256": "3ef477bbe93baf521bfe662d5dabc16893b3e67383fa23861cc7620c964318a2",
+        "preview_sha256": "65cadc0c49615f3b3c9cce996b1d5e00231dfa3d7d65e06784110c8deec413b2",
+        "relationship": "fresh PowerPoint16.0 render of public author with unit and scale statement",
+        "build_policy": "computed",
+        "package_version": "0.11.4"
+      }
+    },
+    {
+      "id": "commercial-options",
+      "title": "费用构成与可选方案",
+      "grid_family": "费用构成图+两方案比较",
+      "content_relation": "总额由组成项相加，服务选项独立",
+      "reading_order": "标题→主结构（自上而下/自左向右）→解释或适用边界",
+      "suitable": "预算构成、报价概要、采购比较",
+      "unsuitable": "包含负值却用饼图；未含税当含税",
+      "density": "中高；4费用项+2选项",
+      "limitations": "原价格表内化为图表+条款；精确角色单价/税则保留外部清单，不擅自省略。",
+      "overflow": "先压缩冗余短语并保留限定条件；超出槽位实测容量则调整分组或分续页。拒绝缩小正文、遮盖、删证据。",
+      "author": "authors/commercial-options.json",
+      "preview": "previews/commercial-options.png",
+      "slots": "slots/commercial-options.json",
+      "guide": "docs/commercial-options.md",
+      "sources": [
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 6
+        },
+        {
+          "reference": "user-supplied structural reference",
+          "reference_group": 2,
+          "page": 12
+        }
+      ],
+      "author_sha256": "d8e5dd16ef7a67532249e61c16c2c41ae8b9c239043d32ed011856430c5ba843",
+      "status": "public-author-metadata-sanitized",
+      "preview_provenance": {
+        "source_author_sha256": "7137beb5e3f76d87b25a96a671c23a397e406c70c3e8c4a6c1ccbd7efcc23bbe",
+        "public_author_sha256": "d8e5dd16ef7a67532249e61c16c2c41ae8b9c239043d32ed011856430c5ba843",
+        "relationship": "same visible layout/content; private source metadata removed and new input hash recorded",
+        "not_a_public_input_build_receipt": true
+      }
+    }
+  ]
+}

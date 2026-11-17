@@ -1,0 +1,347 @@
+{
+  "schema_version": "0.1",
+  "project_id": "synthetic-computed-layout",
+  "revision": 1,
+  "brief": {
+    "audience": "Engineering example",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    }
+  },
+  "sources": [],
+  "facts": {
+    "evidence": {
+      "value": "Content is measured at its actual width. Replacing this fact with longer copy moves the following chart."
+    },
+    "a": {
+      "value": 12
+    },
+    "b": {
+      "value": 18
+    }
+  },
+  "pages": [
+    {
+      "id": "flow",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering example; no business conclusions.",
+      "layout": {
+        "id": "flow-content",
+        "type": "column",
+        "padding": [
+          48,
+          36,
+          48,
+          30
+        ],
+        "gap": 20,
+        "children": [
+          {
+            "id": "flow-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": "Computed document flow"
+            }
+          },
+          {
+            "id": "flow-copy",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "body",
+              "text": {
+                "ref": "evidence"
+              }
+            }
+          },
+          {
+            "id": "flow-chart",
+            "type": "leaf",
+            "height": 340,
+            "element": {
+              "type": "chart",
+              "chart_type": "column",
+              "categories": [
+                "A",
+                "B"
+              ],
+              "series": [
+                {
+                  "name": "Synthetic count",
+                  "values": [
+                    {
+                      "ref": "a"
+                    },
+                    {
+                      "ref": "b"
+                    }
+                  ]
+                }
+              ],
+              "text_roles": {
+                "axis": "dataCaption",
+                "legend": "dataCaption",
+                "data_label": "dataCaption"
+              }
+            }
+          },
+          {
+            "id": "flow-source",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": "Synthetic data, interface demonstration only."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "grid",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering example; no business conclusions.",
+      "layout": {
+        "id": "grid-content",
+        "type": "column",
+        "padding": [
+          48,
+          36,
+          48,
+          30
+        ],
+        "gap": 20,
+        "children": [
+          {
+            "id": "grid-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": "Two columns with measured rows"
+            }
+          },
+          {
+            "id": "grid-panels",
+            "type": "grid",
+            "columns": [
+              {
+                "fr": 1
+              },
+              {
+                "fr": 1
+              }
+            ],
+            "gap": 20,
+            "children": [
+              {
+                "id": "grid-card-1",
+                "type": "column",
+                "padding": 20,
+                "gap": 12,
+                "surface": {
+                  "fill": "#F1F5F9"
+                },
+                "children": [
+                  {
+                    "id": "grid-heading-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": "Panel 1"
+                    }
+                  },
+                  {
+                    "id": "grid-copy-1",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "body",
+                      "text": "Short evidence."
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "grid-card-2",
+                "type": "column",
+                "padding": 20,
+                "gap": 12,
+                "surface": {
+                  "fill": "#F1F5F9"
+                },
+                "children": [
+                  {
+                    "id": "grid-heading-2",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": "Panel 2"
+                    }
+                  },
+                  {
+                    "id": "grid-copy-2",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "body",
+                      "text": "This example uses a longer paragraph so that the shared row height follows the actual content. This example uses a longer paragraph so that the shared row height follows the actual content. This example uses a longer paragraph so that the shared row height follows the actual content. "
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "grid-card-3",
+                "type": "column",
+                "padding": 20,
+                "gap": 12,
+                "surface": {
+                  "fill": "#F1F5F9"
+                },
+                "children": [
+                  {
+                    "id": "grid-heading-3",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": "Panel 3"
+                    }
+                  },
+                  {
+                    "id": "grid-copy-3",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "body",
+                      "text": "The next row starts after the tallest cell in the first row."
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "grid-card-4",
+                "type": "column",
+                "padding": 20,
+                "gap": 12,
+                "surface": {
+                  "fill": "#F1F5F9"
+                },
+                "children": [
+                  {
+                    "id": "grid-heading-4",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "heading",
+                      "text": "Panel 4"
+                    }
+                  },
+                  {
+                    "id": "grid-copy-4",
+                    "type": "leaf",
+                    "element": {
+                      "type": "text",
+                      "role": "body",
+                      "text": "All text remains editable in PowerPoint."
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "grid-source",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": "Synthetic content, interface demonstration only."
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "topology",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "notes": "Synthetic engineering example; no business conclusions.",
+      "layout": {
+        "id": "topology-content",
+        "type": "column",
+        "padding": [
+          48,
+          36,
+          48,
+          30
+        ],
+        "gap": 20,
+        "children": [
+          {
+            "id": "topology-title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": "Parameters become native nodes and connectors"
+            }
+          },
+          {
+            "id": "tree",
+            "type": "leaf",
+            "height": 480,
+            "element": {
+              "type": "component",
+              "component": "topology",
+              "layout": "tree",
+              "nodes": [
+                {
+                  "id": "root",
+                  "label": "Current question"
+                },
+                {
+                  "id": "evidence",
+                  "label": "Evidence"
+                },
+                {
+                  "id": "limit",
+                  "label": "Limitations"
+                }
+              ],
+              "edges": [
+                {
+                  "id": "first",
+                  "from": "root",
+                  "to": "evidence"
+                },
+                {
+                  "id": "second",
+                  "from": "root",
+                  "to": "limit"
+                }
+              ]
+            }
+          },
+          {
+            "id": "topology-source",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": "Synthetic structure, interface demonstration only."
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

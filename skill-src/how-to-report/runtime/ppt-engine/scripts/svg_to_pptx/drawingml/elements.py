@@ -3271,13 +3271,14 @@ def convert_text(elem: ET.Element, ctx: ConvertContext) -> ShapeResult | None:
 
     is_placeholder_carrier = (
         (elem.get('data-pptx-carrier') or '').strip().lower() == 'true'
+        or bool(elem.get('data-htr-text-role'))
     )
     # Single-frame modes annotate conservative dy-stacked text with one base
     # line height. Semantic paragraphs become <a:p>; authored visual rows
     # either become <a:br/> (preserve) or join for wrapping (reflow).
     line_height_attr = (
         elem.get('data-paragraph-line-height')
-        if ctx.text_flow != TEXT_FLOW_SPLIT or is_placeholder_carrier
+        if ctx.text_flow != TEXT_FLOW_SPLIT or is_placeholder_carrier or elem.get('data-htr-text-role')
         else None
     )
     line_height_px = _f(line_height_attr) if line_height_attr is not None else None
@@ -3730,10 +3731,22 @@ def convert_text(elem: ET.Element, ctx: ConvertContext) -> ShapeResult | None:
         if exact_text_insets is None:
             raise ValueError('data-pptx-frame text insets were not resolved')
         left_inset, top_inset, right_inset = exact_text_insets
+        bottom_inset = 0.0
+        explicit_insets = elem.get('data-htr-text-insets')
+        if explicit_insets is not None:
+            try:
+                insets = [float(value) for value in explicit_insets.split()]
+            except ValueError as exc:
+                raise ValueError('data-htr-text-insets must contain four finite nonnegative numbers') from exc
+            if len(insets) != 4 or any(not math.isfinite(value) or value < 0 for value in insets):
+                raise ValueError('data-htr-text-insets must contain four finite nonnegative numbers')
+            left_inset, top_inset, right_inset, bottom_inset = insets
+            if left_inset + right_inset >= raw_frame_w or top_inset + bottom_inset >= raw_frame_h:
+                raise ValueError('data-htr-text-insets consume the declared text frame')
         vertical_anchor = elem.get('data-htr-vertical-anchor', 't')
         if vertical_anchor not in {'t', 'ctr', 'b'}:
             raise ValueError('data-htr-vertical-anchor must be t, ctr, or b')
-        if vertical_anchor != 't':
+        if vertical_anchor != 't' and explicit_insets is None:
             top_inset = 0
         exact_frame_wrap = (
             'none'
@@ -3744,7 +3757,7 @@ def convert_text(elem: ET.Element, ctx: ConvertContext) -> ShapeResult | None:
             f'<a:bodyPr wrap="{exact_frame_wrap}" '
             f'lIns="{px_to_emu(left_inset)}" '
             f'tIns="{px_to_emu(top_inset)}" '
-            f'rIns="{px_to_emu(right_inset)}" bIns="0" '
+            f'rIns="{px_to_emu(right_inset)}" bIns="{px_to_emu(bottom_inset)}" '
             f'anchor="{vertical_anchor}" anchorCtr="0">\n<a:noAutofit/>\n</a:bodyPr>'
         )
     # Preserve mode keeps authored <a:br/> boundaries and lets an ordinary

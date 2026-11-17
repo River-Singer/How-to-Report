@@ -1,0 +1,134 @@
+{
+  "template_id": "platform-architecture-rail",
+  "text_slots": [
+    {
+      "id": "platform-architecture-rail.slot-001",
+      "default": "业务平台分层与使能技术",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-002",
+      "default": "业务价值",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-003",
+      "default": "形成共同判断，支持资源配置与经营改进",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-004",
+      "default": "业务应用",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-005",
+      "default": "方案比较 · 项目协同 · 任务追踪",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-006",
+      "default": "数据基础",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-007",
+      "default": "业务规则",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-008",
+      "default": "组织责任",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-009",
+      "default": "基础数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-010",
+      "default": "分析应用",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-011",
+      "default": "业务判断",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-012",
+      "default": "可视分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-013",
+      "default": "突出重点差异",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-014",
+      "default": "认知分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-015",
+      "default": "解释影响因素",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-016",
+      "default": "智能助手",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-017",
+      "default": "辅助完成任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-018",
+      "default": "集成服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-019",
+      "default": "连接已有系统",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "platform-architecture-rail.slot-020",
+      "default": "合成内容 · 结构样例 10 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

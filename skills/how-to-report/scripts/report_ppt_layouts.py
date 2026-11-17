@@ -122,8 +122,10 @@ def kpi(c):
         c.rect([left, y, item_width, card_height])
         c.text(f"metrics.{index}.label", item.get("label", ""), [left + 20, y + 24, item_width - 40, 66], "heading", 0, 14)
         value = item.get("value")
-        display = "" if value is None else format(value, f",.{c.page['config']['decimals']}f")
-        c.text(f"metrics.{index}.value", display, [left + 20, y + 116, item_width - 40, 72], "metric", 0, 16, derived=f"metrics.{index}.value + config.decimals")
+        decimals = item.get("decimals", c.page["config"]["decimals"])
+        precision_source = f"metrics.{index}.decimals" if "decimals" in item else "config.decimals"
+        display = "" if value is None else format(value, f",.{decimals}f")
+        c.text(f"metrics.{index}.value", display, [left + 20, y + 116, item_width - 40, 72], "metric", 0, 16, derived=f"metrics.{index}.value + {precision_source}")
         c.text(f"metrics.{index}.unit", item.get("unit", ""), [left + 20, y + 198, item_width - 40, 34], "body", 0, 6)
         c.text(f"metrics.{index}.note", item.get("note", ""), [left + 20, y + 248, item_width - 40, card_height - 264], "caption", 0, 54)
     c.text("summary", c.page["content"].get("summary", ""), [x, y + card_height + 32, width, height - card_height - 32], "body", 0, 100)
@@ -176,6 +178,9 @@ def timeline(c):
 
 
 def process(c):
+    if c.variant["id"] == "cycle":
+        _radial(c, "steps", cycle=True)
+        return
     if c.variant["id"] != "cycle-4":
         _cards(c, c.variant["capacity"], c.variant["capacity"] if c.variant["id"] == "horizontal-5" else 1, field="steps")
         x, y, width, height = c.body
@@ -239,7 +244,129 @@ def _hub(c, count, field="nodes", cycle=False):
 
 
 def hub(c):
+    if c.variant["id"] == "radial":
+        _radial(c, "nodes")
+        return
     _hub(c, c.variant["capacity"])
+
+
+def _topology_node(c, field, item, frame, shape_id, title_role="heading"):
+    """Keep a real rectangle identity for editable connector endpoints."""
+    x, y, width, height = frame
+    shape = c.rect(frame, layer=None, identifier=f"node-{shape_id}")
+    shape.attrib.update({"data-pptx-object": "shape", "data-pptx-prst": "rect",
+                         "data-pptx-frame": " ".join(f"{value:g}" for value in frame),
+                         "data-pptx-shape-id": str(shape_id)})
+    c.dynamic.remove(shape)
+    c.fixed.append(shape)
+    padding = c.tokens["spacing"]["md"]
+    c.text(field + ".title", item.get("title", ""),
+           [x + padding + 28, y + padding, width - 2 * padding - 28, 42], title_role, 0, 12)
+    c.text(field + ".body", item.get("body", ""),
+           [x + padding, y + 64, width - 2 * padding, height - 64 - padding], "caption", 0, 36)
+    _icon(c, item.get("icon_key", ""), [x + padding, y + padding, 24, 24])
+
+
+def _topology_port(frame, other):
+    x, y, width, height = frame
+    dx, dy = other[0] - x - width / 2, other[1] - y - height / 2
+    if abs(dx) * height > abs(dy) * width:
+        return ((x + width, y + height / 2), 3) if dx > 0 else ((x, y + height / 2), 1)
+    return ((x + width / 2, y + height), 2) if dy > 0 else ((x + width / 2, y), 0)
+
+
+def _topology_edge(c, start, end, start_id, end_id, arrow=False):
+    end_center = (end[0] + end[2] / 2, end[1] + end[3] / 2)
+    start_center = (start[0] + start[2] / 2, start[1] + start[3] / 2)
+    (x1, y1), start_site = _topology_port(start, end_center)
+    (x2, y2), end_site = _topology_port(end, start_center)
+    edge = c.line(x1, y1, x2, y2, layer=None, identifier=f"edge-{start_id}-{end_id}", width_role="connector")
+    edge.attrib.update({"data-pptx-object": "connector", "data-pptx-prst": "line",
+                        "data-pptx-frame": f"{min(x1, x2):g} {min(y1, y2):g} {abs(x2-x1):g} {abs(y2-y1):g}",
+                        "data-pptx-start-shape-id": str(start_id), "data-pptx-start-site": str(start_site),
+                        "data-pptx-end-shape-id": str(end_id), "data-pptx-end-site": str(end_site)})
+    c.dynamic.remove(edge)
+    c.fixed.append(edge)
+    if arrow:
+        marker_id = "topology-arrow"
+        if c.root.find(f".//{{*}}marker[@id='{marker_id}']") is None:
+            namespace = c.root.tag.split("}")[0] + "}"
+            definitions = ET.SubElement(c.root, namespace + "defs")
+            marker = ET.SubElement(definitions, namespace + "marker", {
+                "id": marker_id, "markerWidth": "8", "markerHeight": "8", "refX": "7", "refY": "4",
+                "orient": "auto", "markerUnits": "strokeWidth"})
+            ET.SubElement(marker, namespace + "path",
+                          {"d": "M0 0 L8 4 L0 8 Z", "fill": c.color("primary")})
+        edge.set("marker-end", f"url(#{marker_id})")
+
+
+def _radial(c, field, cycle=False):
+    values = c.page["content"][field]
+    count = len(values)
+    center = c.page["content"].get("center", {})
+    show_center = not cycle or bool(center.get("title") or center.get("body"))
+    # Each count owns a distinct Layout and placeholder contract.
+    layout = c.variant["layout_key"] + f"-{count}"
+    if cycle:
+        layout += "-center" if show_center else "-plain"
+    c.root.set("data-pptx-layout", layout)
+    c.root.set("data-pptx-layout-name", layout)
+    x, y, width, height = c.body
+    node_width, node_height = width * .23, height * .24
+    cx, cy = x + width / 2, y + height / 2
+    radius_x, radius_y = (width - node_width) / 2, (height - node_height) / 2
+    frames = []
+    for index in range(count):
+        angle = -math.pi / 2 + index * 2 * math.pi / count
+        frames.append([cx + radius_x * math.cos(angle) - node_width / 2,
+                       cy + radius_y * math.sin(angle) - node_height / 2, node_width, node_height])
+    center_frame = [cx - node_width / 2, cy - node_height / 2, node_width, node_height]
+    for index, frame in enumerate(frames):
+        if cycle:
+            _topology_edge(c, frame, frames[(index + 1) % count], 101 + index, 101 + (index + 1) % count, arrow=True)
+        else:
+            _topology_edge(c, center_frame, frame, 100, 101 + index)
+    if show_center:
+        _topology_node(c, "center", center, center_frame, 100)
+    for index, (item, frame) in enumerate(zip(values, frames)):
+        _topology_node(c, f"{field}.{index}", item, frame, 101 + index)
+
+
+def hierarchy(c):
+    x, y, width, height = c.body
+    branches = c.page["content"]["branches"]
+    count = len(branches)
+    child_counts = [len(branch.get("children", [])) for branch in branches]
+    layout = c.variant["layout_key"] + "-" + "-".join(map(str, child_counts))
+    c.root.set("data-pptx-layout", layout)
+    c.root.set("data-pptx-layout-name", layout)
+    gap = c.tokens["spacing"]["lg"]
+    column_width = (width - gap * (count - 1)) / count
+    node_height = height * .24
+    node_width = min(width * .25, column_width)
+    root_frame = [x + (width - node_width) / 2, y, node_width, node_height]
+    branch_y = y + (height - node_height) / 2 if any(child_counts) else y + height - node_height
+    frames = []
+    leaves = []
+    for index, branch in enumerate(branches):
+        left = x + index * (column_width + gap)
+        frame = [left + (column_width - node_width) / 2, branch_y, node_width, node_height]
+        frames.append(frame)
+        _topology_edge(c, root_frame, frame, 100, 101 + index)
+        children = branch.get("children", [])
+        child_width = (column_width - gap * (len(children) - 1)) / max(len(children), 1)
+        for child_index, child in enumerate(children):
+            child_frame = [left + child_index * (child_width + gap), y + height - node_height,
+                           min(child_width, node_width), node_height]
+            child_frame[0] += (child_width - child_frame[2]) / 2
+            shape_id = 200 + index * 2 + child_index
+            _topology_edge(c, frame, child_frame, 101 + index, shape_id)
+            leaves.append((f"branches.{index}.children.{child_index}", child, child_frame, shape_id))
+    _topology_node(c, "root", c.page["content"]["root"], root_frame, 100)
+    for index, (branch, frame) in enumerate(zip(branches, frames)):
+        _topology_node(c, f"branches.{index}", branch, frame, 101 + index)
+    for field, child, frame, shape_id in leaves:
+        _topology_node(c, field, child, frame, shape_id, title_role="compactBody")
 
 
 def ending(c):
@@ -369,12 +496,20 @@ def gantt(c):
         c.text(f"tasks.{index}.progress", text, [plot_x + 4, top + 36, plot_width - 8, 24], "caption", 0, 8, derived=f"tasks.{index}.progress + config.show_progress")
 
 
+def _chart_readout_role(c, fallback="caption"):
+    return "dataCaption" if "dataCaption" in c.tokens["font"].get("textStyles", {}) else fallback
+
+
 def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_conclusions=True):
     from pptx_to_svg.normalized_chart_svg import _nice_scale
+    from presentation_typography import resolve_text_style
 
     x, y, width, height = c.body
     content = c.page["content"] if content is None else content
     config = c.page["config"] if config is None else config
+    if config["chart_type"] in {"pie", "doughnut"}:
+        _composition_chart(c, content, config, frame, field_prefix, include_conclusions)
+        return
     side = c.variant["id"] == "side"
     chart_width = width * .7 if side else width
     chart_height = height if side else height - 120
@@ -383,6 +518,12 @@ def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_
     frame = [x, y, chart_width, chart_height]
     compact = chart_height < 240
     axis_role = "diagramMicro" if compact else c.tokens["chart"]["axis_role"]
+    readout_role = _chart_readout_role(c)
+    svg_readout_role = _chart_readout_role(c, axis_role)
+    text_styles = {purpose: resolve_text_style(c.tokens, role) for purpose, role in
+                   (("base", "body"), ("axis", axis_role), ("legend", readout_role), ("data_label", readout_role))}
+    for style in text_styles.values():
+        style["color"] = c.color(style["color"])
     identifier = "chart-data" + ("-" + field_prefix.replace(".", "-") if field_prefix else "")
 
     def text(field, *arguments, **keywords):
@@ -392,7 +533,7 @@ def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_
     scale_values = values if any(values) else [0.0, 1.0]
     if compact and config["show_data_labels"]:
         plot_height = chart_height - (42 if config["show_legend"] else 24) - 24
-        label_clearance = c.tokens["font"]["sizes"][axis_role] * 1.8
+        label_clearance = text_styles["axis"]["font_size"] * 1.8
         span = max(scale_values) - min(scale_values) or 1
         padding = span * label_clearance / max(plot_height - 2 * label_clearance, plot_height * .2)
         scale_values = [min(0, min(scale_values)) - padding, max(0, max(scale_values)) + padding]
@@ -410,12 +551,13 @@ def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_
         "categories": categories,
         "series": series,
         "show_legend": config["show_legend"],
+        "text_styles": text_styles,
         "axes": {"value": {"minimum": minimum, "maximum": maximum, "major_unit": major_unit}},
         "style": {
             "colors": [c.color(role) for role in c.tokens["chart"]["series_roles"]],
-            "font_family": c.tokens["font"]["families"]["body"],
-            "axis_font_size": c.tokens["font"]["sizes"][axis_role],
-            "legend_font_size": c.tokens["font"]["sizes"]["caption"],
+            "font_family": text_styles["axis"]["font_family"],
+            "axis_font_size": text_styles["axis"]["font_size"],
+            "legend_font_size": text_styles["legend"]["font_size"],
             "text_color": c.color("text"),
             "axis_color": c.color("border"),
             "grid_color": c.color(c.tokens["chart"]["grid_role"]),
@@ -427,13 +569,13 @@ def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_
         native["data_labels"] = {
             "show_value": True,
             "number_format": "General",
-            "font_size": c.tokens["font"]["sizes"]["caption"],
-            "font_family": c.tokens["font"]["families"]["body"],
-            "color": c.color("text"),
+            "font_size": text_styles["data_label"]["font_size"],
+            "font_family": text_styles["data_label"]["font_family"],
+            "color": text_styles["data_label"]["color"] if readout_role == "dataCaption" else c.color("text"),
         }
     dynamic_start, slot_start = len(c.dynamic), len(c.slots)
     if compact and content.get("title"):
-        native["title"] = {"text": content["title"], "font_size": c.tokens["font"]["sizes"][axis_role]}
+        native["title"] = {"text": content["title"], "font_size": text_styles["axis"]["font_size"], "font_family": text_styles["axis"]["font_family"]}
         text("title", content["title"], [x, y, chart_width * .55, 20], axis_role, 1, 24, True)
     axis_caption = content.get("axis_title", "")
     if content.get("unit"):
@@ -477,14 +619,14 @@ def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_
                 if compact:
                     label_top = py - 20 if value >= 0 or config["chart_type"] == "line" else py + 4
                     label_top = min(max(y + 20, label_top), y + chart_height - 20)
-                text(f"value_labels.{series_index}.{index}", str(value), [px - label_width / 2, label_top, label_width, 20 if compact else 24], axis_role, 1, 24,
+                text(f"value_labels.{series_index}.{index}", str(value), [px - label_width / 2, label_top, label_width, 20 if compact else 24], svg_readout_role, 1, 24,
                        derived=f"series.{series_index}.values.{index} + config.show_data_labels")
         if points:
             segments.append(points)
         for segment in segments:
             c.element("polyline", {"points": " ".join(segment), "fill": "none", "stroke": c.color(c.tokens["chart"]["series_roles"][series_index]), "stroke-width": c.tokens["line"]["connector"]})
         label = item["name"] if config["show_legend"] else ""
-        text(f"series.{series_index}.name", label, [left + series_index * (plot_width - 180) / 2, y + (20 if compact else 8), (plot_width - 180) / 2, 20 if compact else 32], axis_role, 0, 16)
+        text(f"series.{series_index}.name", label, [left + series_index * (plot_width - 180) / 2, y + (20 if compact else 8), (plot_width - 180) / 2, 20 if compact else 32], svg_readout_role, 0, 16)
     group = ET.Element("{http://www.w3.org/2000/svg}g", {"id": identifier, "data-pptx-replace-with": "chart", "data-pptx-native-authority": "json", "data-pptx-bounds": " ".join(str(value) for value in frame)})
     ET.SubElement(group, "{http://www.w3.org/2000/svg}metadata", {"type": "application/json"}).text = json.dumps(native, ensure_ascii=False)
     for slot in c.slots[slot_start:]:
@@ -499,6 +641,63 @@ def chart(c, *, frame=None, content=None, config=None, field_prefix="", include_
     text_frame = [x + chart_width + 28, y + 24, width - chart_width - 28, height - 24] if side else [x, y + chart_height + 24, width, 96]
     if include_conclusions:
         text("conclusions", content["conclusions"], text_frame, "body", 1, 100, True)
+
+
+def _composition_chart(c, content, config, frame, field_prefix, include_conclusions):
+    """Adapt template slots to the scene/native chart's shared proportion renderer."""
+    from types import SimpleNamespace
+    import sys
+    from report_ppt import SKILL_ROOT
+    from presentation_svg import chart_fragment, runtime_helpers
+
+    shared = SKILL_ROOT.parent / "shared" / "scripts"
+    if shared.is_dir() and str(shared) not in sys.path:
+        sys.path.insert(0, str(shared))
+
+    x, y, width, height = frame or c.body
+    layout = c.variant["layout_key"] + f"-{config['chart_type']}-{len(content['categories'])}-{int(config['show_legend'])}-{int(config['show_data_labels'])}"
+    c.root.set("data-pptx-layout", layout)
+    c.root.set("data-pptx-layout-name", layout)
+    chart_height = height - (120 if include_conclusions else 0)
+    chart_width = width * .56 if config["show_legend"] else width
+    identifier = "chart-data" + ("-" + field_prefix.replace(".", "-") if field_prefix else "")
+
+    def color(value):
+        if value in c.tokens["color"]["roles"]:
+            return c.color(value)
+        return c.tokens["theme"]["slots"].get(value, value)
+
+    renderer = SimpleNamespace(canvas=(c.tokens["canvas"]["width"], c.tokens["canvas"]["height"]),
+                               tokens=c.tokens, helpers=runtime_helpers(), color=color)
+    colors = [c.tokens["theme"]["slots"][f"accent{index}"] for index in range(1, 7)]
+    item = {"id": identifier, "type": "chart", "frame": [x, y, chart_width, chart_height],
+            "chart_type": config["chart_type"], "categories": content["categories"], "series": content["series"],
+            "show_legend": False, "data_labels": False,
+            "style": {"colors": colors, "font_family": c.tokens["font"]["families"]["body"],
+                      "text_color": c.color("text"), "chart_area_fill": c.color("surface"),
+                      "plot_area_fill": c.color("surface")}}
+    c.dynamic.append(chart_fragment(renderer, item))
+    if config["show_legend"]:
+        readout_role = _chart_readout_role(c)
+        total = sum(content["series"][0]["values"])
+        row_height = chart_height / len(content["categories"])
+        label_x = x + chart_width + c.tokens["spacing"]["xl"]
+        label_width = width - chart_width - c.tokens["spacing"]["xl"]
+        for index, category in enumerate(content["categories"]):
+            top = y + index * row_height
+            swatch = c.rect([label_x, top + 4, 12, 12], layer="layout")
+            swatch.set("fill", colors[index])
+            c.text(f"{field_prefix}categories.{index}", category,
+                   [label_x + 24, top, label_width - 24, min(row_height - 4, 52)], readout_role, 1, 24, True)
+            if config["show_data_labels"]:
+                value = content["series"][0]["values"][index]
+                display = f"{value:g}{content.get('unit', '')} · {100 * value / total:.1f}%"
+                c.text(f"{field_prefix}value_labels.0.{index}", display,
+                       [label_x + 24, top + 28, label_width - 24, row_height - 32], readout_role, 1, 64,
+                       derived=f"{field_prefix}series.0.values.{index} + unit + share of series total")
+    if include_conclusions:
+        c.text(field_prefix + "conclusions", content["conclusions"],
+               [x, y + chart_height + 24, width, 96], "body", 1, 100, True)
 
 
 def place_local_image(c, item, frame):
@@ -562,6 +761,7 @@ RENDERERS = {
     "architecture": architecture,
     "matrix": matrix,
     "hub": hub,
+    "hierarchy": hierarchy,
 }
 
 

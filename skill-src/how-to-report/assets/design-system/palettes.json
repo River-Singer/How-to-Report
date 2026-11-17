@@ -1,0 +1,259 @@
+{
+  "version": "0.1",
+  "default": "report-default",
+  "policy": {
+    "solid_fills": true,
+    "body_black": 0.8,
+    "annotation_black_range": [
+      0.3,
+      0.4
+    ],
+    "gradient_preference": "lowest",
+    "text_overrides": "explicit local fixed colours are preserved; new content uses semantic roles"
+  },
+  "palettes": [
+    {
+      "id": "report-default",
+      "label": "报告蓝 · 当前默认",
+      "purpose": "全局语义配色，适用于计算生成的图表、文字与形状。",
+      "roles": {
+        "primary": "#153653",
+        "secondary": "#0756B8",
+        "tertiary": "#087F8C",
+        "accent": "#BC681A",
+        "body": "#333333",
+        "text": "#333333",
+        "muted": "#A6A6A6",
+        "textMuted": "#A6A6A6",
+        "surface": "#FFFFFF",
+        "surfaceMuted": "#EEF4FA",
+        "border": "#CBD8E5",
+        "accentSurface": "#FCF3E8",
+        "success": "#198038",
+        "warning": "#B28600",
+        "danger": "#C21E2B",
+        "positive": "#087F8C",
+        "negative": "#BC681A",
+        "neutral": "#D9D9D9"
+      },
+      "categorical": [
+        "#153653",
+        "#0756B8",
+        "#087F8C",
+        "#CBD8E5",
+        "#BC681A",
+        "#FCF3E8"
+      ],
+      "sequential": [
+        "#E1EBF5",
+        "#0756B8"
+      ],
+      "diverging": [
+        "#BC681A",
+        "#F0F0F0",
+        "#087F8C"
+      ],
+      "provenance": {
+        "sources": [],
+        "relationship": "existing report-14pt profile",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "id": "ant-business",
+      "label": "商务蓝青",
+      "purpose": "全局语义配色，适用于计算生成的图表、文字与形状。",
+      "roles": {
+        "primary": "#0050B3",
+        "secondary": "#08979C",
+        "tertiary": "#13A8A8",
+        "accent": "#D48806",
+        "body": "#333333",
+        "text": "#333333",
+        "muted": "#A6A6A6",
+        "textMuted": "#A6A6A6",
+        "surface": "#FFFFFF",
+        "surfaceMuted": "#F0F4FA",
+        "border": "#C2D5ED",
+        "accentSurface": "#FCF8F0",
+        "success": "#198038",
+        "warning": "#B28600",
+        "danger": "#C21E2B",
+        "positive": "#13A8A8",
+        "negative": "#D48806",
+        "neutral": "#D9D9D9"
+      },
+      "categorical": [
+        "#0050B3",
+        "#08979C",
+        "#722ED1",
+        "#D48806",
+        "#C41D7F",
+        "#389E0D"
+      ],
+      "sequential": [
+        "#EBF1F9",
+        "#0050B3"
+      ],
+      "diverging": [
+        "#D48806",
+        "#F0F0F0",
+        "#13A8A8"
+      ],
+      "provenance": {
+        "sources": [
+          "https://4x.ant.design/docs/spec/colors"
+        ],
+        "relationship": "project-derived semantic assignment; selected source hex swatches, generated light tints; not an official PPT theme",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "id": "carbon-teal",
+      "label": "青绿琥珀",
+      "purpose": "全局语义配色，适用于计算生成的图表、文字与形状。",
+      "roles": {
+        "primary": "#005D5D",
+        "secondary": "#1192E8",
+        "tertiary": "#009D9A",
+        "accent": "#B28600",
+        "body": "#333333",
+        "text": "#333333",
+        "muted": "#A6A6A6",
+        "textMuted": "#A6A6A6",
+        "surface": "#FFFFFF",
+        "surfaceMuted": "#F0F5F5",
+        "border": "#C2D8D8",
+        "accentSurface": "#FAF8F0",
+        "success": "#198038",
+        "warning": "#B28600",
+        "danger": "#C21E2B",
+        "positive": "#009D9A",
+        "negative": "#B28600",
+        "neutral": "#D9D9D9"
+      },
+      "categorical": [
+        "#005D5D",
+        "#1192E8",
+        "#B28600",
+        "#6929C4",
+        "#9F1853",
+        "#198038"
+      ],
+      "sequential": [
+        "#EBF2F2",
+        "#005D5D"
+      ],
+      "diverging": [
+        "#B28600",
+        "#F0F0F0",
+        "#009D9A"
+      ],
+      "provenance": {
+        "sources": [
+          "https://www.carbondesignsystem.com/building-blocks/data-visualization/color-palettes"
+        ],
+        "relationship": "project-derived semantic assignment; selected source hex swatches, generated light tints; not an official PPT theme",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "id": "carbon-indigo",
+      "label": "靛紫科技",
+      "purpose": "全局语义配色，适用于计算生成的图表、文字与形状。",
+      "roles": {
+        "primary": "#6929C4",
+        "secondary": "#002D9C",
+        "tertiary": "#009D9A",
+        "accent": "#B28600",
+        "body": "#333333",
+        "text": "#333333",
+        "muted": "#A6A6A6",
+        "textMuted": "#A6A6A6",
+        "surface": "#FFFFFF",
+        "surfaceMuted": "#F6F2FB",
+        "border": "#DBCCF1",
+        "accentSurface": "#FAF8F0",
+        "success": "#198038",
+        "warning": "#B28600",
+        "danger": "#C21E2B",
+        "positive": "#009D9A",
+        "negative": "#B28600",
+        "neutral": "#D9D9D9"
+      },
+      "categorical": [
+        "#6929C4",
+        "#002D9C",
+        "#009D9A",
+        "#9F1853",
+        "#1192E8",
+        "#B28600"
+      ],
+      "sequential": [
+        "#F3EEFA",
+        "#6929C4"
+      ],
+      "diverging": [
+        "#B28600",
+        "#F0F0F0",
+        "#009D9A"
+      ],
+      "provenance": {
+        "sources": [
+          "https://www.carbondesignsystem.com/building-blocks/data-visualization/color-palettes"
+        ],
+        "relationship": "project-derived semantic assignment; selected source hex swatches, generated light tints; not an official PPT theme",
+        "checked_on": "2026-11-16"
+      }
+    },
+    {
+      "id": "nord-report",
+      "label": "北欧蓝金",
+      "purpose": "全局语义配色，适用于计算生成的图表、文字与形状。",
+      "roles": {
+        "primary": "#2E3440",
+        "secondary": "#5E81AC",
+        "tertiary": "#81A1C1",
+        "accent": "#EBCB8B",
+        "body": "#333333",
+        "text": "#333333",
+        "muted": "#A6A6A6",
+        "textMuted": "#A6A6A6",
+        "surface": "#FFFFFF",
+        "surfaceMuted": "#F2F3F4",
+        "border": "#CDCED1",
+        "accentSurface": "#FEFCF8",
+        "success": "#198038",
+        "warning": "#B28600",
+        "danger": "#C21E2B",
+        "positive": "#81A1C1",
+        "negative": "#EBCB8B",
+        "neutral": "#D9D9D9"
+      },
+      "categorical": [
+        "#2E3440",
+        "#5E81AC",
+        "#88C0D0",
+        "#A3BE8C",
+        "#B48EAD",
+        "#D08770"
+      ],
+      "sequential": [
+        "#EEEFF0",
+        "#2E3440"
+      ],
+      "diverging": [
+        "#EBCB8B",
+        "#F0F0F0",
+        "#81A1C1"
+      ],
+      "provenance": {
+        "sources": [
+          "https://www.nordtheme.com/docs/colors-and-palettes/"
+        ],
+        "relationship": "project-derived semantic assignment; selected source hex swatches, generated light tints; not an official PPT theme",
+        "checked_on": "2026-11-16"
+      }
+    }
+  ]
+}

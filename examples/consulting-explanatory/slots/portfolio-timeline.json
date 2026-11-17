@@ -1,0 +1,170 @@
+{
+  "template_id": "portfolio-timeline",
+  "text_slots": [
+    {
+      "id": "portfolio-timeline.slot-001",
+      "default": "项目历程与阶段组合",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-002",
+      "default": "准备期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-003",
+      "default": "扩展期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-004",
+      "default": "深化期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-005",
+      "default": "准备期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-006",
+      "default": "业务诊断",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-007",
+      "default": "指标口径",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-008",
+      "default": "基础清单",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-009",
+      "default": "试点选择",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-010",
+      "default": "责任分工",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-011",
+      "default": "数据验证",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-012",
+      "default": "扩展期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-013",
+      "default": "流程推广",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-014",
+      "default": "系统集成",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-015",
+      "default": "知识共享",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-016",
+      "default": "培训辅导",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-017",
+      "default": "应用上线",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-018",
+      "default": "运营支持",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-019",
+      "default": "深化期",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-020",
+      "default": "情景模拟",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-021",
+      "default": "预测分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-022",
+      "default": "跨域协同",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-023",
+      "default": "质量审查",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-024",
+      "default": "绩效复盘",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-025",
+      "default": "持续迭代",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "portfolio-timeline.slot-026",
+      "default": "合成内容 · 结构样例 07 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

@@ -1,0 +1,495 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-portfolio-timeline",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "portfolio-timeline.slot-001": {
+      "value": "项目历程与阶段组合"
+    },
+    "portfolio-timeline.slot-002": {
+      "value": "准备期"
+    },
+    "portfolio-timeline.slot-003": {
+      "value": "扩展期"
+    },
+    "portfolio-timeline.slot-004": {
+      "value": "深化期"
+    },
+    "portfolio-timeline.slot-005": {
+      "value": "准备期"
+    },
+    "portfolio-timeline.slot-006": {
+      "value": "业务诊断"
+    },
+    "portfolio-timeline.slot-007": {
+      "value": "指标口径"
+    },
+    "portfolio-timeline.slot-008": {
+      "value": "基础清单"
+    },
+    "portfolio-timeline.slot-009": {
+      "value": "试点选择"
+    },
+    "portfolio-timeline.slot-010": {
+      "value": "责任分工"
+    },
+    "portfolio-timeline.slot-011": {
+      "value": "数据验证"
+    },
+    "portfolio-timeline.slot-012": {
+      "value": "扩展期"
+    },
+    "portfolio-timeline.slot-013": {
+      "value": "流程推广"
+    },
+    "portfolio-timeline.slot-014": {
+      "value": "系统集成"
+    },
+    "portfolio-timeline.slot-015": {
+      "value": "知识共享"
+    },
+    "portfolio-timeline.slot-016": {
+      "value": "培训辅导"
+    },
+    "portfolio-timeline.slot-017": {
+      "value": "应用上线"
+    },
+    "portfolio-timeline.slot-018": {
+      "value": "运营支持"
+    },
+    "portfolio-timeline.slot-019": {
+      "value": "深化期"
+    },
+    "portfolio-timeline.slot-020": {
+      "value": "情景模拟"
+    },
+    "portfolio-timeline.slot-021": {
+      "value": "预测分析"
+    },
+    "portfolio-timeline.slot-022": {
+      "value": "跨域协同"
+    },
+    "portfolio-timeline.slot-023": {
+      "value": "质量审查"
+    },
+    "portfolio-timeline.slot-024": {
+      "value": "绩效复盘"
+    },
+    "portfolio-timeline.slot-025": {
+      "value": "持续迭代"
+    },
+    "portfolio-timeline.slot-026": {
+      "value": "合成内容 · 结构样例 07 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "portfolio-timeline",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "时间先后+阶段内分类",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "portfolio-timeline-body"
+      },
+      "layout": {
+        "id": "col-627",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-624",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "portfolio-timeline.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-625",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "portfolio-timeline-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "topology-180",
+                "type": "leaf",
+                "height": 90,
+                "element": {
+                  "type": "component",
+                  "component": "topology",
+                  "layout": "layered",
+                  "nodes": [
+                    {
+                      "id": "v0",
+                      "label": {
+                        "ref": "portfolio-timeline.slot-002"
+                      }
+                    },
+                    {
+                      "id": "v1",
+                      "label": {
+                        "ref": "portfolio-timeline.slot-003"
+                      }
+                    },
+                    {
+                      "id": "v2",
+                      "label": {
+                        "ref": "portfolio-timeline.slot-004"
+                      }
+                    }
+                  ],
+                  "role": "body",
+                  "arrow": true,
+                  "padding": 14,
+                  "layer_gap": 20,
+                  "node_gap": 16,
+                  "direction": "right",
+                  "node_width": 150,
+                  "edges": [
+                    {
+                      "id": "e0",
+                      "from": "v0",
+                      "to": "v1"
+                    },
+                    {
+                      "id": "e1",
+                      "from": "v1",
+                      "to": "v2"
+                    }
+                  ]
+                }
+              },
+              {
+                "id": "grid-205",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-188",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-181",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-005"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-182",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-006"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-183",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-007"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-184",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-008"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-185",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-009"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-186",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-010"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-187",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-011"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-196",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-189",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-012"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-190",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-013"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-191",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-014"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-192",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-015"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-193",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-016"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-194",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-017"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-195",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-018"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "col-204",
+                    "type": "column",
+                    "gap": 10,
+                    "padding": 16,
+                    "children": [
+                      {
+                        "id": "text-197",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-019"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-198",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-020"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-199",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-021"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-200",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-022"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-201",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-023"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-202",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-024"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-203",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "portfolio-timeline.slot-025"
+                          }
+                        }
+                      }
+                    ],
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-626",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "portfolio-timeline.slot-026"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

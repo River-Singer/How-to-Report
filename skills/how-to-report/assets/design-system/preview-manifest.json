@@ -1,0 +1,73 @@
+{
+  "preview_contract": "0.1",
+  "example_ref": "assets/design-system/examples/three-recipes.json",
+  "profile_identity": {
+    "id": "report-14pt",
+    "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+    "hash_method": "sha256-file-bytes"
+  },
+  "tokens_canonical_sha256": "3b5408399783aca892fbc50ac0f80266b439e782f8913ac22bc3436ddfb1adc6",
+  "compiler_files": {
+    "presentation_compiler.py": "f271a51bc4446a2f570dd7c4fad09fd4efcd7c11e13882d675100cadfb1998f9",
+    "presentation_composition.py": "9ef45d3c8a8f27a30096a4497520676af46db2da020f80312cc7acbbc5a6fbe1",
+    "presentation_svg.py": "67f9a9bc80b5773d90e3806b7455b319b3cb829f3e485a3bf025cfd4d381246c",
+    "presentation_document.py": "2546af9407ffce157e572006b0e05d891e825446bdbb96384ae6482b6785c70d",
+    "presentation_typography.py": "23cd46600fb51e00ae6aac5d0ec16d4c8eb1bc121b07b05287b283ac9cba7040",
+    "report_ppt.py": "10c8684cedebdd7e6a793bab06101397a196d062d5e746ee0f1ec672d563152b",
+    "report_ppt_layouts.py": "510fcd7f042f3e15d837061dbceba48ed298ece8a3f03024ef326fc85bf5c5e6",
+    "report_ppt_source.py": "f4857fc29cfed5b9f12a713afdf9db17e1d577bc33071799b10d5f000ff4f545",
+    "presentation_library.py": "5e88bbdf6ee91d739800f8172490649d5864bfd704e49b412abcf7625118d37a",
+    "presentation_recipes.py": "9121d87a7a7c095f4910b1822c2a20ebdd36330871bfe52e64ea465257cfe777"
+  },
+  "previews": [
+    {
+      "recipe_id": "recipe.kpi-chart-explanation",
+      "ref": "assets/design-system/previews/kpi-chart-explanation.svg",
+      "sha256": "266af4980e7a52bbdb954efdedbf10b6492b83dceaff5630bd5f42c1d9c2bf87",
+      "render_source": "normal compiler SVG",
+      "viewed": false,
+      "scope": "synthetic engineering example, native/visual acceptance separately recorded"
+    },
+    {
+      "recipe_id": "recipe.paired-charts-conclusion",
+      "ref": "assets/design-system/previews/paired-charts-conclusion.svg",
+      "sha256": "99ff1b9b1a4b6d6435f891fff513927960cec24430278adfc5c1d41d90f55c03",
+      "render_source": "normal compiler SVG",
+      "viewed": false,
+      "scope": "synthetic engineering example, native/visual acceptance separately recorded"
+    },
+    {
+      "recipe_id": "recipe.evidence-action",
+      "ref": "assets/design-system/previews/evidence-action.svg",
+      "sha256": "d872e054793dc33ad98642bf614e6f66013c90c7c1545d50bcf7ca0c5700fd5c",
+      "render_source": "normal compiler SVG",
+      "viewed": false,
+      "scope": "synthetic engineering example, native/visual acceptance separately recorded"
+    }
+  ],
+  "native_probe": {
+    "pptx_sha256": "a15cc5b26856d6469ac94ef496ca5353fbd0d5537ddd7091feec2e2fec4a05f8",
+    "slides": 3,
+    "charts": 3,
+    "shapes": 39,
+    "text_runs": 30,
+    "groups": 8,
+    "checks": "normal check/export/inspect passed",
+    "PowerPoint_visual_review": "v4 reviewed; current v6 SVG matches all v4 display inputs; no direct v6 Office claim"
+  },
+  "previous_probe_equivalence": {
+    "svg_bytes_unchanged": [
+      true,
+      true,
+      true
+    ],
+    "native_slides_charts_theme_layouts_master_xml_unchanged": false,
+    "scope": "v3 visual review may be linked with this exact display/object equivalence; raw package identities remain separate"
+  },
+  "current_svg_equals_reviewed_v4_svg": [
+    true,
+    true,
+    true
+  ],
+  "target_review_ref": "assets/design-system/previews/powerpoint-review.json"
+}

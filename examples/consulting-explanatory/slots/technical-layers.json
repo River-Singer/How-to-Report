@@ -1,0 +1,224 @@
+{
+  "template_id": "technical-layers",
+  "text_slots": [
+    {
+      "id": "technical-layers.slot-001",
+      "default": "技术层次与跨层控制",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-002",
+      "default": "源系统",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-003",
+      "default": "业务对象",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-004",
+      "default": "价格成本",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-005",
+      "default": "财务记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-006",
+      "default": "文档材料",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-007",
+      "default": "历史数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-008",
+      "default": "展示层",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-009",
+      "default": "网页工作区",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-010",
+      "default": "管理看板",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-011",
+      "default": "移动入口",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-012",
+      "default": "接入层",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-013",
+      "default": "统一身份",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-014",
+      "default": "接口网关",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-015",
+      "default": "权限会话",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-016",
+      "default": "业务服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-017",
+      "default": "对象服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-018",
+      "default": "规则计算",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-019",
+      "default": "任务流程",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-020",
+      "default": "数据处理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-021",
+      "default": "业务数据库",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-022",
+      "default": "版本存储",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-023",
+      "default": "分析数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-024",
+      "default": "集成层",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-025",
+      "default": "连接器",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-026",
+      "default": "调度任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-027",
+      "default": "校验对账",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-028",
+      "default": "跨层控制",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-029",
+      "default": "身份权限",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-030",
+      "default": "安全审计",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-031",
+      "default": "运行监控",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-032",
+      "default": "数据治理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-033",
+      "default": "配置管理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-034",
+      "default": "备份恢复",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "technical-layers.slot-035",
+      "default": "合成内容 · 结构样例 15 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

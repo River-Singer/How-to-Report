@@ -1,0 +1,30 @@
+"use strict";
+const assert = require("node:assert/strict");
+const {applyPalette} = require("../skill-src/how-to-report/assets/storybook/storybook-requests.js");
+const author = {brief:{audience:"领导"},pages:[{id:"p",layout:{type:"grid"}}]};
+const pristine = JSON.stringify(author);
+for (const mode of ["author", "recipe"]) {
+  const selected = applyPalette(author, mode, "ant-business");
+  assert.equal(selected.brief.palette_id, "ant-business");
+  assert.deepEqual(selected.pages, author.pages);
+  assert.deepEqual(applyPalette(selected, mode, "", null, true), author);
+  assert.deepEqual(applyPalette(author, mode, ""), author);
+}
+assert.equal(JSON.stringify(author), pristine);
+const chart = {asset:"chart.column",data:{categories:["A"],series:[{name:"N",values:[10]}]}};
+const themedChart = applyPalette(chart,"chart","carbon-teal");
+assert.equal(themedChart.palette_id,"carbon-teal");
+assert.deepEqual(themedChart.data,chart.data);
+assert.ok(!Object.hasOwn(themedChart,"brief"));
+assert.deepEqual(applyPalette(themedChart,"chart","",null,true),chart);
+assert.deepEqual(applyPalette(themedChart,"chart",""),themedChart);
+const native = {asset_ids:["native:source:p0001:page"],columns:2,texts:{}};
+assert.deepEqual(applyPalette(native,"native","ant-business"),native);
+const nativeBefore=JSON.stringify(native);
+applyPalette(native,"native","carbon-teal");
+assert.equal(JSON.stringify(native),nativeBefore);
+const original = {...author,brief:{...author.brief,palette_id:"nord-blue-gold"}};
+const changed = applyPalette(original,"author","ant-business","nord-blue-gold");
+assert.deepEqual(applyPalette(changed,"author","","nord-blue-gold",true),original);
+assert.deepEqual(applyPalette(original,"author",""),original);
+console.log("Storybook request palette routing, default restoration and native preservation passed");

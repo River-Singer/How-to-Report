@@ -1,66 +1,66 @@
-<ns0:svg xmlns:ns0="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="chart-wide" data-pptx-layout-name="chart-wide">
-  <ns0:rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
-  <ns0:line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
-  <ns0:line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
-  <ns0:g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
-    <ns0:text id="text-title" data-pptx-carrier="true" x="48" y="55.68" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="36" font-weight="700" fill="#003591">
-      <ns0:tspan x="48" y="55.68">{{页面标题}}</ns0:tspan>
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
-    <ns0:text id="text-section_name" data-pptx-carrier="true" x="48" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="698.08" />
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
-    <ns0:text id="text-source" data-pptx-carrier="true" x="379.52000000000004" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="379.52000000000004" y="698.08" />
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
-    <ns0:text id="text-page_number" data-pptx-carrier="true" x="1137.28" y="698.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="1137.28" y="698.08">1</ns0:tspan>
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="slot-text-conclusions" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="48 552 1184 96">
-    <ns0:text id="text-conclusions" data-pptx-carrier="true" x="48" y="573.12" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="24" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="573.12">{{数据结论}}</ns0:tspan>
-    </ns0:text>
-  </ns0:g>
-  <ns0:g id="chart-data" data-pptx-replace-with="chart" data-pptx-native-authority="json" data-pptx-bounds="48 120 1184 408">
-    <ns0:metadata type="application/json">{"name": "chart-data", "type": "column", "x": 48, "y": 120, "width": 1184, "height": 408, "categories": ["{{类别}}"], "series": [{"name": "{{数列}}", "values": [0]}], "show_legend": true, "axes": {"value": {"minimum": 0.0, "maximum": 1.0, "major_unit": 0.2}}, "style": {"colors": ["#003591", "#5385C5"], "font_family": "Microsoft YaHei", "axis_font_size": 16, "legend_font_size": 16, "text_color": "#383535", "axis_color": "#BBCDE5", "grid_color": "#BBCDE5", "chart_area_fill": "#FFFFFF", "plot_area_fill": "#FFFFFF"}}</ns0:metadata>
-    <ns0:text id="text-axis_caption" x="1052" y="142.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="1052" y="142.08" />
-    </ns0:text>
-    <ns0:text id="text-chart_ticks-0" x="48" y="466.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="466.08">0</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-chart_ticks-1" x="48" y="412.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="412.08">0.2</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-chart_ticks-2" x="48" y="358.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="358.08">0.4</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-chart_ticks-3" x="48" y="304.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="304.08">0.6</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-chart_ticks-4" x="48" y="250.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="250.08">0.8</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-chart_ticks-5" x="48" y="196.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="48" y="196.08">1</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-categories-0" x="132.0" y="492.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="132.0" y="492.08">{{类别}}</ns0:tspan>
-    </ns0:text>
-    <ns0:text id="text-series-0-name" x="128.0" y="142.08" font-family="Arial, Microsoft YaHei, Microsoft YaHei" font-size="16" font-weight="400" fill="#383535">
-      <ns0:tspan x="128.0" y="142.08">{{数列}}</ns0:tspan>
-    </ns0:text>
-    <ns0:line x1="128" y1="462.0" x2="1200" y2="462.0" stroke="#BBCDE5" stroke-width="1.67" id="data-0" />
-    <ns0:line x1="128" y1="408.0" x2="1200" y2="408.0" stroke="#BBCDE5" stroke-width="1.67" id="data-1" />
-    <ns0:line x1="128" y1="354.0" x2="1200" y2="354.0" stroke="#BBCDE5" stroke-width="1.67" id="data-2" />
-    <ns0:line x1="128" y1="300.0" x2="1200" y2="300.0" stroke="#BBCDE5" stroke-width="1.67" id="data-3" />
-    <ns0:line x1="128" y1="246.0" x2="1200" y2="246.0" stroke="#BBCDE5" stroke-width="1.67" id="data-4" />
-    <ns0:line x1="128" y1="192.0" x2="1200" y2="192.0" stroke="#BBCDE5" stroke-width="1.67" id="data-5" />
-  </ns0:g>
-</ns0:svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="chart-wide" data-pptx-layout-name="chart-wide">
+  <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <text id="text-title" data-pptx-carrier="true" data-pptx-frame="48 24 1184 48" x="48" y="58.666666666666664" font-family="Microsoft YaHei" font-size="36" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="title" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:36,&quot;weight&quot;:700,&quot;line_height&quot;:1.1,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="39.6" xml:space="preserve">
+      <tspan x="48" y="58.666666666666664">{{页面标题}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <text id="text-section_name" data-pptx-carrier="true" data-pptx-frame="48 684 307.84 24" x="48" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <text id="text-source" data-pptx-carrier="true" data-pptx-frame="379.52 684 734.08 24" x="379.52000000000004" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="379.52000000000004" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <text id="text-page_number" data-pptx-carrier="true" data-pptx-frame="1137.28 684 94.72 24" x="1137.28" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="1137.28" y="700.0">1</tspan>
+    </text>
+  </g>
+  <g id="slot-text-conclusions" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="48 552 1184 96">
+    <text id="text-conclusions" data-pptx-carrier="true" data-pptx-frame="48 552 1184 96" x="48" y="574.6666666666666" font-family="Microsoft YaHei" font-size="24" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="body" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:24,&quot;weight&quot;:400,&quot;line_height&quot;:1.35,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="32.400000000000006" xml:space="preserve">
+      <tspan x="48" y="574.6666666666666">{{数据结论}}</tspan>
+    </text>
+  </g>
+  <g id="chart-data" data-pptx-replace-with="chart" data-pptx-native-authority="json" data-pptx-bounds="48 120 1184 408">
+    <metadata type="application/json">{"name": "chart-data", "type": "column", "x": 48, "y": 120, "width": 1184, "height": 408, "categories": ["{{类别}}"], "series": [{"name": "{{数列}}", "values": [0]}], "show_legend": true, "text_styles": {"base": {"font_family": "Microsoft YaHei", "font_size": 24, "weight": 400, "line_height": 1.35, "paragraph_gap": 0, "insets": [0, 0, 0, 0], "align": "left", "vertical_anchor": "top", "color": "#383535"}, "axis": {"font_family": "Microsoft YaHei", "font_size": 16, "weight": 400, "line_height": 1.25, "paragraph_gap": 0, "insets": [0, 0, 0, 0], "align": "left", "vertical_anchor": "top", "color": "#383535"}, "legend": {"font_family": "Microsoft YaHei", "font_size": 16, "weight": 400, "line_height": 1.25, "paragraph_gap": 0, "insets": [0, 0, 0, 0], "align": "left", "vertical_anchor": "top", "color": "#383535"}, "data_label": {"font_family": "Microsoft YaHei", "font_size": 16, "weight": 400, "line_height": 1.25, "paragraph_gap": 0, "insets": [0, 0, 0, 0], "align": "left", "vertical_anchor": "top", "color": "#383535"}}, "axes": {"value": {"minimum": 0.0, "maximum": 1.0, "major_unit": 0.2}}, "style": {"colors": ["#003591", "#5385C5"], "font_family": "Microsoft YaHei", "axis_font_size": 16, "legend_font_size": 16, "text_color": "#383535", "axis_color": "#BBCDE5", "grid_color": "#BBCDE5", "chart_area_fill": "#FFFFFF", "plot_area_fill": "#FFFFFF"}}</metadata>
+    <text id="text-axis_caption" data-pptx-frame="1052 128 180 32" x="1052" y="144.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="1052" y="144.0" />
+    </text>
+    <text id="text-chart_ticks-0" data-pptx-frame="48 452 70 28" x="48" y="468.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="468.0">0</tspan>
+    </text>
+    <text id="text-chart_ticks-1" data-pptx-frame="48 398 70 28" x="48" y="414.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="414.0">0.2</tspan>
+    </text>
+    <text id="text-chart_ticks-2" data-pptx-frame="48 344 70 28" x="48" y="360.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="360.0">0.4</tspan>
+    </text>
+    <text id="text-chart_ticks-3" data-pptx-frame="48 290 70 28" x="48" y="306.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="306.0">0.6</tspan>
+    </text>
+    <text id="text-chart_ticks-4" data-pptx-frame="48 236 70 28" x="48" y="252.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="252.0">0.8</tspan>
+    </text>
+    <text id="text-chart_ticks-5" data-pptx-frame="48 182 70 28" x="48" y="198.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="198.0">1</tspan>
+    </text>
+    <text id="text-categories-0" data-pptx-frame="132 478 1064 48" x="132.0" y="494.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="132.0" y="494.0">{{类别}}</tspan>
+    </text>
+    <text id="text-series-0-name" data-pptx-frame="128 128 446 32" x="128.0" y="144.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="128.0" y="144.0">{{数列}}</tspan>
+    </text>
+    <line x1="128" y1="462.0" x2="1200" y2="462.0" stroke="#BBCDE5" stroke-width="1.67" id="data-0" />
+    <line x1="128" y1="408.0" x2="1200" y2="408.0" stroke="#BBCDE5" stroke-width="1.67" id="data-1" />
+    <line x1="128" y1="354.0" x2="1200" y2="354.0" stroke="#BBCDE5" stroke-width="1.67" id="data-2" />
+    <line x1="128" y1="300.0" x2="1200" y2="300.0" stroke="#BBCDE5" stroke-width="1.67" id="data-3" />
+    <line x1="128" y1="246.0" x2="1200" y2="246.0" stroke="#BBCDE5" stroke-width="1.67" id="data-4" />
+    <line x1="128" y1="192.0" x2="1200" y2="192.0" stroke="#BBCDE5" stroke-width="1.67" id="data-5" />
+  </g>
+</svg>

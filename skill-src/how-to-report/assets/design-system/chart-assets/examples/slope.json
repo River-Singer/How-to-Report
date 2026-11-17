@@ -1,0 +1,26 @@
+{
+  "asset": "chart.slope",
+  "data": {
+    "categories": [
+      "Before",
+      "After"
+    ],
+    "series": [
+      {
+        "name": "A",
+        "values": [
+          25,
+          40
+        ]
+      },
+      {
+        "name": "B",
+        "values": [
+          45,
+          30
+        ]
+      }
+    ]
+  },
+  "options": {}
+}

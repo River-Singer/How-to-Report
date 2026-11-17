@@ -1,0 +1,134 @@
+{
+  "template_id": "phased-scope",
+  "text_slots": [
+    {
+      "id": "phased-scope.slot-001",
+      "default": "分阶段功能范围与状态",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-002",
+      "default": "基础先行",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-003",
+      "default": "集成协同",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-004",
+      "default": "分析深化",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-005",
+      "default": "基础先行",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-006",
+      "default": "权限身份",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-007",
+      "default": "对象清单",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-008",
+      "default": "数据字典",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-009",
+      "default": "基准报表",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-010",
+      "default": "集成协同",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-011",
+      "default": "审批流程",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-012",
+      "default": "系统接口",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-013",
+      "default": "通知任务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-014",
+      "default": "业务台账",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-015",
+      "default": "分析深化",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-016",
+      "default": "方案模拟",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-017",
+      "default": "预测分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-018",
+      "default": "成本优化",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-019",
+      "default": "持续运营",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "phased-scope.slot-020",
+      "default": "合成内容 · 结构样例 17 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

@@ -1,0 +1,188 @@
+{
+  "template_id": "three-pillar-system",
+  "text_slots": [
+    {
+      "id": "three-pillar-system.slot-001",
+      "default": "能力、决策流程与数据平台",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-002",
+      "default": "能力管理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-003",
+      "default": "目标对齐",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-004",
+      "default": "影响跟踪",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-005",
+      "default": "情景模拟",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-006",
+      "default": "可行性分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-007",
+      "default": "进度透明",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-008",
+      "default": "按项目",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-009",
+      "default": "按产品",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-010",
+      "default": "按设备",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-011",
+      "default": "按场景",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-012",
+      "default": "标准化决策",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-013",
+      "default": "提出方案",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-014",
+      "default": "验证选项",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-015",
+      "default": "评估影响",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-016",
+      "default": "确认决策",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-017",
+      "default": "跟踪落实",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-018",
+      "default": "透明数据平台",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-019",
+      "default": "分析看板与统一指标",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-020",
+      "default": "业务输入",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-021",
+      "default": "共享平台",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-022",
+      "default": "决策输出",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-023",
+      "default": "结构化数据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-024",
+      "default": "业务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-025",
+      "default": "财务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-026",
+      "default": "项目",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-027",
+      "default": "非结构化材料",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-028",
+      "default": "会议记录 · 图片 · 文档",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "three-pillar-system.slot-029",
+      "default": "合成内容 · 结构样例 11 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

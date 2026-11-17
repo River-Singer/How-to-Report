@@ -1,0 +1,99 @@
+{
+  "package_version": "0.11.4",
+  "all_authors_validate": true,
+  "validated_author_count": 21,
+  "authors": [
+    {
+      "file": "authors/capability-map.json",
+      "sha256": "de9424631ad87169de10b2dc36e03e09d3b75cccaee7f53d11347d23be7a70f1"
+    },
+    {
+      "file": "authors/case-card-matrix.json",
+      "sha256": "277cc915f000d59af1a7003c9dbf2da1e0d8cffd67e2932c97695b0603048584"
+    },
+    {
+      "file": "authors/categorized-directory.json",
+      "sha256": "d5af4e50d6ec5d918b2ecb436d1765d774277c36e6bfd779be6d0ff9b7d42428"
+    },
+    {
+      "file": "authors/commercial-options.json",
+      "sha256": "d8e5dd16ef7a67532249e61c16c2c41ae8b9c239043d32ed011856430c5ba843"
+    },
+    {
+      "file": "authors/converging-readiness.json",
+      "sha256": "05804640934dba0ed9fa05c3848325f9df7cf335d54ecf30438f5e7ba2ae5e99"
+    },
+    {
+      "file": "authors/cycle-explainer.json",
+      "sha256": "625ba330fedb3a6909d4e49beb52fad66926b725203ffe3d09d5c81bae91c2dd"
+    },
+    {
+      "file": "authors/delivery-gantt.json",
+      "sha256": "2f946eeecddfeedb90bc7cd6f8e9f3b24072efc24375979e6b68381f1609f0c9"
+    },
+    {
+      "file": "authors/evidence-index.json",
+      "sha256": "6b115a905e52c328500160449cc60c37b8e537bc7c8985d2e45572e4a340196f"
+    },
+    {
+      "file": "authors/governance-organization.json",
+      "sha256": "a6232c21fdedcda729ddf6ce93b1212c626d7bdae73cc524e03f62afa8c0c1c5"
+    },
+    {
+      "file": "authors/interface-showcase.json",
+      "sha256": "0148ae2025a800ae20d5ef499d7c46a8ed29cc5d7c0891dde29e21fb0d373329"
+    },
+    {
+      "file": "authors/lifecycle-capabilities-cases.json",
+      "sha256": "48dc053a734eef7a4ffa3a164ed27c14b6c5c272eac8afaa789ec180ea0326bc"
+    },
+    {
+      "file": "authors/metric-evidence-columns.json",
+      "sha256": "160bc630a27ac8915543f6a2f28c856049540e5c1a565e63df6cccd54a77603b"
+    },
+    {
+      "file": "authors/phase-workstream-matrix.json",
+      "sha256": "e1cddd637f6ddfe2dca07a5d63366061d009f1561e72c85891a250ddfd3080db"
+    },
+    {
+      "file": "authors/phased-scope.json",
+      "sha256": "cd4813e1cfd38accd049972d4babbe02614367d13862d404b291e446b7b19634"
+    },
+    {
+      "file": "authors/platform-architecture-rail.json",
+      "sha256": "76037a093177567c70441fb8d4da8575ff32903e43786fe3c78641aeb4565173"
+    },
+    {
+      "file": "authors/portfolio-timeline.json",
+      "sha256": "ed8e007888de76740ce678fe172929aa4deb4c85edd277268e758c7c6645ff52"
+    },
+    {
+      "file": "authors/resource-load.json",
+      "sha256": "3ef477bbe93baf521bfe662d5dabc16893b3e67383fa23861cc7620c964318a2"
+    },
+    {
+      "file": "authors/service-network.json",
+      "sha256": "a773cacbd31ff9b62448d66302b59b0123d6525fb002202ac120daef87a39434"
+    },
+    {
+      "file": "authors/team-profiles.json",
+      "sha256": "b2508f1b5d62cded7b59f60b39790589f9631e215ddc9423c277a73361d8d286"
+    },
+    {
+      "file": "authors/technical-layers.json",
+      "sha256": "fa60ee89ccb9221d308266ffc3f5f755eaf017bb75af887e9870101f6477d775"
+    },
+    {
+      "file": "authors/three-pillar-system.json",
+      "sha256": "e6bc51ed63b8b0f49887e710bedb25ab2d98b99a817f30886db3e9eadaa4a8d5"
+    }
+  ],
+  "representative_computed_builds": [
+    "cycle-explainer",
+    "resource-load"
+  ],
+  "working_directory": "unrelated temporary directory",
+  "asset_scope": "no private sources or external image dependencies in default authors",
+  "preview_note": "See each catalog entry: metadata-only publication reuses identical visible-content preview, except resource-load has a fresh public-author Office render. No old local receipt is presented as a public-input receipt.",
+  "limits": "Deterministic engineering validation; not an independent business audit or a test of arbitrary replacement content."
+}

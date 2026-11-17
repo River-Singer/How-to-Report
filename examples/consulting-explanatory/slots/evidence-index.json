@@ -1,0 +1,188 @@
+{
+  "template_id": "evidence-index",
+  "text_slots": [
+    {
+      "id": "evidence-index.slot-001",
+      "default": "项目经验索引",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-002",
+      "default": "项目类型",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-003",
+      "default": "交付主题",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-004",
+      "default": "对应能力",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-005",
+      "default": "经营分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-006",
+      "default": "业务规划",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-007",
+      "default": "财务与运营",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-008",
+      "default": "流程优化",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-009",
+      "default": "共享服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-010",
+      "default": "业务流程",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-011",
+      "default": "数据治理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-012",
+      "default": "指标统一",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-013",
+      "default": "数据基础",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-014",
+      "default": "应用建设",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-015",
+      "default": "工作台上线",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-016",
+      "default": "系统交付",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-017",
+      "default": "决策支持",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-018",
+      "default": "方案比较",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-019",
+      "default": "分析工具",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-020",
+      "default": "运营辅导",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-021",
+      "default": "重点场景推广",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-022",
+      "default": "使用转化",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-023",
+      "default": "质量提升",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-024",
+      "default": "测试与验收",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-025",
+      "default": "交付控制",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-026",
+      "default": "持续改进",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-027",
+      "default": "反馈迭代",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-028",
+      "default": "运营服务",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "evidence-index.slot-029",
+      "default": "合成内容 · 结构样例 05 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

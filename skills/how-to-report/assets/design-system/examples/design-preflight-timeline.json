@@ -1,0 +1,115 @@
+{
+  "schema_version": "0.1",
+  "project_id": "synthetic-design-preflight-timeline",
+  "revision": 1,
+  "brief": {
+    "audience": "接口演示",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "design_choice": "任务：交清四事件先后，定量分析不适用。已查template.timeline/horizontal-4（整页）、vertical-3（仅三点）与component.topology。采用layered右向链作为112px局部顺序带，日期与事件同body角色、等距只表达顺序。失败先扩充高度或改完整模板，不能删点、缩字或变成四列散字。最终核节点对应/顺序/连接线及实际PowerPoint可读性。"
+  },
+  "sources": [],
+  "facts": {},
+  "pages": [
+    {
+      "id": "milestones",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "job": "合成工程示例：让读者看清四个事件依时间推进；不表达间隔或持续时长。",
+      "notes": "合成接口演示，无业务结论。等距仅表示事件先后。",
+      "layout": {
+        "id": "page",
+        "type": "column",
+        "padding": [
+          48,
+          36,
+          48,
+          30
+        ],
+        "gap": 20,
+        "children": [
+          {
+            "id": "title",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": "从准备到运行的四个节点"
+            }
+          },
+          {
+            "id": "sequence",
+            "type": "leaf",
+            "height": 112,
+            "element": {
+              "type": "component",
+              "component": "topology",
+              "layout": "layered",
+              "direction": "right",
+              "role": "body",
+              "node_width": 220,
+              "node_padding": 10,
+              "layer_gap": 24,
+              "padding": 12,
+              "arrow": false,
+              "nodes": [
+                {
+                  "id": "event1",
+                  "label": "2026.01\n需求确认",
+                  "role": "body"
+                },
+                {
+                  "id": "event2",
+                  "label": "2026.03\n小范围试用",
+                  "role": "body"
+                },
+                {
+                  "id": "event3",
+                  "label": "2026.06\n推广准备",
+                  "role": "body"
+                },
+                {
+                  "id": "event4",
+                  "label": "2026.09\n正式运行",
+                  "role": "body"
+                }
+              ],
+              "edges": [
+                {
+                  "id": "next1",
+                  "from": "event1",
+                  "to": "event2",
+                  "arrow": false
+                },
+                {
+                  "id": "next2",
+                  "from": "event2",
+                  "to": "event3",
+                  "arrow": false
+                },
+                {
+                  "id": "next3",
+                  "from": "event3",
+                  "to": "event4",
+                  "arrow": false
+                }
+              ]
+            }
+          },
+          {
+            "id": "scope",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": "合成数据，仅展示事件顺序；节点间距离不表示时间间隔。"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -59,26 +59,14 @@ def render(canvas):
             field["min_length"], field["max_length"], True,
             color_role=field["color_role"],
             max_lines=field.get("max_lines"),
+            style={"vertical_anchor": {"t": "top", "ctr": "middle", "b": "bottom"}[field.get("vertical_anchor", "t")],
+                   "align": {"start": "left", "center": "center", "end": "right"}.get(field.get("align"), "left")},
         )
         carrier[0].set("data-htr-source-ref", field["source_ref"])
         canvas.bindings[-1]["source_ref"] = field["source_ref"]
         canvas.bindings[-1]["source_role"] = field["role"]
         canvas.bindings[-1]["source_text"] = field["source_text"]
-        anchor = field.get("vertical_anchor", "t")
-        if anchor in {"ctr", "b"}:
-            remaining = max(0, field["frame"][3] - canvas.bindings[-1]["measured_height"])
-            offset = remaining / 2 if anchor == "ctr" else remaining
-            for node in carrier.iter():
-                if "y" in node.attrib:
-                    node.set("y", str(float(node.get("y")) + offset))
-            carrier[0].set("data-htr-vertical-anchor", anchor)
-            canvas.bindings[-1]["vertical_anchor"] = anchor
-        if field.get("align") in {"center", "end"}:
-            for node in carrier.iter():
-                if node.tag.rsplit("}", 1)[-1] in {"text", "tspan"}:
-                    node.set("x", str(field["frame"][0] + field["frame"][2] * (.5 if field["align"] == "center" else 1)))
-                    if node.tag.rsplit("}", 1)[-1] == "text":
-                        node.set("text-anchor", "middle" if field["align"] == "center" else "end")
+        canvas.bindings[-1]["vertical_anchor"] = field.get("vertical_anchor", "t")
         if field.get("rotation"):
             x, y, width, height = field["frame"]
             carrier[0].set("transform", f"rotate({field['rotation']} {x + width / 2} {y + height / 2})")

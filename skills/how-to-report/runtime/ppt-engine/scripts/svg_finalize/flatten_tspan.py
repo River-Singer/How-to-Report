@@ -612,6 +612,11 @@ def flatten_text_with_tspans(
         parent = parent_map.get(text_el)
         if parent is None:
             continue
+        # The engine's semantic text contract already declares line spacing
+        # and paragraph boundaries. Inferring a new base from two baselines
+        # would fold paragraph spacing into the line height.
+        if text_el.get("data-htr-text-role") and text_el.get(PARAGRAPH_MARK_ATTR) is not None:
+            continue
 
         # First check whether any tspan needs flattening (dy != 0 or has its own y attribute)
         needs_flatten = False

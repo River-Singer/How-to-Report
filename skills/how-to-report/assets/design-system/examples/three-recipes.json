@@ -1,0 +1,232 @@
+{
+  "recipe_version": "0.1",
+  "project_id": "three-recipes-probe",
+  "profile": "report-14pt",
+  "brief": {
+    "audience": "engineering probe",
+    "purpose": "demonstrate finite recipes, not business conclusions"
+  },
+  "facts": {
+    "a": {
+      "value": 40
+    },
+    "b": {
+      "value": 60
+    },
+    "c": {
+      "value": 80
+    },
+    "total": {
+      "value": 100
+    }
+  },
+  "pages": [
+    {
+      "id": "kpi-probe",
+      "recipe": "kpi-chart-explanation",
+      "title": "主要数据与解释",
+      "source": "Synthetic engineering example",
+      "slots": {
+        "metrics": [
+          {
+            "id": "metric-a",
+            "label": "当前值",
+            "value": {
+              "ref": "a"
+            },
+            "unit": "项",
+            "context": [
+              "基准 ",
+              {
+                "ref": "total"
+              },
+              " 项"
+            ]
+          }
+        ],
+        "main": {
+          "id": "main-chart",
+          "use": "primitive.chart",
+          "chart_type": "column",
+          "categories": [
+            "A",
+            "B",
+            "C"
+          ],
+          "series": [
+            {
+              "name": "Items",
+              "values": [
+                {
+                  "ref": "a"
+                },
+                {
+                  "ref": "b"
+                },
+                {
+                  "ref": "c"
+                }
+              ]
+            }
+          ]
+        },
+        "explanation": [
+          {
+            "id": "explain-one",
+            "text": "主图以同一基线展示三个值。"
+          },
+          {
+            "id": "explain-two",
+            "text": "说明区承载判断、限定与解释。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pair-probe",
+      "recipe": "paired-charts-conclusion",
+      "title": "同口径双图与共同结论",
+      "source": "Synthetic engineering example",
+      "slots": {
+        "charts": [
+          {
+            "id": "panel-a",
+            "title": "分组一",
+            "chart": {
+              "id": "left-chart",
+              "use": "primitive.chart",
+              "chart_type": "column",
+              "categories": [
+                "A",
+                "B",
+                "C"
+              ],
+              "series": [
+                {
+                  "name": "Items",
+                  "values": [
+                    {
+                      "ref": "a"
+                    },
+                    {
+                      "ref": "b"
+                    },
+                    {
+                      "ref": "c"
+                    }
+                  ]
+                }
+              ]
+            },
+            "semantics": {
+              "unit": "items",
+              "scope": "synthetic same population",
+              "period": "example period",
+              "scale": [
+                0,
+                100
+              ]
+            }
+          },
+          {
+            "id": "panel-b",
+            "title": "分组二",
+            "chart": {
+              "id": "right-chart",
+              "use": "primitive.chart",
+              "chart_type": "column",
+              "categories": [
+                "A",
+                "B",
+                "C"
+              ],
+              "series": [
+                {
+                  "name": "Items",
+                  "values": [
+                    {
+                      "ref": "c"
+                    },
+                    {
+                      "ref": "a"
+                    },
+                    {
+                      "ref": "b"
+                    }
+                  ]
+                }
+              ]
+            },
+            "semantics": {
+              "unit": "items",
+              "scope": "synthetic same population",
+              "period": "example period",
+              "scale": [
+                0,
+                100
+              ]
+            }
+          }
+        ],
+        "conclusion": [
+          {
+            "id": "conclusion",
+            "text": "两图使用相同的单位、范围、期间与数轴。实际业务可比性仍需核对来源。"
+          }
+        ]
+      }
+    },
+    {
+      "id": "evidence-probe",
+      "recipe": "evidence-action",
+      "title": "证据、动作与复核逐行对应",
+      "source": "Synthetic engineering example",
+      "slots": {
+        "rows": [
+          {
+            "id": "row-a",
+            "evidence": {
+              "id": "evidence-a",
+              "use": "component.paragraph-flow",
+              "paragraphs": [
+                {
+                  "id": "evidence-a-text",
+                  "text": [
+                    "当前观察值 ",
+                    {
+                      "ref": "a"
+                    },
+                    " 项。"
+                  ]
+                }
+              ]
+            },
+            "action": "采取与当前观察对应的行动。",
+            "verification": "检查实际结果及适用范围。"
+          },
+          {
+            "id": "row-b",
+            "evidence": {
+              "id": "evidence-b",
+              "use": "component.paragraph-flow",
+              "paragraphs": [
+                {
+                  "id": "evidence-b-text",
+                  "text": [
+                    "另一观察值 ",
+                    {
+                      "ref": "b"
+                    },
+                    " 项。"
+                  ]
+                }
+              ]
+            },
+            "action": "验证另一项具体做法。",
+            "verification": "保留相同来源与口径。"
+          }
+        ]
+      }
+    }
+  ]
+}

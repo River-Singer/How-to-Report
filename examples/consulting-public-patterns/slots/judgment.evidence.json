@@ -1,0 +1,79 @@
+{
+  "template_id": "judgment.evidence",
+  "text_slots": [
+    {
+      "id": "judgment.evidence.slot-001",
+      "default": "示例反馈集中在版本与检索，维护应先处理这两类",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-002",
+      "default": "单位：条；合成反馈样本。类别互斥，每条仅归入一个主要问题",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-003",
+      "default": "先处理主要问题",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-004",
+      "default": "版本识别与资料检索是这批反馈的主要来源。",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-005",
+      "default": "先使当前版本可辨、入口可找到，再复核描述与权限问题。",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-006",
+      "default": "判断只适用于这批反馈",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-007",
+      "default": "反馈条数不是全部用户的发生率，也不能说明问题造成的损失。",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-008",
+      "default": "实际优先级仍需结合影响范围和处理成本。",
+      "type": "text"
+    },
+    {
+      "id": "judgment.evidence.slot-009",
+      "default": "原创合成内容 · 可计算结构样例 10/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [
+    {
+      "id": "chart-184",
+      "asset": "chart.ordered-bar",
+      "data": {
+        "categories": [
+          "版本不清",
+          "资料难找",
+          "描述歧义",
+          "权限问题"
+        ],
+        "series": [
+          {
+            "name": "反馈条数",
+            "values": [
+              42,
+              32,
+              16,
+              10
+            ]
+          }
+        ],
+        "unit": "条"
+      }
+    }
+  ],
+  "image_slots": []
+}

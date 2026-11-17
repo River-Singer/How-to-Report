@@ -1,0 +1,624 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-explanation.parallel",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建",
+    "design_preflight": {
+      "task": "parallel_taxonomy",
+      "grid": "等宽3列，列内定义/机制/例子/边界",
+      "reading_order": "从左到右，每列由定义读到限制",
+      "selection": "解释/比较/判断用图；查阅核对用表。当前模式按其声明的任务选择。",
+      "limits": "等高栅格保持同层对齐；复杂条款应语义拆分，不能只缩字号。"
+    }
+  },
+  "sources": [],
+  "facts": {
+    "explanation.parallel.slot-001": {
+      "value": "资料的采集、维护和使用需要三类不同控制"
+    },
+    "explanation.parallel.slot-002": {
+      "value": "采集时保留来源"
+    },
+    "explanation.parallel.slot-003": {
+      "value": "要解决什么"
+    },
+    "explanation.parallel.slot-004": {
+      "value": "说明资料从哪里来，以及何时采集。"
+    },
+    "explanation.parallel.slot-005": {
+      "value": "如何控制"
+    },
+    "explanation.parallel.slot-006": {
+      "value": "将出处和记录时间与正文一起保存。"
+    },
+    "explanation.parallel.slot-007": {
+      "value": "使用例子"
+    },
+    "explanation.parallel.slot-008": {
+      "value": "会议纪要关联会议日期和记录人。"
+    },
+    "explanation.parallel.slot-009": {
+      "value": "适用边界"
+    },
+    "explanation.parallel.slot-010": {
+      "value": "来源记录不等于内容已经验证。"
+    },
+    "explanation.parallel.slot-011": {
+      "value": "维护时区分版本"
+    },
+    "explanation.parallel.slot-012": {
+      "value": "要解决什么"
+    },
+    "explanation.parallel.slot-013": {
+      "value": "让当前规则与历史规则能够区分。"
+    },
+    "explanation.parallel.slot-014": {
+      "value": "如何控制"
+    },
+    "explanation.parallel.slot-015": {
+      "value": "记录生效日期、更新原因和替代关系。"
+    },
+    "explanation.parallel.slot-016": {
+      "value": "使用例子"
+    },
+    "explanation.parallel.slot-017": {
+      "value": "新流程发布时标记旧版本。"
+    },
+    "explanation.parallel.slot-018": {
+      "value": "适用边界"
+    },
+    "explanation.parallel.slot-019": {
+      "value": "保留历史不代表旧规则仍适用。"
+    },
+    "explanation.parallel.slot-020": {
+      "value": "使用时保留引用"
+    },
+    "explanation.parallel.slot-021": {
+      "value": "要解决什么"
+    },
+    "explanation.parallel.slot-022": {
+      "value": "让读者能回到支持当前说明的材料。"
+    },
+    "explanation.parallel.slot-023": {
+      "value": "如何控制"
+    },
+    "explanation.parallel.slot-024": {
+      "value": "答案关联对应片段及版本。"
+    },
+    "explanation.parallel.slot-025": {
+      "value": "使用例子"
+    },
+    "explanation.parallel.slot-026": {
+      "value": "解释规则时提供原条款位置。"
+    },
+    "explanation.parallel.slot-027": {
+      "value": "适用边界"
+    },
+    "explanation.parallel.slot-028": {
+      "value": "没有材料支持时不补写结论。"
+    },
+    "explanation.parallel.slot-029": {
+      "value": "原创合成内容 · 可计算结构样例 02/10"
+    }
+  },
+  "pages": [
+    {
+      "id": "explanation.parallel",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "parallel_taxonomy",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "explanation.parallel-body"
+      },
+      "layout": {
+        "id": "column-206",
+        "type": "column",
+        "children": [
+          {
+            "id": "text-203",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "explanation.parallel.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-204",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "explanation.parallel-body",
+            "type": "column",
+            "children": [
+              {
+                "id": "grid-65",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 24,
+                "children": [
+                  {
+                    "id": "column-36",
+                    "type": "column",
+                    "children": [
+                      {
+                        "id": "text-23",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "explanation.parallel.slot-002"
+                          }
+                        }
+                      },
+                      {
+                        "id": "column-26",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-24",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-003"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-25",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-004"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-29",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-27",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-005"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-28",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-006"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-32",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-30",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-007"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-31",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-008"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-35",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-33",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-009"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-34",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-010"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      }
+                    ],
+                    "gap": 20,
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "column-50",
+                    "type": "column",
+                    "children": [
+                      {
+                        "id": "text-37",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "explanation.parallel.slot-011"
+                          }
+                        }
+                      },
+                      {
+                        "id": "column-40",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-38",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-012"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-39",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-013"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-43",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-41",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-014"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-42",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-015"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-46",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-44",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-016"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-45",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-017"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-49",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-47",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-018"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-48",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-019"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      }
+                    ],
+                    "gap": 20,
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  },
+                  {
+                    "id": "column-64",
+                    "type": "column",
+                    "children": [
+                      {
+                        "id": "text-51",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "explanation.parallel.slot-020"
+                          }
+                        }
+                      },
+                      {
+                        "id": "column-54",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-52",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-021"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-53",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-022"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-57",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-55",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-023"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-56",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-024"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-60",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-58",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-025"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-59",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-026"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      },
+                      {
+                        "id": "column-63",
+                        "type": "column",
+                        "children": [
+                          {
+                            "id": "text-61",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "bodyStrong",
+                              "text": {
+                                "ref": "explanation.parallel.slot-027"
+                              }
+                            }
+                          },
+                          {
+                            "id": "text-62",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "explanation.parallel.slot-028"
+                              }
+                            }
+                          }
+                        ],
+                        "gap": 6,
+                        "padding": 0
+                      }
+                    ],
+                    "gap": 20,
+                    "padding": 20,
+                    "surface": {
+                      "fill": "surfaceMuted"
+                    }
+                  }
+                ]
+              }
+            ],
+            "gap": 18,
+            "padding": 0
+          },
+          {
+            "id": "text-205",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "explanation.parallel.slot-029"
+              }
+            }
+          }
+        ],
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ]
+      }
+    }
+  ]
+}

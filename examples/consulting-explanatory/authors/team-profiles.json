@@ -1,0 +1,516 @@
+{
+  "schema_version": "0.1",
+  "project_id": "public-example-team-profiles",
+  "revision": 1,
+  "brief": {
+    "audience": "模板使用者",
+    "design_profile": {
+      "id": "report-14pt",
+      "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba",
+      "hash_method": "sha256-file-bytes"
+    },
+    "palette_id": "report-default",
+    "purpose": "原创合成结构方法示例；独立样例目录，不是源PDF保真重建"
+  },
+  "sources": [],
+  "facts": {
+    "team-profiles.slot-001": {
+      "value": "团队职责与专业分工"
+    },
+    "team-profiles.slot-002": {
+      "value": "肖像图片槽"
+    },
+    "team-profiles.slot-003": {
+      "value": "成员甲"
+    },
+    "team-profiles.slot-004": {
+      "value": "项目负责人"
+    },
+    "team-profiles.slot-005": {
+      "value": "统筹交付边界\n协调业务决策"
+    },
+    "team-profiles.slot-006": {
+      "value": "肖像图片槽"
+    },
+    "team-profiles.slot-007": {
+      "value": "成员乙"
+    },
+    "team-profiles.slot-008": {
+      "value": "业务负责人"
+    },
+    "team-profiles.slot-009": {
+      "value": "澄清需求范围\n确认业务验收"
+    },
+    "team-profiles.slot-010": {
+      "value": "肖像图片槽"
+    },
+    "team-profiles.slot-011": {
+      "value": "成员丙"
+    },
+    "team-profiles.slot-012": {
+      "value": "产品负责人"
+    },
+    "team-profiles.slot-013": {
+      "value": "组织功能迭代\n维护需求优先级"
+    },
+    "team-profiles.slot-014": {
+      "value": "肖像图片槽"
+    },
+    "team-profiles.slot-015": {
+      "value": "成员丁"
+    },
+    "team-profiles.slot-016": {
+      "value": "技术负责人"
+    },
+    "team-profiles.slot-017": {
+      "value": "设计系统边界\n审查接口方案"
+    },
+    "team-profiles.slot-018": {
+      "value": "肖像图片槽"
+    },
+    "team-profiles.slot-019": {
+      "value": "成员戊"
+    },
+    "team-profiles.slot-020": {
+      "value": "数据负责人"
+    },
+    "team-profiles.slot-021": {
+      "value": "统一指标口径\n验证数据质量"
+    },
+    "team-profiles.slot-022": {
+      "value": "合成内容 · 结构样例 01 / 21"
+    }
+  },
+  "pages": [
+    {
+      "id": "team-profiles",
+      "kind": "layout",
+      "layout_version": "0.1",
+      "intent": "demo",
+      "job": "人物—角色—职责一一对应",
+      "notes": "原创合成内容。结构参考见同目录catalog.json。参数替换后必须正常computed重算；不宣称任意内容自动分页或源文件像素还原。",
+      "content_diagnostics": {
+        "region_node_id": "team-profiles-body"
+      },
+      "layout": {
+        "id": "col-597",
+        "type": "column",
+        "gap": 18,
+        "padding": [
+          40,
+          30,
+          40,
+          24
+        ],
+        "children": [
+          {
+            "id": "text-594",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "title",
+              "text": {
+                "ref": "team-profiles.slot-001"
+              }
+            }
+          },
+          {
+            "id": "rule-595",
+            "type": "leaf",
+            "height": 2,
+            "element": {
+              "type": "shape",
+              "shape": "rect",
+              "fill": "border",
+              "stroke": "none",
+              "role": "decoration"
+            }
+          },
+          {
+            "id": "team-profiles-body",
+            "type": "column",
+            "gap": 18,
+            "padding": 0,
+            "children": [
+              {
+                "id": "grid-31",
+                "type": "grid",
+                "columns": [
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  },
+                  {
+                    "fr": 1
+                  }
+                ],
+                "gap": 18,
+                "children": [
+                  {
+                    "id": "col-6",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-2",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 24,
+                        "children": [
+                          {
+                            "id": "text-1",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "team-profiles.slot-002"
+                              },
+                              "style": {
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ],
+                        "height": 190,
+                        "justify": "center",
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "text-3",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "team-profiles.slot-003"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-4",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "bodyStrong",
+                          "text": {
+                            "ref": "team-profiles.slot-004"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-5",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "team-profiles.slot-005"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-12",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-8",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 24,
+                        "children": [
+                          {
+                            "id": "text-7",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "team-profiles.slot-006"
+                              },
+                              "style": {
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ],
+                        "height": 190,
+                        "justify": "center",
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "text-9",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "team-profiles.slot-007"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-10",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "bodyStrong",
+                          "text": {
+                            "ref": "team-profiles.slot-008"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-11",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "team-profiles.slot-009"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-18",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-14",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 24,
+                        "children": [
+                          {
+                            "id": "text-13",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "team-profiles.slot-010"
+                              },
+                              "style": {
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ],
+                        "height": 190,
+                        "justify": "center",
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "text-15",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "team-profiles.slot-011"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-16",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "bodyStrong",
+                          "text": {
+                            "ref": "team-profiles.slot-012"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-17",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "team-profiles.slot-013"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-24",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-20",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 24,
+                        "children": [
+                          {
+                            "id": "text-19",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "team-profiles.slot-014"
+                              },
+                              "style": {
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ],
+                        "height": 190,
+                        "justify": "center",
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "text-21",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "team-profiles.slot-015"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-22",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "bodyStrong",
+                          "text": {
+                            "ref": "team-profiles.slot-016"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-23",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "team-profiles.slot-017"
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "col-30",
+                    "type": "column",
+                    "gap": 12,
+                    "padding": 0,
+                    "children": [
+                      {
+                        "id": "col-26",
+                        "type": "column",
+                        "gap": 12,
+                        "padding": 24,
+                        "children": [
+                          {
+                            "id": "text-25",
+                            "type": "leaf",
+                            "element": {
+                              "type": "text",
+                              "role": "body",
+                              "text": {
+                                "ref": "team-profiles.slot-018"
+                              },
+                              "style": {
+                                "align": "center"
+                              }
+                            }
+                          }
+                        ],
+                        "height": 190,
+                        "justify": "center",
+                        "surface": {
+                          "fill": "surfaceMuted"
+                        }
+                      },
+                      {
+                        "id": "text-27",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "heading",
+                          "text": {
+                            "ref": "team-profiles.slot-019"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-28",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "bodyStrong",
+                          "text": {
+                            "ref": "team-profiles.slot-020"
+                          }
+                        }
+                      },
+                      {
+                        "id": "text-29",
+                        "type": "leaf",
+                        "element": {
+                          "type": "text",
+                          "role": "body",
+                          "text": {
+                            "ref": "team-profiles.slot-021"
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": "text-596",
+            "type": "leaf",
+            "element": {
+              "type": "text",
+              "role": "caption",
+              "text": {
+                "ref": "team-profiles.slot-022"
+              }
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

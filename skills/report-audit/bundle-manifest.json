@@ -1,6 +1,6 @@
 {
   "files": {
-    "SKILL.md": "eaa99900f556cb0e7d61c5211992dd112702cbce7dfaefda512afc63f50fcbbc",
+    "SKILL.md": "a18f527a79a0b651cc245d7c84ff11e95e36679843ad046f51f726de8f10196c",
     "THIRD_PARTY_NOTICES.md": "d01c84ffbb6efbf6f4364a3d948079b7b31ca8e6ddc0e2e9a177dfb1c972e9b5",
     "assets/audit-run/audit.md": "47c7a46b6cc45ac8f3d4ff5d37cb948cfd80791090ff5f2e260e06c92e895206",
     "assets/audit-run/run.json": "e9c794a10c2e1b885a1c40626b39df5639ad6ebd38f4c5eb215851cdddf4fbe1",
@@ -93,11 +93,11 @@
     "knowledge/swe-02-capability-reliability.md": "aae2769d106bc3609a180cb600c139ab9103dafdc957abfe54ef12ef1cda82d2",
     "knowledge/swe-03-system-boundary.md": "c3e1de2f7d4b2b17ca6e10966bf7a51bb5dfd2324135e00b3fd163b525cbe698",
     "references/agent-delegation.md": "bd72e2695afe2259bf457ba0699e33737cab20114eac4affbd1a42f5c9d52895",
-    "references/audience-copy.md": "0d80bfd6d46ef3cb4278d397bb5db99398e4c1182184c52696f4e55a084c56dc",
+    "references/audience-copy.md": "475c7a95b3e8bc083b1d78750de0b05ad83705c01e99836c38596c5fc882cddb",
     "references/audit-judgment.md": "d0a5e7bf9d7398d9ab2b6fb89c0967defa91d6d9910e2964b62a2e8603344b34",
-    "references/audit-method.md": "5e043450d32730fcbd62c47d67233b88b5eca1394eb0fc0794c195ddb7afe8b7",
+    "references/audit-method.md": "98a6e5bec6a0142b0f747c705228df6fc2d5f0f889b02572a043a176a25ee7db",
     "references/audit-run.md": "3cf4de52d5179999ce0f9fe2e846aba149e28e55405f40abd79be36cb3ec3ddf",
-    "references/business-data-analysis.md": "bdf2ce0fbf279affdaf0161cd4b00dfe0add9b77f678c1b8c1e608eaed4d3870",
+    "references/business-data-analysis.md": "101d70bf18ef98f830b63313f7998e8cba81a5dd5986eb91edf6f023b6c50809",
     "references/content-decisions.md": "abf7279cbd990f7a61792e5324a933efdee80478a668ce693aec0af2a9127b8f",
     "references/directed-challenge.md": "c390c1c86fbdcaafdba282a07d016023370d607445c330fafb8d27a35f796113",
     "references/evidence-handoff.md": "5b6e47d7e8650f29d230bf8ecf18b17c6b44df0ab2e5ff8cecfdd3a812b05095",
@@ -105,8 +105,8 @@
     "references/graph-model.md": "92406e7e1f8cdf03e346aa934c3640ed33e96a8a3d775c2fa82ec7f42d2f8f43",
     "references/host-capabilities.md": "1c55c4049185ec569ae1d4e3936d0278e828355c09a769490760912528e6bbb7",
     "references/insight-discovery.md": "1a1eede061f9b6f4a90603263d00db9e8cea1a05318894f3ebcbc663b3c60be0",
-    "references/meeting-expression.md": "73a57d47d9ff76f11d02319657ad096f08e202c65a7ef9f25f5d3b7ea560223f",
-    "references/method-argument.md": "ed8a8554c5300b764226cd895e7c1618ce76f036c6bb0c5000bb36fd974e1889",
+    "references/meeting-expression.md": "a2bc61a81df77b24df3037b52aa5b719cc09c1fa809d01c713a5b141144b8455",
+    "references/method-argument.md": "dad759880c96db7c720ed3be691d79703caacb63900a69286ee17578ba373313",
     "references/method-concepts.md": "e6693527d5939e189c519bd54053f7f5d6c2b3ffb4f62c19ff95197d7776a24b",
     "references/method-conditions.md": "f22acc619b5acc89a06a807af30cd8a5d7b01a69413a936f8f11a220e7ed46c9",
     "references/method-premises.md": "5844e8bfe4e529be1acdfcfe5e1d52b764f3eed12507a40d5d1af438afad9584",
@@ -153,6 +153,8 @@
     "references/method-sources/sources/toulmin.txt": "d6d36731d0a42e749b49447fc48f382b1ec592e5f87de72b7346d5a62ae1eb7b",
     "references/method-sources/sources/yu-zenker-2020-fulltext.txt": "2772f7eb548e6ce63a47255e4a8e80b62d4f0e615bb1861c39bb60c0d69821d3",
     "references/numeric-evidence.md": "52c91ba2435894a6e271d91d01ed5f664be4d3723d1cedb160924ffeadf31ee0",
+    "references/ppt-data-display.md": "cb472ea2b88ca9c7a10cedbd9a73a5b533367d50f6874ee6394332b306caa999",
+    "references/ppt-visual-review.md": "b8e88550901c387f953962d4346c13557677f9a8920d9d73d7b89d4677f3a93a",
     "references/reasoning-methods.md": "f35b02f95a32cdf34570ae3c387ae2797aa0c32a40c14fe13fb70501930c99cf",
     "references/report-experience.md": "ae2cf4ae6350037b8fb070ea47cf0b053485434ed5f7efcb9ec668f159325f4d",
     "references/semantic-structuring.md": "2277c38d27aacabce182844e1c50003ebabd2e8f6e44e6916a7ec8b719009b92",
@@ -164,7 +166,7 @@
     "scripts/write_boundary.py": "b3a900dd463e1463a39e4a6069514196b179d52991979f7afa5029916fbe8224"
   },
   "generated_by": "tools/package_skills.py",
-  "package_version": "0.11.0",
+  "package_version": "0.11.4",
   "skill_name": "report-audit",
   "supported_contract_version": "0.1"
 }

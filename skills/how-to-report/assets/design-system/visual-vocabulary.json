@@ -1,0 +1,3676 @@
+{
+  "schema": "htr.design-system.ft-visual-vocabulary.v1",
+  "checked_date": "2026-11-16",
+  "sources": {
+    "poster": "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+    "repository": "https://github.com/Financial-Times/chart-doctor/tree/main/visual-vocabulary",
+    "website": "https://ft-interactive.github.io/visual-vocabulary/",
+    "website_csv": "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv",
+    "website_csv_sha256": "aefb28066f22e1e3a19bb99e17b68e5766072277211a5012b704435603a5c046"
+  },
+  "screenshot_status": "Root verified all nine poster categories against the user image: 4/5/7/10/14/12/10/8/4 occurrences, 74 total, 66 unique.",
+  "normalization": "Cross-category duplicates merged by semantic chart id. Horizontal/vertical lollipop are one recipe variant. Column+line and candlestick/stock-price labels normalized. Geographic proportional symbols remain separate from non-geographic proportional symbols. Proportional stacked bar is not Marimekko.",
+  "summary": {
+    "poster_category_occurrences": 74,
+    "poster_unique": 66,
+    "website_rows": 72,
+    "website_unique": 62,
+    "union_unique": 68,
+    "poster_only": [
+      "frequency-polygons",
+      "beeswarm",
+      "vertical-timeline",
+      "streamgraph",
+      "marimekko",
+      "grouped-symbol"
+    ],
+    "website_only": [
+      "proportional-stacked-bar",
+      "sunburst"
+    ],
+    "readiness_counts": {
+      "high_level": 10,
+      "backend_only": 15,
+      "planned": 43
+    }
+  },
+  "categories": [
+    {
+      "id": "deviation",
+      "label": "Deviation",
+      "poster_ids": [
+        "diverging-bar",
+        "diverging-stacked-bar",
+        "spine",
+        "surplus-deficit-filled-line"
+      ]
+    },
+    {
+      "id": "correlation",
+      "label": "Correlation",
+      "poster_ids": [
+        "scatterplot",
+        "column-line",
+        "connected-scatterplot",
+        "bubble",
+        "xy-heatmap"
+      ]
+    },
+    {
+      "id": "ranking",
+      "label": "Ranking",
+      "poster_ids": [
+        "ordered-bar",
+        "ordered-column",
+        "ordered-proportional-symbol",
+        "dot-strip-plot",
+        "slope",
+        "lollipop",
+        "bump"
+      ]
+    },
+    {
+      "id": "distribution",
+      "label": "Distribution",
+      "poster_ids": [
+        "histogram",
+        "dot-plot",
+        "dot-strip-plot",
+        "barcode-plot",
+        "boxplot",
+        "violin-plot",
+        "population-pyramid",
+        "cumulative-curve",
+        "frequency-polygons",
+        "beeswarm"
+      ]
+    },
+    {
+      "id": "change-over-time",
+      "label": "Change over Time",
+      "poster_ids": [
+        "line",
+        "column",
+        "column-line",
+        "slope",
+        "area",
+        "candlestick",
+        "fan-chart",
+        "connected-scatterplot",
+        "calendar-heatmap",
+        "priestley-timeline",
+        "circle-timeline",
+        "vertical-timeline",
+        "seismogram",
+        "streamgraph"
+      ]
+    },
+    {
+      "id": "magnitude",
+      "label": "Magnitude",
+      "poster_ids": [
+        "column",
+        "bar",
+        "paired-column",
+        "paired-bar",
+        "marimekko",
+        "proportional-symbol",
+        "isotype",
+        "lollipop",
+        "radar",
+        "parallel-coordinates",
+        "bullet",
+        "grouped-symbol"
+      ]
+    },
+    {
+      "id": "part-to-whole",
+      "label": "Part-to-whole",
+      "poster_ids": [
+        "stacked-column-bar",
+        "marimekko",
+        "pie",
+        "doughnut",
+        "treemap",
+        "voronoi",
+        "arc",
+        "gridplot",
+        "venn",
+        "waterfall"
+      ]
+    },
+    {
+      "id": "spatial",
+      "label": "Spatial",
+      "poster_ids": [
+        "choropleth",
+        "map-proportional-symbol",
+        "flow-map",
+        "contour-map",
+        "equalised-cartogram",
+        "scaled-cartogram",
+        "dot-density",
+        "map-heatmap"
+      ]
+    },
+    {
+      "id": "flow",
+      "label": "Flow",
+      "poster_ids": [
+        "sankey",
+        "waterfall",
+        "chord",
+        "network"
+      ]
+    }
+  ],
+  "entries": [
+    {
+      "id": "diverging-bar",
+      "label": "Diverging bar",
+      "categories": [
+        "deviation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "deviation",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "deviation",
+          "raw_label": "bar-diverging",
+          "icon": "bar-diverging.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "bar",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Signed numeric values and zero baseline work; differences from a nonzero benchmark must be derived first."
+      ]
+    },
+    {
+      "id": "diverging-stacked-bar",
+      "label": "Diverging stacked bar",
+      "categories": [
+        "deviation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "deviation",
+          "ordinal": 2
+        },
+        {
+          "version": "website-csv",
+          "category": "deviation",
+          "raw_label": "bar-diverging-stacked",
+          "icon": "bar-diverging-stacked.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Native signed stacked bars exist. Neutral-split centering and survey semantics require preprocessing, not an existing high-level recipe."
+      ]
+    },
+    {
+      "id": "spine",
+      "label": "Spine",
+      "categories": [
+        "deviation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "deviation",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "deviation",
+          "raw_label": "spine-chart",
+          "icon": "spine.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bar"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "surplus-deficit-filled-line",
+      "label": "Surplus/deficit filled line",
+      "categories": [
+        "deviation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "deviation",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "deviation",
+          "raw_label": "line-surplus-deficit-filled",
+          "icon": "line-surplur-defecit-fill.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "area",
+          "combo"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "scatterplot",
+      "label": "Scatterplot",
+      "categories": [
+        "correlation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "correlation",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "correlation",
+          "raw_label": "scatterplot",
+          "icon": "scatterplot.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "scatter"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "scatter"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "column-line",
+      "label": "Column + line timeline",
+      "categories": [
+        "correlation",
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "correlation",
+          "ordinal": 2
+        },
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "correlation",
+          "raw_label": "line-column",
+          "icon": "line-column.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "column-line-timeline",
+          "icon": "column-line-timeline.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "combo"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "combo"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "High-level scene uses equally spaced categories. Continuous/date-axis time spacing is not implemented for scene line/column."
+      ]
+    },
+    {
+      "id": "connected-scatterplot",
+      "label": "Connected scatterplot",
+      "categories": [
+        "correlation",
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "correlation",
+          "ordinal": 3
+        },
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 8
+        },
+        {
+          "version": "website-csv",
+          "category": "correlation",
+          "raw_label": "scatterplot-connected",
+          "icon": "scatterplot-connected.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "scatterplot-line-timeline",
+          "icon": "scatterplot-line-timeline.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "scatter"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "scatter"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Native scatter_style line or lineMarker connects supplied XY order; direction labels/temporal annotation are not automatic."
+      ]
+    },
+    {
+      "id": "bubble",
+      "label": "Bubble",
+      "categories": [
+        "correlation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "correlation",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "correlation",
+          "raw_label": "Bubble",
+          "icon": "bubble.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bubble"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bubble"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "xy-heatmap",
+      "label": "XY heatmap",
+      "categories": [
+        "correlation"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "correlation",
+          "ordinal": 5
+        },
+        {
+          "version": "website-csv",
+          "category": "correlation",
+          "raw_label": "XY-heatmap",
+          "icon": "XY-heatmap.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "ordered-bar",
+      "label": "Ordered bar",
+      "categories": [
+        "ranking"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "bar-ordered",
+          "icon": "bar-ordered.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "bar",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Author must pre-sort data; automatic ranking recipe is not implemented."
+      ]
+    },
+    {
+      "id": "ordered-column",
+      "label": "Ordered column",
+      "categories": [
+        "ranking"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 2
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "column-ordered",
+          "icon": "column-ordered.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "column",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "column"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "column"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Author must pre-sort data; automatic ranking recipe is not implemented."
+      ]
+    },
+    {
+      "id": "ordered-proportional-symbol",
+      "label": "Ordered proportional symbol",
+      "categories": [
+        "ranking"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "symbol-proportional-ordered",
+          "icon": "symbol-proportional-ordered.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bubble"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "dot-strip-plot",
+      "label": "Dot strip plot",
+      "categories": [
+        "ranking",
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 4
+        },
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "dot-plot-strip",
+          "icon": "dot-plot-strip.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "dot-plot-strip",
+          "icon": "dot-plot-strip-distribution.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "slope",
+      "label": "Slope",
+      "categories": [
+        "ranking",
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 5
+        },
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "slope",
+          "icon": "slope-timeline.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "slope",
+          "icon": "slope-ranking.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "line",
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "lollipop",
+      "label": "Lollipop",
+      "categories": [
+        "ranking",
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 6
+        },
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 8
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "lollipop-h",
+          "icon": "lollipop-h.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "lollipop-v",
+          "icon": "lollipop-v.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "lollipop-h",
+          "icon": "lollipop-h-magnitude.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "lollipop-v",
+          "icon": "lollipop-v-magnitude.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "bump",
+      "label": "Bump",
+      "categories": [
+        "ranking"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "ranking",
+          "ordinal": 7
+        },
+        {
+          "version": "website-csv",
+          "category": "ranking",
+          "raw_label": "bump",
+          "icon": "bump.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "line"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "histogram",
+      "label": "Histogram",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "histogram",
+          "icon": "histogram.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "histogram"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "histogram"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "chartex_and_embedded_workbook_office_version_sensitive",
+      "notes": []
+    },
+    {
+      "id": "dot-plot",
+      "label": "Dot plot",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 2
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "dot-plot",
+          "icon": "dot-plot.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "barcode-plot",
+      "label": "Barcode plot",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "barcode",
+          "icon": "barcode.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "boxplot",
+      "label": "Boxplot",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 5
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "boxplot",
+          "icon": "boxplot.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "box_whisker"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "box_whisker"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "chartex_and_embedded_workbook_office_version_sensitive",
+      "notes": []
+    },
+    {
+      "id": "violin-plot",
+      "label": "Violin plot",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 6
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "violin",
+          "icon": "violin.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "population-pyramid",
+      "label": "Population pyramid",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 7
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "population-pyramis",
+          "icon": "population-pyramis.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bar"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "cumulative-curve",
+      "label": "Cumulative curve",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 8
+        },
+        {
+          "version": "website-csv",
+          "category": "distribution",
+          "raw_label": "cumulative-curve",
+          "icon": "cumulative-curve.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "frequency-polygons",
+      "label": "Frequency polygons",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf"
+      ],
+      "versions": [
+        "poster-2019"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 9
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "beeswarm",
+      "label": "Beeswarm",
+      "categories": [
+        "distribution"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf"
+      ],
+      "versions": [
+        "poster-2019"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "distribution",
+          "ordinal": 10
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "line",
+      "label": "Line",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "line",
+          "icon": "line.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "line",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "line"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "line"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "High-level scene uses equally spaced categories. Continuous/date-axis time spacing is not implemented for scene line/column."
+      ]
+    },
+    {
+      "id": "column",
+      "label": "Column",
+      "categories": [
+        "change-over-time",
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 2
+        },
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "column-timeline",
+          "icon": "column-timeline.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "Column",
+          "icon": "column-magnitude.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "column",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "column"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "column"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "High-level scene uses equally spaced categories. Continuous/date-axis time spacing is not implemented for scene line/column."
+      ]
+    },
+    {
+      "id": "area",
+      "label": "Area chart",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 5
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "area",
+          "icon": "area.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "area"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "area"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "candlestick",
+      "label": "Candlestick",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 6
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "stock-price",
+          "icon": "stock-price.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "stock"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "stock"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Current stock data contract requires exactly four OHLC series and numeric Excel dates; aliases do not provide HLC or volume variants."
+      ]
+    },
+    {
+      "id": "fan-chart",
+      "label": "Fan chart (projections)",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 7
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "fan",
+          "icon": "fan.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "area",
+          "combo"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "calendar-heatmap",
+      "label": "Calendar heatmap",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 9
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "calendar-heatmap",
+          "icon": "calendar-heatmap.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "priestley-timeline",
+      "label": "Priestley timeline",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 10
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "priestley timeline",
+          "icon": "priestley-timeline.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bar"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "circle-timeline",
+      "label": "Circle timeline",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 11
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "circles-timeline",
+          "icon": "circle-timeline.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bubble"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "vertical-timeline",
+      "label": "Vertical timeline",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf"
+      ],
+      "versions": [
+        "poster-2019"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 12
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "scatter"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "seismogram",
+      "label": "Seismogram",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 13
+        },
+        {
+          "version": "website-csv",
+          "category": "change-over-time",
+          "raw_label": "seismogram",
+          "icon": "seismogram.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bar"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "streamgraph",
+      "label": "Streamgraph",
+      "categories": [
+        "change-over-time"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf"
+      ],
+      "versions": [
+        "poster-2019"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "change-over-time",
+          "ordinal": 14
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "area"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "bar",
+      "label": "Bar",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 2
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "Bar",
+          "icon": "bar-magnitude.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "bar",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "paired-column",
+      "label": "Paired column",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "column-grouped",
+          "icon": "column-grouped.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "column",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "column"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "column"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Ordinary multi-series clustered chart; no automatic pair-selection analysis."
+      ]
+    },
+    {
+      "id": "paired-bar",
+      "label": "Paired bar",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "bar-grouped",
+          "icon": "bar-grouped-magnitude.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "bar",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Ordinary multi-series clustered chart; no automatic pair-selection analysis."
+      ]
+    },
+    {
+      "id": "marimekko",
+      "label": "Marimekko",
+      "categories": [
+        "magnitude",
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf"
+      ],
+      "versions": [
+        "poster-2019"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 5
+        },
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 2
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "proportional-symbol",
+      "label": "Proportional symbol",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 6
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "symbol-proportional",
+          "icon": "symbol-proportional.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bubble"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "isotype",
+      "label": "Isotype (pictogram)",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 7
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "isotope (pictogram)",
+          "icon": "isotope.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "radar",
+      "label": "Radar",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 9
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "Radar",
+          "icon": "radar.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "radar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "radar"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "parallel-coordinates",
+      "label": "Parallel coordinates",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 10
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "Parallel coordinates",
+          "icon": "parallel coordinates.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "bullet",
+      "label": "Bullet",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 11
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "Bullet",
+          "icon": "bullet.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "primitive_only",
+        "candidate_primitives": [
+          "bar"
+        ]
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "recipe_algorithm_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Candidate primitives are not evidence that this named recipe exists. Required transforms/layout/encoding/validation are not prepared."
+      ]
+    },
+    {
+      "id": "grouped-symbol",
+      "label": "Grouped symbol",
+      "categories": [
+        "magnitude"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf"
+      ],
+      "versions": [
+        "poster-2019"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "magnitude",
+          "ordinal": 12
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "stacked-column-bar",
+      "label": "Stacked column/bar",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "column-stacked",
+          "icon": "column-stacked.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar",
+          "column"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar",
+        "column"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "pie",
+      "label": "Pie",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "pie",
+          "icon": "pie.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "pie",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "pie"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "pie"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Exactly one nonnegative non-null positive-sum series. Native pie data labels disabled; external text is independently editable."
+      ]
+    },
+    {
+      "id": "doughnut",
+      "label": "Donut",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "doughnut",
+          "icon": "doughnut.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": true,
+        "chart_type": "doughnut",
+        "status": "callable"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "doughnut"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "doughnut"
+      ],
+      "planned": {
+        "required": false,
+        "status": "implementation_needed"
+      },
+      "readiness": "high_level",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": [
+        "Exactly one nonnegative non-null positive-sum series. Native pie data labels disabled; external text is independently editable."
+      ]
+    },
+    {
+      "id": "treemap",
+      "label": "Treemap",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 5
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "treemap",
+          "icon": "treemap.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "treemap"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "treemap"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "chartex_and_embedded_workbook_office_version_sensitive",
+      "notes": []
+    },
+    {
+      "id": "voronoi",
+      "label": "Voronoi",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 6
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "Voronoi",
+          "icon": "voronoi.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "arc",
+      "label": "Arc",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 7
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "arc",
+          "icon": "arc.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "gridplot",
+      "label": "Gridplot",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 8
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "gridplot",
+          "icon": "gridplot.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "venn",
+      "label": "Venn",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 9
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "Venn",
+          "icon": "venn.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": []
+    },
+    {
+      "id": "waterfall",
+      "label": "Waterfall",
+      "categories": [
+        "part-to-whole",
+        "flow"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "part-to-whole",
+          "ordinal": 10
+        },
+        {
+          "version": "poster-2019",
+          "category": "flow",
+          "ordinal": 2
+        },
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "Waterfall",
+          "icon": "waterfall.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "flow",
+          "raw_label": "waterfall",
+          "icon": "waterfall-flow.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "waterfall"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "waterfall"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "chartex_and_embedded_workbook_office_version_sensitive",
+      "notes": []
+    },
+    {
+      "id": "choropleth",
+      "label": "Basic choropleth (rate/ratio)",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "basic-choropleth",
+          "icon": "basic-choropleth.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "map-proportional-symbol",
+      "label": "Proportional symbol (count/magnitude)",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 2
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "proportional-symbol",
+          "icon": "proportional-symbol.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "flow-map",
+      "label": "Flow map",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "flow",
+          "icon": "flow.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "contour-map",
+      "label": "Contour map",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "contour",
+          "icon": "contour.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "equalised-cartogram",
+      "label": "Equalised cartogram",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 5
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "equalised-cartogram",
+          "icon": "equalised-cartogram.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "scaled-cartogram",
+      "label": "Scaled cartogram (value)",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 6
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "scaled-cartogram-value",
+          "icon": "scaled-cartogram-value.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "dot-density",
+      "label": "Dot density",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 7
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "dot-density",
+          "icon": "dot-density.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "map-heatmap",
+      "label": "Heat map",
+      "categories": [
+        "spatial"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "spatial",
+          "ordinal": 8
+        },
+        {
+          "version": "website-csv",
+          "category": "spatial",
+          "raw_label": "heat-map",
+          "icon": "heat-map.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "geography_pipeline_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "No current geodata, projection, join, geo-legend, contour or cartogram engine. Generic SVG or local images do not constitute geographic chart support."
+      ]
+    },
+    {
+      "id": "sankey",
+      "label": "Sankey",
+      "categories": [
+        "flow"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "flow",
+          "ordinal": 1
+        },
+        {
+          "version": "website-csv",
+          "category": "flow",
+          "raw_label": "sankey",
+          "icon": "sankey.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Qualitative hub/cycle/tree templates are not weighted flow/network algorithms."
+      ]
+    },
+    {
+      "id": "chord",
+      "label": "Chord",
+      "categories": [
+        "flow"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "flow",
+          "ordinal": 3
+        },
+        {
+          "version": "website-csv",
+          "category": "flow",
+          "raw_label": "chord",
+          "icon": "chord.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Qualitative hub/cycle/tree templates are not weighted flow/network algorithms."
+      ]
+    },
+    {
+      "id": "network",
+      "label": "Network",
+      "categories": [
+        "flow"
+      ],
+      "source": [
+        "https://raw.githubusercontent.com/Financial-Times/chart-doctor/main/visual-vocabulary/Visual-vocabulary-en.pdf",
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "poster-2019",
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "poster-2019",
+          "category": "flow",
+          "ordinal": 4
+        },
+        {
+          "version": "website-csv",
+          "category": "flow",
+          "raw_label": "network",
+          "icon": "network.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": false,
+        "chart_types": [],
+        "status": "absent",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [],
+      "planned": {
+        "required": true,
+        "status": "implementation_needed"
+      },
+      "readiness": "planned",
+      "editable_output": "not_implemented_as_named_recipe",
+      "notes": [
+        "Qualitative hub/cycle/tree templates are not weighted flow/network algorithms."
+      ]
+    },
+    {
+      "id": "proportional-stacked-bar",
+      "label": "Proportional stacked bar",
+      "categories": [
+        "part-to-whole",
+        "magnitude"
+      ],
+      "source": [
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "bar-stacked-proportional",
+          "icon": "bar-stacked-proportional.svg"
+        },
+        {
+          "version": "website-csv",
+          "category": "magnitude",
+          "raw_label": "bar-stacked-proportional",
+          "icon": "bar-stacked-proportional-magnitude.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "bar"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "bar"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "classic_chart_and_embedded_workbook",
+      "notes": []
+    },
+    {
+      "id": "sunburst",
+      "label": "Sunburst",
+      "categories": [
+        "part-to-whole"
+      ],
+      "source": [
+        "https://ft-interactive.github.io/visual-vocabulary/chartTypes.csv"
+      ],
+      "versions": [
+        "website-csv"
+      ],
+      "occurrences": [
+        {
+          "version": "website-csv",
+          "category": "part-to-whole",
+          "raw_label": "sunburst",
+          "icon": "sunburst.svg"
+        }
+      ],
+      "existing_high_level": {
+        "available": false,
+        "chart_type": null,
+        "status": "not_prepared"
+      },
+      "native_backend": {
+        "available": true,
+        "chart_types": [
+          "sunburst"
+        ],
+        "status": "implemented",
+        "candidate_primitives": []
+      },
+      "native_chart_type": [
+        "sunburst"
+      ],
+      "planned": {
+        "required": true,
+        "status": "high_level_adapter_needed"
+      },
+      "readiness": "backend_only",
+      "editable_output": "chartex_and_embedded_workbook_office_version_sensitive",
+      "notes": []
+    }
+  ],
+  "runtime_canonical_types": [
+    "area",
+    "bar",
+    "column",
+    "doughnut",
+    "line",
+    "of_pie",
+    "pie",
+    "radar",
+    "scatter",
+    "bubble",
+    "box_whisker",
+    "funnel",
+    "histogram",
+    "pareto",
+    "sunburst",
+    "treemap",
+    "waterfall",
+    "combo",
+    "stock"
+  ],
+  "license": {
+    "id": "CC-BY-SA-4.0",
+    "url": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "attribution": "Financial Times Visual Vocabulary, Financial Times Visual Journalism team.",
+    "adaptation": "Version-normalized vocabulary metadata and current HTR capability mapping. No FT artwork is bundled."
+  }
+}

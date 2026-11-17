@@ -1,0 +1,102 @@
+{
+  "template_id": "delivery-gantt",
+  "text_slots": [
+    {
+      "id": "delivery-gantt.slot-001",
+      "default": "实施阶段与工作流排程",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-002",
+      "default": "月份为统一时间尺度；区间长度表示持续时间",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-003",
+      "default": "阶段一",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-004",
+      "default": "冻结范围与关键方案",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-005",
+      "default": "阶段二",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-006",
+      "default": "完成集成与联调",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-007",
+      "default": "阶段三",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-008",
+      "default": "确认上线与运行责任",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "delivery-gantt.slot-009",
+      "default": "合成内容 · 结构样例 18 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [
+    {
+      "id": "chart-535",
+      "asset": "chart.priestley-timeline",
+      "data": {
+        "rows": [
+          {
+            "label": "需求与设计",
+            "start": 1,
+            "end": 3,
+            "value": 1
+          },
+          {
+            "label": "开发与配置",
+            "start": 2,
+            "end": 8,
+            "value": 1
+          },
+          {
+            "label": "集成与验证",
+            "start": 6,
+            "end": 10,
+            "value": 1
+          },
+          {
+            "label": "上线与运行",
+            "start": 10,
+            "end": 12,
+            "value": 1
+          }
+        ]
+      },
+      "meaning": "Replace data under the registered chart contract; engine recomputes geometry."
+    }
+  ],
+  "image_slots": []
+}

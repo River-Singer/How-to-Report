@@ -19,6 +19,35 @@ from .marker_common import (
 )
 
 
+def _chart_text_styles(payload: dict[str, Any]) -> dict[str, dict[str, Any]]:
+    """Validate resolved SVG-pixel typography without interpreting semantic roles."""
+    raw = payload.get("text_styles", {})
+    if not isinstance(raw, dict) or set(raw) - {"base", "axis", "legend", "data_label"}:
+        raise RuntimeError("Native chart text_styles supports base, axis, legend and data_label")
+    fields = {"font_family", "font_size", "weight", "line_height", "paragraph_gap", "insets", "align", "vertical_anchor", "color"}
+    for purpose, style in raw.items():
+        prefix = f"Native chart text_styles.{purpose}"
+        if not isinstance(style, dict) or set(style) != fields:
+            raise RuntimeError(f"{prefix} requires a complete resolved text style")
+        if not isinstance(style["font_family"], str) or not style["font_family"].strip():
+            raise RuntimeError(f"{prefix}.font_family must be a nonempty string")
+        for name, minimum in (("font_size", .000001), ("line_height", 1), ("paragraph_gap", 0)):
+            value = style[name]
+            if isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < minimum:
+                raise RuntimeError(f"{prefix}.{name} has an invalid finite pixel value")
+        if type(style["weight"]) is not int or style["weight"] not in {400, 700}:
+            raise RuntimeError(f"{prefix}.weight must be normalized to 400 or 700")
+        insets = style["insets"]
+        if not isinstance(insets, list) or len(insets) != 4 or any(
+                isinstance(value, bool) or not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0 for value in insets):
+            raise RuntimeError(f"{prefix}.insets requires four nonnegative finite SVG-pixel values")
+        if style["align"] not in {"left", "center", "right"} or style["vertical_anchor"] not in {"top", "middle", "bottom"}:
+            raise RuntimeError(f"{prefix} has invalid alignment")
+        if _hex_or_none(style["color"]) is None:
+            raise RuntimeError(f"{prefix}.color must be a resolved color")
+    return raw
+
+
 def _chart_number(value: Any) -> int | float:
     if isinstance(value, bool):
         raise RuntimeError("Native PPTX chart values must be numeric")
@@ -1640,7 +1669,10 @@ def _chart_language(payload: dict[str, Any]) -> str | None:
 
 
 def _chart_data(payload: dict[str, Any]) -> dict[str, Any]:
+    _chart_text_styles(payload)
     chart_type, alias_grouping, alias_style = _chart_kind(payload)
+    if payload.get("text_styles") and chart_type in _CHARTEX_CHART_TYPES:
+        raise RuntimeError("Native chart text_styles is supported for classic charts only")
     if _chart_language(payload) is not None and chart_type in _CHARTEX_CHART_TYPES:
         raise RuntimeError("Native PPTX chart lang is supported for classic charts only")
     if payload.get("hole_size") is not None and chart_type != "doughnut":

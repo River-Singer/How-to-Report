@@ -1,0 +1,154 @@
+{
+  "template_id": "explanation.parallel",
+  "text_slots": [
+    {
+      "id": "explanation.parallel.slot-001",
+      "default": "资料的采集、维护和使用需要三类不同控制",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-002",
+      "default": "采集时保留来源",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-003",
+      "default": "要解决什么",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-004",
+      "default": "说明资料从哪里来，以及何时采集。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-005",
+      "default": "如何控制",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-006",
+      "default": "将出处和记录时间与正文一起保存。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-007",
+      "default": "使用例子",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-008",
+      "default": "会议纪要关联会议日期和记录人。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-009",
+      "default": "适用边界",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-010",
+      "default": "来源记录不等于内容已经验证。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-011",
+      "default": "维护时区分版本",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-012",
+      "default": "要解决什么",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-013",
+      "default": "让当前规则与历史规则能够区分。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-014",
+      "default": "如何控制",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-015",
+      "default": "记录生效日期、更新原因和替代关系。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-016",
+      "default": "使用例子",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-017",
+      "default": "新流程发布时标记旧版本。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-018",
+      "default": "适用边界",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-019",
+      "default": "保留历史不代表旧规则仍适用。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-020",
+      "default": "使用时保留引用",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-021",
+      "default": "要解决什么",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-022",
+      "default": "让读者能回到支持当前说明的材料。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-023",
+      "default": "如何控制",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-024",
+      "default": "答案关联对应片段及版本。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-025",
+      "default": "使用例子",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-026",
+      "default": "解释规则时提供原条款位置。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-027",
+      "default": "适用边界",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-028",
+      "default": "没有材料支持时不补写结论。",
+      "type": "text"
+    },
+    {
+      "id": "explanation.parallel.slot-029",
+      "default": "原创合成内容 · 可计算结构样例 02/10",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

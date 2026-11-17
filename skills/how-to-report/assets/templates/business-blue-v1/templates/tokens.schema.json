@@ -248,6 +248,63 @@
             "border"
           ],
           "additionalProperties": false
+        },
+        "palette": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string"
+            },
+            "registry_sha256": {
+              "type": "string"
+            },
+            "roles": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            },
+            "categorical": {
+              "type": "array",
+              "minItems": 6,
+              "maxItems": 6,
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            },
+            "sequential": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            },
+            "diverging": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "string",
+                "pattern": "^#[0-9A-Fa-f]{6}$"
+              }
+            },
+            "provenance": {
+              "type": "object"
+            }
+          },
+          "required": [
+            "id",
+            "registry_sha256",
+            "roles",
+            "categorical",
+            "sequential",
+            "diverging",
+            "provenance"
+          ],
+          "additionalProperties": false
         }
       },
       "required": [
@@ -497,6 +554,75 @@
             "metric"
           ],
           "additionalProperties": false
+        },
+        "textStyles": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "object",
+            "properties": {
+              "base_role": {
+                "type": "string",
+                "minLength": 1
+              },
+              "font_family": {
+                "type": "string",
+                "minLength": 1
+              },
+              "font_size": {
+                "type": "number",
+                "exclusiveMinimum": 0
+              },
+              "weight": {
+                "enum": [
+                  100,
+                  200,
+                  300,
+                  400,
+                  500,
+                  600,
+                  700,
+                  800,
+                  900
+                ]
+              },
+              "line_height": {
+                "type": "number",
+                "minimum": 1
+              },
+              "paragraph_gap": {
+                "type": "number",
+                "minimum": 0
+              },
+              "insets": {
+                "type": "array",
+                "items": {
+                  "type": "number",
+                  "minimum": 0
+                },
+                "minItems": 4,
+                "maxItems": 4
+              },
+              "align": {
+                "enum": [
+                  "left",
+                  "center",
+                  "right"
+                ]
+              },
+              "vertical_anchor": {
+                "enum": [
+                  "top",
+                  "middle",
+                  "bottom"
+                ]
+              },
+              "color": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "additionalProperties": false
+          }
         }
       },
       "required": [
@@ -681,16 +807,8 @@
           "maxItems": 2
         },
         "axis_role": {
-          "enum": [
-            "hero",
-            "chapter",
-            "title",
-            "heading",
-            "body",
-            "compactBody",
-            "caption",
-            "metric"
-          ]
+          "type": "string",
+          "minLength": 1
         },
         "grid_role": {
           "enum": [

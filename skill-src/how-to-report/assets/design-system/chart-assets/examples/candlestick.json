@@ -1,0 +1,31 @@
+{
+  "asset": "chart.candlestick",
+  "data": {
+    "categories": [
+      "A",
+      "B",
+      "C"
+    ],
+    "ranges": [
+      {
+        "low": 10,
+        "high": 40,
+        "open": 20,
+        "close": 30
+      },
+      {
+        "low": 20,
+        "high": 55,
+        "open": 45,
+        "close": 30
+      },
+      {
+        "low": 30,
+        "high": 70,
+        "open": 40,
+        "close": 60
+      }
+    ]
+  },
+  "options": {}
+}

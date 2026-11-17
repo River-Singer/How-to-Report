@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="720" viewBox="0 0 1280 720" data-pptx-master="business-blue-white" data-pptx-master-name="Business Blue White" data-pptx-layout="process-cycle-6-center" data-pptx-layout-name="process-cycle-6-center">
+  <defs>
+    <marker id="topology-arrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto" markerUnits="strokeWidth">
+      <path d="M0 0 L8 4 L0 8 Z" fill="#003591" />
+    </marker>
+  </defs>
+  <rect x="0" y="0" width="1280" height="720" fill="#FFFFFF" id="canvas-background" data-pptx-layer="master" />
+  <line x1="48" y1="84" x2="1232" y2="84" stroke="#003591" stroke-width="1.67" id="header-rule" data-pptx-layer="master" />
+  <line x1="48" y1="672" x2="1232" y2="672" stroke="#BBCDE5" stroke-width="1" id="footer-rule" data-pptx-layer="master" />
+  <line x1="776.1600000000001" y1="183.36" x2="898.6090200610985" y2="283.68" stroke="#003591" stroke-width="2" id="edge-101-102" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="776.16 183.36 122.449 100.32" data-pptx-start-shape-id="101" data-pptx-start-site="3" data-pptx-end-shape-id="102" data-pptx-end-site="1" marker-end="url(#topology-arrow)" />
+  <line x1="1034.7690200610984" y1="347.03999999999996" x2="1034.7690200610987" y2="420.9599999999999" stroke="#003591" stroke-width="2" id="edge-102-103" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="1034.77 347.04 2.27374e-13 73.92" data-pptx-start-shape-id="102" data-pptx-start-site="2" data-pptx-end-shape-id="103" data-pptx-end-site="0" marker-end="url(#topology-arrow)" />
+  <line x1="898.6090200610987" y1="484.31999999999994" x2="776.1600000000001" y2="584.64" stroke="#003591" stroke-width="2" id="edge-103-104" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="776.16 484.32 122.449 100.32" data-pptx-start-shape-id="103" data-pptx-start-site="1" data-pptx-end-shape-id="104" data-pptx-end-site="3" marker-end="url(#topology-arrow)" />
+  <line x1="503.84000000000003" y1="584.64" x2="381.3909799389015" y2="484.32000000000005" stroke="#003591" stroke-width="2" id="edge-104-105" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="381.391 484.32 122.449 100.32" data-pptx-start-shape-id="104" data-pptx-start-site="1" data-pptx-end-shape-id="105" data-pptx-end-site="3" marker-end="url(#topology-arrow)" />
+  <line x1="245.23097993890156" y1="420.96000000000004" x2="245.2309799389015" y2="347.03999999999996" stroke="#003591" stroke-width="2" id="edge-105-106" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="245.231 347.04 5.68434e-14 73.92" data-pptx-start-shape-id="105" data-pptx-start-site="0" data-pptx-end-shape-id="106" data-pptx-end-site="2" marker-end="url(#topology-arrow)" />
+  <line x1="381.3909799389015" y1="283.67999999999995" x2="503.84000000000003" y2="183.36" stroke="#003591" stroke-width="2" id="edge-106-101" data-pptx-object="connector" data-pptx-prst="line" data-pptx-frame="381.391 183.36 122.449 100.32" data-pptx-start-shape-id="106" data-pptx-start-site="3" data-pptx-end-shape-id="101" data-pptx-end-site="1" marker-end="url(#topology-arrow)" />
+  <rect x="503.84000000000003" y="320.64" width="272.32" height="126.72" fill="#EFEFEF" id="node-100" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="503.84 320.64 272.32 126.72" data-pptx-shape-id="100" />
+  <rect x="503.84000000000003" y="120.00000000000001" width="272.32" height="126.72" fill="#EFEFEF" id="node-101" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="503.84 120 272.32 126.72" data-pptx-shape-id="101" />
+  <rect x="898.6090200610985" y="220.32" width="272.32" height="126.72" fill="#EFEFEF" id="node-102" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="898.609 220.32 272.32 126.72" data-pptx-shape-id="102" />
+  <rect x="898.6090200610987" y="420.9599999999999" width="272.32" height="126.72" fill="#EFEFEF" id="node-103" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="898.609 420.96 272.32 126.72" data-pptx-shape-id="103" />
+  <rect x="503.84000000000003" y="521.28" width="272.32" height="126.72" fill="#EFEFEF" id="node-104" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="503.84 521.28 272.32 126.72" data-pptx-shape-id="104" />
+  <rect x="109.07097993890156" y="420.96000000000004" width="272.32" height="126.72" fill="#EFEFEF" id="node-105" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="109.071 420.96 272.32 126.72" data-pptx-shape-id="105" />
+  <rect x="109.0709799389015" y="220.31999999999994" width="272.32" height="126.72" fill="#EFEFEF" id="node-106" data-pptx-object="shape" data-pptx-prst="rect" data-pptx-frame="109.071 220.32 272.32 126.72" data-pptx-shape-id="106" />
+  <g id="slot-text-title" data-pptx-placeholder="title" data-pptx-idx="0" data-pptx-bounds="48 24 1184 48">
+    <text id="text-title" data-pptx-carrier="true" data-pptx-frame="48 24 1184 48" x="48" y="58.666666666666664" font-family="Microsoft YaHei" font-size="36" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="title" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:36,&quot;weight&quot;:700,&quot;line_height&quot;:1.1,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="39.6" xml:space="preserve">
+      <tspan x="48" y="58.666666666666664">{{页面标题}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-section_name" data-pptx-placeholder="body" data-pptx-idx="1" data-pptx-bounds="48 684 307.84 24">
+    <text id="text-section_name" data-pptx-carrier="true" data-pptx-frame="48 684 307.84 24" x="48" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="48" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-source" data-pptx-placeholder="body" data-pptx-idx="2" data-pptx-bounds="379.52 684 734.08 24">
+    <text id="text-source" data-pptx-carrier="true" data-pptx-frame="379.52 684 734.08 24" x="379.52000000000004" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="379.52000000000004" y="700.0" />
+    </text>
+  </g>
+  <g id="slot-text-page_number" data-pptx-placeholder="body" data-pptx-idx="3" data-pptx-bounds="1137.28 684 94.72 24">
+    <text id="text-page_number" data-pptx-carrier="true" data-pptx-frame="1137.28 684 94.72 24" x="1137.28" y="700.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="1137.28" y="700.0">1</tspan>
+    </text>
+  </g>
+  <g id="slot-text-center-title" data-pptx-placeholder="body" data-pptx-idx="4" data-pptx-bounds="547.84 336.64 212.32 42">
+    <text id="text-center-title" data-pptx-carrier="true" data-pptx-frame="547.84 336.64 212.32 42" x="547.84" y="363.3066666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="547.84" y="363.3066666666667">{{中心}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-center-body" data-pptx-placeholder="body" data-pptx-idx="5" data-pptx-bounds="519.84 384.64 240.32 46.72">
+    <text id="text-center-body" data-pptx-carrier="true" data-pptx-frame="519.84 384.64 240.32 46.72" x="519.84" y="400.64" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="519.84" y="400.64">{{中心说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-0-title" data-pptx-placeholder="body" data-pptx-idx="6" data-pptx-bounds="547.84 136 212.32 42">
+    <text id="text-steps-0-title" data-pptx-carrier="true" data-pptx-frame="547.84 136 212.32 42" x="547.84" y="162.66666666666666" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="547.84" y="162.66666666666666">{{阶段}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-0-body" data-pptx-placeholder="body" data-pptx-idx="7" data-pptx-bounds="519.84 184 240.32 46.72">
+    <text id="text-steps-0-body" data-pptx-carrier="true" data-pptx-frame="519.84 184 240.32 46.72" x="519.84" y="200.0" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="519.84" y="200.0">{{阶段说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-1-title" data-pptx-placeholder="body" data-pptx-idx="8" data-pptx-bounds="942.609 236.32 212.32 42">
+    <text id="text-steps-1-title" data-pptx-carrier="true" data-pptx-frame="942.609 236.32 212.32 42" x="942.6090200610985" y="262.9866666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="942.6090200610985" y="262.9866666666667">{{阶段}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-1-body" data-pptx-placeholder="body" data-pptx-idx="9" data-pptx-bounds="914.609 284.32 240.32 46.72">
+    <text id="text-steps-1-body" data-pptx-carrier="true" data-pptx-frame="914.609 284.32 240.32 46.72" x="914.6090200610985" y="300.32" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="914.6090200610985" y="300.32">{{阶段说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-2-title" data-pptx-placeholder="body" data-pptx-idx="10" data-pptx-bounds="942.609 436.96 212.32 42">
+    <text id="text-steps-2-title" data-pptx-carrier="true" data-pptx-frame="942.609 436.96 212.32 42" x="942.6090200610987" y="463.6266666666666" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="942.6090200610987" y="463.6266666666666">{{阶段}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-2-body" data-pptx-placeholder="body" data-pptx-idx="11" data-pptx-bounds="914.609 484.96 240.32 46.72">
+    <text id="text-steps-2-body" data-pptx-carrier="true" data-pptx-frame="914.609 484.96 240.32 46.72" x="914.6090200610987" y="500.9599999999999" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="914.6090200610987" y="500.9599999999999">{{阶段说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-3-title" data-pptx-placeholder="body" data-pptx-idx="12" data-pptx-bounds="547.84 537.28 212.32 42">
+    <text id="text-steps-3-title" data-pptx-carrier="true" data-pptx-frame="547.84 537.28 212.32 42" x="547.84" y="563.9466666666666" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="547.84" y="563.9466666666666">{{阶段}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-3-body" data-pptx-placeholder="body" data-pptx-idx="13" data-pptx-bounds="519.84 585.28 240.32 46.72">
+    <text id="text-steps-3-body" data-pptx-carrier="true" data-pptx-frame="519.84 585.28 240.32 46.72" x="519.84" y="601.28" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="519.84" y="601.28">{{阶段说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-4-title" data-pptx-placeholder="body" data-pptx-idx="14" data-pptx-bounds="153.071 436.96 212.32 42">
+    <text id="text-steps-4-title" data-pptx-carrier="true" data-pptx-frame="153.071 436.96 212.32 42" x="153.07097993890156" y="463.6266666666667" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="153.07097993890156" y="463.6266666666667">{{阶段}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-4-body" data-pptx-placeholder="body" data-pptx-idx="15" data-pptx-bounds="125.071 484.96 240.32 46.72">
+    <text id="text-steps-4-body" data-pptx-carrier="true" data-pptx-frame="125.071 484.96 240.32 46.72" x="125.07097993890156" y="500.96000000000004" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="125.07097993890156" y="500.96000000000004">{{阶段说明}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-5-title" data-pptx-placeholder="body" data-pptx-idx="16" data-pptx-bounds="153.071 236.32 212.32 42">
+    <text id="text-steps-5-title" data-pptx-carrier="true" data-pptx-frame="153.071 236.32 212.32 42" x="153.0709799389015" y="262.9866666666666" font-family="Microsoft YaHei" font-size="28" font-weight="700" fill="#003591" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="heading" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:28,&quot;weight&quot;:700,&quot;line_height&quot;:1.2,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;primary&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="33.6" xml:space="preserve">
+      <tspan x="153.0709799389015" y="262.9866666666666">{{阶段}}</tspan>
+    </text>
+  </g>
+  <g id="slot-text-steps-5-body" data-pptx-placeholder="body" data-pptx-idx="17" data-pptx-bounds="125.071 284.32 240.32 46.72">
+    <text id="text-steps-5-body" data-pptx-carrier="true" data-pptx-frame="125.071 284.32 240.32 46.72" x="125.0709799389015" y="300.31999999999994" font-family="Microsoft YaHei" font-size="16" font-weight="400" fill="#383535" text-anchor="start" data-pptx-text-baseline="metrics-v1" data-htr-text-role="caption" data-htr-resolved-style="{&quot;font_family&quot;:&quot;Microsoft YaHei&quot;,&quot;font_size&quot;:16,&quot;weight&quot;:400,&quot;line_height&quot;:1.25,&quot;paragraph_gap&quot;:0,&quot;insets&quot;:[0,0,0,0],&quot;align&quot;:&quot;left&quot;,&quot;vertical_anchor&quot;:&quot;top&quot;,&quot;color&quot;:&quot;text&quot;}" data-htr-text-insets="0 0 0 0" data-htr-vertical-anchor="t" data-paragraph-line-height="20.0" xml:space="preserve">
+      <tspan x="125.0709799389015" y="300.31999999999994">{{阶段说明}}</tspan>
+    </text>
+  </g>
+</svg>

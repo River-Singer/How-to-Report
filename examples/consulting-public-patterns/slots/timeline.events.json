@@ -1,0 +1,79 @@
+{
+  "template_id": "timeline.events",
+  "text_slots": [
+    {
+      "id": "timeline.events.slot-001",
+      "default": "从资料盘点到首轮复核的计划顺序",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-002",
+      "default": "示例第1周",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-003",
+      "default": "盘点资料",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-004",
+      "default": "确认范围、出处和维护人。",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-005",
+      "default": "示例第2周",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-006",
+      "default": "整理结构",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-007",
+      "default": "按使用任务建立分类。",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-008",
+      "default": "示例第3周",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-009",
+      "default": "发布试用",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-010",
+      "default": "展示版本入口并收集问题。",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-011",
+      "default": "示例第5周",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-012",
+      "default": "复核更新",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-013",
+      "default": "根据使用反馈修订说明。",
+      "type": "text"
+    },
+    {
+      "id": "timeline.events.slot-014",
+      "default": "合成计划；全部待执行。等距只表达顺序，不表示周数间隔相等。",
+      "type": "text"
+    }
+  ],
+  "no_final_frames": true,
+  "structure_edit": "调整同类children或nodes/edges后重跑computed；timeline最多4节点",
+  "chart_slots": [],
+  "image_slots": []
+}

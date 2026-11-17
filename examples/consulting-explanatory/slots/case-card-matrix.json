@@ -1,0 +1,170 @@
+{
+  "template_id": "case-card-matrix",
+  "text_slots": [
+    {
+      "id": "case-card-matrix.slot-001",
+      "default": "并列案例与能力证据",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-002",
+      "default": "业务规划",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-003",
+      "default": "统一规划流程",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-004",
+      "default": "连接战略与预算",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-005",
+      "default": "证据：独立案例记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-006",
+      "default": "方案模拟",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-007",
+      "default": "比较不同情景",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-008",
+      "default": "识别主要影响因素",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-009",
+      "default": "证据：独立案例记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-010",
+      "default": "成本分析",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-011",
+      "default": "建立成本对象",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-012",
+      "default": "明确变化原因",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-013",
+      "default": "证据：独立案例记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-014",
+      "default": "流程协同",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-015",
+      "default": "压缩重复录入",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-016",
+      "default": "保留过程责任",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-017",
+      "default": "证据：独立案例记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-018",
+      "default": "数据治理",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-019",
+      "default": "定义关键口径",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-020",
+      "default": "稳定基础输入",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-021",
+      "default": "证据：独立案例记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-022",
+      "default": "持续改进",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-023",
+      "default": "跟踪使用反馈",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-024",
+      "default": "修正薄弱环节",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-025",
+      "default": "证据：独立案例记录",
+      "type": "text",
+      "required": true
+    },
+    {
+      "id": "case-card-matrix.slot-026",
+      "default": "合成内容 · 结构样例 06 / 21",
+      "type": "text",
+      "required": true
+    }
+  ],
+  "structural_parameters": {
+    "layout_columns": "作者layout树的fr比例；保持语义分组",
+    "item_count": "增加/删除同类子项后由正常computed入口重新测量",
+    "chart_data": "含chart时修改element.data，严守现成chart资产合同",
+    "images": "将图片占位替换type=image/path/fit=contain；禁止整页截图替代结构"
+  },
+  "no_final_frames": true,
+  "chart_slots": [],
+  "image_slots": []
+}

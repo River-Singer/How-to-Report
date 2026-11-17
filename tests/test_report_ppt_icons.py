@@ -34,6 +34,11 @@ class UserIconTests(unittest.TestCase):
         content[spec["array_key"]] = content[spec["array_key"]][:spec["variants"][variant]["capacity"]]
         for item in content[spec["array_key"]]:
             item["icon_key"] = "team"
+        if family == "hierarchy":
+            content["root"]["icon_key"] = "team"
+            for branch in content["branches"]:
+                for child in branch.get("children", []):
+                    child["icon_key"] = "team"
         return {"id": identifier, "family": family, "variant": variant, "content": content, "config": {"show_icons": show}}
 
     def render(self, page):
@@ -44,13 +49,19 @@ class UserIconTests(unittest.TestCase):
 
     def test_all_declared_variants_render_icons_in_reserved_regions_with_stable_layout(self):
         variants = list(self.declared_variants())
-        self.assertEqual(len(variants), 18)
+        self.assertEqual(len(variants), 21)
+        self.assertTrue({("hub", "radial", "nodes"), ("process", "cycle", "steps"),
+                         ("hierarchy", "tree", "branches")}.issubset(variants))
         for family, variant, array in variants:
             with self.subTest(family=family, variant=variant):
                 page = self.page(family, variant)
                 visible, bindings = self.render(page)
                 icons = visible.findall(".//*[@data-htr-icon-key]")
-                self.assertEqual(len(icons), len(page["content"][array]))
+                expected_icons = len(page["content"][array])
+                if family == "hierarchy":
+                    expected_icons += 1 + sum(len(branch.get("children", []))
+                                              for branch in page["content"][array])
+                self.assertEqual(len(icons), expected_icons)
                 bx, by, bw, bh = self.tokens["body"]["frame"]
                 for icon in icons:
                     self.assertEqual(icon.get("data-htr-icon-key"), "team")

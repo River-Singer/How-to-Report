@@ -1,0 +1,19 @@
+{
+  "schema_version": "0.1",
+  "project_id": "synthetic-intrinsic-small-multiples",
+  "revision": 1,
+  "brief": {"audience": "Engineering example", "design_profile": {"id": "report-14pt", "sha256": "0c7ca4e4f2797b6a61473bffbf8b5a5cd7727da116c5a98f7d7cafe6fe079bba", "hash_method": "sha256-file-bytes"}},
+  "sources": [],
+  "facts": {"portion": {"value": 25}, "whole": {"value": 100}, "description": {"value": "保留完整说明"}},
+  "pages": [{"id": "multiples", "kind": "layout", "layout_version": "0.1", "job": "Synthetic engineering example: measurable component boxes", "layout": {
+    "id": "flow", "type": "column", "padding": 40, "gap": 20,
+    "children": [
+      {"id": "title", "type": "leaf", "element": {"type": "text", "role": "title", "text": "组件内在尺寸与自动小多图"}},
+      {"id": "multiples-grid", "type": "grid", "columns": {"auto_fit": "content", "max_columns": 5}, "uniform_components": true, "row_gap": 16, "column_gap": 20, "children": [
+        {"id": "ratio-a", "type": "leaf", "sizing": "intrinsic", "element": {"type": "component", "component": "progress-ring", "value": {"ref": "portion"}, "total": {"ref": "whole"}, "label": "样本甲／总体", "detail": {"ref": "description"}, "text_roles": {"label": "body", "value": "heading", "detail": "body"}}},
+        {"id": "ratio-b", "type": "leaf", "sizing": "intrinsic", "element": {"type": "component", "component": "progress-ring", "value": 60, "total": 100, "label": "另一项可换行的分类标题", "detail": "说明第一行\n说明第二行", "text_roles": {"label": "body", "value": "heading", "detail": "body"}}}
+      ]},
+      {"id": "after", "type": "leaf", "element": {"type": "text", "role": "body", "text": "后续内容随图组实测高度顺排；不改变字号。"}}
+    ]
+  }}]
+}
